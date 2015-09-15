@@ -1,0 +1,106 @@
+/*! normalize.css v2.0.1 | MIT License | git.io/normalize */
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}body{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:"\201C" "\201D" "\2018" "\2019"}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}button,input{line-height:normal}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
+
+body {
+	font: 11px/1.5 Geneva, Arial, Tahoma, Verdana, sans-serif;
+	max-width: 700px;
+	margin: 20px auto 0;
+}
+
+/**
+ * Typo
+ */
+h1, h2 {
+	font-weight: normal;
+}
+
+h2 {
+	font-size: 13px;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 15px;
+	letter-spacing: 1px;
+}
+
+h2 span.pink {
+	color: #fff;
+	background: #d16;
+	padding: 2px 5px;
+}
+
+/**
+ * Links
+ */
+a {
+	color: #000;
+	text-decoration: none;
+	border-bottom: 1px dotted #d16;
+}
+
+a:visited {
+	color: #666;
+}
+
+a:hover,
+a:focus {
+	color: #75bf0d;
+}
+
+/**
+ * Header
+ */
+header div {
+	background: transparent url(../images/fh-logo.png) no-repeat;
+	height: 70px;
+	max-width: 354px;
+}
+
+header h1 {
+	float: right;
+	font-size: 12px;
+	color: #d16;
+	margin-right: 5px;
+}
+
+/**
+ * Content
+ */
+section {
+	margin: 50px 0;
+}
+
+#presentation-list {
+	padding: 0;
+}
+
+#presentation-list li {
+	padding: 0 0 3px 15px;
+	list-style: none;
+}
+
+#presentation-list .presentation:before {
+	content: "\00BB \0020";
+}
+
+#presentation-list .date-section {
+	padding: 15px 0 1px 0;
+}
+
+#presentation-list .date-section.first {
+	padding: 0 0 1px 0;
+}
+
+.error {
+	color: #f00
+}
+
+/**
+ * Footer
+ */
+footer {
+	color: #999;
+	border-top: 3px solid #7C0;
+	text-align: right;
+	margin-bottom: 30px;
+	padding: 5px 0;
+}
