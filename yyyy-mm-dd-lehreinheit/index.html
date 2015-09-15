@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Title of presentation -->
+    <title>Reveal.js Demo</title>
+    <!-- Short description of presentation -->
+    <meta name="description" content="Demo of Reveal.js functions and features">
+    <!-- Author of presentation -->
+    <meta name="author" content="Volker Schaefer">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="../revealjs-framework/css/reveal.css">
+    <link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <!-- Can be monokai, solarized_dark, solarized_light, sunburst, tomorrow-night-bright, zenburn -->
+    <link rel="stylesheet" href="../revealjs-framework/lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../revealjs-framework/css/print//pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+    <!--[if lt IE 9]>
+    <script src="../revealjs-framework/lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+
+        <section>
+          <h1>Web-basierte Anwendungen 1</h1>
+          <h2>Reveal.js Demo</h2>
+
+          <p>08. Oktober 2015</p>
+
+          <p>Studiengang Medieninformatik an der Technischen Hochschule Köln<br>
+          Campus Gummersbach</p>
+
+          <p style="margin-top:10%">Student 1<br>
+          Student 2</p>
+        </section>
+
+        <section>
+          <section>
+            <h2>Backgrounds</h2>
+          </section>
+
+          <section class="center" data-background="#77aabb">
+            <pre><code>&lt;section data-background="#77aabb"&gt;
+
+&lt;/section&gt;</code></pre>
+          </section>
+
+          <section data-background="#442211">
+            <pre><code>&lt;section data-background="#442211"&gt;
+
+&lt;/section&gt;</code></pre>
+          </section>
+
+          <section data-background-image="images/github-mac.png" data-background-position="top center">
+            <pre><code>&lt;section data-background="images/background.jpg" data-background-position="top center"&gt;
+
+&lt;/section&gt;</code></pre>
+          </section>
+
+        </section>
+
+        <section>
+          <h2>Fragments</h2>
+          <p class="fragment grow">grow</p>
+          <p class="fragment shrink">shrink</p>
+          <p class="fragment roll-in">roll-in</p>
+          <p class="fragment fade-out">fade-out</p>
+          <p class="fragment highlight-red">highlight-red</p>
+          <p class="fragment highlight-green">highlight-green</p>
+          <p class="fragment highlight-blue">highlight-blue</p>
+        </section>
+
+        <section>
+          <h2>Fragmented <strong>Views</strong></h2>
+          <p>Hit the next arrow...</p>
+          <p class="fragment" data-fragment-index="0">... to step through ...</p>
+          <ol>
+            <li class="fragment" data-fragment-index="1"><code>any type</code></li>
+            <li class="fragment" data-fragment-index="2"><em>of view</em></li>
+            <li class="fragment" data-fragment-index="3"><strong>fragments</strong></li>
+          </ol>
+        </section>
+
+
+        <section>
+          <h2>Images</h2>
+
+          <img class="align-center fragment roll-in" src="http://octodex.github.com/images/daftpunktocat-thomas.gif">
+        </section>
+
+        <section>
+          <h2>Code syntax highlighting</h2>
+
+          <pre><code data-trim>
+&lt;?php
+echo 'Hello World!';
+?&gt;
+          </code></pre>
+
+          <pre><code data-trim>
+$ ruby -e "puts 'Hello world'"
+Hello world
+          </code></pre>
+
+          <pre><code data-trim>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;&lt;/title&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;
+
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;css/main.css&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;body&gt;
+&lt;/html&gt;
+          </code></pre>
+        </section>
+
+        <section>
+          <section>
+            <h2>Tables</h2>
+            <table>
+              <tr>
+                <th>Foo</th>
+                <th>Bar</th>
+              </tr>
+              <tr>
+                <td>Zelle 1 1</td>
+                <td>Zelle 1 2</td>
+              </tr>
+              <tr>
+                <td>Zelle 2 1</td>
+                <td>Zelle 2 2</td>
+              </tr>
+            </table>
+          </section>
+
+          <section>
+          <h2>Tables <strong>Latin Character Tests</strong></h2>
+            <table>
+              <tbody>
+                <tr>
+                  <td>!</td>
+                  <td>"</td>
+                  <td>#</td>
+                  <td>$</td>
+                  <td>%</td>
+                  <td>&amp;</td>
+                  <td>'</td>
+                  <td>(</td>
+                  <td>)</td>
+                  <td>*</td>
+                </tr>
+                <tr>
+                  <td>+</td>
+                  <td>,</td>
+                  <td>-</td>
+                  <td>.</td>
+                  <td>/</td>
+                  <td>0</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>6</td>
+                  <td>7</td>
+                  <td>8</td>
+                  <td>9</td>
+                  <td>:</td>
+                  <td>;</td>
+                  <td>&gt;</td>
+                  <td>=</td>
+                  <td>&lt;</td>
+                </tr>
+                <tr>
+                  <td>?</td>
+                  <td>@</td>
+                  <td>A</td>
+                  <td>B</td>
+                  <td>C</td>
+                  <td>D</td>
+                  <td>E</td>
+                  <td>F</td>
+                  <td>G</td>
+                  <td>H</td>
+                </tr>
+                <tr>
+                  <td>I</td>
+                  <td>J</td>
+                  <td>K</td>
+                  <td>L</td>
+                  <td>M</td>
+                  <td>N</td>
+                  <td>O</td>
+                  <td>P</td>
+                  <td>Q</td>
+                  <td>R</td>
+                </tr>
+                <tr>
+                  <td>S</td>
+                  <td>T</td>
+                  <td>U</td>
+                  <td>V</td>
+                  <td>W</td>
+                  <td>X</td>
+                  <td>Y</td>
+                  <td>Z</td>
+                  <td>[</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>]</td>
+                  <td>^</td>
+                  <td>_</td>
+                  <td>`</td>
+                  <td>a</td>
+                  <td>b</td>
+                  <td>c</td>
+                  <td>d</td>
+                  <td>e</td>
+                  <td>f</td>
+                </tr>
+                <tr>
+                  <td>g</td>
+                  <td>h</td>
+                  <td>i</td>
+                  <td>j</td>
+                  <td>k</td>
+                  <td>l</td>
+                  <td>m</td>
+                  <td>n</td>
+                  <td>o</td>
+                  <td>p</td>
+                </tr>
+                <tr>
+                  <td>q</td>
+                  <td>r</td>
+                  <td>s</td>
+                  <td>t</td>
+                  <td>u</td>
+                  <td>v</td>
+                  <td>w</td>
+                  <td>x</td>
+                  <td>y</td>
+                  <td>z</td>
+                </tr>
+                <tr>
+                  <td>{</td>
+                  <td>|</td>
+                  <td>}</td>
+                  <td>~</td>
+                </tr>
+                </tbody>
+              </table>
+          </section>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+          ## Markdown Support
+
+          Für die, die Markdown lieben.
+          Informationen gibt es [hier](https://github.com/hakimel/reveal.js#markdown),
+          die Syntax [hier](http://daringfireball.net/projects/markdown/syntax).
+
+          > This is a blockquote. Lorem ipsum dolor sit amet,
+          > consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+          > Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
+
+          ```
+          ## Markdown support
+
+          Für die, die Markdown lieben.
+          Informationen gibt es [hier](https://github.com/hakimel/reveal.js#markdown),
+          die Syntax [hier](http://daringfireball.net/projects/markdown/syntax).
+
+          > This is a blockquote. Lorem ipsum dolor sit amet,
+          > consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+          > Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
+          ```
+          </script>
+        </section>
+
+        <!-- End of slides container. -->
+
+      </div>
+
+    </div>
+
+    <script src="../revealjs-framework/lib/js/head.min.js"></script>
+    <script src="../revealjs-framework/js/reveal.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: false,
+        width: 1000,
+
+        transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+        transitionSpeed: 'fast', // default/fast/slow
+        backgroundTransition: 'none', // default/linear/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: '../revealjs-framework/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '../revealjs-framework/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../revealjs-framework/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../revealjs-framework/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '../revealjs-framework/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: '../revealjs-framework/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>
