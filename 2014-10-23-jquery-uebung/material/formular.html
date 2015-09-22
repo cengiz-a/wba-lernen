@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Kontaktformular</title>
+    <style type="text/css">
+        form {
+            background-color: #EEE;
+            padding: 10px 15px;
+            margin: auto;
+            width: 350px;
+        }
+        
+        input, textarea {
+            display: block;
+            width: 300px;
+            margin: 0 0 10px 0;
+        }
+        
+        textarea {
+            height: 100px;
+        }
+        
+        fieldset {
+            margin: 0 0 10px;
+        }
+        
+        h1 {
+            margin: 0 0 20px 0;
+            padding: 0;
+        }
+        
+        input[type="submit"] {
+            width: 150px;
+            
+        }
+        
+        .error {
+            background-color: #ffd1d1;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+    	function validate(){
+	    	if($('#vorname').val() == '')
+	    	{
+		    	$('#vorname').css('background-color', 'red');
+	    	}
+	    	else
+	    	{
+		    	$('#vorname').css('background-color', 'white');
+	    	}
+    	};
+    </script>
+    
+</head>
+<body>
+    <form action="#" method="get" name="formular">
+        <h1>Kontaktformuler</h1>
+        <fieldset>
+            <legend>Kontaktdaten</legend>
+            <label for="vorname" id="labelVorname">Vorname:</label>
+            <input type="text" id="vorname">
+            <label for="nachname" class="pflichtfeld" id="labelNachname">Nachname: </label>
+            <input type="text" id="nachname">
+            <label for="email" id="labelEmail">E-Mail-Adresse:</label>
+            <input type="text" id="email">
+        </fieldset>
+        <fieldset>
+            <legend>Nachricht</legend>
+            <label for="betreff" id="labelBetreff">Betreff:</label>
+            <input type="text" id="betreff">
+            <label for="nachricht" id="labelNachricht">Ihre Nachricht:</label>
+            <textarea class="pflichtfeld" id="nachricht"></textarea>
+        </fieldset>
+        <input type="submit" value="Nachricht abschicken" onclick="validate();"> 
+    </form>
+</body>
+</html>

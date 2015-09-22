@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Title of presentation -->
+		<title>HTML Basics</title>
+		<!-- Short description of presentation -->
+		<meta name="description" content="Kickoff Web-basierte Anwendungen 1">
+		<!-- Author of presentation -->
+		<meta name="author" content="Stephan Pavlovic">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../revealjs-framework/css/reveal.min.css">
+		<link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../revealjs-framework/lib/css/solarized_light.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="../revealjs-framework/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../revealjs-framework/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+    <div class="reveal">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+
+        <section>
+          <h1>Web-basierte Anwendungen 1</h1>
+          <h2>HTML-Basics</h2>
+          <p>09. Oktober 2014</p>
+
+          <p>Studiengang Medieninformatik an der Fachhochschule Köln<br>
+          Campus Gummersbach</p>
+
+          <p style="margin-top:10%">M.Sc. Stephan Pavlovic, M.Sc. Jan Kus</p>
+        </section>
+
+        <section>
+    			<h2>Ziele dieses Abschnitts</h2>
+          <ul>
+          	<li class="fragment">Wissen was HTML und die Idee dahinter ist</li>
+          	<li class="fragment">Grundlegende Elemente von HTML kennen</li>
+            <li class="fragment">Den Basisaufbau einer HTML-Datei erstellen</li>
+          	<li class="fragment">Grenzen von HTML beschreiben</li>
+          </ul>
+    		</section>
+        <section>
+          <h2>Aufbau dieser Session</h2>
+          <ul>
+            <li class="fragment">Einführung in die Historie von HTML</li>
+            <li class="fragment">Aufbau eines HTML-Dokuments</li>
+            <li class="fragment">Elemente zur Seitenstrukturierung</li>
+            <li class="fragment">Elemente zur Strukturierung von Texten</li>
+            <li class="fragment">Elemente zur Auszeichnung von speziellen Textelementen</li>
+            <li class="fragment">Listen</li>
+            <li class="fragment"><strong>Hands On</strong></li>
+          </ul>
+        </section>
+        <section>
+          <blockquote style="margin-bottom: 80px;">
+             Wer hat noch nie eine HTML-Datei gesehen?
+          </blockquote>
+        </section>
+        <section>
+          <h2>Was ist HTML</h2>
+          <ul class='fragment'>
+            <li><strong>H</strong>yper</li>
+            <li><strong>T</strong>ext</li>
+            <li><strong>M</strong>arkup</li>
+            <li><strong>L</strong>anguage</li>
+          </ul>
+          <p class='fragment'>1989 am CERN von Tim Berners-Lee definiert</p>
+          <p class='fragment'>Aktuelle Version 4.01 aus dem Jahr 2000</p>
+          <p class='fragment'>HTML 5 kurz vor der Verabschiedung <a href='http://www.w3.org/TR/2014/WD-html5-diff-20140918/'> - Aktueller Working Draft (18.09.14)</a></p>
+        </section>
+        <section>
+          <h2>Wie sieht ein HTML Dokument aus</h2>
+          <p class='fragment'>Ein HTML Dokument besteht aus 3 Teilen</p>
+          <ul class='fragment'>
+            <li><strong>Doctype</strong> - Dokumenttypdefinition</li>
+            <li><strong>Head</strong> - Metainformationen, benötigte externe Dateien, ...</li>
+            <li><strong>Body</strong> - Der eigentliche Inhalt der Seite</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Wie sieht ein HTML Dokument aus</h2>
+          <a href='initial.html' target='_blank'>
+          <p><pre><code>
+            &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                 "http://www.w3.org/TR/html4/loose.dtd">
+            &lt;html>
+              &lt;head>
+                &lt;title>&lt;/title>
+                &lt;meta>&lt;/meta>
+              &lt;/head>
+              &lt;body>
+                Hier steht Inhalt
+              &lt;/body>
+            &lt;/html></code></pre>
+          </a>
+        </section>
+        <section>
+          <h2>Tags</h2>
+          <ul>
+            <li class="fragment" <pre><code contenteditable>&lt;tagname> text &lt;/tagname></code></pre></li>
+            <li class="fragment">Einleitendes Tag / Abschlie&szlig;endes Tag<br></li>
+            <li class="fragment">spitze Klammern<br></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Tags</h2>
+          <ul>
+            <li <pre><code contenteditable>&lt;tagname attribute='attribute'> text &lt;/tagname></code></pre></li>
+            <li class="fragment">Manche Tags können mit Attributen erweitert werden<br></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Der wichtigste Tag im Web</h3>
+          <ul>
+            <li class="fragment">&lt;a> - Anchor Element</li>
+            <li class="fragment">&lt;a>Ein Link&lt;/a></li>
+            <li class="fragment">&lt;a href='somepage.html'>Ein relativer Link&lt;/a></li>
+            <li class="fragment">&lt;a href='/somepage.html'>Ein absoluter Link&lt;/a></li>
+            <li class="fragment">&lt;a href='htt://www.some-webpage/somepage.html'>Ein externer Link&lt;/a></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Elemente zur Seitenstrukturierung</h3>
+          <p class="fragment">
+            <strong>&lt;header></strong>
+            <ul class="fragment">
+              <li>Logo, Navigation, Suchfeld, ...</li>
+            </ul>
+          </p>
+          <p class="fragment">
+            <strong>&lt;section></strong>
+            <ul class="fragment">
+              <li>thematische Gruppierung von Inhalten - typischerweise mit einer Überschrift</li>
+            </ul>
+          </p>
+          <p class="fragment">
+            <strong>&lt;div></strong>
+            <ul class="fragment">
+              <li>Gruppierung von Inhalten</li>
+            </ul>
+          </p>
+          <p class="fragment">
+            <strong>&lt;footer></strong>
+            <ul class="fragment">
+              <li>Weiterführende Links, Impressum, Kontaktmöglichkeiten, ...</li>
+            </ul>
+          </p>
+        </section>
+        <section>
+          <h2>Wie sieht unser HTML Dokument mit Strutur aus</h2>
+          <a href='structure.html' target='_blank'>
+          <p><pre><code>
+            &lt;html>
+              &lt;head>...&lt;/head>
+              &lt;body>
+                &lt;header> Eine coole Seite &lt;/header>
+                &lt;section>
+                  Hier gehts um ein bestimmtes Thema
+                  &lt;div>
+                    Hier kommen zum Beispiel interessante Links
+                  &lt;/div>
+                  &lt;div>
+                    Und hier der Inhalt
+                  &lt;/div>
+                &lt;/section>
+                &lt;footer>
+                  Irgendwo muss das Impressum hin
+                &lt;/footer>
+              &lt;/body>
+            &lt;/html></code></pre>
+          </a>
+        </section>
+        <section>
+          <h2>Elemente zur Strukturierung von Texten </h3>
+          <p class="fragment">
+            <strong>Überschriften</strong>
+            <ul class="fragment">
+              <li>Von &lt;h1> bis &lt;h6></li>
+            </ul>
+          </p>
+          <p class="fragment">
+            <strong>Textabsätze</strong>
+            <ul class="fragment">
+              <li>Jeder Abschnitt in einem Paragraphen &lt;p> &lt;/p></li>
+            </ul>
+          </p>
+          <p class="fragment">
+            <strong>Zeilenumbruch</strong>
+            <ul class="fragment">
+              <li>Besonderes Tag (ohne Inhalt) &lt;br/></li>
+            </ul>
+          </p>
+        </section>
+        <section>
+          <h2>Wie sieht unser HTML Dokument mit Text-Struktur aus</h2>
+          <a href='text_structure.html' target='_blank'>
+          <p><pre><code>
+            &lt;html>
+              &lt;head>...&lt;/head>
+              &lt;body>
+                &lt;h1>Hier gehts um ein bestimmtes Thema&lt;/h1>
+                &lt;section>
+                  &lt;h2> Eine Linksammlung </h2>
+                  &lt;p>
+                    Hier kommen zum Beispiel interessante Links
+                    &lt;br/>
+                    Mit einem Zeilenumbruch
+                  &lt;/p>
+                  &lt;h2> Mehr Inhalt </h2>
+                  &lt;p>
+                    Hier kommen zum Beispiel interessante Links
+                  &lt;/p>
+                  &lt;p>
+                    In zwei Paragraphen
+                  &lt;/p>
+                &lt;/section>
+              &lt;/body>
+            &lt;/html></code></pre>
+          </a>
+        </section>
+        <section>
+          <h2>Elemente zur <strong>logischen</strong> Auszeichnung von speziellen Textelementen </h2>
+            <ul>
+              <li class='fragment'><strong>&lt;em>Wichtig&lt;/em> </strong> zeichnet einen wichtigen Text aus</li>
+              <li class='fragment'><strong>&lt;strong>Wichtiger&lt;/strong> </strong> zeichnet einen sehr wichtigen Text aus (Steigerung von em)</li>
+              <li class='fragment'><strong>&lt;code>Wichtiger&lt;/code> </strong> zeichnet einen Code-Quellcode-Abschnitt aus</li>
+              <li class='fragment'><strong>&lt;samp>, &lt;dfn>, &lt;abbr>, ...</strong></li>
+              <li class='fragment'><a href="http://www.w3.org/TR/html5/text-level-semantics.html#the-code-element">http://www.w3.org/TR/html5/text-level-semantics.html#the-code-element</a></strong></li>
+              
+            </ul>
+        </section>
+        <section>
+          <h2>Wie sieht unser HTML Dokument mit Text-Struktur aus</h2>
+          <a href='text_markup.html' target='_blank'>
+          <p><pre><code>
+            &lt;html>
+              &lt;head>...&lt;/head>
+              &lt;body>
+                &lt;section>
+                  &lt;p>
+                    Ein Satz mit <em>wichtigem</em>, <strong>sehr wichtigem</strong> Text
+                    und inline <code>Code</code> Auszeichnung
+                  &lt;/p>
+                  &lt;p>
+                    Ein Satz mit <b>fettem</b>, <i>kursiven</i> und <small>kleinem</small> Text
+                  &lt;/p>
+                &lt;/section>
+              &lt;/body>
+            &lt;/html></code></pre>
+          </a>
+        </section>
+        <section>
+          <h2>Listen in HTML </h2>
+          <p class="fragment">
+            <strong>Ungeordnete Listen</strong>
+            <ul class="fragment">
+              <li>Ein &lt;ul> umschließt alle Listeneinträge</li>
+              <li>Jeder Listeneintrag besteht aus einem &lt;li></li>
+            </ul>
+          </p>
+          <p class="fragment">
+            <strong>Aufzählungslisten</strong>
+            <ul class="fragment">
+              <li>Ein &lt;ol> umschließt alle Listeneinträge</li>
+              <li>Jeder Listeneintrag besteht aus einem &lt;li></li>
+            </ul>
+          </p>
+          <p class="fragment">
+            <strong>Definitionslisten</strong>
+            <ul class="fragment">
+              <li>Zum Beispiel für Glossare</li>
+              <li>Ein &lt;dl> umschließt alle Listeneinträge</li>
+              <li>Jeder Listeneintrag besteht aus zwei Einträgen</li>
+              <li>Ein &lt;dt> für den Definitionsausdruck</li>
+              <li>Ein &lt;dd> für die Erklärung</li>
+            </ul>
+          </p>
+        </section>
+        <section>
+          <h2>Wie sieht unser HTML Dokument mit Listen aus</h2>
+          <a href='lists.html' target='_blank'>
+          <p><pre><code>
+            &lt;html>
+              &lt;body>
+              &lt;h1>Hier gehts um Listen&lt;/h1>
+              &lt;ul>
+                &lt;li>Erster Eintrag&lt;/li>
+                &lt;li>Zweiter Eintrag&lt;/li>
+                &lt;li>Dritter Eintrag&lt;/li>
+              &lt;/ul>
+              &lt;ol>
+                &lt;li>Erster Eintrag&lt;/li>
+                &lt;li>Zweiter Eintrag&lt;/li>
+                &lt;li>Dritter Eintrag&lt;/li>
+              &lt;/ol>
+              &lt;dl>
+                &lt;dt>Ausdruck&lt;/dt>
+                &lt;dd>Erklärung dazu&lt;/dd>
+                &lt;dt>Ausdruck&lt;/dt>
+                &lt;dd>Erklärung dazu&lt;/dd>
+              &lt;/dl>
+              &lt;/body>
+            &lt;/html></code></pre>
+          </a>
+        </section>
+        <section>
+          <h1>Fragen?</h1>
+        </section>
+        <section>
+          <blockquote style="margin-bottom: 80px;">
+             Hands On - HTML Übungen
+          </blockquote>
+        </section>
+        <section>
+          <h2>Wie funktioniert diese Übung?</h2>
+          <ul>
+            <li class="fragment">Ihr bekommt eine <a href='rezept-uebung.html'>HTML Datei</a></li>
+            <li class="fragment">Diese beinhaltet die absoluten HTML Basics für eine Rezeptseite</li>
+            <li class="fragment">Im HTML findet ihr als Kommentar 8 Aufgaben</li>
+            <li class="fragment">Bearbeitet die HTML Datei mit einem Editor</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Editoren?</h2>
+          <ul>
+            <li class="fragment">Genereller, guter Editor <a href='http://www.sublimetext.com/'>Sublime Text</a></li>
+            <li class="fragment">Spezieller Editor für HTML, CSS und Javascript <a href='http://brackets.io/'>Brackets</a></li>
+            <li class="fragment">Für kleine Sachen (z.B. diese Übung) <a href='http://codepen.io/'>codepen.io</a></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+
+		<script src="../revealjs-framework/lib/js/head.min.js"></script>
+		<script src="../revealjs-framework/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: false,
+				width: 1000,
+
+				transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+				transitionSpeed: 'fast', // default/fast/slow
+				backgroundTransition: 'none', // default/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../revealjs-framework/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../revealjs-framework/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-framework/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-framework/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../revealjs-framework/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../revealjs-framework/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

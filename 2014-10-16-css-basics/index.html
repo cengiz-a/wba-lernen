@@ -1,0 +1,1006 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<!-- Title of presentation -->
+	<title>Vortrag - CSS Basics</title>
+	<!-- Short description of presentation -->
+	<meta name="description" content="Vortrag - Web-basics">
+	<!-- Author of presentation -->
+	<meta name="author" content="Volker Schaefer">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="../revealjs-framework/css/reveal.min.css">
+	<link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme">
+
+	<!-- For syntax highlighting -->
+	<link rel="stylesheet" href="../revealjs-framework/lib/css/zenburn.css">
+
+	<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+	<script>
+		document.write('<link rel="stylesheet" href="../revealjs-framework/css/print/' + (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper') + '.css" type="text/css" media="print">');
+	</script>
+	<style type="text/css">
+		.tabelle {
+			table-layout: fixed;
+		}
+		.tabelle td {
+			background-color: #404040;
+		}
+		.tabelle td,
+		.tabelle th {
+			font-size: 0.8em;
+			border: 4px solid black;
+			text-align: center !important;
+		}
+		.tabelle th {
+			font-weight: normal;
+		}
+		.kaestchen div {
+			border-width: 6px;
+			border-color: #77cc00;
+			background-color: rgb(63, 63, 63);
+			float: left;
+			margin: 0 20px 20px 0;
+			padding: 10px;
+			width: 180px;
+			height: 180px;
+		}
+		.fullscreenImage .reveal .slides {
+			height: 100% !important;
+			left: 0;
+			margin: 0 auto;
+			padding: 0;
+			top: 0;
+			width: 100% !important;
+		}
+		.fullscreenImage .reveal .slides > section {
+			background-position-x: center;
+			background-position-y: 10px;
+			background-repeat: no-repeat;
+			background-size: auto 90%;
+			height: 100%;
+			left: 0;
+			margin: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+		.fullscreenImage .reveal .slides > section .bu {
+			background-color: rgba(221, 17, 102, 0.8);
+			top: 100px;
+			display: inline-block;
+			color: white;
+			padding: 0 10px 0 100px;
+			position: absolute;
+		}
+		.fullscreenImage .reveal .slides > section .quelle {
+			bottom: 10px;
+			color: white;
+			display: inline-block;
+			font-size: 14px;
+			margin: 0 0 0 10px;
+			position: absolute;
+		}
+		.fullscreenImage .reveal .slides > section p {
+			margin: 0;
+		}
+		.nobackground .reveal .slides > section {
+			background-image: none;
+		}
+		.whiteBackground .state-background {
+			background-color: white;
+		}
+		.big-font {
+			font-size: 1.3em !important;
+		}
+		.big-font li {
+			margin-bottom: 30px;
+		}
+	</style>
+	<!--[if lt IE 9]>
+		<script src="../revealjs-framework/lib/js/html5shiv.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+
+	<div class="reveal">
+
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+
+			<section>
+				<h1>Web-basierte Anwendungen 1</h1>
+				<h2>CSS-Basics</h2>
+
+				<p>16. Oktober 2014</p>
+
+				<p>Studiengang Medieninformatik an der Fachhochschule Köln
+					<br>Campus Gummersbach</p>
+
+				<p style="margin-top:10%">Stephan Pavlovic, Volker Schaefer</p>
+			</section>
+			<section>
+				<h2>Trennung von Struktur, Layout und Funktion</h2>
+				<img src="images/html_css_js.svg" alt="Abbildung html css javascript">
+			</section>
+			<section data-transition="none" class="fullscreenImage" data-state="fullscreenImage" data-background="white" style="background-image: url(images/csszengarden_1.jpg)">
+				<p class="bu fragment">
+					http://www.csszengarden.com
+				</p>
+			</section>
+			<section data-transition="none" class="fullscreenImage" data-state="fullscreenImage" data-background="white" style="background-image: url(images/csszengarden_2.jpg)">
+			</section>
+			<section data-transition="none" class="fullscreenImage" data-state="fullscreenImage" data-background="white" style="background-image: url(images/csszengarden_3.jpg)">
+			</section>
+			<section data-transition="none" class="fullscreenImage" data-state="fullscreenImage" data-background="white" style="background-image: url(images/csszengarden_4.jpg)">
+			</section>
+			<section data-transition="none" class="fullscreenImage" data-state="fullscreenImage" data-background="white" style="background-image: url(images/csszengarden_5.jpg)">
+			</section>
+			<section>
+				<h2>CSS - Geschichte</h2>
+				<ul>
+					<li><strong>1994</strong> - Konzept der Cascading Style Sheets wurde von Håkon Wium Lie entwickelt</li>
+					<li><strong>Dez. 1996</strong> - Publication von CSS Level 1 Recommendation</li>
+					<li><strong>Mai 1998</strong> - Publication von CSS Level 2.0 Recommendation</li>
+					<li><strong>Seit 2000</strong> - Arbeit an CSS Level 3.0</li>
+					<li><strong>Seit 2002</strong> - Arbeit an der überarbeiteten Version CSS Level 2 revision 1 (CSS 2.1)</li>
+					<li><strong>Seit 2002</strong> - Arbeit an der überarbeiteten Version CSS Level 2 revision 1 (CSS 2.1)</li>
+					<li><strong>2011</strong> - Publication von CSS Level 2.1 Recommendation</li>
+					<blockquote class="fragment">
+						CSS 3 ist im Gegensatz zu den Vorgängern modular aufgebaut, das heißt einzelne Teiltechniken (beispielsweise zur Steuerung der Sprachausgabe) haben ihren eigenen Entwicklungsrhythmus und Versionsschritte. <a href="http://www.w3.org/Style/CSS/specs">CSS3-Spezifikation</a>
+					</blockquote>
+				</ul>
+			</section>
+			<section>
+				<h2>Syntax</h2>
+				<img src="images/css_syntax.svg">
+
+			</section>
+			<section>
+				<h2>Syntax</h2>
+
+				<pre class="big-font"><code>p { color: black; }
+					
+p, li { color: black; }
+
+p, li { 
+	color:black; 
+	font-size: 20px 
+}</code></pre>
+			</section>
+			<section>
+				<h2>Einbindung von CSS</h2>
+				<ul class="big-font">
+					<li>Über eine externe Datei mit link-Element</li>
+					<li>Über eine externe Datei mit @import</li>
+					<li>Innerhalb des style-Elements</li>
+					<li>Im style-Attribut des Elements</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Einbindung über eine externe Datei</h2>
+				<p>mit link-Element</p>
+				<pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;Stylesheet &uuml;ber externe Datei einbinden&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;stylesheet.css&quot; type=&quot;text/css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;../css/reveal.css&quot; type=&quot;text/css&quot; &gt;  
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+				<ul class="fragment">
+					<li>Stylesheet-Anweisungen werden zentral an einem Ort definiert</li>
+					<li>Stylesheet kann von mehreren Dokumenten eingebunden werden</li>
+					<li>Es können mehrere Stylsheets in einem Dokument eingebunden werden</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Einbindung über eine externe Datei</h2>
+				<p>mit @import in einer CSS-Datei</p>
+				<pre><code>
+@import &quot;../css/style.css&quot;;
+p {
+	color: black;
+};
+
+h1 {
+	color: red; 
+	font-size: 16px;
+}</code></pre>
+				<blockquote class="fragment" style="position:absolute;left: -5%; top:0%; width:300px; font-size:0.8em">@import muss immer vor allen
+					<br>anderen Regeln stehen.</blockquote>
+
+			</section>
+			<section>
+				<h2>Einbindung innerhalb des style-Elements</h2>
+
+				<pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Stylesheet innerhalb des style-Elements definieren&lt;/title&gt;
+    &lt;style&gt;
+      p {
+        color: black;
+      };
+
+      h1 {
+        color: red; 
+        font-size: 16px;
+      }    
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+			</section>
+			<section>
+				<h2>Einbindung über das style-Attribut des Elements</h2>
+				<pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Stylesheet über das style-Attribut definieren&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style=&quot;color: red; font-size: 14px;&quot;&gt;
+      Lorem ipsum dolor sit amet, 
+      consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+      Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+      Donec quam felis
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+				<ul class="fragment">
+					<li>Style ist an ein Dokument gebunden und kann nicht an zentraler Stelle bearbeitet werden</li>
+					<li>Wartungsaufwand steigt und Flexibilität geht verloren</li>
+				</ul>
+			</section>
+			<section>
+				<h2>DOM und Vererbung</h2>
+				<p><strong>D</strong>ocument <strong>O</strong>bject <strong>M</strong>odel</p>
+				<blockquote>
+					Document Object Model (DOM) ist eine Spezifikation einer Schnittstelle für den Zugriff auf HTML- oder XML-Dokumente. Sie wird vom World Wide Web Consortium definiert.
+				</blockquote>
+				<p>
+					<small>Quelle: <a href="http://de.wikipedia.org/wiki/Document_Object_Model">Wikipedia - Document Object Model</a> (aufgerufen am 15.10.2014)</small>
+					<p><a href="http://www.w3.org/DOM/DOMTR">W3C - Document Object Model Specifications</a>
+					</p>
+			</section>
+			<section>
+				<h2>DOM und Vererbung</h2>
+				<pre style="float:left;width:320px"><code><!DOCTYPE html>&lt;html&gt;
+	&lt;head&gt;
+		&lt;title&gt;DOM&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;p&gt;Lorem Ipsum&lt;/p&gt;
+		&lt;ul&gt;
+			&lt;li&gt;Apfel&lt;/li&gt;
+			&lt;li&gt;Birne&lt;/li&gt;
+			&lt;li&gt;Kirsche&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+				<img class="fragment" src="images/dom.svg" alt="Abbildung DOM-Baum" style="float: right">
+				<ul class="fragment" style="float:right;margin-right: 14%">
+					<li><strong>document</strong> ist das Wurzelelement</li>
+					<li><strong>head</strong> und <strong>body</strong> sind Geschwister</li>
+					<li><strong>ul</strong> und <strong>li</strong> sind Eltern- und Kind-Element</li>
+				</ul>
+
+
+			</section>
+			<section>
+				<h2>DOM und Vererbung</h2>
+				<blockquote>Vererbung steht für die Übertragung der deklarierten CSS-Werte von einem Element auf das nachfolgende. Dabei gibt jedes Element des Dokuments seine Werte an seine Kind- Elemente weiter.</blockquote>
+				<small>Quelle: <a href="http://www.thestyleworks.de/basics/inheritance.shtml">The Styleworks - CSS-Vererbung</a> (aufgerufen am 15.10.2014)</small>
+				<ul>
+					<li>Es werden nicht alle Eigenschaften vererbt.</li>
+					<li>Der Wert 'inherit' bewirkt die Veerbung der Werte des Elternelements, die laut Standard nicht vererbt werden</li>
+					<li>Auflistung von Eigenschaften die vererbt oder nicht vererbt werden unter: <a href="http://www.thestyleworks.de/basics/inheritance.shtml">The Styleworks - CSS-Vererbung</a></li>
+					<li><a href="http://codepen.io/anon/pen/EnthG">Beispiel</a></li>
+				
+					
+				</ul>
+
+			</section>
+			<section>
+				<h2>Selektoren</h2>
+				<ul>
+					<li><strong>Einfache Selektoren</strong>
+					</li>
+					<li>Kombinatoren</li>
+					<li>Pseudoelemente</li>
+					<li>Pseudoklassen</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Einfache Selektoren</h2>
+				<table>
+					<tr>
+						<td>* {…}</td>
+						<td>Universalselektor</td>
+						<td>Alle Elemente in einem Dokument</td>
+					</tr>
+					<tr>
+						<td>p {…}</td>
+						<td>Typselektor</td>
+						<td>Alle p-Elemente im Dokument</td>
+					</tr>
+					<tr>
+						<td>.info {…}</td>
+						<td>Klassenselektor</td>
+						<td>Alle Elemente die der Klasse "Info" angehören</code>
+						</td>
+					</tr>
+					<tr>
+						<td>#wichtig {…}</td>
+						<td>ID-Selektor</td>
+						<td>Das Element mit der ID "wichtig"</td>
+					</tr>
+				</table>
+				<pre class="fragment"><code>&lt;p id=&quot;wichtig&quot; class=&quot;hinweis modal&quot;&gt;
+	Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt 
+	ut labore et dolore magna aliquyam
+&lt;/p&gt;</code></pre>
+				<blockquote class="fragment">
+					Eine bestimmte Klasse darf beliebig vielen Elementen in einem Dokument zugewiesen werden. Eine bestimmte ID darf nur einem einzigen Element in einem Dokument zugewiesen werden.
+				</blockquote>
+			</section>
+			<section>
+				<h2>Einfache Selektoren</h2>
+				<p>Einfache Selektoren können auch miteinander kombiniert werden.</p>
+				<table>
+					<tr>
+						<td>p, div {…}</td>
+						<td>Alle p- und div-Elemente</td>
+					</tr>
+					<tr>
+						<td>p.info {…}</td>
+						<td>Alle p-Elemente mit der Klasse "info"</td>
+					</tr>
+					<tr>
+						<td>.info,&nbsp;.wichtig&nbsp;{…}&nbsp;&nbsp;</td>
+						<td>Alle Elmente mit der Klasse "info" <strong>oder</strong>"wichtig"</td>
+					</tr>
+					<tr>
+						<td>.info.wichtig&nbsp;{…}</td>
+						<td>Alle Elemente mit den Klassen "info" <strong>und</strong> "wichtig"</td>
+					</tr>
+					<tr>
+						<td>.info .wichtig</td>
+						<td>Alle Elemente die der Klasse "wichtig" angehören und sich <strong>innerhalb</strong> der Elemente mit der Klasse "info" befinden></td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Attribut-Selektoren</h2>
+				<table>
+					<tr>
+						<td>[href]&nbsp;{…}</td>
+						<td>Alle Elemente mit dem Attributnamen "href"</td>
+					</tr>
+					<tr>
+						<td>[href=http://google.de]&nbsp;{…}</td>
+						<td>Alle Elemente deren Attribut "href" <strong>exakt</strong> den Wert "http://google.de" haben</td>
+					</tr>
+					<tr>
+						<td>[href*=google]&nbsp;{…}</td>
+						<td>Alle Elemente die das Attribut "href" haben und deren Wert die Zeichenkette "google" <strong>enthalten</strong>
+						</td>
+					</tr>
+					<tr>
+						<td>[href^=http]&nbsp;{…}</td>
+						<td>Alle Elemente die das Attribut "href" haben und deren Wert mit der Zeichenkette "http" <strong>beginnen</strong>
+						</td>
+					</tr>
+					<tr>
+						<td>[href$=http]&nbsp;{…}</td>
+						<td>Alle Elemente die das Attribut "href" haben und deren Wert mit der Zeichenkette "http" <strong>enden</strong>
+						</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>CSS-Eigenschaften zur Schriftformatierung</h2>
+				<div style="float:left;width: 40%">
+					<p>Schriftbild</p>
+					<ul>
+						<li>font-family (Schriftart)</li>
+						<li>font-style</li>
+						<li>font-size</li>
+						<li>font-weight</li>
+						<li>…</li>
+					</ul>
+				</div>
+				<div>
+					<p>Textformatierung</p>
+					<ul>
+						<li>color</li>
+						<li>letter-spacing</li>
+						<li>word-spacing</li>
+						<li>text-decoration</li>
+						<li>…</li>
+					</ul>
+					<p>Weitere Eigenschaften auf <a href="http://www.w3.org/TR/css3-fonts/">W3C - CSS Fonts Module Level 3</a>
+					</p>
+				</div>
+			</section>
+			<section>
+				<h2>CSS-Eigenschaften zur Schriftformatierung</h2>
+				<p>Viele Angaben lassen sich in einer Kurzschreibweise zusammenfassen</p>
+				<div class="fragment">
+					<p>"Normale" Schreibweise:</p>
+					<pre><code>p {
+	font-style: italic;
+	font-weight: lighter;
+	font-size: 14px;
+	line-height: 1.4;
+	font-family: Georgia, serif;
+}
+					</code></pre>
+				</div>
+				<div class="fragment">
+
+					<p>Kurzschreibweise:</p>
+					<pre><code>p {
+	font: italic lighter 14px/1.4 Georgia, serif;
+}
+					</code></pre>
+				</div>
+				<p class="fragment">Mehr Infos unter: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties">mozilla.org - shorthand properties</a>
+				</p>
+			</section>
+			<section>
+				<h2>Block- vs. Inline-Elemente</h2>
+				<div style="width:48%;float: left" class="fragment">
+					<p>Block-Elemente…</p>
+					<ul>
+						<li>sind so breit wie ihr Elternelement, falls kein anderer Wert angegeben wird</li>
+						<li>sind so hoch wie ihr Inhalt, falls kein andererr Wert angegeben wird</li>
+						<li>können Innen- und und Außenabstände haben</li>
+						<li>erzeugen einen Umbruch</li>
+						<li>sind u.a. &lt;p&gt;, &lt;div&gt;, &lt;form&gt;, &lt;header&gt;, &lt;nav&gt;, &lt;ul&gt;, &lt;li&gt;, und &lt;h1&gt;</li>
+					</ul>
+				</div>
+				<div style="width:48%; float: right" class="fragment">
+					<p>Inline-Elemente…</p>
+					<ul>
+						<li>ignorieren Höhen- und Breitenangaben</li>
+						<li>befinden sich im Textfluss</li>
+						<li>können Abstände nach oben und unten, jedoch nicht nach links und rechts, zugewiesen werden</li>
+						<li>erzeugen keinen Umbruch</li>
+						<li>sind u.a. &lt;a&gt;, &lt;span&gt;, &lt;em&gt;, &lt;cite&gt;, und &lt;code&gt;</li>
+					</ul>
+				</div>
+			</section>
+			<section>
+				<h2><h2>Block- vs. Inline-Elemente</h2></h2>
+				<p>Über die CSS-Eigenschaft 'display' kann die Anzeigeart eines Elements geändert werden</p>
+				<table>
+					<tr>
+						<td width="30%">p { display: none }</td>
+						<td>Element wird nicht angezeigt und es wird auch kein Platzhalter freigelassen.</td>
+					</tr>
+					<tr>
+						<td>span { display: block }</td>
+						<td>Erzwingt einen Block - das Element erzeugt eine neue Zeile.</td>
+					</tr>
+					<tr>
+						<td>p { display: inline }</td>
+						<td>Erzwingt die Anzeige im Text - das Element wird im laufenden Textfluss angezeigt.</td>
+					</tr>
+					<tr>
+						<td>span { display: inline-block }</td>
+						<td>Erzeugt äußerlich einen Block, für den Breite, Höhe und Außenabstand angegeben werden kann, belässt das Element jedoch im laufenden Textfluss.</td>
+					</tr>
+				</table>
+				<a href="http://codepen.io/anon/pen/GqHgj">Beispiel</a>
+			</section>
+			<section>
+				<h2>Das Box-Modell</h2>
+				<blockquote cite="http://wiki.selfhtml.org/wiki/CSS/Box-Modell">Im visuellen Anzeigemodell erfolgt die Darstellung von Elementen durch das Zeichnen von Rechtecken. Die Bestandteile dieser Rechtecke beschreibt das „Box-Modell“.</blockquote>
+				<p><small> Quelle: <a href="http://wiki.selfhtml.org/wiki/CSS/Box-Modell">SELFHTML-Wiki - CSS/Box-Modell</a> (aufgerufen am 13.11.2014)</small>
+				</p>
+			</section>
+			<section>
+				<h2>Das Box-Modell</h2>
+				<img src="images/boxmodell_content_box.png" alt="boxmodell">
+
+				<p><small> Quelle: <a href="http://www.drweb.de/magazin/css3-das-etwas-andere-box-modell-mit-box-sizingborder-box-39078/">Dr. Web - CSS/Box-Modell</a> (aufgerufen am 13.11.2014)</small>
+				</p>
+
+			</section>
+			<section>
+				<h2>Das Box-Modell</h2>
+				<ul>
+					<li class="fragment">Für Block-Elemente können Höhe und Breite beliebig festgelegt weren</li>
+					<li class="fragment">Bei Inline-Elementen werden die Maße durch den Inhalt vorgegeben</li>
+					<li class="fragment">über die Eigenschaft display: block kann ein Inline-Element als Block-Element dargestellt werden</li>
+					<li class="fragment">Hintergrundbilder- und farben werden in den Bereich des Inhalts, Innenabstands und Rahmen gezeichnet.</li>
+					<li class="fragment">Die Gesamtbreite eines Elements errechnet sich durch:
+						<pre><code>margin-left + border-left + padding-left + width + padding-right + border-right + margin-right</code></pre> 
+					</li>
+					<li class="fragment">Die Gesamthöhe eines Elements sich durch:
+						<pre><code>margin-top + border-top + padding-top + height + padding-bottom + border-bottom + margin-bottom</code></pre> 
+					</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Alternatives Box-Modell</h2>
+				<ul>
+					<li>Problem des klassischen Box-Modell: Höhen- und Breitenangabe sind ungenau, da sie sich nur auf den Content beziehen</li>
+					<li>Die Deklaration <strong>box-sizing: border-box</strong> aktiviert ein alternatives Boxmodell</li>
+					<li>Padding und Border wird in die Höhen- und Breitenangabe mit einbezogen</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Alternatives Box-Modell</h2>
+				<img src="images/boxmodell_border_box.png" alt="boxmodell">
+
+				<p><small> Quelle: <a href="http://www.drweb.de/magazin/css3-das-etwas-andere-box-modell-mit-box-sizingborder-box-39078/">Dr. Web - CSS/Box-Modell</a> (aufgerufen am 13.11.2014)</small>
+				</p>
+			</section>
+			<section>
+				<h2>Innen- und Außenabstände</h2>
+
+				<p>Die Abstände können für jede Seite einzeln definiert weren</p>
+				<pre style="font-size: 1.3rem"><code>p {
+	margin-top: 10px;
+	margin-right: 20px;
+	margin-bottom: 30px;
+	margin-left: 5px;
+}</code></pre>
+				<div class="fragment">
+					<p>oder in Kurzschreibweise definiert werden</p>
+					<pre style="font-size: 1.3rem"><code>/* Abst&auml;nde werden im Uhrzeiger definiert, beginnend mit der oberen Seite */
+p { margin: 10px 20px 30px 5px;} 
+					
+/*  f&uuml;r alle 4 Abst&auml;nde gilt derselbe Wert */
+p {margin: 20px; }
+
+/* 1. Wert f&uuml;r margin-top und margin bottom. 
+   2. Wert f&uuml;r margin-left und margin-right */
+p { margin: 10px 20px; } 
+			
+/* Setzt den rechten und linken Abstand auf die noch 
+   zur Verfügung stehende Breite */
+p { margin: 0 auto; }</code></pre>
+
+				</div>
+			</section>
+			<section>
+				<h2>Maßeinheiten im Web</h2>
+				<table>
+					<tr>
+						<td style="width: 100px;">px</td>
+						<td>Pixel</td>
+					</tr>
+					<tr>
+						<td>%</td>
+						<td>Prozent: Je nach CSS-Eigenschaft relativ zur elementeigenen Größe, oder zu der des Elternelements, oder zu einem allgemeinen Kontext</td>
+					</tr>
+					<tr>
+						<td>em</td>
+						<td>Bezogen auf die Schriftgröße des Elements. Ausnahme: Wenn die font-size-Eigenschaft (also die Schriftgröße) selbst mit dieser Maßangabe gesetzt wird, bezieht sich die Angabe auf die Schriftgröße des Elternelements.</td>
+					</tr>
+					<tr>
+						<td>rem</td>
+						<td>(root em): Bezieht sich auf die Schriftgröße des Wurzelelements.</td>
+					</tr>
+					<tr>
+						<td>ex</td>
+						<td>Wird ähnlich wie em verarbeitet. Ist jedoch auf die Höhe des Kleinbuchstaben 'x' in diesem Element bezogen</td>
+					</tr>
+				</table>
+				<p>Weitere Infos zu Maßeinheiten auf <a href="http://www.w3.org/TR/css3-values/">W3C - CSS Values and Units Module Level 3</a>
+				</p>
+
+			</section>
+			<section>
+				<h2>Hintergrund von Elementen</h2>
+				<div style="float: left; width: 50%">
+					<p>Hintergrundfarben und -bilder</p>
+					<ul>
+						<li>background-image</li>
+						<li>background-position</li>
+						<li>background-size</li>
+						<li>background-color</li>
+						<li>…</li>
+					</ul>
+				</div>
+				<div style="float: right; width: 50%">
+					<p>Farbverläufe als Hintergrundgrafik</p>
+					<ul>
+						<li>linear-gradient()</li>
+						<li>radial-gradient()</li>
+						<li>repeating-linear-gradient()</li>
+						<li>radial-gradient()</li>
+					</ul>
+				</div>
+				<p style="clear:both">Weitere Infos zu Hingergründen: <a href="http://www.w3.org/TR/css3-background/#backgrounds">W3C - CSS Background and Borders Module Level 3</a>
+				</p>
+				<p>Weitere Infos zu Farbverläufen: <a href="http://www.w3.org/TR/2011/WD-css3-images-20110217/">W3C - CSS Image Values and Replaced Content Module Level 3</a>
+				</p>
+
+
+			</section>
+			<section>
+				<h2>Hingergrundfarben</h2>
+				<div style="height: 300px">
+					<pre style="width:50%; float: left; margin: 0;"><code>.logo {
+	width: 250px;
+	height: 250px;
+	border: 5px #77cc00 solid;
+	background-color:rgb(63, 63, 63);
+	}</code></pre>
+					<div style="float:right; width: 250px;height: 250px; border: 5px #77cc00 solid; background-color:rgb(63, 63, 63);"></div>
+				</div>
+				<ul>
+					<li>Farben können im CSS auf unterschiedliche Weise festgelegt werden</li>
+					<li>Innerhalb eines Projektes sollte sich auf eine Art festgelegt werden</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Farben über Hexadezimal-Werte</h2>
+				<pre><code class="big-font">p {background-color: #228B22;}</code></pre>
+				<ul>
+					<li>Drei Pärchen aus Hexadezimalwerten</li>
+					<li>Ein Pärchen besteht aus zwei Hexadezimalziffern</li>
+					<li>Die drei Pärchen stehen für die Farbwerte Rot, Grün und Blau. Genau in dieser Reihenfolge</li>
+					<li>In dem Beispiel: Rot: 22 – Grün: 8B – Blau: 22</li>
+				</ul>
+			</section>
+			<section data-transition: "none">
+				<h2>Farben über RGB-Werte</h2>
+				<img src="images/rgb_cube.png">
+				<p>
+					<small>Quelle: <a href="http://upload.wikimedia.org/wikipedia/commons/8/83/RGB_Cube_Show_lowgamma_cutout_b.png">wikimedia.org</a> (aufgerufen am 14. Oktober 2014)</small>
+				</p>
+
+			</section>
+			<section data-transition: "none">
+				<h2>Farben über RGB-Werte</h2>
+				<img src="images/rgb_cube.png" style="float:left;width: 40%;">
+				<ul class="fragment" style="float: right; width: 55%">
+					<li>Farbe wird durch die Addition von Rot, Grün und Blau gebildet</li>
+					<li>
+						Mit prozentualen Angaben zwischen 0% und 100%
+						<pre><code class="big-font">p {background-color: rgb(13.33%,54.51%,13.33%);}</code></pre>
+					</li>
+					<li>Mit Werten zwischen 0 und 255
+						<pre><code class="big-font">p {background-color: rgb(34,139,34);}</code></pre>
+					</li>
+					<li>
+						Über einen vierten Wert kann eine Transparenz zwischen 0 und 1 definiert werden
+						<pre><code class="big-font">p {background-color: rgba(34,139,34, 0.5);}</code></pre>
+
+					</li>
+				</ul>
+			</section>
+			<section data-transition: "none">
+				<h2>Farben über HSL-Werte</h2>
+				<img src="images/hsl_cylinder.png">
+				<p>
+					<small>Quelle: <a href="http://upload.wikimedia.org/wikipedia/commons/c/cb/HSL_color_solid_cylinder_alpha_lowgamma.png">wikimedia.org</a> (aufgerufen am 14. Oktober 2014)</small>
+				</p>
+			</section>
+
+			<section data-transition: "none">
+				<h2>Farben über HSL-Werte</h2>
+				<img src="images/hsl_cylinder.png" style="float:left;width: 40%;">
+				<ul class="fragment" style="float: right; width: 55%">
+					<li>Farbe wird durch den Farbwinkel (H) im Farbkreis, der Sättigung (S) in Prozent und Helligkeitswert (L) in Prozent gebildet</li>
+					<li>
+						Mit prozentualen Angaben zwischen 0% und 100%
+						<pre><code class="big-font">p {background-color: hsl(120,61%,34%);}</code></pre>
+					</li>
+					<li>
+						Über einen vierten Wert kann eine Transparenz zwischen 0 und 1 definiert werden
+						<pre><code class="big-font">p {background-color: hsla(120,61%,34%, 0.5);}</code></pre>
+
+					</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Farben über vorderfinierte Schlüsselworte</h2>
+				<pre><code class="big-font">p {background-color: forestgreen;}</code></pre>
+				<ul>
+					<li>In CSS2 16 vordefinierte Farbschlüsselworte</li>
+					<li>Wurde in CSS3 auf 140 Farbschlüsselworte erweitert</li>
+					<img src="images/css2-farben.png">
+				</ul>
+				<p>Übersicht aller Farbschlüsselworte auf <a href="http://www.w3.org/TR/css3-color/#svg-color/">W3C - CSS Color Module Level 3 - Extended color keywords</a>
+				</p>
+
+			</section>
+			<section>
+				<h2>Hingergrundgrafiken</h2>
+				<div style="height: 250px">
+					<pre style="width:50%; float: left; margin: 0;"><code>.logo {
+	background-image: url(images/css3-logo.jpg);
+	width: 107px;
+	height: 150px;
+	border: 3px #77cc00 solid;
+}</code></pre>
+					<div style="float:right;background-image: url(images/css3-logo.jpg); width: 107px;height: 150px; border: 3px #77cc00 solid;"></div>
+				</div>
+				<div style="height: 300px">
+					<pre style="width:50%; float: left; margin: 0;"><code>.logo {
+	background-image: url(images/css3-logo.jpg);
+	width: 250px;
+	height: 250px;
+	border: 3px #77cc00 solid;
+}</code></pre>
+					<div style="float:right;background-image: url(images/css3-logo.jpg); width: 250px;height: 250px; border: 3px #77cc00 solid;"></div>
+				</div>
+			</section>
+			<section>
+				<h2>Hingergrundgrafiken</h2>
+				<div style="height: 300px">
+					<pre style="width:50%; float: left; margin: 0;"><code>.logo {
+	background-image: url(images/css3-logo.jpg);
+	width: 250px;
+	height: 250px;
+	border: 3px #77cc00 solid;
+	background-repeat: repeat-x;
+}</code></pre>
+					<div style="float:right;background-image: url(images/css3-logo.jpg); width: 250px;height: 250px; border: 3px #77cc00 solid;	background-repeat: repeat-x;"></div>
+				</div>
+				<div style="height: 300px">
+					<pre style="width:50%; float: left; margin: 0;"><code>.logo {
+	background-image: url(images/css3-logo.jpg);
+	width: 250px;
+	height: 250px;
+	border: 3px #77cc00 solid;
+	background-repeat: repeat-y;
+}</code></pre>
+					<div style="float:right;background-image: url(images/css3-logo.jpg); width: 250px;height: 250px; border: 3px #77cc00 solid;	background-repeat: repeat-y"></div>
+				</div>
+			</section>
+			<section>
+				<h2>Hingergrundgrafiken</h2>
+				<div style="height: 300px">
+					<pre style="width:50%; float: left; margin: 0;"><code>.logo {
+	background-image: url(images/css3-logo.jpg);
+	width: 250px;
+	height: 250px;
+	border: 3px #77cc00 solid;
+	background-repeat: no-repeat;
+}</code></pre>
+					<div style="float:right;background-image: url(images/css3-logo.jpg); width: 250px;height: 250px; border: 3px #77cc00 solid;	background-repeat: no-repeat;"></div>
+				</div>
+				<div style="height: 300px">
+					<pre style="width:50%; float: left; margin: 0;"><code>.logo {
+	background-image: url(images/css3-logo.jpg);
+	width: 250px;
+	height: 250px;
+	border: 3px #77cc00 solid;
+	
+	/* passt unter Beibehaltung des 
+	Seitenverhältnisses die kleinere Seite 
+	der Grafik in den Anzeigebereich ein */
+	background-size: cover;
+}</code></pre>
+					<div style="float:right;background-image: url(images/css3-logo.jpg); width: 250px;height: 250px; border: 3px #77cc00 solid;	background-size: cover"></div>
+				</div>
+			</section>
+			<section>
+				<h2>Hingergrundgrafiken</h2>
+				<div style="height: 300px">
+					<pre style="width:50%; float: left; margin: 0;"><code>.logo {
+	background-image: url(images/css3-logo.jpg);
+	width: 250px;
+	height: 250px;
+	border: 3px #77cc00 solid;
+	background-repeat: no-repeat;
+	background-position: center;
+}</code></pre>
+					<div style="float:right;background-image: url(images/css3-logo.jpg); width: 250px;height: 250px; border: 3px #77cc00 solid;	background-position: center;background-repeat: no-repeat;"></div>
+				</div>
+				<div style="height: 300px">
+					<pre style="width:50%; float: left; margin: 0;"><code>.logo {
+	background-image: url(images/css3-logo.jpg);
+	width: 250px;
+	height: 250px;
+	border: 3px #77cc00 solid;
+	background-repeat: no-repeat;
+	background-position: 20px 80px;
+}</code></pre>
+					<div style="float:right;background-image: url(images/css3-logo.jpg); width: 250px;height: 250px; border: 3px #77cc00 solid;	background-position: 20px 80px;background-repeat: no-repeat;"></div>
+				</div>
+			</section>
+			<section>
+				<h2>Rahmen von Elementen</h2>
+				<div style="float: left; width: 50%">
+					<ul>
+						<li>border-width</li>
+						<li>border-style</li>
+						<li>border-color</li>
+						<li>border-radius</li>
+						<li>…</li>
+					</ul>
+				</div>
+			</section>
+
+			<section>
+				<h2>Rahmen von Elementen</h2>
+				<div style="height: 300px">
+					<pre style="width:50%; float: left; margin: 0;"><code>.logo {
+	border-width: 5px;
+	border-color: #77cc00;
+	border-style: solid;
+	background-color: rgb(63, 63, 63);
+	
+	/*oder in Kurzform*/
+.logo {
+	border: 3px #77cc00 black;
+	background-color: rgb(63, 63, 63);
+}
+</code></pre>
+					<div style="float:right;border-width: 5px;border-color: #77cc00;border-style: solid;background-color: rgb(63, 63, 63); width: 200px; height: 200px"></div>
+				</div>
+				<div style="height: 300px">
+					<pre style="width:50%; float: left; margin: 0;"><code>.logo {
+	border-top: 5px grey solid;
+	border-right: 10px green solid;
+	border-bottom: 15px blue solid;
+	border-left: 20px red solid;
+}
+</code></pre>
+					<div style="float:right;	border-top: 5px grey solid;
+	border-right: 10px green solid;
+	border-bottom: 15px blue solid;
+	border-left: 20px red solid;
+	background-color: rgb(63, 63, 63);
+background-color: rgb(63, 63, 63); width: 200px; height: 200px"></div>
+				</div>
+			</section>
+			<section>
+				<h2>Rahmentypen</h2>
+				<div class="kaestchen">
+					<div style="border-style:dotted">dotted</div>
+					<div style="border-style:dashed">dashed</div>
+					<div style="border-style:solid">solid</div>
+					<div style="border-style:double">double</div>
+					<div style="border-style:groove">groove</div>
+					<div style="border-style:ridge">ridge</div>
+					<div style="border-style:inset">inset</div>
+					<div style="border-style:outset">outset</div>
+				</div>
+			</section>
+			<section>
+				<h2>Abgerundete Ecken</h2>
+				<div style="height: 140px">
+					<pre style="width:60%; float: left; margin: 0;"><code>.logo {
+	/* Radius ist fuer alle vier Ecken gleich */
+	border-radius:20px;
+}
+</code></pre>
+					<div style="float:right;margin-right: 50px;border-width: 5px;border-color: #77cc00;border-style: solid;background-color: rgb(63, 63, 63); width: 100px; height: 100px; border-radius: 20px"></div>
+				</div>
+				<div class="fragment" style="height: 140px">
+					<pre style="width:60%; float: left; margin: 0;"><code>.logo {
+	/* Erster Wert: oben links / unten rechts
+	  Zweiter Wert: oben rechts / unten links */
+	border-radius:  10px 40px;
+}
+</code></pre>
+					<div style="float:right;margin-right: 50px;border-width: 5px;border-color: #77cc00;border-style: solid;background-color: rgb(63, 63, 63); width: 100px; height: 100px; border-radius:  10px 40px"></div>
+				</div>
+				<div class="fragment" style="height: 140px">
+					<pre style="width:60%; float: left; margin: 0;"><code>.logo {
+	/* Werte für alle Ecken im Uhrzeigersinn 
+	   beginnend oben links  */
+	border-radius:  10px 50px 30px 5px;
+}
+</code></pre>
+					<div style="float:right;margin-right: 50px;border-width: 5px;border-color: #77cc00;border-style: solid;background-color: rgb(63, 63, 63); width: 100px; height: 100px; border-radius:  10px 50px 30px 5px"></div>
+				</div>
+				<div class="fragment" style="height: 140px">
+					<pre style="width:60%; float: left; margin: 0;"><code>.logo {
+	/* Erster Wert: Radius horizontal
+	  Zweiter Wert: Radius vertiakl */
+	border-radius:  50px / 20px;
+}
+</code></pre>
+					<div style="float:right;margin-right: 50px;border-width: 5px;border-color: #77cc00;border-style: solid;background-color: rgb(63, 63, 63); width: 100px; height: 100px; border-radius:  50px / 20px"></div>
+				</div>
+
+			</section>
+			<section>
+				<h2>Zusammenfassung</h2>
+				<ul>
+					<li>Syntax</li>
+					<li>Einbindung von CSS</li>
+					<li>DOM und Vererbung</li>
+					<li>Block- und Inline-Elemente</li>
+					<li>Box-Modell</li>
+					<li>Farbmodelle</li>
+					<li>Hintergrundfarben- und Grafiken</li>
+					<li>Rahmen und abgerundete Ecken</li>
+
+
+				</ul>
+			</section>
+			<sect <!-- End of slides container. -->
+
+		</div>
+
+	</div>
+
+	<script src="../revealjs-framework/lib/js/head.min.js"></script>
+	<script src="../revealjs-framework/js/reveal.min.js"></script>
+
+	<script>
+		// Full list of configuration options available here:
+		 // https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: false,
+			width: 1000,
+
+			transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+			transitionSpeed: 'fast', // default/fast/slow
+			backgroundTransition: 'none', // default/linear/none
+
+			// Optional libraries used to extend on reveal.js
+			dependencies: [
+				{
+					src: '../revealjs-framework/lib/js/classList.js',
+					condition: function () {
+						return !document.body.classList;
+					}
+				},
+				{
+					src: '../revealjs-framework/plugin/markdown/marked.js',
+					condition: function () {
+						return !!document.querySelector('[data-markdown]');
+					}
+				},
+				{
+					src: '../revealjs-framework/plugin/markdown/markdown.js',
+					condition: function () {
+						return !!document.querySelector('[data-markdown]');
+					}
+				},
+				{
+					src: '../revealjs-framework/plugin/highlight/highlight.js',
+					async: true,
+					callback: function () {
+						hljs.initHighlightingOnLoad();
+					}
+				},
+				{
+					src: '../revealjs-framework/plugin/zoom-js/zoom.js',
+					async: true,
+					condition: function () {
+						return !!document.body.classList;
+					}
+				},
+				{
+					src: '../revealjs-framework/plugin/notes/notes.js',
+					async: true,
+					condition: function () {
+						return !!document.body.classList;
+					}
+				}
+				]
+		});
+	</script>
+
+</body>
+
+</html>

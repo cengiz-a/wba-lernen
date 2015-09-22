@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<!-- Title of presentation -->
+	<title>jQuery</title>
+	<!-- Short description of presentation -->
+	<meta name="description" content="Kickoff Web-basierte Anwendungen 1">
+	<!-- Author of presentation -->
+	<meta name="author" content="Stephan Pavlovic">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="../revealjs-framework/css/reveal.min.css">
+	<link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme">
+
+	<!-- For syntax highlighting -->
+	<link rel="stylesheet" href="../revealjs-framework/lib/css/solarized_light.css">
+
+	<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+	<script>
+		document.write('<link rel="stylesheet" href="../revealjs-framework/css/print/' + (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper') + '.css" type="text/css" media="print">');
+	</script>
+	<style>
+		.big-font {
+			font-size: 1.3em !important;
+		}
+		.big-font li {
+			margin-bottom: 30px;
+		}
+	</style>
+
+	<!--[if lt IE 9]>
+		<script src="../revealjs-framework/lib/js/html5shiv.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+	<div class="reveal">
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+
+			<section>
+				<h1>Web-basierte Anwendungen 1</h1>
+				<h2>jQuery</h2>
+				<p>22. Oktober 2014</p>
+
+				<p>Studiengang Medieninformatik an der Fachhochschule Köln
+					<br>Campus Gummersbach</p>
+
+				<p style="margin-top:10%">M.Sc. Stephan Pavlovic, M.Sc. Jan Kus</p>
+			</section>
+
+			<section>
+				<h2>Was ist ein Framework?</h2>
+				<blockquote>Ein Framework (englisch für Rahmenstruktur) ist ein Programmiergerüst, das in der Softwaretechnik, insbesondere im Rahmen der objektorientierten Softwareentwicklung sowie bei komponentenbasierten Entwicklungsansätzen, verwendet wird.</blockquote>
+				<p><small>Quelle: <a href="http://de.wikipedia.org/wiki/Framework">http://de.wikipedia.org/wiki/Framework</a> (22.10.2014)</small>
+				</p>
+			</section>
+			<section>
+				<h2>
+                        Vorteile // Nachteile von Frameworks
+                    </h2>
+				<div class="fragment" style="float: left !important; margin-right: 70px;">
+					<h3>Vorteile</h3>
+					<ul>
+						<li>Leistungsfähigkeit</li>
+						<li>Kosten</li>
+						<li>Unterstützung</li>
+						<li>Sicherheit und Robustheit</li>
+					</ul>
+				</div>
+				<div class="fragment">
+					<h3>
+                            Nachteile
+                        </h3>
+					<ul>
+						<li>Sie lernen das Framework, nicht die Sprache</li>
+						<li>Einschränkung</li>
+						<!-- Warum ist das ein Nachteil? -->
+						<li>Code ist öffentlich</li>
+					</ul>
+				</div>
+			</section>
+			<section>
+				<img style="margin: 0;float: right; width: 60%;" src="images/jquery_logo.jpg">
+				<h2>Entwicklung</h2>
+
+				<ul>
+					<li>Entwickelt von John Rising</li>
+					<li>Januar 2006
+						<br>Veröffentlichung auf dem BarCamp in New York</li>
+					<li>September 2008
+						<br>Nokia und Microsoft kündigen an jQuery in ihren Produkten zu verwenden</li>
+					<li>April 2013
+						<br>Veröffentlichung von jQuery 2.0</li>
+					<li>Oktober 2014
+						<br>Mehr als jede zweite Website verwendet jQuery als Framework
+						<br><a href="http://w3techs.com/technologies/overview/javascript_library/all">http://w3techs.com/technologies/overview/javascript_library/all</a>
+						</br>
+					</li>
+				</ul>
+
+			</section>
+			<section>
+				<h2>Funktionen</h2>
+				<ul>
+					<li>Elementselektion im Document Object Model</li>
+					<li>Document Object Model-Manipulation</li>
+					<li>Erweitertes Eventsystem</li>
+					<li>Hilfsfunktionen wie z.B. die each-Funktion</li>
+					<li>Animationen und Effekte</li>
+					<li>Ajax-Unterstützung</li>
+					<li>Zahlreiche Erweiterungen durch Plugins
+						<br><a href="http://plugins.jquery.com">http://plugins.jquery.com</a>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<h2>jQuery einbinden: Variante 1</h2>
+				<ul>
+					<li>Javascript-Datei herunterladen
+						<br><a href="http://jquery.com/download/">http://jquery.com/download/</a>
+					</li>
+					<li>und im head der html-Datei einbinden</li>
+				</ul>
+
+				<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;script src=&quot;/js/jquery-1.11.1.min&quot;&gt;&lt;/script&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+			</section>
+			<section>
+				<h2>jQuery einbinden: Variante 2</h2>
+				<p>Nutzen eines CDN (Content Deliveray Network)</p>
+				<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;script src=&quot;//code.jquery.com/jquery-1.11.0.min.js&quot;&gt;&lt;/script&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+				<div class="fragment">
+					<ul>
+						<li>Performanceverbesserung, durch Caching im Browser.</li>
+						<li>Aktuelle Verison von jQuery kann automatisch verwendet:
+
+					</ul>
+					<pre><code><!-- Version 1.x wird abgerufen -->
+&lt;script src=&quot;//code.jquery.com/jquery-1.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+
+				</div>
+			</section>
+			<section>
+				<h2>Syntax</h2>
+				<img src="images/jquery_syntax.svg">
+
+			</section>
+			<section>
+				<h2>Document-Ready-Funktion</h2>
+				<p>Eine Seite kann erst zuverlässig manipuliert werden, wenn das DOM geladen ist.</p>
+				<pre><code>$( document ).ready(function() {
+    console.log( &quot;ready!&quot; );
+});</code></pre>
+				<div class="fragment">
+					<p>Oder in Kurzschreibweise:</p>
+					<pre><code>$(function() {
+    console.log( "ready!" );
+});</code></pre>
+				</div>
+			</section>
+			<section>
+				<h2>Elemente selektieren</h2>
+				<p>jQuery unterstützt die meisten CSS3-Selektoren</p>
+				<div class="fragment">
+					<p>Selektion nach ID oder Klassen:</p>
+					<pre><code>$( &quot;#myId&quot; );
+$( &quot;.myClass&quot; );</code></pre>
+				</div>
+				<div class="fragment">
+
+					<p>Selektion nach Attributen:</p>
+					<pre><code>$( &quot;input[name='first_name']&quot; );</code></pre>
+				</div>
+				<div class="fragment">
+
+					<p>Pseudo-Selektoren:</p>
+
+
+					<pre><code>// das erste a-Element mit der Klasse "external"
+$( &quot;a.external:first&quot; );
+
+// alle ungeraden tr-Elemente
+$( &quot;tr:odd&quot; );
+
+// alle Div-Elemente die sichtbar sind
+$( &quot;div:visible&quot; );</code></pre>
+				</div>
+				<div class="fragment">
+
+					<p>Auswahlen können in Variablen gespeichert werden:</p>
+					<pre><code>var divs = $( &quot;div&quot; );</code></pre>
+				</div>
+			</section>
+			<section>
+				<h2>Zugriff auf Attribute</h2>
+				<p>Attribute werden über die Methode <strong>.attr()</strong> gesetzt und abgerufen</p>
+				<div class="fragment">
+					<p>Defintion von Attributen:</p>
+					<pre><code>$( &quot;a&quot; ).attr( &quot;href&quot;, &quot;allMyHrefsAreTheSameNow.html&quot; );
+
+$( &quot;a&quot; ).attr({
+    title: &quot;all titles are the same too!&quot;,
+    href: &quot;somethingNew.html&quot;
+});</code></pre>
+				</div>
+				<div class="fragment">
+					<p>Abrufen von Attributen:</p>
+					<pre><code>$( "a" ).attr( "href" );</code></pre>
+				</div>
+
+			</section>
+			<section>
+				<h2>Manipulation von Elementen</h2>
+				<table>
+					<tr>
+						<td style="width: 20%"></td>
+						<td>
+							<p>Setzt oder gibt…</p>
+						</td>
+					</tr>
+					<tr>
+						<td>.html()</td>
+						<td>den Inhalt des HTML-Elements.</td>
+					</tr>
+					<tr>
+						<td>.text()</td>
+						<td>den Inhalt als reinen Text. HTML wird nicht interpretiert.</td>
+					</tr>
+					<tr>
+						<td>.attr()</td>
+						<td>den Wert von angegeben Attribut.</td>
+					</tr>
+					<tr>
+						<td>.width()</td>
+						<td>die Breite in Pixeln des ersten Elements in der Auswahl.</td>
+					</tr>
+					<tr>
+						<td>.height()</td>
+						<td>gibt die Höhe in Pixeln des ersten Elements in der Auswahl.</td>
+					</tr>
+					<tr>
+						<td>.val()</td>
+						<td>den Wert eines Eingabe-Elements von einem Formular.</td>
+					</tr>
+				</table>
+				<a href="http://jsfiddle.net/byjqttjy">Demo - Unterschied zwischen .html() und .text()</a>
+			</section>
+			<section>
+				<h2>Hinzufügen und Entfernen von Elementen</h2>
+				<table>
+					<tr>
+						<td style="width: 20%">.append()</td>
+						<td>Fügt Inhalt <strong>am Ende</strong> des ausgewählten Elements ein</td>
+					</tr>
+					<tr>
+						<td>.prepend()</td>
+						<td>Fügt Inhalt <strong>am Anfang</strong> des ausgewählten Elements ein</td>
+					</tr>
+					<tr>
+						<td>.before()</td>
+						<td>Fügt Inhalt <strong>vor</strong> dem ausgewähltem Element ein</td>
+					</tr>
+					<tr>
+						<td>.after()</td>
+						<td>Fügt Inhalt <strong>hinter</strong> dem ausgewähltem Element ein</td>
+					</tr>
+					<tr>
+						<td>.remove()</td>
+						<td>Löscht das <strong>ganze</strong> Element und die Kind-Elemente</td>
+					</tr>
+					<tr>
+						<td>.empty()</td>
+						<td>Löscht nur die <strong>Kind-Elemente</strong> aus dem ausgewähltem Element</td>
+					</tr>
+				</table>
+				<a href="http://jsfiddle.net/xtb51wed">Demo - .append, .prepend, .before und .after</a>
+
+
+			</section>
+			<section>
+				<h2>Event-Handling</h2>
+				<p>JQuery ermöglicht die einfache Definition von ereignisgesteuerten Reaktionen auf HTML-Elemente</p>
+				<div class="fragment">
+					<p>Definition direkt über eine Funktion:</p>
+					<pre><code>$( &quot;p&quot; ).click(function() {
+    console.log( &quot;You clicked a paragraph!&quot; );
+});</code></pre>
+
+				</div>
+				<div class="fragment">
+					<p>Definition über die .on-Funktion:</p>
+					<pre><code>// Equivalent event setup using the `.on()` method
+$( "p" ).on( "click", function() {
+    console.log( "click" );
+});</code></pre>
+				</div>
+
+				<a class="fragment" href="http://api.jquery.com/category/events/">jQuery - API-Beschreibung zu Events</a>
+			</section>
+			<section>
+				<h2>Event-Handling</h2>
+				<ul>
+					<li>Jeder Event-Handler-Funktion wird ein Event-Objekt übergeben welches verschiedene Methoden und Eigenschaften enthält.</li>
+					<li>Über das Schlüsselwort <strong>this</strong> kann innerhalb der Event-Handler-Funktion auf das DOM-Element zugegriffen werden, welches das Ereignis ausgelöst hat</li>
+					<li>mit <strong>$(this)</strong> kann das DOM-Element in ein jQuery-Objekt umgewandelt werden.</li>
+				</ul>
+				<a href="http://jsfiddle.net/zpsj155s">Demo</a>
+
+			</section>
+			<section>
+				<h2>chaining</h2>
+				<li>Über Chaining ist es möglich mehrere jQuery-Funktion auf das gleiche Element anzuwenden.</li>
+				<li>Funktionen werden von vorne nach hinten abgearbeitet</li>
+				<pre><code>$('p.type').html('Lorem Ipsum').css('color', 'red').slideUp(1000).slideDown(1000);</code></pre>
+
+</code></pre>
+				<a href="http://jsfiddle.net/8Lbogfey">Demo</a>
+
+
+			</section>
+			<section>
+				<h2>Link-Liste</h2>
+				<ul>
+					<li><a href="http://jquery.com">http://jquery.com</a></li>
+					<li><a href="https://github.com/jquery">jQuery auf GitHub</a></li>
+					<li><a href="http://api.jquery.com">jQuery API-Documentation</a></li>
+					<li><a href="http://plugins.jquery.com">jQuery Plugin Registry</a></li>
+					<li><a href="http://jqueryui.com">jQuery User Interface</a></li>
+				</ul>
+			</section>
+		</div>
+	</div>
+
+
+	<script src="../revealjs-framework/lib/js/head.min.js"></script>
+	<script src="../revealjs-framework/js/reveal.min.js"></script>
+
+	<script>
+		// Full list of configuration options available here:
+		 // https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: false,
+			width: 1000,
+
+			transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+			transitionSpeed: 'fast', // default/fast/slow
+			backgroundTransition: 'none', // default/linear/none
+
+			// Optional libraries used to extend on reveal.js
+			dependencies: [
+				{
+					src: '../revealjs-framework/lib/js/classList.js',
+					condition: function () {
+						return !document.body.classList;
+					}
+				},
+				{
+					src: '../revealjs-framework/plugin/markdown/marked.js',
+					condition: function () {
+						return !!document.querySelector('[data-markdown]');
+					}
+				},
+				{
+					src: '../revealjs-framework/plugin/markdown/markdown.js',
+					condition: function () {
+						return !!document.querySelector('[data-markdown]');
+					}
+				},
+				{
+					src: '../revealjs-framework/plugin/highlight/highlight.js',
+					async: true,
+					callback: function () {
+						hljs.initHighlightingOnLoad();
+					}
+				},
+				{
+					src: '../revealjs-framework/plugin/zoom-js/zoom.js',
+					async: true,
+					condition: function () {
+						return !!document.body.classList;
+					}
+				},
+				{
+					src: '../revealjs-framework/plugin/notes/notes.js',
+					async: true,
+					condition: function () {
+						return !!document.body.classList;
+					}
+				}
+				]
+		});
+	</script>
+
+</body>
+
+</html>

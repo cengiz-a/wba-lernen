@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Title of presentation -->
+    <title>Javascript Advanced</title>
+    <!-- Short description of presentation -->
+    <meta name="description" content="Kickoff Web-basierte Anwendungen 1">
+    <!-- Author of presentation -->
+    <meta name="author" content="Jan Kus">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="../revealjs-framework/css/reveal.min.css">
+    <link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../revealjs-framework/lib/css/solarized_light.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="../revealjs-framework/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="../revealjs-framework/lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="reveal">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+
+        <section>
+          <h1>Web-basierte Anwendungen 1</h1>
+          <h2>Javascript Advanced</h2>
+          <p>23. Oktober 2014</p>
+
+          <p>Studiengang Medieninformatik an der Fachhochschule Köln<br>
+          Campus Gummersbach</p>
+
+          <p style="margin-top:10%">M.Sc. Stephan Pavlovic, M.Sc. Jan Kus</p>
+        </section>
+
+        <section>
+          <h2>Ziele dieses Abschnitts</h2>
+          <ul>
+            <li>Wie man mittels Javascript das DOM manipuliert</li>
+            <li>Events</li>
+            <!-- <li>Callbacks</li> -->
+            <li>Debugging</li>
+            <!-- <li>ggf. Testing / "use strict";</li> -->
+          </ul>
+        </section>
+        <section>
+          <h2>Aufbau dieses Session</h2>
+          <ul>
+            <li>Zugreifen auf das DOM (Findings)</li>
+            <ul>
+              <li>byId</li>
+              <li>byName</li>
+              <li>usw.</li>
+            </ul>
+            <li>DOM Manipulation</li>
+            <ul>
+              <li>DOM Elemente erstellen/verändern</li>
+            </ul>
+            <li>CSS-Eigenschaften dynamisch zuweisen, Erweiterte Selektierung von Elementen</li>
+            <li>Schwierigkeiten beim Umgang mit dem DOM</li>
+            <li>Events, Eventhandler und -listener</li>
+            <li>Wie debugge ich meinen Javascript Code</li>
+            <li>Abstecher: Testing</li>
+            <li>Herausforderungen</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Recap: DOM</h2>
+          <ul>
+            <li>Eine Repräsentation der HTML Elements als Objekte</li>
+            <li>Zugriff auf Eigenschaften von HTML Elementen</li>
+            <li>Bereitstellung von Methoden um auf HTML-Elemente zu zugreifen</li>
+            <li>Die Möglichkeit Ereignisse an HTML-Elemente bereitzustellen</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Zugriff auf das DOM (Finding)</h2>
+          <ul>
+            <li>document.getElementById(id des Elements)</li>
+            <li>document.getElementsByName(name-Attribut des Elements)</li>
+            <li>element.getElementsByTagName(tagName)</li>
+            <li>document.getElementsByClassName(class des Elements)</li>
+            <li><a href="http://fiddle.jshell.net/koos/4vxmuw3r/">http://fiddle.jshell.net/koos/4vxmuw3r/</a></li>
+          </ul>
+          <p>
+            <pre class="big-font">
+              <code>
+                var input_element = document.getElementById('firstname');
+                var input_element1 = document.getElementsByName('lastname');
+                var input_element2 = document.getElementsByTagName('p');
+                var input_element3 = document.getElementsByClassName('surename');
+              </code>
+            </pre>
+          </p>
+        </section>
+
+        <section>
+          <h2>DOM Manipulation (Change)</h2>
+          <ul>
+            <li>element.innerHTML - Ändert den kompletten HTML-Inhalt eines Elements</li>
+            <!-- Set .setAttribute und .attribute ist das gleiche? Dachte immer .attribute ist der Getter?-->
+            <li>element.attribute - Change the attribute of an HTML element</li>
+            <li>element.setAttribute(attribute,value) - Ändert ein spezielles Attribut eines HTML element</li>
+            <li>element.style.property - Styling-Änderung eines HTML element</li>
+            <li><a href="http://fiddle.jshell.net/koos/Ls96gp9f/1/">http://fiddle.jshell.net/koos/Ls96gp9f/1/</a>
+          </ul>
+          <p>
+            <pre class="big-font">
+              <code>
+                var input_element = document.getElementById('firstname');
+                var input_element1 = document.getElementsByName('lastname');
+                var input_element2 = document.getElementsByTagName('p');
+                var input_element3 = document.getElementsByClassName('surename');
+
+                input_element2[0].innerHTML = "Changed Test";
+                input_element.name = "Changed Name Test";
+                input_element.setAttribute(name, "Peter");
+                input_element.style.background="#f00";
+              </code>
+            </pre>
+          </p>
+        </section>
+
+
+        <section>
+          <h2>DOM Manipulation (Create/Remove)</h2>
+          <ul>
+            <li>document.createElement(tag) -  Erzeugt ein HTML Element</li>
+            <li>document.removeChild(parent) - Entfernt ein HTML Element</li>
+            <li>document.appendChild(parent) - Hängt ein HTML element ans Ende des "parents"</li>
+            <li>document.replaceChild(parent, child) - Ersetzt Ein HTML Element</li>
+            <li><a href="http://fiddle.jshell.net/koos/somrzve3/1/">http://fiddle.jshell.net/koos/somrzve3/1/</a>
+          </ul>
+          <p>
+            <pre>
+              <code>
+                function addElement () {
+                  // create a new div element
+                  // and give it some content
+                  var newDiv = document.createElement("div");
+                  var newContent = document.createTextNode("Hi there and greetings!");
+                  newDiv.appendChild(newContent); //add the text node to the newly created div.
+                  alert("Hello I'm adding a new Div");
+                  // add the newly created element and its content into the DOM
+                  var currentDiv = document.getElementById("div1");
+                  document.body.insertBefore(newDiv, currentDiv);
+                }
+
+                addElement();
+              </code>
+            </pre>
+          </p>
+        </section>
+
+        <section>
+          <h2>DOM Manipulation (Create/Remove)</h2>
+          <ul>
+            <li>getAttribute (attributeName)</li>
+            <li>setAttribute (attributeName, attributeValue)</li>
+            <li>removeAttribute (attributeName)</li>
+            <li>getAttributeNode (name)</li>
+            <li>setAttributeNode (newAttribute)</li>
+            <li>removeAttributeNode (oldAttribute)</li>
+            <li><a href="http://fiddle.jshell.net/koos/somrzve3/3/">http://fiddle.jshell.net/koos/somrzve3/3/</a>
+          </ul>
+          <hr/>
+          <p>
+            <pre class="big-font">
+              <code>
+                var div1 = document.getElementById("div1");
+                var align = div1.getAttribute("align");
+                alert(align); // shows the value of align for the element with id="div1"
+              </code>
+            </pre>
+          </p>
+        </section>
+
+        <section>
+          <h2>Events</h2>
+          <ul>
+            <li>Ereignisse die der Seite hinzugefügt werden können</li>
+            <li>CSS Animationen können durch Javascript erzeugt werden</li>
+            <li>Das Laden der Seite ist schon ein Event</li>
+            <li>Window Formular Events: onload, onchange, onreset / onsubmit, usw.</li>
+            <li>Mouse Events: onmouseover, onclick, etc.</li>
+            <li>Tastatur Events: onkeydown, onkeyup, onkeypress, etc.</li>
+            <li>Touch events, Drag Events, Video Audio Events, Animations Events, etc.</li>
+          </ul>
+          <p>
+            <pre class="big-font">
+              <code>
+                <textarea id="i1" rows="6" cols="30"></textarea>
+
+                …
+                              +----- Element, auf dem das Ereignis abgefangen werden soll
+                              |
+                              |                  +------ abzufangendes Ereignis
+                              |                  |
+                              |                  |           + ----- Event Handler
+                              |                  |           |
+                              v                  v           v
+                document.getElementById('i1').onkeyup = function() {
+                }
+                …
+              </code>
+            </pre>
+          </p>
+        </section>
+
+        <section>
+          <h2>Event Handler/Listener</h2>
+          <ul>
+            <li>Durch ein reguläres HTML-Attribut <a href="" onclick="tuNix();"></a></li>
+            <li>Implizit im Skript (Event Handlers als Eigenschaft des Objekts): <code>element.onclick = tuNix();</code></li>
+            <li>Implizit im Skript mit element.addEventListener(): <code>element.addEventListener ('click',tuNix, false);</code></li>
+            <li>
+            <li>addEventListener fügt einen Event Handler zu einem Element hinzu</li>
+            <li>Über den EventListener kann das Element mehrere Event Handler haben</li>
+          </ul>
+          <p>
+            <pre class="big-font">
+              <code>
+                window.onload = function () {
+                    document.getElementById('myform').onsubmit = function () {
+                        evt = (evt) ? evt : ((window.event) ? window.event : "");
+                        // Verarbeitung des Events
+                    }
+                }
+              </code>
+            </pre>
+          </p>
+        </section>
+
+        <section>
+          <h2>Event Handler/Listener</h2>
+          <p>
+            <pre class="big-font">
+              <!-- Wofür sind die letzten beiden Zeilen des Beispiels? -->
+              <code>
+                var element = document.getElementById('id_des_elements');
+                function lauscher(event_object){
+                    // code
+                };
+
+                element.addEventListener('click', lauscher);
+                var input_element = document.getElementById('id_des_textfelds');
+                input_element.value = 'Neuer Text';
+              </code>
+            </pre>
+          </p>
+        </section>
+
+        <section>
+          <h2>Beispiel: Lightbox</h2>
+          <ul>
+            <li>Zusammenspiel von HTML/CSS und Javascript</li>
+            <li>Das Javascript definiert das erscheinen und verschwinden der Lightbox</li>
+            <li>Im DOM werden entsprechende HTML-Strukturen und CSS-Anweisungen verändert</li>
+            <li>Es werden Eventhandler benutzt um auf den "Click" zu reagieren</li>
+            <li><a href="http://fiddle.jshell.net/koos/apzpgek4/1/">http://fiddle.jshell.net/koos/apzpgek4/1/</a></li>
+          </ul>
+          <p>
+            <pre class="big-font">
+              <code>
+                // http://www.mediaevent.de/javascript/simple-lightbox.html source
+
+                var allimg = document.getElementsByTagName('img');
+                for (var i=0, img; img=allimg[i]; i++ ) {
+                   if (img.className.match(/LB_Simple/)) {
+                      img.onclick = function () {
+                         var limg = this.nextSibling;
+
+                         while (limg.nodeName != 'IMG' && limg.nextSibling)
+                            limg = limg.nextSibling;
+
+                         if (limg.nodeName == 'IMG') {
+                            document.getElementById('LB_Shade').style.display = "block";
+
+                            var iWidth = window.innerWidth ||  // Breite und Höhe
+                                                               // des Browserfensters
+                                (window.document.documentElement.clientWidth ||
+                                window.document.body.clientWidth);
+                            var iHeight = window.innerHeight ||
+                                (window.document.documentElement.clientHeight ||
+                                window.document.body.clientHeight);
+
+                            limg.style.display = "block";
+                            limg.style.top =
+                                  parseInt(iHeight/2 - limg.getAttribute('height')/2) + "px";
+                            limg.style.left =
+                                  parseInt(iWidth/2 - limg.getAttribute('width')/2) + "px";
+
+                            limg.onclick = function() {
+                               this.style.display = "none";
+                               document.getElementById('LB_Shade').style.display = "none";
+                            };
+                         }
+
+                         document.getElementById('LB_Shade').onclick = function() {
+                            if (limg && limg.nodeName == 'IMG') limg.style.display = "none";
+                            this.style.display = "none";
+                         }
+                      }
+                   }
+                }
+              </code>
+            </pre>
+          </p>
+        </section>
+
+        <section>
+          <h2>Weitere Eigenschaften die Javascript anbietet</h2>
+          <ul>
+            <li>Callbacks</li>
+            <li>Auf Fenster Orientierung, Position, Höhe, Breite, Auflösung reagieren</li>
+            <li>HTML5 Javascript: Local Storage, Session Storage, Drag and Drop, etc.</li>
+            <li>AJAX - Asynchronous Javascript And XML</li>
+            <li>Canvas zeichnen, animieren</li>
+            <li>Formulare und JQuery</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Debugging mit Inspector/Firebug</h2>
+          <ul>
+            <li>Inspect Element - Browsen durch's DOM</li>
+            <li>Console - Javascript Befehle eingeben und Fehler finden</li>
+            <li>Debugger starten - Break Points setzen</li>
+            <!-- Bild passt bei mir nicht auf den Screen -->
+            <img src="https://developer.chrome.com/devtools/docs/javascript-debugging/javascript-debugging-overview.jpg" alt="Debugger">
+          </ul>
+        </section>
+
+        <section>
+          <h2>Testing</h2>
+          <ul>
+            <li>Auch Javascript Code sollte getestet werden</li>
+            <li>Da es so eine dynamische Skriptsprache ist fehlanfällig</li>
+            <li>Dadurch, dass zur Laufzeit viel passieren kann</li>
+            <li>Jasmine: <a href="http://jasmine.github.io/">http://jasmine.github.io/</a> </li>
+            <li>QUnit: <a href="http://qunitjs.com/">http://qunitjs.com/</a></li>
+            <li><a href="http://stackoverflow.com/questions/300855/javascript-unit-test-tools-for-tdd">JavaScript unit test tools for TDD</a>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Herausforderungen</h2>
+            <ul>
+              <li>querySelector und querySelectorAll sind relativ neu und von älteren Browsern nicht unterstützt</li>
+              <li>Nicht jeder Browser hält sich an den DOM-Standard</li>
+              <li>Moderne Browser bessern sich aber mittlerweile in der Hinsicht</li>
+              <li>Volle Browserunterstützung führt zu mehr Code für Fallback-Lösungen und somit schwerer zu pflegen</li>
+              <li>Die Lösung: JavaScript-Frameworks</li>
+            </ul>
+        </section>
+        <section>
+          <h2>Resourcen</h2>
+          <li><a href="http://www.codecademy.com/en/tracks/javascript">http://www.codecademy.com/en/tracks/javascript</a></li>
+          <li><a href="http://htmldog.com/guides/javascript">http://htmldog.com/guides/javascript</a></li>
+          <li><a href="http://www.mediaevent.de/javascript/Javascript-Basis-Datentypen.html">http://www.mediaevent.de/javascript/Javascript-Basis-Datentypen.html</a></li>
+          <li><a href="http://www.w3schools.com/js">http://www.w3schools.com/js</a></li>
+          <li><a href="https://www.codeschool.com/paths/javascript">https://www.codeschool.com/paths/javascript</a>
+        </section>
+        <section>
+          <h2>JavaScript User Group Köln (Cologne.js)</h2>
+          <img src="http://colognejs.de/images/colognejs-logo.svg" />
+          <ul>
+            <li><a href="http://colognejs.de/">http://colognejs.de/</a></li>
+            <li>Next Meetup: Tuesday, December, 16th 2014 — New location at triAGENS / Join us at 19:00, talks start at 19:30</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Fragen?</h1>
+        </section>
+        <section>
+          <blockquote style="margin-bottom: 80px;">
+             Hands On - Javascript Übungen
+          </blockquote>
+        </section>
+      </div>
+    </div>
+
+
+    <script src="../revealjs-framework/lib/js/head.min.js"></script>
+    <script src="../revealjs-framework/js/reveal.min.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: false,
+        width: 1000,
+
+        transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+        transitionSpeed: 'fast', // default/fast/slow
+        backgroundTransition: 'none', // default/linear/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: '../revealjs-framework/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '../revealjs-framework/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../revealjs-framework/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../revealjs-framework/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '../revealjs-framework/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: '../revealjs-framework/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>

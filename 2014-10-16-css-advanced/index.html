@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <!-- Title of presentation -->
+  <title>CSS Advanced</title>
+  <!-- Short description of presentation -->
+  <meta name="description" content="Vortrag - CSS-Advanced">
+  <!-- Author of presentation -->
+  <meta name="author" content="Stephan Pavlovic">
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <link rel="stylesheet" href="../revealjs-framework/css/reveal.min.css">
+  <link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme">
+
+  <!-- For syntax highlighting -->
+  <link rel="stylesheet" href="../revealjs-framework/lib/css/zenburn.css">
+
+  <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+  <script>
+    document.write('<link rel="stylesheet" href="../revealjs-framework/css/print/' + (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper') + '.css" type="text/css" media="print">');
+  </script>
+  <style type="text/css">
+    .tabelle {
+      table-layout: fixed;
+    }
+    .tabelle td {
+      background-color: #404040;
+    }
+    .tabelle td,
+    .tabelle th {
+      font-size: 0.8em;
+      border: 4px solid black;
+      text-align: center !important;
+    }
+    .tabelle th {
+      font-weight: normal;
+    }
+    .kaestchen {
+      margin: 30px 0 0 30px !important;
+    }
+    .kaestchen li {
+      background-color: #DD1166;
+      color: white;
+      display: inline-bock;
+      float: left;
+      list-style-type: none;
+      margin: 0 15px 15px 0;
+      padding: 10px;
+      text-align: center;
+      width: 230px;
+    }
+    .fullscreenImage .reveal .slides {
+      height: 100% !important;
+      left: 0;
+      margin: 0 auto;
+      padding: 0;
+      top: 0;
+      width: 100% !important;
+    }
+    .fullscreenImage .reveal .slides > section {
+      background-position-x: center;
+      background-position-y: 10px;
+      background-repeat: no-repeat;
+      background-size: auto 90%;
+      height: 100%;
+      left: 0;
+      margin: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+    .fullscreenImage .reveal .slides > section .bu {
+      background-color: rgba(221, 17, 102, 0.8);
+      top: 100px;
+      display: inline-block;
+      color: white;
+      padding: 0 10px 0 100px;
+      position: absolute;
+    }
+    .fullscreenImage .reveal .slides > section .quelle {
+      bottom: 10px;
+      color: white;
+      display: inline-block;
+      font-size: 14px;
+      margin: 0 0 0 10px;
+      position: absolute;
+    }
+    .fullscreenImage .reveal .slides > section p {
+      margin: 0;
+    }
+    .nobackground .reveal .slides > section {
+      background-image: none;
+    }
+    .whiteBackground .state-background {
+      background-color: white;
+    }
+    .big-font {
+      font-size: 1.3em !important;
+    }
+    .big-font li {
+      margin-bottom: 30px;
+    }
+  </style>
+  <!--[if lt IE 9]>
+    <script src="../revealjs-framework/lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+  <div class="reveal">
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+      <section>
+        <h1>Web-basierte Anwendungen 1</h1>
+        <h2>CSS-Advanced</h2>
+
+        <p>16. Oktober 2014</p>
+
+        <p>Studiengang Medieninformatik an der Fachhochschule Köln
+          <br>Campus Gummersbach</p>
+
+        <p style="margin-top:10%">Stephan Pavlovic, Volker Schaefer</p>
+      </section>
+      <section>
+        <h2>Aufbau dieser Session</h2>
+        <ul>
+          <li class="fragment">Positionierung von Elementen</li>
+          <li class="fragment">Dokumentenfluss</li>
+          <li class="fragment">Umgang mit übergroßen Inhalten</li>
+          <li class="fragment">Kombinatoren</li>
+          <li class="fragment">Pseudoklassen & Pseudoelemente</li>
+          <li class="fragment">Spezifizität</li>
+          <li class="fragment"><strong>Hands On</strong></li>
+        </ul>
+      </section>
+      <section>
+        <blockquote>"Elemente im normal flow stehen in Beziehung zu einander und beeinflussen die Position aller nachfolgenden Elemente"
+        </blockquote>
+      </section>
+      <section>
+        <!-- Sticky aktuell nur in FF und Safari unterstützt aber ziemlich cool. -->
+        <!-- Beispiel: http://html5-demos.appspot.com/static/css/sticky.html -->
+        <h2>Positionierung von Elementen</h2>
+        <ul class="fragment">
+          <li>static (default)</li>
+          <li>relative</li>
+          <li>absolute</li>
+          <li>fixed</li>
+          <li>(sticky)</li>
+        </ul>
+      </section>
+      <section>
+        <h2>position: static</h2>
+        <ul class="fragment">
+          <li>Default für alle Elemente</li>
+          <li><strong>top, right, bottom, left, z-index</strong> ohne Auswirkungen</li>
+          <li>Inhalte erscheinen in der Reihenfolge, wie sie im Quelltext stehen</li>
+        </ul>
+        <img class="fragment" style="float:right;margin-top: -20px" src="images\block_static.png" alt="block_static">
+        <div class="fragment" style="floaft:left; width:550px;"><pre style="width:550px"><code>.blaue_box {
+            position: static;
+            bottom: 20px; /*Das würde nichts bewirken*/
+            left: 15%;    /*Auch überflüssig*/
+        }
+        </code></pre></div>
+      </section>
+      <section>
+        <h2>position: relative</h2>
+        <ul class="fragment" style='max-width:570px'>
+          <li>Grundsätzlich wie <code>static</code></li>
+          <li>Versatzoptionen <strong>top, right, bottom, left, z-index</strong> sind verfügbar</li>
+          <li>Inhalte erscheinen in der Reihenfolge, wie sie im Quelltext stehen</li>
+        </ul>
+        <img class="fragment" style="float:right;margin-top: -20px" src="images\block_relative.png" alt="block_static">
+        <div class="fragment" style="floaft:left; width:550px;"><pre style="width:550px"><code>.blaue_box {
+            position: relative;
+            bottom: 20px;
+            left: 15%;
+        }
+        </code></pre></div>
+      </section>
+      <section>
+        <h2>position: absolute</h2>
+        <ul class="fragment" style='max-width:570px'>
+          <li>Element wird aus dem <em>normal flow</em> entfernt</li>
+          <li>Versatzoptionen <strong>top, right, bottom, left, z-index</strong> sind verfügbar</li>
+        </ul>
+        <img class="fragment" style="float:right;margin-top: -20px" src="images\block_absolute.png" alt="block_static">
+        <div class="fragment" style="floaft:left; width:550px;"><pre style="width:550px"><code>.blaue_box {
+            position: absolute;
+            bottom: 20px;
+            left: 15%;
+        }
+        </code></pre></div>
+      </section>
+      <section>
+        <h2>position: fixed</h2>
+        <ul class="fragment" style='max-width:570px'>
+          <li>Element wird aus dem <em>normal flow</em> entfernt</li>
+          <li>Versatzoptionen <strong>top, right, bottom, left, z-index</strong> sind verfügbar</li>
+          <li>Koordinatensystem jedoch immer gemessen am "Viewport" (Browserfenster, Bildschirm mobiler Geräte)</li>
+          <li><a href='http://davidwalsh.name/demo/css-fixed-position.php' target='_blank'>Beispiel</a></li>
+        </ul>
+        <div class="fragment" style=""><pre style="width:550px"><code>.header {
+            position: fixed;
+            top: 0px;
+        }
+        </code></pre></div>
+      </section>
+      <section>
+        <h2>position: sticky</h2>
+        <ul class="fragment" style='max-width:570px'>
+          <li>Element wird aus dem <em>normal flow</em> entfernt</li>
+          <li>Versatzoptionen <strong>top, right, bottom, left, z-index</strong> sind verfügbar</li>
+          <li>Bleibt solange <em>kleben</em> bis der übergeordnete Container aus dem Viewport ist </li>
+          <li><a href='http://html5-demos.appspot.com/static/css/sticky.html' target='_blank'>Beispiel (im FF oder Safari anschauen)</a></li>
+        </ul>
+        <div class="fragment" style=""><pre style="width:550px"><code>.header {
+            position: sticky;
+            top: 10px;
+        }
+        </code></pre></div>
+      </section>
+      <section>
+        <blockquote>Fragen zur Positionierung?</blockquote>
+      </section>
+      <section>
+        <h2>Der z-Index</h2>
+        <h3>Was wenn Elemente übereinander liegen?</h3>
+        <ul class="fragment">
+                <li>Zuletz genanntes Element im HTML Code liegt vorne</li>
+        </ul>
+        <img class="fragment" style="float:right" src="images\block_overlap.png" alt="block_overlap">
+        <div class="fragment"style="floaft:left; width:350px;"><pre><code>
+.rot {
+    z-index: 2;
+}
+
+.blau {
+    z-index: 3;
+}
+
+.gruen {
+    z-index: 4;
+}
+        </code></pre></li></div>
+        <ul>
+            <li class="fragment">Element mit höherem z-index überdeckt Elemente mit niedrigerem z-index</li>
+        </ul>
+      </section>
+      <section>
+        <!-- Am Ende diese Slide am besten nen paar Beispiele an die Wand malen -->
+        <h2>Dokumentenfluss</h2>
+        <ul class="fragment" style='max-width:500px'>
+          <li>CSS Eigenschaften <code>float</code> und <code>clear</code></li>
+          <li>CSS Eigenschaften <code>float</code> und <code>clear</code></li>
+          <li>Float positioniert die Elemente im normal Flow, aber sc</li>
+          <li><code>float</code> hat die möglichen Eigenschaften <code>left, right, none</code></li>
+          <li><code>clear</code> hat die möglichen Eigenschaften <code>left, right, both</code></li>
+        </ul>
+        <img class="fragment" src="http://css-tricks.com/wp-content/csstricks-uploads/web-text-wrap.png" width="400" style="float:right">
+        <ul class="fragment">
+            <li>Problem: Wenn alle Elemente in einem Container floaten, hat dieser die Höhe 0</li>
+        </ul>
+      </section>
+      <section>
+        <!-- Am Ende diese Slide am besten nen paar Beispiele an die Wand malen -->
+        <h2>Lösungen für das <em>Collapse</em> Problem </h2>
+        <ul class="fragment" style='max-width:500px'>
+          <li>Die <strong>Empty Div Method:</strong> Am Ende der Box ein <code>&lt;div style="clear: both;"></code></li>
+          <li>Die <strong>Overflow Method:</strong> Übergeordnete Container bekommt <code>overflow:show/auto</code></li>
+          <li>Die <strong>Pseudo Element Method:</strong> <code>clear:both</code> in einem <code>:after</code> Element, verstehen wir später genauer, was das ist.</li>
+        </ul>
+        <img src="http://css-tricks.com/wp-content/csstricks-uploads/collapse.png" width="400" style="float:right">
+      </section>
+      <section>
+        <blockquote>Fragen zur Floating?</blockquote>
+      </section>
+      <section>
+        <h2>Was passiert, wenn Dinge zu groß werden </h2>
+        <ul class="fragment" style='max-width:450px'>
+          <li>Kontrolliert man mit dem CSS-Attribut <code>overflow</code></li>
+          <li>Die Default-Eigenschaft ist <code>visible</code></li>
+          <li>Setzt man so von Hand ganz selten, außer man überschreibt die Eigenschaft von wo anders</li>
+        </ul>
+        <img  class="fragment" src="http://css-tricks.com/wp-content/csstricks-uploads/overflow-visible.png" width="500" style="float:right">
+      </section>
+      <section>
+        <h2>Was passiert, wenn Dinge zu groß werden </h2>
+        <ul style='max-width:450px'>
+          <li>Kontrolliert man mit dem CSS-Attribut <code>overflow</code></li>
+          <li>Will man Dinge einfach abschneiden so nutzt man <code>hidden</code></li>
+        </ul>
+        <img src="http://css-tricks.com/wp-content/csstricks-uploads/css-overflow-hidden.png" width="500" style="float:right">
+      </section>
+      <section>
+        <h2>Was passiert, wenn Dinge zu groß werden </h2>
+        <ul style='max-width:450px'>
+          <li>Kontrolliert man mit dem CSS-Attribut <code>overflow</code></li>
+          <li>Will man den User scrollen lassen dass nimmt man <code>scroll</code></li>
+          <li>Man erhält Scrollbars, selbst wenn sie gar nicht nötig sind</li>
+          <li><strong>Wichtig: </strong>Scrollbars sehen in allen Browsern unterschiedlich aus</li>
+        </ul>
+        <img src="http://css-tricks.com/wp-content/csstricks-uploads/css-scroll.png" width="500" style="float:right">
+      </section>
+      <section>
+        <h2>Was passiert, wenn Dinge zu groß werden </h2>
+        <ul style='max-width:450px'>
+          <li>Kontrolliert man mit dem CSS-Attribut <code>overflow</code></li>
+          <li>Will man den Browser entscheiden lassen: <code>auto</code></li>
+          <li>Man erhält Scrollbars nur wenn diese nötig sind</li>
+        </ul>
+        <img src="http://css-tricks.com/wp-content/csstricks-uploads/css-overflow-auto.png" width="500" style="float:right">
+      </section>
+      <section>
+        <h2>Was passiert, wenn Dinge zu groß werden </h2>
+        <h3>Auch Text kann zu groß werden </h3>
+        <div style='width:250px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-bottom:20px'>Ein Test Text mit Punkten</div>
+        <ul>
+          <li>Hierfür muss ein Kombination von Attributen gesetzt werden</li>
+          <li>Die eigentliche Punkte erzeugt <code>text-overflow:ellipsis</code></li>
+          <li>Funktioniert aber nur wenn die Box <code>overflow:hidden</code> besitzt</li>
+          <li>Außerdem darf der Text nicht umbrechen <code>white-space:nowrap</code></li>
+        </ul>
+      </section>
+      <section>
+        <blockquote>Fragen zu Overflow?</blockquote>
+      </section>
+      <section>
+        <h2>Kombinatoren: Verhältnisse von Elementen zueinander </h2>
+        <ul>
+          <li class='fragment'>Manchmal möchte/kann man nicht ein Element direkt ansprechen</li>
+          <li class='fragment'>Sondern nur in einem speziellen Kontext</li>
+          <li class='fragment'>Hierfür benutzt man sogenannte Kombinatoren als Selektor</li>
+          <li class='fragment'>Unser kleines <a href='http://codepen.io/anon/pen/tmbxI?editors=110' target='_blank'>Live-Beispiel hierfür</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Kombinatoren: Verhältnisse von Elementen zueinander </h2>
+        <div class='fragment'>
+          <ul>
+            <li><strong>Nachfahren-Kombinator</strong></li>
+            <li>wählt alle <strong>direkten & indirekten</strong> Nachfahren eines Elements</li>
+            <li><code>.box .sub_box</code></li>
+            <li>Können wir nutzen um oberstes <code>div</code> auszuschließen</li>
+          </ul>
+          <hr>
+        </div>
+        <ul class='fragment'>
+          <li><strong>Kind-Kombinator</strong></li>
+          <li>wählt alle <strong>direkten</strong> Nachfahren eines Elements</li>
+          <li><code>.box > .sub_box</code></li>
+          <li>Können wir nutzen um innerstes <code>div</code> auszuschließen</li>
+          <li class='fragment'>Auf zu unserem kleinen <a href='http://codepen.io/anon/pen/tmbxI?editors=110' target='_blank'>Live-Beispiel</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Kombinatoren: Verhältnisse von Elementen zueinander </h2>
+        <div class='fragment'>
+          <ul>
+            <li><strong>Nachbar-Kombinator</strong></li>
+            <li>wählt den <strong>direkten</strong> nachfolgenden Nachbarn eines Elements</li>
+            <li><code>.box + .box</code></li>
+          </ul>
+          <hr>
+        </div>
+        <ul class='fragment'>
+          <li><strong>Geschwister-Kombinator</strong></li>
+          <li>wählt alle <strong>direkten und indirekten</strong> nachfolgenden Nachbarn eines Elements</li>
+          <li><code>.box ~ .box</code></li>
+          <li class='fragment'>Auf zu unserem kleinen <a href='http://codepen.io/anon/pen/tmbxI?editors=110' target='_blank'>Live-Beispiel</a></li>
+        </ul>
+      </section>
+      <section>
+        <blockquote>Fragen zu Kombinatoren?</blockquote>
+      </section>
+      <section>
+        <h2>Pseudoelemente & Pseudoklassen </h2>
+        <ul>
+          <li class='fragment'>Man unterscheidet zwischen:</li>
+          <li class='fragment'><strong>Pseudoklasse: </strong>Eine CSS-Klasse die implizit verfügbar ist</li>
+          <li class='fragment'><strong>Pseudoelement: </strong>Ein HTML-Element, welches im CSS lebt</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Pseudoklassen für Interaktionselemente</h2>
+        <ul>
+          <li class='fragment'>Der klassischte aller Fälle <strong>:hover </strong></li>
+          <li class='fragment'><strong>:active </strong>betrifft akive Elemente, besonders wichtig im mobilen Anwendungen</li>
+          <li class='fragment'><strong>:focus </strong>wichtig für die Bedienung mit der Tastatur und für das Thema <em>Barrierefreiheit</em></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Weitere Pseudoklassen</h2>
+        <ul class='fragment'>
+          <li><strong>:first-child, :last-child </strong> Besonders häufig im Kontext von Listen</li>
+          <li><strong>:nth-child() </strong> Häufigster Fall sind Tabellen</li>
+        </ul>
+        <div class='fragment'>
+          <img src="images\first_child.jpg" alt="first_child" width="30%">
+          <img src="images\last_child.jpg" alt="last_child" width="30%">
+          <img src="images\nth_child.jpg" alt="nth_child" width="30%">
+        </div>
+        <ul class='fragment'>
+          <li>Weitere Pseudoklassen findet man <a href="http://www.sitepoint.com/web-foundations/css3-pseudo-classes/" target='_blank'>hier</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Pseudoelemente</h2>
+        <ul class='fragment'>
+          <li><strong>::before, ::after</strong> Werden sehr häufig für <em>Dekorationen</em> verwendet</li>
+          <li>Standard-Beispiel sind Pfeile <a href="http://codepen.io/anon/pen/FtKpr?editors=110" target="_blank">(Beispiel)</a> </li>
+        </ul>
+        <ul class='fragment'>
+          <li><a href="http://nicolasgallagher.com/pure-css-gui-icons/demo/" target="_blank">Krasses Beispiel</a> (Alle Icons sind pures CSS) </li>
+        </ul>
+        <ul class='fragment'>
+          <li>Weitere Beispiele für Pseudoelemente</li>
+          <li><strong>::first-letter</strong> Besonderes Styling für den ersten Buchstaben</li>
+          <li><strong>::first-line</strong> Besonderes Styling für dedie erste Zeile</li>
+          <li><a href="http://codepen.io/anon/pen/kzpjg?editors=110" target="_blank">Demo</a> </li>
+        </ul>
+      </section>
+      <section>
+        <blockquote>Fragen zu Pseudoklassen?</blockquote>
+      </section>
+      <section>
+        <h2>Spezifizität </h2>
+        <ul>
+          <li>Schwieriges Wort, im englischen <strong>specificity</strong></li>
+          <li class='fragment'>Mehrere Regeln treffen auf das selbe HTML-Element zu, welche Regel gewinnt?</li>
+          <li class='fragment'>Lösung: Ein einfaches Punktesystem</li>
+          <li class='fragment'>Typselector <strong>p</strong>: 1 Punkt </li>
+          <li class='fragment'>Klasse <strong>.box</strong>: 10 Punkte </li>
+          <li class='fragment'>Pseudoklasse <strong>:visited</strong>: 10 Punkte </li>
+          <li class='fragment'>ID <strong>#special-box</strong>: 100 Punkte </li>
+          <li class='fragment'>Attribute-style <strong>&lt;p style=""></strong>: 1000 Punkte </li>
+          <li class='fragment'>Der Erfindung des Teufels <strong>!important</strong>: 100000000000000 Punkte </li>
+        </ul>
+      </section>
+      <section>
+        <blockquote>Meine Empfehlung: Verwendet nur Klassen! Die Welt wäre so viel schöner...</blockquote>
+      </section>
+      <section>
+        <h2>Eine kleine Quizrunde: </h2>
+        <ul>
+          <li><code>a.box</code> ?</li>
+          <li class='fragment'><code>p a.box:visited</code> ?</li>
+          <li class='fragment'><code>a#main-box.box</code> ?</li>
+          <li class='fragment'><code>a#main-box#super-box.box</code> ?</li>
+        </ul>
+      </section>
+      <section>
+        <blockquote>Fragen zu Spezifizität?</blockquote>
+      </section>
+      <!-- End of slides container. -->
+    </div>
+
+  </div>
+
+  <script src="../revealjs-framework/lib/js/head.min.js"></script>
+  <script src="../revealjs-framework/js/reveal.min.js"></script>
+
+  <script>
+    // Full list of configuration options available here:
+     // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: false,
+      width: 1000,
+
+      transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+      transitionSpeed: 'fast', // default/fast/slow
+      backgroundTransition: 'none', // default/linear/none
+
+      // Optional libraries used to extend on reveal.js
+      dependencies: [
+        {
+          src: '../revealjs-framework/lib/js/classList.js',
+          condition: function () {
+            return !document.body.classList;
+          }
+        },
+        {
+          src: '../revealjs-framework/plugin/markdown/marked.js',
+          condition: function () {
+            return !!document.querySelector('[data-markdown]');
+          }
+        },
+        {
+          src: '../revealjs-framework/plugin/markdown/markdown.js',
+          condition: function () {
+            return !!document.querySelector('[data-markdown]');
+          }
+        },
+        {
+          src: '../revealjs-framework/plugin/highlight/highlight.js',
+          async: true,
+          callback: function () {
+            hljs.initHighlightingOnLoad();
+          }
+        },
+        {
+          src: '../revealjs-framework/plugin/zoom-js/zoom.js',
+          async: true,
+          condition: function () {
+            return !!document.body.classList;
+          }
+        },
+        {
+          src: '../revealjs-framework/plugin/notes/notes.js',
+          async: true,
+          condition: function () {
+            return !!document.body.classList;
+          }
+        }
+        ]
+    });
+  </script>
+
+</body>
+
+</html>

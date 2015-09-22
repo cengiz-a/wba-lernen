@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="950px" height="345px" viewBox="0 0 950 345" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.1.1 (8761) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Artboard-1" sketch:type="MSArtboardGroup">
+            <path d="M121,187 L173.043491,187" id="Line" stroke="#FFFFFF" stroke-width="3" sketch:type="MSShapeGroup"></path>
+            <path d="M173.264,188 L173.264,173" id="Line-5" stroke="#FFFFFF" stroke-width="3" sketch:type="MSShapeGroup"></path>
+            <path d="M121.264,187.5 L121.264,172.5" id="Line-6" stroke="#FFFFFF" stroke-width="3" sketch:type="MSShapeGroup"></path>
+            <path d="M221.264,187 L221.264,172" id="Line-7" stroke="#FFFFFF" stroke-width="3" sketch:type="MSShapeGroup"></path>
+            <path d="M521.264,187 L521.264,172" id="Line-8" stroke="#FFFFFF" stroke-width="3" sketch:type="MSShapeGroup"></path>
+            <path d="M605.264,187 L605.264,172" id="Line-9" stroke="#FFFFFF" stroke-width="3" sketch:type="MSShapeGroup"></path>
+            <path d="M778.264,187 L778.264,172" id="Line-10" stroke="#FFFFFF" stroke-width="3" sketch:type="MSShapeGroup"></path>
+            <path d="M220.262333,187 L520.264,187" id="Line-2" stroke="#FFFFFF" stroke-width="3" sketch:type="MSShapeGroup"></path>
+            <path d="M604.499281,187 L778.266487,187" id="Line-3" stroke="#FFFFFF" stroke-width="3" sketch:type="MSShapeGroup"></path>
+            <text id="$(”div.box”).hide);" sketch:type="MSTextLayer" font-family="Myriad Pro" font-size="96" font-weight="normal" fill="#DD1166">
+                <tspan x="123.764" y="129.5">$(”div.box”).hide());</tspan>
+            </text>
+            <text id="Aufruf-des-Framework" sketch:type="MSTextLayer" font-family="Myriad Pro" font-size="36" font-weight="normal" sketch:alignment="middle" fill="#FFFFFF">
+                <tspan x="70.352" y="229">Aufruf des </tspan>
+                <tspan x="56.222" y="272">Frameworks</tspan>
+            </text>
+            <text id="Selektor" sketch:type="MSTextLayer" font-family="Myriad Pro" font-size="36" font-weight="normal" sketch:alignment="middle" fill="#FFFFFF">
+                <tspan x="307.866" y="228.5">Selektor</tspan>
+            </text>
+            <text id="jQuery-Funktion" sketch:type="MSTextLayer" font-family="Myriad Pro" font-size="36" font-weight="normal" sketch:alignment="middle" fill="#FFFFFF">
+                <tspan x="635.466" y="228.5">jQuery-</tspan>
+                <tspan x="624.972" y="271.5">Funktion</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

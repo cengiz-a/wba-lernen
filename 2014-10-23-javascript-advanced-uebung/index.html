@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Title of presentation -->
+		<title>Reveal.js Demo</title>
+		<!-- Short description of presentation -->
+		<meta name="description" content="Demo of Reveal.js functions and features">
+		<!-- Author of presentation -->
+		<meta name="author" content="Volker Schaefer">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../revealjs-framework/css/reveal.min.css">
+		<link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<!-- Can be monokai, solarized_dark, solarized_light, sunburst, tomorrow-night-bright, zenburn -->
+		<link rel="stylesheet" href="../revealjs-framework/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="../revealjs-framework/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+        <style>
+            
+            .checkliste {
+                 list-style: none !important;
+            }
+            
+            .checkliste li {
+                background: url(images/check.png) 0 0 no-repeat !important; 
+                padding-left:  40px !important;
+            }
+        </style>
+
+		<!--[if lt IE 9]>
+		<script src="../revealjs-framework/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h1>Web-basierte Anwendungen 1</h1>
+					<h2>Javascript-Training</h2>
+
+					<p>22. Oktober 2014</p>
+
+					<p>Studiengang Medieninformatik an der Fachhochschule Köln<br>
+					Campus Gummersbach</p>
+
+				</section>
+
+                <section>
+                    <blockquote>
+                        Entwickeln Sie ein JavaScript, dass die eingegebenen Daten des Kontaktformulars validiert.
+                    </blockquote>
+                        <ul class="checkliste">
+                            <li class="fragment">Nachname muss ausgefüllt sein</li>
+                            <li class="fragment">Nachricht muss mehr als 20 Zeichen enthalten</li>
+                            <li class="fragment">E-Mail-Adresse muss syntaktisch korrekt sein</li>
+                            <li class="fragment">Bei invaliden Datum soll das entsprechende Feld rot gefärbt werden</li>
+                            <li class="fragment">Zusätzlich soll in dem dazugehörigen Label ein Hinweistext erscheinen</li>
+                            <li class="fragment">Erst wenn alle Voraussetzungen erfüllt sind, soll das Formular abgesendet werden</li>
+                            <li class="fragment">Das JavaScript soll in einer externen JS-Datei entwickelt werden und in der formular.html eingebunden werden</li>
+                        </ul>
+                </section>
+
+				<!-- End of slides container. -->
+
+			</div>
+
+		</div>
+
+		<script src="../revealjs-framework/lib/js/head.min.js"></script>
+		<script src="../revealjs-framework/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: false,
+				width: 1000,
+
+				transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+				transitionSpeed: 'fast', // default/fast/slow
+				backgroundTransition: 'none', // default/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../revealjs-framework/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../revealjs-framework/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-framework/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-framework/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../revealjs-framework/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../revealjs-framework/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

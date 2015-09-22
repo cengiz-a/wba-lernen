@@ -1,0 +1,85 @@
+/* AUFGABEN ADVANCED TEIL 1  */
+
+/* 1) Ersetzen sie die inline-Block Elemente die nebeneinader sollen durch floatende Elemente  */
+
+/* 2) Positionieren Sie Navigation und Logo nebeneinander und das Logo an den rechten Rand  */
+
+/* 3) Positionieren Sie die Bildunterschrift des grünen Bildes auf dem Bild
+			und geben ihr einen halbtransparenten Hintergrund ûber die gesamte Breite des Bildes  */
+
+/* 4) Fügen sie hover, focus & active Effekte für die Headernavigation hinzu  */
+
+/* 5) Für die Pros: Beim Hover über den Presselink im Footer: Zeigen sie neben dem Link die Zielurl an;  */
+
+
+.clearfix:after {
+	display: block;
+	clear: both;
+	content: ".";
+	height: 0;
+	visibility: hidden;
+}
+
+nav li.red a{border-color: red;}
+nav li.green a{border-color: green;}
+nav li.blue a{border-color: blue;}
+nav li.purple a{border-color: purple;}
+nav li.orange a{border-color: orange;}
+
+nav li a:hover{
+	border-bottom-width: 5px;
+}
+
+nav li a:active{
+	font-weight: bold;
+}
+
+nav li a:focus{
+	font-weight: bold;
+	border-bottom-width: 5px;
+}
+
+.nav{float:left;}
+header object{float:right;}
+
+article{
+	display: block;
+	float: left;
+}
+
+.link-row{
+	float: left;
+}
+
+.teaser {
+	position: relative;
+}
+
+.teaser figcaption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 10px;
+	background: rgba(255, 255, 255, 0.5);
+	width: 100%;
+	text-align: right;
+	box-sizing: border-box;
+}
+
+footer a:link{
+	display: block;
+}
+
+footer a:link:after{
+	content: attr(href);
+	background: white;
+	border: 1px solid black;
+	padding: 2px 5px;
+	position: absolute;
+	display: none;
+	margin-top: 20px;
+}
+
+footer a:link:hover:after{
+	display: block;
+}

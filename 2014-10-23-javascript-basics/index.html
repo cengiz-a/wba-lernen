@@ -1,0 +1,688 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Title of presentation -->
+		<title>Javascript Basics</title>
+		<!-- Short description of presentation -->
+		<meta name="description" content="Kickoff Web-basierte Anwendungen 1">
+		<!-- Author of presentation -->
+		<meta name="author" content="Jan Kus">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../revealjs-framework/css/reveal.min.css">
+		<link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../revealjs-framework/lib/css/solarized_light.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="../revealjs-framework/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../revealjs-framework/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+    <div class="reveal">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+
+        <section>
+          <h1>Web-basierte Anwendungen 1</h1>
+          <h2>Javascript Basics</h2>
+          <p>23. Oktober 2014</p>
+
+          <p>Studiengang Medieninformatik an der Fachhochschule Köln<br>
+          Campus Gummersbach</p>
+
+          <p style="margin-top:10%">M.Sc. Stephan Pavlovic, M.Sc. Jan Kus</p>
+        </section>
+
+        <section>
+    			<h2>Ziele dieses Abschnitts</h2>
+          <ul>
+          	<li>Wissen was Javascript und die Idee dahinter ist</li>
+          	<li>Grundlegende Elemente von Javascript kennen (Variablen, Typen, ...)</li>
+          	<li>Wie man Javascript in HTML einbindet</li>
+            <li>Was grundsätzlich ein DOM und BOM ist</li>
+          </ul>
+    		</section>
+        <section>
+          <h2>Aufbau dieses Session</h2>
+          <ul>
+            <li>Einführung in die Historie von Javascript</li>
+            <li>Syntax</li>
+            <li>Variablen, Konstanten, Typen, Arrays</li>
+            <li>Operatoren, Logik, Bedingte Anweisungen, Loops</li>
+            <li>Funktionen, Objekte</li>
+            <li>Einbettung in HTML</li>
+            <li>DOM</li>
+          </ul>
+        </section>
+
+        <section>
+          <blockquote style="margin-bottom: 80px;">
+             Wer hat noch nie eine Javascript Datei gesehen?
+          </blockquote>
+        </section>
+
+        <section>
+          <h2>Trennung von Struktur, Layout und Funktion</h2>
+          <img src="../2014-10-16-css-basics/images/html_css_js.svg" alt="Abbildung html css javascript">
+        </section>        
+
+        <section>
+          <h2>Was kann ich mit Javascript alles machen?</h2>
+          <ul>
+            <li>Userinterktion im Web (Lightbox)</li>
+            <li>Kommunikation mit einem Server (Autocomplete)</li>
+            <li>Validierungen</li>
+            <li>Browsergames</li>
+            <li>usw.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Was ist Javascript? Eine Einführung</h2>
+          <ul>
+            <li>Eine Skriptsprache</li>
+            <li>Unterschied zwischen Skript- und Programmiersprache?</li>
+            <li>Gängige Webbrowser können Javascript interpretieren und den Code ausführen (Lynx nicht ;)</li>
+            <li>Javascript lässt sich in HTML Dokumenten einfach integrieren und kann dessen <strong>Struktur und aussehen zur Laufzeit verändern</strong></li>
+            <li>Wird sowohl Serverseitig als auch Clientseitig verwendet</li>
+            <li>Funktional und (beschränkt) Objektorientiert</li>
+          </ul>
+          <p>Basiert auf dem EcmaScript5 Standard (Release 2011, 6 & 7 sind WIP)</p>
+          <p>ECMA = European Computer Manufacturers Association (u.a. Microsoft)</p>
+          <p>Entwickelt von Brendan Eich (Netscape), am Anfang hiess es noch Mocha, LiveScript</p>
+          <p>Wer mal eintauchen möçhte: <a href="https://github.com/lukehoban/es6features">https://github.com/lukehoban/es6features</a></p>
+        </section>
+
+        <section>
+          <h2>Syntax</h2>
+          <ul>
+            <li>Datentypen - Numerische, Strings, Arrays, Objekte</li>
+            <li><strong>Case Sensitive</strong> <code>IF vs. if</code></li>
+            <li>Klammern und Hochkommata müssen gesetzt werden</li>
+            <li>Bindestriche sind Minuszeichen (Unterstriche stattdessen)</li>
+            <li>Umrbüche, Leerzeichen - ziemlich unempfindlich</li>
+            <li>Das Semikolon <code>;</code> beendet eine Javascsript-Anweisung</li>
+            <li>Kommentare - Einzeilig <code>//</code> oder Mehrzeilig <code>/* */</code></li>
+          </ul>
+          <hr/>
+          <p>
+            <pre class="big-font">
+              <code>
+                Literare: 3.55 und "Martin"
+                Case Sensitive: if (a == b) vs IF (a == b)
+                Klammern: if(a == b) {... };
+                Hochkommata: if (a == "Martin")
+                Umbrüche, Leerzeichen: if (a=="Martin") {
+                  ...
+                };
+                Semikolon: var MeineVariable;
+                // Kommentare
+                /*
+                  Oder auch
+                  Kommentare
+                */
+              </code>
+            </pre>
+          </p>
+        </section>
+
+        <section>
+          <h2>Syntax</h2>
+          <p>
+            <pre class="big-font">
+              <a href="http://jsfiddle.net/koos/5Lcksa4w/">
+                <code>
+                  /*
+                  Hier habe ich ein Beispiel Javascript
+                  */
+
+                  var eineNummer = 5;
+                  var einString = "Martin";
+
+                  if (eineNummer == einString) {
+                      // Dieser Befehl gibt mir was in der Debugger Konsole aus
+                      console.log("das ist gleich);
+                  } else {
+                      console.log("das ist nicht gleich);
+                  };
+                </code>
+              </a>
+            </pre>
+          </p>
+        </section>
+
+        <section>
+          <h2>Die häufigsten Syntaxfehler</h2>
+            <ul>
+              <li>Fehlen schließende runde oder geschweifte Klammern?</li>
+              <li>Fehlt ein schließendes Hochkamma oder wird ein doppeltes Hochkomma durch ein einfaches Hochkomma geschlossen?</li>
+              <li>Klammer zuviel im Script-Code?</li>
+              <li>Bindestrich im Variablennamen? Javascript mag keine Bindestriche.</li>
+              <li>Groß und Kleinschreibung beachtet? Hier ist Javascript tatsächlich empfindlich</li>
+              <li>Schreibfehler in einer der DOM-Methoden? z.B.: <strong>getElementById</strong> vs <strong>getElementbyId</strong>.</li>
+        </section>
+
+        <section>
+          <h2>Variablen</h2>
+          <ul>
+            <li>Speichern Daten (Zahlen / Zeichenketten) deren Wert sich im Laufe der Anwendung verändert</li>
+            <li>Variablen: <code>Name, Typ, Wert</code></li>
+            <li>In Javascript speziell: Implizite Variablen Deklaration, Dynamische Typisierung <code>typeof("5"+5)</code></li>
+            <li>Explizite Variablendeklaration mit <code>var</code>
+            <li>Globale Variablen</li>
+            <li>Konstanten werden mit <code>const</code> definiert</li>
+            <li><a href="http://fiddle.jshell.net/koos/juzv695u/">http://fiddle.jshell.net/koos/juzv695u/</a></li>
+          </ul>
+          <p>
+            <pre class="big-font">
+              <code>
+                var myString; // Typ: undefined, Wert: undefined; Globale Variable
+                var myString = 5; // Typ: number, Wert: 5; Globale Variable
+                myAnotherString = 10.4; // Typ: number, Wert: 10.4; Globale Variable
+                function myFunction() {
+                    var myString; // Lokale Variable
+                    alert(myString);
+                }
+                function myFunction1() {
+                    var myString1 = 10; // Lokale Variable
+                    alert(myString1);
+                    alert(myString);
+                }
+                myString;
+                myFunction();
+                myFunction1();
+              </code>
+            </pre>
+          </p>
+        </section>
+
+        <section>
+          <h2>Korrekte Variablennamen</h2>
+            <ul>
+              <li>bestehen aus Buchstaben (wobei auch ein Unterstrich „_“ als Buchstabe zählt),</li>
+              <li>aus Ziffern,</li>
+              <li>dürfen keine Leerzeichen enthalten,</li>
+              <li>dürfen nicht mit einer Zahl, einem Sonderzeichen oder Satzzeichen anfangen und</li>
+              <li>dürfen nicht mit einem Schlüsselwort übereinstimmen.</li>
+            <ul>
+        </section>
+
+        <section>
+          <h2>Typen</h2>
+          <ul>
+            <li>Primitive Typen:</li>
+              <ul>
+                <li>String</li>
+                <li>Number (Integer, Float)</li>
+                <li>Boolean</li>
+              </ul>
+            <li>Spezielle Typen: Null, undefined</li>
+            <li>Refernzierte Datentypen: Objekte, Funktionen</li>
+          </ul>
+          <p>
+            <pre class="big-font">
+              <code>
+                a = { a: "test"}
+                > Object {a: "test"}
+                a.a
+                > "test"
+                typeof(a.a)
+                > "string"
+              </code>
+            </pre>
+          </p>
+        </section>
+
+        <section>
+          <h2>Typen</h2>
+          <p>
+            <pre class="big-font">
+              <a href="http://jsfiddle.net/koos/5Lcksa4w/">
+                <code>
+                  b = 5
+                  > 5
+                  typeof(b);
+                  > "number"
+                  a = ["hello", "world"]
+                  > ["hello", "world"]
+                  typeof(a)
+                  > "object"
+                  a = new Array;
+                  > []
+                  typeof(a)
+                  > "object"
+                  a = function(p1, p2) { return p1 * p2 };
+                  > function (p1, p2) { return p1 * p2 }
+                  a
+                  > function (p1, p2) { return p1 * p2 }
+                  typeof(a)
+                  > "function"
+                  a = ["hello", "world", 5]
+                  > ["hello", "world", 5]
+                  a[0]
+                  > "hello"
+                  typeof(a[0]);
+                  > "string"
+                  typeof(a[1]);
+                  > "string"
+                  typeof(a[2]);
+                  > "number"
+                  a = "hello"
+                  > "hello"
+                  typeof(a);
+                  > "string"
+                </code>
+              </a>
+            </pre>
+          </p>
+        </section>
+        <section>
+          <h2>Operatoren</h2>
+          <ul>
+            <li>Konkatenation – Strings miteinander verbinden (Konkatenation zweier Strings)</li>
+            <li>Mathematische Operatoren (Berechnungen)</li>
+            <li>Vergleichs-Operatoren (Vergleiche zweier Werte)</li>
+            <li>Zuweisungs-Operatoren (weisen Variablen Werte zu)</li>
+            <li>Logische Operatoren (&&, !, ||) (vergleich von Anweisungen und prüfung von true oder false)</li>
+            <li>Bitweise Operatoren und spezielle Operatoren</li>
+            <li>Gefährlich weil kein Einfluss darauf zur Laufzeit</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Operatoren</h2>
+          <a href="http://jsfiddle.net/koos/5Lcksa4w/1/"><img src="operatoren.png"></a>
+        </section>        
+        <section>
+          <h2>Bedingte Anweisungen</h2>
+          <a href="http://jsfiddle.net/koos/daoehj81/">
+            <pre class="big-font">
+              <code>
+                if (Bedingung) {
+                   Anweisungen;
+                }
+
+                if (Bedingung) {
+                   Anweisungen;
+                } else {
+                   Anweisungen;
+                }
+
+                switch (Ausdruck) {
+                   case label1: 
+                      Anweisungen; 
+                      break;
+                   case label2: 
+                      Anweisungen; 
+                      break; 
+                   ...
+                } 
+              </code>
+            </pre>
+          </a>
+        </section>
+
+        <section>
+          <h2>Schleifen</h2>
+          <a href="http://jsfiddle.net/koos/17mLo334/">
+            <pre class="big-font">
+              <code>
+                while (Bedingung) {
+                   Anweisungen;
+                }
+
+
+                do {
+                  Anweisungen;
+                } while (Bedingung);
+
+
+                for (Anweisung; Bedingung; Anweisung) {
+                   Anweisungen;
+                }
+              </code>
+            </pre>
+          </a>          
+        </section>
+
+        <section>
+          <h2>Funktionen</h2>
+          <ul>
+            <li>Funktionen sind ein Block von Anweisungen mit einem Namen.</li>
+            <li>Der Funktionsblock wird einmal definiert.</li>
+            <li>Dann können die Javascript-Befehle der Funktion über den Namen mehrfach im Programm aufgerufen werden.</li>
+            <li>Das Zusammenfassen von Befehlen in einer Funktion verbessert obendrein die Lesbarkeit des Scripts.</li>
+          </ul>
+          <hr/>
+          <p>
+            <pre class="big-font">
+              <code>
+                    +--- Schlüsselwort
+                    |       +---> Name der Funktion
+                    |       |
+                    |       |      +---> Argument
+                    |       |      |       +---> Argument
+                    |       |      |       |
+                function steuer ( betrag, satz) {
+                   var mwst = betrag * satz / 100;        // <-+
+                   var summe = betrag + mwst;             //   +  Anweisungsblock
+                   return summe;                          // <-+
+                }
+                …
+
+                var brutto = steuer ( 200, 16 );          // Funktionsaufruf
+              </code>
+            </pre>
+          </p>
+        </section>
+
+        <section>
+          <h2>Objekte</h2>
+          <ul>
+            <li>Objekte sind Behälter für logisch zusammen gehörende Variablen und Funktionen</li>
+            <li>Objekte können bestimmte Eigenschaften und Methoden zugewiesen werden</li>
+            <li>Kapseln Logik nach aussen und bieten eine Schnittstelle an</li>
+            <li>Wer von den formalen Programmiersprachen kommt, findet Javascript-Objekte recht simpel. Javascript hat ein beschränktes Objekt-Modell.</li>
+          </ul>
+          <hr/>
+          <p>
+            <pre class="big-font">
+              <code>
+                var konto = new Object;
+                     ^      ^
+                     |      |
+                     |      |
+                     |      +--- neues Objekt
+                     +--- das neue Objekt heißt "konto"
+
+                konto.betrag = "400";
+                    ^
+                    +--- Eigenschaft »betrag«
+                konto.open();
+                    ^
+                    +--- Methode »open«
+              </code>
+            </pre>
+          </p>
+        </section>
+
+        <section>
+          <h2>Objekte</h2>
+          <p>
+            <pre class="big-font">
+              <code>
+                var konto = new Object;
+                     ^      ^
+                     |      |
+                     |      |
+                     |      +--- neues Objekt
+                     +--- das neue Objekt heißt "konto"
+
+                konto.betrag = "400";
+                    ^
+                    +--- Eigenschaft »betrag«
+                konto.open();
+                    ^
+                    +--- Methode »open«
+              </code>
+              <a href="http://jsfiddle.net/koos/5Lcksa4w/">
+                <code>
+                  Literale Syntax                   | Implizite Kurzschrift
+                                                    |
+                  var adress = new Object();        | var adress = { lastName: "Meier",
+                  adress = { lastName: "Meier",     |                 plz:      47111,
+                             plz:      47111,       |                 ort:      "Neukirch"
+                             ort:      "Neukirch"   |               }
+                           }                        |
+                </code>
+              </a>
+            </pre>
+          </p>
+        </section>
+
+        <section>
+          <h2>DOM und Vererbung</h2>
+          <p><strong>D</strong>ocument <strong>O</strong>bject <strong>M</strong>odel</p>
+          <blockquote>
+            Document Object Model (DOM) ist eine Spezifikation einer Schnittstelle für den Zugriff auf HTML- oder XML-Dokumente. Sie wird vom World Wide Web Consortium definiert.
+          </blockquote>
+          <p>
+            <small>Quelle: <a href="http://de.wikipedia.org/wiki/Document_Object_Model">Wikipedia - Document Object Model</a> (aufgerufen am 15.10.2014)</small>
+            <p><a href="http://www.w3.org/DOM/DOMTR">W3C - Document Object Model Specifications</a>
+            </p>
+        </section>
+
+        <section>
+          <h2>DOM und Vererbung</h2>
+          <pre style="float:left;width:320px"><code><!DOCTYPE html>&lt;html&gt;
+    &lt;head&gt;
+      &lt;title&gt;DOM&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;p&gt;Lorem Ipsum&lt;/p&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Apfel&lt;/li&gt;
+        &lt;li&gt;Birne&lt;/li&gt;
+        &lt;li&gt;Kirsche&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/body&gt;
+  &lt;/html&gt;</code></pre>
+          <img class="fragment" src="../2014-10-16-css-basics/images/dom.svg" alt="Abbildung DOM-Baum" style="float: right">
+          <ul class="fragment" style="float:right;margin-right: 14%">
+            <li><strong>document</strong> ist das Wurzelelement</li>
+            <li><strong>head</strong> und <strong>body</strong> sind Geschwister</li>
+            <li><strong>ul</strong> und <strong>li</strong> sind Eltern- und Kind-Element</li>
+          </ul>
+
+
+        </section>
+
+        <section>
+          <h2>DOM und Javascript</h2>
+          <blockquote>Mit Javascript kann man über den DOM Baum navigieren und HTML Tags, Attribute oder Inhalte verändern, hinzufügen oder entfernen</blockquote>
+          <ul>
+            <li>DOM zugreifen <strong>getElementsByTagName()</strong></li>
+            <li>Neue Knoten erzeugen <strong>createElement()</strong></li>
+            <li>HTML Attribute zugreifen und manipulieren <strong>getAttribute()</strong></li>
+            <li>Durch den DOM Baum navigieren <strong>parentNode</strong></li>
+            <li>Den DOM Baum manipulieren <strong>insertBefore()</strong></li>
+            <li>Den DOM Baum analysieren <strong>nodeName</strong></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>BOM</h2>
+          <ul>
+            <li>The Browser Object Model</li>
+            <li>Kein Offizieller Standard</li>
+            <li>Dient zur Manipulation mit dem Browserfenster</li>
+            <li>navigator, history, screen, location and document sind children von window</li>
+            <li>document repräsentiert dann den Inhalt der Seite - den DOM</li>
+            <li><a href="http://fiddle.jshell.net/koos/hdtg0a9f/">http://fiddle.jshell.net/koos/hdtg0a9f/</a>
+          </ul>
+          <p>
+            <pre class="big-font">
+              <code>
+                <p id="demo"></p>
+
+                <script>
+                var w=window.innerWidth
+                || document.documentElement.clientWidth
+                || document.body.clientWidth;
+
+                var h=window.innerHeight
+                || document.documentElement.clientHeight
+                || document.body.clientHeight;
+
+                x=document.getElementById("demo");
+                x.innerHTML="Browser inner window width: " + w + ", height: " + h + ".";
+                </script>
+              </code>
+            </pre>
+          </p>
+        </section>
+       <section>
+          <h2>Einbettung und Zusammenhang von Javascript und HTML</h2>
+          <ul>
+            <li>HTML - Hypertext Markup Language / CSS - Cascading Style Sheets</li>
+            <li>NEU: Javascript</li>
+            <li>Einbettung von Javascript in 2 Formen möglich</li>
+            <ul>
+              <li>Code direkt im <code>script</code> Tag innerhalb des <code>head</code> oder <code>head</code> Tags</li>
+              <li>Code verlinkt im <code>script</code> Tag innerhalb des <code>body</code> Tags</li>
+            </ul>
+            <li>Praxis: alles an einem Ort</li>
+          </ul>
+        </section>
+        <section>
+           <h2>Einbettung von Javascript Code im Body</h2>
+           <a href="http://jsfiddle.net/koos/r5s6u5m3/">
+            <pre class="big-font">
+             <code>
+               &lt;!DOCTYPE html&gt;
+               &lt;html&gt;
+               &lt;body&gt; 
+
+               &lt;h1&gt;My Web Page&lt;/h1&gt;
+
+               &lt;p id=&quot;demo&quot;&gt;A Paragraph&lt;/p&gt;
+
+               &lt;button type=&quot;button&quot; onclick=&quot;myFunction()&quot;&gt;Try it&lt;/button&gt;
+
+               &lt;script&gt;
+               function myFunction() {
+                  document.getElementById(&quot;demo&quot;).innerHTML = &quot;Paragraph changed.&quot;;
+               }
+               &lt;/script&gt;
+
+               &lt;/body&gt;
+               &lt;/html&gt;
+             </code>
+           </pre>
+          </a>
+        </section>       
+        <section>
+           <h2>Einbettung von Javascript Code im Head</h2>
+           <a href="http://jsfiddle.net/koos/r5s6u5m3/">
+            <pre class="big-font">
+             <code>
+               &lt;!DOCTYPE html&gt;
+               &lt;html&gt;
+               &lt;head&gt;
+               &lt;script&gt;
+               function myFunction() {
+                  document.getElementById(&quot;demo&quot;).innerHTML = &quot;Paragraph changed.&quot;;
+               }
+               &lt;/script&gt;
+               &lt;/head&gt;
+               &lt;body&gt; 
+
+               &lt;h1&gt;My Web Page&lt;/h1&gt;
+
+               &lt;p id=&quot;demo&quot;&gt;A Paragraph&lt;/p&gt;
+
+               &lt;button type=&quot;button&quot; onclick=&quot;myFunction()&quot;&gt;Try it&lt;/button&gt;
+
+               &lt;/body&gt;
+               &lt;/html&gt;
+             </code>
+           </pre>
+          </a>
+        </section>                 
+        <section>
+           <h2>Einbettung einer externen Javascript Datei im Body/Head</h2>
+           <a href="http://jsfiddle.net/koos/r5s6u5m3/">
+            <pre class="big-font">
+             <code>
+              &lt;!DOCTYPE html&gt;
+              &lt;html&gt;
+              &lt;body&gt;
+              &lt;script src=&quot;myScript.js&quot;&gt;&lt;/script&gt;
+              &lt;/body&gt;
+              &lt;/html&gt;
+             </code>
+           </pre>
+          </a>
+        </section>         
+        <section>
+          <h2>Resourcen</h2>
+          <li><a href="http://www.codecademy.com/en/tracks/javascript">http://www.codecademy.com/en/tracks/javascript</a></li>
+          <li><a href="http://htmldog.com/guides/javascript">http://htmldog.com/guides/javascript</a></li>
+          <li><a href="http://www.mediaevent.de/javascript/Javascript-Basis-Datentypen.html">http://www.mediaevent.de/javascript/Javascript-Basis-Datentypen.html</a></li>
+          <li><a href="http://www.w3schools.com/js">http://www.w3schools.com/js</a></li>
+          <li><a href="https://www.codeschool.com/paths/javascript">https://www.codeschool.com/paths/javascript</a>
+        </section>        
+        <section>
+          <h2>JavaScript User Group Köln (Cologne.js)</h2>
+          <img src="http://colognejs.de/images/colognejs-logo.svg" />
+          <ul>
+            <li><a href="http://colognejs.de/">http://colognejs.de/</a></li>
+            <li>Next Meetup: Tuesday, December, 16th 2014 — New location at triAGENS / Join us at 19:00, talks start at 19:30</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Fragen?</h1>
+        </section>
+        <section>
+          <blockquote style="margin-bottom: 80px;">
+             Hands On - Javascript Übungen
+          </blockquote>
+        </section>
+        <section>
+          <h2>Wie funktioniert diese Übung?</h2>
+          <ul>
+            <li><a href='http://www.learn-js.org/en/Welcome'>http://www.learn-js.org/en/Welcome</a></li>
+            <li>Dort sind der Reihe nach Übungen die man lösen sollte</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+
+		<script src="../revealjs-framework/lib/js/head.min.js"></script>
+		<script src="../revealjs-framework/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: false,
+				width: 1000,
+
+				transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+				transitionSpeed: 'fast', // default/fast/slow
+				backgroundTransition: 'none', // default/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../revealjs-framework/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../revealjs-framework/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-framework/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-framework/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../revealjs-framework/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../revealjs-framework/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
