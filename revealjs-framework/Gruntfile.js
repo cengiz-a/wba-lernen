@@ -49,7 +49,8 @@ module.exports = function(grunt) {
 					'css/theme/sky.css': 'css/theme/source/sky.scss',
 					'css/theme/moon.css': 'css/theme/source/moon.scss',
 					'css/theme/solarized.css': 'css/theme/source/solarized.scss',
-					'css/theme/medieninformatik.css': 'css/theme/source/medieninformatik.scss'
+					'css/theme/medieninformatik.css': 'css/theme/source/medieninformatik.scss',
+					'css/theme/medieninformatik-renewed.css': 'css/theme/source/medieninformatik-renewed.scss'
 				}
 			}
 		},
