@@ -12,12 +12,12 @@
  * GLOBAL STYLES
  *********************************************/
 body {
-  background-color: black;
+  background-color: #fbfbfb;
   background-image: url("../../images/vieldrin.png");
   background-position: 20px 95%;
   background-repeat: no-repeat;
   background-size: 15%;
-  background-color: black; }
+  background-color: #fbfbfb; }
 
 .reveal {
   font-family: "Myriad Pro", Arial, Helvetica, Tahoma, sans-serif;
