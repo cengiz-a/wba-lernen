@@ -19,14 +19,15 @@ $green: #77cc00;
 $blue: #77aabb;
 $brown: #442211;
 $magenta: #dd1166;
+$black: #231f20;
 
 // Background of the presentation
-$backgroundColor: #fbfbfb;
+$backgroundColor: #ffffff;
 
 // Primary/body text
 $mainFont: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif;
 $mainFontSize: 29px;
-$mainColor: #fff;
+$mainColor: $black;
 
 // Headings
 $headingMargin: 0 0 30px 0;
