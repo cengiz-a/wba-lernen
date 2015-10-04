@@ -16,13 +16,13 @@
 
 // MI Colors:
 $green: #77cc00;
-$blue: #77aabb;
-$brown: #442211;
+$blue: #4952e1;
 $magenta: #dd1166;
+$purple: #9313c3;
 $black: #231f20;
 
 // Background of the presentation
-$backgroundColor: #ffffff;
+$backgroundColor: #fbfbfb;
 
 // Primary/body text
 $mainFont: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif;
@@ -32,7 +32,7 @@ $mainColor: $black;
 // Headings
 $headingMargin: 0 0 30px 0;
 $headingFont: 'Myriad Pro', Arial, Helvetica, Tahoma, sans-serif;
-$headingColor: $green;
+$headingColor: $purple;
 $headingLineHeight: 0.9em;
 $headingLetterSpacing: 0.02em;
 $headingTextTransform: none;
@@ -40,18 +40,18 @@ $headingTextShadow: none;
 $heading1TextShadow: $headingTextShadow;
 
 // Links and actions
-$linkColor: #77cc00;
+$linkColor: $blue;
 $linkColorHover: lighten( $linkColor, 20% );
 
 // Text selection
-$selectionBackgroundColor: #77cc00;
+$selectionBackgroundColor: $green;
 $selectionColor: #fff;
 
 // Generates the presentation background, can be overridden
 // to return a background image or gradient
 @mixin bodyBackground() {
   background-color: $backgroundColor;
-  background-image: url( '../../images/vieldrin.png');
+  background-image: url( '../../images/vieldrin-black.png');
   background-position: 20px 95%;
   background-repeat: no-repeat;
   background-size: 15%;
@@ -110,7 +110,7 @@ $selectionColor: #fff;
 }
 
 .reveal h3.subline {
-  margin-top: -1em;
+  margin-top: -0.7em;
 }
 
 .reveal h4 {
@@ -124,7 +124,7 @@ $selectionColor: #fff;
 .reveal h5.inverse,
 .reveal h6.inverse, {
   color: #fff;
-  background: #000;
+  background: $purple;
   padding: 0.3em;
   display: inline-block;
 }
@@ -190,13 +190,15 @@ $selectionColor: #fff;
 }
 
 .reveal strong {
-  color: $magenta;
+  color: $black;
+  text-decoration: underline;
 }
 
 .reveal h1 strong,
 .reveal h2 strong,
 .reveal h3 strong{
-  color: #fff;
+  color: $black;
+  text-decoration: none;
 }
 
 .reveal .slides section .fragment.highlight-red.visible,
@@ -209,8 +211,15 @@ $selectionColor: #fff;
   color: $green;
 }
 
+// Brown color does not exist anymore, has been swapped for purple.
+// This class only exists for purposes of backwards compability.
+// The naming is really ugly and I'm sorry.
 .reveal .brown {
-  color: $brown;
+  color: $purple;
+}
+
+.reveal .purple {
+  color: $purple;
 }
 
 .reveal .slides section .fragment.highlight-blue.visible,
@@ -254,6 +263,8 @@ $selectionColor: #fff;
   font-size: .6em;
   tab-size: 4;
   width: 100%;
+  background-color: transparent;
+  box-shadow: none;
 }
 
 .reveal pre code {
