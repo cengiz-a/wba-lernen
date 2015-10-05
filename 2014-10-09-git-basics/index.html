@@ -17,7 +17,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<link rel="stylesheet" href="../revealjs-framework/css/reveal.min.css">
-		<link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme">
+    <link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik-renewed.css" id="theme">
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="../revealjs-framework/lib/css/solarized_light.css">
@@ -179,7 +179,7 @@
             Wer kennt andere Versionierungssysteme?
           </blockquote>
           <p>
-            <img src="images/github.jpg" alt="Github Artefact" style="width:100%">
+            <img src="images/gitflow.png" alt="Github Artefact" style="width:100%">
           </p>
         </section>
         <section data-state="fullscreenImage" style="background-image: url(images/TimBernersLee.jpg)">
@@ -274,7 +274,7 @@
             </ul>
           </div>
         </section>
-        <section data-state="fullscreenImage" style="background-image: url(images/github.jpg)">
+        <section data-state="fullscreenImage" style="background-image: url(images/github-octocat_yes-we-code.jpg)">
           <p class="bu fragment">
             Was ist Github?
           </p>
@@ -328,7 +328,7 @@
           <h2>Git Basisbefehle (2/4)</h2>
           <ul>
             <li><strong><code>git init:</code></strong>  Initializes a new Git repository. Until you run this command inside a repository or directory, it’s just a regular folder. Only after you input this does it accept further Git commands.
-            <li><strong><code>git clone:</code></strong> 
+            <li><strong><code>git clone:</code></strong> Importing a Git repository using the command line
           </ul>          
         </section>        
         <section>
@@ -358,12 +358,68 @@
             <li><strong><code>git push</code></strong> : Eine kopie der Repository an das Remote-Repository laden. Nur im Falle das ein existiert (wie z.B.: Github)
           </ul>          
         </section>
+        <section data-state="fullscreenImage" style="background-image: url(images/commit-messages.png)">
+          <p class="bu fragment">
+            One More Thing: Git Commit Messages
+          </p>
+        </section>  
         <section>
           <h2>Git Commit und Messages</h2>
           <blockquote>
-            Wenn man im verteilten Team arbeitet, dann ist es sehr wichtig mit <em>aussagekräftigen</em> Commit Messages zu arbeiten...
+            Wenn man im verteilten Team arbeitet, dann ist es sehr wichtig mit <em>aussagekräftigen</em> Commit Messages zu arbeiten. Ein unlesbares Beispiel
           </blockquote>
+          <p>
+            <code>
+              <strong>$ git log --oneline -5 --author cbeams"</strong><br/>
+              <strong>e5f4b49</strong> Re-adding ConfigurationPostProcessorTests after its brief removal in r814. @Ignore-ing the testCglibClassesAreLoadedJustInTimeForEnhancement() method as it turns out this was one of the culprits in the recent build breakage. The classloader hacking causes subtle downstream effects, breaking unrelated tests. The test method is still useful, but should only be run on a manual basis to ensure CGLIB is not prematurely classloaded, and should not be run as part of the automated build.<br/>
+              <strong>22b25e0</strong> Consolidated Util and MutableAnnotationUtils classes into existing AsmUtils<br/>
+            </code>
+          </p>
         </section>        
+        <section>
+          <h2>Git Commit und Messages</h2>
+          <blockquote>
+            Wenn man im verteilten Team arbeitet, dann ist es sehr wichtig mit <em>aussagekräftigen</em> Commit Messages zu arbeiten. Ein besseres Beispiel
+          </blockquote>
+          <p>
+            <code>
+              <strong>$ git log --oneline -5 --author pwebb</strong><br/>
+              <strong>5ba3db6</strong> Fix failing CompositePropertySourceTests<br/>
+              <strong>84564a0</strong> Rework @PropertySource early parsing logic<br/>
+              <strong>e142fd1</strong> Add tests for ImportSelector meta-data<br/>
+              <strong>887815f</strong> Update docbook dependency and generate epub<br/>
+              <strong>ac8326d</strong> Polish mockito usage<br/>
+            </code>
+          </p>
+        </section>         
+        <section>
+          <h2>Git Commit und Messages</h2>
+          <blockquote>
+            The contributors to these repositories know that a well-crafted git commit message is the best way to communicate context about a change to fellow developers (and indeed to their future selves). A diff will tell you what changed, but only the commit message can properly tell you why.
+          </blockquote>
+          <ul>
+            <li>Markup syntax, wrap margins, grammar, capitalization, punctuation. Spell these things out, remove the guesswork, and make it all as simple as possible. The end result will be a remarkably consistent log that's not only a pleasure to read but that actually does get read on a regular basis.</li>
+            <li>Content. What kind of information should the body of the commit message (if any) contain? What should it not contain?</li>
+            <li>Metadata. How should issue tracking IDs, pull request numbers, etc. be referenced?</li>
+          </ul>
+        </section>  
+        <section>
+          <h2>Git Commit und Messages</h2>
+          <blockquote>
+            The seven rules of a great git commit message
+          </blockquote>
+          <ol>
+            <li>Separate subject from body with a blank line</li>
+            <li>Limit the subject line to 50 characters</li>
+            <li>Capitalize the subject line</li>
+            <li>Do not end the subject line with a period</li>
+            <li>Use the imperative mood in the subject line</li>
+            <li>Wrap the body at 72 characters</li>
+            <li>Use the body to explain what and why vs. how</li>
+          </ol>
+        </section> 
+        <section data-state="fullscreenImage" style="background-image: url(images/commit-messages.png)">
+        </section>                
       </div>
     </div>
 
