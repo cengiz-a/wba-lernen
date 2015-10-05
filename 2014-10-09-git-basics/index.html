@@ -26,7 +26,82 @@
 		<script>
 			document.write( '<link rel="stylesheet" href="../revealjs-framework/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
 		</script>
-
+    <style type="text/css">
+      .tabelle {
+        table-layout: fixed;
+      }
+      .tabelle td {
+        background-color: #404040;
+      }
+      .tabelle td,
+      .tabelle th {
+        font-size: 0.8em;
+        border: 4px solid black;
+        text-align: center !important;
+      }
+      .tabelle th {
+        font-weight: normal;
+      }
+      .kaestchen {
+        margin: 30px 0 0 30px !important;
+      }
+      .kaestchen li {
+        background-color: #DD1166;
+        color: white;
+        display: inline-bock;
+        float: left;
+        list-style-type: none;
+        margin: 0 15px 15px 0;
+        padding: 10px;
+        text-align: center;
+        width: 230px;
+      }
+      .fullscreenImage .reveal .slides {
+        height: 100% !important;
+        left: 0;
+        margin: 0 auto;
+        padding: 0;
+        top: 0;
+        width: 100% !important;
+      }
+      .fullscreenImage .reveal .slides > section {
+        background-position-x: center;
+        background-position-y: 10px;
+        background-repeat: no-repeat;
+        background-size: auto 90%;
+        height: 100%;
+        left: 0;
+        margin: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+      .fullscreenImage .reveal .slides > section .bu {
+        background-color: rgba(221, 17, 102, 0.8);
+        top: 100px;
+        display: inline-block;
+        color: white;
+        padding: 0 10px 0 100px;
+        position: absolute;
+      }
+      .fullscreenImage .reveal .slides > section .quelle {
+        bottom: 10px;
+        color: white;
+        display: inline-block;
+        font-size: 14px;
+        margin: 0 0 0 10px;
+        position: absolute;
+      }
+      .fullscreenImage .reveal .slides > section p {
+        margin: 0;
+      }
+      .nobackground .reveal .slides > section {
+        background-image: none;
+      }
+      .whiteBackground .state-background {
+        background-color: white;
+      }
+    </style>
 		<!--[if lt IE 9]>
 		<script src="../revealjs-framework/lib/js/html5shiv.js"></script>
 		<![endif]-->
@@ -60,7 +135,7 @@
           </ul>
         </section>
         <section>        
-    			<h2>Aufbau dieser Session (0:45 h)</h2>
+    			<h2>Aufbau dieser Session</h2>
           <ul>
           	<li class="fragment">Was ist ein Versionierungssystem</li>
           	<li class="fragment">Geschichte - Historie von Versionierungssystemen</li>
@@ -72,39 +147,225 @@
           </ul>
     		</section>        
         <section>
-          <blockquote style="margin-bottom: 80px;">
-             Frage an das Publikum
+          <h2>Frage an das Publikum</h2>
+          <blockquote>
+            Wer weiss was ein Versionierungssystem ist?
           </blockquote>
+          <p>
+            <img src="images/version-control.png" alt="Git Command" style="height:100%;">
+          </p>
+        </section>
+        <section>
+          <h2>Frage an das Publikum</h2>
+          <blockquote>
+            Wer kennt Git?
+          </blockquote>
+          <p>
+            <img src="images/git-command.png" alt="Git Command" style="width:100%">
+          </p>
+        </section>
+        <section>
+          <h2>Frage an das Publikum</h2>
+          <blockquote>
+            Wer kennt github?
+          </blockquote>
+          <p>
+            <img src="images/github.jpg" alt="Github Artefact" style="width:100%">
+          </p>
+        </section>
+        <section>
+          <h2>Frage an das Publikum</h2>
+          <blockquote>
+            Wer kennt andere Versionierungssysteme?
+          </blockquote>
+          <p>
+            <img src="images/github.jpg" alt="Github Artefact" style="width:100%">
+          </p>
+        </section>
+        <section data-state="fullscreenImage" style="background-image: url(images/TimBernersLee.jpg)">
+          <p class="bu fragment">
+            Was ist ein Versionierungssystem?
+          </p>
+        </section>
+        <section>
+          <h2>Versionierungssystem</h2>
+          <blockquote>
+            The Revision Control System (RCS) is a software <em>implementation of revision control</em> that automates the storing, retrieval, logging, identification, and merging of revisions. RCS is useful for text that is revised frequently, for example programs, documentation, procedural graphics, papers, and form letters. RCS is also capable of handling binary files, though with reduced efficiency. Revisions are stored with the aid of the diff utility.
+          </blockquote>
+          <p>
+            TODO Abgrenzung zu SCM - Source Controll Management (System)
+          </p>
+          <p>
+            <small>Quelle: https://en.wikipedia.org/wiki/Revision_Control_System, Stand: 04.10.2015</small>
+          </p>
+        </section>
+        <section>
+          <h2>Versionierung</h2>
+          <blockquote>
+            A component of software configuration management, version control, also known as revision control or source control,[1]:2 is the management of changes to documents, computer programs, large web sites, and other collections of information. Changes are usually identified by a number or letter code, termed the "revision number," "revision level," or simply "revision."
+          </blockquote>
+          <p>
+            <small>Quelle: https://en.wikipedia.org/wiki/Version_control, Stand: 04.10.2015</small>
+          </p>
+        </section>
+        <section data-state="fullscreenImage" style="background-image: url(images/TimBernersLee.jpg)">
+          <p class="bu fragment">
+            Kleiner Rückbilck in die Geschichte
+          </p>
+        </section>        
+        <section>
+          <h2>Geschichte - Historie von Versionierungssystemen</h2>
           <ul>
-            <li class="fragment">Wer kennt git?</li>
-            <li class="fragment">Wer kennt github?</li>
-            <li class="fragment">Wer kenn kein git?</li>
+            <li class="fragment">todo...</li>
           </ul>
         </section>
         <section>
-          <h2>Was ist ein Versionierungssystem</h2>
-        </section>
-        <section>
-          <h2>Geschichte - Historie von Versionierungssystemen</h2>
-        </section>
-        <section>
           <h2>Entstehung von git</h2>
+          <ul>
+            <li class="fragment">Git wurde 2005 von Linus Torvalds initieert nachdem Bitkeeper (bis dahin das genutzte SCM von der Linux Community) keine gratis Version mehr angeboten hat</li>
+            <li class="fragment">Linus Torvalds wollte ein <em>dezentrales</em> und <em>performantes</em> Versionierungs Software - seiner Ansicht nach gab es zu dem Zeitpunkt keine die seine Wünsche erfüllte</li>
+            <li class="fragment"><strong>Dezentralität:</strong> Jeder Entwickler besitzt die Historie des ganzen Source Codes bei sich und verteilt nur seine Änderungen an andere Entwickler. Es gibt kein zentralen Server mehr der für den Ableich der einzelnen Entwicklungstände sorgt</li>
+            <li class="fragment"><strong>Performance:</strong> 2005 brauchten Versionierungssysteme ca. 30 Sekunden um einen Patch zu versionieren und damit alle Metadaten zu aktualisieren. Bei dem Linux Core Team hätte es 250 solcher Aktionen zum gleichen Zeitpunkt gegeben - somit skalierten die Versionierungssysteme nicht</li>
+          </ul>         
         </section>
         <section>
-          <h2>Unterschied zwischen git & Github</h2>
+          <h2>Git</h2>
+          <blockquote>
+            Git is a distributed revision control system with an emphasis on <em>speed</em>, <em>data integrity</em> and <em>support for distributed, non-linear workflows</em>.
+          </blockquote>
+          <p>
+            <small>Quelle: todo</small>
+          </p>
+        </section>        
+        <section>
+          <h2>Git</h2>
+          <blockquote>
+            Charakteristiken von Git:
+          </blockquote>
+          <ul>
+            <li>Strong support for non-linear development</li>
+            <li>Distributed development</li>
+            <li>Compatibility with existing systems/protocols</li>
+            <li>Efficient handling of large projects</li>
+            <li>Cryptographic authentication of history</li>
+            <li>Toolkit-based design</li>
+            <li>Pluggable merge strategies</li>
+            <li>Periodic explicit object packing</li>
+          </ul>
+          <p>
+            <small>Quelle: todo</small>
+          </p>
         </section>
         <section>
-          <h2>Worschatz beim Umgang mit Versionierungssystemen</h2>
+          <h2>Git Server</h2>
+          <blockquote>
+            Eine weitere wichtige Eigenschaft ist, dass Git, als ein dezentrales Versionierungssystem direkt sowohl einen Client als auch einen Server bereitstellt. Somit kann der Code zwischen den einzelnen Team-Mitgliedern weitergegeben werden ohne ihn auf eine zentrale Instanz zu besitzen. Jedoch können Git-Server Implementierungen nützlich sein um z.B.: erweiterte Zugriffskontrollen, Anzeige von Inhalt und das Verwalten von mehreren Repositories anzubieten.
+          </blockquote>
+          <div>
+            <ul>
+              <li>Remote file store and shell access</li>
+              <li>Git daemon, instaweb</li>
+              <li>GitLab</li>
+            </ul>
+            <ul>
+              <li>Bitbucket</li>
+              <li>GitHub</li>
+              <li>Weitere komerzielle Anbieter</li>
+            </ul>
+          </div>
+        </section>
+        <section data-state="fullscreenImage" style="background-image: url(images/github.jpg)">
+          <p class="bu fragment">
+            Was ist Github?
+          </p>
+        </section>                
+        <section>
+          <h2>Github</h2>
+          <blockquote>
+            GitHub is a website where you can upload a copy of your Git repository. It is a Git repository hosting service, which offers all of the distributed revision control and source code management (SCM) functionality of Git as well as adding its own features. Unlike Git, which is strictly a command-line tool, GitHub provides a web-based graphical interface and desktop as well as mobile integration. It also provides access control and several collaboration features such as wikis, task management, and bug tracking and feature that can be helpful for projects. It allows you to collaborate with other people on a project. It does that by providing a centralized location to share the repository, a web-based interface to view it, and features like forking, pull requests distributed revision control, issues, and wikis.
+          </blockquote>
+          <p>
+            <small>Quelle: ...</small>
+          </p>          
+        </section> 
+        <section>
+          <h2>Unterschied zwischen Git und GitHub</h2>
+          <ul>
+            <li><strong>Git: </strong>Git is ein dezentrales System zur Versionskontrolle</li>
+            <li><strong>Github: </strong>Github ist eine Webseite die Gitfunktionalitäten zugänglich macht und erweitert</li>
+          </ul>
+          <blockquote>
+            GitHub ist NICHT Git - GitHub benutzt Git
+          </blockquote>
+          <p>
+            <small>Bitte merken</small>
+          </p>          
         </section>
         <section>
-          <h2>git Grundlagen & Basisbefehle</h2>
+          <h2>Worschatz beim Umgang mit Versionierungssystemen (1/2)</h2>
+          <ul>
+            <li><strong>Command Line:</strong> The computer program we use to input Git commands. On a Mac, it’s called Terminal. In both cases, you type text-based commands, known as prompts, into the screen, instead of using a mouse.</li>
+            <li><strong>Repository:</strong> A directory or storage space where your projects can live. It can be local to a folder on your computer, or it can be a storage space on GitHub or another online host. You can keep code files, text files, image files, you name it, inside a repository.</li>
+            <li><strong>Version Control:</strong> Basically, the purpose Git was designed to serve. When you have a Microsoft Word file, you either overwrite every saved file with a new save, or you save multiple versions. With Git, you don’t have to. It keeps “snapshots” of every point in time in the project’s history, so you can never lose or overwrite it.</li>
+          </ul>
         </section>
+        <section>
+          <h2>Worschatz beim Umgang mit Versionierungssystemen (2/2)</h2>
+          <ul>
+            <li><strong>Commit:</strong> This is the command that gives Git its power. When you commit, you are taking a “snapshot” of your repository at that point in time, giving you a checkpoint to which you can reevaluate or restore your project to any previous state.</li>
+            <li><strong>Branch:</strong> How do multiple people work on a project at the same time without Git getting them confused? Usually, they “branch off” of the main project with their own versions full of changes they themselves have made. After they’re done, it’s time to “merge” that branch back with the “master,” the main directory of the project.</li>
+          </ul>
+        </section>        
+        <section>
+          <h2>Git Basisbefehle (1/4)</h2>
+          <ul>
+            <li><strong><code>git config:</code></strong> Short for “configure,” this is most useful when you’re setting up Git for the first time.
+            <li><strong><code>git help:</code></strong> Forgot a command? Type this into the command line to bring up the 21 most common git commands. You can also be more specific and type “git help init” or another term to figure out how to use and configure a specific git command.
+            <li><strong><code>git status:</code></strong> Check the status of your repository. See which files are inside it, which changes still need to be committed, and which branch of the repository you’re currently working on.
+          </ul>          
+        </section>
+        <section>
+          <h2>Git Basisbefehle (2/4)</h2>
+          <ul>
+            <li><strong><code>git init:</code></strong>  Initializes a new Git repository. Until you run this command inside a repository or directory, it’s just a regular folder. Only after you input this does it accept further Git commands.
+            <li><strong><code>git clone:</code></strong> 
+          </ul>          
+        </section>        
+        <section>
+          <h2>Git Basisbefehle (3/4)</h2>
+          <ul>
+            <li><strong><code>git add:</code></strong> This does not add new files to your repository. Instead, it brings new files to Git’s attention. After you add files, they’re included in Git’s “snapshots” of the repository.
+            <li><strong><code>git commit:</code></strong> Git’s most important command. After you make any sort of change, you input this in order to take a “snapshot” of the repository. Usually it goes git commit -m "Message here."" The -m indicates that the following section of the command should be read as a message.
+            <li><strong><code>git push:</code></strong> If you’re working on your local computer, and want your commits to be visible online on GitHub as well, you “push” the changes up to GitHub with this command.
+            <li><strong><code>git pull:</code></strong> If you’re working on your local computer and want the most up-to-date version of your repository to work with, you “pull” the changes down from GitHub with this command.
+          </ul>          
+        </section>        
+        <section>
+          <h2>Git Basisbefehle (3/4)</h2>
+          <ul>
+            <li><strong><code>git branch:</code></strong> Working with multiple collaborators and want to make changes on your own? This command will let you build a new branch, or timeline of commits, of changes and file additions that are completely your own. Your title goes after the command. If you wanted a new branch called "cats" you’d type <code>git branch cats</code>
+            <li><strong><code>git merge:</code></strong> When you’re done working on a branch, you can merge your changes back to the master branch, which is visible to all collaborators. <code>git merge cats</code> would take all the changes you made to the "cats" branch and add them to the master.
+            <li><strong><code>git checkout:</code></strong> Literally allows you to "check out" a repository that you are not currently inside. This is a navigational command that lets you move to the repository you want to check. You can use this command as <code>git checkout master</code> to look at the master branch, or <code>git checkout cats</code> to look at another branch.
+          </ul>          
+        </section>        
         <section>
           <h2>Der einfachste git Workflow</h2>
+          <ul>
+            <li><strong><code>git init</code></strong> oder <strong><code>git clone</code></strong>: Initieeren eines lokalen git-Repository oder das kopieren eines Remote-Repository in ein lokales Verzeichnis (z.B.: ein Github Repository)
+            <li><code>[Vornehmen von Änderungen am Code]</code></li>
+            <li><strong><code>git add</code></strong>: das Bekanntmachen der Veränderungen oder neuen Dateien an git. Ein so genanntes Snapshot. Es ist noch nicht fester Bestandteil der Repository.
+            <li><strong><code>git commit</code></strong>: Hinzufügen der Snapshots in die Repository.
+            <li><strong><code>git push</code></strong> : Eine kopie der Repository an das Remote-Repository laden. Nur im Falle das ein existiert (wie z.B.: Github)
+          </ul>          
         </section>
+        <section>
+          <h2>Git Commit und Messages</h2>
+          <blockquote>
+            Wenn man im verteilten Team arbeitet, dann ist es sehr wichtig mit <em>aussagekräftigen</em> Commit Messages zu arbeiten...
+          </blockquote>
+        </section>        
       </div>
     </div>
-
 
 		<script src="../revealjs-framework/lib/js/head.min.js"></script>
 		<script src="../revealjs-framework/js/reveal.min.js"></script>
