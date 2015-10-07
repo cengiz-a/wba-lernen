@@ -1,10 +1,22 @@
 {
-	"presentations":
-	{
-		"2015-10-08-wba-kickoff/index.html":
-		{
-			"title" : "WBA1 Kickoff",
-			"authors" : ["Christian Noss"]
-		}
+  "presentations" : {
+    "2015-10-08-wba-kickoff/index.html" : {
+      "title" : "WBA1 Kickoff",
+      "authors" : [
+        "Christian Noss"
+      ]
+    },
+    "2015-10-08-wie-geht-wba1" : {
+      "title" : "Wie funktioniert WBA1?",
+      "authors" : [
+        "Christian Noss"
+      ]
+    },
+    "2015-25-09-style-development/index.html" : {
+      "title" : "Test of new styles",
+      "authors" : [
+        "Christian Poplawski"
+      ]
+    }
   }
 }
