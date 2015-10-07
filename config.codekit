@@ -2636,6 +2636,17 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
+	"\/coda_backups\/2015-10-07\/22_47_56_presentations.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-07\/22_47_56_presentations.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/coda_backups\/2015-10-07\/22_47_56_presentations-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
 	"\/impress-js-wba\/css\/impress-demo.css": {
 		"fileType": 16,
 		"ignore": 0,
