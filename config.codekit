@@ -2647,6 +2647,15 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1
 		},
+	"\/coda_backups\/2015-10-07\/22_50_19_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-07\/22_50_19_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/impress-js-wba\/css\/impress-demo.css": {
 		"fileType": 16,
 		"ignore": 0,
