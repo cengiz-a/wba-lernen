@@ -17,8 +17,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<link rel="stylesheet" href="../revealjs-framework/css/reveal.min.css">
-		<link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme">
-
+    <link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik-renewed.css" id="theme">
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="../revealjs-framework/lib/css/solarized_light.css">
 
@@ -51,58 +50,159 @@
         <section>
           <h2>Ziele dieses Abschnitts</h2>
           <ul>
-            <li class="fragment">Einführung in git zu praktizieren</li>
+            <li class="fragment">Einführung in Git zu praktizieren</li>
             <li class="fragment">Git kennenlernen</li>
             <li class="fragment">Github kennenlernen</li>
-            <li class="fragment">Repository erstellen und klonen</li>
+            <li class="fragment">Repository lokal erstellen</li>
+            <li class="fragment">Repository clonen</li>
             <li class="fragment">Gitworkflow praktizieren</li>
             <li class="fragment">Gitworkflow mit dem WBA1 Repository üben</li>
             <li class="fragment">Hands-on</li>
           </ul>
         </section>
         <section>
-    			<h2>Aufbau dieser Session (1:45 h)</h2>
+    			<h2>Aufbau dieser Session</h2>
           <ul>
-            <li class="fragment">Git Setup durchführen</li>
+            <li class="fragment">Git Setup durchführen <code>git config</code></li>
             <li class="fragment">Github Setup durchführen & Github Account erstellen</li>
             <li class="fragment">Repository auf Github erstellen</li>
-            <li class="fragment">Repository lokal erstellen: git init</li>
-            <li class="fragment">Repositories miteinander verbinden: git config / git clone</li>
-            <li class="fragment">Gitworkflow: git status / git add / git commit</li>
-            <li class="fragment">Gitworkflow: git push / git pull</li>
+            <li class="fragment">Repository lokal erstellen: <code>git init</code></li>
+            <li class="fragment">Repositories miteinander verbinden: <code>git config</code> / <code>git clone</code></li>
+            <li class="fragment">Gitworkflow: <code>git status</code> / <code>git add</code> / <code>git commit</code></li>
+            <li class="fragment">Gitworkflow: <code>git push</code> / <code>git pull</code></li>
           </ul>
     		</section>        
         <section>
-          <blockquote style="margin-bottom: 80px;">
-             Frage an das Publikum
-          </blockquote>
-          <ul>
-            <li class="fragment">Wer kennt git?</li>
-            <li class="fragment">Wer kennt github?</li>
-            <li class="fragment">Wer kenn kein git?</li>
-          </ul>
-        </section>
-        <section>
           <h2>Git Setup durchführen</h2>
+          <blockquote>
+            Konfiguration von git auf dem lokalen Rechner. Somit wird ~/.gitconfig erstellt.
+          </blockquote>
+          <p>
+            <code>git config --global user.name "Your Name Here"</code><br/>
+            <code>git config --global user.email "your_email@youremail.com"</code>
+          </p>
+          <p>
+            <img src="images/git-config.png" alt="Git Config" style="width:100%">
+          </p>
         </section>
         <section>
-          <h2>Github Setup durchführen</h2>
+          <h2>Github Account</h2>
+          <blockquote>
+            Wie erstelle ich mir einen Github Account?
+          </blockquote>
+          <p>
+            Bitte <code><a href="http://github.com">http://github.com</a></code> besuchen und wir gehen diese Schritte gemeinsam durch.
+          </p>    
+          <p>
+            <img src="images/github.png" alt="Gitub" style="width:100%">
+          </p>                
         </section>
         <section>
-          <h2>Repository auf Github erstellen</h2>
+          <h2>Github Repository</h2>
+          <blockquote>
+            Wie erstelle ich ein Repository auf Github?
+          </blockquote>
+          <p>
+            Bitte <code><a href="https://github.com/new">https://github.com/new</a></code> besuchen und wir gehen diese Schritte gemeinsam durch.
+          </p>   
+          <p>
+            <img src="images/github-new.png" alt="Gitub" style="width:100%">
+          </p>                     
         </section>
         <section>
-          <h2>Repository lokal erstellen: git init</h2>
+          <h2>Repository lokal erstellen: <code>git init</code></h2>
+          <ul>
+            <li>Terminal öffnen</li>
+            <li><code>mkdir testproject</code></li>
+            <li><code>cd testproject</code></li>
+            <li><code>git init .</code></li>
+          </ul>
+          <p>
+            <img src="images/git-init.png" alt="Git Init" style="width:100%">
+          </p>
         </section>
         <section>
-          <h2>Repositories miteinander verbinden: git config / git clone</h2>
+          <h2>Lokales Repository zu Github Pushen: <code>git push</code>, <code>git add</code>, <code>git commit</code>, <code>git remote</code></h2>
+          <ul>
+            <li>Terminal öffnen</li>
+            <li><code>cd testproject</code></li>
+            <li><code>echo "# testproject" >> README.md</code></li>
+            <li><code>git add README.md</code></li>
+            <li><code>git commit -m "first commit"</code></li>
+            <li><code>git remote add origin git@github.com:[MEIN GITHUB USERNAME]/testproject.git</code></li>
+            <li><code>git push -u origin master</code></li>
+          </ul>
+          <p>
+            <img src="images/git-push.png" alt="Git Push" style="width:100%">
+          </p>
         </section>
         <section>
-          <h2>Gitworkflow: git status / git add / git commit</h2>
+          <h2>Repository klonen: <code>git clone</code></h2>
+          <ul>
+            <li>Terminal öffnen</li>
+            <li><code>git clone git@github.com:koos/wba1-testproject1.git</code></li>
+          </ul>
+          <p>
+            <img src="images/git-clone.png" alt="Git Clone" style="width:100%">
+          </p>
         </section>
         <section>
-          <h2>Gitworkflow: git push / git pull</h2>
+          <h2>Status eines Repositories abfragen: <code>git status</code></h2>
+          <ul>
+            <li>Terminal öffnen</li>
+            <li><code>cd testproject</code></li>
+            <li><code>tocuh test</code></li>
+            <li><code>git status</code></li>
+          </ul>
+          <p>
+            <img src="images/git-status.png" alt="Git Status" style="width:100%">
+          </p>
         </section>
+        <section>
+          <h2>Eine Datei in ein remote repository laden: <code>git push</code></h2>
+          <ul>
+            <li>Terminal öffnen</li>
+            <li><code>cd testproject</code></li>
+            <li><code>git add .</code></li>
+            <li><code>git commit -a -m "Added test file"</code></li>
+            <li><code>git push origin master</code></li>
+          </ul>
+          <p>
+            <img src="images/git-push-1.png" alt="Git Status" style="width:100%">
+          </p>
+        </section>
+        <section>
+          <h2>Veränderungen in ein lokales repository laden: <code>git pull</code></h2>
+          <ul>
+            <li>Terminal öffnen</li>
+            <li><code>cd wba1-testproject1</code></li>
+            <li><code>git pull origin master</code></li>
+          </ul>
+          <p>
+            <img src="images/git-pull.png" alt="Git Status" style="width:100%">
+          </p>
+        </section>        
+        <section>
+          <h2>Hint: <code>git help</code></h2>
+          <blockquote>
+            Hilft.
+          </blockquote>        
+        </section>        
+        <section>
+          <h2>Literatur</h2>
+          <ul>
+            <li><a href="https://try.github.io/">Got 15 minutes and want to learn Git?</a></li>
+            <li><a href="https://www.atlassian.com/git">Getting Git Right</a></li>                      
+            <li><a href="https://guides.github.com/activities/hello-world/">Hello World</a></li>            
+            <li><a href="https://git-scm.com/book/en/v2">https://git-scm.com/book/en/v2</a></li>            
+            <li><a href="http://chris.beams.io/posts/git-commit/"></a>How to Write a Git Commit Message</li>
+            <li><a href="http://readwrite.com/2013/09/30/understanding-github-a-journey-for-beginners-part-1">GitHub For Beginners</a></li>
+            <li><a href="http://ericsink.com/vcbe/html/index.html">Version Control by Example</a></li>            
+            <li><a href="http://boxysystems.com/index.php/5-fundamental-differences-between-git-svn/">5 Fundamental differences between GIT & SVN</a></li>
+            <li><a href="http://biz30.timedoctor.com/git-mecurial-and-cvs-comparison-of-svn-software/"></a>SVN, Git, Mercurial – Comparison of Version Control Software</li>
+            <li><a href="https://help.github.com/articles/good-resources-for-learning-git-and-github/">Good Resources for Learning Git and GitHub</a></li>    
+          </ul>
+        </section>  
       </div>
     </div>
 
