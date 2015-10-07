@@ -1865,3 +1865,8 @@ table th[class*="col-"] {
   border-top: 1px solid #999;
   padding: 0;
 }
+.map {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
