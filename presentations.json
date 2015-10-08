@@ -1,7 +1,7 @@
 {
   "presentations" : {
-    "2015-10-08-wba-kickoff/index.html" : {
-      "title" : "WBA1 Kickoff",
+    "2015-10-08-intro-cn/index.html" : {
+      "title" : "WBA1 Intro",
       "authors" : [
         "Christian Noss"
       ]
@@ -12,10 +12,22 @@
         "Christian Noss"
       ]
     },
-    "2015-25-09-style-development/index.html" : {
-      "title" : "Test of new styles",
+    "2015-10-08-opening-keynote" : {
+      "title" : "WBA1 Opening",
       "authors" : [
-        "Christian Poplawski"
+        "Christian Noss, Jan Kus"
+      ]
+    },
+    "2015-10-08-git-basics" : {
+      "title" : "GIT Basics",
+      "authors" : [
+        "Jan Kus"
+      ]
+    },
+    "2015-10-08-git-basics-hands-on" : {
+      "title" : "GIT Basics Hands On",
+      "authors" : [
+        "Jan Kus"
       ]
     }
   }

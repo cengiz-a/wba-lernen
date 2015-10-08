@@ -2,915 +2,203 @@
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
 "creatorBuild": "19051",
 "files": {
-	"\/2014-10-09-git-basics-hands-on\/index.html": {
+	"\/2015-10-08-git-basics-hands-on\/images\/git-clone.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 35930,
+		"inputAbbreviatedPath": "\/2015-10-08-git-basics-hands-on\/images\/git-clone.png",
+		"outputAbbreviatedPath": "\/2015-10-08-git-basics-hands-on\/images\/git-clone.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/2015-10-08-git-basics-hands-on\/images\/git-config.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 41432,
+		"inputAbbreviatedPath": "\/2015-10-08-git-basics-hands-on\/images\/git-config.png",
+		"outputAbbreviatedPath": "\/2015-10-08-git-basics-hands-on\/images\/git-config.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/2015-10-08-git-basics-hands-on\/images\/git-init.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 24144,
+		"inputAbbreviatedPath": "\/2015-10-08-git-basics-hands-on\/images\/git-init.png",
+		"outputAbbreviatedPath": "\/2015-10-08-git-basics-hands-on\/images\/git-init.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/2015-10-08-git-basics-hands-on\/images\/git-pull.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 58058,
+		"inputAbbreviatedPath": "\/2015-10-08-git-basics-hands-on\/images\/git-pull.png",
+		"outputAbbreviatedPath": "\/2015-10-08-git-basics-hands-on\/images\/git-pull.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/2015-10-08-git-basics-hands-on\/images\/git-push-1.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 86575,
+		"inputAbbreviatedPath": "\/2015-10-08-git-basics-hands-on\/images\/git-push-1.png",
+		"outputAbbreviatedPath": "\/2015-10-08-git-basics-hands-on\/images\/git-push-1.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/2015-10-08-git-basics-hands-on\/images\/git-push.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 74345,
+		"inputAbbreviatedPath": "\/2015-10-08-git-basics-hands-on\/images\/git-push.png",
+		"outputAbbreviatedPath": "\/2015-10-08-git-basics-hands-on\/images\/git-push.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/2015-10-08-git-basics-hands-on\/images\/git-status.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 53633,
+		"inputAbbreviatedPath": "\/2015-10-08-git-basics-hands-on\/images\/git-status.png",
+		"outputAbbreviatedPath": "\/2015-10-08-git-basics-hands-on\/images\/git-status.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/2015-10-08-git-basics-hands-on\/images\/github-new.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 123339,
+		"inputAbbreviatedPath": "\/2015-10-08-git-basics-hands-on\/images\/github-new.png",
+		"outputAbbreviatedPath": "\/2015-10-08-git-basics-hands-on\/images\/github-new.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/2015-10-08-git-basics-hands-on\/images\/github.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 177495,
+		"inputAbbreviatedPath": "\/2015-10-08-git-basics-hands-on\/images\/github.png",
+		"outputAbbreviatedPath": "\/2015-10-08-git-basics-hands-on\/images\/github.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/2015-10-08-git-basics-hands-on\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/2014-10-09-git-basics-hands-on\/index.html",
+		"inputAbbreviatedPath": "\/2015-10-08-git-basics-hands-on\/index.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/2014-10-09-git-basics\/images\/commit-messages.png": {
+	"\/2015-10-08-git-basics\/images\/commit-messages.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 155144,
-		"inputAbbreviatedPath": "\/2014-10-09-git-basics\/images\/commit-messages.png",
-		"outputAbbreviatedPath": "\/2014-10-09-git-basics\/images\/commit-messages.png",
+		"inputAbbreviatedPath": "\/2015-10-08-git-basics\/images\/commit-messages.png",
+		"outputAbbreviatedPath": "\/2015-10-08-git-basics\/images\/commit-messages.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/2014-10-09-git-basics\/images\/git-command.png": {
+	"\/2015-10-08-git-basics\/images\/git-command.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 144204,
-		"inputAbbreviatedPath": "\/2014-10-09-git-basics\/images\/git-command.png",
-		"outputAbbreviatedPath": "\/2014-10-09-git-basics\/images\/git-command.png",
+		"inputAbbreviatedPath": "\/2015-10-08-git-basics\/images\/git-command.png",
+		"outputAbbreviatedPath": "\/2015-10-08-git-basics\/images\/git-command.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/2014-10-09-git-basics\/images\/gitflow.png": {
+	"\/2015-10-08-git-basics\/images\/gitflow.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 64422,
-		"inputAbbreviatedPath": "\/2014-10-09-git-basics\/images\/gitflow.png",
-		"outputAbbreviatedPath": "\/2014-10-09-git-basics\/images\/gitflow.png",
+		"inputAbbreviatedPath": "\/2015-10-08-git-basics\/images\/gitflow.png",
+		"outputAbbreviatedPath": "\/2015-10-08-git-basics\/images\/gitflow.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/2014-10-09-git-basics\/images\/github-octocat_yes-we-code.jpg": {
+	"\/2015-10-08-git-basics\/images\/github-octocat_yes-we-code.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 107276,
-		"inputAbbreviatedPath": "\/2014-10-09-git-basics\/images\/github-octocat_yes-we-code.jpg",
-		"outputAbbreviatedPath": "\/2014-10-09-git-basics\/images\/github-octocat_yes-we-code.jpg",
+		"inputAbbreviatedPath": "\/2015-10-08-git-basics\/images\/github-octocat_yes-we-code.jpg",
+		"outputAbbreviatedPath": "\/2015-10-08-git-basics\/images\/github-octocat_yes-we-code.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/2014-10-09-git-basics\/images\/github.jpg": {
+	"\/2015-10-08-git-basics\/images\/github.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 28575,
-		"inputAbbreviatedPath": "\/2014-10-09-git-basics\/images\/github.jpg",
-		"outputAbbreviatedPath": "\/2014-10-09-git-basics\/images\/github.jpg",
+		"inputAbbreviatedPath": "\/2015-10-08-git-basics\/images\/github.jpg",
+		"outputAbbreviatedPath": "\/2015-10-08-git-basics\/images\/github.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/2014-10-09-git-basics\/images\/version-control.png": {
+	"\/2015-10-08-git-basics\/images\/version-control.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 12523,
-		"inputAbbreviatedPath": "\/2014-10-09-git-basics\/images\/version-control.png",
-		"outputAbbreviatedPath": "\/2014-10-09-git-basics\/images\/version-control.png",
+		"inputAbbreviatedPath": "\/2015-10-08-git-basics\/images\/version-control.png",
+		"outputAbbreviatedPath": "\/2015-10-08-git-basics\/images\/version-control.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/2014-10-09-git-basics\/index.html": {
+	"\/2015-10-08-git-basics\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/2014-10-09-git-basics\/index.html",
+		"inputAbbreviatedPath": "\/2015-10-08-git-basics\/index.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/2014-10-09-html-advanced\/basic_table.html": {
+	"\/2015-10-08-intro-cn\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/2014-10-09-html-advanced\/basic_table.html",
+		"inputAbbreviatedPath": "\/2015-10-08-intro-cn\/index.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/2014-10-09-html-advanced\/form.html": {
+	"\/2015-10-08-opening-keynote\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/2014-10-09-html-advanced\/form.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/2014-10-09-html-advanced\/iframe.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/2014-10-09-html-advanced\/iframe.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/2014-10-09-html-advanced\/images\/formular.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 6156,
-		"inputAbbreviatedPath": "\/2014-10-09-html-advanced\/images\/formular.png",
-		"outputAbbreviatedPath": "\/2014-10-09-html-advanced\/images\/formular.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-09-html-advanced\/index.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/2014-10-09-html-advanced\/index.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/2014-10-09-html-advanced\/media.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/2014-10-09-html-advanced\/media.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/2014-10-09-html-advanced\/rezept-uebung.advanced.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/2014-10-09-html-advanced\/rezept-uebung.advanced.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/2014-10-09-html-advanced\/rezept-uebung.advanced.loesung.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/2014-10-09-html-advanced\/rezept-uebung.advanced.loesung.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/2014-10-09-html-basics\/index.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/2014-10-09-html-basics\/index.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/2014-10-09-html-basics\/initial.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/2014-10-09-html-basics\/initial.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/2014-10-09-html-basics\/lists.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/2014-10-09-html-basics\/lists.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/2014-10-09-html-basics\/rezept-basic.loesung.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/2014-10-09-html-basics\/rezept-basic.loesung.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/2014-10-09-html-basics\/rezept-uebung.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/2014-10-09-html-basics\/rezept-uebung.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/2014-10-09-html-basics\/structure.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/2014-10-09-html-basics\/structure.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/2014-10-09-html-basics\/text_markup.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/2014-10-09-html-basics\/text_markup.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/2014-10-09-html-basics\/text_structure.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/2014-10-09-html-basics\/text_structure.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/2014-10-09-opening-keynote\/index.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/2014-10-09-opening-keynote\/index.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/2014-10-09-web-basics\/index.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/2014-10-09-web-basics\/index.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/2014-10-16-css-advanced\/images\/background.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 698528,
-		"inputAbbreviatedPath": "\/2014-10-16-css-advanced\/images\/background.jpg",
-		"outputAbbreviatedPath": "\/2014-10-16-css-advanced\/images\/background.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-16-css-advanced\/images\/block_absolute.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 2319,
-		"inputAbbreviatedPath": "\/2014-10-16-css-advanced\/images\/block_absolute.png",
-		"outputAbbreviatedPath": "\/2014-10-16-css-advanced\/images\/block_absolute.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-16-css-advanced\/images\/block_overlap.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1708,
-		"inputAbbreviatedPath": "\/2014-10-16-css-advanced\/images\/block_overlap.png",
-		"outputAbbreviatedPath": "\/2014-10-16-css-advanced\/images\/block_overlap.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-16-css-advanced\/images\/block_relative.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 2588,
-		"inputAbbreviatedPath": "\/2014-10-16-css-advanced\/images\/block_relative.png",
-		"outputAbbreviatedPath": "\/2014-10-16-css-advanced\/images\/block_relative.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-16-css-advanced\/images\/block_static.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1910,
-		"inputAbbreviatedPath": "\/2014-10-16-css-advanced\/images\/block_static.png",
-		"outputAbbreviatedPath": "\/2014-10-16-css-advanced\/images\/block_static.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-16-css-advanced\/images\/first_child.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 292896,
-		"inputAbbreviatedPath": "\/2014-10-16-css-advanced\/images\/first_child.jpg",
-		"outputAbbreviatedPath": "\/2014-10-16-css-advanced\/images\/first_child.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-16-css-advanced\/images\/last_child.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 296842,
-		"inputAbbreviatedPath": "\/2014-10-16-css-advanced\/images\/last_child.jpg",
-		"outputAbbreviatedPath": "\/2014-10-16-css-advanced\/images\/last_child.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-16-css-advanced\/images\/nth_child.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 465792,
-		"inputAbbreviatedPath": "\/2014-10-16-css-advanced\/images\/nth_child.jpg",
-		"outputAbbreviatedPath": "\/2014-10-16-css-advanced\/images\/nth_child.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-16-css-advanced\/index.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/2014-10-16-css-advanced\/index.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/2014-10-16-css-basics\/images\/_archiv\/aufbau-uri.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 26738,
-		"inputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/_archiv\/aufbau-uri.png",
-		"outputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/_archiv\/aufbau-uri.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-16-css-basics\/images\/_archiv\/bill_gates.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 151527,
-		"inputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/_archiv\/bill_gates.jpg",
-		"outputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/_archiv\/bill_gates.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-16-css-basics\/images\/_archiv\/buecherrad_ramelli.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 93057,
-		"inputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/_archiv\/buecherrad_ramelli.jpg",
-		"outputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/_archiv\/buecherrad_ramelli.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-16-css-basics\/images\/_archiv\/cache.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 14127,
-		"inputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/_archiv\/cache.png",
-		"outputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/_archiv\/cache.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-16-css-basics\/images\/_archiv\/client-server-proxy-cache.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 39147,
-		"inputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/_archiv\/client-server-proxy-cache.png",
-		"outputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/_archiv\/client-server-proxy-cache.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-16-css-basics\/images\/_archiv\/client-server-proxy.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 38166,
-		"inputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/_archiv\/client-server-proxy.png",
-		"outputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/_archiv\/client-server-proxy.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-16-css-basics\/images\/_archiv\/client-server.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 60007,
-		"inputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/_archiv\/client-server.png",
-		"outputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/_archiv\/client-server.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-16-css-basics\/images\/_archiv\/erste_website.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 143264,
-		"inputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/_archiv\/erste_website.png",
-		"outputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/_archiv\/erste_website.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-16-css-basics\/images\/_archiv\/online-hilfe-system.jpeg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 77590,
-		"inputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/_archiv\/online-hilfe-system.jpeg",
-		"outputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/_archiv\/online-hilfe-system.jpeg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-16-css-basics\/images\/_archiv\/roussel_lesemaschine.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 24271,
-		"inputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/_archiv\/roussel_lesemaschine.jpg",
-		"outputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/_archiv\/roussel_lesemaschine.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-16-css-basics\/images\/_archiv\/TimBernersLee.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 305101,
-		"inputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/_archiv\/TimBernersLee.jpg",
-		"outputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/_archiv\/TimBernersLee.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-16-css-basics\/images\/boxmodell-detail.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 9687,
-		"inputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/boxmodell-detail.png",
-		"outputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/boxmodell-detail.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-16-css-basics\/images\/boxmodell_border_box.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 86605,
-		"inputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/boxmodell_border_box.png",
-		"outputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/boxmodell_border_box.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-16-css-basics\/images\/boxmodell_content_box.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 86763,
-		"inputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/boxmodell_content_box.png",
-		"outputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/boxmodell_content_box.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-16-css-basics\/images\/color-circle.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 127979,
-		"inputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/color-circle.png",
-		"outputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/color-circle.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-16-css-basics\/images\/css2-farben.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 15675,
-		"inputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/css2-farben.png",
-		"outputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/css2-farben.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-16-css-basics\/images\/css3-logo.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 11954,
-		"inputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/css3-logo.jpg",
-		"outputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/css3-logo.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-16-css-basics\/images\/csszengarden_1.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 790518,
-		"inputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/csszengarden_1.jpg",
-		"outputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/csszengarden_1.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-16-css-basics\/images\/csszengarden_2.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 636830,
-		"inputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/csszengarden_2.jpg",
-		"outputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/csszengarden_2.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-16-css-basics\/images\/csszengarden_3.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 485114,
-		"inputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/csszengarden_3.jpg",
-		"outputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/csszengarden_3.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-16-css-basics\/images\/csszengarden_4.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1.06008e+06,
-		"inputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/csszengarden_4.jpg",
-		"outputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/csszengarden_4.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-16-css-basics\/images\/csszengarden_5.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 733437,
-		"inputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/csszengarden_5.jpg",
-		"outputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/csszengarden_5.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-16-css-basics\/images\/hsl_cylinder.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 292964,
-		"inputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/hsl_cylinder.png",
-		"outputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/hsl_cylinder.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-16-css-basics\/images\/rgb_cube.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 269370,
-		"inputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/rgb_cube.png",
-		"outputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/rgb_cube.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-16-css-basics\/images\/tranquil-cascading-waterfall.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 183536,
-		"inputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/tranquil-cascading-waterfall.jpg",
-		"outputAbbreviatedPath": "\/2014-10-16-css-basics\/images\/tranquil-cascading-waterfall.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-16-css-basics\/index.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/2014-10-16-css-basics\/index.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/2014-10-16-css-uebung\/css\/loesung.css": {
-		"fileType": 16,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/2014-10-16-css-uebung\/css\/loesung.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/2014-10-16-css-uebung\/css\/loesung_advanced.css": {
-		"fileType": 16,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/2014-10-16-css-uebung\/css\/loesung_advanced.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/2014-10-16-css-uebung\/css\/style.css": {
-		"fileType": 16,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/2014-10-16-css-uebung\/css\/style.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/2014-10-16-css-uebung\/images\/campus_gummersabach.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 98324,
-		"inputAbbreviatedPath": "\/2014-10-16-css-uebung\/images\/campus_gummersabach.jpg",
-		"outputAbbreviatedPath": "\/2014-10-16-css-uebung\/images\/campus_gummersabach.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-16-css-uebung\/images\/gluehbirne.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 21029,
-		"inputAbbreviatedPath": "\/2014-10-16-css-uebung\/images\/gluehbirne.jpg",
-		"outputAbbreviatedPath": "\/2014-10-16-css-uebung\/images\/gluehbirne.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-16-css-uebung\/images\/hintergrund.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 200252,
-		"inputAbbreviatedPath": "\/2014-10-16-css-uebung\/images\/hintergrund.jpg",
-		"outputAbbreviatedPath": "\/2014-10-16-css-uebung\/images\/hintergrund.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-16-css-uebung\/images\/objektiv_einer_fotokamera.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 18828,
-		"inputAbbreviatedPath": "\/2014-10-16-css-uebung\/images\/objektiv_einer_fotokamera.jpg",
-		"outputAbbreviatedPath": "\/2014-10-16-css-uebung\/images\/objektiv_einer_fotokamera.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-16-css-uebung\/images\/offener_karton.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 21061,
-		"inputAbbreviatedPath": "\/2014-10-16-css-uebung\/images\/offener_karton.jpg",
-		"outputAbbreviatedPath": "\/2014-10-16-css-uebung\/images\/offener_karton.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-16-css-uebung\/images\/schlagzeug.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 23155,
-		"inputAbbreviatedPath": "\/2014-10-16-css-uebung\/images\/schlagzeug.jpg",
-		"outputAbbreviatedPath": "\/2014-10-16-css-uebung\/images\/schlagzeug.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-16-css-uebung\/images\/schlagzeuger_mit_schlagzeug.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 39555,
-		"inputAbbreviatedPath": "\/2014-10-16-css-uebung\/images\/schlagzeuger_mit_schlagzeug.jpg",
-		"outputAbbreviatedPath": "\/2014-10-16-css-uebung\/images\/schlagzeuger_mit_schlagzeug.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-16-css-uebung\/images\/teaser.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 34632,
-		"inputAbbreviatedPath": "\/2014-10-16-css-uebung\/images\/teaser.jpg",
-		"outputAbbreviatedPath": "\/2014-10-16-css-uebung\/images\/teaser.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-16-css-uebung\/index.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/2014-10-16-css-uebung\/index.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/2014-10-16-css-uebung\/screenshot.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 340536,
-		"inputAbbreviatedPath": "\/2014-10-16-css-uebung\/screenshot.png",
-		"outputAbbreviatedPath": "\/2014-10-16-css-uebung\/screenshot.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-16-git-advanced\/index.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/2014-10-16-git-advanced\/index.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/2014-10-23-javascript-advanced-uebung\/images\/check.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 870,
-		"inputAbbreviatedPath": "\/2014-10-23-javascript-advanced-uebung\/images\/check.png",
-		"outputAbbreviatedPath": "\/2014-10-23-javascript-advanced-uebung\/images\/check.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-23-javascript-advanced-uebung\/index.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/2014-10-23-javascript-advanced-uebung\/index.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/2014-10-23-javascript-advanced-uebung\/material\/formular.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/2014-10-23-javascript-advanced-uebung\/material\/formular.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/2014-10-23-javascript-advanced-uebung\/material\/js\/validate.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/2014-10-23-javascript-advanced-uebung\/material\/js\/validate.js",
-		"outputAbbreviatedPath": "\/2014-10-23-javascript-advanced-uebung\/material\/js\/min\/validate-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/2014-10-23-javascript-advanced-uebung\/material\/js\/validate_loesung.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/2014-10-23-javascript-advanced-uebung\/material\/js\/validate_loesung.js",
-		"outputAbbreviatedPath": "\/2014-10-23-javascript-advanced-uebung\/material\/js\/min\/validate_loesung-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/2014-10-23-javascript-advanced\/index.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/2014-10-23-javascript-advanced\/index.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/2014-10-23-javascript-basics\/index.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/2014-10-23-javascript-basics\/index.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/2014-10-23-javascript-basics\/operatoren.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 77622,
-		"inputAbbreviatedPath": "\/2014-10-23-javascript-basics\/operatoren.png",
-		"outputAbbreviatedPath": "\/2014-10-23-javascript-basics\/operatoren.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-23-javascript-frameworks-jquery\/images\/jquery_logo.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 36489,
-		"inputAbbreviatedPath": "\/2014-10-23-javascript-frameworks-jquery\/images\/jquery_logo.jpg",
-		"outputAbbreviatedPath": "\/2014-10-23-javascript-frameworks-jquery\/images\/jquery_logo.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-23-javascript-frameworks-jquery\/images\/jquery_logo.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 7942,
-		"inputAbbreviatedPath": "\/2014-10-23-javascript-frameworks-jquery\/images\/jquery_logo.png",
-		"outputAbbreviatedPath": "\/2014-10-23-javascript-frameworks-jquery\/images\/jquery_logo.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-23-javascript-frameworks-jquery\/index.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/2014-10-23-javascript-frameworks-jquery\/index.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/2014-10-23-jquery-uebung\/images\/check.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 870,
-		"inputAbbreviatedPath": "\/2014-10-23-jquery-uebung\/images\/check.png",
-		"outputAbbreviatedPath": "\/2014-10-23-jquery-uebung\/images\/check.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-23-jquery-uebung\/index.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/2014-10-23-jquery-uebung\/index.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/2014-10-23-jquery-uebung\/material\/formular.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/2014-10-23-jquery-uebung\/material\/formular.html",
+		"inputAbbreviatedPath": "\/2015-10-08-opening-keynote\/index.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -955,6 +243,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/assets\/css\/overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/css\/overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/assets\/css\/style.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -980,6 +277,39 @@
 		"initialSize": 12855,
 		"inputAbbreviatedPath": "\/assets\/images\/fh-logo.png",
 		"outputAbbreviatedPath": "\/assets\/images\/fh-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/mi-box-100.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7070,
+		"inputAbbreviatedPath": "\/assets\/images\/mi-box-100.png",
+		"outputAbbreviatedPath": "\/assets\/images\/mi-box-100.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/mi-box-150.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 12367,
+		"inputAbbreviatedPath": "\/assets\/images\/mi-box-150.png",
+		"outputAbbreviatedPath": "\/assets\/images\/mi-box-150.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/mi-box-470.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 45239,
+		"inputAbbreviatedPath": "\/assets\/images\/mi-box-470.png",
+		"outputAbbreviatedPath": "\/assets\/images\/mi-box-470.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1017,61 +347,790 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/coda_backups\/2015-10-07\/17_20_14_index.html": {
+	"\/coda_backups\/2015-10-08\/06_24_16_index.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/coda_backups\/2015-10-07\/17_20_14_index.html",
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_24_16_index.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/coda_backups\/2015-10-07\/17_20_18_index.html": {
+	"\/coda_backups\/2015-10-08\/06_26_46_index.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/coda_backups\/2015-10-07\/17_20_18_index.html",
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_26_46_index.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/coda_backups\/2015-10-07\/17_20_57_index.html": {
+	"\/coda_backups\/2015-10-08\/06_29_23_index.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/coda_backups\/2015-10-07\/17_20_57_index.html",
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_29_23_index.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/coda_backups\/2015-10-07\/17_21_20_index.html": {
-		"fileType": 8192,
+	"\/coda_backups\/2015-10-08\/06_29_52_overview.css": {
+		"fileType": 16,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/coda_backups\/2015-10-07\/17_21_20_index.html",
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_29_52_overview.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/coda_backups\/2015-10-07\/17_22_10_index.html": {
-		"fileType": 8192,
+	"\/coda_backups\/2015-10-08\/06_30_03_overview.css": {
+		"fileType": 16,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/coda_backups\/2015-10-07\/17_22_10_index.html",
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_30_03_overview.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/coda_backups\/2015-10-07\/17_22_12_index.html": {
-		"fileType": 8192,
+	"\/coda_backups\/2015-10-08\/06_31_10_overview.css": {
+		"fileType": 16,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/coda_backups\/2015-10-07\/17_22_12_index.html",
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_31_10_overview.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/coda_backups\/2015-10-07\/19_43_53_wba.less": {
+	"\/coda_backups\/2015-10-08\/06_32_06_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_32_06_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_32_22_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_32_22_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_34_01_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_34_01_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_34_28_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_34_28_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_35_11_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_35_11_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_36_26_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_36_26_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_36_53_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_36_53_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_37_09_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_37_09_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_37_38_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_37_38_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_37_43_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_37_43_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_38_24_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_38_24_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_38_53_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_38_53_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_39_00_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_39_00_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_39_09_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_39_09_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_39_14_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_39_14_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_39_19_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_39_19_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_39_29_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_39_29_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_39_37_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_39_37_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_39_46_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_39_46_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_40_23_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_40_23_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_40_42_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_40_42_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_41_13_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_41_13_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_42_00_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_42_00_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_42_07_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_42_07_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_42_27_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_42_27_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_42_49_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_42_49_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_43_23_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_43_23_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_43_34_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_43_34_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_44_03_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_44_03_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_44_18_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_44_18_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_44_37_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_44_37_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_44_48_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_44_48_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_45_07_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_45_07_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_45_48_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_45_48_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_46_03_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_46_03_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_46_33_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_46_33_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_46_43_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_46_43_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_46_53_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_46_53_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_47_03_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_47_03_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_47_14_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_47_14_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_47_17_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_47_17_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_47_29_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_47_29_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_47_57_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_47_57_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_48_39_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_48_39_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_48_56_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_48_56_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_49_17_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_49_17_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_50_13_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_50_13_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_50_26_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_50_26_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_51_06_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_51_06_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_51_24_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_51_24_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_52_10_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_52_10_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_52_28_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_52_28_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_52_45_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_52_45_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_52_59_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_52_59_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_53_51_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_53_51_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_54_04_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_54_04_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_54_18_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_54_18_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_54_27_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_54_27_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_54_32_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_54_32_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_54_45_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_54_45_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_55_03_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_55_03_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_55_14_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_55_14_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_55_17_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_55_17_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_55_49_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_55_49_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_56_11_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_56_11_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_56_17_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_56_17_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_56_28_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_56_28_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_56_52_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_56_52_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_58_31_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_58_31_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_58_46_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_58_46_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_59_05_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_59_05_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_59_26_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_59_26_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_59_33_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_59_33_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_59_44_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_59_44_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/06_59_51_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/06_59_51_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/07_00_27_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_00_27_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/07_00_40_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_00_40_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/07_00_45_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_00_45_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/07_00_54_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_00_54_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/07_01_16_overview.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_01_16_overview.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/07_01_50_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_01_50_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/07_02_36_wba.less": {
 		"allowInsecureImports": 0,
 		"createSourceMap": 0,
 		"disableJavascript": 0,
@@ -1079,8 +1138,8 @@
 		"ieCompatibility": 1,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/coda_backups\/2015-10-07\/19_43_53_wba.less",
-		"outputAbbreviatedPath": "\/coda_backups\/css\/19_43_53_wba.css",
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_02_36_wba.less",
+		"outputAbbreviatedPath": "\/coda_backups\/css\/07_02_36_wba.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -1090,6 +1149,324 @@
 		"strictImports": 0,
 		"strictMath": 0,
 		"strictUnits": 0
+		},
+	"\/coda_backups\/2015-10-08\/07_04_51_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_04_51_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/07_05_11_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_05_11_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/07_07_46_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_07_46_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/07_08_30_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_08_30_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/07_09_05_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_09_05_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/07_09_18_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_09_18_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/07_09_27_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_09_27_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/07_09_51_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_09_51_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/07_10_26_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_10_26_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/07_10_32_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_10_32_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/07_12_53_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_12_53_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/07_13_54_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_13_54_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/07_14_12_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_14_12_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/07_15_55_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_15_55_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/07_16_30_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_16_30_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/07_16_54_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_16_54_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/07_17_04_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_17_04_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/07_18_03_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_18_03_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/07_18_24_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_18_24_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/07_18_35_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_18_35_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/07_20_40_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_20_40_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/07_22_38_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_22_38_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/07_25_55_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_25_55_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/07_27_31_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_27_31_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/07_28_23_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_28_23_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/07_28_37_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_28_37_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/07_29_14_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_29_14_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/07_29_45_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_29_45_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-08\/07_50_18_presentations.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_50_18_presentations.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_50_18_presentations-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/coda_backups\/2015-10-08\/07_51_01_presentations.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_51_01_presentations.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_51_01_presentations-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/coda_backups\/2015-10-08\/07_51_51_presentations.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_51_51_presentations.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_51_51_presentations-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/coda_backups\/2015-10-08\/07_52_52_presentations.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_52_52_presentations.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_52_52_presentations-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/coda_backups\/2015-10-08\/07_53_02_presentations.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_53_02_presentations.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_53_02_presentations-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/coda_backups\/2015-10-08\/07_55_05_presentations.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_55_05_presentations.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_55_05_presentations-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
 		},
 	"\/impress-js-wba\/css\/impress-demo.css": {
 		"fileType": 16,

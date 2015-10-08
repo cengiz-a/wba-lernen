@@ -4,7 +4,7 @@
 //@import "../lib/bootstrap/less/print.less";
 //@import "../lib/bootstrap/less/scaffolding.less";
 //@import "../lib/bootstrap/less/type.less";
-//@import "../lib/bootstrap/less/code.less";
+@import "../lib/bootstrap/less/code.less";
 @import "../lib/bootstrap/less/grid.less";
 @import "../lib/bootstrap/less/tables.less";
 @import "../lib/bootstrap/less/glyphicons.less";
@@ -23,6 +23,9 @@
 }
 
 #cn {
+	
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
 	
 	#menue{
 		*{
@@ -94,7 +97,7 @@
 	
 	// Farben
 	.pink{ 	color: #dd1166; }
-	.gruen{ color: #77cc00; }
+	.gruen{ color: #9313c3; }
 	.blau{	color: #77aabb; }
 	.grau{	color: rgba(64,61,57, 0.6); }
 	.weiss{	color: #fff; }
@@ -336,4 +339,11 @@
 	position: absolute;
 	left: 0;
 	top: 0;
+}
+
+.box{
+	background: url("../../assets/images/mi-box-150.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 170px;
 }
