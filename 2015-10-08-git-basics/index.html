@@ -115,7 +115,7 @@
         <section>
           <h1>Web-basierte Anwendungen 1</h1>
           <h2>Git-Basics</h2>
-          <p>09. Oktober 2015</p>
+          <p>08. Oktober 2015</p>
 
           <p>Studiengang Medieninformatik an der Fachhochschule Köln<br>
           Campus Gummersbach</p>
@@ -126,12 +126,11 @@
         <section>
           <h2>Ziele dieses Abschnitts</h2>
           <ul>
-            <li class="fragment">Einführung in git</li>
+            <li class="fragment">Einführung in Git</li>
             <li class="fragment">Zu wissen was ein Versionierungssystem ist</li>
-            <li class="fragment">Den Unterschied zwischen git und Github verstehen</li>
-            <li class="fragment">Zu verstehen wie ein git Workflow funktioniert</li>
-            <li class="fragment">Warum überhaupt git für kollaborative Arbeit im Team wichtig ist (auch nicht nur code)</li>
-            <li class="fragment">Wie Entwicklungsumgebungen in Teams aussehen</li>
+            <li class="fragment">Den Unterschied zwischen Git und Github verstehen</li>
+            <li class="fragment">Zu verstehen wie ein Git Workflow funktioniert</li>
+            <li class="fragment">Was Commit Messages sind und wie man welche schreibt</li>
           </ul>
         </section>
         <section>        
@@ -139,11 +138,11 @@
           <ul>
           	<li class="fragment">Was ist ein Versionierungssystem</li>
           	<li class="fragment">Geschichte - Historie von Versionierungssystemen</li>
-            <li class="fragment">Entstehung von git</li>
-          	<li class="fragment">Unterschied zwischen git & Github</li>
+            <li class="fragment">Entstehung von Git</li>
+          	<li class="fragment">Unterschied zwischen Git & Github</li>
             <li class="fragment">Worschatz beim Umgang mit Versionierungssystemen</li>
-            <li class="fragment">git Grundlagen & Basisbefehle</li>
-            <li class="fragment">Der einfachste git Workflow</li>
+            <li class="fragment">Git Grundlagen & Basisbefehle</li>
+            <li class="fragment">Der einfachste Git Workflow</li>
           </ul>
     		</section>        
         <section>
@@ -170,7 +169,7 @@
             Wer kennt github?
           </blockquote>
           <p>
-            <img src="images/github.jpg" alt="Github Artefact" style="width:100%">
+            <img src="images/github.png" alt="Github Artefact" style="width:100%">
           </p>
         </section>
         <section>
@@ -182,60 +181,71 @@
             <img src="images/gitflow.png" alt="Github Artefact" style="width:100%">
           </p>
         </section>
-        <section data-state="fullscreenImage" style="background-image: url(images/TimBernersLee.jpg)">
+        <section data-state="fullscreenImage" style="background-image: url(images/gitflow.png)">
           <p class="bu fragment">
-            Was ist ein Versionierungssystem?
-          </p>
-        </section>
-        <section>
-          <h2>Versionierungssystem</h2>
-          <blockquote>
-            The Revision Control System (RCS) is a software <em>implementation of revision control</em> that automates the storing, retrieval, logging, identification, and merging of revisions. RCS is useful for text that is revised frequently, for example programs, documentation, procedural graphics, papers, and form letters. RCS is also capable of handling binary files, though with reduced efficiency. Revisions are stored with the aid of the diff utility.
-          </blockquote>
-          <p>
-            TODO Abgrenzung zu SCM - Source Controll Management (System)
-          </p>
-          <p>
-            <small>Quelle: https://en.wikipedia.org/wiki/Revision_Control_System, Stand: 04.10.2015</small>
+            Was ist Versionierung und ein Versionierungssystem?
           </p>
         </section>
         <section>
           <h2>Versionierung</h2>
           <blockquote>
-            A component of software configuration management, version control, also known as revision control or source control,[1]:2 is the management of changes to documents, computer programs, large web sites, and other collections of information. Changes are usually identified by a number or letter code, termed the "revision number," "revision level," or simply "revision."
+            [...] is the management of changes to documents, computer programs, large web sites, and other collections of information. Changes are usually identified by a number or letter code, termed the "revision number," "revision level," or simply "revision."
           </blockquote>
+          <p>Ein Beispiel für Versionierung ist z.B.: Time Machine auf dem Mac oder _________</p>
           <p>
             <small>Quelle: https://en.wikipedia.org/wiki/Version_control, Stand: 04.10.2015</small>
           </p>
         </section>
-        <section data-state="fullscreenImage" style="background-image: url(images/TimBernersLee.jpg)">
+        <section>
+          <h2>Versionierungssystem (VCS)</h2>
+          <blockquote>
+            A version control system is a piece of software that helps the developers on a software team work together and also archives a complete history of their work.
+          </blockquote>
+          <ol>
+            <li>We want people to be able to work simultaneously, not serially</li>
+            <li>When people are working at the same time, we want their changes to not conflict with each other</li>
+            <li>We want to archive every version of everything that has ever existed — ever. And who did it. And when. And why.</li>
+          </ol>
+          <p>
+            <small>Quelle: Version Control by Example, Eric Sink, Stand: 04.10.2015</small>
+          </p>          
+        </section>        
+        <section data-state="fullscreenImage" style="background-image: url(images/evolution.png)">
           <p class="bu fragment">
-            Kleiner Rückbilck in die Geschichte
+            Evolution von Versionierungssystemen
           </p>
         </section>        
         <section>
-          <h2>Geschichte - Historie von Versionierungssystemen</h2>
+          <h2>Evolution von Versionierungssystemen</h2>
+          <blockquote>
+            Wie sich Versionierungssysteme mit der Zeit verändert haben
+          </blockquote>          
           <ul>
-            <li class="fragment">todo...</li>
+            <li class="fragment"><strong>Local VCS:</strong> In first generation tools, concurrent development was handled solely with locks. Only one person could be working on a file at a time. E.g.: <code>RCS</code></li>
+            <li class="fragment"><strong>Centrelized VCS:</strong> The second generation tools are a fair bit more permissive about simultaneous modifications, with one notable restriction. Users must merge the current revisions into their work before they are allowed to commit. E.g.: <code>Subversion</code></li>
+            <li class="fragment"><strong>Distributed VCS:</strong> The third generation tools allow merge and commit to be separated. E.g.: <code>git</code></li>
           </ul>
+          <p>
+            <small>Quelle: Version Control by Example, Eric Sink, Stand: 04.10.2015</small>
+          </p>             
         </section>
         <section>
           <h2>Entstehung von git</h2>
           <ul>
-            <li class="fragment">Git wurde 2005 von Linus Torvalds initieert nachdem Bitkeeper (bis dahin das genutzte SCM von der Linux Community) keine gratis Version mehr angeboten hat</li>
-            <li class="fragment">Linus Torvalds wollte ein <em>dezentrales</em> und <em>performantes</em> Versionierungs Software - seiner Ansicht nach gab es zu dem Zeitpunkt keine die seine Wünsche erfüllte</li>
-            <li class="fragment"><strong>Dezentralität:</strong> Jeder Entwickler besitzt die Historie des ganzen Source Codes bei sich und verteilt nur seine Änderungen an andere Entwickler. Es gibt kein zentralen Server mehr der für den Ableich der einzelnen Entwicklungstände sorgt</li>
-            <li class="fragment"><strong>Performance:</strong> 2005 brauchten Versionierungssysteme ca. 30 Sekunden um einen Patch zu versionieren und damit alle Metadaten zu aktualisieren. Bei dem Linux Core Team hätte es 250 solcher Aktionen zum gleichen Zeitpunkt gegeben - somit skalierten die Versionierungssysteme nicht</li>
+            <li class="fragment">Git wurde 2005 von <strong>Linus Torvalds</strong> initieert nachdem Bitkeeper (bis dahin das genutzte SCM von der Linux Community) kommerzialisiert wurde und keine kostenlosen Zugang mehr angeboten hat</li>
+            <li class="fragment">Linus Torvalds wollte ein <em>dezentrales</em> und <em>performantes</em> Versionierungs Software - seiner Ansicht nach gab es zu dem Zeitpunkt keine die seine Wünsche erfüllte
+              <ul>
+                <li class="fragment"><strong>Dezentralität:</strong> Jeder Entwickler besitzt die Historie des ganzen Source Codes bei sich und verteilt nur seine Änderungen an andere Entwickler. Es gibt kein zentralen Server mehr der für den Ableich der einzelnen Entwicklungstände sorgt</li>
+                <li class="fragment"><strong>Performance:</strong> 2005 brauchten Versionierungssysteme ca. 30 Sekunden um einen Patch zu versionieren und damit alle Metadaten zu aktualisieren. Bei dem Linux Core Team hätte es 250 solcher Aktionen zum gleichen Zeitpunkt gegeben - somit skalierten die ehmals auf dem Markt verfügbaren Versionierungssysteme nicht</li>
+              </ul>
+            </li>
           </ul>         
         </section>
         <section>
           <h2>Git</h2>
           <blockquote>
-            Git is a distributed revision control system with an emphasis on <em>speed</em>, <em>data integrity</em> and <em>support for distributed, non-linear workflows</em>.
+            Git ist ein verteiltes Versions Kontrollsystem mit dem Hauptaugenmerkmal auf <em>Geschwindigkeit</em>, <em>Daten Integrität</em> und <em>der Unterstützung von verteilten und nicht-linearen Versionierungsvorgängen</em>.
           </blockquote>
-          <p>
-            <small>Quelle: todo</small>
-          </p>
         </section>        
         <section>
           <h2>Git</h2>
@@ -243,17 +253,15 @@
             Charakteristiken von Git:
           </blockquote>
           <ul>
-            <li>Strong support for non-linear development</li>
-            <li>Distributed development</li>
+            <li>Speed
+            <li>Simple design
+            <li>Strong support for non-linear development (thousands of parallel branches)
+            <li>Fully distributed development
+            <li>Able to handle large projects like the Linux kernel efficiently (speed and data size)
             <li>Compatibility with existing systems/protocols</li>
-            <li>Efficient handling of large projects</li>
-            <li>Cryptographic authentication of history</li>
-            <li>Toolkit-based design</li>
-            <li>Pluggable merge strategies</li>
-            <li>Periodic explicit object packing</li>
           </ul>
           <p>
-            <small>Quelle: todo</small>
+            <small>Quelle: Pro Git, Scott Chacon & Ben Straub, Second Edition, 2015</small>
           </p>
         </section>
         <section>
@@ -282,23 +290,20 @@
         <section>
           <h2>Github</h2>
           <blockquote>
-            GitHub is a website where you can upload a copy of your Git repository. It is a Git repository hosting service, which offers all of the distributed revision control and source code management (SCM) functionality of Git as well as adding its own features. Unlike Git, which is strictly a command-line tool, GitHub provides a web-based graphical interface and desktop as well as mobile integration. It also provides access control and several collaboration features such as wikis, task management, and bug tracking and feature that can be helpful for projects. It allows you to collaborate with other people on a project. It does that by providing a centralized location to share the repository, a web-based interface to view it, and features like forking, pull requests distributed revision control, issues, and wikis.
-          </blockquote>
-          <p>
-            <small>Quelle: ...</small>
-          </p>          
+            GitHub is a website where you can upload a copy of your Git repository. It is a Git repository hosting web service, which offers all of the <strong>distributed revision control</strong> functionality of Git as well as adding its own features. Unlike Git, which is strictly a command-line tool, GitHub provides a <strong>web-based graphical interface</strong> and <strong>desktop as well as mobile integration</strong>. It also provides <strong>access control</strong> and several collaboration features such as <strong>wikis</strong>, <strong>task management</strong>, and <strong>bug tracking</strong> and feature that can be helpful for projects.
+          </blockquote>         
         </section> 
         <section>
           <h2>Unterschied zwischen Git und GitHub</h2>
+          <blockquote>
+            GitHub ist NICHT Git - GitHub benutzt Git
+          </blockquote>          
           <ul>
             <li><strong>Git: </strong>Git is ein dezentrales System zur Versionskontrolle</li>
             <li><strong>Github: </strong>Github ist eine Webseite die Gitfunktionalitäten zugänglich macht und erweitert</li>
           </ul>
-          <blockquote>
-            GitHub ist NICHT Git - GitHub benutzt Git
-          </blockquote>
           <p>
-            <small>Bitte merken</small>
+            <small>Bitte merken!</small>
           </p>          
         </section>
         <section>
@@ -308,6 +313,9 @@
             <li><strong>Repository:</strong> A directory or storage space where your projects can live. It can be local to a folder on your computer, or it can be a storage space on GitHub or another online host. You can keep code files, text files, image files, you name it, inside a repository.</li>
             <li><strong>Version Control:</strong> Basically, the purpose Git was designed to serve. When you have a Microsoft Word file, you either overwrite every saved file with a new save, or you save multiple versions. With Git, you don’t have to. It keeps “snapshots” of every point in time in the project’s history, so you can never lose or overwrite it.</li>
           </ul>
+          <p>
+            <small>Quelle: <a href="http://readwrite.com/2013/09/30/understanding-github-a-journey-for-beginners-part-1">GitHub For Beginners: Don't Get Scared, Get Started</a>, 07.10.2015</small>
+          </p>   
         </section>
         <section>
           <h2>Worschatz beim Umgang mit Versionierungssystemen (2/2)</h2>
@@ -315,6 +323,9 @@
             <li><strong>Commit:</strong> This is the command that gives Git its power. When you commit, you are taking a “snapshot” of your repository at that point in time, giving you a checkpoint to which you can reevaluate or restore your project to any previous state.</li>
             <li><strong>Branch:</strong> How do multiple people work on a project at the same time without Git getting them confused? Usually, they “branch off” of the main project with their own versions full of changes they themselves have made. After they’re done, it’s time to “merge” that branch back with the “master,” the main directory of the project.</li>
           </ul>
+          <p>
+            <small>Quelle: <a href="http://readwrite.com/2013/09/30/understanding-github-a-journey-for-beginners-part-1">GitHub For Beginners: Don't Get Scared, Get Started</a>, 07.10.2015</small>
+          </p>           
         </section>        
         <section>
           <h2>Git Basisbefehle (1/4)</h2>
@@ -351,8 +362,10 @@
         <section>
           <h2>Der einfachste git Workflow</h2>
           <ul>
-            <li><strong><code>git init</code></strong> oder <strong><code>git clone</code></strong>: Initieeren eines lokalen git-Repository oder das kopieren eines Remote-Repository in ein lokales Verzeichnis (z.B.: ein Github Repository)
-            <li><code>[Vornehmen von Änderungen am Code]</code></li>
+            <li><strong><code>git init</code></strong> oder <strong><code>git clone</code></strong>: Initieeren eines lokalen git-Repository oder das kopieren eines Remote-Repository in ein lokales Verzeichnis (z.B.: ein Github Repository)</li>
+          </ul>
+            <p style="margin-bottom: 40px; margin-left: 220px">[Änderungen am Code vornehmen]</p>
+          <ul>
             <li><strong><code>git add</code></strong>: das Bekanntmachen der Veränderungen oder neuen Dateien an git. Ein so genanntes Snapshot. Es ist noch nicht fester Bestandteil der Repository.
             <li><strong><code>git commit</code></strong>: Hinzufügen der Snapshots in die Repository.
             <li><strong><code>git push</code></strong> : Eine kopie der Repository an das Remote-Repository laden. Nur im Falle das ein existiert (wie z.B.: Github)
@@ -366,7 +379,7 @@
         <section>
           <h2>Git Commit und Messages</h2>
           <blockquote>
-            Wenn man im verteilten Team arbeitet, dann ist es sehr wichtig mit <em>aussagekräftigen</em> Commit Messages zu arbeiten. Ein unlesbares Beispiel
+            Wenn man im verteilten Team arbeitet, dann ist es sehr wichtig mit <em>aussagekräftigen</em> Commit Messages zu arbeiten. Ein unlesbares Beispiel:
           </blockquote>
           <p>
             <code>
@@ -379,7 +392,7 @@
         <section>
           <h2>Git Commit und Messages</h2>
           <blockquote>
-            Wenn man im verteilten Team arbeitet, dann ist es sehr wichtig mit <em>aussagekräftigen</em> Commit Messages zu arbeiten. Ein besseres Beispiel
+            Wenn man im verteilten Team arbeitet, dann ist es sehr wichtig mit <em>aussagekräftigen</em> Commit Messages zu arbeiten. Ein lesbares Beispiel:
           </blockquote>
           <p>
             <code>
@@ -395,13 +408,16 @@
         <section>
           <h2>Git Commit und Messages</h2>
           <blockquote>
-            The contributors to these repositories know that a well-crafted git commit message is the best way to communicate context about a change to fellow developers (and indeed to their future selves). A diff will tell you what changed, but only the commit message can properly tell you why.
+            The contributors to these repositories know that a well-crafted git commit message is the best way to communicate context about a change to fellow developers (and indeed to their future selves). <strong>A diff will tell you what changed, but only the commit message can properly tell you why</strong>.
           </blockquote>
           <ul>
-            <li>Markup syntax, wrap margins, grammar, capitalization, punctuation. Spell these things out, remove the guesswork, and make it all as simple as possible. The end result will be a remarkably consistent log that's not only a pleasure to read but that actually does get read on a regular basis.</li>
-            <li>Content. What kind of information should the body of the commit message (if any) contain? What should it not contain?</li>
-            <li>Metadata. How should issue tracking IDs, pull request numbers, etc. be referenced?</li>
+            <li><strong>Markup syntax, wrap margins, grammar, capitalization, punctuation:</strong> Spell these things out, remove the guesswork, and make it all as simple as possible. The end result will be a remarkably consistent log that's not only a pleasure to read but that actually does get read on a regular basis.</li>
+            <li><strong>Content:</strong> What kind of information should the body of the commit message (if any) contain? What should it not contain?</li>
+            <li><strong>Metadata:</strong> How should issue tracking IDs, pull request numbers, etc. be referenced?</li>
           </ul>
+          <p>
+            <small>Quelle: http://chris.beams.io/posts/git-commit/, 07.10.2015</small>
+          </p>   
         </section>  
         <section>
           <h2>Git Commit und Messages</h2>
