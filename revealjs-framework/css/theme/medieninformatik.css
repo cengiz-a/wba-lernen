@@ -420,3 +420,15 @@ body {
 
 .reveal pre code {
   padding: 0.2em 0.4em; }
+
+/*********************************************
+ * HELPER
+ *********************************************/
+
+._violett {
+    color: #9313c3 !important;
+}
+
+._pink {
+    color: #dd1166 !important;
+}
