@@ -1435,6 +1435,28 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1
 		},
+	"\/coda_backups\/2015-10-08\/07_52_52_presentations.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_52_52_presentations.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_52_52_presentations-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/coda_backups\/2015-10-08\/07_53_02_presentations.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_53_02_presentations.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/coda_backups\/2015-10-08\/07_53_02_presentations-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
 	"\/impress-js-wba\/css\/impress-demo.css": {
 		"fileType": 16,
 		"ignore": 0,
