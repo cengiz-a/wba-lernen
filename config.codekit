@@ -1114,6 +1114,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/images\/mi-box-470.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 45239,
+		"inputAbbreviatedPath": "\/assets\/images\/mi-box-470.png",
+		"outputAbbreviatedPath": "\/assets\/images\/mi-box-470.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/images\/screencast.png": {
 		"fileType": 32768,
 		"ignore": 0,
