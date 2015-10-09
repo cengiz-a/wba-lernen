@@ -1,0 +1,84 @@
+/*------------------------------------*\
+    #colors
+\*------------------------------------*/
+
+.green{		#77cc00; }
+.blue{		#4952e1; }
+.magenta{ #dd1166; }
+.purple{ 	#9313c3; }
+.black{ 	#231f20; }
+.gray{ 		#fbfbfb; }
+
+
+
+
+
+/*------------------------------------*\
+    #Resets
+\*------------------------------------*/
+
+ul, menu, dir{
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+	-webkit-margin-start: 0;
+	-webkit-margin-end: 0;
+	-webkit-padding-start: 0;
+}
+
+
+
+
+
+/*------------------------------------*\
+    #Typo
+\*------------------------------------*/
+
+h1,h2,h3,h4{
+	font-weight: 100;
+	font-size: 2rem;
+	line-height: 100%;
+}
+
+
+
+/*------------------------------------*\
+    #Layout
+\*------------------------------------*/
+
+body {
+	font-size: 100%;
+	line-height: 130%;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+} 
+
+
+body > *{
+	max-width: 400px;
+	margin: 0 1rem;
+}
+
+section, header, nav{
+	border-top: solid 1px #9313c3;
+	margin-bottom: 1rem;
+}
+
+
+
+/*------------------------------------*\
+    #Navigation
+\*------------------------------------*/
+
+#nav > li{
+	display: inline-block;
+	margin-right: 1px;
+	margin-bottom: 1px;
+}
+
+#nav > li a{
+	display: block;
+	padding: 0.5rem;
+	color: #fff;
+	background-color: #231f20;
+	text-decoration: none;
+}
