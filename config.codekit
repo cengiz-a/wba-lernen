@@ -389,39 +389,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/assets\/images\/fh-logo.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 12855,
-		"inputAbbreviatedPath": "\/assets\/images\/fh-logo.png",
-		"outputAbbreviatedPath": "\/assets\/images\/fh-logo.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/assets\/images\/mi-box-100.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 7070,
-		"inputAbbreviatedPath": "\/assets\/images\/mi-box-100.png",
-		"outputAbbreviatedPath": "\/assets\/images\/mi-box-100.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/assets\/images\/mi-box-150.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 12367,
-		"inputAbbreviatedPath": "\/assets\/images\/mi-box-150.png",
-		"outputAbbreviatedPath": "\/assets\/images\/mi-box-150.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/assets\/images\/mi-box-470.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1997,6 +1964,807 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/08_36_27_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_25_25_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_25_25_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_27_38_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_27_38_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_28_24_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_28_24_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_29_11_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_29_11_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_29_15_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_29_15_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_29_49_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_29_49_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_31_28_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_31_28_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_32_01_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_32_01_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_32_39_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_32_39_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_32_47_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_32_47_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_33_59_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_33_59_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_34_00_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_34_00_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_34_36_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_34_36_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_35_05_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_35_05_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_35_25_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_35_25_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_35_51_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_35_51_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_35_58_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_35_58_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_36_31_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_36_31_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_36_33_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_36_33_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_36_43_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_36_43_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_36_44_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_36_44_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_37_34_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_37_34_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_38_01_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_38_01_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_38_15_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_38_15_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_38_27_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_38_27_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_38_56_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_38_56_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_39_10_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_39_10_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_39_12_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_39_12_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_39_35_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_39_35_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_39_51_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_39_51_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_39_58_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_39_58_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_41_51_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_41_51_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_42_09_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_42_09_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_42_11_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_42_11_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_42_15_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_42_15_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_42_44_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_42_44_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_43_20_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_43_20_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_43_45_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_43_45_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_46_48_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_46_48_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_49_17_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_49_17_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_49_25_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_49_25_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_49_29_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_49_29_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_49_33_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_49_33_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_51_28_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_51_28_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_51_43_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_51_43_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_52_49_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_52_49_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_53_03_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_53_03_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_53_07_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_53_07_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_54_52_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_54_52_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_55_32_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_55_32_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_56_03_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_56_03_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_56_09_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_56_09_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_56_20_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_56_20_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_56_42_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_56_42_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_58_19_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_58_19_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_58_24_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_58_24_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_58_38_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_58_38_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/19_59_22_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/19_59_22_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/20_00_00_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/20_00_00_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/20_00_18_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/20_00_18_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/20_00_42_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/20_00_42_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/20_00_47_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/20_00_47_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/20_01_44_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/20_01_44_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/20_01_49_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/20_01_49_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/20_01_53_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/20_01_53_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/20_02_01_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/20_02_01_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/20_02_19_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/20_02_19_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/20_03_18_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/20_03_18_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/20_04_16_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/20_04_16_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/20_04_46_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/20_04_46_index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/20_05_08_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/20_05_08_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/20_05_46_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/20_05_46_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/20_06_49_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/20_06_49_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/20_06_57_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/20_06_57_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/20_07_11_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/20_07_11_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/20_07_24_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/20_07_24_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/20_07_54_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/20_07_54_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/20_08_58_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/20_08_58_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/20_09_20_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/20_09_20_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/20_11_08_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/20_11_08_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/20_12_23_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/20_12_23_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/20_12_52_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/20_12_52_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/20_13_20_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/20_13_20_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/20_15_34_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/20_15_34_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/20_16_06_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/20_16_06_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/20_16_26_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/20_16_26_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/20_16_38_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/20_16_38_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/20_17_20_mi-basis.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/20_17_20_mi-basis.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/coda_backups\/2015-10-09\/20_18_18_index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coda_backups\/2015-10-09\/20_18_18_index.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -4123,79 +4891,46 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/mi-onepager\/assets\/img\/showcase_01.jpg": {
-		"fileType": 16384,
+	"\/mi-onepager\/assets\/img\/fh-logo.png": {
+		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 91283,
-		"inputAbbreviatedPath": "\/mi-onepager\/assets\/img\/showcase_01.jpg",
-		"outputAbbreviatedPath": "\/mi-onepager\/assets\/img\/showcase_01.jpg",
+		"initialSize": 12855,
+		"inputAbbreviatedPath": "\/mi-onepager\/assets\/img\/fh-logo.png",
+		"outputAbbreviatedPath": "\/mi-onepager\/assets\/img\/fh-logo.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/mi-onepager\/assets\/img\/showcase_02.jpg": {
-		"fileType": 16384,
+	"\/mi-onepager\/assets\/img\/mi-box-100.png": {
+		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 73840,
-		"inputAbbreviatedPath": "\/mi-onepager\/assets\/img\/showcase_02.jpg",
-		"outputAbbreviatedPath": "\/mi-onepager\/assets\/img\/showcase_02.jpg",
+		"initialSize": 7070,
+		"inputAbbreviatedPath": "\/mi-onepager\/assets\/img\/mi-box-100.png",
+		"outputAbbreviatedPath": "\/mi-onepager\/assets\/img\/mi-box-100.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/mi-onepager\/assets\/img\/showcase_03.jpg": {
-		"fileType": 16384,
+	"\/mi-onepager\/assets\/img\/mi-box-150.png": {
+		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 61336,
-		"inputAbbreviatedPath": "\/mi-onepager\/assets\/img\/showcase_03.jpg",
-		"outputAbbreviatedPath": "\/mi-onepager\/assets\/img\/showcase_03.jpg",
+		"initialSize": 12367,
+		"inputAbbreviatedPath": "\/mi-onepager\/assets\/img\/mi-box-150.png",
+		"outputAbbreviatedPath": "\/mi-onepager\/assets\/img\/mi-box-150.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/mi-onepager\/assets\/img\/showcase_04.jpg": {
+	"\/mi-onepager\/assets\/img\/twitter_01.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 62851,
-		"inputAbbreviatedPath": "\/mi-onepager\/assets\/img\/showcase_04.jpg",
-		"outputAbbreviatedPath": "\/mi-onepager\/assets\/img\/showcase_04.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/mi-onepager\/assets\/img\/showcase_05.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 103639,
-		"inputAbbreviatedPath": "\/mi-onepager\/assets\/img\/showcase_05.jpg",
-		"outputAbbreviatedPath": "\/mi-onepager\/assets\/img\/showcase_05.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/mi-onepager\/assets\/img\/showcase_06.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 54192,
-		"inputAbbreviatedPath": "\/mi-onepager\/assets\/img\/showcase_06.jpg",
-		"outputAbbreviatedPath": "\/mi-onepager\/assets\/img\/showcase_06.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/mi-onepager\/assets\/img\/showcase_07.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 97076,
-		"inputAbbreviatedPath": "\/mi-onepager\/assets\/img\/showcase_07.jpg",
-		"outputAbbreviatedPath": "\/mi-onepager\/assets\/img\/showcase_07.jpg",
+		"initialSize": 18487,
+		"inputAbbreviatedPath": "\/mi-onepager\/assets\/img\/twitter_01.jpg",
+		"outputAbbreviatedPath": "\/mi-onepager\/assets\/img\/twitter_01.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -4316,6 +5051,94 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/mi-onepager\/images\/christiane_gruenloh.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 11917,
+		"inputAbbreviatedPath": "\/mi-onepager\/images\/christiane_gruenloh.jpg",
+		"outputAbbreviatedPath": "\/mi-onepager\/images\/christiane_gruenloh.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/mi-onepager\/images\/showcase_01.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 91283,
+		"inputAbbreviatedPath": "\/mi-onepager\/images\/showcase_01.jpg",
+		"outputAbbreviatedPath": "\/mi-onepager\/images\/showcase_01.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/mi-onepager\/images\/showcase_02.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 73840,
+		"inputAbbreviatedPath": "\/mi-onepager\/images\/showcase_02.jpg",
+		"outputAbbreviatedPath": "\/mi-onepager\/images\/showcase_02.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/mi-onepager\/images\/showcase_03.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 61336,
+		"inputAbbreviatedPath": "\/mi-onepager\/images\/showcase_03.jpg",
+		"outputAbbreviatedPath": "\/mi-onepager\/images\/showcase_03.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/mi-onepager\/images\/showcase_04.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 62851,
+		"inputAbbreviatedPath": "\/mi-onepager\/images\/showcase_04.jpg",
+		"outputAbbreviatedPath": "\/mi-onepager\/images\/showcase_04.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/mi-onepager\/images\/showcase_05.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 103639,
+		"inputAbbreviatedPath": "\/mi-onepager\/images\/showcase_05.jpg",
+		"outputAbbreviatedPath": "\/mi-onepager\/images\/showcase_05.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/mi-onepager\/images\/showcase_06.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 54192,
+		"inputAbbreviatedPath": "\/mi-onepager\/images\/showcase_06.jpg",
+		"outputAbbreviatedPath": "\/mi-onepager\/images\/showcase_06.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/mi-onepager\/images\/showcase_07.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 97076,
+		"inputAbbreviatedPath": "\/mi-onepager\/images\/showcase_07.jpg",
+		"outputAbbreviatedPath": "\/mi-onepager\/images\/showcase_07.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
 		},
 	"\/mi-onepager\/index.html": {
 		"fileType": 8192,

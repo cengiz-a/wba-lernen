@@ -17,7 +17,7 @@
     #Resets
 \*------------------------------------*/
 
-ul, menu, dir{
+ul, menu, dir, figure, blockquote, section footer{
 	-webkit-margin-before: 0;
 	-webkit-margin-after: 0;
 	-webkit-margin-start: 0;
@@ -37,7 +37,14 @@ h1,h2,h3,h4{
 	font-weight: 100;
 	font-size: 2rem;
 	line-height: 100%;
+	margin-bottom: 2rem;
 }
+
+p {
+	margin-bottom: 1rem;
+}
+
+
 
 
 
@@ -47,27 +54,59 @@ h1,h2,h3,h4{
 
 body {
 	font-size: 100%;
-	line-height: 130%;
+	line-height: 140%;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
+	background-color: rgba(240, 240, 240, 1);
 } 
 
 
-body > *{
+body > header, body > main, body > footer{
 	max-width: 400px;
-	margin: 0 1rem;
+	margin: 0 auto 20px;
+	padding: 20px;
+	position: relative;
+	background-color: #fff;
 }
 
-section, header, nav{
-	border-top: solid 1px #9313c3;
-	margin-bottom: 1rem;
+section{
+	padding-top: 2rem;
+	margin-bottom: 2rem;
 }
+
+section:not(:first-child){
+	border-top: solid 1px #dd1166;
+}
+
+
+
+
+
+/*------------------------------------*\
+    #Header
+\*------------------------------------*/
+
+.mi-logo{
+	position: absolute;
+	right: 20px;
+	top: 10px;
+}
+
+body > header h1{
+	font-size: 1rem;
+	text-align: right;
+	margin-bottom: 20px;
+}
+
+
+
 
 
 
 /*------------------------------------*\
     #Navigation
 \*------------------------------------*/
+
 
 #nav > li{
 	display: inline-block;
@@ -76,9 +115,57 @@ section, header, nav{
 }
 
 #nav > li a{
-	display: block;
-	padding: 0.5rem;
-	color: #fff;
-	background-color: #231f20;
+	color: #000;
+	font-weight: 600;
 	text-decoration: none;
+}
+
+
+
+
+
+/*------------------------------------*\
+    #Statements
+\*------------------------------------*/
+
+blockquote{
+	background: #4952e1;
+	color: #fff;
+	padding: 20px;
+	margin-bottom: 1rem;
+}
+
+
+blockquote:nth-child(odd) {
+    background: #9313c3;
+}
+
+blockquote footer{
+	text-align: right;
+}
+
+
+
+
+/*------------------------------------*\
+    #Articles
+\*------------------------------------*/
+
+article h1{
+	font-size: 1.2rem;
+	font-weight: 600;
+	margin-bottom: 1rem;
+}
+
+article figure img{
+	width: 100%;
+	height: auto;
+}
+
+article figure img:nth-child(n+2){
+	display: none;
+}
+
+article figure figcaption{
+	margin-bottom: 1rem;
 }
