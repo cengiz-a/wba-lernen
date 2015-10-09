@@ -57,6 +57,15 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/2014-10-09-opening-keynote\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/2014-10-09-opening-keynote\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/2015-10-08-git-basics-hands-on\/images\/git-clone.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -4114,6 +4123,83 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/mi-onepager\/assets\/img\/showcase_01.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 91283,
+		"inputAbbreviatedPath": "\/mi-onepager\/assets\/img\/showcase_01.jpg",
+		"outputAbbreviatedPath": "\/mi-onepager\/assets\/img\/showcase_01.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/mi-onepager\/assets\/img\/showcase_02.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 73840,
+		"inputAbbreviatedPath": "\/mi-onepager\/assets\/img\/showcase_02.jpg",
+		"outputAbbreviatedPath": "\/mi-onepager\/assets\/img\/showcase_02.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/mi-onepager\/assets\/img\/showcase_03.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 61336,
+		"inputAbbreviatedPath": "\/mi-onepager\/assets\/img\/showcase_03.jpg",
+		"outputAbbreviatedPath": "\/mi-onepager\/assets\/img\/showcase_03.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/mi-onepager\/assets\/img\/showcase_04.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 62851,
+		"inputAbbreviatedPath": "\/mi-onepager\/assets\/img\/showcase_04.jpg",
+		"outputAbbreviatedPath": "\/mi-onepager\/assets\/img\/showcase_04.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/mi-onepager\/assets\/img\/showcase_05.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 103639,
+		"inputAbbreviatedPath": "\/mi-onepager\/assets\/img\/showcase_05.jpg",
+		"outputAbbreviatedPath": "\/mi-onepager\/assets\/img\/showcase_05.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/mi-onepager\/assets\/img\/showcase_06.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 54192,
+		"inputAbbreviatedPath": "\/mi-onepager\/assets\/img\/showcase_06.jpg",
+		"outputAbbreviatedPath": "\/mi-onepager\/assets\/img\/showcase_06.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/mi-onepager\/assets\/img\/showcase_07.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 97076,
+		"inputAbbreviatedPath": "\/mi-onepager\/assets\/img\/showcase_07.jpg",
+		"outputAbbreviatedPath": "\/mi-onepager\/assets\/img\/showcase_07.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/mi-onepager\/assets\/lib\/normalize-3.0.2\/normalize.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -6112,6 +6198,78 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
+		},
+	"\/workshop-html-basics\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/workshop-html-basics\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/workshop-html-basics\/initial.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/workshop-html-basics\/initial.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/workshop-html-basics\/lists.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/workshop-html-basics\/lists.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/workshop-html-basics\/rezept-basic.loesung.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/workshop-html-basics\/rezept-basic.loesung.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/workshop-html-basics\/rezept-uebung.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/workshop-html-basics\/rezept-uebung.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/workshop-html-basics\/structure.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/workshop-html-basics\/structure.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/workshop-html-basics\/text_markup.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/workshop-html-basics\/text_markup.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/workshop-html-basics\/text_structure.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/workshop-html-basics\/text_structure.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/yyyy-mm-dd-lehreinheit\/images\/github-mac.png": {
 		"fileType": 32768,
