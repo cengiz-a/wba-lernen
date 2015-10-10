@@ -17,16 +17,6 @@
     #Resets
 \*------------------------------------*/
 
-ul, menu, dir, figure, blockquote, section footer{
-	-webkit-margin-before: 0;
-	-webkit-margin-after: 0;
-	-webkit-margin-start: 0;
-	-webkit-margin-end: 0;
-	-webkit-padding-start: 0;
-}
-
-
-
 
 
 /*------------------------------------*\
@@ -35,9 +25,9 @@ ul, menu, dir, figure, blockquote, section footer{
 
 h1,h2,h3,h4{
 	font-weight: 100;
-	font-size: 2rem;
-	line-height: 100%;
-	margin-bottom: 2rem;
+	font-size: 1.8rem;
+	line-height: 120%;
+	margin-bottom: 1.8rem;
 }
 
 p {
@@ -52,30 +42,32 @@ p {
     #Layout
 \*------------------------------------*/
 
-body {
-	font-size: 100%;
+*{
 	line-height: 140%;
 	font-family: 'Open Sans', sans-serif;
+}
+
+body {
+	font-size: 100%;
 	font-weight: 300;
 	background-color: rgba(240, 240, 240, 1);
 } 
 
-
 body > header, body > main, body > footer{
-	max-width: 400px;
+	max-width: 80%;
 	margin: 0 auto 20px;
 	padding: 20px;
 	position: relative;
 	background-color: #fff;
 }
 
-section{
-	padding-top: 2rem;
+section, table{
 	margin-bottom: 2rem;
 }
 
 section:not(:first-child){
 	border-top: solid 1px #dd1166;
+	padding-top: 2rem;
 }
 
 
@@ -124,6 +116,7 @@ body > header h1{
 
 
 
+
 /*------------------------------------*\
     #Statements
 \*------------------------------------*/
@@ -143,6 +136,22 @@ blockquote:nth-child(odd) {
 blockquote footer{
 	text-align: right;
 }
+
+
+
+
+
+/*------------------------------------*\
+    #Sections
+\*------------------------------------*/
+
+h3{
+	font-size: 1.2rem;
+	font-weight: 600;
+	margin-bottom: 1rem;
+}
+
+
 
 
 
@@ -168,4 +177,98 @@ article figure img:nth-child(n+2){
 
 article figure figcaption{
 	margin-bottom: 1rem;
+}
+
+
+
+
+
+
+/*------------------------------------*\
+    #Tables
+\*------------------------------------*/
+
+table{
+	width: 100%;
+}
+
+table thead th{
+	font-weight: 400;
+	text-align: left;
+	padding-bottom: 0.5rem;
+	border-bottom: solid 1px #ddd;
+}
+
+table tr:not(:last-child){
+	border-bottom: solid 1px #ddd;
+}
+
+table td{
+		padding: 0.5rem 0;
+}
+
+table td + td,table th + th {
+	padding-left: 0.5rem;
+}
+
+table th.large{
+	width: 50%;
+}
+
+table th.small{
+	width: 10%;
+}
+
+
+
+
+
+
+/*------------------------------------*\
+    #Forms
+\*------------------------------------*/
+
+input[type=text], input[type=email], textarea{
+	width: 100%;
+	font-size: 1rem;
+	border: solid 1px #aaa;
+	margin-bottom: 0.25rem;
+	display: block;
+	padding: 0.25rem 0 0.25rem 0.5rem;
+}
+
+input[type=text]:focus, input[type=email]:focus, textarea:focus{
+	background-color: #eee;
+}
+
+textarea{
+	min-height: 5rem;
+}
+
+fieldset + fieldset{
+	margin-top: 1rem;
+}
+
+input[type=submit], input[type=reset]{
+	border: none;
+	padding: 0.5rem;
+	font-size: 1rem;
+	color: #fff;
+	background-color: #dd1166;
+}
+
+input[type=reset]{
+	background-color: #ccc;	
+}
+
+
+/*------------------------------------*\
+    #Misc
+\*------------------------------------*/
+
+hr{
+	height: 1px;
+	border: none;
+	border-top: solid 1px #77cc00;
+	margin: 1rem 0;
 }
