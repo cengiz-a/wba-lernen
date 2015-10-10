@@ -31,9 +31,12 @@ h1,h2,h3,h4{
 }
 
 p {
-	margin-bottom: 1rem;
+	margin-bottom: 2rem;
 }
 
+p + p{
+	margin-top: -1rem;
+}
 
 
 
@@ -260,6 +263,38 @@ input[type=submit], input[type=reset]{
 input[type=reset]{
 	background-color: #ccc;	
 }
+
+
+
+
+
+/*------------------------------------*\
+    #Lists
+\*------------------------------------*/
+
+dl{
+	margin-bottom: 1rem;
+}
+
+dt{
+	font-weight: 600;
+}
+
+dd, dt{
+	display: inline;
+}
+
+dt::after{
+	content: " ";	
+}
+
+dd::after{
+	content: " ";
+	display: block;
+}
+
+
+
 
 
 /*------------------------------------*\
