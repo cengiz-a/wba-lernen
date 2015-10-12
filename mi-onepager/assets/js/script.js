@@ -164,8 +164,6 @@
 
             var $dl_custom = construct_dl( prepared_custom_infos );
 
-            console.log($dl_custom);
-
             /* Definitionsliste mit den Custom-Infos hinzufügen */
             $figcaption.append( $dl_custom );
 
