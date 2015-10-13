@@ -18,20 +18,12 @@
 
         "teaching_area": {
           "title": "Lehrgebiete",
-          "content": [
-            "Computergrafik, Realistische und Interaktive Bildsynthese, Bildbasierte Computergrafik",
-            "Theoretische Informatik Grundlagenvorlesungen im Bachelor"
-          ]
+          "content": "Computergrafik, Realistische und Interaktive Bildsynthese, Bildbasierte Computergrafik, Theoretische Informatik Grundlagenvorlesungen im Bachelor"
         },
 
         "research_area": {
           "title": "Forschungsgebiete",
-          "content": [
-            "Photorealistische Computergrafik",
-            "Bildbasierte Verfahren",
-            "Visualisierung und Visual Analytics",
-            "Bild- und Videoverarbeitung"
-          ]
+          "content": "Photorealistische Computergrafik, Bildbasierte Verfahren, Visualisierung und Visual Analytics, Bild- und Videoverarbeitung"
         }
       }
     },
@@ -48,11 +40,7 @@
       "custom_infos": {
         "bachelor_courses": {
             "title": "Veranstaltungen im Bachelor",
-            "content": [
-              "Web-basierte Anwendungen 1: WWW Technologien",
-              "Grundlagen der visuellen Kommunikation",
-              "Einführung in die Medieninformatik"
-            ]
+            "content": "Web-basierte Anwendungen 1: WWW Technologien, Grundlagen der visuellen Kommunikation, Einführung in die Medieninformatik"
         },
 
         "projects": {
@@ -75,21 +63,12 @@
       "custom_infos": {
         "bachelor_courses": {
             "title": "Veranstaltungen im Bachelor",
-            "content": [
-              "Mensch-Computer Interaktion",
-              "Entwicklungsprojekt interaktive Systeme",
-              "human centered design and design thinking",
-              "Measuring User Experience"
-            ]
+            "content": "Mensch-Computer Interaktion, Entwicklungsprojekt interaktive Systeme, human centered design and design thinking, Measuring User Experience"
         },
 
         "master_courses": {
             "title": "Veranstaltungen im Master",
-            "content": [
-              "Naturwissenschaftliche Grundlagen digitaler Medien",
-              "Interaction Design",
-              "Medienrezeption"
-            ]
+            "content": "Naturwissenschaftliche Grundlagen digitaler Medien, Interaction Design, Medienrezeption"
         }
       }
 
@@ -107,18 +86,12 @@
       "custom_infos": {
         "bachelor_courses": {
             "title": "Veranstaltungen im Bachelor",
-            "content": [
-              "Web-basierte Anwendungen 2: Verteilte Systeme",
-              "Modellierung in audio-visuellen Medienprojekten (Nur im WS)"
-            ]
+            "content": "Web-basierte Anwendungen 2: Verteilte Systeme, Modellierung in audio-visuellen Medienprojekten (Nur im WS)"
         },
 
         "master_courses": {
             "title": "Veranstaltungen im Master",
-            "content": [
-              "Modellierung in audio-visuellen Medienprojekten (Nur im WS)",
-              "Kooperationssysteme"
-            ]
+            "content": "Modellierung in audio-visuellen Medienprojekten (Nur im WS), Kooperationssysteme"
         }
       }
 

@@ -1,189 +1,225 @@
-( function( $ ) {
-  'use strict';
 
-  /*
-   * Dozenten und ihre Informationen nachträglich per Ajax aus einem JSON-File
-   *  beziehen
+/*
+ * Abgrenzung des Codes mittels einer anonymen Funktion,
+ *  um den 'window'-Scope nicht zu verschmutzen;
+ *  siehe Dateiende
+ */
+( function( ) {
+  'use strict'; /* Strikten Modus nutzen, um  */
+
+  /**
+   * Dieser Callback kümmert sich um die Fehlerausgabe oder um die Weiterverarbeitung des JSON-Objekts
+   *
+   * @callback requestCallback
+   * @param {string} err - Fehlermeldung ansonsten {null}
+   * @param {object} data - JS-Objekt (parsed)
    */
-  var lecturers_filepath       = 'lecturers.json',
-      $dozenten_section        = $( '#dozenten' ),
-      $loading                 = $dozenten_section.find( '.dozenten_laden' ),
-      loading_string           = $loading.text(),
-      loading_indicator_chars  = '',
 
-      /* Interval für den Ladeindikator (...) */
-      throbber_handler = window.setInterval( function() {
-        loading_indicator_chars =  ( loading_indicator_chars.length === 3 ) ?
-                                      '': loading_indicator_chars + '.';
 
-        $loading.html( loading_string + ' ' + loading_indicator_chars );
-      }, 500),
+  /* Hilfsvariablen */
+  var lecturers_filepath  = 'lecturers.json',
+      dozenten_section    = document.querySelector( '#dozenten' ),
+      loading_element     = dozenten_section.querySelector( '.dozenten_laden' );
 
-      /* Fehlerausgabe mit zusätzlichen Aufräumarbeiten */
-      error_output = function( err_msg ) {
-        /* Throbber-Intervall stoppen */
-        window.clearInterval( throbber_handler );
 
-        $loading.addClass( 'error' );
-        $loading.html( 'Error: ' + err_msg );
-      },
+      /**
+       * Inhalt einer JSON-Datei per Ajax (XMLHttpRequest) beziehen und parsen
+       *
+       * @param {string} path - relative Pfadangabe zur JSON-Datei
+       * @param {requestCallback} callback - Wird sowohl im Falle eines Erfolgs als auch eines Fehlers aufgerufen
+       */
+      function getJSON( path, callback ) {
 
-      /* Hilfsfunktion, um Definitionslisten-Elemente zu erzeugen */
-      construct_dl = function( basic_info ) {
-        var $dl = $( '<dl>' );
+        var xhr = new XMLHttpRequest();
 
-        $.each( basic_info , function( key, value ) {
-          /* Leere Einträge überpringen */
-          if(     ( typeof( value ) !== 'string' && !$.isArray( value ) )
-              ||  value.length === 0) {
+        xhr.open('GET', path, true );
+
+        /*
+         * Die hinter 'onreadystatechange' hinterlegte Funktion wird immer
+         *  aufgerufen, wenn der Zustand sich ändert;
+         * siehe: https://developer.mozilla.org/de/docs/Web/API/XMLHttpRequest#Eigenschaften
+         */
+        xhr.onreadystatechange = function() {
+
+          /* readyState === 4 -> Vorgang abgeschlossen */
+          if( this.readyState === 4 ) {
+
+            /* HTTP-Statuscode 200 -> Datei wurde gefunden und zurückgegeben */
+            if( this.status === 200 ) {
+              /*
+               *  Da beim Parsen Fehler auftreten können,
+               *    werden diese sicherheitshalber per try-catch abgefangen
+               */
+              try {
+                /* Zurückgegebene JSON-Datei für die Weiterverarbeitung parsen */
+                var parsed_json = JSON.parse( this.response );
+                callback( null, parsed_json );
+              }
+              catch( e ) {
+                callback( 'Datei konnte nicht geparsed werden!' );
+              }
+            }
+            else {
+              /* Am besten direkt den HTTP-Statuscode mitreichen */
+              callback( 'Unbekanntes Problem: ' + this.status );
+            }
+
+          }
+
+        };
+
+        /*
+         * Beim absetzen des HTTP-Request können Fehler auftreten,
+         *  die hier per try-catch abgefangen werden
+         */
+        try {
+          xhr.send();
+        }
+        catch( e ) {
+          callback( "Problem beim Absetzen des HTTP-Requests!" );
+        }
+      }
+
+      /**
+       * Ausgelagerte Fehlerausgabe, da sie an mehreren Stellen benötigt wir
+       *
+       * @param {string} err_msg - Fehlernachricht, die im 'loading_element' ausgegeben werden soll
+       */
+      function error_output ( err_msg ) {
+        loading_element.classList.add( 'error' );
+        loading_element.innerHTML = 'Error: ' + err_msg;
+      }
+
+      /**
+       * Hilfsfunktion, um Definitionslisten-Elemente zu erzeugen
+       *
+       * @param {object} info - Schlüssel-Werte-Paar wird zu dt-dd-Paar
+       */
+      function construct_dl( info ) {
+        /* Definition List */
+        var dl_element = "<dl>";
+
+        /* Durch alle Informationseinträge traversieren */
+        for(var key in info) {
+          var value = info[key];
+
+          /* Definition Term */
+          var dt = '<dt>' + key + '</dt>';
+          dl_element += dt;
+
+          /* Definition Description */
+          var dd = '<dd>' + value + '</dd>';
+          dl_element += dd;
+        };
+
+        dl_element += '</dl>';
+
+        return dl_element;
+      }
+
+
+
+      /* Dozenten-Informationen holen, mit Angabe einer callback-Funktion */
+      getJSON( lecturers_filepath, function(err, data) {
+
+          /* Sofern ein Fehler auftrat, soll dieser ausgegeben werden und */
+          if(err) {
+            error_output( err );
             return;
           }
 
-          var $dt = $( '<dt>' ).html( key );
-          $dl.append( $dt );
-
-          var $dd = $( '<dd>' );
-
-          /* Sofern Array, diesen in eine unsortierte Liste überführen */
-          if( $.isArray( value ) ) {
-            var $ul = $( '<ul>' );
-
-            $.each( value, function( index, value ) {
-              value = value + '';
-
-              /* Leere Einträge überspringen */
-              if( value.length === 0)
-                return;
-
-              var $li = $( '<li>' ).html( value );
-              $ul.append( $li );
-            });
-
-            $dd.append( $ul );
-          }
-          else {
-            $dd.html( value );
-          }
-
-          $dl.append( $dd );
-        });
-
-        return $dl;
-      },
-
-      /* Hilfsfunktion, um eMail-Adresse und URLs in ein anchor-Element zu überführen */
-      linkify = function( link_raw ) {
-        link_raw = link_raw + '';
-
-        var link = link_raw;
-
-        if( link_raw.match(/\(at\)/) ) link_raw = link_raw.replace(" (at) ", "@");
-
-        if( link_raw.match( /^.*\@.*\..*$/ ) ) {
-          link = '<a href="mailto:'+ link_raw + '" >' + link_raw + '</a>';
-        }
-        else if( link_raw.match( /https{0,1}:\/\// ) ) {
-            var link_raw_cleaner = link_raw.replace( /https{0,1}:\/\//, "" );
-            link = '<a href="'+ link_raw + '" >' + link_raw_cleaner + '</a>';
-        }
-
-        return link;
-      };
-
-
-      /* Dozenten-Informationen holen */
-      $.getJSON( lecturers_filepath )
-        /* JSON-Datei erfolgreich geladen */
-        .done( function( data ) {
-
-          if( $.isEmptyObject( data ) || $.isEmptyObject( data.lecturers ) ) {
+          /*
+           * Überprüfen, ob das Unterfeld 'lectures' existiert, ansonsten abbrechen;
+           * Nicht existierendes Unterfeld ist 'undefined' und wird bei
+           *  Abfragen als 'false' interpretiert
+           */
+          if( !data.lecturers ) {
               error_output( 'Dozentenliste ist leer! Bitte überprüfen Sie die ' +
                             'Dozenten-JSON-Datei: ' + lecturers_filepath);
               return;
           }
 
-          /* Throbber-Handler säubern und Ladeindikator-Element löschen */
-          window.clearInterval( throbber_handler );
-          $loading.remove();
+          /* Ladeindikator-Element löschen */
+          loading_element.remove();
 
           /* Durch alle Einträge traversieren */
-          $.each( data.lecturers , function( key, value ) {
+          for(var key in data.lecturers) {
+            var value = data.lecturers[key];
 
-            if( typeof( key ) !== 'string' ) {
-              console.error('Ungültiger Dozenten-Schlüssel: Kein String!', key);
-              return;
-            }
-
-            /* 'figure' für Dozent erzeugen */
-            var $figure = $( '<figure>' );
+            /* 'figure'-Element für Dozent erzeugen */
+            var figure_element = '<figure>';
 
             /* Basisinformationen vorbereiten */
             var basic_infos = value.basic_infos || {};
 
-            var lecturer_name   = basic_infos.name || '<unbekannter Name>',
-                lecturer_email  = (typeof(key) === 'string') ?
-                                    key: '';
+            var lecturer_name   = basic_infos.name,
+                /* Email-Adresse fungiert wegen Eindeutigkeit als Schlüssel */
+                lecturer_email  = key;
 
-            var profile_img_url = basic_infos.profile_img || 'images/prof_unknown.jpg',
-                $profile_img = $( '<img>' ).attr({
-                  src: profile_img_url,
-                  alt: 'Profilfoto von ' + lecturer_name
-                });
+            var profile_img_url = basic_infos.profile_img,
+                profile_img = '<img src="'+ profile_img_url +'" alt="Foto von ' + lecturer_name + '" />'
 
-            $figure.append( $profile_img );
+            figure_element += profile_img;
 
             /* Caption-Element für das 'figure'-Element */
-            var $figcaption = $( '<figcaption>' );
+            var figcaption_element = '<figcaption>';
 
-            var $name_headline = $( '<h1>' ).html( lecturer_name );
-            $figcaption.append( $name_headline );
+            var name_headline = '<h1>' + lecturer_name + '</h1>';
+            figcaption_element += name_headline;
 
-            var $dl_basic = construct_dl( {
-                'Raum:'   : basic_infos.room || '',
-                'Telefon:': basic_infos.phone_number || '',
-                'eMail:'  : linkify( lecturer_email ),
-                'Website:': linkify( basic_infos.website || '' )
+            var dl_element_basic = construct_dl( {
+                'Raum:'   : basic_infos.room,
+                'Telefon:': basic_infos.phone_number,
+                'eMail:'  : lecturer_email,
+                'Website:': basic_infos.website
             });
 
             /* Definitionsliste mit den Basic-Infos hinzufügen */
-            $figcaption.append( $dl_basic );
+            figcaption_element += dl_element_basic;
 
 
             /* Custom-Informationen vorbereiten */
             var custom_infos          = value.custom_infos || {},
                 prepared_custom_infos = {};
 
-            $.each( custom_infos , function( key, value ) {
+            for(var key in custom_infos) {
+              var value = custom_infos[key];
+
               /* Leere Einträge überspringen */
-              if(!value.title || !value.content) {
+              if(value.title === '' || value.content === '') {
                 return;
               }
 
               prepared_custom_infos[value.title] = value.content;
-            });
+            };
 
-            var $dl_custom = construct_dl( prepared_custom_infos );
+            var dl_element_custom = construct_dl( prepared_custom_infos );
 
             /* Definitionsliste mit den Custom-Infos hinzufügen */
-            $figcaption.append( $dl_custom );
+            figcaption_element += dl_element_custom;
 
+            figcaption_element += '</figcapture>';
 
-            $figure.append( $figcaption );
-            $dozenten_section.append( $figure );
+            figure_element += figcaption_element;
+            figure_element += '</figure>';
 
-          });
+            /*
+             * Für Dozenten erzeugtes 'figure'-Element dem Hauptelement hinzufügen;
+             *  Durch Konkenation von Strings (innerHTML hält Elementinhalt als String)
+             */
+            dozenten_section.innerHTML += figure_element;
+          };
 
-        })
-        /* Problem beim Laden der JSON-Datei*/
-        .error( function( xhr, err_msg, e ) {
-          var full_err_msg = err_msg;
-
-          if( err_msg === 'parsererror' ) {
-            full_err_msg = 'Fehler beim Parsen der JSON-Datei!' +
-                            'Die Datei sollte auf Wohlgeformtheit überprüft werden.';
-          }
-
-          error_output( full_err_msg );
         });
 
-} ( jQuery ) );
+} ( ) ); /* Anonyme Funktion wird direkt aufgerufen; '( )' -> leere Parameterliste */
+
+/*
+ * //Bsp.:
+ *
+ * (function() {
+ *    alert('Hallo Welt!');
+ *  } () );
+ *
+ * Nach der Definition der anonymen Funktion, wird sie direkt aufgerufen
+ */
