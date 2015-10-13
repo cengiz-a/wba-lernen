@@ -307,7 +307,9 @@ dd li + li::before{
 	content: ", ";
 }
 
-
+ul li article h3{
+	border-bottom: solid 1px #ddd;
+}
 
 
 
