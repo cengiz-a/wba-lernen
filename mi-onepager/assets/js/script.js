@@ -5,7 +5,8 @@
  *  siehe Dateiende
  */
 ( function( ) {
-  'use strict'; /* Strikten Modus nutzen, um  */
+  /* Strikten Modus nutzen, um auf unsicheren Code aufmerksam gemacht zu werden */
+  'use strict';
 
   /**
    * Dieser Callback kümmert sich um die Fehlerausgabe oder um die
