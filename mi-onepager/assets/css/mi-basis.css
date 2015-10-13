@@ -47,7 +47,7 @@ p + p{
 
 *{
 	line-height: 140%;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Open Sans', sans-serif !important;
 }
 
 body {
@@ -81,15 +81,20 @@ section:not(:first-child){
     #Header
 \*------------------------------------*/
 
+.th-logo{
+	margin-bottom: 4rem;
+}
+
 .mi-logo{
 	position: absolute;
 	right: 20px;
 	top: 10px;
+	text-align: center;
 }
 
 body > header h1{
 	font-size: 1rem;
-	text-align: right;
+	text-align: center;
 	margin-bottom: 20px;
 }
 
@@ -105,7 +110,7 @@ body > header h1{
 
 #nav > li{
 	display: inline-block;
-	margin-right: 1px;
+	margin-right: 1rem;
 	margin-bottom: 1px;
 }
 
@@ -237,7 +242,7 @@ input[type=text], input[type=email], textarea{
 	border: solid 1px #aaa;
 	margin-bottom: 0.25rem;
 	display: block;
-	padding: 0.25rem 0 0.25rem 0.5rem;
+	padding: 0.25rem 0 0.25rem 0;
 }
 
 input[type=text]:focus, input[type=email]:focus, textarea:focus{
@@ -291,8 +296,66 @@ dt::after{
 dd::after{
 	content: " ";
 	display: block;
+	height: 0.25rem;
 }
 
+dd ul, dd li{ 
+	display: inline;
+}
+
+dd li + li::before{
+	content: ", ";
+}
+
+
+
+
+
+/*------------------------------------*\
+    #Classes
+\*------------------------------------*/
+
+.mask-round{
+	width:100px;
+	height: 100px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.mask-round img{
+	width:150%;
+	height: auto;
+}
+
+
+
+
+
+
+/*------------------------------------*\
+    #Components
+\*------------------------------------*/
+
+#dozenten figcaption{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#dozenten figcaption h1{
+	font-size: 1.5rem;
+	margin: 0;
+}
+
+#dozenten figure div[class*=mask]{
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 1rem;
+	
+}
+
+#dozenten figure{
+	margin-bottom: 1rem;
+}
 
 
 
