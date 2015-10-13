@@ -8,7 +8,8 @@
   'use strict'; /* Strikten Modus nutzen, um  */
 
   /**
-   * Dieser Callback kümmert sich um die Fehlerausgabe oder um die Weiterverarbeitung des JSON-Objekts
+   * Dieser Callback kümmert sich um die Fehlerausgabe oder um die
+   * Weiterverarbeitung des JSON-Objekts
    *
    * @callback requestCallback
    * @param {string} err - Fehlermeldung ansonsten {null}
@@ -26,7 +27,8 @@
        * Inhalt einer JSON-Datei per Ajax (XMLHttpRequest) beziehen und parsen
        *
        * @param {string} path - relative Pfadangabe zur JSON-Datei
-       * @param {requestCallback} callback - Wird sowohl im Falle eines Erfolgs als auch eines Fehlers aufgerufen
+       * @param {requestCallback} callback - Wird sowohl im Falle eines Erfolgs
+       * als auch eines Fehlers aufgerufen
        */
       function getJSON( path, callback ) {
 
@@ -83,7 +85,8 @@
       /**
        * Ausgelagerte Fehlerausgabe, da sie an mehreren Stellen benötigt wir
        *
-       * @param {string} err_msg - Fehlernachricht, die im 'loading_element' ausgegeben werden soll
+       * @param {string} err_msg - Fehlernachricht, die im 'loading_element'
+       * ausgegeben werden soll
        */
       function error_output ( err_msg ) {
         loading_element.classList.add( 'error' );
@@ -94,6 +97,7 @@
        * Hilfsfunktion, um Definitionslisten-Elemente zu erzeugen
        *
        * @param {object} info - Schlüssel-Werte-Paar wird zu dt-dd-Paar
+       * @returns {string} Aus 'info'-Objekt konstruiertes 'dl'-ELement
        */
       function construct_dl( info ) {
         /* Definition List */
@@ -122,7 +126,10 @@
       /* Dozenten-Informationen holen, mit Angabe einer callback-Funktion */
       getJSON( lecturers_filepath, function(err, data) {
 
-          /* Sofern ein Fehler auftrat, soll dieser ausgegeben werden und */
+          /*
+           * Sofern ein Fehler auftrat, soll die gegebene Fehlernachricht
+           * ausgegeben und an dieser Stelle abgebrochen werden
+           */
           if(err) {
             error_output( err );
             return;
@@ -142,7 +149,10 @@
           /* Ladeindikator-Element löschen */
           loading_element.remove();
 
-          /* Durch alle Einträge traversieren */
+          /*
+           * Durch alle Dozenten-Einträge traversieren;
+           *  'key' entspricht der eMailAdresse (wegen Eindeutigkeit)
+           */
           for(var key in data.lecturers) {
             var value = data.lecturers[key];
 
@@ -157,7 +167,8 @@
                 lecturer_email  = key;
 
             var profile_img_url = basic_infos.profile_img,
-                profile_img = '<img src="'+ profile_img_url +'" alt="Foto von ' + lecturer_name + '" />'
+                profile_img = '<img src="'+ profile_img_url +'" alt="Foto von '
+                                  + lecturer_name + '" />'
 
             figure_element += profile_img;
 
