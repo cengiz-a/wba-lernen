@@ -235,3 +235,112 @@
  *
  * Nach der Definition der anonymen Funktion, wird sie direkt aufgerufen
  */
+
+
+
+ /**
+  * Folgender Code kümmert sich um die Validierung der Formularfelder
+  * und gibt entsprechende Fehlermeldungen aus
+  */
+( function ( ) {
+  "use strict";
+
+  /**
+   * Erzeugt für die Fehlerausgabe ein span-Element und fügt es als ein
+   * benachbartes Element ein
+   *
+   * @param {input, textarea} input_element - Das mit dem Fehler
+   * zusammenhängende Element
+   * @param {string} error_msg - Die Fehlermeldung
+   */
+  function create_and_append_error_msg( input_element, error_msg ) {
+    /* Schauen, ob der Vermerk bereits gesetzt ist, um die Fehlermeldung nicht
+     * erneut auszugeben
+     */
+    if( input_element.dataset.error )
+      return;
+
+    /* span-Element erzeugen, Fehlermeldung zuweisen, error-Klasse hinzufügen
+     * und das Element an das Ende des Vaterelements von 'input_element' anfügen
+     */
+    var error_span_element = document.createElement( 'span' );
+    error_span_element.innerHTML = error_msg;
+    error_span_element.classList.add( 'error' );
+
+    input_element.parentNode.appendChild( error_span_element );
+
+    /* Als kleine Hilfe wird vermerkt, dass es bei dem Eingabefeld ein Fehler gab */
+    input_element.dataset.error = true;
+  }
+
+  /**
+   * Löschen des span-Elements, welches für die Fehlerausgabe genutzt wird
+   *
+   * @param {input, textarea} input_element - Das Eingabefeld mit dem das
+   * span-Element zusammehängt
+   */
+  function clear_error( input_element ) {
+      delete input_element.dataset.error;
+
+      var error_span_element = input_element.parentNode.querySelector('.error');
+
+      if( error_span_element )
+        error_span_element.remove();
+  }
+
+  /* Elementreferenzen */
+  var anfrageformular_element = document.querySelector( '#anfrageformular' ),
+      formular_element        = anfrageformular_element.querySelector( 'form' ),
+
+      vorname_input_element   = formular_element.querySelector( '#vorname' ),
+      zuname_input_element    = formular_element.querySelector( '#zuname' ),
+      email_input_element     = formular_element.querySelector( '#email' ),
+      nachricht_input_element = formular_element.querySelector( '#nachricht' );
+
+  /* Eventlistener hinzufügen, der beim ABsenden des Fomrulars ausgeführt wird */
+  formular_element.addEventListener('submit', function( e ) {
+    /* Wird auf 'false' gesetzt, sofern irgendwo ein Validierungsfehler auftrat */
+    var allValid = true;
+
+    if( vorname_input_element.value.length === 0 ) {
+        create_and_append_error_msg( vorname_input_element, 'Bitte geben Sie einen Vornamen ein!' );
+        allValid = false;
+    }
+    else {
+        clear_error( vorname_input_element );
+    }
+
+    if( zuname_input_element.value.length === 0 ) {
+        create_and_append_error_msg( zuname_input_element, 'Bitte geben Sie einen Zunamen ein!' );
+        allValid = false;
+    }
+    else {
+        clear_error( zuname_input_element );
+    }
+
+    if(     email_input_element.value.length === 0
+        || !email_input_element.value.match(/.+@.+\..+/) ) {
+        create_and_append_error_msg( email_input_element, 'Bitte geben Sie eine eMail-Adresse ein!' );
+        allValid = false;
+    }
+    else {
+        clear_error( email_input_element );
+    }
+
+    if( nachricht_input_element.value.length === 0 ) {
+        create_and_append_error_msg( nachricht_input_element, 'Bitte geben Sie eine Nachricht ein!' );
+        allValid = false;
+    }
+    else {
+        clear_error( nachricht_input_element );
+    }
+
+    /* Sofern es mindestens einen Validierungsfehler gab, wird
+     * die Standardaktion (Formular absenden) präventiert
+     */
+    if( !allValid )
+      e.preventDefault();
+
+  });
+
+} ( ) );

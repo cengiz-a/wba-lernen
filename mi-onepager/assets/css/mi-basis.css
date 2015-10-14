@@ -54,7 +54,7 @@ body {
 	font-size: 100%;
 	font-weight: 300;
 	background-color: rgba(240, 240, 240, 1);
-} 
+}
 
 body > header, body > main, body > footer{
 	max-width: 80%;
@@ -258,15 +258,30 @@ fieldset + fieldset{
 }
 
 input[type=submit], input[type=reset]{
-	border: none;
+	border: 1px solid #dd1166;
 	padding: 0.5rem;
 	font-size: 1rem;
+	color: #dd1166;
+	background-color: #fff;
+}
+
+input[type=submit]:hover, input[type=reset]:hover{
+	border: 1px solid #dd1166;
 	color: #fff;
 	background-color: #dd1166;
+	cursor: pointer;
 }
 
 input[type=reset]{
-	background-color: #ccc;	
+	border: 1px solid #ccc;
+	background-color: #fff;
+	color: #ccc;
+}
+
+input[type=reset]:hover{
+	border: 1px solid #ccc;
+	background-color: #ccc;
+	color: #fff;
 }
 
 
@@ -290,7 +305,7 @@ dd, dt{
 }
 
 dt::after{
-	content: " ";	
+	content: " ";
 }
 
 dd::after{
@@ -299,7 +314,7 @@ dd::after{
 	height: 0.25rem;
 }
 
-dd ul, dd li{ 
+dd ul, dd li{
 	display: inline;
 }
 
@@ -349,7 +364,7 @@ dd li + li::before{
 	display: inline-block;
 	vertical-align: middle;
 	margin-right: 1rem;
-	
+
 }
 
 #dozenten figure{
@@ -371,4 +386,8 @@ hr{
 	border: none;
 	border-top: solid 1px #77cc00;
 	margin: 1rem 0;
+}
+
+.error{
+	color: #dd1166;
 }
