@@ -57,89 +57,559 @@
 
                 </ul>
             </section>
-            <section><h1>Beispiel einer Website 1</h1></section>
-            <section><h1>Beispiel einer Website 2</h1></section>
             <section>
-               
-                <blockquote style="margin-bottom: 80px;">
-                    Wer hat noch nie eine HTML-Datei gesehen?
-                </blockquote>
-            </section>
+                <h1>Beispiel einer Website 1</h1></section>
             <section>
-                <h2>Was ist HTML</h2>
-                <ul class='fragment'>
-                    <li><strong>H</strong>yper</li>
-                    <li><strong>T</strong>ext</li>
-                    <li><strong>M</strong>arkup</li>
-                    <li><strong>L</strong>anguage</li>
-                </ul>
+                <h1>Beispiel einer Website 2</h1></section>
+            <section class="center">
+                <p class="_margin-bottom-50 _xl-fontsize _center _vertical-center">
+                    H<span class="_violett">yper</span>t<span class="_violett">ext</span> M<span class="_pink">arkup</span> L<span class="_pink">anguage</span>
+                </p>
+                <!--
                 <p class='fragment'>1989 am CERN von Tim Berners-Lee definiert</p>
                 <p class='fragment'>Aktuelle Version 4.01 aus dem Jahr 2000</p>
                 <p class='fragment'>HTML 5 kurz vor der Verabschiedung <a href='http://www.w3.org/TR/2014/WD-html5-diff-20140918/'> - Aktueller Working Draft (18.09.14)</a></p>
+-->
+            </section>
+            <section data-state="_fullscreen-image" style="background-image: url(img/hypertext.png)">
+                <p class="bu">Hypertext</p>
+                <p class="quelle">Quelle: http://www.open-hypervideo.org</p>
+            </section>
+            <section data-state="_fullscreen-image" style="background-image: url(img/schriftsetzer.jpg)">
+                <p class="bu">Schriftsetzer(Handsatz) in der DDR, 1954</p>
+
+
             </section>
             <section>
-                <h2>Wie sieht ein HTML Dokument aus</h2>
-                <p class='fragment'>Ein HTML Dokument besteht aus 3 Teilen</p>
-                <ul class='fragment'>
-                    <li><strong>Doctype</strong> - Dokumenttypdefinition</li>
-                    <li><strong>Head</strong> - Metainformationen, benötigte externe Dateien, ...</li>
-                    <li><strong>Body</strong> - Der eigentliche Inhalt der Seite</li>
+                <h2>Markup Languages</h2>
+                <figure class="fragment" style=" width:32%; float:left; margin-right:10px">
+                    <pre>
+<code>&lt;h1&gt;Headline&lt;/h1&gt;
+&lt;p&gt;
+    Aenean commodo ligula 
+    eget dolor. Aenean massa. 
+    Cum sociis natoque 
+    penatibus et magnis dis 
+    parturient montes, 
+&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;
+        Alpha
+    &lt;/li&gt;
+    &lt;li&gt;
+        Beta
+    &lt;/li&gt;
+    &lt;li&gt;
+        Gamma
+    &lt;/li&gt;
+&lt;/ul&gt;
+                   
+                   
+
+</code></pre>
+                    <figcaption>HTML</figcaption>
+                </figure>
+                <figure class="fragment" style="width:32%; float:left; margin-right:10px;">
+                    <pre><code>\section{Headline}
+
+Aenean commodo ligula 
+eget dolor. Aenean massa. 
+Cum sociis natoque 
+penatibus et magnis dis 
+parturient montes, 
+
+\begin{itemize}
+\tightlist
+\item
+  Alpha
+\item
+  Beta
+\item
+  Gamma
+\end{itemize}
+
+
+
+</code></pre>
+                    <figcaption>LaTeX</figcaption>
+                </figure>
+                <figure class="fragment" style="width:33%; float:left;">
+                    <pre><code># Headline
+
+Aenean commodo ligula 
+eget dolor. Aenean massa. 
+Cum sociis natoque 
+penatibus et magnis dis 
+parturient montes, 
+
+* Alpha
+* Beta
+* Gamma
+
+    
+
+                        
+                                               
+
+                                               
+                                                
+                        </code></pre>
+                    <figcaption>Markdown</figcaption>
+                </figure>
+            </section>
+            <section>
+                <h2>HTML-Elemente</h2>
+                <ul>
+                    <li class="fragment">
+                        <p>Ein HTML-Element besteht aus einem öffenden Tag, dem Inhalt und einem schließenden Tag.</p>
+                        <pre><code>
+&lt;tagname&gt;content&lt;/tagname&gt;
+
+</code></pre>
+
+                    </li>
+                    <li class="fragment">
+                        <p>HTML-Elemente können ineinander verschachtelt werden.</p>
+                        <pre><code>
+&lt;tagname_1&gt;
+    &lt;tagname_2&gt;Content&lt;/tagname_2&gt;
+&lt;/tagname_1&gt;
+                        </code></pre>
+                    </li>
+
                 </ul>
             </section>
             <section>
-                <h2>Wie sieht ein HTML Dokument aus</h2>
-                <a href='initial.html' target='_blank'>
-                    <p>
+                <h2>HTML-Elemente</h2>
+                <ul>
+                    <li class="fragment">
+                        <p>Für ein HTML-Element können ein oder mehrere Attribute eingefügt werden. Darüber werden eränzende zum Element definiert</p>
+                        <pre><code>
+&lt;tagname attributname=&quot;attributwert&quot;&gt;content&lt;/tagname&gt;
+                   </code></pre>
+                    </li>
+
+                    <li class="fragment">
+                        <p>Wenn ein HTML-Element keinen Inhalt hat, wird das schließende Tag weggelassen</p>
+                        <pre><code>
+&lt;tagname attributname=&quot;attributwert&quot;&gt;
+                        </code></pre>
+                    </li>
+
+                </ul>
+
+            </section>
+            <section>
+                <h2>HTML-Grundgerüst</h2>
+                <pre><code>&lt;!DOCTYPE html&gt;
+
+&lt;html lang=&quot;de&quot;&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Seitentitel&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+                <a href="html_snippets/grundgeruest.html">+</a>
+            </section>
+            <section>
+                <h2>HTML-Grundgerüst</h2>
+                <figure>
                     <pre><code>
-            &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-                 "http://www.w3.org/TR/html4/loose.dtd">
-            &lt;html>
-              &lt;head>
-                &lt;title>&lt;/title>
-                &lt;meta>&lt;/meta>
-              &lt;/head>
-              &lt;body>
-                Hier steht Inhalt
-              &lt;/body>
-            &lt;/html>
+&lt;!DOCTYPE html&gt;
+                </code></pre>
+                </figure>
+                <pre><code>
+                
+&lt;html lang=&quot;de&quot;&gt;
+
+                </code></pre>
+                <pre><code>
+
+&lt;head&gt;
+    &lt;title&gt;Seitentitel&lt;/title&gt;
+&lt;/head&gt;
+                </code></pre>
+                <pre><code>
+&lt;body&gt;
+&lt;/body&gt;
+                </code></pre>
+                <pre><code>
+&lt;/html&gt;
+          </code></pre>
+                <a href="html_snippets/grundgeruest.html">grundgeruest.html</a>
+            </section>
+            <section>
+                <h2>HTML-Versionen</h2>
+            </section>
+            <section>
+                <h2>Doctype Definition</h2>
+                <figure>
+                    <figcaption>HTML5</figcaption>
+                    <pre><code>
+&lt;!DOCTYPE html&gt;                    
+                </code></pre>
+                </figure>
+                <figure>
+                    <figcaption>HTML 4.01</figcaption>
+                    <pre><code>
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; 
+&quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;
+                </code></pre>
+                </figure>
+                <figure>
+                    <figcaption>XHTML 1.0</figcaption>
+                    <pre><code>
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; 
+&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
                </code></pre>
-                </a>
+                </figure>
             </section>
             <section>
-                <h2>Tags</h2>
+                <h2>Ein kleines HTML-Dokument</h2>
+                <div style="width: 48%; float:left; margin-right: 1em">
+                    <pre style="margin-top:0;"><code class="stretch">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;de&quot;&gt;
+
+&lt;head&gt;
+    &lt;title&gt;HTML5 Grundger&uuml;st&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Werther&lt;/h1&gt;
+    &lt;p&gt;
+        Eine wunderbare Heiterkeit hat 
+        meine ganze Seele eingenommen, 
+        gleich den s&uuml;&szlig;en Fr&uuml;hlingsmorgen, 
+        die ich mit ganzem Herzen genie&szlig;e.
+    &lt;/p&gt;
+    &lt;p&gt;
+        Ich bin allein und freue mich 
+        meines Lebens in dieser Gegend, 
+        die f&uuml;r solche Seelen 
+        geschaffen ist wie die meine.
+    &lt;/p&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+ 
+ 
+ 
+
+  </code></pre>
+                </div>
+                <div class="fragment" style="width: 48%; font-size:18px; float:left">
+                    <div style="width:99%;border:1px solid grey;padding:3px;margin:0;background-color:#ddd">&lt;html&gt;
+                        <div style="width:90%;border:1px solid grey;padding:3px;margin:20px;background-color:#fff">&lt;head&gt;
+                            <div style="width:90%;border:1px solid grey;padding:4px;margin:20px">&lt;title&gt;HTML5 Grundger&uuml;st&lt;/title&gt;
+                            </div>
+                            &lt;/head&gt;
+                        </div>
+                        <div style="width:90%;border:1px solid grey;padding:3px;margin:20px;background-color:#fff">&lt;body&gt;
+                            <div style="width:90%;border:1px solid grey;padding:4px;margin:20px">&lt;h1&gt;Werther&lt;/h1&gt;</div>
+                            <div style="width:90%;border:1px solid grey;padding:3px;margin:20px">&lt;p&gt;Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den s&uuml;&szlig;en Fr&uuml;hlingsmorgen, die ich mit ganzem Herzen genie&szlig;e.&lt;/p&gt;</div>
+                            <div style="width:90%;border:1px solid grey;padding:4px;margin:20px">&lt;p&gt;Ich bin allein und freue mich meines Lebens in dieser Gegend, die f&uuml;r solche Seelen geschaffen ist wie die meine.&lt;/p&gt;</div>
+                            &lt;/body&gt;
+                        </div>
+                        &lt;/html&gt;
+                    </div>
+                </div>
+                <div style="clear:both"></div>
+                <a href="html_snippets/grundgeruest_2.html">+</a>
+
+            </section>
+            <section>
+                <h2>Document Object Model (DOM)</h2>
+                <blockquote>
+                    The Document Object Model is a platform- and language-neutral interface that will allow programs and scripts to dynamically access and update the content, structure and style of documents. The document can be further processed and the results of that processing can be incorporated back into the presented page.
+                    <br>
+                    <br>
+                    <small>Quelle: <a href="http://www.w3.org/DOM/">http://www.w3.org/DOM/</a>https://de.wikipedia.org/wiki/Document_Object_Model (13.10.2015)</small>
+                </blockquote>
+            </section>
+            <section  data-transition="none">
+                <h2>DOM tree</h2>
+                <div style="width: 48%; float:left; margin-right: 1em">
+                    <pre style="margin-top:0;"><code class="stretch">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;de&quot;&gt;
+
+&lt;head&gt;
+    &lt;title&gt;HTML5 Grundger&uuml;st&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Werther&lt;/h1&gt;
+    &lt;p&gt;
+        Eine wunderbare Heiterkeit hat 
+        meine ganze Seele eingenommen, 
+        gleich den s&uuml;&szlig;en Fr&uuml;hlingsmorgen, 
+        die ich mit ganzem Herzen genie&szlig;e.
+    &lt;/p&gt;
+    &lt;p&gt;
+        Ich bin allein und freue mich 
+        meines Lebens in dieser Gegend, 
+        die f&uuml;r solche Seelen 
+        geschaffen ist wie die meine.
+    &lt;/p&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+ 
+ 
+ 
+
+  </code></pre>
+                </div>
+                <div class="" style=";auto;height:585px; width: 48%; font-size:18px; float:left; border: 1px black solid;">
+                    <img class="" src="svg/dom_tree.svg" style="padding-left:12px">
+
+                </div>
+            </section>
+            <section data-transition="none">
+                <h2>DOM tree</h2>
+                <div style="width: 48%; float:left; margin-right: 1em">
+                    <pre style="margin-top:0;"><code class="stretch">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;de&quot;&gt;
+
+&lt;head&gt;
+    &lt;title&gt;HTML5 Grundger&uuml;st&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Werther&lt;/h1&gt;
+    &lt;p&gt;
+        Eine wunderbare Heiterkeit hat 
+        meine ganze Seele eingenommen, 
+        gleich den s&uuml;&szlig;en Fr&uuml;hlingsmorgen, 
+        die ich mit ganzem Herzen genie&szlig;e.
+    &lt;/p&gt;
+    &lt;p&gt;
+        Ich bin allein und freue mich 
+        meines Lebens in dieser Gegend, 
+        die f&uuml;r solche Seelen 
+        geschaffen ist wie die meine.
+    &lt;/p&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+ 
+ 
+ 
+
+  </code></pre>
+                </div>
+                <div style=";auto;height:585px; width: 48%; font-size:18px; float:left; border: 1px black solid;">
+                    <img class="" src="svg/dom_tree_mit_overlay.svg" style="padding-left:12px">
+
+                </div>
+            </section>            
+            <section>
+                <h2>Regeln für wohlgeformte HTML-Dokumente</h2>
                 <ul>
-                    <li class="fragment" <pre><code contenteditable>&lt;tagname> text &lt;/tagname></code></pre>
+                    <li>Das Dokument besitzt genau ein Wurzelelement.
+                        <br>Bei HTML-Dokumenten ist es das
+                        <pre style="display:inline;font-size:1em">&lt;html&gt;</pre>-Element</li>
+                    <li>Die Beginn- und End-Auszeichner sind ebenentreu-paarig verschachtelt.
+                        <br>Nicht erlaubt ist bspw.:<pre style="font-size:1em;"><code>
+&lt;p&gt;&lt;div&gt;&lt;/p&gt;&lt;/div&gt;
+                    </code></pre>
                     </li>
-                    <li class="fragment">Einleitendes Tag / Abschlie&szlig;endes Tag
-                        <br>
-                    </li>
-                    <li class="fragment">spitze Klammern
-                        <br>
-                    </li>
+                    <li>Ein Element darf nicht mehrere Attribute mit demselben Namen besitzen.
+                        <br> Nicht erlaubt ist bspw.:
+                        <pre style="font-size:1em"><code>
+&lt;div class=&quot;red&quot; class=&quot;green&quot;&gt;&lt;/div&gt;
+                    </code></pre></li>
                 </ul>
             </section>
             <section>
-                <h2>Tags</h2>
+                <h2>HTML-Elemente zur Seitenstrukturierung</h2>
+                <dl>
+                    <dt>&lt;header&gt;</dt>
+                    <dd>Enthält den sichtbaren Kopfbereich einer Webseite oder eines Teils einer Seite. Nicht zu verwechseln mit dem head-Element
+                        <ver></ver>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>&lt;nav&gt;</dt>
+                    <dd>Umschließt Navigationsleisten und Menüs. Neben einer unsortierten Liste mit den Verweisen, können auch andere Elemente, wie z.B eine Überschrift enthalten sein.</dd>
+                </dl>
+                <dl>
+                    <dt>&lt;footer&gt;</dt>
+                    <dd>Enthält die Informationen, die am Ende einer Webseite oder eines Teils einer Seite stehen.</dd>
+                </dl>
+                <dl>
+                    <dt>&lt;address&gt;</dt>
+                    <dd>Enthält Kontaktdaten Autor oder inhaltlich Verantwortliche einer Seite oder eines Abschnittes</dd>
+                </dl>
+
+
+            </section>
+            <section>
+                <h2>HTML-Elemente zur Seitenstrukturierung</h2>
+                <dl>
+                    <dt>&lt;section&gt;</dt>
+                    <dd>Enthält laut eine thematische Gruppierung von Inhalten. Es dient dazu, den Inhalt einer Webseite oder auch einen article in semantische Abschnitte zu gliedern.</dd>
+                </dl>
+                <dl>
+                    <dt>&lt;article&gt;</dt>
+                    <dd>Stellt einen in sich geschlossenen Abschnitt eines Dokuments dar, vergleichbar mit einem Zeitungsartikel. Zur feineren Stukturierung kann es Header- Section- und Footer-Elemente enthalten</dd>
+                </dl>
+                <dl>
+                    <dt>&lt;div&gt;</dt>
+                    <dd>Dient dazu mehrere Elemente wie Texte, Grafiken, Tabellen usw., in einen gemeinsamen Bereich einzuschließen, um sie mit CSS zu formatieren.</dd>
+                </dl>
+                <dl>
+                    <dt>&lt;aside&gt;</dt>
+                    <dd>Umschließt Abschnitte einer Seite, deren Inhalt nur in einem indirekten Zusammenhang mit dem umgebenden Inhalt stehen. Z.B. Randbemerkungen, Fußnoten oder Sidebars.</dd>
+                </dl>
+            </section>
+            <section>
+                <h2>Beispiel zur Übung</h2>
+            </section>
+            <section>
+                <h2>Beispiel zur Übung</h2>
+            </section>
+            <section>
+                <h2>HTML-Elemente zur Textstrukturierung</h2>
+                <p><pre style="font-size: 1.5em">
+<span>&lt;h1&gt;</span> <span>&lt;h2&gt;</span> <span>&lt;h3&gt;</span> <span>&lt;h4&gt;</span> 
+<span>&lt;h5&gt;</span> <span>&lt;h6&gt;</span> <span>&lt;p&gt;</span> <span>&lt;pre&gt;</span> 
+<span>&lt;blockquote&gt;</span> <span>&lt;hr&gt;</span>
+<span>&lt;figure&gt;</span> <span>&lt;figcaption&gt;</span> 
+<span>&lt;ol&gt;</span> <span>&lt;ul&gt;</span> <span>&lt;dl&gt;</span> <span>&lt;li&gt;</span> 
+<span>&lt;dt&gt;</span> <span>&lt;dd&gt;</span> 
+                </pre></p>
+            </section>
+            <section>
+                <h2>HTML-Elemente zur Textstrukturierung</h2>
+                <dl>
+                    <dt>
+                        &lt;h1&gt; bis &lt;h6&gt;
+                    </dt>
+                    <dd>Eine Überschrift wird durch eines dieser Elemente definiert. Die Zahl steht für die Wichtigkeit der Überschrift. h1 ist die wichtigste Überschrift h6 die unwichtigste.</dd>
+                </dl>
+                <dl>
+                    <dt>
+                        &lt;p&gt;
+                    </dt>
+                    <dd>
+                        Definiert einen Textabsatz oder Textabschnitt innerhalb eines zusammenhängenden Textes.
+                    </dd>
+                </dl>
+                
+
+
+            </section>
+            <section>
+                <div style="width:48%;float:left">
+                    <h2>Block-Level Elemente</h2>
+                    <ul>
+                        <li>erzeugen immer vor und nach dem Element einen Umbruch</li>
+                        <li>nehmen die gesamte zur Verfügung stehenden Breite ein</li>
+                        <li>dürfen weitere Block-Level- und Inline Elemente und Content enthalten </li>
+                        <li>Block-Level Elemente sind bspw.:<br><span>&lt;h1&gt;</span> <span>&lt;p&gt;</span> <span>&lt;div&gt;</span> <span>&lt;article&gt;</span> <span>&lt;section&gt;</span></li>
+                    </ul>
+                </div>
+                <div style="width:48%;float:right">
+                   <h2>Inline Elemente</h2>
+                    <ul>
+                        <li>erzeugen keinen Umbruch</li>
+                        <li>nehmen nur die Breite ein, die sie benötigen</li>
+                        <li>dürfen weitere Inline Elemente und Content enthalten, aber <span class="_pink">keine</span> Block-Level Elemente</li>
+                        <li>Inline Elemente sind bspw.:<br><span>&lt;span&gt;</span> <span>&lt;a&gt;</span> <span>&lt;strong&gt;</span> <span>&lt;em&gt;</span></li>
+                    </ul>
+                </div>
+                
+            </section>
+            <section>
+                <h2>Referenzierung</h2>
+                <pre>
+                    <code>
+&lt;a href=&quot;Verweisziel&quot; title=&quot;Titel&quot;&gt;Linktext&lt;/a&gt;
+                    </code>
+                </pre>
                 <ul>
-                    <li <pre><code contenteditable>&lt;tagname attribute='attribute'> text &lt;/tagname></code></pre>
-                    </li>
-                    <li class="fragment">Manche Tags können mit Attributen erweitert werden
-                        <br>
-                    </li>
+                    <li><span class="_pink">href </span>(hyper reference) - enthält das Verweisziel</li>
+                    <li><span class="_pink">title</span> - enthält einen inhaltlichen Hinweis auf das Verweisziel. Wird in den Browsern meist als Tooltip angezeigt.</li>
+                    <li><span class="_pink">Linktext</span> - ist der sichtbare Bereich, der im Browser angezeigt wird</li>
+
                 </ul>
             </section>
             <section>
-                <h2>Der wichtigste Tag im Web</h3>
-          <ul>
-            <li class="fragment">&lt;a> - Anchor Element</li>
-            <li class="fragment">&lt;a>Ein Link&lt;/a></li>
-            <li class="fragment">&lt;a href='somepage.html'>Ein relativer Link&lt;/a></li>
-            <li class="fragment">&lt;a href='/somepage.html'>Ein absoluter Link&lt;/a></li>
-            <li class="fragment">&lt;a href='htt://www.some-webpage/somepage.html'>Ein externer Link&lt;/a></li>
-          </ul>
-        </section>
-        <section>
-          <h2>Elemente zur Seitenstrukturierung</h3>
+               <h2>Referenzierung</h2>
+               <div style="float: left">
+                   <img src="img/ordner_struktur.png" style="border: 1px black solid; margin: 0;padding: 15px;">
+               </div>
+               <div style="width: 60%;float: right">
+                   <ul>
+                      <li style="list-style-type: none">
+                          <span class="_pink">Ich möchte in der Datei kontakte.html einen Link auf die Datei about.html setzen</span>
+                      </li>
+                       <li>
+                          mit vollständiger URL
+                          <pre><code><a href="http://example.org/about/about.html">About</a></code></pre>
+                       </li>
+                       <li>
+                          mit protokoll-relativer URL
+                          <pre><code><a href="//example.org/about/about.html">About</a></code></pre>
+                       </li>
+                       </li>
+                       <li>mit absoluter Pfadangabe<pre><code><a href="/about/about.html">About</a></code></pre>
+                       
+                       </li>
+                       <li>mit relativer Pfadangabe</li><pre><code><a href="../about/about.html">About</a></code></pre>
+                       
+                   </ul>
+               </div>
+                
+            </section>
+            <section>
+               <h2>Referenzierung</h2>
+                
+            </section>
+            
+            <section>
+                Wohlgeformtheit vs. Validierung
+            </section>
+            <section>
+                Validator
+            </section>
+            <section>
+                <h2>ENDE</h2>
+            </section>
+            <section>
+
+                <h2>HTML-Elemente</h2>
+                <dl>
+                    <dt>&lt;h1&gt;This is a heading&lt;/h1&gt;</dt>
+                    <dd>Überschriften von &lt;h1&gt; bis &lt;h6&gt;</span>
+                        <br> Je geringer die Zahl, desto wichtiger die Überschrift.</dd>
+                </dl>
+
+                <figure>
+                    <figcaption>
+
+                    </figcaption>
+                </figure>
+
+            </section>
+            <section>
+                <h2>Hyperlinks im Detail</h2>
+            </section>
+            <section>
+                <h2>Elemente zur Seitenstrukturierung</h2>
+            </section>
+            <section>
+                <h2>Elemente zur Textauszeichnung</h2>
+            </section>
+            <section>
+                <h2>Inlinelevel vs. Blocklevel-Element</h2>
+            </section>
+            <section>
+                <h2>Elemente zur Seitenstrukturierung</h3>
           <p class="fragment">
             <strong>&lt;header></strong>
             <ul class="fragment">
@@ -250,9 +720,15 @@
                 </ul>
             </section>
             <section>
+                <p>
+                    unterschiedliche HTML-Versionen
+                </p>
+            </section>
+
+            <section>
                 <h2>Wie sieht unser HTML Dokument mit Text-Struktur aus</h2>
                 <a href='text_markup.html' target='_blank'>
-                    <p><pre><code>
+                    <pre><code>
             &lt;html>
               &lt;head>...&lt;/head>
               &lt;body>
