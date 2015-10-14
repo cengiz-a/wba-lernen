@@ -48,7 +48,7 @@
                 <p style="margin-top:10%">Volker Schaefer</p>
             </section>
 
-<!--
+            <!--
             <section>
                 <h2>Ziele des Workshops</h2>
                 <ul>
@@ -210,7 +210,7 @@ parturient montes,
 &lt;/body&gt;
 
 &lt;/html&gt;</code></pre>
-               <ul>
+                <ul>
                     <li><span class="_pink">&lt;!DOCTYPE html&gt; </span> - Dokumenttyp-Deklaration (Angabe zur verwendeten HTML-Version bzw. verwendeten Grammatik)</li>
                     <li><span class="_pink">html</span> - Umschließt das gesamte HTML-Dokument.</li>
                     <li><span class="_pink">head</span> - Enthält Kopfdaten bzw. Metangaben wie Seitentitel und Zeichenkodierung. Diese werden im Browser in der Regel nicht angezeigt.</li>
@@ -223,13 +223,13 @@ parturient montes,
             <section>
                 <h2>HTML-Versionen</h2>
                 <ul>
-                    <li><span class="_pink">HTML</span> (ohne Versionsnummer, 3. November 1992): Urversion, die sich nur an Text orientierte.</li>  
-                    <li><span class="_pink">HTML 2.0</span> (November 1995): Führt u.&nbsp;a. Formulartechnik ein. Der Status dieses Standards ist „HISTORIC“. Auch die Vorgänger sind veraltet.</li>  
+                    <li><span class="_pink">HTML</span> (ohne Versionsnummer, 3. November 1992): Urversion, die sich nur an Text orientierte.</li>
+                    <li><span class="_pink">HTML 2.0</span> (November 1995): Führt u.&nbsp;a. Formulartechnik ein. Der Status dieses Standards ist „HISTORIC“. Auch die Vorgänger sind veraltet.</li>
                     <li><span class="_pink">HTML 4.0</span> (18. Dezember 1997): Einführung von Stylesheets, Skripten und Frames. Auch eine Trennung in <i>Strict</i>, <i>Frameset</i> und <i>Transitional</i> erfolgt. Am 24.&nbsp;April 1998 erscheint eine leicht korrigierte Version.</li>
                     <li><span class="_pink">HTML 4.01</span> (24. Dezember 1999): Ersetzt HTML 4.0 mit vielen kleineren Korrekturen. War lange Zeit Standard bis 2014.</li>
-                    <li><span class="_pink">HTML5</span> (Recommendation, 28. Oktober 2014): Aktuelle Version, schafft auf Basis von HTML 4.01 und XHTML 1.0 ein neues Vokabular. Die zu HTML gehörende DOM-Spezifikation wurde ebenfalls überarbeitet und erweitert.</li>            
-                    </ul>
-                    <small>Quelle: <a href="https://de.wikipedia.org/wiki/Hypertext_Markup_Language#Versionen">https://de.wikipedia.org/wiki/Hypertext_Markup_Language#Versionen (14.10.2015)</a></small>
+                    <li><span class="_pink">HTML5</span> (Recommendation, 28. Oktober 2014): Aktuelle Version, schafft auf Basis von HTML 4.01 und XHTML 1.0 ein neues Vokabular. Die zu HTML gehörende DOM-Spezifikation wurde ebenfalls überarbeitet und erweitert.</li>
+                </ul>
+                <small>Quelle: <a href="https://de.wikipedia.org/wiki/Hypertext_Markup_Language#Versionen">https://de.wikipedia.org/wiki/Hypertext_Markup_Language#Versionen (14.10.2015)</a></small>
             </section>
             <section>
                 <h2>Doctype Definition</h2>
@@ -305,7 +305,7 @@ parturient montes,
                 </div>
 
             </section>
-            <section  data-transition="none">
+            <section data-transition="none">
                 <h2>DOM tree</h2>
                 <div style="width: 48%; float:left; margin-right: 1em">
                     <pre style="margin-top:0;"><code class="stretch">&lt;!DOCTYPE html&gt;
@@ -381,7 +381,7 @@ parturient montes,
 
                 </div>
             </section>
-                        <section>
+            <section>
                 <h2>Document Object Model (DOM)</h2>
                 <blockquote>
                     The Document Object Model is a platform- and language-neutral interface that will allow programs and scripts to dynamically access and update the content, structure and style of documents. The document can be further processed and the results of that processing can be incorporated back into the presented page.
@@ -390,7 +390,7 @@ parturient montes,
                     <small>Quelle: <a href="http://www.w3.org/DOM/">http://www.w3.org/DOM</a> (13.10.2015)</small>
                 </blockquote>
             </section>
-            
+
             <section id="wohlgeformtheit">
                 <h2>Regeln für wohlgeformte HTML-Dokumente</h2>
                 <ul>
@@ -404,9 +404,9 @@ parturient montes,
                     <li>Ein Element darf nicht mehrere Attribute mit demselben Namen besitzen.
                         <br> Nicht erlaubt ist bspw.:
                         <pre style="font-size:1em"><code>&lt;div class=&quot;red&quot; class=&quot;green&quot;&gt;&lt;/div&gt;</code></pre></li>
-                        <li>Enthält ein Attribut mehr als ein Attributwert, müssen die Attribute in Hochkommata gesetzt werden.
-                        
-<pre style="font-size:1em"><code>class=&quot;green pull-right small&quot;&gt;&lt;/div&gt;</code></pre></li>
+                    <li>Enthält ein Attribut mehr als ein Attributwert, müssen die Attribute in Hochkommata gesetzt werden.
+
+                        <pre style="font-size:1em"><code>class=&quot;green pull-right small&quot;&gt;&lt;/div&gt;</code></pre></li>
 
                 </ul>
             </section>
@@ -478,7 +478,7 @@ parturient montes,
                         Definiert einen Textabsatz oder Textabschnitt innerhalb eines zusammenhängenden Textes.
                     </dd>
                 </dl>
-                
+
 
 
             </section>
@@ -489,19 +489,21 @@ parturient montes,
                         <li>erzeugen immer vor und nach dem Element einen Umbruch</li>
                         <li>nehmen die gesamte zur Verfügung stehenden Breite ein</li>
                         <li>dürfen weitere Block-Level- und Inline Elemente und Content enthalten </li>
-                        <li>Block-Level Elemente sind bspw.:<br><span>&lt;h1&gt;</span> <span>&lt;p&gt;</span> <span>&lt;div&gt;</span> <span>&lt;article&gt;</span> <span>&lt;section&gt;</span></li>
+                        <li>Block-Level Elemente sind bspw.:
+                            <br><span>&lt;h1&gt;</span> <span>&lt;p&gt;</span> <span>&lt;div&gt;</span> <span>&lt;article&gt;</span> <span>&lt;section&gt;</span></li>
                     </ul>
                 </div>
                 <div style="width:48%;float:right">
-                   <h2>Inline Elemente</h2>
+                    <h2>Inline Elemente</h2>
                     <ul>
                         <li>erzeugen keinen Umbruch</li>
                         <li>nehmen nur die Breite ein, die sie benötigen</li>
                         <li>dürfen weitere Inline Elemente und Content enthalten, aber <span class="_pink">keine</span> Block-Level Elemente</li>
-                        <li>Inline Elemente sind bspw.:<br><span>&lt;span&gt;</span> <span>&lt;a&gt;</span> <span>&lt;strong&gt;</span> <span>&lt;em&gt;</span></li>
+                        <li>Inline Elemente sind bspw.:
+                            <br><span>&lt;span&gt;</span> <span>&lt;a&gt;</span> <span>&lt;strong&gt;</span> <span>&lt;em&gt;</span></li>
                     </ul>
                 </div>
-                
+
             </section>
             <section>
                 <h2>Referenzierung</h2>
@@ -518,35 +520,35 @@ parturient montes,
                 </ul>
             </section>
             <section>
-               <h2>Referenzierung</h2>
-               <div style="float: left">
-                   <img src="img/ordner_struktur.png" style="border: 1px black solid; margin: 0;padding: 15px;" alt="Abbildung Ordnerstruktur">
-               </div>
-               <div style="width: 60%;float: right">
-                   <ul>
-                      <li style="list-style-type: none" class="fragment">
-                          <span class="_pink">Ich möchte in der Datei kontakte.html einen Link auf die Datei about.html definieren</span>
-                      </li>
-                       <li class="fragment">
-                          mit vollständiger URL
-                          <pre><code><a href="http://example.org/about/about.html">About</a></code></pre>
-                       </li>
-                       <li class="fragment">
-                          mit protokoll-relativer URL
-                          <pre><code><a href="//example.org/about/about.html">About</a></code></pre>
-                       </li>
-                       <li class="fragment">mit absoluter Pfadangabe<pre><code><a href="/about/about.html">About</a></code></pre>
-                       
-                       </li>
-                       <li class="fragment">mit relativer Pfadangabe<pre><code><a href="../about/about.html">About</a></code></pre>
-                       </li>
-                       
-                   </ul>
-               </div>
-                
+                <h2>Referenzierung</h2>
+                <div style="float: left">
+                    <img src="img/ordner_struktur.png" style="border: 1px black solid; margin: 0;padding: 15px;" alt="Abbildung Ordnerstruktur">
+                </div>
+                <div style="width: 60%;float: right">
+                    <ul>
+                        <li style="list-style-type: none" class="fragment">
+                            <span class="_pink">Ich möchte in der Datei kontakte.html einen Link auf die Datei about.html definieren</span>
+                        </li>
+                        <li class="fragment">
+                            mit vollständiger URL
+                            <pre><code><a href="http://example.org/about/about.html">About</a></code></pre>
+                        </li>
+                        <li class="fragment">
+                            mit protokoll-relativer URL
+                            <pre><code><a href="//example.org/about/about.html">About</a></code></pre>
+                        </li>
+                        <li class="fragment">mit absoluter Pfadangabe<pre><code><a href="/about/about.html">About</a></code></pre>
+
+                        </li>
+                        <li class="fragment">mit relativer Pfadangabe<pre><code><a href="../about/about.html">About</a></code></pre>
+                        </li>
+
+                    </ul>
+                </div>
+
             </section>
             <section>
-               <h2>Referenzierung - Anker</h2>
+                <h2>Referenzierung - Anker</h2>
                 <div style="width: 48%; float:left; margin-right: 1em">
                     <pre style="margin-top:0;"><code class="stretch">&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;de&quot;&gt;
@@ -578,46 +580,58 @@ parturient montes,
 
   </code></pre>
                 </div>
-               <div style="width: 48%;float: left">
-                   <ul>
-                      <li style="list-style-type: none" class="fragment">
-                          <span class="_pink">Ich möchte eine Sprungmarke auf das Element mit der ID &quot;header&quot; setzen</span>
-                          <pre class="fragment"><code><a href="#header">Zurück zum Header</a></code></pre>
-                      </li>
-                   </ul>
+                <div style="width: 48%;float: left">
+                    <ul>
+                        <li style="list-style-type: none" class="fragment">
+                            <span class="_pink">Ich möchte eine Sprungmarke auf das Element mit der ID &quot;header&quot; setzen</span>
+                            <pre class="fragment"><code><a href="#header">Zurück zum Header</a></code></pre>
+                        </li>
+                    </ul>
                 </div>
-               
-                
+
+
             </section>
-            
+
             <section>
                 <h2>Wohlgeformtheit vs. Gültigkeit</h2>
-                    <p>Ein Dokument ist <span class="_pink">wohlgeformt</span>, wenn es die Regeln für den Aufbau der HTML-Struktur einhält.</p>
-                    <p>Ein Dokument ist <span class="_pink">gültig bzw. valide</span>, wenn es wohlgeformt ist, eine verwendete Grammatik (doctype oder XML-Schema) angegeben wurde  und das Dokument bezüglich der Grammatik korrekt ist.</p>
-                    
-                    <p>Ob ein Dokument gültig ist, kann mit einem <span class="_pink">Validator</span> geprüft werden.</p>
-                    <a href="https://validator.w3.org">https://validator.w3.org</a>
+                <p>Ein Dokument ist <span class="_pink">wohlgeformt</span>, wenn es die Regeln für den Aufbau der HTML-Struktur einhält.</p>
+                <p>Ein Dokument ist <span class="_pink">gültig bzw. valide</span>, wenn es wohlgeformt ist, eine verwendete Grammatik (doctype oder XML-Schema) angegeben wurde und das Dokument bezüglich der Grammatik korrekt ist.</p>
+
+                <p>Ob ein Dokument gültig ist, kann mit einem <span class="_pink">Validator</span> geprüft werden.</p>
+                <a href="https://validator.w3.org">https://validator.w3.org</a>
+            </section>
+            <section>
+                <h2>
+                    Tools und Links
+                </h2>
+                <ul>
+                    <li>
+                        Editoren<br><a href="http://brackets.io">Brackets</a><br><a href="https://atom.io">ATOM</a>
+                    </li>
+                    <li>
+                        Codeplaygrounds<br><a href="http://codepen.io">Codepen</a><br><a href="http://jsfiddle.net">JSFiddle</a>
+                    </li>
+                    <li>
+                        Links
+                        <br><a href="http://www.w3schools.com">W3schools</a>
+                        <br><a href="http://www.w3.org">W3C</a>
+                        <br><a href="http://www.w3.org/TR/html5/">HTML5 Spezifikation</a>
+                        
+                    </li>
+                </ul>
             </section>
 
             <section class="center">
                 <p style="text-align:center;font-size: 2em;" class="_margin-bottom-50"><span class="_pink">Thank you </span>for listening.</p>
             </section>
-            
+
             <section>
-                <h2>Wie funktioniert diese Übung?</h2>
-                <ul>
-                    <li class="fragment">Ihr bekommt eine <a href='rezept-uebung.html'>HTML Datei</a></li>
-                    <li class="fragment">Diese beinhaltet die absoluten HTML Basics für eine Rezeptseite</li>
-                    <li class="fragment">Im HTML findet ihr als Kommentar 8 Aufgaben</li>
-                    <li class="fragment">Bearbeitet die HTML Datei mit einem Editor</li>
-                </ul>
-            </section>
-            <section>
-                <h2>Editoren?</h2>
-                <ul>
-                    <li class="fragment">Genereller, guter Editor <a href='http://www.sublimetext.com/'>Sublime Text</a></li>
-                    <li class="fragment">Spezieller Editor für HTML, CSS und Javascript <a href='http://brackets.io/'>Brackets</a></li>
-                    <li class="fragment">Für kleine Sachen (z.B. diese Übung) <a href='http://codepen.io/'>codepen.io</a></li>
+                <h2>Weiter geht's in den Räumen</h2>
+                <ul style="list-style-type: none">
+                    <li><span class="_pink">3.216</span> – MI-Studio</li>
+                    <li><span class="_pink">3.217</span> - MI-Pool</li>
+                    <li><span class="_pink">2.113</span> - Moderationsraum</li>
+
                 </ul>
             </section>
         </div>
