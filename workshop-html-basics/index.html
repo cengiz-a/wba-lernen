@@ -180,7 +180,7 @@ parturient montes,
                 <h2>HTML-Elemente</h2>
                 <ul>
                     <li class="fragment">
-                        <p>Für ein HTML-Element können ein oder mehrere Attribute eingefügt werden. Darüber werden eränzende zum Element definiert</p>
+                        <p>Für ein HTML-Element können ein oder mehrere Attribute eingefügt werden. Darüber werden ergänzende Informationen zum Element definiert</p>
                         <pre><code>
 &lt;tagname attributname=&quot;attributwert&quot;&gt;content&lt;/tagname&gt;
                    </code></pre>
@@ -211,7 +211,7 @@ parturient montes,
 
 &lt;/html&gt;</code></pre>
                <ul>
-                    <li><span class="_pink"><!DOCTYPE html> </span>Dokumenttyp-Deklaration (Angabe zur verwendeten HTML-Version bzw. verwendeten Grammatik)</li>
+                    <li><span class="_pink">&lt;!DOCTYPE html&gt; </span> - Dokumenttyp-Deklaration (Angabe zur verwendeten HTML-Version bzw. verwendeten Grammatik)</li>
                     <li><span class="_pink">html</span> - Umschließt das gesamte HTML-Dokument.</li>
                     <li><span class="_pink">head</span> - Enthält Kopfdaten bzw. Metangaben wie Seitentitel und Zeichenkodierung. Diese werden im Browser in der Regel nicht angezeigt.</li>
                     <li><span class="_pink">body</span> - Enthält den Inhalt, der im Browser angezeigt wird</li>
@@ -219,32 +219,7 @@ parturient montes,
                 </ul>
 
             </section>
-            <section>
-                <h2>HTML-Grundgerüst</h2>
-                <figure>
-                    <pre><code>
-&lt;!DOCTYPE html&gt;
-                </code></pre>
-                </figure>
-                <pre><code>
-                
-&lt;html lang=&quot;de&quot;&gt;
 
-                </code></pre>
-                <pre><code>
-
-&lt;head&gt;
-    &lt;title&gt;Seitentitel&lt;/title&gt;
-&lt;/head&gt;
-                </code></pre>
-                <pre><code>
-&lt;body&gt;
-&lt;/body&gt;
-                </code></pre>
-                <pre><code>
-&lt;/html&gt;
-          </code></pre>
-            </section>
             <section>
                 <h2>HTML-Versionen</h2>
                 <ul>
@@ -252,7 +227,7 @@ parturient montes,
                     <li><span class="_pink">HTML 2.0</span> (November 1995): Führt u.&nbsp;a. Formulartechnik ein. Der Status dieses Standards ist „HISTORIC“. Auch die Vorgänger sind veraltet.</li>  
                     <li><span class="_pink">HTML 4.0</span> (18. Dezember 1997): Einführung von Stylesheets, Skripten und Frames. Auch eine Trennung in <i>Strict</i>, <i>Frameset</i> und <i>Transitional</i> erfolgt. Am 24.&nbsp;April 1998 erscheint eine leicht korrigierte Version.</li>
                     <li><span class="_pink">HTML 4.01</span> (24. Dezember 1999): Ersetzt HTML 4.0 mit vielen kleineren Korrekturen. War lange Zeit Standard bis 2014.</li>
-                    <li><span class="_pink"><a href="/wiki/HTML5" title="HTML5">HTML5</a></span> (Recommendation, 28. Oktober 2014): Aktuelle Version, schafft auf Basis von HTML 4.01 und XHTML 1.0 ein neues Vokabular. Die zu HTML gehörende DOM-Spezifikation wurde ebenfalls überarbeitet und erweitert.</li>            
+                    <li><span class="_pink">HTML5</span> (Recommendation, 28. Oktober 2014): Aktuelle Version, schafft auf Basis von HTML 4.01 und XHTML 1.0 ein neues Vokabular. Die zu HTML gehörende DOM-Spezifikation wurde ebenfalls überarbeitet und erweitert.</li>            
                     </ul>
                     <small>Quelle: <a href="https://de.wikipedia.org/wiki/Hypertext_Markup_Language#Versionen">https://de.wikipedia.org/wiki/Hypertext_Markup_Language#Versionen (14.10.2015)</a></small>
             </section>
@@ -330,15 +305,6 @@ parturient montes,
                 </div>
 
             </section>
-            <section>
-                <h2>Document Object Model (DOM)</h2>
-                <blockquote>
-                    The Document Object Model is a platform- and language-neutral interface that will allow programs and scripts to dynamically access and update the content, structure and style of documents. The document can be further processed and the results of that processing can be incorporated back into the presented page.
-                    <br>
-                    <br>
-                    <small>Quelle: <a href="http://www.w3.org/DOM/">http://www.w3.org/DOM/</a>https://de.wikipedia.org/wiki/Document_Object_Model (13.10.2015)</small>
-                </blockquote>
-            </section>
             <section  data-transition="none">
                 <h2>DOM tree</h2>
                 <div style="width: 48%; float:left; margin-right: 1em">
@@ -414,7 +380,17 @@ parturient montes,
                     <img src="svg/dom_tree_mit_overlay.svg" alt="Abbildung DOM Tree" style="padding-left:12px">
 
                 </div>
-            </section>            
+            </section>
+                        <section>
+                <h2>Document Object Model (DOM)</h2>
+                <blockquote>
+                    The Document Object Model is a platform- and language-neutral interface that will allow programs and scripts to dynamically access and update the content, structure and style of documents. The document can be further processed and the results of that processing can be incorporated back into the presented page.
+                    <br>
+                    <br>
+                    <small>Quelle: <a href="http://www.w3.org/DOM/">http://www.w3.org/DOM</a> (13.10.2015)</small>
+                </blockquote>
+            </section>
+            
             <section id="wohlgeformtheit">
                 <h2>Regeln für wohlgeformte HTML-Dokumente</h2>
                 <ul>
@@ -430,26 +406,26 @@ parturient montes,
                         <pre style="font-size:1em"><code>&lt;div class=&quot;red&quot; class=&quot;green&quot;&gt;&lt;/div&gt;</code></pre></li>
                         <li>Enthält ein Attribut mehr als ein Attributwert, müssen die Attribute in Hochkommata gesetzt werden.
                         
-<pre style="font-size:1em"><code>&lt;div class=&quot;red&quot; class=&quot;green pull-right small&quot;&gt;&lt;/div&gt;</code></pre></li>
+<pre style="font-size:1em"><code>class=&quot;green pull-right small&quot;&gt;&lt;/div&gt;</code></pre></li>
 
                 </ul>
             </section>
             <section>
                 <h2>HTML-Elemente zur Seitenstrukturierung</h2>
-                <dl>
+                <dl class="fragment">
                     <dt>&lt;header&gt;</dt>
                     <dd>Enthält den sichtbaren Kopfbereich einer Webseite oder eines Teils einer Seite. Nicht zu verwechseln mit dem head-Element
                     </dd>
                 </dl>
-                <dl>
+                <dl class="fragment">
                     <dt>&lt;nav&gt;</dt>
                     <dd>Umschließt Navigationsleisten und Menüs. Neben einer unsortierten Liste mit den Verweisen, können auch andere Elemente, wie z.B eine Überschrift enthalten sein.</dd>
                 </dl>
-                <dl>
+                <dl class="fragment">
                     <dt>&lt;footer&gt;</dt>
                     <dd>Enthält die Informationen, die am Ende einer Webseite oder eines Teils einer Seite stehen.</dd>
                 </dl>
-                <dl>
+                <dl class="fragment">
                     <dt>&lt;address&gt;</dt>
                     <dd>Enthält Kontaktdaten Autor oder inhaltlich Verantwortliche einer Seite oder eines Abschnittes</dd>
                 </dl>
@@ -458,19 +434,19 @@ parturient montes,
             </section>
             <section>
                 <h2>HTML-Elemente zur Seitenstrukturierung</h2>
-                <dl>
+                <dl class="fragment">
                     <dt>&lt;section&gt;</dt>
-                    <dd>Enthält laut eine thematische Gruppierung von Inhalten. Es dient dazu, den Inhalt einer Webseite oder auch einen article in semantische Abschnitte zu gliedern.</dd>
+                    <dd>Enthält eine thematische Gruppierung von Inhalten. Es dient dazu, den Inhalt einer Webseite oder auch einen article in semantische Abschnitte zu gliedern.</dd>
                 </dl>
-                <dl>
+                <dl class="fragment">
                     <dt>&lt;article&gt;</dt>
                     <dd>Stellt einen in sich geschlossenen Abschnitt eines Dokuments dar, vergleichbar mit einem Zeitungsartikel. Zur feineren Stukturierung kann es Header- Section- und Footer-Elemente enthalten</dd>
                 </dl>
-                <dl>
+                <dl class="fragment">
                     <dt>&lt;div&gt;</dt>
                     <dd>Dient dazu mehrere Elemente wie Texte, Grafiken, Tabellen usw., in einen gemeinsamen Bereich einzuschließen, um sie mit CSS zu formatieren.</dd>
                 </dl>
-                <dl>
+                <dl class="fragment">
                     <dt>&lt;aside&gt;</dt>
                     <dd>Umschließt Abschnitte einer Seite, deren Inhalt nur in einem indirekten Zusammenhang mit dem umgebenden Inhalt stehen. Z.B. Randbemerkungen, Fußnoten oder Sidebars.</dd>
                 </dl>
@@ -548,21 +524,21 @@ parturient montes,
                </div>
                <div style="width: 60%;float: right">
                    <ul>
-                      <li style="list-style-type: none">
-                          <span class="_pink">Ich möchte in der Datei kontakte.html einen Link auf die Datei about.html setzen</span>
+                      <li style="list-style-type: none" class="fragment">
+                          <span class="_pink">Ich möchte in der Datei kontakte.html einen Link auf die Datei about.html definieren</span>
                       </li>
-                       <li>
+                       <li class="fragment">
                           mit vollständiger URL
                           <pre><code><a href="http://example.org/about/about.html">About</a></code></pre>
                        </li>
-                       <li>
+                       <li class="fragment">
                           mit protokoll-relativer URL
                           <pre><code><a href="//example.org/about/about.html">About</a></code></pre>
                        </li>
-                       <li>mit absoluter Pfadangabe<pre><code><a href="/about/about.html">About</a></code></pre>
+                       <li class="fragment">mit absoluter Pfadangabe<pre><code><a href="/about/about.html">About</a></code></pre>
                        
                        </li>
-                       <li>mit relativer Pfadangabe<pre><code><a href="../about/about.html">About</a></code></pre>
+                       <li class="fragment">mit relativer Pfadangabe<pre><code><a href="../about/about.html">About</a></code></pre>
                        </li>
                        
                    </ul>
@@ -604,9 +580,9 @@ parturient montes,
                 </div>
                <div style="width: 48%;float: left">
                    <ul>
-                      <li style="list-style-type: none">
+                      <li style="list-style-type: none" class="fragment">
                           <span class="_pink">Ich möchte eine Sprungmarke auf das Element mit der ID &quot;header&quot; setzen</span>
-                          <pre><code><a href="#header">Zurück zum Header</a></code></pre>
+                          <pre class="fragment"><code><a href="#header">Zurück zum Header</a></code></pre>
                       </li>
                    </ul>
                 </div>
