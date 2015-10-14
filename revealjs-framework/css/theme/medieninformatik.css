@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic);
+@charset "UTF-8";
 /**
  * Renewed Medieninformatik theme for reveal.js.
  * This templete file was created to not mess up with the existing presentations
@@ -8,19 +8,20 @@
  *
  * Designguide: http://www.medieninformatik.fh-koeln.de/website/general/general/designguide_3/de/de_designguide_articl_1.php
  */
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic);
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
 body {
   background-color: #fbfbfb;
-  background-image: url('../../images/vieldrin-black.png');
+  background-image: url("../../images/vieldrin-black.png");
   background-position: 20px 95%;
   background-repeat: no-repeat;
   background-size: 15%;
   background-color: #fbfbfb; }
 
 .reveal {
-  font-family: 'PT Sans', Arial, Helvetica, Tahoma, sans-serif;
+  font-family: "PT Sans", Arial, Helvetica, Tahoma, sans-serif;
   font-size: 29px;
   font-weight: normal;
   color: #231f20; }
@@ -30,17 +31,23 @@ body {
   background: #77cc00;
   text-shadow: none; }
 
-.reveal .slides > section, .reveal .slides > section > section {
+.reveal .slides > section,
+.reveal .slides > section > section {
   line-height: 1.3;
   font-weight: inherit; }
 
 /*********************************************
  * HEADERS
  *********************************************/
-.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
   margin: 0 0 30px 0;
-  color: #9313c3;
-  font-family: 'PT Sans', Arial, Helvetica, Tahoma, sans-serif;
+  color: #231f20;
+  font-family: "PT Sans", Arial, Helvetica, Tahoma, sans-serif;
   font-weight: normal;
   line-height: 0.9em;
   letter-spacing: 0.02em;
@@ -71,17 +78,22 @@ body {
   line-height: 1.3; }
 
 /* Ensure certain elements are never larger than the slide itself */
-.reveal img, .reveal video, .reveal iframe {
+.reveal img,
+.reveal video,
+.reveal iframe {
   max-width: 95%;
   max-height: 95%; }
 
-.reveal strong, .reveal b {
+.reveal strong,
+.reveal b {
   font-weight: bold; }
 
 .reveal em {
   font-style: italic; }
 
-.reveal ol, .reveal dl, .reveal ul {
+.reveal ol,
+.reveal dl,
+.reveal ul {
   display: inline-block;
   text-align: left;
   margin: 0 0 0 1em; }
@@ -98,7 +110,10 @@ body {
 .reveal ul ul ul {
   list-style-type: circle; }
 
-.reveal ul ul, .reveal ul ol, .reveal ol ol, .reveal ol ul {
+.reveal ul ul,
+.reveal ul ol,
+.reveal ol ol,
+.reveal ol ul {
   display: block;
   margin-left: 40px; }
 
@@ -108,7 +123,8 @@ body {
 .reveal dd {
   margin-left: 40px; }
 
-.reveal q, .reveal blockquote {
+.reveal q,
+.reveal blockquote {
   quotes: none; }
 
 .reveal blockquote {
@@ -121,7 +137,8 @@ body {
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2); }
 
-.reveal blockquote p:first-child, .reveal blockquote p:last-child {
+.reveal blockquote p:first-child,
+.reveal blockquote p:last-child {
   display: inline-block; }
 
 .reveal q {
@@ -148,6 +165,7 @@ body {
   overflow: auto;
   max-height: 400px;
   word-wrap: normal;
+  background: #3F3F3F;
   color: #DCDCDC; }
 
 .reveal table {
@@ -158,15 +176,18 @@ body {
 .reveal table th {
   font-weight: bold; }
 
-.reveal table th, .reveal table td {
+.reveal table th,
+.reveal table td {
   text-align: left;
   padding: 0.2em 0.5em 0.2em 0.5em;
   border-bottom: 1px solid; }
 
-.reveal table th[align="center"], .reveal table td[align="center"] {
+.reveal table th[align="center"],
+.reveal table td[align="center"] {
   text-align: center; }
 
-.reveal table th[align="right"], .reveal table td[align="right"] {
+.reveal table th[align="right"],
+.reveal table td[align="right"] {
   text-align: right; }
 
 .reveal table tr:last-child td {
@@ -193,18 +214,18 @@ body {
 .reveal a {
   color: #4952e1;
   text-decoration: none;
-  -webkit-transition: color 0.15s ease;
-  -moz-transition: color 0.15s ease;
-  transition: color 0.15s ease; }
+  -webkit-transition: color .15s ease;
+  -moz-transition: color .15s ease;
+  transition: color .15s ease; }
 
 .reveal a:hover {
-  color: #a1a6ef;
+  color: #a1a5ef;
   text-shadow: none;
   border: none; }
 
 .reveal .roll span:after {
   color: #fff;
-  background: #1f2abe; }
+  background: #1f29be; }
 
 /*********************************************
  * IMAGES
@@ -216,9 +237,9 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
 
 .reveal a img {
-  -webkit-transition: all 0.15s linear;
-  -moz-transition: all 0.15s linear;
-  transition: all 0.15s linear; }
+  -webkit-transition: all .15s linear;
+  -moz-transition: all .15s linear;
+  transition: all .15s linear; }
 
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
@@ -228,29 +249,33 @@ body {
 /*********************************************
  * NAVIGATION CONTROLS
  *********************************************/
-.reveal .controls div.navigate-left, .reveal .controls div.navigate-left.enabled {
+.reveal .controls div.navigate-left,
+.reveal .controls div.navigate-left.enabled {
   border-right-color: #4952e1; }
 
-.reveal .controls div.navigate-right, .reveal .controls div.navigate-right.enabled {
+.reveal .controls div.navigate-right,
+.reveal .controls div.navigate-right.enabled {
   border-left-color: #4952e1; }
 
-.reveal .controls div.navigate-up, .reveal .controls div.navigate-up.enabled {
+.reveal .controls div.navigate-up,
+.reveal .controls div.navigate-up.enabled {
   border-bottom-color: #4952e1; }
 
-.reveal .controls div.navigate-down, .reveal .controls div.navigate-down.enabled {
+.reveal .controls div.navigate-down,
+.reveal .controls div.navigate-down.enabled {
   border-top-color: #4952e1; }
 
 .reveal .controls div.navigate-left.enabled:hover {
-  border-right-color: #a1a6ef; }
+  border-right-color: #a1a5ef; }
 
 .reveal .controls div.navigate-right.enabled:hover {
-  border-left-color: #a1a6ef; }
+  border-left-color: #a1a5ef; }
 
 .reveal .controls div.navigate-up.enabled:hover {
-  border-bottom-color: #a1a6ef; }
+  border-bottom-color: #a1a5ef; }
 
 .reveal .controls div.navigate-down.enabled:hover {
-  border-top-color: #a1a6ef; }
+  border-top-color: #a1a5ef; }
 
 /*********************************************
  * PROGRESS BAR
@@ -274,30 +299,37 @@ body {
   text-align: left; }
 
 .reveal section:first-child h1 {
-  text-transform: uppercase;
-  font-size: 1.9em;
+  font-size: 2em;
   margin-bottom: 0;
-  text-align: center;
   margin-top: 20px; }
 
 .reveal section:first-child h2 {
-  text-transform: uppercase;
-  font-size: 1.7em;
-  text-align: center;
-  background-color: #dd1166;
-  color: #fff;
+  font-size: 1.5em;
+  color: #dd1166;
+  /*background-color: $magenta;*/
+  /*color: #fff;*/
   line-height: 1em;
   padding: 0.3em 0 0.1em 0;
   margin-bottom: 30px; }
 
-.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
-  font-weight: bold; }
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  font-weight: 100; }
 
 .reveal h1 {
   font-size: 1.5em; }
 
 .reveal h2 {
   font-size: 1.5em; }
+
+.reveal h2.u {
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  border-bottom: solid 1px #dd1166; }
 
 .reveal h3 {
   font-size: 1.2em;
@@ -309,13 +341,20 @@ body {
 .reveal h4 {
   font-size: 1em; }
 
-.reveal h1.inverse, .reveal h2.inverse, .reveal h3.inverse, .reveal h4.inverse, .reveal h5.inverse, .reveal h6.inverse {
+.reveal h1.inverse,
+.reveal h2.inverse,
+.reveal h3.inverse,
+.reveal h4.inverse,
+.reveal h5.inverse,
+.reveal h6.inverse {
   color: #fff;
   background: #9313c3;
   padding: 0.3em;
   display: inline-block; }
 
-.reveal img, .reveal video, .reveal iframe {
+.reveal img,
+.reveal video,
+.reveal iframe {
   max-width: 95%;
   max-height: 80%; }
 
@@ -329,7 +368,8 @@ body {
 .reveal img.align-right {
   float: right; }
 
-.reveal li, .reveal p {
+.reveal li,
+.reveal p {
   font-size: 0.9em;
   margin-bottom: 15px; }
 
@@ -367,14 +407,21 @@ body {
   color: #231f20;
   text-decoration: underline; }
 
-.reveal h1 strong, .reveal h2 strong, .reveal h3 strong {
+.reveal .invers * {
+  color: white; }
+
+.reveal h1 strong,
+.reveal h2 strong,
+.reveal h3 strong {
   color: #231f20;
   text-decoration: none; }
 
-.reveal .slides section .fragment.highlight-red.visible, .reveal .magenta {
+.reveal .slides section .fragment.highlight-red.visible,
+.reveal .magenta {
   color: #dd1166; }
 
-.reveal .slides section .fragment.highlight-green.visible, .reveal .green {
+.reveal .slides section .fragment.highlight-green.visible,
+.reveal .green {
   color: #77cc00; }
 
 .reveal .brown {
@@ -383,7 +430,9 @@ body {
 .reveal .purple {
   color: #9313c3; }
 
-.reveal .slides section .fragment.highlight-blue.visible, .reveal .highlight-blue.visible, .reveal .blue {
+.reveal .slides section .fragment.highlight-blue.visible,
+.reveal .highlight-blue.visible,
+.reveal .blue {
   color: #4952e1; }
 
 .reveal table {
@@ -393,7 +442,9 @@ body {
   margin: 0 0 20px;
   width: 100%; }
 
-.reveal caption, .reveal th, .reveal td {
+.reveal caption,
+.reveal th,
+.reveal td {
   font-weight: normal;
   text-align: left;
   text-shadow: none; }
@@ -411,83 +462,11 @@ body {
   padding: 6px 10px 6px 0; }
 
 .reveal pre {
-  font-size: 0.6em;
+  font-size: .6em;
   tab-size: 4;
   width: 100%;
   background-color: transparent;
   box-shadow: none; }
 
 .reveal pre code {
-  padding: 0.2em 0.4em; }
-
-/*********************************************
- * HELPER
- *********************************************/
-
-._violett {
-    color: #9313c3 !important;
-}
-
-._pink {
-    color: #dd1166 !important;
-}
-
-._xl-fontsize {
-    font-size: 4rem !important;
-}
-
-._l-fontsize {
-    font-size: 3rem !important;
-}
-._m-fontsize {
-    font-size: 2rem !important;
-}
-
-._center { 
-    text-align: center !important; 
-}
-
-._margin-bottom-50 {
-    margin-bottom: 50px !important;
-}
-
-		._fullscreen-image .reveal .slides {
-			height: 100% !important;
-			left: 0;
-			margin: 0 auto;
-			padding: 0;
-			top: 0;
-			width: 100% !important;
-		}
-		._fullscreen-image .reveal .slides > section {
-			background-position-x: center;
-			background-position-y: 10px;
-			background-repeat: no-repeat;
-			background-size: auto 90%;
-			height: 100%;
-			left: 0;
-			margin: 0;
-			position: absolute;
-			top: 0;
-			width: 100%;
-		}
-		._fullscreen-image .reveal .slides > section .bu {
-			background-color: rgba(221, 17, 102, 0.8);
-			top: 30px;
-			display: inline-block;
-			color: white;
-			padding: 0 10px 0 100px;
-			position: absolute;
-		}
-		._fullscreen-image .reveal .slides > section .quelle {
-			bottom: 40px;
-			color: black;
-			display: inline-block;
-			font-size: 10px;
-            left: 10px;
-			position: absolute;
-		}
-
-
-
-
+  padding: .2em .4em; }

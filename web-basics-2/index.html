@@ -1,0 +1,923 @@
+<!doctype html>
+
+<!--
+	- breaking off the course of studies
+	- standard study period
+	- finish the programme in standard study period
+	- drop off rate
+	
+    Welcome to the light side of the source, young padawan.
+
+    One step closer to learn something interesting you are...
+
+                               ____                  
+                            _.' :  `._               
+                        .-.'`.  ;   .'`.-.           
+               __      / : ___\ ;  /___ ; \      __  
+             ,'_ ""=-.:__;".-.";: :".-.":__;.-="" _`,
+             :' `.t""=-.. '<@.`;_  ',@:` ..-=""j.' `;
+                  `:-.._J '-.-'L__ `-.-' L_..-;'     
+                    "-.__ ;  .-"  "-.  : __.-"       
+                        L ' /.======.\ ' J           
+                         "-.   "__"   .-"            
+                        __.l"-:_JL_;-";.__           
+                     .-j/'.;  ;""""  / .'\"-.        
+                   .' /:`. "-.:     .-" .';  `.      
+                .-"  / ;  "-. "-..-" .-"  :    "-.   
+             .+"-.  : :      "-.__.-"      ;-._   \  
+             ; \  `.; ;                    : : "+. ; 
+             :  ;   ; ;                    : ;  : \: 
+             ;  :   ; :                    ;:   ;  : 
+            : \  ;  :  ;                  : ;  /  :: 
+            ;  ; :   ; :                  ;   :   ;: 
+            :  :  ;  :  ;                : :  ;  : ; 
+            ;\    :   ; :                ; ;     ; ; 
+            : `."-;   :  ;              :  ;    /  ; 
+             ;    -:   ; :              ;  : .-"   : 
+             :\     \  :  ;            : \.-"      : 
+              ;`.    \  ; :            ;.'_..-=  / ; 
+              :  "-.  "-:  ;          :/."      .'  :
+               \         \ :          ;/  __        :
+                \       .-`.\        /t-""  ":-+.   :
+                 `.  .-"    `l    __/ /`. :  ; ; \  ;
+                   \   .-" .-"-.-"  .' .'j \  /   ;/ 
+                    \ / .-"   /.     .'.' ;_:'    ;  
+                     :-""-.`./-.'     /    `.___.'   
+                           \ `t  ._  /               
+                            "-.t-._:'                
+
+-->
+
+<!--
+    
+    So you'd like to know how to use impress.js?
+    
+    You've made the first, very important step - you're reading the source code.
+    And that's how impress.js presentations are built - with HTML and CSS code.
+    
+    Believe me, you need quite decent HTML and CSS skills to be able to use impress.js effectively.
+    And what is even more important, you need to be a designer, too, because there are no default
+    styles for impress.js presentations, there is no default or automatic layout for them.
+    
+    You need to design and build it by hand.
+    
+    So...
+    
+    Would you still like to know how to use impress.js?
+    
+-->
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <!--meta name="viewport" content="width=1024" /-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Mobile Impact On … // Christian Noss</title>
+    
+    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+    <meta name="author" content="Bartek Szopka" />
+
+    <!--
+        
+        Impress.js doesn't depend on any external stylesheet. Script adds all styles it needs for
+        presentation to work.
+        
+        This style below contains styles only for demo presentation. Browse it to see how impress.js
+        classes are used to style presentation steps, or how to apply fallback styles, but I don't want
+        you to use them directly in your presentation.
+        
+        Be creative, build your own. We don't really want all impress.js presentations to look the same,
+        do we?
+        
+        When creating your own presentation get rid of this file. Start from scratch, it's fun!
+        
+    -->
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    <link href="less/cn.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+<!--
+    
+    Body element is used by impress.js to set some useful class names, that will allow you to detect
+    the support and state of the presentation in CSS or other scripts.
+    
+    First very useful class name is `impress-not-supported`. This class means, that browser doesn't
+    support features required by impress.js, so you should apply some fallback styles in your CSS.
+    It's not necessary to add it manually on this element. If the script detects that browser is not
+    good enough it will add this class, but keeping it in HTML means that users without JavaScript
+    will also get fallback styles.
+    
+    When impress.js script detects that browser supports all required features, this class name will
+    be removed.
+    
+    The class name on body element also depends on currently active presentation step. More details about
+    it can be found later, when `hint` element is being described.
+    
+-->
+<body class="impress-not-supported" id="cn">
+
+<div id="menue" class='extra-clickable'>
+	<p>Mobile Impact On …</p>
+</div>
+<!--
+    For example this fallback message is only visible when there is `impress-not-supported` class on body.
+-->
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<!--
+    
+    Now that's the core element used by impress.js.
+    
+    That's the wrapper for your presentation steps. In this element all the impress.js magic happens.
+    It doesn't have to be a `<div>`. Only `id` is important here as that's how the script find it.
+    
+    You probably won't need it now, but there are some configuration options that can be set on this element.
+    
+    To change the duration of the transition between slides use `data-transition-duration="2000"` giving it
+    a number of ms. It defaults to 1000 (1s).
+    
+    You can also control the perspective with `data-perspective="500"` giving it a number of pixels.
+    It defaults to 1000. You can set it to 0 if you don't want any 3D effects.
+    If you are willing to change this value make sure you understand how CSS perspective works:
+    https://developer.mozilla.org/en/CSS/perspective
+    
+    But as I said, you won't need it for now, so don't worry - there are some simple but interesing things
+    right around the corner of this tag ;)
+    
+-->
+<div id="impress">
+
+    <!--
+        
+        Here is where interesting thing start to happen.
+        
+        Each step of the presentation should be an element inside the `#impress` with a class name
+        of `step`. These step elements are positioned, rotated and scaled by impress.js, and
+        the 'camera' shows them on each step of the presentation.
+        
+        Positioning information is passed through data attributes.
+        
+        In the example below we only specify x and y position of the step element with `data-x="-1000"`
+        and `data-y="-1500` attributes. This means that **the center** of the element (yes, the center)
+        will be positioned in point x = -1000px and y = -1500px of the presentation 'canvas'.
+        
+        It will not be rotated or scaled.
+        
+    -->
+    <!--div id="title"  data-scale="10"  class="step" data-x="-1000" data-y="-1500">
+        <q>Curriculums at the University of Applied Sciences Cologne: </q><h1>Learnings from different approaches.</h1>
+    </div-->
+
+    <!--
+        
+        The `id` attribute of the step element is used to identify it in the URL, but it's optional.
+        If it is not defined, it will get a default value of `step-N` where N is a number of slide.
+        
+        So in the example below it'll be `step-2`.
+        
+        The hash part of the url when this step is active will be `#/step-2`.
+        
+        You can also use `#step-2` in a link, to point directly to this particular step.
+        
+        Please note, that while `#/step-2` (with slash) would also work in a link it's not recommended.
+        Using classic `id`-based links like `#step-2` makes these links usable also in fallback mode.
+        
+    -->
+    <!--div  data-scale="10"  class="step slide" data-x="0" data-y="-1500">
+        <q>Don't you think that presentations given <strong>in modern browsers</strong> shouldn't <strong>copy the limits</strong> of 'classic' slide decks?</q>
+    </div>
+
+    <div  data-scale="10"  class="step slide" data-x="1000" data-y="-1500">
+        <q>Would you like to <strong>impress your audience</strong> with <strong>stunning visualization</strong> of your talk?</q>
+    </div-->
+
+    <!--
+        
+        This is an example of step element being scaled.
+        
+        Again, we use a `data-` attribute, this time it's `data-scale="4"`, so it means that this
+        element will be 4 times larger than the others.
+        From presentation and transitions point of view it means, that it will have to be scaled
+        down (4 times) to make it back to its correct size.
+        
+    -->
+    
+    <!-- Titel
+	/////	/////	/////	/////	///// /////	/////	/////	/////	///// -->
+    <div id="start"  data-scale="10"  class="step">
+			<h1 class="saugross fett">The<i> web</i> is for <span class="pink fett">everyone</span>.</h1>
+    </div>
+
+    <!-- Me
+	/////	/////	/////	/////	///// /////	/////	/////	/////	///// -->
+    
+    <div id="me"  data-scale="2"  class="step"  data-rotate-y="180" data-z="-500" data-y="3000">
+        <p class="gross pink">Christian Noss</p>
+        <ul class="bullets klein top1">
+        	<li>Designer</li>
+        	<li>Geschäftsführender Gesellschafter der Klickmeister GmbH in Essen</li>
+        	<li>Kommunikationsdesign in der Medieninformatik</li>
+        </ul>
+    </div>
+    
+    
+    <!-- Warm-up
+	/////	/////	/////	/////	///// /////	/////	/////	/////	///// -->
+	<div id="warm_up" class="step" data-scale="5" data-x="10000">
+        <img src="images/device-outlines/outlines-frage.svg" width="100%">
+	</div>
+	
+	<div id="warm_up" class="step" data-scale="5" data-x="10000">
+        <img src="images/device-outlines/outlines-smartphone.svg" width="100%">
+	</div>
+	
+	<div data-scale="5" class="step" data-x="10000" data-rotate-y="90">
+        <quote class="saugross fett">There is <span class="pink">no reason</span> anyone would want a <span class="pink">computer</span> in their <span class="pink">home</span><i>.</i></quote>
+        <p class="grau klein">Ken Olsen, Founder of Digital Equipment Corporation, 1977</p>
+	</div>
+	
+	<div data-scale="5" class="step" data-x="10000" data-y="4000">
+		<quote class="gross fett">Technologie<br><i>verändert</i> Verhalten.</quote>
+	</div>
+	
+	<div data-scale="5" class="step" data-x="10000" data-y="4000">
+		<quote class="gross fett">Verhalten<br><i class="pink">verändert</i> Technologie.</quote>
+	</div>
+	
+	<div data-scale="5" class="step" data-x="10000" data-y="10000">
+		<p class="saugross halbfett"><span class="pink fett">Wann checken</span> Sie an einem normalen Wochentag das erste mal Ihr Smartphone?</p>
+	</div>
+	
+	<div data-scale="5" class="step mittig" data-x="5000" data-y="10000" data-rotate-y="20">
+		<img src="images/mobilemania-erster-check.png" alt="mobilemania-erster-check" width="479" height="374">
+	</div>
+	
+
+	
+	<div data-scale="5" class="step" data-x="10000" data-y="15000">
+		<p class="saugross halbfett"><span class="pink fett">Wann schalten</span> Sie Ihr Smartphone <span class="pink fett">aus</span>?</p>
+	</div>
+	
+	<div data-scale="1" class="step mittig" data-x="5000" data-y="15000" data-rotate-y="20">
+		<img src="images/mobilemania-ausschalten.png" alt="mobilemania-ausschalten" width="464" height="374">
+	</div>
+
+	<div data-scale="5" class="step" data-x="10000" data-y="20000">
+		<p class="saugross halbfett"><span class="pink fett">Wie oft checken</span> Sie am Tag Ihr Smartphone?</p>
+	</div>
+	
+	<div data-scale="5" class="step" data-x="5000" data-y="20000" data-rotate-y="20">
+		<img src="images/mobilemania.png" alt="mobilemania" width="497" height="369">
+	</div>
+	
+	
+	<div data-scale="5" class="step" data-x="10000"  data-y="25000">
+		<p class="gross halbfett">Warum auch immer: <span class="pink fett">Sie verlieren Ihr Smartphone.</span> Wie lange dauert es, bis Sie den Verlust bemerken?</p>
+	</div>
+	
+	<div data-scale="5" class="step mittig" data-x="5000" data-y="25000" data-rotate-y="20">
+		<img src="images/mobilemania-smartphone-weg.png" alt="mobilemania-smartphone-weg" width="452" height="374">
+	</div>
+	
+	<div data-scale="5" class="step" data-x="10000" data-y="30000">
+		<p class="gross halbfett"><span class="pink fett">Ihr(e) Partner(in) wird entführt und verschwindet spurlos</span>. Wie lange dauert es, bis Sie den Verlust bemerken?</p>
+	</div>
+	
+	<div data-scale="5" class="step mittig" data-x="5000"  data-y="30000" data-rotate-y="20">
+		<img src="images/mobilemania-liebste-weg.png" alt="mobilemania-liebste-weg" width="452" height="374">
+	</div>
+	
+	<div data-scale="5" class="step" data-x="10000"  data-y="35000">
+		<p class="gross halbfett"><span class="pink fett">Wie viel Geld</span> müsste Ihnen die Organisation Live Without Smartphones monatlich zahlen, damit Sie <i>dauerhaft ohne Mobiltelefon</i> leben würden?</p>
+	</div>
+	
+	<div data-scale="5" class="step mittig" data-x="5000" data-y="35000" data-rotate-y="20">
+		<img src="images/mobilemania-zahlemann.png" alt="mobilemania-zahlemann" width="100%">
+	</div>
+	
+	<div data-scale="5" class="step" data-x="10000" data-y="40000">
+		<p class="saugross fett">Wir <i>lieben</i> unser <span class="pink">Smartphone</span>!<br><br></p>
+	</div>
+	
+	<div data-scale="5" class="step mittig" data-x="10000" data-y="45000" data-rotate-y="180" data-z="-500">
+		<h1>Evolution<span class="pink">?</span></h1>
+	</div>
+	
+	<div data-scale="5" class="step" data-x="10000" data-y="45000">
+		<img src="images/evolution.png" alt="evolution" width="100%">
+		<br><br>
+		<ul class="bullets klein">
+			<li>kleiner</li>
+			<li>stärker</li>
+			<li>mobiler</li>
+			<li>näher am Körper</li>
+			<li>direkter zu benutzen</li>
+		</ul>
+	</div>
+	
+	<div data-scale="5" class="step bg-hell br5" data-x="10000" data-y="50000" data-rotate-y="90">
+		<img src="images/computer-goes-couch.jpg" alt="computer-goes-couch" width="100%">
+		<p class="gross fett">Computer goes <span class="pink">Couch</span>!<br><br></p>
+		<p class="sauklein grau">Bild: http://flickr.com/photos/evilpeacock/13235187545/</p>
+	</div>
+	
+	
+	<!-- Prelude: Technologie pushs Design
+	/////	/////	/////	/////	///// /////	/////	/////	/////	///// -->
+	
+	<div id="tech-pushs-design" class="step bg-hell br10" data-scale="5" data-x="20000">
+		<p class="saugross fett"><span class="gruen">Supercomputer</span> in your <span class="pink">pocket</span></p>
+		<p class=""><br>mit jeder Menge Sinnen und Sensoren.</p>
+	</div>
+	
+	<!--div class="step" data-scale="5" data-x="20000" data-rotate-y="90">
+		<img src="images/supercomputer-in-your-pocket.png" alt="supercomputer-in-your-pocket" width="100%">
+		<p class="sauklein grau">Bild: http://charliewhite.net</p>
+	</div-->
+	
+	<!--div class="step bg-grau br10" data-scale="1" data-x="24000" data-y="5000">
+		   <img src="images/monoshuffle_display_large_preview_featured.jpg" alt="monoshuffle_display_large_preview_featured" width="100%">
+		<p>Monotasking iPhone Cover von Paolo Cardini</p>
+		<p class="sauklein">Bild: http://www.thingiverse.com/</p>
+	</div-->
+	
+	
+	<div class="step" data-scale="5" data-x="20000" data-y="5000">
+		<img src="images/turing.jpg" alt="turing" width="100%">
+		<p>Universal Machine at its best.</p>
+	</div>
+	
+	<div data-scale="5" class="step" data-x="20000" data-y="10000">
+		<p class="saugross halbfett">Was <i>machen</i> die Leute mit ihren <span class="pink">Smartphones</span>?<br><br></p>
+	</div>
+	
+	<div class="step" data-scale="5" data-x="20000" data-y="10000" data-rotate-y="90">
+		<img src="images/mobilemania-apps.png" alt="mobilemania-apps" width="100%">
+	</div>
+	
+	<div class="step" data-scale="5" data-x="20000" data-y="10000" data-rotate-y="90">
+		<img src="images/mobilemania-apps-offline.png" alt="mobilemania-apps-offline" width="100%">
+	</div>
+	
+	<div class="step bg-hell br10" data-scale="5" data-x="20000" data-y="15000">
+		<img src="images/top-apps.png" alt="top-apps" width="100%">
+		<p class="klein">Meist genutzte Android Apps in Deutschland, Januar 2013</p>
+		<p class="sauklein grau">Quelle: Statista</p>
+	</div>
+	
+	<div class="step bg-hell br10" data-scale="5" data-x="20000" data-y="15000">
+		<img src="images/top-apps-offline.png" alt="top-apps" width="100%">
+		<p class="klein">Meist genutzte Android Apps in Deutschland, Januar 2013</p>
+		<p class="sauklein grau">&nbsp;</p>
+	</div>
+
+	<div class="step" data-scale="5" data-x="20000" data-y="20000">
+		<p class="saugross fett">Wir <i>lieben</i> unser <span class="pink">Smartphone</span>…</p>
+	</div>
+	
+	<div class="step" data-scale="1" data-x="20650" data-y="20650" data-rotate-z="90">
+		<p class="saugross fett">… wenn es <span class="pink">online</span> ist.</p>
+	</div>
+	
+	
+	<div class="step bg-hell br10" data-scale="5" data-x="20000" data-y="25000">
+		<p class="saugross fett">Das <span class="gruen">Web</span> ist der zentrale <span class="pink">Knotenpunkt</span>.</p>
+	</div>
+	
+	<div class="step" data-scale="5" data-x="20000" data-y="30000">
+		<ul class="gross fett bullets">
+			<li>Smartphones</li>
+			<li>Desktop Computern</li>
+			<li>Notebooks</li>
+			<li>Tablets</li>
+			<li>E-Book-Readern</li>
+			<li>Spielekonsolen</li>
+			<li>Smartwatches</li>
+			<li>Fernseher</li>
+		</ul>
+	</div>
+	
+		<div class="step" data-scale="5" data-x="20000" data-y="35000" data-rotate-y="180" data-z="-500">
+		<img src="images/iot-overveiw.png" alt="iot-overveiw" width="100%">
+		<p class="sauklein grau">Quelle: https://ict.swisscom.ch</p>
+	</div>
+	
+	<div class="step bg-weiss mittig br5" data-scale="5" data-x="20000" data-y="35000">
+
+		<p class="padding1 fett">Connected <span class="pink">devices</span> per <span class="gruen">person</span><br></p>
+		<img src="images/iot-devices.png" alt="iot-devices" width="60%">
+			
+		<hr>
+		<ul class="sauklein bullets">
+			<li>Smartphones</li>
+			<li>Desktop Computern</li>
+			<li>Notebooks</li>
+			<li>Tablets</li>
+			<li>E-Book-Readern</li>
+			<li>Spielekonsolen</li>
+			<li>Smartwatch</li>
+			<li>Fernsehern</li>
+			<li>Navigationssystemen</li>
+			<li>Radios</li>
+			<li>Kühlschränken</li>
+			<li>Stromzählern</li>
+			<li>Heizungsreglern</li>
+			<li>Babyfonen</li>
+			<li>Türöffnern</li>
+		</ul>
+	</div>
+	
+
+	
+		<div class="step" data-scale="5" data-x="20000" data-y="50000">
+
+		<p class="pink gross fett">Was bedeutet das für uns?<br><br></p>
+		<ul class="halbfett bullet-rows">
+			<li>jede Menge unterschiedliche <span class="gruen">Geräte</span></li>
+			<li>viele verschiedene <span class="gruen">Displaygrößen</span></li>
+			<li>verschiedene <span class="gruen">Interaktionsparadigmen</span></li>
+			<li>unterschiedlichste <span class="gruen">Erwartungen</span></li>
+			<li>jede Menge <span class="gruen">Arbeit</span>&nbsp;<span class="rot90 pink">:-)</span></li>
+		</ul>
+	</div>
+	
+	
+	
+	<!-- Main: Vielfalt
+	/////	/////	/////	/////	///// /////	/////	/////	/////	///// -->
+	
+	<!--div id="variety" class="step bg-hell br10" data-scale="5" data-x="30000">
+		<p class="saugross fett">Wie gehen wir mit der <span class="pink">Vielfalt</span> um<i>?</i></p> 
+	</div>
+
+	
+	<div class="step" data-scale="5" data-x="30000" data-y="5000">
+		<p class="gross fett ">Responsive <span class="pink">Webdesign</span></p>
+		<p class="klein grau">Ethan Marcotte</p>
+
+		<ul class="gross fett circles top2">
+			<li style="width: 270px; height: 270px;">fluid grids</li>
+			<li style="width: 270px; height: 270px;">flexible media</li>
+			<li style="width: 270px; height: 270px;">media queries</li>
+		</ul>
+		<br>
+		<ul class="sauklein extra-clickable bullets grau top2">
+			<li><a target="_blank" href="http://www.polarfoundation.org/">Polarfoundation</a></li>
+			<li><a target="_blank" href="http://froont.com/">Froot</a></li>
+		</ul>
+	</div>
+	
+	<div class="step bg-weiss br10" data-scale="1" data-x="35000" data-y="5000">
+		<img src="images/rd-concept.png" alt="rd-concept" width="100%">
+		<hr>
+		<p class="klein">Konzept</p>
+	</div>
+	
+	<div class="step bg-weiss br10" data-scale="1" data-x="35000" data-y="5000" data-z="-500" data-rotate-y="180">
+		<img src="images/rd-reality.jpg" alt="rd-concept" width="100%">
+		<hr>
+		<p class="klein">Realität</p>
+	</div>
+	
+	
+	<div class="step" data-scale="5" data-x="30000" data-y="10000">
+		<img src="images/rd_gd.svg" width="100%">
+		<p class="top1">&nbsp;</p>
+	</div>
+	
+	<div class="step" data-scale="5" data-x="30000" data-y="10000" data-z="-10" data-rotate-y="180">
+		<img src="images/rd-pe.svg" width="100%">
+		<p class="top1">&nbsp;</p>
+	</div>
+
+	
+	<div class="step" data-scale="5" data-x="30000" data-y="15000">
+		<div class="row">
+			<div class="col-md-3">
+				<img src="images/mobile-first.svg" width="100%">
+			</div>
+			
+			<div class="col-md-8">
+				<p class="top2">Designing for <span class="gruen">mobile first</span> forces you to embrace these constraints to develop an <span class="gruen">elegant mobile-appropriate solution</span>. But the benefits go well beyond mobile. Small screen sizes force you to <span class="fett pink">prioritize</span> what <span class="gruen">really matters</span> to your customers and business.</p>
+				<p class="klein grau top1">Luke Wroblewski</p>
+			</div>
+		</div>
+
+	</div-->
+	
+	
+	<!-- Main: Focus
+	/////	/////	/////	/////	///// /////	/////	/////	/////	///// -->
+	
+	<div id="focus" class="step" data-scale="5" data-x="50000">
+		<p class="saugross">Leitplanken<span class="pink">&</span> schlaue Sprüche</p> 
+	</div>
+	
+	<div class="step" data-scale="5" data-x="50000" data-y="5000">
+		<p class="saugross fett">No <span class="pink">bullshit</span><i>!</i></p> 
+		<p class="klein grau">Brad Frost</p>
+	</div>
+	
+	<div class="step" data-scale="5" data-x="50000"  data-y="5000" data-rotate-y="180" data-z="-500">
+		<p class="saugross fett"><span class="gruen">Informationen</span> sind immer <span class="pink">uninteressant</span>.</p> 
+		<p class="klein grau">Norbert Bolz</p>
+	</div>
+	
+	<div class="step" data-scale="5" data-x="50000"  data-y="5000">
+		<p class="saugross fett">Es sei denn sie sind <span class="pink">maßgeschneidert</span>.</p> 
+	</div>
+	
+	<div class="step" data-scale="5" data-x="50000"  data-y="10000">
+		<img src="images/focus-1.png" alt="focus-1" width="100%">
+	</div>
+	
+	<div class="step" data-scale="5" data-x="50000"  data-y="10000">
+		<img src="images/focus-2.png" alt="focus-1" width="100%">
+	</div>
+	
+	<div class="step mittig" data-scale="5" data-x="53000"  data-y="10000">
+		<img src="images/focus-3.svg" alt="focus-1" width="30%">
+	</div>
+	
+	<div class="step" data-scale="5" data-x="50000"  data-y="15000">
+		<p class="saugross fett"><span class="gruen">Nutzer</span> haben <span class="pink">Ziele</span>.</p> 
+	</div>
+	
+	<div class="step" data-scale="5" data-x="50000"  data-y="20000">
+		<img src="images/ziele/ziele-google-1999.png" alt="ziele-google-1999" width="100%">
+		<p class="klein">&nbsp;&nbsp;Google, 1999</p> 
+	</div>
+	
+	<div class="step" data-scale="5" data-x="50000"  data-y="20000">
+		<img src="images/ziele/ziele-google-2003.png" alt="ziele-google-1999" width="100%">
+		<p class="klein">&nbsp;&nbsp;Google, 2003</p> 
+	</div>
+	
+	<div class="step" data-scale="5" data-x="50000"  data-y="20000">
+		<img src="images/ziele/ziele-google-2012.png" alt="ziele-google-1999" width="100%">
+		<p class="klein">&nbsp;&nbsp;Google, 2012</p> 
+	</div>
+	
+	<div class="step" data-scale="5" data-x="50000"  data-y="20000">
+		<img src="images/ziele/ziele-lucky.png" alt="ziele-google-1999" width="100%">
+		<p class="klein">&nbsp;&nbsp;I'm feeling lucky</p> 
+	</div>
+	
+	<div class="step" data-scale="5" data-x="55000"  data-y="20000" data-rotate-y="-15">
+		<img src="images/ziele/ziele-altavista-1999.png" alt="ziele-google-1999" width="100%">
+		<p class="klein">&nbsp;&nbsp;AltaVista, 1999</p> 
+	</div>
+	
+	<div class="step" data-scale="5" data-x="55000"  data-y="20000" data-rotate-y="-15">
+		<img src="images/ziele/ziele-altavista-2000.png" alt="ziele-google-1999" width="100%">
+		<p class="klein">&nbsp;&nbsp;AltaVista, 2000</p> 
+	</div>
+	
+	<div class="step" data-scale="5" data-x="55000"  data-y="20000" data-rotate-y="-15">
+		<img src="images/ziele/ziele-altavista-2006.png" alt="ziele-google-1999" width="100%">
+		<p class="klein">&nbsp;&nbsp;AltaVista, 2006</p> 
+	</div>
+	
+	<!--div class="step" data-scale="5" data-x="50000" data-y="25000">
+		<p class="gross fett">The <span class="pink">most valued products</span> will be designed to <span class="pink">live <i>beyond</i> the device</span>, context, or technology they were originally intended for.</p> 
+		<p class="klein grau top1">Stephanie Rieger</p>
+	</div-->
+	
+	
+	<div class="step bg-hell br10" data-scale="10" data-x="50000" data-y="-10000"  data-rotate-y="-15">
+		<p class="gross fett">Mobile first: <span class="pink">focus</span> and <span class="gruen">prioritize</span>.</p>
+		<p class="klein grau top1">Luke Wroblewski</p>
+	</div>
+	
+	
+	<!-- Main: Flexible Systems
+	/////	/////	/////	/////	///// /////	/////	/////	/////	///// -->
+	
+	<div id="flexible-systems" class="step" data-scale="5" data-x="60000">
+		<p class="gross fett">Die <span class="pink">meisten Devices</span>, für die wir gestalten, <span class="gruen">kennen wir nicht</span>, haben wir nicht, werden <span class="gruen">wir nie benutzen</span> oder sie sind noch <span class="gruen">nicht am Markt</span>.
+		</p> 
+	</div>
+	
+	<div class="step" data-scale="5" data-x="60000" data-y="5000">
+		<p class="fett">The <span class="pink">control</span> which designers know in the <span class="pink">print medium</span>, and <span class="pink">often desire</span> in the <span class="pink">web</span> medium, is simply a function of the limitation of the printed page. We should embrace the fact that <span class="gruen">the web</span> doesn’t have the same <span class="gruen">constraints</span>, and design for <span class="gruen">this flexibility</span>.</p>
+		<p class="top1 klein grau">John Allsopp, “A Dao of Web Design”</p>
+	</div>
+	
+	<!--div class="step" data-scale="5" data-x="60000" data-y="10000">
+		<p class="">Brad Frost: <span class="pink fett">Atomic Design</span></p>
+		<p class="top2"><img src="images/atomic-design.svg" width="100%"></p>
+		<ul class="bullets top2 klein">
+			<li>Atome</li>
+			<li>Molecule</li>
+			<li>Organismen</li>
+			<li>Templates</li>
+			<li>Pages</li>
+		</ul>
+	</div>
+	
+	<div class="step bg-hell br10" data-scale="5" data-x="60000" data-y="10000" data-z="-5000">
+		<p class="">Atomic Design: <span class="pink fett">Atome</span><br><br><br></p>
+		<div class="row">
+			<div class="col-md-5"><img src="images/ad-elements/Suchfeld.svg" width="100%"></div>
+			<div class="col-md-65"><p class="klein pink">Eingabefeld</p></div>
+		</div>
+		
+		<hr>
+		
+		<div class="row">
+			<div class="col-md-5"><img src="images/ad-elements/Button.svg" width="100%"></div>
+			<div class="col-md-65"><p class="klein pink">Button</p></div>
+		</div>
+		
+		<hr>
+		
+		<div class="row">
+			<div class="col-md-5"><img src="images/ad-elements/Label.svg" width="100%"></div>
+			<div class="col-md-65"><p class="klein pink">Label</p></div>
+		</div>
+	</div>
+	
+	<div class="step bg-hell br10" data-scale="5" data-x="60000" data-y="10000" data-z="-5000">
+		<p class="">Atomic Design: <span class="pink fett">Molekül</span><br><br><br></p>
+		<img src="images/ad-elements/molecule.svg" width="100%">
+		<hr>
+		<p class="klein grau"><a target="_blank" href="http://patternlab.io/">Patternlab</a></p>
+	</div-->
+	
+	
+	<div class="step bg-hell br10 " data-scale="10" data-x="59300" data-y="-10000" data-rotate-y="-15">
+		<p class="fett gross">We’re <span class="pink">not designing pages</span>, we’re designing <span class="gruen">systems of components</span>.</p>
+		<p class="top1 klein grau">Stephen Hay</p>
+	</div>
+	
+	
+	<!-- Main: Future Friendly
+	/////	/////	/////	/////	///// /////	/////	/////	/////	///// -->
+	
+	<div id="future-friendly" class="step" data-scale="5" data-x="70000">
+		<p class="saugross fett">The web is for <i>everyone</i>, <span class="pink">whatever technology stack</span> they use.</p>
+		<p class="top1 klein grau">Jeni Tennison, Technical Director at Open Data Institute</p>
+	</div>
+	
+	<div class="step" data-scale="5" data-x="70000" data-z="-500" data-rotate-y="180">
+		<p class="saugross fett">The web is for <i>everyone</i>, but only <span class="pink">if we build it that way</span>.</p>
+		<p class="top1 klein grau">Andy Davies, Web-Performance Expert at NCC Group</p>
+	</div>
+	
+	<div class="step" data-scale="5" data-x="70000" data-y="5000">
+		<p class="gross fett">Be <span class="pink">Backward</span> Compatible!</p>
+		<p class="top2">When it comes to the web, the more <span class="pink halbfett">backward-compatible</span> you are, the more <span class="gruen halbfett">forward-compatible</span> you're likely to be.</p>
+		<p class="top1 klein grau top2">Josh Clark</p>
+	</div>
+	
+	<div class="step bg-hell br10" data-scale="10" data-x="70000" data-y="-10000" data-rotate-y="-15">
+		<p class="fett gross">Get your <span class="pink halbfett">content</span> ready to <span class="pink halbfett">go anywhere</span>, because it's going to go <i>everywhere</i>. </p>
+		<p class="top1 klein grau top2">Brad Frost <i>//</i> <a href="http://futurefriendlyweb.com/" target="_blank">http://futurefriendlyweb.com</a></p>
+	</div>
+	
+	<!-- Main: Further Thoughts
+	/////	/////	/////	/////	///// /////	/////	/////	/////	///// -->
+	
+	<!--div id="further" class="step bg-hell br10 mittig" data-scale="5" data-x="80000">
+		<p class="gross fett"><span class="pink">Linkability</span> & <span class="gruen">Shareability</span></p>
+	</div-->
+	
+	<div id="multiscreen" class="step" data-scale="5" data-x="30000">
+		<img src="images/multiscreen/default.svg" width="100%">
+		<hr>
+		<p class="pink">Multiscreen Szenarien</p>
+	</div>
+	
+	<div class="step" data-scale="5" data-x="30000">
+		<img src="images/multiscreen/kontexte.svg" width="100%">
+		<hr>
+		<p class="pink">Nutzungsorte</p>
+	</div>
+	
+	<div class="step" data-scale="5" data-x="30000">
+		<img src="images/multiscreen/sharing.svg" width="100%">
+		<hr>
+		<p><span class="pink">Screen Sharing</span> z.B. duet</p>
+	</div>
+
+	<div class="step" data-scale="5" data-x="30000">
+		<img src="images/multiscreen/sync.svg" width="100%">
+		<hr>
+		<p><span class="pink">Syncing</span> z.B. Dropbox, Audible</p>
+	</div>
+	
+	<div class="step" data-scale="5" data-x="30000">
+		<img src="images/multiscreen/coherence.svg" width="100%">
+		<hr>
+		<p><span class="pink">Coherence</span></p>
+	</div>
+	
+	<div class="step" data-scale="5" data-x="30000">
+		<img src="images/multiscreen/shifting.svg" width="100%">
+		<hr>
+		<p><span class="pink">Device Shifting</span> z.B. AirPlay, Chromecast</p>
+	</div>
+		
+	<div class="step" data-scale="5" data-x="30000">
+		<img src="images/multiscreen/complementarity.svg" width="100%">
+		<hr>
+		<p><span class="pink"><a href="http://perasmus.serpens.uberspace.de/" target="_blank">Complementarity</a></span> z.B. Vigour</p>
+	</div>
+	
+
+	
+	
+	<!-- End
+	/////	/////	/////	/////	///// /////	/////	/////	/////	///// -->
+	
+	<div id="end" class="step" data-scale="5" data-x="90000">
+        <p class="gross halbfett"><span class="pink">Danke</span> für die <span class="gruen">Aufmerksamkeit</span>!</p>
+        <p class="top2 klein">twitter.com/cnoss</p>
+        <p class="klein">http://christiannoss.de</p>
+	</div>
+
+
+
+    <!--
+        
+        So to make a summary of all the possible attributes used to position presentation steps, we have:
+        
+        * `data-x`, `data-y`, `data-z` - they define the position of **the center** of step element on
+            the canvas in pixels; their default value is 0;
+        * `data-rotate-x`, `data-rotate-y`, 'data-rotate-z`, `data-rotate` - they define the rotation of
+            the element around given axis in degrees; their default value is 0; `data-rotate` and `data-rotate-z`
+            are exactly the same;
+        * `data-scale` - defines the scale of step element; default value is 1
+        
+        These values are used by impress.js in CSS transformation functions, so for more information consult
+        CSS transfrom docs: https://developer.mozilla.org/en/CSS/transform
+        
+    -->
+    <div id="overview"  data-scale="25"  class="step" data-x="58000" data-y="-10000" data-rotate-y="-15">
+    </div>
+
+</div>
+
+<!--
+    
+    Hint is not related to impress.js in any way.
+    
+    But it can show you how to use impress.js features in creative way.
+    
+    When the presentation step is shown (selected) its element gets the class of "active" and the body element
+    gets the class based on active step id `impress-on-ID` (where ID is the step's id)... It may not be
+    so clear because of all these "ids" in previous sentence, so for example when the first step (the one with
+    the id of `bored`) is active, body element gets a class of `impress-on-bored`.
+    
+    This class is used by this hint below. Check CSS file to see how it's shown with delayed CSS animation when
+    the first step of presentation is visible for a couple of seconds.
+    
+    ...
+    
+    And when it comes to this piece of JavaScript below ... kids, don't do this at home ;)
+    It's just a quick and dirty workaround to get different hint text for touch devices.
+    In a real world it should be at least placed in separate JS file ... and the touch content should be
+    probably just hidden somewhere in HTML - not hard-coded in the script.
+    
+    Just sayin' ;)
+    
+-->
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+<!--
+    
+    Last, but not least.
+    
+    To make all described above really work, you need to include impress.js in the page.
+    I strongly encourage to minify it first.
+    
+    In here I just include full source of the script to make it more readable.
+    
+    You also need to call a `impress().init()` function to initialize impress.js presentation.
+    And you should do it in the end of your document. Not only because it's a good practice, but also
+    because it should be done when the whole document is ready.
+    Of course you can wrap it in any kind of "DOM ready" event, but I was too lazy to do so ;)
+    
+-->
+
+
+<script src="lib/jquery/jquery-2.0.3.min.js"></script>
+
+<script type="text/javascript">
+var x = 0;
+var dev = false;
+
+$("#menue").append("<ol id='sc'></ol>");
+
+$(".step").each(function( index, ele){
+
+	if(dev){
+		$(this).attr("data-scale", "5");
+		$(this).attr("data-y", "0");
+		$(this).attr("data-x", x*10000);
+		x++;
+	}
+	
+
+	if($(this).attr("id")){
+		var id = $(this).attr("id");
+		
+		$("#menue #sc").append("<li onclick='impress().goto(\""+id+"\")' class='extra-clickable'>"+id+"</li>");
+	}
+});
+
+$("#menue").click(function(e){
+	$("#sc").toggle("fast");
+});
+
+</script>
+
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+<!--
+    
+    The `impress()` function also gives you access to the API that controls the presentation.
+    
+    Just store the result of the call:
+    
+        var api = impress();
+    
+    and you will get three functions you can call:
+    
+        `api.init()` - initializes the presentation,
+        `api.next()` - moves to next step of the presentation,
+        `api.prev()` - moves to previous step of the presentation,
+        `api.goto( idx | id | element, [duration] )` - moves the presentation to the step given by its index number
+                id or the DOM element; second parameter can be used to define duration of the transition in ms,
+                but it's optional - if not provided default transition duration for the presentation will be used.
+    
+    You can also simply call `impress()` again to get the API, so `impress().next()` is also allowed.
+    Don't worry, it wont initialize the presentation again.
+    
+    For some example uses of this API check the last part of the source of impress.js where the API
+    is used in event handlers.
+    
+-->
+
+</body>
+</html>
+
+<!--
+    
+    Now you know more or less everything you need to build your first impress.js presentation, but before
+    you start...
+    
+    Oh, you've already cloned the code from GitHub?
+    
+    You have it open in text editor?
+    
+    Stop right there!
+    
+    That's not how you create awesome presentations. This is only a code. Implementation of the idea that
+    first needs to grow in your mind.
+    
+    So if you want to build great presentation take a pencil and piece of paper. And turn off the computer.
+    
+    Sketch, draw and write. Brainstorm your ideas on a paper. Try to build a mind-map of what you'd like
+    to present. It will get you closer and closer to the layout you'll build later with impress.js.
+    
+    Get back to the code only when you have your presentation ready on a paper. It doesn't make sense to do
+    it earlier, because you'll only waste your time fighting with positioning of useless points.
+    
+    If you think I'm crazy, please put your hands on a book called "Presentation Zen". It's all about 
+    creating awesome and engaging presentations.
+    
+    Think about it. 'Cause impress.js may not help you, if you have nothing interesting to say.
+    
+-->
+
+<!--
+    
+    Are you still reading this?
+    
+    For real?
+    
+    I'm impressed! Feel free to let me know that you got that far (I'm @bartaz on Twitter), 'cause I'd like
+    to congratulate you personally :)
+    
+    But you don't have to do it now. Take my advice and take some time off. Make yourself a cup of coffee, tea,
+    or anything you like to drink. And raise a glass for me ;)
+    
+    Cheers!
+    
+-->
+
