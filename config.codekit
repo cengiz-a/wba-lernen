@@ -2,28 +2,6 @@
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
 "creatorBuild": "19051",
 "files": {
-	"\/2014-10-09-git-basics\/images\/evolution.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 212918,
-		"inputAbbreviatedPath": "\/2014-10-09-git-basics\/images\/evolution.png",
-		"outputAbbreviatedPath": "\/2014-10-09-git-basics\/images\/evolution.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/2014-10-09-git-basics\/images\/github.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 167078,
-		"inputAbbreviatedPath": "\/2014-10-09-git-basics\/images\/github.png",
-		"outputAbbreviatedPath": "\/2014-10-09-git-basics\/images\/github.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/2014-10-09-opening-keynote\/images\/fintechweekly.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -358,6 +336,169 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/2015-10-08-wie-geht-wba1\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/2015-10-15-git-advanced\/images\/branches.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 38142,
+		"inputAbbreviatedPath": "\/2015-10-15-git-advanced\/images\/branches.png",
+		"outputAbbreviatedPath": "\/2015-10-15-git-advanced\/images\/branches.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/2015-10-15-git-advanced\/images\/commit-messages.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 155144,
+		"inputAbbreviatedPath": "\/2015-10-15-git-advanced\/images\/commit-messages.png",
+		"outputAbbreviatedPath": "\/2015-10-15-git-advanced\/images\/commit-messages.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/2015-10-15-git-advanced\/images\/evolution.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 212918,
+		"inputAbbreviatedPath": "\/2015-10-15-git-advanced\/images\/evolution.png",
+		"outputAbbreviatedPath": "\/2015-10-15-git-advanced\/images\/evolution.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/2015-10-15-git-advanced\/images\/git-command.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 25437,
+		"inputAbbreviatedPath": "\/2015-10-15-git-advanced\/images\/git-command.png",
+		"outputAbbreviatedPath": "\/2015-10-15-git-advanced\/images\/git-command.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/2015-10-15-git-advanced\/images\/git-flow-1.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 117040,
+		"inputAbbreviatedPath": "\/2015-10-15-git-advanced\/images\/git-flow-1.png",
+		"outputAbbreviatedPath": "\/2015-10-15-git-advanced\/images\/git-flow-1.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/2015-10-15-git-advanced\/images\/git-flow-2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 78460,
+		"inputAbbreviatedPath": "\/2015-10-15-git-advanced\/images\/git-flow-2.png",
+		"outputAbbreviatedPath": "\/2015-10-15-git-advanced\/images\/git-flow-2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/2015-10-15-git-advanced\/images\/git-flow.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 187902,
+		"inputAbbreviatedPath": "\/2015-10-15-git-advanced\/images\/git-flow.png",
+		"outputAbbreviatedPath": "\/2015-10-15-git-advanced\/images\/git-flow.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/2015-10-15-git-advanced\/images\/gitflow.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 64422,
+		"inputAbbreviatedPath": "\/2015-10-15-git-advanced\/images\/gitflow.png",
+		"outputAbbreviatedPath": "\/2015-10-15-git-advanced\/images\/gitflow.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/2015-10-15-git-advanced\/images\/github-octocat_yes-we-code.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 107276,
+		"inputAbbreviatedPath": "\/2015-10-15-git-advanced\/images\/github-octocat_yes-we-code.jpg",
+		"outputAbbreviatedPath": "\/2015-10-15-git-advanced\/images\/github-octocat_yes-we-code.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/2015-10-15-git-advanced\/images\/github.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 28575,
+		"inputAbbreviatedPath": "\/2015-10-15-git-advanced\/images\/github.jpg",
+		"outputAbbreviatedPath": "\/2015-10-15-git-advanced\/images\/github.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/2015-10-15-git-advanced\/images\/github.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 167078,
+		"inputAbbreviatedPath": "\/2015-10-15-git-advanced\/images\/github.png",
+		"outputAbbreviatedPath": "\/2015-10-15-git-advanced\/images\/github.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/2015-10-15-git-advanced\/images\/pause.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 693450,
+		"inputAbbreviatedPath": "\/2015-10-15-git-advanced\/images\/pause.png",
+		"outputAbbreviatedPath": "\/2015-10-15-git-advanced\/images\/pause.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/2015-10-15-git-advanced\/images\/trees.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 45365,
+		"inputAbbreviatedPath": "\/2015-10-15-git-advanced\/images\/trees.png",
+		"outputAbbreviatedPath": "\/2015-10-15-git-advanced\/images\/trees.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/2015-10-15-git-advanced\/images\/version-control.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 77773,
+		"inputAbbreviatedPath": "\/2015-10-15-git-advanced\/images\/version-control.png",
+		"outputAbbreviatedPath": "\/2015-10-15-git-advanced\/images\/version-control.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/2015-10-15-git-advanced\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/2015-10-15-git-advanced\/index.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -7046,6 +7187,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/revealjs-framework\/css\/theme\/medieninformatik-fancy.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/revealjs-framework\/css\/theme\/medieninformatik-fancy.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/revealjs-framework\/css\/theme\/medieninformatik.css": {
 		"fileType": 16,
 		"ignore": 1,
@@ -7203,6 +7353,22 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/revealjs-framework\/css\/theme\/source\/medieninformatik--deprecated.scss",
 		"outputAbbreviatedPath": "\/revealjs-framework\/css\/theme\/css\/medieninformatik--deprecated.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/revealjs-framework\/css\/theme\/source\/medieninformatik-fancy.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/revealjs-framework\/css\/theme\/source\/medieninformatik-fancy.scss",
+		"outputAbbreviatedPath": "\/revealjs-framework\/css\/theme\/css\/medieninformatik-fancy.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -7405,6 +7571,17 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
+		},
+	"\/revealjs-framework\/images\/mi-box.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9912,
+		"inputAbbreviatedPath": "\/revealjs-framework\/images\/mi-box.png",
+		"outputAbbreviatedPath": "\/revealjs-framework\/images\/mi-box.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
 		},
 	"\/revealjs-framework\/images\/vieldrin-black.png": {
 		"fileType": 32768,
