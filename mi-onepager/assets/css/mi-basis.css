@@ -38,6 +38,21 @@ p + p{
 	margin-top: -1rem;
 }
 
+a{
+    color: inherit;
+    text-decoration: none;
+    border-bottom: dotted 1px #4952e1;
+    transition: background 0.2s, color 0.2s;
+}
+
+a:hover{
+    color: #fff;
+    text-decoration: none;
+    border-bottom: dotted 1px #4952e1;
+    background-color: #4952e1;
+}
+
+
 
 
 
@@ -45,7 +60,7 @@ p + p{
     #Layout
 \*------------------------------------*/
 
-*{
+*, footer{
 	line-height: 140%;
 	font-family: 'Open Sans', sans-serif !important;
 }
@@ -326,19 +341,13 @@ dd li + li::before{
 
 
 /*------------------------------------*\
-    #Classes
+    #Footer
 \*------------------------------------*/
 
-.mask-round{
-	width:100px;
-	height: 100px;
-	border-radius: 50%;
-	overflow: hidden;
-}
-
-.mask-round img{
-	width:150%;
-	height: auto;
+footer img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
 }
 
 
@@ -351,8 +360,13 @@ dd li + li::before{
 \*------------------------------------*/
 
 #dozenten figcaption{
-	display: inline-block;
-	vertical-align: middle;
+	/*display: inline-block;
+    width: 75%;
+	vertical-align: top;*/
+}
+
+#dozenten figcaption > *{
+	/*padding-left: 1rem; */
 }
 
 #dozenten figcaption h1{
@@ -360,21 +374,31 @@ dd li + li::before{
 	margin: 0;
 }
 
-#dozenten figure div[class*=mask]{
-	display: inline-block;
-	vertical-align: middle;
-	margin-right: 1rem;
-
+#dozenten figure img{
+    width: 100%;
+    display: block;
+    margin-bottom: 1rem;
+    /*display: inline-block;
+    width: 25%; */
 }
 
 #dozenten figure{
-	margin-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+#dozenten figure:not(:first-child){
+    padding-top: 2rem;
+    border-top: solid 1px #ddd;
 }
 
 
-#neuigkeiten ol li article h3{
-	border-bottom: solid 1px #ddd;
+#neuigkeiten li:not(:first-child){
+	border-top: solid 1px #4952e1;
+    padding-top: 1rem;
 }
+
+
+
 
 
 /*------------------------------------*\
@@ -390,4 +414,65 @@ hr{
 
 .error{
 	color: #dd1166;
+}
+
+
+
+
+/*------------------------------------*\
+    #Responsive
+\*------------------------------------*/
+
+/* Tabletts */
+@media only screen and (min-width: 760px) {
+    
+    #dozenten figcaption{
+        display: inline-block;
+        width: 75%;
+        vertical-align: top;
+    }
+
+    #dozenten figcaption > *{
+        padding-left: 1rem;
+    }
+
+    #dozenten figure img{
+        display: inline-block;
+        width: 25%;
+    }
+
+    #dozenten figure{
+        margin-bottom: 1rem;
+    }
+    
+    footer img{
+        width: 25%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    #anfrageformular > p,
+    #anfrageformular > form{
+        margin-left: 50%;
+        padding-left: 1rem;
+    }
+    
+    #anfrageformular > h2, #neuigkeiten > h2{
+        float: left;
+    }
+    
+    #neuigkeiten > ol{
+        margin-left: 25%;
+        padding-left: 1rem;
+    }
+    
+    #neuigkeiten li{
+        position: relative;
+    }
+    
+    #neuigkeiten time{
+        position: absolute;
+        right: 0;
+        top: 1rem;
+    }
 }
