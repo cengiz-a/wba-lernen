@@ -387,3 +387,7 @@ hr{
 	border-top: solid 1px #77cc00;
 	margin: 1rem 0;
 }
+
+.error{
+	color: #dd1166;
+}
