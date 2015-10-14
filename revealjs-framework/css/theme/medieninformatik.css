@@ -148,6 +148,7 @@ body {
   overflow: auto;
   max-height: 400px;
   word-wrap: normal;
+  background: #3F3F3F;
   color: #DCDCDC; }
 
 .reveal table {
@@ -423,71 +424,59 @@ body {
 /*********************************************
  * HELPER
  *********************************************/
-
 ._violett {
-    color: #9313c3 !important;
-}
+  color: #9313c3 !important; }
 
 ._pink {
-    color: #dd1166 !important;
-}
+  color: #dd1166 !important; }
 
 ._xl-fontsize {
-    font-size: 4rem !important;
-}
+  font-size: 4rem !important; }
 
 ._l-fontsize {
-    font-size: 3rem !important;
-}
-._m-fontsize {
-    font-size: 2rem !important;
-}
+  font-size: 3rem !important; }
 
-._center { 
-    text-align: center !important; 
-}
+._m-fontsize {
+  font-size: 2rem !important; }
+
+._center {
+  text-align: center !important; }
 
 ._margin-bottom-50 {
-    margin-bottom: 50px !important;
-}
+  margin-bottom: 50px !important; }
 
-		._fullscreen-image .reveal .slides {
-			height: 100% !important;
-			left: 0;
-			margin: 0 auto;
-			padding: 0;
-			top: 0;
-			width: 100% !important;
-		}
-		._fullscreen-image .reveal .slides > section {
-			background-position-x: center;
-			background-position-y: 10px;
-			background-repeat: no-repeat;
-			background-size: auto 90%;
-			height: 100%;
-			left: 0;
-			margin: 0;
-			position: absolute;
-			top: 0;
-			width: 100%;
-		}
-		._fullscreen-image .reveal .slides > section .bu {
-			background-color: rgba(221, 17, 102, 0.8);
-			top: 30px;
-			display: inline-block;
-			color: white;
-			padding: 0 10px 0 100px;
-			position: absolute;
-		}
-		._fullscreen-image .reveal .slides > section .quelle {
-			bottom: 40px;
-			color: black;
-			display: inline-block;
-			font-size: 10px;
-            left: 10px;
-			position: absolute;
-		}
+._fullscreen-image .reveal .slides {
+  height: 100% !important;
+  left: 0;
+  margin: 0 auto;
+  padding: 0;
+  top: 0;
+  width: 100% !important; }
 
+._fullscreen-image .reveal .slides > section {
+  background-position-x: center;
+  background-position-y: 10px;
+  background-repeat: no-repeat;
+  background-size: auto 90%;
+  height: 100%;
+  left: 0;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  width: 100%; }
 
+._fullscreen-image .reveal .slides > section .bu {
+  background-color: rgba(221, 17, 102, 0.8);
+  top: 30px;
+  display: inline-block;
+  color: white;
+  padding: 0 10px 0 100px;
+  position: absolute; }
 
-
+._fullscreen-image .reveal .slides > section .quelle {
+  bottom: 40px;
+  color: black;
+  display: inline-block;
+  font-size: 10px;
+  left: 10px;
+  position: absolute; }
