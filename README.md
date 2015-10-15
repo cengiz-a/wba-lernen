@@ -15,4 +15,4 @@ Lernmaterialien, Ansprechpartner etc. zum Modul "Web-basierte Anwendungen 1": WW
 [Christian Poplawski](https://github.com/Plsr), TH Köln  
 [Jorge H. F. Pereira](https://github.com/jhfpereira), TH Köln  
 
-Hallo
+**Weitere Punkte**
