@@ -31,6 +31,8 @@
 				if ( matches ) {
 					dateString = matches[3] + '.' + matches[2] + '.' + matches[1];
 					currentDate = new Date( matches[1], matches[2] - 1, matches[3] ).getTime();
+				}else if(val.date){
+					currentDate	= val.date;	
 				} else {
 					currentDate = new Date().getTime();
 				}
