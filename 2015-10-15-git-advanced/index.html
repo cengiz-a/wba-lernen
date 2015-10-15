@@ -5,7 +5,7 @@
     <meta charset="utf-8">
 
     <!-- Title of presentation -->
-    <title>Git Basics</title>
+    <title>Git Advanced und Advanced Hands On</title>
     <!-- Short description of presentation -->
     <meta name="description" content="Kickoff Web-basierte Anwendungen 1">
     <!-- Author of presentation -->
@@ -348,22 +348,343 @@
         </section>        
         <section>
           <h2>Aufbau dieser Session</h2>
-            <li class="fragment">Branches: <code>git branch</code> / <code>git checkout</code> / <code>git merge</code></li>
+            <li class="fragment">Recap</li>
+            <li class="fragment">Branches: <code>git branch</code> / <code>git checkout</code></li>
             <li class="fragment">Merging von Branches: <code>git merge</code></li>
             <li class="fragment">Konflikte</li>
             <li class="fragment">Pull requests</li>
             <li class="fragment">Repository inspecten: <code>git status</code> / <code>git log</code></li>
           </ul>
-        </section>   
+        </section> 
+        <section>
+          <h2>Recap - neues Git Repository anlegen</h2>
+          <blockquote>
+            Bitte Ordner anlegen, Git-Repository initieieren und Datei erstellen, dem Index hinzufügen und ins Repository commiten
+          </blockquote>
+          <pre>
+            <code>
+              ➜  code  mkdir test-git-project
+              ➜  code  cd test-git-project
+              ➜  test-git-project  git init
+              Initialized empty Git repository in /Volumes/code/test-git-project/.git/
+              ➜  test-git-project git:(master) echo "hello world" >> lorem.ipsum
+              ➜  test-git-project git:(master) ✗ git add lorem.ipsum
+              ➜  test-git-project git:(master) ✗ git commit -a -m 'Added Lorem Ipsum'
+              [master (root-commit) dfc6c4d] Added Lorem Ipsum
+               1 file changed, 1 insertion(+)
+               create mode 100644 lorem.ipsum
+              ➜  test-git-project git:(master)
+            </code>
+          </pre>
+        </section>  
         <section>
           <h2>Einen Branch anlegen: <code>git branch</code></h2>
+          <blockquote>
+            Bitte einen Branch erstellen mit <code>git branch feature_x</code> und in diesen Branch mit <code>git checkout feature_x</code> wechseln.
+          </blockquote>
+          <pre>
+            <code>
+            ➜  test-git-project git:(master) git branch feature_x
+            ➜  test-git-project git:(master) git checkout feature_x
+            Switched to branch 'feature_x'
+            </code>
+          </pre>
         </section>
         <section>
-          <h2>Einen Branch auschecken: <code>git checkout</code></h2>
-        </section>
+          <h2>Einen Branch anlegen - Alternative: <code>git checkout</code></h2>
+          <blockquote>
+            Mit <code>git checkout -b feature_x</code> wird ein Branch erstellt und direkt ausgecheckt
+          </blockquote>
+          <pre>
+            <code>
+            ➜  test-git-project git:(testbranch) git checkout -b testb
+            Switched to a new branch 'testb'
+            </code>
+          </pre>
+        </section>        
+        <section>
+          <h2>Einen Branch löschen</h2>
+          <blockquote>
+            Mit <code>git branch -d feature_x</code> wird ein Branch gelöscht
+          </blockquote>
+          <pre>
+            <code>
+              ➜  test-git-project git:(testb) git checkout master
+              Switched to branch 'master'
+              ➜  test-git-project git:(master) git branch -d testb
+              Deleted branch testb (was dfc6c4d).
+              ➜  test-git-project git:(master)
+            </code>
+          </pre>
+        </section> 
+        <section>
+          <h2>Einen Branch in ein Remote Repository pushen</h2>
+          <blockquote>
+            Mit <code>git push origin feature_x</code> wird ein Branch in ein remote Repository gepushed
+          </blockquote>
+          <pre>
+            <code>
+              ➜  testproject git:(master) git checkout -b feature_x
+              Switched to a new branch 'feature_x'
+              ➜  testproject git:(feature_x) git push origin feature_x
+              Total 0 (delta 0), reused 0 (delta 0)
+              To git@github.com:koos/testproject.git
+               * [new branch]      feature_x -> feature_x
+              ➜  testproject git:(feature_x)
+            </code>
+          </pre>
+        </section>         
         <section>
           <h2>Einen Branch mergen: <code>git merge</code></h2>
+          <blockquote>
+            Mit <code>git merge feature_x</code> wird ein Branch in einen anderen Zusammengeführt
+          </blockquote>
+          <pre>
+            <code>
+              ➜  testproject git:(master) git checkout -b feature_x            
+              ➜  testproject git:(feature_x) echo "ein file" >> test.ipsum
+              ➜  testproject git:(feature_x) ✗ git add .
+              ➜  testproject git:(feature_x) ✗ git commit -a -m 'added test.ipsum'
+              [feature_x ab9402e] added test.ipsum
+               1 file changed, 1 insertion(+)
+               create mode 100644 test.ipsum
+              ➜  testproject git:(feature_x) git checkout master
+              Switched to branch 'master'
+              Your branch is up-to-date with 'origin/master'.
+              ➜  testproject git:(master) git merge feature_x
+              Updating c6f9fe4..ab9402e
+              Fast-forward
+               test.ipsum | 1 +
+               1 file changed, 1 insertion(+)
+               create mode 100644 test.ipsum
+              ➜  testproject git:(master)
+            </code>
+          </pre>          
+        </section>
+        <section>
+          <h2>Einen Konflikt erstellen und lösen</h2>
+          <pre>
+            <code>
+              ➜  testproject git:(master) git checkout -b feature_x
+              Switched to a new branch 'feature_x'
+              ➜  testproject git:(feature_x) echo "erste zeile" >> test.txt
+              ➜  testproject git:(feature_x) ✗ cat test.txt
+              erste zeile%                                                                                         ➜  testproject git:(feature_x) ✗ git add .
+              ➜  testproject git:(feature_x) ✗ git commit -a -m 'added erste zeile'
+              [feature_x 2a16d85] added erste zeile
+               1 file changed, 1 insertion(+)
+               create mode 100644 test.txt
+              ➜  testproject git:(feature_x) git checkout master
+              Switched to branch 'master'
+              Your branch is ahead of 'origin/master' by 1 commit.
+                (use "git push" to publish your local commits)
+              ➜  testproject git:(master) git merge feature_x
+              Updating ab9402e..2a16d85
+              Fast-forward
+               test.txt | 1 +
+               1 file changed, 1 insertion(+)
+               create mode 100644 test.txt
+              ➜  testproject git:(master) git checkout -b feature_y
+              Switched to a new branch 'feature_y'
+              ➜  testproject git:(feature_y) subl .
+              ➜  testproject git:(feature_y) git add .
+              ➜  testproject git:(feature_y) ✗ git commit -a -m 'added something else to erste zeile'
+              [feature_y 65b5aa3] added something else to erste zeile
+               1 file changed, 1 insertion(+), 1 deletion(-)
+              ➜  testproject git:(feature_y) git checkout feature_x
+              Switched to branch 'feature_x'
+              ➜  testproject git:(feature_x) subl .
+              ➜  testproject git:(feature_x) git status
+              On branch feature_x
+              Changes not staged for commit:
+                (use "git add <file>..." to update what will be committed)
+                (use "git checkout -- <file>..." to discard changes in working directory)
+
+                modified:   test.txt
+
+              no changes added to commit (use "git add" and/or "git commit -a")
+              ➜  testproject git:(feature_x) ✗ git add .
+              ➜  testproject git:(feature_x) ✗ git commit -a -m 'adedd something else to erste zeile'
+              [feature_x b68fd60] adedd something else to erste zeile
+               1 file changed, 1 insertion(+), 1 deletion(-)
+              ➜  testproject git:(feature_x) git checkout master
+              Switched to branch 'master'
+              Your branch is ahead of 'origin/master' by 2 commits.
+                (use "git push" to publish your local commits)
+              ➜  testproject git:(master) git merge feature_x
+              Updating 2a16d85..b68fd60
+              Fast-forward
+               test.txt | 2 +-
+               1 file changed, 1 insertion(+), 1 deletion(-)
+              ➜  testproject git:(master) git merge feature_y
+              Auto-merging test.txt
+              CONFLICT (content): Merge conflict in test.txt
+              Automatic merge failed; fix conflicts and then commit the result.
+              ➜  testproject git:(master) ✗ git status
+              On branch master
+              Your branch is ahead of 'origin/master' by 3 commits.
+                (use "git push" to publish your local commits)
+              You have unmerged paths.
+                (fix conflicts and run "git commit")
+
+              Unmerged paths:
+                (use "git add <file>..." to mark resolution)
+
+                both modified:   test.txt
+
+              no changes added to commit (use "git add" and/or "git commit -a")
+              ➜  testproject git:(master) ✗ git diff feature_x feature_y
+            </code>
+          </pre>          
+        </section>  
+        <section>
+          <h2>Einen Konflikt erstellen und lösen</h2>
+          <pre>
+            <code>
+              ➜  testproject git:(master) ✗ git status
+              On branch master
+              Your branch is ahead of 'origin/master' by 3 commits.
+                (use "git push" to publish your local commits)
+              You have unmerged paths.
+                (fix conflicts and run "git commit")
+
+              Unmerged paths:
+                (use "git add <file>..." to mark resolution)
+
+                both modified:   test.txt
+
+              no changes added to commit (use "git add" and/or "git commit -a")
+              ➜  testproject git:(master) ✗ cat test.txt
+              <<<<<<< HEAD
+              erste zeile hello world wide web
+              =======
+              erste zeile hello world
+              >>>>>>> feature_y
+              ➜  testproject git:(master) ✗ git add .
+              ➜  testproject git:(master) ✗ git commit -a -m 'resolved conflict'
+              [master 2dc5735] resolved conflict
+              ➜  testproject git:(master)
+            </code>
+          </pre>          
+        </section>          
+        <section>
+          <h2>git diff [branch_1] [branch_2]</h2>
+          <pre>
+            <code>
+              ➜  testproject git:(master) ✗ git diff feature_x feature_y
+              diff --git a/test.txt b/test.txt
+              index 56b8a01..484e5ce 100644
+              --- a/test.txt
+              +++ b/test.txt
+              @@ -1 +1 @@
+              -erste zeile hello world wide web
+              \ No newline at end of file
+              +erste zeile hello world
+              \ No newline at end of file
+              (END)
+            </code>
+          </pre>          
+        </section>    
+        <section>
+          <h2>git tag</h2>
+          <blockquote>
+            Mit <code>git tag [version] [hash]</code> wird ein Release als solcher getagged
+          </blockquote>          
+          <pre>
+            <code>
+              ➜  testproject git:(master) git tag 1.1.2-rc2.1.1 2dc57356428f6576d037d706c10ceb5202a921f7
+              ➜  testproject git:(master) git tag
+              1.1.2-rc2.1.1
+              ➜  testproject git:(master)
+            </code>
+          </pre>          
+        </section> 
+        <section>
+          <h2>git status</h2>
+          <blockquote>
+            Mit <code>git status</code> zeigt den status der Working Tree an
+          </blockquote>          
+          <pre>
+            <code>
+              git status
+              # # On branch branch-b
+              # # You have unmerged paths.
+              # #   (fix conflicts and run "git commit")
+              # #
+              # # Unmerged paths:
+              # #   (use "git add ..." to mark resolution)
+              # #
+              # # both modified:      planets.md
+              # #
+              # no changes added to commit (use "git add" and/or "git commit -a")
+            </code>
+          </pre>          
+        </section>  
+        <section>
+          <h2>git log</h2>
+          <blockquote>
+            Mit <code>git log</code> kann man auf einfache Weise die History aufrufen
+          </blockquote>          
+          <pre>
+            <code>
+              ➜  wba1-2015 git:(gh-pages) ✗ git log --oneline
+              b45b548 Neuigkeiteneinträge im mi-onepager in articles überführt
+              7461ee5 Merge branch 'gh-pages' of https://github.com/th-koeln/wba1-2015 into gh-pages
+              c6d7644 Kommentar im JS-Code zum mi-onepager ergänzt
+              374b3a2 MK behoben
+              d513612 CSS weiter entwickelt.
+            </code>
+          </pre>          
         </section>   
+        <section>
+          <h2>git log</h2>
+          <blockquote>
+            Mit <code>git log</code> kann man auf einfache Weise die History aufrufen
+          </blockquote>          
+          <ul>
+            <li><code>git log --author=bob</code>: Ausgabe des Logs nur mit Einträgen vom User "bob"</li>
+            <li><code>git log --pretty=oneline</code>: Einzeilige Ausgabe des Logs</li>
+            <li><code>git log --graph --oneline --decorate --all</code>: Ausgabe aller Branches in einer Baumstruktur</li>
+            <li><code>git log --name-status</code>: Ausgabe des Logs mit Dateinamen die sich in der jeweiligen Version geändert haben</li>                        
+            <li><code>git log --help</code>: Hilfe wie man <code>git log</code> noch aufrufen kann</li>
+          </ul>        
+        </section>  
+        <section>
+          <h2>git log</h2>
+          <blockquote>
+            Mit <code>git log</code> kann man auf einfache Weise die History aufrufen
+          </blockquote>          
+          <pre>
+            <code>
+              ➜  wba1-2015 git:(gh-pages) ✗ git log --graph --oneline --decorate --all
+              * 42974af (HEAD -> gh-pages, origin/gh-pages, origin/HEAD) Git Advanced Finished
+              *   a2c8b1f Merge branch 'gh-pages' of github.com:th-koeln/wba1-2015 into gh-pages
+              |\
+              | * 4bc40d3 Replaced old logo with new one in presentations
+              | * e000ba4 Added new box as image
+              | * 8672d10 Moved Helpers from .css to .scss
+              | * c50f1a8 Aded fancy template, still WIP
+              | *   55240dd Merge branch 'gh-pages' of github.com:fh-koeln/wba1-2015 into gh-pages
+              | |\
+              | | * 8c879ba Fragment identifier und mailto-Link im mi-onepager korrigiert
+              | * | 824bb94 SVG Grafik hinzugefügt
+              | * | c48a27c Folie Übersicht HTML CSS JS hinzugefügt
+              | * | c8119f3 Link repariert
+              | |/
+              | * 2803984 Korrekturen an Slides für HTML Basics
+              | *   2ad1774 Merge branch 'gh-pages' of github.com:fh-koeln/wba1-2015 into gh-pages
+              | |\
+              | | *   190301a Merge branch 'gh-pages' of https://github.com/th-koeln/wba1-2015 into gh-pages
+              | | |\
+              | | * | 47f359b Formular-Validierung im mi-onepager nun per JS
+              | | * | 80d85a3 Formular-Buttons als solche gekennzeichnet (hover)
+              | * | | 9b19e2c Folien für HTML-Workshop ergänzt.
+              | | |/
+              | |/|
+              | * | 7795026 Workshop HTML-Basics hinzugefügt
+            </code>
+          </pre>          
+        </section>                           
         <section>
           <h2>Literatur</h2>
           <ul>
@@ -371,20 +692,15 @@
             <li><a href="http://rogerdudler.github.io/git-guide/">git - the simple guide</a></li>                      
             <li><a href="http://semver.org/">Semantic Versioning 2.0.0</a></li>                      
             <li><a href="http://readwrite.com/2014/07/02/github-pull-request-etiquette">How To Win Friends And Make Pull Requests On GitHub</a></li>                      
-
-            <li><a href="https://guides.github.com/activities/hello-world/">Hello World</a></li>            
-            <li><a href="https://git-scm.com/book/en/v2">https://git-scm.com/book/en/v2</a></li>            
-            <li><a href="http://chris.beams.io/posts/git-commit/"></a>How to Write a Git Commit Message</li>
-            <li><a href="http://readwrite.com/2013/09/30/understanding-github-a-journey-for-beginners-part-1">GitHub For Beginners</a></li>
-            <li><a href="http://ericsink.com/vcbe/html/index.html">Version Control by Example</a></li>            
-            <li><a href="http://boxysystems.com/index.php/5-fundamental-differences-between-git-svn/">5 Fundamental differences between GIT & SVN</a></li>
-            <li><a href="http://biz30.timedoctor.com/git-mecurial-and-cvs-comparison-of-svn-software/"></a>SVN, Git, Mercurial – Comparison of Version Control Software</li>
-            <li><a href="https://help.github.com/articles/good-resources-for-learning-git-and-github/">Good Resources for Learning Git and GitHub</a></li>    
+            <li><a href="http://git-scm.com/book/en/v2">Pro Git book</a></li>                      
+            <li><a href="http://think-like-a-git.net/">http://think-like-a-git.net/</a></li>                      
+            <li><a href="https://help.github.com/">Git Help</a></li>                      
+            <li><a href="https://groups.google.com/forum/#!forum/git-users">Google Forum</a></li>                      
+            <li><a href="http://jk.gs/git/">#git: an introduction</a></li>                      
           </ul>
         </section>
       </div>
     </div>
-
 
     <script src="../revealjs-framework/lib/js/head.min.js"></script>
     <script src="../revealjs-framework/js/reveal.min.js"></script>
