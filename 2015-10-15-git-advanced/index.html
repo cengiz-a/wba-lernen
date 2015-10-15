@@ -120,7 +120,7 @@
           <p>Studiengang Medieninformatik an der Fachhochschule Köln<br>
           Campus Gummersbach</p>
 
-          <p style="margin-top:10%">M.Sc. Jan Kus</p>
+          <p style="margin-top:10%">Prof. Christian Noss, M.Sc. Jan Kus, Volker Schäfer</p>
         </section>
 
         <section>
@@ -175,7 +175,7 @@
             <li class="fragment">Man sollte nicht im <code>master</code>-Branch arbeiten</li>
             <li class="fragment">Der <code>master</code>-Branch sollte idealerweise immer "clean" sein und deployfähig bleiben</li>
             <li class="fragment">Features entwickelt man im Feature-Branch z.B.: <code>feature_x</code></li>
-            <li class="fragment">Das zu entwicklende System testet man auf einem staging / release Server und dadurch wird es im <code>staging</code>-Branch entwickelt</li>
+            <li class="fragment">Das zu entwicklende System testet man auf einem staging- bzw. release-Server und dadurch wird es im <code>staging-</code>-Branch entwickelt</li>
             <li class="fragment">Im <code>release</code>-Branch werden ggf. kleinere Bugfixes durchgeführt</li>
             <li class="fragment">Im <code>master</code>-Branch werden ggf. Hotfixes durchgeführt</li>            
           </ul>
@@ -183,9 +183,9 @@
         <section>
           <h2>Struktur von Git</h2>
           <ul>
-            <li class="fragment">Working Directory - <code>git add</code></li>
-            <li class="fragment">Index - <code>git commit</code></li>
-            <li class="fragment">Head</li>
+            <li class="fragment"><strong>Working Directory</strong> - mit <code>git add</code> fügt man Änderungen in den</li>
+            <li class="fragment"><strong>Index</strong> - mit <code>git commit</code> versioniert man in den</li>
+            <li class="fragment"><strong>Head</strong> - mit <code>git push</code> läd man Änderungen in ein remote Repository</li>
           </ul>
           <p class="fragment">
             <img src="images/trees.png" alt="Workflow" style="height:100%;">
@@ -195,9 +195,9 @@
         <section>
           <h2>Lokal vs. Remote</h2>
           <ul>
-            <li class="fragment">Lokalen Head - <code>git push</code></li>
-            <li class="fragment">Remote Head - <code>git pull</code></li>
-            <li class="fragment">Lokalen Head</li>
+            <li class="fragment"><strong>Lokaler Head</strong> - mit <code>git push</code> läd man Änderungen in den</li>
+            <li class="fragment"><strong>Remote Head</strong> - mit <code>git pull</code> läd man Änderungen in den</li>
+            <li class="fragment"><strong>Lokalen Head</strong></li>
           </ul>
           <p class="fragment">
             <img src="images/trees.png" alt="Workflow" style="height:100%;">
@@ -237,9 +237,9 @@
           <blockquote class="fragment">
             Git versucht alle Änderungen automatisch zusammen zu führen. Wenn dies nicht möglich ist entsteht ein so genannter <strong>Konflikt</strong>.
           </blockquote>
-          <p class="fragment">Dieser muss manuell gelöst werden (im Editor) und anschliessend wird der Index (<code>git add</code>) aktualisiert und dem lokalen Head hinzugefügt (<code>git commit</code>).</p>
+          <p class="fragment">Dieser muss manuell gelöst werden (im Editor) und anschließend wird der Index (<code>git add</code>) aktualisiert und dem lokalen Head hinzugefügt (<code>git commit</code>).</p>
           <p class="fragment">Bevor man den Branch merged können mit <code>git diff [source_branch] [target_branch]</code> die zu mergenden Unterschiede eingesehen werden</p>
-          <p class="fragment">Das zusammenführen von Branches soll in der Regel nur im Feature-Branch passieren</p>
+          <p class="fragment">Das Zusammenführen von Branches soll in der Regel nur im Feature-Branch passieren</p>
         </section>        
         <section>
           <h2>Konflikte</h2>
@@ -284,11 +284,11 @@
         <section>
           <h2>Tagen von Software-Releases</h2>
           <blockquote>
-            Releases are GitHub's way of packaging and providing software to your users. You can think of it as a replacement to using downloads to provide software. Releases are based on Git tags. Tags mark a specific point in the history of your project.
+            Releases are based on Git tags. Tags mark a specific point in the history of your project. Releases are GitHub's way of packaging and providing software to your users. You can think of it as a replacement to using downloads to provide software.
           </blockquote>
           <ul>
             <li class="fragment">In manchen Fällen möchte man bestimmte Releases als solche Taggen bzw. Kennzeichnen</li>          
-            <li class="fragment">Konzept des Semantic Versioning</li>          
+            <li class="fragment">Man benutzt das Konzept des Semantic Versioning</li>          
             <li class="fragment">z.B.: <code>2.4.1.beta2</code></li>          
             <li class="fragment">z.B.: <code>[Major].[Minor].[Patch].[Additional]</code></li>          
             <li class="fragment"><code>git tag 1.0.0 1b2e1d63ff</code></li>          
@@ -300,10 +300,11 @@
             Pull requests let you tell others about changes you've pushed to a GitHub repository. Once a pull request is sent, interested parties can review the set of changes, discuss potential modifications, and even push follow-up commits if necessary.
           </blockquote>
           <ul>
-            <li>Einen pull request macht man aus einem branch heraus mit dem Ziel, dass dieser vom Team gereviewed wird und in den master Branch gemerged wird</li>
+            <li>Einen pull request macht man aus einem Branch heraus mit dem Ziel, dass dieser vom Team gereviewed wird und in den master Branch gemerged wird</li>
            <li>Es ist ein wichtiger Bestandteil im Entwicklungsteam um <strong>Softwarequalität</strong> hoch zu halten</li>
-           <li>Pull-Requests ermöglichen Feedback vom Team über den eigenen Softwarecode zu erhalten und somit selber zu lernen und sich zu verbessern</li>            
-           <li>Pull-Requests geben die Möglichkeit an anderen Open Source Projekten mit zu entwickeln und somit ein gutes Standing in der Community zu erhalten</li>            
+           <li>Pull-Requests ermöglichen Feedback vom Team über den eigenen Softwarecode zu erhalten und somit <strong>selber zu lernen und sich stätig zu verbessern</strong></li>            
+           <li>Pull-Requests geben die Möglichkeit an anderen Open Source Projekten mit zu entwickeln und somit ein <strong>gutes Standing in der Community zu erhalten</strong></li>            
+           <li><strong>Arbeitgeber schauen sich github-Accounts an</strong></li>            
           </ul>
         </section>
         <section>
@@ -312,9 +313,9 @@
             <code>git-status</code> - zeigt den Status des Working-Trees (Git-Orders) an
           </blockquote>
           <ul>
-            <li>Zeigt die Differenz zwischen dem Index und dem HEAD an</li>
-            <li>Zeigt die Differenz zwischen dem Working Tree und dem Index an</li>
-            <li>Zeigt die Dateien die nicht im Working Tree enthalten sind und auch nicht ignoriert wurden</li>
+            <li>Zeigt die Differenz zwischen dem <strong>Index</strong> und dem <strong>HEAD</strong> an</li>
+            <li>Zeigt die Differenz zwischen dem <strong>Working Tree</strong> und dem <strong>Index</strong> an</li>
+            <li>Zeigt die Dateien die <strong>nicht im Working Tree enthalten sind</strong> und auch nicht ignoriert wurden</li>
           </ul>
         </section>
         <section>
@@ -331,6 +332,16 @@
             <li><code>git log --help</code>: Hilfe wie man <code>git log</code> noch aufrufen kann</li>
           </ul>          
         </section>
+        <section data-state="fullscreenImage" style="background-image: url(images/git-log-0.png)">
+          <p class="bu fragment">
+            Git Log Beispiel
+          </p>
+        </section> 
+        <section data-state="fullscreenImage" style="background-image: url(images/git-log-1.png)">
+          <p class="bu fragment">
+            Git Log Beispiel
+          </p>
+        </section>         
         <section data-state="fullscreenImage" style="background-image: url(images/pause.png)">
           <p class="bu fragment">
             Pause
@@ -344,7 +355,7 @@
           <p>Studiengang Medieninformatik an der Fachhochschule Köln<br>
           Campus Gummersbach</p>
 
-          <p style="margin-top:10%">M.Sc. Jan Kus</p>
+          <p style="margin-top:10%">Prof. Christian Noss, M.Sc. Jan Kus, Volker Schäfer</p>
         </section>        
         <section>
           <h2>Aufbau dieser Session</h2>
@@ -397,8 +408,8 @@
           </blockquote>
           <pre>
             <code>
-            ➜  test-git-project git:(testbranch) git checkout -b testb
-            Switched to a new branch 'testb'
+            ➜  test-git-project git:(testbranch) git checkout -b feature_x
+            Switched to a new branch 'feature_x'
             </code>
           </pre>
         </section>        
@@ -411,8 +422,8 @@
             <code>
               ➜  test-git-project git:(testb) git checkout master
               Switched to branch 'master'
-              ➜  test-git-project git:(master) git branch -d testb
-              Deleted branch testb (was dfc6c4d).
+              ➜  test-git-project git:(master) git branch -d feature_x
+              Deleted branch feature_x (was dfc6c4d).
               ➜  test-git-project git:(master)
             </code>
           </pre>
