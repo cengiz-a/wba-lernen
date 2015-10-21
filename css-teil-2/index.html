@@ -121,27 +121,57 @@
 
       <section>
         <h1>Web-basierte Anwendungen 1</h1>
-        <h2>CSS-Advanced</h2>
+        <h2 class="u">CSS-Advanced</h2>
 
-        <p>16. Oktober 2014</p>
+        <p>22. Oktober 2015</p>
 
-        <p>Studiengang Medieninformatik an der Fachhochschule Köln
+        <p>Studiengang Medieninformatik an der TH Köln
           <br>Campus Gummersbach</p>
 
-        <p style="margin-top:10%">Stephan Pavlovic, Volker Schaefer</p>
+        <p style="margin-top:10%">Christian Noss</p>
       </section>
       <section>
-        <h2>Aufbau dieser Session</h2>
+        <h2 class="u">Aufbau dieser Session</h2>
         <ul>
+	        <li class="fragment">Spezifizität</li>
           <li class="fragment">Positionierung von Elementen</li>
           <li class="fragment">Dokumentenfluss</li>
           <li class="fragment">Umgang mit übergroßen Inhalten</li>
-          <li class="fragment">Kombinatoren</li>
-          <li class="fragment">Pseudoklassen & Pseudoelemente</li>
-          <li class="fragment">Spezifizität</li>
-          <li class="fragment"><strong>Hands On</strong></li>
+          <li class="fragment">Nutzung von Klassen</li>
         </ul>
       </section>
+      
+      <section>
+        <h2 class="u">Spezifizität </h2>
+        <ul>
+          <li>Schwieriges Wort, im englischen <strong>specificity</strong></li>
+          <li class='fragment'>Mehrere Regeln treffen auf das selbe HTML-Element zu, welche Regel gewinnt?</li>
+          <li class='fragment'>Lösung: Ein einfaches Punktesystem</li>
+          <li class='fragment'>Typselector <strong>p</strong>: 1 Punkt </li>
+          <li class='fragment'>Klasse <strong>.box</strong>: 10 Punkte </li>
+          <li class='fragment'>Pseudoklasse <strong>:visited</strong>: 10 Punkte </li>
+          <li class='fragment'>ID <strong>#special-box</strong>: 100 Punkte </li>
+          <li class='fragment'>Attribute-style <strong>&lt;p style=""></strong>: 1000 Punkte </li>
+          <li class='fragment'>Der Erfindung des Teufels <strong>!important</strong>: 100000000000000 Punkte </li>
+        </ul>
+      </section>
+      
+      <section>
+        <blockquote>Meine Empfehlung: Verwendet nur Klassen! Die Welt wäre so viel schöner...</blockquote>
+      </section>
+      <section>
+        <h2 class="u">Eine kleine Quizrunde: </h2>
+        <ul>
+          <li><code>a.box</code> ?</li>
+          <li class='fragment'><code>p a.box:visited</code> ?</li>
+          <li class='fragment'><code>a#main-box.box</code> ?</li>
+          <li class='fragment'><code>a#main-box#super-box.box</code> ?</li>
+        </ul>
+      </section>
+      <section>
+        <blockquote>Fragen zu Spezifizität?</blockquote>
+      </section>
+      
       <section>
         <blockquote>"Elemente im normal flow stehen in Beziehung zu einander und beeinflussen die Position aller nachfolgenden Elemente"
         </blockquote>
@@ -149,7 +179,7 @@
       <section>
         <!-- Sticky aktuell nur in FF und Safari unterstützt aber ziemlich cool. -->
         <!-- Beispiel: http://html5-demos.appspot.com/static/css/sticky.html -->
-        <h2>Positionierung von Elementen</h2>
+        <h2 class="u">Positionierung von Elementen</h2>
         <ul class="fragment">
           <li>static (default)</li>
           <li>relative</li>
@@ -159,7 +189,7 @@
         </ul>
       </section>
       <section>
-        <h2>position: static</h2>
+        <h2 class="u">position: static</h2>
         <ul class="fragment">
           <li>Default für alle Elemente</li>
           <li><strong>top, right, bottom, left, z-index</strong> ohne Auswirkungen</li>
@@ -174,7 +204,7 @@
         </code></pre></div>
       </section>
       <section>
-        <h2>position: relative</h2>
+        <h2 class="u">position: relative</h2>
         <ul class="fragment" style='max-width:570px'>
           <li>Grundsätzlich wie <code>static</code></li>
           <li>Versatzoptionen <strong>top, right, bottom, left, z-index</strong> sind verfügbar</li>
@@ -189,10 +219,11 @@
         </code></pre></div>
       </section>
       <section>
-        <h2>position: absolute</h2>
+        <h2 class="u">position: absolute</h2>
         <ul class="fragment" style='max-width:570px'>
           <li>Element wird aus dem <em>normal flow</em> entfernt</li>
           <li>Versatzoptionen <strong>top, right, bottom, left, z-index</strong> sind verfügbar</li>
+          <li><a href="http://codepen.io/cnoss/pen/WQdoOd?editors=110" target"_blank">Beispiel</a></li>
         </ul>
         <img class="fragment" style="float:right;margin-top: -20px" src="images\block_absolute.png" alt="block_static">
         <div class="fragment" style="floaft:left; width:550px;"><pre style="width:550px"><code>.blaue_box {
@@ -203,7 +234,7 @@
         </code></pre></div>
       </section>
       <section>
-        <h2>position: fixed</h2>
+        <h2 class="u">position: fixed</h2>
         <ul class="fragment" style='max-width:570px'>
           <li>Element wird aus dem <em>normal flow</em> entfernt</li>
           <li>Versatzoptionen <strong>top, right, bottom, left, z-index</strong> sind verfügbar</li>
@@ -217,12 +248,13 @@
         </code></pre></div>
       </section>
       <section>
-        <h2>position: sticky</h2>
+        <h2 class="u">position: sticky</h2>
         <ul class="fragment" style='max-width:570px'>
           <li>Element wird aus dem <em>normal flow</em> entfernt</li>
           <li>Versatzoptionen <strong>top, right, bottom, left, z-index</strong> sind verfügbar</li>
           <li>Bleibt solange <em>kleben</em> bis der übergeordnete Container aus dem Viewport ist </li>
           <li><a href='http://html5-demos.appspot.com/static/css/sticky.html' target='_blank'>Beispiel (im FF oder Safari anschauen)</a></li>
+          <li><a href="http://caniuse.com/#search=sticky" target="_blank">Was kann ich benutzen?</a></li>
         </ul>
         <div class="fragment" style=""><pre style="width:550px"><code>.header {
             position: sticky;
@@ -234,7 +266,7 @@
         <blockquote>Fragen zur Positionierung?</blockquote>
       </section>
       <section>
-        <h2>Der z-Index</h2>
+        <h2 class="u">Der z-Index</h2>
         <h3>Was wenn Elemente übereinander liegen?</h3>
         <ul class="fragment">
                 <li>Zuletz genanntes Element im HTML Code liegt vorne</li>
@@ -259,22 +291,24 @@
       </section>
       <section>
         <!-- Am Ende diese Slide am besten nen paar Beispiele an die Wand malen -->
-        <h2>Dokumentenfluss</h2>
+        <h2 class="u">Dokumentenfluss</h2>
         <ul class="fragment" style='max-width:500px'>
           <li>CSS Eigenschaften <code>float</code> und <code>clear</code></li>
           <li>CSS Eigenschaften <code>float</code> und <code>clear</code></li>
           <li>Float positioniert die Elemente im normal Flow, aber sc</li>
           <li><code>float</code> hat die möglichen Eigenschaften <code>left, right, none</code></li>
           <li><code>clear</code> hat die möglichen Eigenschaften <code>left, right, both</code></li>
+          
         </ul>
         <img class="fragment" src="http://css-tricks.com/wp-content/csstricks-uploads/web-text-wrap.png" width="400" style="float:right">
         <ul class="fragment">
             <li>Problem: Wenn alle Elemente in einem Container floaten, hat dieser die Höhe 0</li>
+            <li><a href="http://codepen.io/cnoss/pen/WQdoOd?editors=110" target"_blank">Beispiel</a></li>
         </ul>
       </section>
       <section>
         <!-- Am Ende diese Slide am besten nen paar Beispiele an die Wand malen -->
-        <h2>Lösungen für das <em>Collapse</em> Problem </h2>
+        <h2 class="u">Lösungen für das <em>Collapse</em> Problem </h2>
         <ul class="fragment" style='max-width:500px'>
           <li>Die <strong>Empty Div Method:</strong> Am Ende der Box ein <code>&lt;div style="clear: both;"></code></li>
           <li>Die <strong>Overflow Method:</strong> Übergeordnete Container bekommt <code>overflow:show/auto</code></li>
@@ -286,7 +320,7 @@
         <blockquote>Fragen zur Floating?</blockquote>
       </section>
       <section>
-        <h2>Was passiert, wenn Dinge zu groß werden </h2>
+        <h2 class="u">Was passiert, wenn Dinge zu groß werden </h2>
         <ul class="fragment" style='max-width:450px'>
           <li>Kontrolliert man mit dem CSS-Attribut <code>overflow</code></li>
           <li>Die Default-Eigenschaft ist <code>visible</code></li>
@@ -295,7 +329,7 @@
         <img  class="fragment" src="http://css-tricks.com/wp-content/csstricks-uploads/overflow-visible.png" width="500" style="float:right">
       </section>
       <section>
-        <h2>Was passiert, wenn Dinge zu groß werden </h2>
+        <h2 class="u">Was passiert, wenn Dinge zu groß werden </h2>
         <ul style='max-width:450px'>
           <li>Kontrolliert man mit dem CSS-Attribut <code>overflow</code></li>
           <li>Will man Dinge einfach abschneiden so nutzt man <code>hidden</code></li>
@@ -303,7 +337,7 @@
         <img src="http://css-tricks.com/wp-content/csstricks-uploads/css-overflow-hidden.png" width="500" style="float:right">
       </section>
       <section>
-        <h2>Was passiert, wenn Dinge zu groß werden </h2>
+        <h2 class="u">Was passiert, wenn Dinge zu groß werden </h2>
         <ul style='max-width:450px'>
           <li>Kontrolliert man mit dem CSS-Attribut <code>overflow</code></li>
           <li>Will man den User scrollen lassen dass nimmt man <code>scroll</code></li>
@@ -313,16 +347,17 @@
         <img src="http://css-tricks.com/wp-content/csstricks-uploads/css-scroll.png" width="500" style="float:right">
       </section>
       <section>
-        <h2>Was passiert, wenn Dinge zu groß werden </h2>
+        <h2 class="u">Was passiert, wenn Dinge zu groß werden </h2>
         <ul style='max-width:450px'>
           <li>Kontrolliert man mit dem CSS-Attribut <code>overflow</code></li>
           <li>Will man den Browser entscheiden lassen: <code>auto</code></li>
           <li>Man erhält Scrollbars nur wenn diese nötig sind</li>
+          <a href="http://codepen.io/cnoss/pen/WQdoOd?editors=110" target"_blank">Beispiel</a>
         </ul>
         <img src="http://css-tricks.com/wp-content/csstricks-uploads/css-overflow-auto.png" width="500" style="float:right">
       </section>
       <section>
-        <h2>Was passiert, wenn Dinge zu groß werden </h2>
+        <h2 class="u">Was passiert, wenn Dinge zu groß werden </h2>
         <h3>Auch Text kann zu groß werden </h3>
         <div style='width:250px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-bottom:20px'>Ein Test Text mit Punkten</div>
         <ul>
@@ -335,133 +370,22 @@
       <section>
         <blockquote>Fragen zu Overflow?</blockquote>
       </section>
+      
       <section>
-        <h2>Kombinatoren: Verhältnisse von Elementen zueinander </h2>
+        <h2 class="u">Nutzung von Klassen</h2>
         <ul>
-          <li class='fragment'>Manchmal möchte/kann man nicht ein Element direkt ansprechen</li>
-          <li class='fragment'>Sondern nur in einem speziellen Kontext</li>
-          <li class='fragment'>Hierfür benutzt man sogenannte Kombinatoren als Selektor</li>
-          <li class='fragment'>Unser kleines <a href='http://codepen.io/anon/pen/tmbxI?editors=110' target='_blank'>Live-Beispiel hierfür</a></li>
+	        <li>Mehrfachnutzung von Style Angaben</li>
+	        <li>Unabhängig vom Markup</li>
+	        <li>Modularität</li>
+	        <li><a href="https://css-tricks.com/bem-101/" target="_blank">Modulares CSS</a>
+	        <li><a href="http://cssguidelin.es/" target="_blank">cssguidelin.es</a></li>
+	        <li><a href="http://codepen.io/cnoss/pen/WQdoOd?editors=110" target"_blank">Beispiel</a></li>
         </ul>
       </section>
-      <section>
-        <h2>Kombinatoren: Verhältnisse von Elementen zueinander </h2>
-        <div class='fragment'>
-          <ul>
-            <li><strong>Nachfahren-Kombinator</strong></li>
-            <li>wählt alle <strong>direkten & indirekten</strong> Nachfahren eines Elements</li>
-            <li><code>.box .sub_box</code></li>
-            <li>Können wir nutzen um oberstes <code>div</code> auszuschließen</li>
-          </ul>
-          <hr>
-        </div>
-        <ul class='fragment'>
-          <li><strong>Kind-Kombinator</strong></li>
-          <li>wählt alle <strong>direkten</strong> Nachfahren eines Elements</li>
-          <li><code>.box > .sub_box</code></li>
-          <li>Können wir nutzen um innerstes <code>div</code> auszuschließen</li>
-          <li class='fragment'>Auf zu unserem kleinen <a href='http://codepen.io/anon/pen/tmbxI?editors=110' target='_blank'>Live-Beispiel</a></li>
-        </ul>
-      </section>
-      <section>
-        <h2>Kombinatoren: Verhältnisse von Elementen zueinander </h2>
-        <div class='fragment'>
-          <ul>
-            <li><strong>Nachbar-Kombinator</strong></li>
-            <li>wählt den <strong>direkten</strong> nachfolgenden Nachbarn eines Elements</li>
-            <li><code>.box + .box</code></li>
-          </ul>
-          <hr>
-        </div>
-        <ul class='fragment'>
-          <li><strong>Geschwister-Kombinator</strong></li>
-          <li>wählt alle <strong>direkten und indirekten</strong> nachfolgenden Nachbarn eines Elements</li>
-          <li><code>.box ~ .box</code></li>
-          <li class='fragment'>Auf zu unserem kleinen <a href='http://codepen.io/anon/pen/tmbxI?editors=110' target='_blank'>Live-Beispiel</a></li>
-        </ul>
-      </section>
-      <section>
-        <blockquote>Fragen zu Kombinatoren?</blockquote>
-      </section>
-      <section>
-        <h2>Pseudoelemente & Pseudoklassen </h2>
-        <ul>
-          <li class='fragment'>Man unterscheidet zwischen:</li>
-          <li class='fragment'><strong>Pseudoklasse: </strong>Eine CSS-Klasse die implizit verfügbar ist</li>
-          <li class='fragment'><strong>Pseudoelement: </strong>Ein HTML-Element, welches im CSS lebt</li>
-        </ul>
-      </section>
-      <section>
-        <h2>Pseudoklassen für Interaktionselemente</h2>
-        <ul>
-          <li class='fragment'>Der klassischte aller Fälle <strong>:hover </strong></li>
-          <li class='fragment'><strong>:active </strong>betrifft akive Elemente, besonders wichtig im mobilen Anwendungen</li>
-          <li class='fragment'><strong>:focus </strong>wichtig für die Bedienung mit der Tastatur und für das Thema <em>Barrierefreiheit</em></li>
-        </ul>
-      </section>
-      <section>
-        <h2>Weitere Pseudoklassen</h2>
-        <ul class='fragment'>
-          <li><strong>:first-child, :last-child </strong> Besonders häufig im Kontext von Listen</li>
-          <li><strong>:nth-child() </strong> Häufigster Fall sind Tabellen</li>
-        </ul>
-        <div class='fragment'>
-          <img src="images\first_child.jpg" alt="first_child" width="30%">
-          <img src="images\last_child.jpg" alt="last_child" width="30%">
-          <img src="images\nth_child.jpg" alt="nth_child" width="30%">
-        </div>
-        <ul class='fragment'>
-          <li>Weitere Pseudoklassen findet man <a href="http://www.sitepoint.com/web-foundations/css3-pseudo-classes/" target='_blank'>hier</a></li>
-        </ul>
-      </section>
-      <section>
-        <h2>Pseudoelemente</h2>
-        <ul class='fragment'>
-          <li><strong>::before, ::after</strong> Werden sehr häufig für <em>Dekorationen</em> verwendet</li>
-          <li>Standard-Beispiel sind Pfeile <a href="http://codepen.io/anon/pen/FtKpr?editors=110" target="_blank">(Beispiel)</a> </li>
-        </ul>
-        <ul class='fragment'>
-          <li><a href="http://nicolasgallagher.com/pure-css-gui-icons/demo/" target="_blank">Krasses Beispiel</a> (Alle Icons sind pures CSS) </li>
-        </ul>
-        <ul class='fragment'>
-          <li>Weitere Beispiele für Pseudoelemente</li>
-          <li><strong>::first-letter</strong> Besonderes Styling für den ersten Buchstaben</li>
-          <li><strong>::first-line</strong> Besonderes Styling für dedie erste Zeile</li>
-          <li><a href="http://codepen.io/anon/pen/kzpjg?editors=110" target="_blank">Demo</a> </li>
-        </ul>
-      </section>
-      <section>
-        <blockquote>Fragen zu Pseudoklassen?</blockquote>
-      </section>
-      <section>
-        <h2>Spezifizität </h2>
-        <ul>
-          <li>Schwieriges Wort, im englischen <strong>specificity</strong></li>
-          <li class='fragment'>Mehrere Regeln treffen auf das selbe HTML-Element zu, welche Regel gewinnt?</li>
-          <li class='fragment'>Lösung: Ein einfaches Punktesystem</li>
-          <li class='fragment'>Typselector <strong>p</strong>: 1 Punkt </li>
-          <li class='fragment'>Klasse <strong>.box</strong>: 10 Punkte </li>
-          <li class='fragment'>Pseudoklasse <strong>:visited</strong>: 10 Punkte </li>
-          <li class='fragment'>ID <strong>#special-box</strong>: 100 Punkte </li>
-          <li class='fragment'>Attribute-style <strong>&lt;p style=""></strong>: 1000 Punkte </li>
-          <li class='fragment'>Der Erfindung des Teufels <strong>!important</strong>: 100000000000000 Punkte </li>
-        </ul>
-      </section>
-      <section>
-        <blockquote>Meine Empfehlung: Verwendet nur Klassen! Die Welt wäre so viel schöner...</blockquote>
-      </section>
-      <section>
-        <h2>Eine kleine Quizrunde: </h2>
-        <ul>
-          <li><code>a.box</code> ?</li>
-          <li class='fragment'><code>p a.box:visited</code> ?</li>
-          <li class='fragment'><code>a#main-box.box</code> ?</li>
-          <li class='fragment'><code>a#main-box#super-box.box</code> ?</li>
-        </ul>
-      </section>
-      <section>
-        <blockquote>Fragen zu Spezifizität?</blockquote>
-      </section>
+    
+   
+      
+
       <!-- End of slides container. -->
     </div>
 
