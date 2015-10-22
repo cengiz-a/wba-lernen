@@ -124,15 +124,26 @@ body > header h1{
 
 
 #nav > li{
-	display: inline-block;
-	margin-right: 1rem;
-	margin-bottom: 1px;
+	display: block;
+	margin-bottom: 0.5rem;
+}
+
+#nav > li + li{
+	border-top: solid 1px #dd1166;
+	padding-top: 0.5rem;
 }
 
 #nav > li a{
 	color: #000;
 	font-weight: 600;
 	text-decoration: none;
+	border: none;
+	display: block;
+}
+
+#nav > li a:hover{
+	color: #dd1166;
+	background-color: inherit;
 }
 
 
@@ -423,56 +434,66 @@ hr{
     #Responsive
 \*------------------------------------*/
 
-/* Tabletts */
+/* Tablets */
 @media only screen and (min-width: 760px) {
-    
-    #dozenten figcaption{
-        display: inline-block;
-        width: 75%;
-        vertical-align: top;
-    }
+	
+	#nav > li{
+		display: inline-block;
+		margin-right: 0.5rem;
+		margin-bottom: 0;
+	}
+	
+	#nav > li + li{
+		border: none;
+	}
 
-    #dozenten figcaption > *{
-        padding-left: 1rem;
-    }
+  #dozenten figcaption{
+      display: inline-block;
+      width: 75%;
+      vertical-align: top;
+  }
 
-    #dozenten figure img{
-        display: inline-block;
-        width: 25%;
-    }
+  #dozenten figcaption > *{
+      padding-left: 1rem;
+  }
 
-    #dozenten figure{
-        margin-bottom: 1rem;
-    }
-    
-    footer img{
-        width: 25%;
-        height: auto;
-        margin-bottom: 1rem;
-    }
+  #dozenten figure img{
+      display: inline-block;
+      width: 25%;
+  }
 
-    #anfrageformular > p,
-    #anfrageformular > form{
-        margin-left: 50%;
-        padding-left: 1rem;
-    }
-    
-    #anfrageformular > h2, #neuigkeiten > h2{
-        float: left;
-    }
-    
-    #neuigkeiten > ol{
-        margin-left: 25%;
-        padding-left: 1rem;
-    }
-    
-    #neuigkeiten li{
-        position: relative;
-    }
-    
-    #neuigkeiten time{
-        position: absolute;
-        right: 0;
-        top: 1rem;
-    }
+  #dozenten figure{
+      margin-bottom: 1rem;
+  }
+  
+  footer img{
+      width: 25%;
+      height: auto;
+      margin-bottom: 1rem;
+  }
+
+  #anfrageformular > p,
+  #anfrageformular > form{
+      margin-left: 50%;
+      padding-left: 1rem;
+  }
+  
+  #anfrageformular > h2, #neuigkeiten > h2{
+      float: left;
+  }
+  
+  #neuigkeiten > ol{
+      margin-left: 25%;
+      padding-left: 1rem;
+  }
+  
+  #neuigkeiten li{
+      position: relative;
+  }
+  
+  #neuigkeiten time{
+      position: absolute;
+      right: 0;
+      top: 1rem;
+  }
 }
