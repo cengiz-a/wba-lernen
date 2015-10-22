@@ -74,16 +74,36 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 			Alle Texte sollen einen Zeilenabstand von 140% haben
 			*/
 			font-family: 'Open Sans', sans-serif !important;
+            line-height: 140%;
 		}
 		
 		/* Training Basic:
 			Alle Headlines sollen eine Schriftgröße und einen Zeilenabstand von 1.8 Rem haben.
 		*/
+        
+            h1, h2, h3, h4, h5, h6 {
+                font-size: 1.8rem;
+                margin-top: 1.8rem;
+                margin-right: 1.8rem;
+                margin-bottom: 1.8rem;
+                
+                
+            } 
 
 		
 		/* Training Basic:
 			Alle Paragraphen (p) sollen einen Abstand nach unten von 2 Rem haben, außer wenn auf einen Paragraphen ein weiterer Paragraph folgt.
 		*/
+            p {
+                
+                margin-bottom: 1rem;
+                
+            }
+            
+            p:last-child{
+                
+                margin-bottom: 2rem;
+            }
 
 
 
@@ -99,6 +119,34 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		* Zwei Navigationspunkte sollen durch eine pinke Linie getrennt werden.
 		* Beim Mouseover soll die Schrift pink werden.
 		*/
+            nav ul li a {
+                text-decoration: none;
+                color: #000;
+                font-weight: bold;
+              //  display: inline-block;
+                //padding: 5px;
+               // border-bottom: solid 2px #dd1166;
+                text-decoration: underline;
+                
+                
+            }
+            
+            nav ul li {
+                display: inline;
+                margin-right: 5px;
+            }
+            
+            nav:last-child ul:last-child li:last-child a:last-child {
+                
+                border-bottom: none;
+            }
+            
+
+            nav ul li a:hover {
+                
+                color: #dd1166;
+                
+            }
 
 
 
@@ -115,7 +163,30 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		* Der Name des Autors soll nach rechts ausgerichtet werden.
 		*/
 
-
+        #interview  blockquote {
+                display: block;
+                background-color: blue;
+                margin-bottom: 1rem;
+                padding: 1rem;
+                color: #fff;
+                
+                
+                
+            }
+            
+        #interview  blockquote:last-child {
+                display: block;
+                background-color: purple;
+                margin-bottom: 1rem;
+                
+                
+                
+            }
+            
+          #interview blockquote footer cite {
+                display: block;
+                text-align: right;
+            }
 
 
 
@@ -153,7 +224,8 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		/* Training Basic
 		Tabellen sollen über die komplette Breite des Elternelements gehen.
 		*/
-
+       
+    
 		
 		/* Training Basic
 		Texte in Tabellenköpfen sollen fett, linksbündig und mit einem Abstand von 0.5 Rem nach unten dargestellt werden.
@@ -171,6 +243,8 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 			padding-left: 0.5rem;
 		}
 		
+            
+    
 		/* Training Basic
 		Zellen mit der Klasse large sollen eine Breite von 50% bekommen, Zellen mit der Klasse small 10%.
 		*/
@@ -193,6 +267,21 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		/* Training Basic:
 		Alle direkten Kinder des body Elements sollen in einer zentrierten Box mit einer maximalen Breite von 80% der Breite des Browserfensters liegen. Die Box soll einen weißen Hingergrund und einen Innenabstand von 20 Pixeln haben.
 		*/
+            
+            body {
+                
+                display: block;
+                max-width: 80%;
+                background-color: #ddd;
+                padding: 20px;
+            }
+            
+            header, main, #footer {
+                
+                padding: 20px;
+                
+                background-color: white;
+            }
 
 		
 		section, table{
@@ -202,7 +291,56 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		/* Training Basic
 		Alle Sections sollen eine pinke Linie mit Abstand nach oben und unten (2rem) getrennt werden
 		*/
-		
+            
+            section {
+                display: block;
+                margin-bottom: 2rem;
+                margin-top: 2rem;
+                border-bottom: solid 2px #dd1166;
+              }
+            
+            #moduluebersicht h3 {
+                font-weight: bold;
+                font-size: 120%;
+                
+            }
+            
+            #moduluebersicht table thead tr th {
+                
+                font-weight: bold;
+                text-align: left;
+            }
+            
+            #dozenten figure {
+                
+                
+            }
+            
+            
+            
+            #dozenten figure img {
+                float: left;
+                display: block;
+                margin-right: 20px;
+                margin-bottom: 40px;
+                
+            }
+            
+            #dozenten figure figcaption dl dt {
+                float: left;
+                font-weight: bold;
+                }
+            
+            #dozenten figure figcaption dl dd {
+             //   padding-left: 20px;
+            }
+            
+            #anfrageformular form {
+                align-items: ; 
+            }
+            
+            
+        
 		
 		</style>
 </head>
