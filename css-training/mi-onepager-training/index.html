@@ -63,18 +63,24 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 			margin-bottom: 20px;
 		}
 
-
+            nav >ul >li {
+                float: left;
+                margin-right: 20px;
+            }
+            
+         
 
 
 		/*------------------------------------*\
 		#typo
 		\*------------------------------------*/
 		
-		*, footer{
+		
 			/* Training Basic:
 			Alle Texte sollen einen Zeilenabstand von 140% haben
 			*/
-            line-height: 140%
+             *, footer{
+            line-height: 140%;
 			font-family: 'Open Sans', sans-serif !important;
 		}
 		
@@ -83,7 +89,8 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		*/
             h1, h2, h3{
                 font-size: 1.8rem;
-                line-height: 1.8rem;
+                line-height: 100%;
+                margin-bottom: 1.8rem;
             }
 
 		
@@ -94,9 +101,7 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
                 margin-bottom: 2rem;
             }
             
-            p + p{
-                margin-bottom: auto;
-            }
+            
             
 
 
@@ -115,22 +120,39 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
         
             li > a {
                 text-decoration: none;
+                border-bottom: 1px solid deeppink;
                 color: black;
                 font-weight: bold;
             }
             
-            li + li {
-                border-top: 1px solid deeppink;
+            nav > ul:after {
+                content: ".";
+                clear: both;
+                display: block;
+                visibility: hidden;
+                height: 0px;
             }
             
             a:hover{
                 color: deeppink;
             }
             
-
-
-
-
+            header{
+                width: 75%;
+                margin: auto;
+                position: relative;
+                margin-bottom: 20px;
+                background-color: white;
+                padding: 15px;
+            }
+               main{
+                width: 75%;
+                margin: auto;
+                margin-bottom: 20px;
+                background-color: white;
+                padding: 15px;
+            }
+                
 
 
 		/*------------------------------------*\
@@ -152,7 +174,9 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
                 background-color: hotpink;
             }
             
-            
+        footer{
+            text-align: right;
+        }
 
 
 		/*------------------------------------*\
@@ -185,7 +209,6 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
     #Tables
 		\*------------------------------------*/
 		
-		
 		/* Training Basic
 		Tabellen sollen über die komplette Breite des Elternelements gehen.
 		*/
@@ -194,7 +217,12 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		/* Training Basic
 		Texte in Tabellenköpfen sollen fett, linksbündig und mit einem Abstand von 0.5 Rem nach unten dargestellt werden.
 		*/
-		
+		th{
+            font-weight: bold;
+            text-align: left;
+            margin-top: 0.5rem;
+        }
+       
 		table tr:not(:last-child){
 			border-bottom: solid 1px #ddd;
 		}
@@ -211,7 +239,7 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		Zellen mit der Klasse large sollen eine Breite von 50% bekommen, Zellen mit der Klasse small 10%.
 		*/
 
-
+        
 
 
 
