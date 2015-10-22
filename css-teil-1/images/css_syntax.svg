@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="960px" height="400px" viewBox="0 0 960 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.1 (8751) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Artboard-2" sketch:type="MSArtboardGroup">
+            <text id="p-{-color:-black;-}" sketch:type="MSTextLayer" font-family="Myriad Pro" font-size="96" font-weight="normal" fill="#DD1166">
+                <tspan x="157" y="149">p { color: black; }</tspan>
+            </text>
+            <path d="M125.494951,206.5 L224.521049,206.5" id="Line" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <path d="M224.5,206.5 L224.5,191.5" id="Line-5" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <path d="M124.5,206.5 L124.5,191.5" id="Line-6" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <path d="M284.5,206.5 L284.5,191.5" id="Line-7" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <path d="M284.5,306.5 L284.5,291.5" id="Line-11" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <path d="M474.5,206.5 L474.5,191.5" id="Line-8" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <path d="M530.5,206.5 L530.5,191.5" id="Line-9" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <path d="M731.5,206.5 L731.5,191.5" id="Line-10" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <path d="M731.5,306.5 L731.5,291.5" id="Line-12" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <text id="Element" sketch:type="MSTextLayer" font-family="Myriad Pro" font-size="36" font-weight="normal" sketch:alignment="middle" fill="#FFFFFF">
+                <tspan x="116.472" y="248">Element</tspan>
+            </text>
+            <path d="M285.5,206.5 L474.502502,206.5" id="Line-2" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <path d="M284.5,306.5 L731.5,306.5" id="Line-4" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <text id="Eigenschaft" sketch:type="MSTextLayer" font-family="Myriad Pro" font-size="36" font-weight="normal" sketch:alignment="middle" fill="#FFFFFF">
+                <tspan x="292.592" y="247">Eigenschaft</tspan>
+            </text>
+            <text id="Deklaration" sketch:type="MSTextLayer" font-family="Myriad Pro" font-size="36" font-weight="normal" sketch:alignment="middle" fill="#FFFFFF">
+                <tspan x="421.308" y="346">Deklaration</tspan>
+            </text>
+            <path d="M530.497717,206.5 L731.502487,206.5" id="Line-3" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <text id="Wert" sketch:type="MSTextLayer" font-family="Myriad Pro" font-size="36" font-weight="normal" sketch:alignment="middle" fill="#FFFFFF">
+                <tspan x="595.572" y="248">Wert</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
