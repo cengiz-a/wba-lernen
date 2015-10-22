@@ -79,13 +79,29 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		/* Training Basic:
 			Alle Headlines sollen eine Schriftgröße und einen Zeilenabstand von 1.8 Rem haben.
 		*/
+            
+            
+                h1, h2, h3{
+                    font-size: 1.8rem;
+                }
+            
+            
 
 		
 		/* Training Basic:
 			Alle Paragraphen (p) sollen einen Abstand nach unten von 2 Rem haben, außer wenn auf einen Paragraphen ein weiterer Paragraph folgt.
 		*/
+            
 
-
+            
+            p{
+                margin-bottom: 1rem;
+            }
+            
+            p:last-child{
+                margin-bottom: 2rem;
+            }
+            
 
 
 
@@ -99,7 +115,16 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		* Zwei Navigationspunkte sollen durch eine pinke Linie getrennt werden.
 		* Beim Mouseover soll die Schrift pink werden.
 		*/
-
+            
+            nav ul li a{
+                padding: 5px 0;
+                display: block;
+                text-decoration: none;
+                color: #000;
+                font-weight: bold;
+                border-top: solid 1px #dd1166;
+            }
+        
 
 
 
@@ -116,8 +141,16 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		*/
 
 
-
-
+            #interview blockquote{
+                background-color: #4952e1;
+                margin-bottom: 1rem;
+                color: #fff;
+                padding: 1rem;
+            }
+            
+            #interview blockquote + blockquote{
+                background-color: purple;
+            }
 
 		/*------------------------------------*\
     #Articles
@@ -196,12 +229,18 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 
 		
 		section, table{
-			margin-bottom: 2rem;
+			margin-bottom: 12rem;
 		}
 		
 		/* Training Basic
 		Alle Sections sollen eine pinke Linie mit Abstand nach oben und unten (2rem) getrennt werden
 		*/
+            
+            section{
+                border-top: solid 1px #dd1166;
+                padding-top: 2rem;
+                margin-bottom: 2rem;
+            }
 		
 		
 		</style>
