@@ -12,11 +12,11 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist
 
 Alle benötigten Bilder befinden sich im Ordner assets/img
 -->
-
+<html>
 <head>
     <meta charset="utf-8">
     <!--[if IE]><![endif]-->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge ,chrome=1">
     <title>Medieninformatik an der TH Köln</title>
     <meta name="description" content="">
     <meta name="keywords" content="" />
@@ -37,22 +37,23 @@ Alle benötigten Bilder befinden sich im Ordner assets/img
 <body>
 
     <!--    Hier beginnt der Kopfbereich der Seite-->
-
+    <header>
         <div class="th-logo">
 
             <!-- Fügen sie das TH-Logo (th.png) als Bild hinzu-->
-
+            <img src="/home/exeluis/Wba1GitRepos/wba1-2015/html-basics-training/training_3/assets/img/th-logo.png" alt="Logo der TH Köln" height="70" width="129">
+            
         </div>
 
         <div class="mi-logo">
             <!-- Fügen sie das TH-Logo (mi-box-100.png) als Bild hinzu-->
-
+            <img src="/home/exeluis/Wba1GitRepos/wba1-2015/html-basics-training/training_3/assets/img/mi-box-100.png" alt="MI Box" height="83" width="100">
             <!-- Die wichtigste Überschrift der Seite-->
-            Medieninformatik
-            an der TH Köln
+            <h1>Medieninformatik
+            an der TH Köln</h1>
         </div>
 
-        
+        <nav>
         <!-- Hier beginnt die Hauptnavigation der Seite-->
 
           
@@ -70,32 +71,38 @@ Alle benötigten Bilder befinden sich im Ordner assets/img
            #neuigkeiten        Neuigkeiten
             
             -->
-
+            <ul id="nav">
+                <li><a href="#showcase">Showcase</a></li>
+                <li><a href="#moduluebersicht">Modulübersicht</a></li>
+                <li><a href="#anfrageformular">Anfrageformular</a></li>                
+                <li><a href="#neuigkeiten">Neuigkeiten</a></li>
+            </ul>
+        </nav>
     <!-- Hier endet die Hauptnavigation der Seite-->
 
-    
+    </header>
     <!-- Hier endet der Kopfbereich der Seite-->
 
    
         <!-- Hier beginnt der Hauptinhalt der Seite-->
-
+    <main>
               
         <!-- Hier beginnt ein thematisch zusammenhängender Inhalt.-->
-
+    <section>
     
            <!-- Bitte als zweitwichtigste Überschrift auszeichnen-->
-           Über den Medieninformatik Bachelor Studiengang
+           <h2>Über den Medieninformatik Bachelor Studiengang</h2>
             
             <div>
                
                 <!-- Bitte jeweils als Abschnitt oder Absatz auszeichnen -->
-                MedieninformatikerInnen sind Fachleute für IT-Prozesse und Systeme, mit denen man medienbasierte Informationen gestalten, produzieren, bearbeiten, verteilen und nutzen kann. Wer Medieninformatik studieren will, sollte möglichst <strong>kommunikationsfreudig</strong> und <strong>kreativ</strong> sein, gerne <strong>im Team arbeiten</strong> und <strong>Freude an analytischem und logischem Denken</strong> und Handeln haben.
+                <p>MedieninformatikerInnen sind Fachleute für IT-Prozesse und Systeme, mit denen man medienbasierte Informationen gestalten, produzieren, bearbeiten, verteilen und nutzen kann. Wer Medieninformatik studieren will, sollte möglichst <strong>kommunikationsfreudig</strong> und <strong>kreativ</strong> sein, gerne <strong>im Team arbeiten</strong> und <strong>Freude an analytischem und logischem Denken</strong> und Handeln haben.</p>
                 
                 
-                Die durchgängige Digitalisierung textlicher, bildlicher und audiovisueller Medien im Zusammenspiel mit digitalen Kommunikations- und Distributionswegen führt zu unendlich vielen Fragen, Problemen und Möglichkeiten. Auch für die Informatik, insbesondere die Medieninformatik.
+                <p>Die durchgängige Digitalisierung textlicher, bildlicher und audiovisueller Medien im Zusammenspiel mit digitalen Kommunikations- und Distributionswegen führt zu unendlich vielen Fragen, Problemen und Möglichkeiten. Auch für die Informatik, insbesondere die Medieninformatik.</p>
                 
                 
-                Absolventen der Medieninformatik analysieren, entwerfen, realisieren, adaptieren, betreiben und evaluieren informationstechnische, oft web-basierte Prozesse und Systeme zur Gestaltung, Produktion, Bearbeitung, Distribution und Nutzung medienbasierter Informationen. Das Studium der Medieninformatik zielt somit im Kern auf die Vermittlung entsprechender Methoden, Techniken und Denkweisen der Informatik.
+                <p>Absolventen der Medieninformatik analysieren, entwerfen, realisieren, adaptieren, betreiben und evaluieren informationstechnische, oft web-basierte Prozesse und Systeme zur Gestaltung, Produktion, Bearbeitung, Distribution und Nutzung medienbasierter Informationen. Das Studium der Medieninformatik zielt somit im Kern auf die Vermittlung entsprechender Methoden, Techniken und Denkweisen der Informatik.</p>
             </div>
             <div>
 
@@ -106,68 +113,73 @@ Alle benötigten Bilder befinden sich im Ordner assets/img
             </div>
 
         <!-- Hier endet ein thematisch zusammenhängender Inhalt.-->
-
+    </section>
        
         <!-- Hier beginnt ein thematisch zusammenhängender Inhalt.-->
-        
+    <section>
            
             <!-- Bitte als zweitwichtigste Überschrift auszeichnen-->
-            Statements
+            <h2>Statements</h2>
             
             
             <!-- Anfang eines Zitates -->
 
-                                      
+            <article>                          
                 <!-- Bitte jeden Abschnitt als Absatz auszeichnen -->
-                Das Faszinierende für mich ist, dass durch den Einsatz von Medien Ergebnisse sichtbar werden. Ich programmiere nicht versteckte Systeme, bei denen ich dann fast gar nicht mehr sehe, was da passiert, sondern habe meist einen visuellen Output, den ich erzeuge. Durch diese „Berührung“ mit den Nutzern von Informationssystemen wird es erforderlich, viele verschiedene Kompetenzen, z.B. Usability, Computergrafik oder Kommunikationstechnologien zu beherrschen und verschiedene Perspektiven einzunehmen.
+                <p>Das Faszinierende für mich ist, dass durch den Einsatz von Medien Ergebnisse sichtbar werden. Ich programmiere nicht versteckte Systeme, bei denen ich dann fast gar nicht mehr sehe, was da passiert, sondern habe meist einen visuellen Output, den ich erzeuge. Durch diese „Berührung“ mit den Nutzern von Informationssystemen wird es erforderlich, viele verschiedene Kompetenzen, z.B. Usability, Computergrafik oder Kommunikationstechnologien zu beherrschen und verschiedene Perspektiven einzunehmen.</p>
                 
                 
-                Durch dieses breite Spektrum eröffnen sich dann viele Möglichkeiten im späteren Berufsleben: das Entwickeln von mobilen Anwendungen, Webseiten, Spielen und multimedialen Diensten ebenso wie die Konzeption und Produktion der Inhalte für verschiedenste Medien. Durch diese Vielseitigkeit wird es nie langweilig.
+                <p>Durch dieses breite Spektrum eröffnen sich dann viele Möglichkeiten im späteren Berufsleben: das Entwickeln von mobilen Anwendungen, Webseiten, Spielen und multimedialen Diensten ebenso wie die Konzeption und Produktion der Inhalte für verschiedenste Medien. Durch diese Vielseitigkeit wird es nie langweilig.</p>
                 
                 <!-- Bitte als Autor des Zitates kennzeichnen -->
-                Prof. Dr. Christian Kohls
-                
+                <address>Prof. Dr. Christian Kohls</address>
+            </article>
             <!-- Ende eines Zitates -->
 
            
             <!-- Bitte dieses Zitat wie das vorherige auszeichnen-->
-                
-                Wie der Name schon sagt, ist das die Arbeit mit Medien. Dass man fast immer eine visuelle Antwort bekommt, bei dem was man macht, finde ich persönlich wahnsinnig motivierend.
+            <article>    
+                <p>Wie der Name schon sagt, ist das die Arbeit mit Medien. Dass man fast immer eine visuelle Antwort bekommt, bei dem was man macht, finde ich persönlich wahnsinnig motivierend.</p>
                     
                 
-                Wenn ich jetzt mit...hmm...ich möchte hier jetzt keine anderen Forschungsgebiete beleidigen...also ich persönlich finde es einfach deutlich motivierender, wenn ich ein schönes ästhetisches Bild als Ergebnis kriege, als wenn lediglich die Zahl "5" auf dem Monitor erscheint. Und das ist ein ganz großer Vorteil der Medieninformatik.
+                <p>Wenn ich jetzt mit...hmm...ich möchte hier jetzt keine anderen Forschungsgebiete beleidigen...also ich persönlich finde es einfach deutlich motivierender, wenn ich ein schönes ästhetisches Bild als Ergebnis kriege, als wenn lediglich die Zahl "5" auf dem Monitor erscheint. Und das ist ein ganz großer Vorteil der Medieninformatik.</p>
                 
                 
-                Ausserdem ist es halt auch so, dass man mit dem, was man erlernt, Leuten später eine Freude bereiten kann. Ganz viel, was wir lernen, ist unter anderem für die Entertainment Industrie und ich finde, das ist ein schönes Gefühl, dass das, was man lernt, später von Leuten genutzt wird, um Spaß zu haben und ihr Leben interessant zu gestalten.
+                <p>Ausserdem ist es halt auch so, dass man mit dem, was man erlernt, Leuten später eine Freude bereiten kann. Ganz viel, was wir lernen, ist unter anderem für die Entertainment Industrie und ich finde, das ist ein schönes Gefühl, dass das, was man lernt, später von Leuten genutzt wird, um Spaß zu haben und ihr Leben interessant zu gestalten.</p>
                 
                 <!-- Autor-->
-                Prof. Dr. Martin Eisemann
+                <address>Prof. Dr. Martin Eisemann</address>
 
-    
+            </article>
             <!-- Ende eines Zitates -->
             
-        
+        </section>
         <!-- Hier endet ein thematisch zusammenhängender Inhalt.-->
         
         <!-- Schauen sie Auf die Vorlage und zeichnen Sie diesen Inhalt mit möglichst reichhaltigem Markup aus-->
         <section id="showcase">
             Showcase
 
-            Die 10 besten Projekte vom Showcase 2014
+            <h3>Die 10 besten Projekte vom Showcase 2014</h3>
                    
-            Wiedermal wurde das neue Studienjahr am Anfang der Vorlesungszeit mit dem Showcase eingeleitet. Nach dem Start durch die Einführungsrede von Prof. Christian Noss, folgten zwei Vorträge von externen Sprechern, die selbst einmal am Campus Gummersbach studiert haben. Es handelte sich zum Einen um Frau Hofmann, welche das Thema FrontEnd-Development behandelte und zum Anderen um Herrn Gehle, welcher über das Leben als IT-Leiter berichtete.
+            <p>Wiedermal wurde das neue Studienjahr am Anfang der Vorlesungszeit mit dem Showcase eingeleitet. Nach dem Start durch die Einführungsrede von Prof. Christian Noss, folgten zwei Vorträge von externen Sprechern, die selbst einmal am Campus Gummersbach studiert haben. Es handelte sich zum Einen um Frau Hofmann, welche das Thema FrontEnd-Development behandelte und zum Anderen um Herrn Gehle, welcher über das Leben als IT-Leiter berichtete.</p>
             
-           Im Anschluss daran folgte eine Präsentation ausgewählter Filme, die im letzten Jahr in der Veranstaltung Audiovisuelles Medienprojekt 2. Semester, Audiovisuelles Medienprojekt 3. Semester und in WPF's entstanden sind. Dazu wurden zwei Slots angeboten, damit währenddessen die besten Projekte des letzten Studienjahres in einer Ausstellung angesehen und nominiert werden konnten. Am Ende des Tages wurde dann das Team mit der besten Präsentation bzw. dem besten Poster zum Sieger gekürt.
-                
-                    /assets/img/showcase_01.jpg"
-                    Gruppenfoto aller Beteiligten nach der Siegerehrung
+           <p>Im Anschluss daran folgte eine Präsentation ausgewählter Filme, die im letzten Jahr in der Veranstaltung Audiovisuelles Medienprojekt 2. Semester, Audiovisuelles Medienprojekt 3. Semester und in WPF's entstanden sind. Dazu wurden zwei Slots angeboten, damit währenddessen die besten Projekte des letzten Studienjahres in einer Ausstellung angesehen und nominiert werden konnten. Am Ende des Tages wurde dann das Team mit der besten Präsentation bzw. dem besten Poster zum Sieger gekürt.</p>
+            
+                <figure>
+                    <img src="/home/exeluis/Wba1GitRepos/wba1-2015/html-basics-training/training_3/assets/img/showcase_01.jpg" alt="Gruppenfoto aller Beteiligten nach der Siegerehrung" height="640" width="960" >    
+                    <figcaption>Gruppenfoto aller Beteiligten nach der Siegerehrung.</figcaption>
                     
-                    assets/img/showcase_02.jpg"
-                    Visuelle Eindrücke des Showcases 2014
+                    <img src="/home/exeluis/Wba1GitRepos/wba1-2015/html-basics-training/training_3/assets/img/showcase_02.jpg" alt="Visuelle Eindrücke des Showcases 2014" height="640" width="640" >   
+                    <figcaption>Visuelle Eindrücke des Showcases 2014.</figcaption>
+                    
+                    
 
-                    Veröffentlicht am
-                    <time datetime="2014-10-29 19:00">29.10.2014</time>
-
+                    <p>
+                        Veröffentlicht am
+                        <time datetime="2014-10-29 19:00">29.10.2014</time>
+                    </p>
+                </figure>
         </section>
         
         <!--
@@ -270,29 +282,28 @@ Alle benötigten Bilder befinden sich im Ordner assets/img
 
                 <!-- Hier endet ein thematisch zusammenhängender Inhalt.-->
 
-    
+    </main>
     <!-- Hier endet der Hauptinhalt der Seite-->
 
 
     <!-- Hier beginnt der Fuß der Seite-->
-
+    <footer>
 
         <!-- Hier beginnt ein thematisch zusammenhängender Inhalt.-->
-
+        <section>
         
             <!-- Bitte das Bild 'christiane_gruenloh.jpg' einbinden-->
-            <img src="images/christiane_gruenloh.jpg" width="172" height="114" alt="Foto von Christiane Grühnloh">
+            <img src="/home/exeluis/Wba1GitRepos/wba1-2015/html-basics-training/training_3/assets/img/christiane_gruenloh.jpg" width="172" height="114" alt="Foto von Christiane Grühnloh">
             
             <!-- Bitte den Email-Verweis und Text in einem Absatz zusammenfassen-->
-                Hilfe bei studentischen und organisatorischen Belangen bietet die MI-Mentorin Christiane Grünloh (M.Sc.)
+                <p>Hilfe bei studentischen und organisatorischen Belangen bietet die MI-Mentorin Christiane Grünloh (M.Sc.)
                 
-                <!-- Bitte aus E-Mail-Verweis auszeichnen-->
-                christiane.gruenloh@th-koeln.de
+                <address>christiane.gruenloh@th-koeln.de</address></p>
                 
                 
                 <!-- Hier Endet der Absatz-->
 
-        
+    
         <!-- Hier endet ein thematisch zusammenhängender Inhalt.-->
         
         <!-- Hier beginnt ein thematisch zusammenhängender Inhalt.-->
@@ -311,11 +322,11 @@ Alle benötigten Bilder befinden sich im Ordner assets/img
 
             <!-- Ende des Adressfeldes-->
 
-            
+        </section>  
         <!-- Hier endet ein thematisch zusammenhängender Inhalt.-->
 
 
-
+    </footer>
     <!-- Hier endet der Fuß der Seite-->
 
 </body>
