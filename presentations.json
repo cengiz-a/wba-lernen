@@ -55,6 +55,20 @@
         "Volker Schaefer"
       ],
       "date": "2015-10-15"
+    },
+    "css-teil-1": {
+      "title": "CSS Basics",
+      "authors": [
+        "Christian Noss"
+      ],
+      "date": "2015-10-22"
+    },
+    "css-teil-2": {
+      "title": "CSS Advanced",
+      "authors": [
+        "Christian Noss"
+      ],
+      "date": "2015-10-22"
     }
   }
 }
