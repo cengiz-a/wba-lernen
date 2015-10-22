@@ -51,25 +51,28 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		
 		.mi-logo{
 			position: absolute;
-			right: 20px;
+            right: 10%;
 			top: 10px;
 			text-align: center;
 		}
+            
 		
 		body > header h1{
 			font-size: 1rem;
 			text-align: center;
-			margin-bottom: 20px;
 		}
             
-        header {
+        #toptop {
             background-color: white;
-            padding: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
         }
             
         main {
+            margin-top: 20px;
             background-color: white;
-            padding: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
         }
 
 
@@ -284,7 +287,6 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		*/
             
         section{
-            border-top: solid 1px #dd1166;
             border-bottom: solid 1px #d16;
             padding-bottom: 2rem;
             padding-top: 2rem;
@@ -304,8 +306,77 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
             position: relative;
         }
             
-            figcaption {
-                margin-bottom: 50px;
+        figcaption {
+            margin-bottom: 50px;
+        }
+            
+            #nav li{
+                display: inline-block;
+                margin-right: 20px;
+            }
+            
+            #anfrageformular {
+                border: none;
+                width: 50%;
+                margin-left: 50%;
+            }
+            
+            #anfrageformular h2 {
+                margin-left: -40%;
+                position: absolute;
+            }
+            
+            input, textarea {
+                width: 100%;
+            }
+            
+            textarea {
+                height: 100px;
+            }
+            
+            #anfrageformular .c_button {
+                border: none;
+                height: 30px;
+                width: 200px;
+                background-color: white;
+                border: 1px solid red;
+            }
+            
+            #button2 {
+                border: 1px solid black !important;
+                opacity: 0.5;
+            }
+            
+            #anfrageformular fieldset {
+                margin-bottom: 20px;
+            }
+            
+            #neuigkeiten h2{
+                position: absolute;
+            }
+            
+            #neuigkeiten li{
+                width: 80%;
+                margin-left: 20%;
+                border-bottom: 1px solid black !important;
+                margin-bottom: 20px;
+            }
+            
+            #neuigkeiten time{
+                float: right;
+            }
+            
+            #moduluebersicht h3{
+                font-weight: bold;
+                margin-bottom: 10px;
+                font-size: 1.5rem;
+            }
+            
+            #last_footer{
+                margin-top: 20px;
+                background-color: white;
+                padding: 20px;
+                padding-top: 0;
             }
 		
 		
@@ -313,7 +384,7 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 </head>
 
 <body>
-    <header>
+    <header id="toptop">
         <div class="th-logo"><img src="assets/img/fh-logo.png" alt="fh-logo" width="129" height="70"></div>
 
         <div class="mi-logo">
@@ -322,6 +393,7 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
             <h1>Medieninformatik<br>
             an der TH Köln</h1>
         </div>
+        
 
         <nav>
             <ul id="nav">
@@ -668,7 +740,7 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 	            </fieldset>
 	
 	            <fieldset>
-	                <input type="submit" value="Formular absenden"> <input type="reset" value="Eingaben löschen">
+	                <input class="c_button" type="submit" value="Formular absenden"> <input class="c_button" id="button2" type="reset" value="Eingaben löschen">
 	            </fieldset>
 	        </form>
 	    </section>
@@ -728,7 +800,7 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 	    </section>
 		</main>
 		
-    <footer>
+    <footer id="last_footer">
         <section>
             <img src="images/christiane_gruenloh.jpg" width="172" height="114" alt="Foto von Christiane Grühnloh">
 
