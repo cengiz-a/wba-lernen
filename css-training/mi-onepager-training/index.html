@@ -73,14 +73,23 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 			/* Training Basic:
 			Alle Texte sollen einen Zeilenabstand von 140% haben
 			*/
+			line-height: 140%;
 			font-family: 'Open Sans', sans-serif !important;
 		}
+		
 		
 		/* Training Basic:
 			Alle Headlines sollen eine Schriftgröße und einen Zeilenabstand von 1.8 Rem haben.
 		*/
-
+		h1,h2,h3,h4,h5,h6 {
+			font-size: 1.8rem;
+			line-height: 1.8rem;
+		}
 		
+		p {
+			
+			margin-bottom: 1.8rem;
+		}
 		/* Training Basic:
 			Alle Paragraphen (p) sollen einen Abstand nach unten von 2 Rem haben, außer wenn auf einen Paragraphen ein weiterer Paragraph folgt.
 		*/
@@ -99,8 +108,20 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		* Zwei Navigationspunkte sollen durch eine pinke Linie getrennt werden.
 		* Beim Mouseover soll die Schrift pink werden.
 		*/
+		
 
-
+		#nav li a{
+			text-decoration: none; 
+			color: black;
+			font-weight: bold;
+			border-top: solid 1px pink;
+			display: block;
+			padding: 5px 0px;
+		}
+		
+		#nav a:hover {
+			color: pink;
+		}
 
 
 
@@ -114,7 +135,18 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		* Zwischen zwei Boxen soll ein Abstand von 1 Rem sein.
 		* Der Name des Autors soll nach rechts ausgerichtet werden.
 		*/
-
+		
+		#interview blockquote{
+			display: block;
+			background-color: purple;
+			margin-bottom: 1rem;
+			color: white;
+		}
+		
+		#interview blockquote:first-of-type{
+			display: block;
+			background-color: blue;
+		}
 
 
 
@@ -153,11 +185,22 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		/* Training Basic
 		Tabellen sollen über die komplette Breite des Elternelements gehen.
 		*/
+		
+		table {
+			width: 100%;
+			
+		}
 
 		
 		/* Training Basic
 		Texte in Tabellenköpfen sollen fett, linksbündig und mit einem Abstand von 0.5 Rem nach unten dargestellt werden.
 		*/
+		
+		table thead {
+			text-align: left;
+			font-weight: bold;
+			padding-bottom: 0.5rem;
+		}
 		
 		table tr:not(:last-child){
 			border-bottom: solid 1px #ddd;
@@ -174,6 +217,10 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		/* Training Basic
 		Zellen mit der Klasse large sollen eine Breite von 50% bekommen, Zellen mit der Klasse small 10%.
 		*/
+		
+		tr .large {
+			width: 50%;
+		}
 
 
 
@@ -190,6 +237,13 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 			background-color: rgba(240, 240, 240, 1);
 		}
 		
+		body > * {
+			display: block;
+			align: center;
+			width: 80%;
+			margin: 20px;
+		}
+		
 		/* Training Basic:
 		Alle direkten Kinder des body Elements sollen in einer zentrierten Box mit einer maximalen Breite von 80% der Breite des Browserfensters liegen. Die Box soll einen weißen Hingergrund und einen Innenabstand von 20 Pixeln haben.
 		*/
@@ -197,6 +251,13 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		
 		section, table{
 			margin-bottom: 2rem;
+		}
+		
+		section {
+			border-top: solid 1px pink;
+			border-bottom: solid 1px pink;
+			padding-top: 2rem;
+			padding-bottom: 2rem;
 		}
 		
 		/* Training Basic
