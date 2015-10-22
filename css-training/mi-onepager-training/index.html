@@ -31,16 +31,23 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
     		\*------------------------------------*/
     		
 		.green    {	#77cc00; }
-		.blue     {	#4952e1; }
+		.blue     {	background-color: #4952e1; 
+                    color: #fff; }
 		.magenta  { #dd1166; }
-		.purple   { #9313c3; }
+		.purple   { background-color: #9313c3;
+                    color: #fff; }
 		.black    { #231f20; }
 		.gray     { #fbfbfb; }
 		
 		/*------------------------------------*\
 		#Header
 		\*------------------------------------*/
-		
+
+        .header {
+            margin: 0 auto;
+            min-height: 170px;
+        }
+
 		.th-logo{
             float: left;
 			margin-bottom: 4rem;
@@ -102,10 +109,19 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
     		* Beim Mouseover soll die Schrift pink werden.
     		*/
 
+        .nav {
+            min-height: 35px;
+            padding-bottom: 10px;
+
+        }
+
         ul li a {
+            float: left;
+            margin: 20px;
             color: #000;
             font-weight: bold;
             text-decoration: none;
+            border-bottom: 1px dotted #4952e1;
         }
 
         ul li a:hover {
@@ -122,13 +138,9 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
     		* Der Name des Autors soll nach rechts ausgerichtet werden.
     		*/
 
-        #interview blockquote:nth-child(even) {
-            background-color: #77AABB;
+        #interview blockquote {
             margin-bottom: 1rem;
-        }
-
-        #interview blockquote:nth-child(odd) {
-            background-color: #DD1166;
+            padding: 15px;
         }
 
         #interview blockquote footer {
@@ -211,11 +223,21 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 			background-color: rgba(240, 240, 240, 1);
 		}
 		
+        #dozenten img{  
+            float:left;
+        }
+
+         #dozenten dl{
+            
+         }
+
+
         body > * {
 		/* Training Basic:
 		Alle direkten Kinder des body Elements sollen in einer zentrierten Box mit einer maximalen Breite von 80% der Breite des Browserfensters liegen. Die Box soll einen weißen Hingergrund und einen Innenabstand von 20 Pixeln haben.
 		*/
-            padding: 20px;
+
+            padding: 0px 30px 0px 30px;
             margin: 0 auto;
             width: 80%;
             background-color: #FFF;
@@ -239,31 +261,35 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 
 <body>
     <header>
-        <div class="th-logo"><img src="assets/img/fh-logo.png" alt="fh-logo" width="129" height="70"></div>
+        <div class="header">
+            <div class="th-logo"><img src="assets/img/fh-logo.png" alt="fh-logo" width="129" height="70"></div>
 
-        <div class="mi-logo">
-            <img src="assets/img/mi-box-100.png" alt="mi-box-100" width="100" height="83">
+            <div class="mi-logo">
+                <img src="assets/img/mi-box-100.png" alt="mi-box-100" width="100" height="83">
 
-            <h1>Medieninformatik<br>
-            an der TH Köln</h1>
+                <h1>Medieninformatik<br>
+                an der TH Köln</h1>
+            </div>
         </div>
 
-        <br /><br /><br /><br /><br /><br /><br />
+        <div class="nav">
+            <nav>
+                <ul id="nav">
+                    <li><a href="#showcase" title="Showcase">Showcase</a></li>
 
-        <nav>
-            <ul id="nav">
-                <li><a href="#showcase" title="Showcase">Showcase</a></li>
+                    <li><a href="#moduluebersicht" title="Modulübersicht">Module</a></li>
 
-                <li><a href="#moduluebersicht" title="Modulübersicht">Module</a></li>
+                    <li><a href="#anfrageformular" title="Anfrageformular">Anfrageformular</a></li>
 
-                <li><a href="#anfrageformular" title="Anfrageformular">Anfrageformular</a></li>
-
-                <li><a href="#neuigkeiten" title="Neuigkeiten">Neuigkeiten</a></li>
-            </ul>
-        </nav>
+                    <li><a href="#neuigkeiten" title="Neuigkeiten">Neuigkeiten</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-		
-		<main>
+
+    <br />
+
+	<main>
     <section id="about">
         <h2>Über den Medieninformatik Bachelor Studiengang</h2>
 
@@ -281,7 +307,7 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
     <section id="interview">
         <h2>Statements</h2>
 
-        <blockquote>
+        <blockquote class="blue">
             <p>Das Faszinierende für mich ist, dass durch den Einsatz von Medien Ergebnisse sichtbar werden. Ich programmiere nicht versteckte Systeme, bei denen ich dann fast gar nicht mehr sehe, was da passiert, sondern habe meist einen visuellen Output, den ich erzeuge. Durch diese „Berührung“ mit den Nutzern von Informationssystemen wird es erforderlich, viele verschiedene Kompetenzen, z.B. Usability, Computergrafik oder Kommunikationstechnologien zu beherrschen und verschiedene Perspektiven einzunehmen.</p>
 
             <p>Durch dieses breite Spektrum eröffnen sich dann viele Möglichkeiten im späteren Berufsleben: das Entwickeln von mobilen Anwendungen, Webseiten, Spielen und multimedialen Diensten ebenso wie die Konzeption und Produktion der Inhalte für verschiedenste Medien. Durch diese Vielseitigkeit wird es nie langweilig.</p>
@@ -289,7 +315,7 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
             <footer><cite>Prof. Dr. Christian Kohls</cite></footer>
         </blockquote>
 
-        <blockquote>
+        <blockquote class="purple">
             <p>Wie der Name schon sagt, ist das die Arbeit mit Medien. Dass man fast immer eine visuelle Antwort bekommt, bei dem was man macht, finde ich persönlich wahnsinnig motivierend.</p>
 
             <p>Wenn ich jetzt mit...hmm...ich möchte hier jetzt keine anderen Forschungsgebiete beleidigen...also ich persönlich finde es einfach deutlich motivierender, wenn ich ein schönes ästhetisches Bild als Ergebnis kriege, als wenn lediglich die Zahl "5" auf dem Monitor erscheint. Und das ist ein ganz großer Vorteil der Medieninformatik.</p>
