@@ -32,12 +32,14 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		
 		.green{		#77cc00; }
 		.blue{		#4952e1; }
-		.magenta{ #dd1166; }
+		.magenta{   #dd1166; }
 		.purple{ 	#9313c3; }
 		.black{ 	#231f20; }
 		.gray{ 		#fbfbfb; }
+        
+            
 		
-		
+
 		
 		
 		
@@ -47,10 +49,15 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		
 		.th-logo{
 			margin-bottom: 4rem;
+            margin-left: 0.8rem;
 		}
+        .th-logo img{
+            margin-top: 0.8rem;   
+        }
 		
 		.mi-logo{
 			position: absolute;
+            margin-left: 0.8rem;
 			right: 20px;
 			top: 10px;
 			text-align: center;
@@ -60,9 +67,40 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 			font-size: 1rem;
 			text-align: center;
 			margin-bottom: 20px;
+            
 		}
 
-
+            header{
+                position:relative;
+                background-color: white;
+                height: 185px;
+            }
+            header #nav{
+                margin-left: 0.8rem;   
+            }
+            
+            main{
+                position:static;
+                margin-top: 0.8rem;
+                background-color: white;
+            }
+            #footer{
+                position: relative;
+                background-color: white;
+            }
+            main section{margin-left: 0.8rem; margin-right: 0.8rem;}
+            main section p{
+                margin-bottom: 20px;
+            }
+            
+            /*#about{
+                padding-top: 0.8rem;
+            }*/
+            #about::before{
+                content: ".";
+                visibility: hidden;
+                
+            }
 
 
 		/*------------------------------------*\
@@ -73,17 +111,27 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 			/* Training Basic:
 			Alle Texte sollen einen Zeilenabstand von 140% haben
 			*/
+            line-height: 140%;
 			font-family: 'Open Sans', sans-serif !important;
 		}
 		
 		/* Training Basic:
 			Alle Headlines sollen eine Schriftgröße und einen Zeilenabstand von 1.8 Rem haben.
 		*/
+        h1, h2, h3, h4, h5, h6{
+            font-size: 1.8rem;
+            margin-top: 1.8rem;
+            margin-bottom: 1.8rem;
+        }
 
 		
 		/* Training Basic:
 			Alle Paragraphen (p) sollen einen Abstand nach unten von 2 Rem haben, außer wenn auf einen Paragraphen ein weiterer Paragraph folgt.
 		*/
+        p - p{
+            margin-bottom: 2rem;
+        }
+        
 
 
 
@@ -99,8 +147,25 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		* Zwei Navigationspunkte sollen durch eine pinke Linie getrennt werden.
 		* Beim Mouseover soll die Schrift pink werden.
 		*/
-
-
+        nav ul li a{
+            text-decoration: none;
+            color: black;
+            font-style: normal;
+            font-weight: bold;
+            //display:block;
+            //padding: 5px;
+            //border-bottom: 2px solid #dd1166;
+           
+        }
+        nav ul li{
+            display:inline;
+            border-bottom: 1px solid lightblue;
+            margin-right: 10px;
+        }
+        nav ul li:last-child a{
+            border-bottom: none;
+        }
+        nav ul li a:hover{color: #dd1166;}
 
 
 
@@ -115,8 +180,20 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		* Der Name des Autors soll nach rechts ausgerichtet werden.
 		*/
 
-
-
+        #interview blockquote {
+            color:white;
+            padding: 1rem;
+            display:block;
+            background-color: #4952e1;
+            margin-bottom: 1rem;
+        }
+        #interview blockquote:last-child{
+            background-color: #9313c3;
+        }
+        #interview cite{
+            display: block;
+            text-align: right;
+        }
 
 
 		/*------------------------------------*\
@@ -153,14 +230,27 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		/* Training Basic
 		Tabellen sollen über die komplette Breite des Elternelements gehen.
 		*/
-
+        tr{
+            box-sizing: inherit;
+        }
+        
+        #moduluebersicht h3{
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
 		
 		/* Training Basic
 		Texte in Tabellenköpfen sollen fett, linksbündig und mit einem Abstand von 0.5 Rem nach unten dargestellt werden.
 		*/
+        th{
+            font-weight: bold;
+            text-align: left;
+            margin-bottom: 0.5rem;
+        }
 		
 		table tr:not(:last-child){
 			border-bottom: solid 1px #ddd;
+            
 		}
 		
 		table td{
@@ -174,6 +264,17 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		/* Training Basic
 		Zellen mit der Klasse large sollen eine Breite von 50% bekommen, Zellen mit der Klasse small 10%.
 		*/
+            table .large{
+                width: 50%;
+            }
+            table .small{
+                width: 10%;
+            }
+        
+            #moduluebersicht table{
+                       
+            }
+            
 
 
 
@@ -188,6 +289,8 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 			font-size: 100%;
 			font-weight: 300;
 			background-color: rgba(240, 240, 240, 1);
+            width: 80%;
+            margin: auto;
 		}
 		
 		/* Training Basic:
@@ -231,7 +334,7 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
         </nav>
     </header>
 		
-		<main>
+    <main>
     <section id="about">
         <h2>Über den Medieninformatik Bachelor Studiengang</h2>
 
@@ -568,7 +671,7 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 	        </form>
 	    </section>
 	
-	    <section id="neuigkeiten">
+    <section id="neuigkeiten">
 	        <h2>Neuigkeiten</h2>
 	
 	        <ol>
@@ -621,9 +724,9 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 	            </li>
 	        </ol>
 	    </section>
-		</main>
+	</main>
 		
-    <footer>
+    <footer id="footer">
         <section>
             <img src="images/christiane_gruenloh.jpg" width="172" height="114" alt="Foto von Christiane Grühnloh">
 
