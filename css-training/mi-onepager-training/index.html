@@ -26,34 +26,28 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 
 		<style>
-		/*------------------------------------*\
-    #colors
-		\*------------------------------------*/
-		
-		.green{		#77cc00; }
-		.blue{		#4952e1; }
-		.magenta{ #dd1166; }
-		.purple{ 	#9313c3; }
-		.black{ 	#231f20; }
-		.gray{ 		#fbfbfb; }
-		
-		
-		
-		
+    		/*------------------------------------*\
+        #colors
+    		\*------------------------------------*/
+    		
+		.green    {	#77cc00; }
+		.blue     {	#4952e1; }
+		.magenta  { #dd1166; }
+		.purple   { #9313c3; }
+		.black    { #231f20; }
+		.gray     { #fbfbfb; }
 		
 		/*------------------------------------*\
 		#Header
 		\*------------------------------------*/
 		
 		.th-logo{
+            float: left;
 			margin-bottom: 4rem;
 		}
 		
 		.mi-logo{
-			position: absolute;
-			right: 20px;
-			top: 10px;
-			text-align: center;
+            float: right;
 		}
 		
 		body > header h1{
@@ -61,9 +55,6 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 			text-align: center;
 			margin-bottom: 20px;
 		}
-
-
-
 
 		/*------------------------------------*\
 		#typo
@@ -73,56 +64,81 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 			/* Training Basic:
 			Alle Texte sollen einen Zeilenabstand von 140% haben
 			*/
+            line-height: 140%;
 			font-family: 'Open Sans', sans-serif !important;
 		}
 		
-		/* Training Basic:
-			Alle Headlines sollen eine Schriftgröße und einen Zeilenabstand von 1.8 Rem haben.
-		*/
-
-		
-		/* Training Basic:
-			Alle Paragraphen (p) sollen einen Abstand nach unten von 2 Rem haben, außer wenn auf einen Paragraphen ein weiterer Paragraph folgt.
-		*/
-
+        h1, h2, h3, h4, h5, h6 {
+    		/* Training Basic:
+    			Alle Headlines sollen eine Schriftgröße und einen Zeilenabstand von 1.8 Rem haben.
+    		*/
+            font-size: 1.8rem;
+            line-height: 1.8rem;
+        }
 
 
+		p {
+    		/* Training Basic:
+    			Alle Paragraphen (p) sollen einen Abstand nach unten von 2 Rem haben, außer wenn auf einen Paragraphen ein weiterer Paragraph folgt.
+    		*/
+            margin-bottom: 2rem;
+        }
 
-
-
-		/*------------------------------------*\
-    #Navigation
-		\*------------------------------------*/
-		
-		/* Training Basic:
-		* Die Navigationspunkte sollen ohne Unterstreichung in schwarz und fett dargestellt werden.
-		* Zwei Navigationspunkte sollen durch eine pinke Linie getrennt werden.
-		* Beim Mouseover soll die Schrift pink werden.
-		*/
+        p + p {
+            margin-bottom: 0rem;
+        }
 
 
 
 
 
+    		/*------------------------------------*\
+        #Navigation
+    		\*------------------------------------*/
+    		
+    		/* Training Basic:
+    		* Die Navigationspunkte sollen ohne Unterstreichung in schwarz und fett dargestellt werden.
+    		* Zwei Navigationspunkte sollen durch eine pinke Linie getrennt werden.
+    		* Beim Mouseover soll die Schrift pink werden.
+    		*/
 
-		/*------------------------------------*\
-    #Statements
-		\*------------------------------------*/
-		
-		/* Training Basic:
-		* Die Statements aus den Interviews sollen in einer farbigen Box dargestellt werden. Die Hintergrundfarbe der ersten Box soll blau sein, die der zweiten Box lila.
-		* Zwischen zwei Boxen soll ein Abstand von 1 Rem sein.
-		* Der Name des Autors soll nach rechts ausgerichtet werden.
-		*/
+        ul li a {
+            color: #000;
+            font-weight: bold;
+            text-decoration: none;
+        }
 
+        ul li a:hover {
+            color: #DD1166;
+        }
 
+    		/*------------------------------------*\
+        #Statements
+    		\*------------------------------------*/
+    		
+    		/* Training Basic:
+    		* Die Statements aus den Interviews sollen in einer farbigen Box dargestellt werden. Die Hintergrundfarbe der ersten Box soll blau sein, die der zweiten Box lila.
+    		* Zwischen zwei Boxen soll ein Abstand von 1 Rem sein.
+    		* Der Name des Autors soll nach rechts ausgerichtet werden.
+    		*/
 
+        #interview blockquote:nth-child(even) {
+            background-color: #77AABB;
+            margin-bottom: 1rem;
+        }
 
+        #interview blockquote:nth-child(odd) {
+            background-color: #DD1166;
+        }
 
-		/*------------------------------------*\
-    #Articles
-		\*------------------------------------*/
-		
+        #interview blockquote footer {
+            text-align: right;
+        }
+
+    		/*------------------------------------*\
+        #Articles
+    		\*------------------------------------*/
+    		
 		article h1{
 			font-size: 1.2rem;
 			font-weight: 600;
@@ -142,22 +158,25 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 			margin-bottom: 1rem;
 		}
 
-
-
-
-		/*------------------------------------*\
-    #Tables
-		\*------------------------------------*/
+    		/*------------------------------------*\
+        #Tables
+    		\*------------------------------------*/
 		
-		
+		table {
 		/* Training Basic
 		Tabellen sollen über die komplette Breite des Elternelements gehen.
 		*/
+            width: 100%;
+        }
 
-		
+		table thead {
 		/* Training Basic
 		Texte in Tabellenköpfen sollen fett, linksbündig und mit einem Abstand von 0.5 Rem nach unten dargestellt werden.
 		*/
+        font-weight: bold;
+        text-align: left;
+        margin-bottom: 0.5rem;
+        }
 		
 		table tr:not(:last-child){
 			border-bottom: solid 1px #ddd;
@@ -171,32 +190,43 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 			padding-left: 0.5rem;
 		}
 		
-		/* Training Basic
-		Zellen mit der Klasse large sollen eine Breite von 50% bekommen, Zellen mit der Klasse small 10%.
-		*/
+        table thead tr th.large {
+        /* Training Basic
+        Zellen mit der Klasse large sollen eine Breite von 50% bekommen, Zellen mit der Klasse small 10%.
+        */
+            width: 50%;
+        }
 
-
-
-
+        table thead tr th.small {
+            width: 10%;
+        }
 
 		/*------------------------------------*\
 		#moreStyle
 		\*------------------------------------*/
 		
-
 		body {
 			font-size: 100%;
 			font-weight: 300;
 			background-color: rgba(240, 240, 240, 1);
 		}
 		
+        body > * {
 		/* Training Basic:
 		Alle direkten Kinder des body Elements sollen in einer zentrierten Box mit einer maximalen Breite von 80% der Breite des Browserfensters liegen. Die Box soll einen weißen Hingergrund und einen Innenabstand von 20 Pixeln haben.
 		*/
+            padding: 20px;
+            margin: 0 auto;
+            width: 80%;
+            background-color: #FFF;
+        }
 
 		
 		section, table{
 			margin-bottom: 2rem;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #DD1166;
 		}
 		
 		/* Training Basic
@@ -217,6 +247,8 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
             <h1>Medieninformatik<br>
             an der TH Köln</h1>
         </div>
+
+        <br /><br /><br /><br /><br /><br /><br />
 
         <nav>
             <ul id="nav">
