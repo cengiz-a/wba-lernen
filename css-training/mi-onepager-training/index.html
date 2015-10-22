@@ -61,6 +61,16 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 			text-align: center;
 			margin-bottom: 20px;
 		}
+            
+        header {
+            background-color: white;
+            padding: 20px;
+        }
+            
+        main {
+            background-color: white;
+            padding: 20px;
+        }
 
 
 
@@ -74,16 +84,32 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 			Alle Texte sollen einen Zeilenabstand von 140% haben
 			*/
 			font-family: 'Open Sans', sans-serif !important;
+            line-height: 140%;
 		}
 		
 		/* Training Basic:
 			Alle Headlines sollen eine Schriftgröße und einen Zeilenabstand von 1.8 Rem haben.
 		*/
+        h2, h1, h3{
+            line-height: 1.8rem;
+            font-size: 1.8rem;
+        }
+            
+        h2 {
+            margin-bottom: 30px;
+        }
 
 		
 		/* Training Basic:
 			Alle Paragraphen (p) sollen einen Abstand nach unten von 2 Rem haben, außer wenn auf einen Paragraphen ein weiterer Paragraph folgt.
 		*/
+        p {
+            margin-bottom: 2.0rem;
+        }
+        
+        p + p {
+            margin-bottom: 0;
+        }
 
 
 
@@ -99,6 +125,20 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		* Zwei Navigationspunkte sollen durch eine pinke Linie getrennt werden.
 		* Beim Mouseover soll die Schrift pink werden.
 		*/
+            
+        #nav a{
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+        }
+            
+        #nav li {
+            border-bottom: 1px solid #dd1166;
+        }
+            
+        #nav a:hover {
+            color: pink;
+        }
 
 
 
@@ -114,6 +154,23 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		* Zwischen zwei Boxen soll ein Abstand von 1 Rem sein.
 		* Der Name des Autors soll nach rechts ausgerichtet werden.
 		*/
+            
+            #interview blockquote:nth-child(2) {
+                padding: 20px;
+                color: white;
+                background-color: #4952e1;
+                margin-bottom: 1rem;
+            }
+            
+            #interview blockquote:nth-child(3) {
+                padding: 20px;
+                color: white;
+                background: #9392e3;
+            }
+            
+            #interview footer {
+                text-align: right;
+            }
 
 
 
@@ -153,11 +210,21 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		/* Training Basic
 		Tabellen sollen über die komplette Breite des Elternelements gehen.
 		*/
+            
+        table {
+            width: 100%;
+        }
 
 		
 		/* Training Basic
 		Texte in Tabellenköpfen sollen fett, linksbündig und mit einem Abstand von 0.5 Rem nach unten dargestellt werden.
 		*/
+            
+        table thead {
+            font-weight: bold;
+            text-align: left;
+            margin-bottom: 0.5rem;
+        }
 		
 		table tr:not(:last-child){
 			border-bottom: solid 1px #ddd;
@@ -174,6 +241,14 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		/* Training Basic
 		Zellen mit der Klasse large sollen eine Breite von 50% bekommen, Zellen mit der Klasse small 10%.
 		*/
+            
+        .large {
+            width: 50%;
+        }
+            
+        .small {
+            width: 10%;
+        }
 
 
 
@@ -193,6 +268,11 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		/* Training Basic:
 		Alle direkten Kinder des body Elements sollen in einer zentrierten Box mit einer maximalen Breite von 80% der Breite des Browserfensters liegen. Die Box soll einen weißen Hingergrund und einen Innenabstand von 20 Pixeln haben.
 		*/
+            
+        body > * {
+            margin: 0 auto;
+            width: 80%;
+        }
 
 		
 		section, table{
@@ -202,6 +282,31 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		/* Training Basic
 		Alle Sections sollen eine pinke Linie mit Abstand nach oben und unten (2rem) getrennt werden
 		*/
+            
+        section{
+            border-top: solid 1px #dd1166;
+            border-bottom: solid 1px #d16;
+            padding-bottom: 2rem;
+            padding-top: 2rem;
+        }
+            
+        #dozenten figcaption {
+            margin-left: 25%;
+        }
+            
+        #dozenten figure img {
+            width: 20%;
+            display: block;
+            position: absolute;
+        }
+            
+        #dozenten {
+            position: relative;
+        }
+            
+            figcaption {
+                margin-bottom: 50px;
+            }
 		
 		
 		</style>
