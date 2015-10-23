@@ -103,7 +103,7 @@ function error_output ( err_msg ) {
  * Hilfsfunktion, um Definitionslisten-Elemente zu erzeugen
  *
  * @param {object} info - Schlüssel-Werte-Paar wird zu dt-dd-Paar
- * @returns {string} Aus 'info'-Objekt konstruiertes 'dl'-ELement
+ * @returns {DOMElement} Aus 'info'-Objekt konstruiertes 'dl'-Element
  */
 function construct_dl( info ) {
   /* Definition List */
