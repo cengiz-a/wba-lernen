@@ -271,6 +271,9 @@ function create_and_append_error_msg( input_element, error_msg ) {
   error_span_element.innerHTML = error_msg;
   error_span_element.classList.add( 'error' ); /* class="" -> class="error" */
 
+  /* Rahmens (border) einfärben  */
+  input_element.style.borderColor = '#D16';
+
   input_element.parentNode.appendChild( error_span_element );
 
   /* Als kleine Hilfe wird vermerkt, dass es bei dem Eingabefeld ein Fehler gab */
@@ -285,6 +288,9 @@ function create_and_append_error_msg( input_element, error_msg ) {
  */
 function clear_error( input_element ) {
     delete input_element.dataset.error;
+
+    /* Farbe des Rahmens (border) zurücksetzen */
+    input_element.style.borderColor = '';
 
     var error_span_element = input_element.parentNode.querySelector( '.error' );
 
