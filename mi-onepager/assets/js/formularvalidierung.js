@@ -23,8 +23,9 @@ function create_and_append_error_msg( input_element, error_msg ) {
     if( input_element.dataset.error )
         return;
 
-    /* span-Element erzeugen, Fehlermeldung zuweisen, error-Klasse hinzufügen
-     * und das Element an das Ende des Vaterelements von 'input_element' anfügen
+    /* span-Element erzeugen, Fehlermeldung zuweisen, error-Klasse hinzufügen,
+     * die Rahmenfarbe setzen und das Element an das Ende des Vaterelements
+     * von 'input_element' anfügen
      *
      *     -->   fieldset   -->    |                +- fieldset
      *    ^         |              v                   |
@@ -53,7 +54,7 @@ function create_and_append_error_msg( input_element, error_msg ) {
  * @param {input, textarea} input_element - Das Eingabefeld mit dem das
  * span-Element zusammehängt
  */
-function clear_error( input_element ) {
+function remove_error_msg( input_element ) {
     delete input_element.dataset.error;
 
     /* Farbe des Rahmens (border) zurücksetzen */
@@ -85,40 +86,44 @@ formular_element.addEventListener('submit', function( e ) {
 
     /* ## Vorname */
     if( vorname_input_element.value.length === 0 ) {
-        create_and_append_error_msg( vorname_input_element, 'Bitte geben Sie einen Vornamen ein!' );
+        create_and_append_error_msg( vorname_input_element,
+                                     'Bitte geben Sie einen Vornamen ein!' );
         allValid = false;
     }
     else {
-        clear_error( vorname_input_element );
+        remove_error_msg( vorname_input_element );
     }
 
     /* ## Zuname */
     if( zuname_input_element.value.length === 0 ) {
-        create_and_append_error_msg( zuname_input_element, 'Bitte geben Sie einen Zunamen ein!' );
+        create_and_append_error_msg( zuname_input_element,
+                                     'Bitte geben Sie einen Zunamen ein!' );
         allValid = false;
     }
     else {
-        clear_error( zuname_input_element );
+        remove_error_msg( zuname_input_element );
     }
 
     /* ## Email */
     if(     email_input_element.value.length === 0
         || !email_input_element.value.match(/.+@.+\..+/) ) {
 
-        create_and_append_error_msg( email_input_element, 'Bitte geben Sie eine eMail-Adresse ein!' );
+        create_and_append_error_msg( email_input_element,
+                                     'Bitte geben Sie eine eMail-Adresse ein!' );
         allValid = false;
     }
     else {
-        clear_error( email_input_element );
+        remove_error_msg( email_input_element );
     }
 
     /* ## Nachricht */
     if( nachricht_input_element.value.length === 0 ) {
-        create_and_append_error_msg( nachricht_input_element, 'Bitte geben Sie eine Nachricht ein!' );
+        create_and_append_error_msg( nachricht_input_element,
+                                     'Bitte geben Sie eine Nachricht ein!' );
         allValid = false;
     }
     else {
-        clear_error( nachricht_input_element );
+        remove_error_msg( nachricht_input_element );
     }
 
 

@@ -4,8 +4,8 @@
 
 
 /*
- * Folgender Code kümmert sich um das asynchrone Nachladen von Dozenteninformationen
- * aus einer JSON-Datei
+ * Folgender Code kümmert sich um das asynchrone Nachladen
+ * von Dozenteninformationen aus einer JSON-Datei
  */
 
 
@@ -19,8 +19,11 @@
  */
 
 
-/* Hilfsvariablen */
-var lecturers_filepath  = 'lecturers.json',
+/*
+ * Hilfsvariablen:
+ *  Pfadangabe u. Elementreferenzen
+ */
+var lecturers_filepath  = 'lecturers.json', /* Pfad bzw. URL zur JSON-Datei */
     dozenten_section    = document.querySelector( '#dozenten' ),
     loading_element     = dozenten_section.querySelector( '.dozenten_ladehinweis' );
 
@@ -41,7 +44,8 @@ function getJSON( path, callback ) {
     /*
      * Die hinter 'onreadystatechange' hinterlegte Funktion wird immer
      *  aufgerufen, wenn der Zustand sich ändert;
-     * siehe: https://developer.mozilla.org/de/docs/Web/API/XMLHttpRequest#Eigenschaften
+     * Siehe:
+     *  https://developer.mozilla.org/de/docs/Web/API/XMLHttpRequest#Eigenschaften
      */
     xhr.onreadystatechange = function() {
         /* readyState === 4 -> Vorgang abgeschlossen */
@@ -145,7 +149,7 @@ getJSON( lecturers_filepath, function(err, data) {
      * Nicht existierendes Unterfeld ist 'undefined' und wird bei
      *  Abfragen als 'false' interpretiert
      */
-    if( !data.lecturers ) {
+    if( !data || !data.lecturers ) {
         error_output( 'Dozentenliste ist leer! Bitte überprüfen Sie die ' +
                       'Dozenten-JSON-Datei: ' + lecturers_filepath);
         return;
@@ -219,13 +223,16 @@ getJSON( lecturers_filepath, function(err, data) {
         /* Definitionsliste mit den Custom-Infos als Kindelement hinzufügen */
         figcaption_element.appendChild( dl_element_custom );
 
-        /* 'figcaption'-Element dem momentanen 'figure'-Element als Kindelement hinzufügen */
+        /*
+         * 'figcaption'-Element dem momentanen 'figure'-Element als
+         * Kindelement hinzufügen
+         */
         figure_element.appendChild( figcaption_element );
 
         /*
          * Für Dozenten erzeugtes 'figure'-Element dem Hauptelement als Kindelement
          * hinzufügen
          */
-         dozenten_section.appendChild( figure_element );
+        dozenten_section.appendChild( figure_element );
     }
 } );
