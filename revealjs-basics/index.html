@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="de">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Workshop - Webpräsentation mit reveal.js</title>
+
+		<meta name="description" content="Workshop-Präsentation zu reveal.js">
+		<meta name="author" content="Marvin Klimm">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        
+		<link rel="stylesheet" href="../revealjs-framework/css/reveal.min.css">
+        <link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../revealjs-framework/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../revealjs-framework/css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+        
+        <!--[if lt IE 9]>
+		<script src="../revealjs-framework/lib/js/html5shiv.js"></script>
+		<![endif]-->
+        
+	</head>
+
+	<body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <h1>Webbasierte Anwendungen Teil 1</h1>
+                    <h2 class="u">reveal.js - Basics</h2>
+                    <p>29. Oktober 2015</p>
+                    <p>Studiengang Medieninformatik an der Technischen Hochschule Köln
+                    <br> Campus Gummersbach</p>
+                    <p style="margin-top:10%">Marvin Klimm und Güray Kilic</p>
+                    
+                    <aside class="notes">
+                        <p>Teilnehmer wissen: </p>
+                        <ul>
+                            <li>... was reveal.js ist</li>
+                            <li>... wie man es nutzt</li>
+                            <li>... wie sie ihre Präsentationen für WbA1 gestalten sollen</li>
+                        </ul>
+                    </aside>
+                </section>
+                
+                <section>
+                    <h2 class="u">Warum reveal.js?</h2>
+                    <ul>
+                        <li class="fragment"><span class="_pink">einfache</span> und <span class="_pink">moderne</span> Präsentationsentwicklung mit HTML</li>
+                        <li class="fragment"><span class="_pink">interaktive</span> und leichte Präsentationsmethode</li>
+                        <li class="fragment">nach eigenen <span class="_pink">kreativen</span> Vorstellungen</li>
+                        <li class="fragment"><span class="_pink">kostenlos</span> und <span class="_pink">erweiterbar</span></li>
+                        
+                        <aside class="notes">
+                            <ul>
+                                <li>reveal.js: Ein Framework zum erstellen schöner, moderne Präsentationsfolien mit HTML/Markdown</li>
+                                <li>es basiert auf JavaScript</li>
+                                <li>lässt sich durch jeden modernen Browser darstellen</li>
+                                <li>auch offline</li>
+                                <li>kostenlos, erweiterbar, Code verfügbar, mehr Aufmerksamkeit</li>    
+                            </ul>
+                        </aside>
+                    </ul>
+                </section>
+            
+                
+                
+                
+                
+                <section data-background-color="#dd1166" class="_center invers">
+                    <section>
+                        <h1>Was heißt das jetzt praktisch?</h1>
+                    </section>
+                    <section>
+                        <h2>Vertikale Folien</h2>
+                    </section>
+                    <section>
+                        <h2>Stillistische Anpassungen wie ...</h2>
+                    </section>
+                    <section data-transition="concave">
+                        <h2>Folienübergänge</h2>
+                        <p>default/cube/page/concave/zoom/linear/fade/none</p>
+                    </section>
+                    <section data-background-color="#FFDD24">
+                        <h2 class="_pink">Hintergrundfarbe</h2>
+                    </section>
+                    <section data-background="../revealjs-framework/images/mi-box.png" data-background-size="60s%">
+                        <h2 style="color: black;">Hintergrundbild</h2>
+                    </section>
+                    <section>
+                        <h2>Unterschiedliche Themes</h2>
+                        <img style="float: left; width: 45%; box-shadow:10px 10px 100px black;" src="images/theme_night.png" alt="theme_night.png"/>
+                        <img style="float: right; width: 45%; box-shadow:10px 10px 100px black;" src="images/theme_sky.png" alt="theme_sky.png"/>
+                        <p class="fragment" style="float: right;"></br>Oder eigene Themes #medieninformatik.css</p>
+                    </section>
+                </section>
+                
+                
+        
+        
+                <section>
+                    <h2 class="u">reveal.js - Download</h2>
+                    <ul>
+                        <li>reveal.js orginaler Download: <a href="https://github.com/hakimel/reveal.js/">https://github.com/hakimel/reveal.js/</a></li>
+                        <li>für unsere <span class="_pink">WbA1-Präsentationen</span> nutzen wir jedoch <span class="_pink">reveal.min.js aus dem WbA-Repository</span> mit dem Medieninformatik-Theme</li>
+                    </ul>
+                </section>
+        
+            
+                <section>
+                    <h2>Quellen:</h2>
+                    <ul>
+                        <li><a href="https://github.com/hakimel/reveal.js/">https://github.com/hakimel/reveal.js/</a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+        
+        
+        <script src="../revealjs-framework/lib/js/head.min.js"></script>
+        <script src="../revealjs-framework/js/reveal.min.js"></script>
+
+		<script>
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+                {
+                    src: '../revealjs-framework/lib/js/classList.js',
+                    condition: function () {
+                        return !document.body.classList;
+                    }
+                },
+                {
+                    src: '../revealjs-framework/plugin/markdown/marked.js',
+                    condition: function () {
+                        return !!document.querySelector('[data-markdown]');
+                    }
+                },
+                {
+                    src: '../revealjs-framework/plugin/markdown/markdown.js',
+                    condition: function () {
+                        return !!document.querySelector('[data-markdown]');
+                    }
+                },
+                {
+                    src: '../revealjs-framework/plugin/highlight/highlight.js',
+                    async: true,
+                    callback: function () {
+                        hljs.initHighlightingOnLoad();
+                    }
+                },
+                {
+                    src: '../revealjs-framework/plugin/zoom-js/zoom.js',
+                    async: true,
+                    condition: function () {
+                        return !!document.body.classList;
+                    }
+                },
+                {
+                    src: '../revealjs-framework/plugin/notes/notes.js',
+                    async: true,
+                    condition: function () {
+                        return !!document.body.classList;
+                    }
+                }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
