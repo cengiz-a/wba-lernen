@@ -123,7 +123,114 @@
                     </figure>
                 </section>
         
-            
+                <section>
+                    <section>
+                        <h2 class="u" style="color:#231f20;">Präsentation erstellen (vereinfacht)</h2>
+                        <ol>
+                            <li class="fragment">
+                                Einbettung des css-Frameworkdokumentes und des Themes im <pre style="display:inline;font-size:1em">&lt;head&gt;</pre></br>
+                                <pre><code>&lt;link rel="stylesheet" href="../revealjs-framework/css/reveal.min.css"&gt;
+&lt;link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme"&gt;</code></pre>
+                            </li>
+                            <li class="fragment" style="padding-top: 1.4rem;">
+                                Einbettung des JavaScript-Codes im <pre style="display:inline;font-size:1em">&lt;body&gt;</pre></br>
+                                <pre><code>&lt;script src="../revealjs-framework/lib/js/head.min.js"&gt;&lt;/script&gt;
+&lt;script src="../revealjs-framework/js/reveal.min.js"&gt;&lt;/script&gt;</code></pre>      
+                            </li>
+                            <li class="fragment" style="padding-top: 1.4rem;">
+                                Konfigurieren von reveal.js unter der JavaScript-Einbettung</br>
+                                <pre><code>&lt;script&gt;
+    Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+
+    transition: 'slide', // none/fade/slide/convex/concave/zoom
+&lt;/script&gt;</code></pre>
+                            </li>
+                        </ol>
+                        <aside class="notes">
+                            Der Kern von reveal.js
+                            kein PDF, kein HTML-Tag-Erkenner,...
+                        </aside>
+                    </section>
+                    <section>
+                        <h2 class="u">Folien/Slides erstellen</h2>
+                        <pre style="width: 50%; float:left; margin-top: 0.4rem;"><code>&lt;div class="reveal">
+    &lt;div class="slides"&gt;
+        &lt;section&gt;Single Horizontal Slide&lt;/section&gt;
+        &lt;section&gt;
+            &lt;section>Vertical Slide 1&lt;/section&gt;
+            &lt;section>Vertical Slide 2&lt;/section&gt;
+        &lt;/section>
+    &lt;/div>
+&lt;/div></code></pre>
+                        <ol style="float: right; width: 45%">
+                            <li class="fragment" >Präsentationskontainer im <pre style="display:inline;font-size:1em">&lt;body&gt;</pre> erstellen</li>
+                            <li class="fragment" >Folienstapel im Präsentationskontainer anlegen</li>
+                            <li class="fragment" >Folien erstellen</li>
+                        </ol>
+                        <p class="_pink fragment" style="float:left;">Die Präsentation muss über dem JS-Code liegen!</p>
+                    </section>
+                </section>
+
+                
+                <section>
+                    Single Horizontal Slide
+                    <pre class="fragment">&lt;div class="reveal">
+    &lt;div class="slides"&gt;
+        <span class="_pink">&lt;section&gt;Single Horizontal Slide&lt;/section&gt;</span>
+        &lt;section&gt;
+            &lt;section>Vertical Slide 1&lt;/section&gt;
+            &lt;section>Vertical Slide 2&lt;/section&gt;
+        &lt;/section>
+    &lt;/div>
+&lt;/div></pre>
+                </section>
+                <section>
+                    <section>
+                        Vertical Slide 1
+                        <pre class="fragment">&lt;div class="reveal">
+    &lt;div class="slides"&gt;
+        &lt;section&gt;Single Horizontal Slide&lt;/section&gt;
+        <span class="_pink">&lt;section&gt;
+            &lt;section>Vertical Slide 1&lt;/section&gt;</span>
+            &lt;section>Vertical Slide 2&lt;/section&gt;
+        <span class="_pink">&lt;/section></span>
+    &lt;/div>
+&lt;/div></pre>
+                    </section>
+                    <section>
+                        Vertical Slide 2
+                        <pre class="fragment">&lt;div class="reveal">
+    &lt;div class="slides"&gt;
+        &lt;section&gt;Single Horizontal Slide&lt;/section&gt;
+        <span class="_pink">&lt;section&gt;</span>
+            &lt;section>Vertical Slide 1&lt;/section&gt;
+            <span class="_pink">&lt;section>Vertical Slide 2&lt;/section&gt;
+        &lt;/section></span>
+    &lt;/div>
+&lt;/div></pre>
+                    </section>
+                </section>
+
+
+
+
+                <section>
+                    <h2 class="u">Workshoppraxis 1</h2>
+                    <p><span class="_pink">Gestaltet das Grundgerüst</span> einer Präsentation in Aufgabe 1. Nutzt dazu <span class="_pink">reveal.min.css</span> und das Medieninformatik-Theme <span class="_pink">medieninformatik.css</span>. Damit die Präsentation funktioniert müsst ihr außerdem den <span class="_pink">JavaScript-Code</span> in euer Dokument einbinden.</p>
+                    <p>Außerdem könnt ihr euch einen <span class="_pink">Folienübergang</span> aussuchen.</p>
+                    <ul style="font-size: 1.4rem; float: right;">
+                        <li>augabe_1.html findet ihr im Ordner revealjs-basics-training</li>
+                        <li>Die reveal-Dateien sowie das Theme sind im Ordner revealjs-framework</br>
+                    Beachtet, dass ihr zum einbinden zunächst einen Ordner hoch müsst (../).</li>
+                    </ul>
+                </section>
+
+
+
                 <section>
                     <h2>Quellen:</h2>
                     <ul>
@@ -139,7 +246,7 @@
 
 		<script>
 			Reveal.initialize({
-				controls: false,
+				controls: true,
 				progress: true,
 				history: true,
 				center: true,
