@@ -194,10 +194,10 @@
                         <pre class="fragment">&lt;div class="reveal">
     &lt;div class="slides"&gt;
         &lt;section&gt;Single Horizontal Slide&lt;/section&gt;
-        <span class="_pink">&lt;section&gt;
-            &lt;section>Vertical Slide 1&lt;/section&gt;</span>
+        &lt;span class="_pink">&lt;section&gt;
+            &lt;section>Vertical Slide 1&lt;/section&gt;&lt;/span>
             &lt;section>Vertical Slide 2&lt;/section&gt;
-        <span class="_pink">&lt;/section></span>
+        &lt;span class="_pink">&lt;/section>&lt;/span&gt;
     &lt;/div>
 &lt;/div></pre>
                     </section>
@@ -206,12 +206,12 @@
                         <pre class="fragment">&lt;div class="reveal">
     &lt;div class="slides"&gt;
         &lt;section&gt;Single Horizontal Slide&lt;/section&gt;
-        <span class="_pink">&lt;section&gt;</span>
+        &lt;span class="_pink">&lt;section&gt;&lt;/span>
             &lt;section>Vertical Slide 1&lt;/section&gt;
-            <span class="_pink">&lt;section>Vertical Slide 2&lt;/section&gt;
-        &lt;/section></span>
-    &lt;/div>
-&lt;/div></pre>
+            &lt;span class="_pink">&lt;section>Vertical Slide 2&lt;/section&gt;
+        &lt;/section&gt;&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
                     </section>
                 </section>
 
@@ -229,6 +229,37 @@
                     </ul>
                 </section>
 
+
+
+                <section>
+                    <section>
+                        <h2 class="u" style="color:#231f20; ">Content einfügen</h2>
+                            <ul>
+                                <li class="fragment">Content kann normal per HTML dargestellt werden</li>
+                                <li class="fragment">Gestaltung des Contents geschieht mittels CSS</li>
+                                <li class="fragment">Content Strukturierung mittels Markdown ebenfalls möglich</br>
+                                <pre class="fragment"><code>&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+        ## H2-Überschrift
+
+        Ein Paragraph mit Link [link](http://medieninformatik.th-koeln.de).
+    &lt;/script&gt;
+&lt;/section&gt;</code></pre>
+                                </li>
+                            </ul>
+                        <aside class="notes">
+                            <ul>
+                                <li>Css primär aus reveal.min.css und des Themes unregelmäßig anpassungen mit style=""</li>
+                                <li>sEinige css-Klassen sagen reveal wie es zu interagieren hat: Bsp: fragment</li>
+                                <li>Markdown-Vorteil: Schnelle "Editierung", Nachteil: Man muss sich drangewöhnen/lernen</li>
+                                <li>kein vollständiger HTML Ersatz</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section>
+                        <h2 class="u">Markdown</h2>
+                    </section>
+                </section>
 
 
                 <section>
