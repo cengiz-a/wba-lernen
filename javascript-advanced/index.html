@@ -65,6 +65,7 @@
             <ul>
               <li>byId</li>
               <li>byName</li>
+              <li>querySelector</li>
               <li>usw.</li>
             </ul>
             <li>DOM Manipulation</li>
@@ -85,8 +86,8 @@
           <ul>
             <li>Eine Repräsentation der HTML Elements als Objekte</li>
             <li>Zugriff auf Eigenschaften von HTML Elementen</li>
-            <li>Bereitstellung von Methoden um auf HTML-Elemente zu zugreifen</li>
-            <li>Die Möglichkeit Ereignisse an HTML-Elemente bereitzustellen</li>
+            <li>Bereitstellung von JS Methoden um auf HTML-Elemente zu zugreifen</li>
+            <li>JS bietet die Möglichkeit Ereignisse an HTML-Elemente bereitzustellen</li>
           </ul>
         </section>
 
@@ -97,7 +98,7 @@
             <li>document.getElementsByName(name-Attribut des Elements)</li>
             <li>element.getElementsByTagName(tagName)</li>
             <li>document.getElementsByClassName(class des Elements)</li>
-            <li><a href="http://fiddle.jshell.net/koos/4vxmuw3r/">http://fiddle.jshell.net/koos/4vxmuw3r/</a></li>
+            <li>Problem: Verschachtelte Suche nach Klassen, ID's usw.</li>
           </ul>
           <p>
             <pre class="big-font">
@@ -109,15 +110,16 @@
               </code>
             </pre>
           </p>
+          <p><small><a href="http://fiddle.jshell.net/koos/4vxmuw3r/">http://fiddle.jshell.net/koos/4vxmuw3r/</a></small></p>
         </section>
 
         <section>
           <h2>Zugriff auf das DOM (Finding)</h2>
           <ul>
+            <li>Verschachtelte Suche - Lösung</li>
             <li>element = document.querySelector(selectors);</li>
             <li>elementList = document.querySelectorAll(selectors);</li>
             <li>element = baseElement.querySelector(selectors);</li>
-            <li><a href="http://fiddle.jshell.net/koos/4vxmuw3r/">http://fiddle.jshell.net/koos/4vxmuw3r/</a></li>
           </ul>
           <p>
             <pre class="big-font">
@@ -125,10 +127,10 @@
                 var el = document.querySelector(".myclass");
                 var el = document.querySelector("div.user-panel.main input[name=login]");
                 var matches = document.querySelectorAll("div.note, div.alert");
-                var el = document.body.querySelector("style[type='text/css'], style:not([type])");
               </code>
             </pre>
           </p>
+          <p><small><a href="http://fiddle.jshell.net/2ts9ueem/3/">http://fiddle.jshell.net/2ts9ueem/3/</a></small></p>
         </section>
 
         <section>
@@ -139,7 +141,6 @@
             <li>element.attribute - Change the attribute of an HTML element</li>
             <li>element.setAttribute(attribute,value) - Ändert ein spezielles Attribut eines HTML element</li>
             <li>element.style.property - Styling-Änderung eines HTML element</li>
-            <li><a href="http://fiddle.jshell.net/koos/Ls96gp9f/1/">http://fiddle.jshell.net/koos/Ls96gp9f/1/</a>
           </ul>
           <p>
             <pre class="big-font">
@@ -156,6 +157,7 @@
               </code>
             </pre>
           </p>
+          <p><small><a href="http://fiddle.jshell.net/koos/Ls96gp9f/1/">http://fiddle.jshell.net/koos/Ls96gp9f/1/</a></small></p>          
         </section>
 
 
@@ -166,7 +168,6 @@
             <li>document.removeChild(parent) - Entfernt ein HTML Element</li>
             <li>document.appendChild(parent) - Hängt ein HTML element ans Ende des "parents"</li>
             <li>document.replaceChild(parent, child) - Ersetzt Ein HTML Element</li>
-            <li><a href="http://fiddle.jshell.net/koos/somrzve3/1/">http://fiddle.jshell.net/koos/somrzve3/1/</a>
           </ul>
           <p>
             <pre>
@@ -187,6 +188,7 @@
               </code>
             </pre>
           </p>
+          <p><small><a href="http://fiddle.jshell.net/koos/somrzve3/1/">http://fiddle.jshell.net/koos/somrzve3/1/</a></small></p>          
         </section>
 
         <section>
@@ -198,9 +200,7 @@
             <li>getAttributeNode (name)</li>
             <li>setAttributeNode (newAttribute)</li>
             <li>removeAttributeNode (oldAttribute)</li>
-            <li><a href="http://fiddle.jshell.net/koos/somrzve3/3/">http://fiddle.jshell.net/koos/somrzve3/3/</a>
           </ul>
-          <hr/>
           <p>
             <pre class="big-font">
               <code>
@@ -210,6 +210,7 @@
               </code>
             </pre>
           </p>
+          <p><small><a href="http://fiddle.jshell.net/somrzve3/39/">http://fiddle.jshell.net/somrzve3/39/</a></small></p>          
         </section>
 
         <section>
