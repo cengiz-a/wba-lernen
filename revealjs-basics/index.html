@@ -323,6 +323,7 @@
                         </script>
                     </section>
                 </section>
+                
 
                 <section>
                     <h2 class="u">Workshoppraxis 2</h2>
@@ -330,6 +331,127 @@
                 </section>
 
                 <section>
+                    <section>
+                        <h2 class="u" style="color: #231f20;">Gestalterische Möglichkeiten - Fragments</h2>
+                        
+                        <div style="text-align: center;">
+                            <p class="fragment grow">grow</p>
+                            <p class="fragment shrink">shrink</p>
+                            <p class="fragment fade-out">fade-out</p>
+                            <p class="fragment current-visible">visible only once</p>
+                            <p class="fragment highlight-current-blue">blue only once</p>
+                            <p class="fragment highlight-red">highlight-red</p>
+                            <p class="fragment highlight-green">highlight-green</p>
+                            <p class="fragment highlight-blue">highlight-blue</p>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>Fragment-Klassen</h2>
+                        <pre><code data-trim>
+&lt;p class="fragment grow">grow&lt;/p>
+&lt;p class="fragment shrink">shrink&lt;/p>
+&lt;p class="fragment fade-out">fade-out&lt;/p>
+&lt;p class="fragment current-visible">visible only once&lt;/p>
+&lt;p class="fragment highlight-current-blue">blue only once&lt;/p>
+&lt;p class="fragment highlight-red">highlight-red&lt;/p>
+&lt;p class="fragment highlight-green">highlight-green&lt;/p>
+&lt;p class="fragment highlight-blue">highlight-blue&lt;/p>
+                        </code></pre>
+                        
+                        <p style="margin-top:4rem">Fragmenteffekte können auch verschachtelt werden:</p>
+                        <pre class="fragment fade-in"><code class="fragment fade-out">&lt;span class="fragment fade-in">
+        &lt;span class="fragment fade-out">Fragment wird erst eingefadet, dann aus.&lt;/span>
+&lt;/span></code></pre>
+                        <p class="fragment">Mit dem Attribut <span class="_pink">data-index = "x"</span> kann man die Reihenfolge der Fragments bestimmen.</p>
+                    </section>
+                </section>
+
+                <section>
+                    <h2 class="u">Code darstellen - highlight.js</h2>
+                    <ul>
+                        <li class="fragment">ein Plugin, dass normal in reveal schon eingebunden ist</li>
+                        <li class="fragment">Um Code darzustellen benötigt man die Tags &lt;code>&lt;/code></li>
+                        <li class="fragment">Folgende Syntax macht Sinn:
+                            <pre><code data-trim>
+&lt;pre>&lt;code data-trim>
+    &lt;h2 class="u">&lt;/h2>
+&lt;/code>&lt;/pre>
+                            </code></pre>
+                            <pre class="fragment"><code>
+&lt;pre>&lt;code>
+    &lt;h2 class="u">&lt;/h2>
+&lt;/code>&lt;/pre>
+                            </code></pre>
+                        </li>
+                    </ul>
+                </section>
+                
+                <!--<section data-state="fullscreenImage" style="background-image: url(../web-basics/images/TimBernersLee.jpg)">
+				<p class="bu fragment">
+					Tim Berners-Lee, Gründer des W3C
+				</p>
+			     </section>
+
+
+                <section>
+                    <h2 class="u">Ganzseitige Bildfolien</h2>
+                    <pre><code data-trim>
+&lt;section data-state="fullscreenImage" style="background-image: url(pfad)">
+    &lt;p class="bu fragment">Titel&lt;/p>
+&lt;/section>
+                    </code></pre>
+                </section>-->
+
+                <section>
+                    <h2 class="u">Hintergrund anpassen</h2>
+                    <p>Den Hintergrund kann man über das Attribut <span class="_pink">data-background</span> in der &lt;section> verändern.</p>
+                    <pre><code data-trim>
+&lt;section data-background="#ff0000">
+&lt;section data-background="http://example.com/image.png">
+&lt;section data-background="http://example.com/image.png" data-background-size="100px" data-background-repeat="repeat">
+&lt;section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4" data-background-video-loop>
+                    </code></pre>
+                </section>
+
+
+                <section>
+                    <h2 class="u">Theme implementieren</h2>
+                    <ul>
+                        <li class="fragment">reveal.js kommt mit 9 Themes</li>
+                        <li class="fragment">Eingebundene Themes sind ein Stylesheet (.css)</li>
+                        <li class="fragment">Eigene Themes erstellen etwas komplizierter</li>
+                        <ul>
+                            <li class="fragment">Erstellen des Themes als scss file, dann in css kompilieren (mittels grunt)</li>
+                        </ul>
+                        <li class="fragment">Für die WbA-Workshops nicht relevant, wegen eigenem fertigem Theme</li>
+                    </ul>
+                </section>
+
+
+                <section>
+                    <h2 class="u">Nützliche Funktionen: Speakerview</h2>
+                    <ul>
+                        <li>
+                            Präsentationswerkzeug von reveal.js
+                            <img src="images/speakerview.png" style="box-shadow:10px 10px 30px black; width:60%"/>
+                        </li>
+                        <li>Möglichkeit von Notizen: &lt;aside class="notes">&lt;/aside></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="u">PDF erstellen</h2>
+                    <ol>
+                        <li class="fragment">URL um ?print-pdf/gi erweitern</li>
+                        <li class="fragment">Seite drucken
+                        <img src="images/pdf.png" style="box-shadow:10px 10px 30px black;" />
+                        </li>
+                        
+                    </ol>
+                </section>
+
+
+                <!--<section>
                     <h2 class="u">Gestalterische Möglichkeiten</h2>
                     
                     <ul>
@@ -338,7 +460,7 @@
                         <li>highlight.js - und data-trim</li>
                         <li>Hintergrund anpassen</li>
                         <li>Mothoden für die Erscheinung</li>   
-                        <li>Bilder like Noss</li>
+                        
                         <li>Interaktive Grafiken: http://jtblin.github.io/angular-chart.js/</li>
                         <li>Theme-Implementierung</li>
                     </ul>
@@ -352,25 +474,36 @@
                         <li>PDF erstellen</li>
                         <li><i>weitere Methoden/API</i></li>
                     </ul>
-                </section>
+                </section>-->
 
                 <section>
-                    <h2 class="u">Workshoppraxis 3</h2>
+                    <h2 class="u">Tipps</h2>
                     <ul>
-                        <li>Hintergrund ändern</li>
-                        <li>Code darstellen</li>
-                        <li>aside notes erstellen</li>
-                        <li>PDF erstellen</li>
+                        <li>Medieninformatik Default-Schriftfarbe: #231f20;</li>
+                        <li>Medieninformatik Farbe Pink: <span class="_pink">#dd1166</span></li>
+                        <li>class="u": Pinker Unterstrich für h2</li>
+                        <li>class="_pink": für pinke Schriftfarbe</li>
+                        <li>Foliengröße beachten</li>
+                        <li>Bereits gemachte Vorlesungen von Volker und Prof. Noss ansehen</li>
+                        <li>README.md von reveal.js</li>
                         
-                        <li><i>Interaktive Grafiken</i></li>
+                    </ul>
+                </section>
+                <section>
+                    <h2 class="u">Workshoppraxis 3</h2>
+                        <p>Probiert die neuen Funktionen von reveal.js aus. Ändert den Hintergrund, schaut euch Speakerview (Taste s) an und erstellt aside notes. Überlegt ob ihr Fragen zu speziellen Umsetzungen habt und schreibt diese dann auf. Die Fragen versuchen wir dann zu klären.</p>
+                        
+                        
                     </ul>
                 </section>
 
                 <section>
-                    <h2>Quellen:</h2>
+                    <h2 class="u">Links:</h2>
                     <ul>
                         <li><a href="https://github.com/hakimel/reveal.js/">https://github.com/hakimel/reveal.js/</a></li>
                         <li><a href="http://markdown.de/">markdown.de</a></li>
+                        <li><a href="http://slides.com/">slides.com</a></li>
+                        <li><a href="http://markable.in">markable.in</a></li>
                     </ul>
                 </section>
             </div>
