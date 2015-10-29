@@ -439,23 +439,6 @@ hr{
 /* Tablets */
 @media only screen and (min-width: 760px) {
 	
-    section > *:nth-child(n+2){
-        max-height: 0;
-        padding-top: 0;
-        padding-bottom: 0;
-        overflow: hidden;
-    }
-    
-    section:hover > *:nth-child(n+2){
-        max-height: 1000px;
-        padding-top: 1rem;  
-        padding-bottom: 1rem;
-        transition: 1s max-height, 1s padding;
-    }
-    
-    section::hover{
-        
-    }
     
     #nav > li{
 		display: inline-block;
