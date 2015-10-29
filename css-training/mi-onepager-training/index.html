@@ -62,7 +62,9 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 			margin-bottom: 20px;
 		}
 
-
+        header{
+             position: relative;
+        }
 
 
 		/*------------------------------------*\
@@ -227,7 +229,12 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		Alle direkten Kinder des body Elements sollen in einer zentrierten Box mit einer maximalen Breite von 80% der Breite des Browserfensters liegen. Die Box soll einen weißen Hingergrund und einen Innenabstand von 20 Pixeln haben.
 		*/
 
-		
+            body > *{
+                max-width: 600px;
+                margin: 0 auto;
+                background-color: #fff;
+                padding: 2rem;
+            }
 		section, table{
 			margin-bottom: 12rem;
 		}

@@ -352,7 +352,6 @@ dd li + li::before{
 
 
 
-
 /*------------------------------------*\
     #Footer
 \*------------------------------------*/
@@ -387,15 +386,13 @@ footer img{
 	margin: 0;
 }
 
-/*
 #dozenten figure img{
     width: 100%;
     display: block;
     margin-bottom: 1rem;
-    display: inline-block;
-    width: 25%; 
+    /*display: inline-block;
+    width: 25%; */
 }
-*/
 
 #dozenten figure{
     margin-bottom: 1rem;
@@ -441,8 +438,7 @@ hr{
 /* Tablets */
 @media only screen and (min-width: 760px) {
 	
-    
-    #nav > li{
+	#nav > li{
 		display: inline-block;
 		margin-right: 0.5rem;
 		margin-bottom: 0;
@@ -455,11 +451,8 @@ hr{
   #dozenten figcaption{
       display: inline-block;
       width: 75%;
-            vertical-align: top;
+      vertical-align: top;
   }
-    
-    #dozenten figure {
-    }
 
   #dozenten figcaption > *{
       padding-left: 1rem;
@@ -468,7 +461,6 @@ hr{
   #dozenten figure img{
       display: inline-block;
       width: 25%;
-
   }
 
   #dozenten figure{
