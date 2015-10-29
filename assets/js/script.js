@@ -1,4 +1,4 @@
-( function( $ ) {
+(function($) {
 	/*global jQuery: false */
 	'use strict';
 

@@ -33,8 +33,8 @@ var lecturers_filepath  = "https://raw.githubusercontent.com/th-koeln/" +
      *  der ID 'dozenten' geholt werden
      * ##
      */
-var dozenten_section    = /* HIER */ ;
-var loading_element     = dozenten_section.querySelector( '.dozenten_ladehinweis' );
+var dozenten_section    = document.getElementById("dozenten");
+var loading_element     = dozenten_section.querySelector('.dozenten_ladehinweis');
 
 
 /**
@@ -44,11 +44,11 @@ var loading_element     = dozenten_section.querySelector( '.dozenten_ladehinweis
  * @param {function} callback - Wird sowohl im Falle eines Erfolgs
  * als auch eines Fehlers aufgerufen
  */
-function getJSON( path, callback ) {
+function getJSON(path, callback) {
 
     var xhr = new XMLHttpRequest();
 
-    xhr.open( 'GET', path, true );
+    xhr.open('GET', path, true);
 
     /*
      * Die hinter 'onreadystatechange' hinterlegte Funktion wird immer
@@ -56,11 +56,11 @@ function getJSON( path, callback ) {
      * Siehe:
      *  https://developer.mozilla.org/de/docs/Web/API/XMLHttpRequest#Eigenschaften
      */
-    xhr.onreadystatechange = function() {
+    xhr.onreadystatechange = function () {
         /* readyState === 4 -> Vorgang abgeschlossen */
-        if( this.readyState === 4 ) {
+        if (this.readyState === 4) {
             /* HTTP-Statuscode 200 -> Datei wurde gefunden und zurückgegeben */
-            if( this.status === 200 ) {
+            if (this.status === 200) {
                 var parsed_json = null;
 
                 /*
@@ -69,13 +69,13 @@ function getJSON( path, callback ) {
                  */
                 try {
                     /* Zurückgegebene JSON-Datei für die Weiterverarbeitung parsen */
-                    parsed_json = JSON.parse( this.response );
+                    parsed_json = JSON.parse(this.response);
                 }
-                catch( e ) {
-                    callback( "Datei konnte nicht geparsed werden!" );
+                  catch (e) {
+                    callback("Datei konnte nicht geparsed werden!");
                 }
 
-                callback( null, parsed_json );
+                callback(null, parsed_json);
             }
             else {
                 /* Am besten direkt den HTTP-Statuscode mitreichen */
@@ -120,7 +120,7 @@ function construct_dl( info ) {
      *  Ein 'dl'-Element erzeugen
      * ##
      */
-    var dl_element = /* HIER */ ;
+    var dl_element = document.createElement("dl");
 
     /* Durch alle Informationseinträge traversieren */
     for( var key in info ) {
@@ -160,8 +160,8 @@ getJSON( lecturers_filepath, function( err, data ) {
      *  dann soll der Vorgang abgebrochen werden
      * ##
      */
-    if( /* Hier */ ) {
-        error_output( err );
+    if(err !=null) {
+        error_output(err);
         return;
     }
 
@@ -193,7 +193,7 @@ getJSON( lecturers_filepath, function( err, data ) {
          *  Ein 'figure'-Element erzeugen
          * ##
          */
-        var figure_element = /* HIER */;
+        var figure_element = document.createElement("figure");
 
         /* Basisinformationen vorbereiten */
         var basic_infos = value.basic_infos || {};
@@ -216,7 +216,7 @@ getJSON( lecturers_filepath, function( err, data ) {
          *  Ein 'figcaption'-Element erzeugen
          * ##
          */
-        var figcaption_element = /* HIER */;
+        var figcaption_element = document.createElement("figcaption");
 
         var name_headline_element = document.createElement( 'h1' );
         name_headline_element.innerHTML = lecturer_name;
@@ -230,13 +230,13 @@ getJSON( lecturers_filepath, function( err, data ) {
          *  Nutzen Sie die gegebenen Schlüssel-Wert-Paare
          * ##
          */
-        var basic_infos =
-          /*
-           'Raum:'   : basic_infos.room,
-           'Telefon:': basic_infos.phone_number,
+        var basic_infos = {
+          
+           'raum:'   : basic_infos.room,
+           'telefon:': basic_infos.phone_number,
            'eMail:'  : lecturer_email,
-           'Website:': basic_infos.website
-           */
+           'website:': basic_infos.website
+           }
 
         var dl_element_basic = construct_dl( basic_infos );
 
@@ -258,7 +258,7 @@ getJSON( lecturers_filepath, function( err, data ) {
          *  Beheben Sie diese.
          * ##
          */
-        FOR( key in custom_infos ) { /* Beginn der for-Schleife */
+        for(var key in custom_infos ) { /* Beginn der for-Schleife */
             var value = custom_infos[ key ];
 
             /* Leere Einträge überspringen */
@@ -266,24 +266,25 @@ getJSON( lecturers_filepath, function( err, data ) {
               return;
             }
 
-            prepared_custom_infos[ value.title ] = value.content
+            prepared_custom_infos[value.title] = value.content;
         /* Ende der for-Schleife */
+        }
 
-        var dl_element_custom = construct_dl( prepared_custom_infos );
+        var dl_element_custom = construct_dl(prepared_custom_infos);
 
         /* Definitionsliste mit den Custom-Infos als Kindelement hinzufügen */
-        figcaption_element.appendChild( dl_element_custom );
+        figcaption_element.appendChild(dl_element_custom);
 
         /*
          * 'figcaption'-Element dem momentanen 'figure'-Element als
          * Kindelement hinzufügen
          */
-        figure_element.appendChild( figcaption_element );
+        figure_element.appendChild(figcaption_element);
 
         /*
          * Für Dozenten erzeugtes 'figure'-Element dem Hauptelement als Kindelement
          * hinzufügen
          */
-        dozenten_section.appendChild( figure_element );
+        dozenten_section.appendChild(figure_element);
     }
 } );
