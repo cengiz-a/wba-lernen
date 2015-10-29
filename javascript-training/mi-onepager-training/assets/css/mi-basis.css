@@ -352,7 +352,6 @@ dd li + li::before{
 
 
 
-
 /*------------------------------------*\
     #Footer
 \*------------------------------------*/
@@ -439,8 +438,7 @@ hr{
 /* Tablets */
 @media only screen and (min-width: 760px) {
 	
-    
-    #nav > li{
+	#nav > li{
 		display: inline-block;
 		margin-right: 0.5rem;
 		margin-bottom: 0;
