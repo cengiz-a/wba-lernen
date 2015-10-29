@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="890px" height="360px" viewBox="0 0 890 360" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.1 (8751) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Artboard-1" sketch:type="MSArtboardGroup">
+            <rect id="Rectangle-1" fill="#DD1166" sketch:type="MSShapeGroup" x="0" y="0" width="250" height="360" rx="8"></rect>
+            <rect id="Rectangle-2" fill="#77AABB" sketch:type="MSShapeGroup" x="320" y="0" width="250" height="360" rx="8"></rect>
+            <rect id="Rectangle-3" fill="#442211" sketch:type="MSShapeGroup" x="640" y="0" width="250" height="360" rx="8"></rect>
+            <text id="HTML" sketch:type="MSTextLayer" font-family="Myriad Pro" font-size="36" font-weight="bold" fill="#FFFFFF">
+                <tspan x="78" y="97">HTML</tspan>
+            </text>
+            <text id="Javascript" sketch:type="MSTextLayer" font-family="Myriad Pro" font-size="36" font-weight="bold" fill="#FFFFFF">
+                <tspan x="684" y="97">Javascript</tspan>
+            </text>
+            <text id="CSS" sketch:type="MSTextLayer" font-family="Myriad Pro" font-size="36" font-weight="bold" fill="#FFFFFF">
+                <tspan x="415" y="97">CSS</tspan>
+            </text>
+            <text id="Struktur" sketch:type="MSTextLayer" font-family="Myriad Pro" font-size="36" font-weight="normal" fill="#FFFFFF">
+                <tspan x="64" y="197">Struktur</tspan>
+            </text>
+            <text id="Funktion" sketch:type="MSTextLayer" font-family="Myriad Pro" font-size="36" font-weight="normal" fill="#FFFFFF">
+                <tspan x="698" y="197">Funktion</tspan>
+            </text>
+            <text id="Layout" sketch:type="MSTextLayer" font-family="Myriad Pro" font-size="36" font-weight="normal" fill="#FFFFFF">
+                <tspan x="394" y="197">Layout</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
