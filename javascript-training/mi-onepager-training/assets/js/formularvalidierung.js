@@ -2,39 +2,6 @@
 'use strict';
 
 
-/*
- * TODOs sind in den folgenden Zeilen zu finden:
- *  - Zeile 16    * Element über die Entwicklerkonsole erzeugen und in das DOM einfügen
- *  - Zeile 76    * Rahmenfarbe eines Elements per JavaScript setzen
- *  - Zeile 83    * Einfügen eines 'span'-Elements in den DOM-Baum
- *  - Zeile 131   * Ein EventListener zu einem Formular hinzufügen
- *  - Zeile 141   * Formularfelder validieren (Dürfen nicht leer sein usw.)
- */
-
-
- /*
-  * ## ADVANCED-TODO:
-  *  Öffnen Sie die 'index.html' in einem Browser und schalten die zum Browser
-  *   gehörenden Entwicklertools ein;
-  *
-  *  Chrome:    Strg + Shift + J   oder  F12
-  *  Safari:    CMD + Option + C   ( Müssen zuerst in den Einstellungen aktiviert werden )
-  *  Firefox:   Strg + Shift + K
-  *     -> Firebug: F12
-  *
-  *  1. Erzeugen Sie über die Konsole ein 'input'-Element und weisen es einer Variable zu
-  *  2. Weisen sie dem Element die folgenden Attribut-Wert-Paare zu:
-  *       type  => 'input'
-  *       value => 'Vorname'
-  *       id    => 'test_input'
-  *  3. Fügen Sie das Element dem 'section'-Element mit der ID 'anfrageformular'
-  *       als Kindelement hinzu
-  *  4. Finden Sie das soeben dem DOM-Baum hinzugefügte Element auf der Seite
-  *  5. Löschen Sie das hinzugefügte Element wieder
-  * ##
-  */
-
-
 /**
  * Folgender Code kümmert sich um die Validierung der Formularfelder
  * und gibt entsprechende Fehlermeldungen aus
@@ -43,7 +10,7 @@
 
 /**
  * Erzeugt für die Fehlerausgabe ein span-Element und fügt es als ein
- * benachbartes Element ein (als letztes Kindelement)
+ * benachbartes Element ein
  *
  * @param {input, textarea} input_element - Das mit dem Fehler
  * zusammenhängende Element
@@ -71,24 +38,10 @@ function create_and_append_error_msg( input_element, error_msg ) {
     error_span_element.innerHTML = error_msg;
     error_span_element.classList.add( 'error' ); /* class="" -> class="error" */
 
-    /* Rahmen (border) einfärben  */
-    /*
-     * ## ADVANCED-TODO:
-     *  Die Rahmenfarbe des 'input_element' auf die Farbe '#DD1166' setzen
-     * ##
-     */
-    input_element. /* Hier */ .borderColor = /* Und hier */;
+    /* Rahmens (border) einfärben  */
+    input_element.style.borderColor = '#D16';
 
-    /*
-     * ## ADVANCED-TODO:
-     *  Dem Vaterelement von 'input_element' das Element 'error_span_element'
-     *  als Kind hinzufügen;
-     *  1. Referenz auf das Vaterelement von 'input_element' holen
-     *  2. Vaterlement das 'error_span_element' als Kindelement anfügen
-     * ##
-     */
-    var input_parent_element = /* 1. HIER */ ;
-    input_parent_element. /* 2. HIER */ ;
+    input_element.parentNode.appendChild( error_span_element );
 
     /* Als kleine Hilfe wird vermerkt, dass es bei dem Eingabefeld ein Fehler gab */
     input_element.dataset.error = true;
@@ -126,38 +79,15 @@ var anfrageformular_element = document.querySelector( '#anfrageformular' ),
 
 
 
-/* Eventlistener hinzufügen, der beim Absenden des Fomrulars ausgelöst wird */
-/*
- * ## ADVANCED-TODO:
- *  Dem Formular ein Eventlistener für das 'submit'-Event hinzufügen, damit vor dem Absenden
- *   des Formulars überprüft werden kann, ob Formularfelder evtl. leer gelassen wurden
- * ##
- */
-formular_element. /* Hier */ ( /* und hier */, function( e ) {
+/* Eventlistener hinzufügen, der beim ABsenden des Fomrulars ausgeführt wird */
+formular_element.addEventListener('submit', function( e ) {
     /* Wird auf 'false' gesetzt, sofern irgendwo ein Validierungsfehler auftrat */
     var allValid = true;
 
-    /*
-     * ## ADVANCED-TODO:
-     *  Die Formularfelder sollen daraufhin überprüft werden, dass sie nicht leer sind
-     *  Für den Zugriff auf die Elemente sind folgende Elementreferenzen gegeben:
-     *
-     *    Vorname    ->  vorname_input_element
-     *    Zuname     ->  zuname_input_element
-     *    Email      ->  email_input_element
-     *    Nachricht  ->  nachricht_input_element
-     *
-     *  Sofern die Felder leer sind (Feldwert), dann soll eine Fehlermeldung
-     *    erzeugt und ausgegeben werden;
-     *  Wenn Sie möchten, können Sie zusätzlich auch überprüfen, dass nicht mehr
-     *    als 20 bzw. weniger als 21 Zeichen eingegeben wurden (Tipp: 'length'-Eigenschaft)
-     * ##
-     */
-
     /* ## Vorname */
-    if( /* HIER */ === "" ) {
+    if( vorname_input_element.value.length === 0 ) {
         create_and_append_error_msg( vorname_input_element,
-                                     "Bitte geben Sie einen Vornamen ein!" );
+                                     'Bitte geben Sie einen Vornamen ein!' );
         allValid = false;
     }
     else {
@@ -165,9 +95,9 @@ formular_element. /* Hier */ ( /* und hier */, function( e ) {
     }
 
     /* ## Zuname */
-    if( /* HIER */ === "" ) {
+    if( zuname_input_element.value.length === 0 ) {
         create_and_append_error_msg( zuname_input_element,
-                                     "Bitte geben Sie einen Zunamen ein!" );
+                                     'Bitte geben Sie einen Zunamen ein!' );
         allValid = false;
     }
     else {
@@ -175,11 +105,11 @@ formular_element. /* Hier */ ( /* und hier */, function( e ) {
     }
 
     /* ## Email */
-    if(     /* HIER */ === ""
+    if(     email_input_element.value.length === 0
         || !email_input_element.value.match(/.+@.+\..+/) ) {
 
         create_and_append_error_msg( email_input_element,
-                                     "Bitte geben Sie eine eMail-Adresse ein!" );
+                                     'Bitte geben Sie eine eMail-Adresse ein!' );
         allValid = false;
     }
     else {
@@ -187,9 +117,9 @@ formular_element. /* Hier */ ( /* und hier */, function( e ) {
     }
 
     /* ## Nachricht */
-    if( /* HIER */ === "" ) {
+    if( nachricht_input_element.value.length === 0 ) {
         create_and_append_error_msg( nachricht_input_element,
-                                     "Bitte geben Sie eine Nachricht ein!" );
+                                     'Bitte geben Sie eine Nachricht ein!' );
         allValid = false;
     }
     else {
@@ -198,7 +128,7 @@ formular_element. /* Hier */ ( /* und hier */, function( e ) {
 
 
     /*
-     * Gab es mindestens einen Validierungsfehler, wird
+     * Sofern es mindestens einen Validierungsfehler gab, wird
      * die Standardaktion (Formular absenden) präventiert
      */
     if( !allValid )
