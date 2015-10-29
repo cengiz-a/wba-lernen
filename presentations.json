@@ -83,6 +83,13 @@
         "Jan Kus"
       ],
       "date": "2015-10-29"
+    },
+    "revealjs-basics": {
+      "title": "reveal.js Basicsd",
+      "authors": [
+        "Marvin Klimm, Güray Kilic"
+      ],
+      "date": "2015-10-29"
     }
   }
 }
