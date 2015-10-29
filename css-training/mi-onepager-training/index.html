@@ -63,6 +63,14 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 			margin-bottom: 20px;
 		}
 
+<<<<<<< HEAD
+=======
+        header{
+             position: relative;
+        }
+
+
+>>>>>>> b6c5c10fcbfc020dfaa5d5bfc545f1d1d41c0726
 		/*------------------------------------*\
 		#typo
 		\*------------------------------------*/
@@ -75,6 +83,7 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 			font-family: 'Open Sans', sans-serif !important;
 		}
 		
+<<<<<<< HEAD
         h1, h2, h3, h4, h5, h6 {
     		/* Training Basic:
     			Alle Headlines sollen eine Schriftgröße und einen Zeilenabstand von 1.8 Rem haben.
@@ -151,6 +160,88 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
         #Articles
     		\*------------------------------------*/
     		
+=======
+		/* Training Basic:
+			Alle Headlines sollen eine Schriftgröße und einen Zeilenabstand von 1.8 Rem haben.
+		*/
+            
+            
+                h1, h2, h3{
+                    font-size: 1.8rem;
+                }
+            
+            
+
+		
+		/* Training Basic:
+			Alle Paragraphen (p) sollen einen Abstand nach unten von 2 Rem haben, außer wenn auf einen Paragraphen ein weiterer Paragraph folgt.
+		*/
+            
+
+            
+            p{
+                margin-bottom: 1rem;
+            }
+            
+            p:last-child{
+                margin-bottom: 2rem;
+            }
+            
+
+
+
+
+		/*------------------------------------*\
+    #Navigation
+		\*------------------------------------*/
+		
+		/* Training Basic:
+		* Die Navigationspunkte sollen ohne Unterstreichung in schwarz und fett dargestellt werden.
+		* Zwei Navigationspunkte sollen durch eine pinke Linie getrennt werden.
+		* Beim Mouseover soll die Schrift pink werden.
+		*/
+            
+            nav ul li a{
+                padding: 5px 0;
+                display: block;
+                text-decoration: none;
+                color: #000;
+                font-weight: bold;
+                border-top: solid 1px #dd1166;
+            }
+        
+
+
+
+
+
+		/*------------------------------------*\
+    #Statements
+		\*------------------------------------*/
+		
+		/* Training Basic:
+		* Die Statements aus den Interviews sollen in einer farbigen Box dargestellt werden. Die Hintergrundfarbe der ersten Box soll blau sein, die der zweiten Box lila.
+		* Zwischen zwei Boxen soll ein Abstand von 1 Rem sein.
+		* Der Name des Autors soll nach rechts ausgerichtet werden.
+		*/
+
+
+            #interview blockquote{
+                background-color: #4952e1;
+                margin-bottom: 1rem;
+                color: #fff;
+                padding: 1rem;
+            }
+            
+            #interview blockquote + blockquote{
+                background-color: purple;
+            }
+
+		/*------------------------------------*\
+    #Articles
+		\*------------------------------------*/
+		
+>>>>>>> b6c5c10fcbfc020dfaa5d5bfc545f1d1d41c0726
 		article h1{
 			font-size: 1.2rem;
 			font-weight: 600;
@@ -237,6 +328,7 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		Alle direkten Kinder des body Elements sollen in einer zentrierten Box mit einer maximalen Breite von 80% der Breite des Browserfensters liegen. Die Box soll einen weißen Hingergrund und einen Innenabstand von 20 Pixeln haben.
 		*/
 
+<<<<<<< HEAD
             padding: 0px 30px 0px 30px;
             margin: 0 auto;
             width: 80%;
@@ -249,11 +341,27 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
             padding-top: 2rem;
             padding-bottom: 2rem;
             border-bottom: 1px solid #DD1166;
+=======
+            body > *{
+                max-width: 600px;
+                margin: 0 auto;
+                background-color: #fff;
+                padding: 2rem;
+            }
+		section, table{
+			margin-bottom: 12rem;
+>>>>>>> b6c5c10fcbfc020dfaa5d5bfc545f1d1d41c0726
 		}
 		
 		/* Training Basic
 		Alle Sections sollen eine pinke Linie mit Abstand nach oben und unten (2rem) getrennt werden
 		*/
+            
+            section{
+                border-top: solid 1px #dd1166;
+                padding-top: 2rem;
+                margin-bottom: 2rem;
+            }
 		
 		
 		</style>
