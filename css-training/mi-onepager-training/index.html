@@ -45,6 +45,10 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		#Header
 		\*------------------------------------*/
 		
+            header {
+                position: relative;
+            }
+            
 		.th-logo{
 			margin-bottom: 4rem;
 		}
@@ -71,20 +75,34 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		
 		*, footer{
 			/* Training Basic:
-			Alle Texte sollen einen Zeilenabstand von 140% haben
+			Alle Texte sollen einen Zeilenabstand von 140% haben                 erledigt!
 			*/
 			font-family: 'Open Sans', sans-serif !important;
 		}
 		
 		/* Training Basic:
-			Alle Headlines sollen eine Schriftgröße und einen Zeilenabstand von 1.8 Rem haben.
+			Alle Headlines sollen eine Schriftgröße und einen Zeilenabstand von 1.8 Rem haben.           erledigt!
 		*/
+               h1, h2, h3, h4, h5{     
+                    line-height: 1.8rem; 
+                    font-size: 1.8rem;
+                    }
 
 		
 		/* Training Basic:
 			Alle Paragraphen (p) sollen einen Abstand nach unten von 2 Rem haben, außer wenn auf einen Paragraphen ein weiterer Paragraph folgt.
 		*/
-
+            
+            
+            p{ 
+                margin-bottom: 2rem;
+            }
+            
+            p + p { 
+                margin-bottom: 1rem;
+            }
+            
+              
 
 
 
@@ -100,8 +118,17 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		* Beim Mouseover soll die Schrift pink werden.
 		*/
 
-
-
+            nav li a{
+                padding 5px 0;
+                text-decoration: none;
+                color: #000;
+                front-weight: bold;
+                border-top: solid 1px #dd1666;
+            }
+            
+            a:hover {      
+               color:#dd1166;
+            }
 
 
 
@@ -115,8 +142,21 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		* Der Name des Autors soll nach rechts ausgerichtet werden.
 		*/
 
+            #interview blockquote{
+                background-color: cornflowerblue;
+                margin-bottom: 1rem;
+                padding: 1rm;
+                color:white;
+            }
+            
+            #interview blockquote + blockquote{
+                background-color:darkviolet;
+                margin-bottom: 1rem;
+                padding: 1rm;
+                color:white;
+            }
 
-
+         footer{ text-align: right; }
 
 
 		/*------------------------------------*\
@@ -153,26 +193,55 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		/* Training Basic
 		Tabellen sollen über die komplette Breite des Elternelements gehen.
 		*/
-
+            #moduluebersicht > table { 
+                width: 100%;
+            }
+                
+            
 		
 		/* Training Basic
 		Texte in Tabellenköpfen sollen fett, linksbündig und mit einem Abstand von 0.5 Rem nach unten dargestellt werden.
 		*/
 		
+        thead{
+                padding: 0,5rem;
+                font-weight: bold;
+                text-align: left;
+        }
+            
 		table tr:not(:last-child){
 			border-bottom: solid 1px #ddd;
+      
+            
 		}
 		
 		table td{
 				padding: 0.5rem 0;
+            
+  
 		}
 		
+        table .large{ 
+                
+                width: 50%;
+                background-color: greenyellow;
+
+                    
+         }    
+            
+        table .small{
+                
+                width: 10%;
+                background-color: pink;
+
+            }    
+            
 		table td + td,table th + th {
 			padding-left: 0.5rem;
 		}
 		
 		/* Training Basic
-		Zellen mit der Klasse large sollen eine Breite von 50% bekommen, Zellen mit der Klasse small 10%.
+		Zellen mit der Klasse large sollen eine Breite von 50% bekommen, Zellen mit der Klasse small 10%.   erledig!!!
 		*/
 
 
@@ -183,18 +252,32 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		#moreStyle
 		\*------------------------------------*/
 		
-
 		body {
+            line-height: 140%;
 			font-size: 100%;
 			font-weight: 300;
 			background-color: rgba(240, 240, 240, 1);
+            
+            
+        
+            
+            
 		}
 		
 		/* Training Basic:
 		Alle direkten Kinder des body Elements sollen in einer zentrierten Box mit einer maximalen Breite von 80% der Breite des Browserfensters liegen. Die Box soll einen weißen Hingergrund und einen Innenabstand von 20 Pixeln haben.
 		*/
 
-		
+            body > * {
+                margin-left: 10%;
+                margin-right: 10%;                
+                background-color: white;
+                padding: 20px;
+                
+            }
+            
+            
+            
 		section, table{
 			margin-bottom: 2rem;
 		}
@@ -248,6 +331,7 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 
     <section id="interview">
         <h2>Statements</h2>
+        
 
         <blockquote>
             <p>Das Faszinierende für mich ist, dass durch den Einsatz von Medien Ergebnisse sichtbar werden. Ich programmiere nicht versteckte Systeme, bei denen ich dann fast gar nicht mehr sehe, was da passiert, sondern habe meist einen visuellen Output, den ich erzeuge. Durch diese „Berührung“ mit den Nutzern von Informationssystemen wird es erforderlich, viele verschiedene Kompetenzen, z.B. Usability, Computergrafik oder Kommunikationstechnologien zu beherrschen und verschiedene Perspektiven einzunehmen.</p>
