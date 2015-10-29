@@ -1,0 +1,500 @@
+/*------------------------------------*\
+    #colors
+\*------------------------------------*/
+
+.green{		#77cc00; }
+.blue{		#4952e1; }
+.magenta{ #dd1166; }
+.purple{ 	#9313c3; }
+.black{ 	#231f20; }
+.gray{ 		#fbfbfb; }
+
+
+
+
+
+/*------------------------------------*\
+    #Resets
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+    #Typo
+\*------------------------------------*/
+
+h1,h2,h3,h4{
+	font-weight: 100;
+	font-size: 1.8rem;
+	line-height: 120%;
+	margin-bottom: 1.8rem;
+}
+
+p {
+	margin-bottom: 2rem;
+}
+
+p + p{
+	margin-top: -1rem;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+    border-bottom: dotted 1px #4952e1;
+    transition: background 0.2s, color 0.2s;
+}
+
+a:hover{
+    color: #fff;
+    text-decoration: none;
+    border-bottom: dotted 1px #4952e1;
+    background-color: #4952e1;
+}
+
+
+
+
+
+/*------------------------------------*\
+    #Layout
+\*------------------------------------*/
+
+*, footer{
+	line-height: 140%;
+	font-family: 'Open Sans', sans-serif !important;
+}
+
+body {
+	font-size: 100%;
+	font-weight: 300;
+	background-color: rgba(240, 240, 240, 1);
+}
+
+body > header, body > main, body > footer{
+	max-width: 80%;
+	margin: 0 auto 20px;
+	padding: 20px;
+	position: relative;
+	background-color: #fff;
+}
+
+section, table{
+	margin-bottom: 2rem;
+}
+
+section:not(:first-child){
+	border-top: solid 1px #dd1166;
+	padding-top: 2rem;
+}
+
+
+
+
+
+/*------------------------------------*\
+    #Header
+\*------------------------------------*/
+
+.th-logo{
+	margin-bottom: 4rem;
+}
+
+.mi-logo{
+	position: absolute;
+	right: 20px;
+	top: 10px;
+	text-align: center;
+}
+
+body > header h1{
+	font-size: 1rem;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+
+
+
+
+
+/*------------------------------------*\
+    #Navigation
+\*------------------------------------*/
+
+
+#nav > li{
+	display: block;
+	margin-bottom: 0.5rem;
+}
+
+#nav > li + li{
+	border-top: solid 1px #dd1166;
+	padding-top: 0.5rem;
+}
+
+#nav > li a{
+	color: #000;
+	font-weight: 600;
+	text-decoration: none;
+	border: none;
+	display: block;
+}
+
+#nav > li a:hover{
+	color: #dd1166;
+	background-color: inherit;
+}
+
+
+
+
+
+
+/*------------------------------------*\
+    #Statements
+\*------------------------------------*/
+
+blockquote{
+	background: #4952e1;
+	color: #fff;
+	padding: 20px;
+	margin-bottom: 1rem;
+}
+
+
+blockquote:nth-child(odd) {
+    background: #9313c3;
+}
+
+blockquote footer{
+	text-align: right;
+}
+
+
+
+
+
+/*------------------------------------*\
+    #Sections
+\*------------------------------------*/
+
+h3{
+	font-size: 1.2rem;
+	font-weight: 600;
+	margin-bottom: 1rem;
+}
+
+
+
+
+
+
+/*------------------------------------*\
+    #Articles
+\*------------------------------------*/
+
+article h1{
+	font-size: 1.2rem;
+	font-weight: 600;
+	margin-bottom: 1rem;
+}
+
+article figure img{
+	width: 100%;
+	height: auto;
+}
+
+article figure img:nth-child(n+2){
+	display: none;
+}
+
+article figure figcaption{
+	margin-bottom: 1rem;
+}
+
+
+
+
+
+
+/*------------------------------------*\
+    #Tables
+\*------------------------------------*/
+
+table{
+	width: 100%;
+}
+
+table thead th{
+	font-weight: 400;
+	text-align: left;
+	padding-bottom: 0.5rem;
+	border-bottom: solid 1px #ddd;
+}
+
+table tr:not(:last-child){
+	border-bottom: solid 1px #ddd;
+}
+
+table td{
+		padding: 0.5rem 0;
+}
+
+table td + td,table th + th {
+	padding-left: 0.5rem;
+}
+
+table th.large{
+	width: 50%;
+}
+
+table th.small{
+	width: 10%;
+}
+
+
+
+
+
+
+/*------------------------------------*\
+    #Forms
+\*------------------------------------*/
+
+input[type=text], input[type=email], textarea{
+	width: 100%;
+	font-size: 1rem;
+	border: solid 1px #aaa;
+	margin-bottom: 0.25rem;
+	display: block;
+	padding: 0.25rem 0 0.25rem 0;
+}
+
+input[type=text]:focus, input[type=email]:focus, textarea:focus{
+	background-color: #eee;
+}
+
+textarea{
+	min-height: 5rem;
+}
+
+fieldset + fieldset{
+	margin-top: 1rem;
+}
+
+input[type=submit], input[type=reset]{
+	background-color: #fff;
+	border: 1px solid #dd1166;
+	color: #dd1166;
+	cursor: pointer;
+	font-size: 1rem;
+	padding: 0.5rem;
+	transition: background 0.2s, color 0.2s;
+}
+
+input[type=submit]:hover, input[type=reset]:hover{
+	background-color: #dd1166;
+	border: 1px solid #dd1166;
+	color: #fff;
+}
+
+input[type=reset]{
+	background-color: #fff;
+	border: 1px solid #ccc;
+	color: #ccc;
+}
+
+input[type=reset]:hover{
+	background-color: #ccc;
+	border: 1px solid #ccc;
+	color: #fff;
+}
+
+
+
+
+
+/*------------------------------------*\
+    #Lists
+\*------------------------------------*/
+
+dl{
+	margin-bottom: 1rem;
+}
+
+dt{
+	font-weight: 600;
+}
+
+dd, dt{
+	display: inline;
+}
+
+dt::after{
+	content: " ";
+}
+
+dd::after{
+	content: " ";
+	display: block;
+	height: 0.25rem;
+}
+
+dd ul, dd li{
+	display: inline;
+}
+
+dd li + li::before{
+	content: ", ";
+}
+
+
+
+
+/*------------------------------------*\
+    #Footer
+\*------------------------------------*/
+
+footer img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+
+/*------------------------------------*\
+    #Components
+\*------------------------------------*/
+
+#dozenten figcaption{
+	/*display: inline-block;
+    width: 75%;
+	vertical-align: top;*/
+}
+
+#dozenten figcaption > *{
+	/*padding-left: 1rem; */
+}
+
+#dozenten figcaption h1{
+	font-size: 1.5rem;
+	margin: 0;
+}
+
+#dozenten figure img{
+    width: 100%;
+    display: block;
+    margin-bottom: 1rem;
+    /*display: inline-block;
+    width: 25%; */
+}
+
+#dozenten figure{
+    margin-bottom: 1rem;
+}
+
+#dozenten figure:not(:first-child){
+    padding-top: 2rem;
+    border-top: solid 1px #ddd;
+}
+
+
+#neuigkeiten li:not(:first-child){
+	border-top: solid 1px #4952e1;
+    padding-top: 1rem;
+}
+
+
+
+
+
+/*------------------------------------*\
+    #Misc
+\*------------------------------------*/
+
+hr{
+	height: 1px;
+	border: none;
+	border-top: solid 1px #77cc00;
+	margin: 1rem 0;
+}
+
+.error{
+	color: #dd1166;
+}
+
+
+
+
+/*------------------------------------*\
+    #Responsive
+\*------------------------------------*/
+
+/* Tablets */
+@media only screen and (min-width: 760px) {
+	
+	#nav > li{
+		display: inline-block;
+		margin-right: 0.5rem;
+		margin-bottom: 0;
+	}
+	
+	#nav > li + li{
+		border: none;
+	}
+
+  #dozenten figcaption{
+      display: inline-block;
+      width: 75%;
+      vertical-align: top;
+  }
+
+  #dozenten figcaption > *{
+      padding-left: 1rem;
+  }
+
+  #dozenten figure img{
+      display: inline-block;
+      width: 25%;
+  }
+
+  #dozenten figure{
+      margin-bottom: 1rem;
+  }
+  
+  footer img{
+      width: 25%;
+      height: auto;
+      margin-bottom: 1rem;
+  }
+
+  #anfrageformular > p,
+  #anfrageformular > form{
+      margin-left: 50%;
+      padding-left: 1rem;
+  }
+  
+  #anfrageformular > h2, #neuigkeiten > h2{
+      float: left;
+  }
+  
+  #neuigkeiten > ol{
+      margin-left: 25%;
+      padding-left: 1rem;
+  }
+  
+  #neuigkeiten li{
+      position: relative;
+  }
+  
+  #neuigkeiten time{
+      position: absolute;
+      right: 0;
+      top: 1rem;
+  }
+}
