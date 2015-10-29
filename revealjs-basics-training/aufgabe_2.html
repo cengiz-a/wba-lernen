@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="de">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Workshop - Webpräsentation mit reveal.js</title>
+
+		<meta name="description" content="Workshop-Präsentation zu reveal.js">
+		<meta name="author" content="Marvin Klimm und Güray Kilic">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        
+		<link rel="stylesheet" href="../revealjs-framework/css/reveal.min.css">
+        <link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../revealjs-framework/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../revealjs-framework/css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+        
+        <!--[if lt IE 9]>
+		<script src="../revealjs-framework/lib/js/html5shiv.js"></script>
+		<![endif]-->
+        
+	</head>
+    <body>
+        
+        <div class="reveal">
+            <div class="slides">
+                <!--Hier die Folien aufbauen. Die erste Folie soll ein Deckblatt sein. Nach vorgestelltem Schema-->
+            </div>
+        </div>
+    
+        <script src="../revealjs-framework/lib/js/head.min.js"></script>
+        <script src="../revealjs-framework/js/reveal.min.js"></script>
+
+		<script>
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+                {
+                    src: '../revealjs-framework/lib/js/classList.js',
+                    condition: function () {
+                        return !document.body.classList;
+                    }
+                },
+                {
+                    src: '../revealjs-framework/plugin/markdown/marked.js',
+                    condition: function () {
+                        return !!document.querySelector('[data-markdown]');
+                    }
+                },
+                {
+                    src: '../revealjs-framework/plugin/markdown/markdown.js',
+                    condition: function () {
+                        return !!document.querySelector('[data-markdown]');
+                    }
+                },
+                {
+                    src: '../revealjs-framework/plugin/highlight/highlight.js',
+                    async: true,
+                    callback: function () {
+                        hljs.initHighlightingOnLoad();
+                    }
+                },
+                {
+                    src: '../revealjs-framework/plugin/zoom-js/zoom.js',
+                    async: true,
+                    condition: function () {
+                        return !!document.body.classList;
+                    }
+                },
+                {
+                    src: '../revealjs-framework/plugin/notes/notes.js',
+                    async: true,
+                    condition: function () {
+                        return !!document.body.classList;
+                    }
+                }
+				]
+			});
+
+		</script>   
+    </body>
+</html>
+    
