@@ -73,17 +73,26 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 			/* Training Basic:
 			Alle Texte sollen einen Zeilenabstand von 140% haben
 			*/
+            
+            line-height: 1.4;
+
 			font-family: 'Open Sans', sans-serif !important;
 		}
 		
 		/* Training Basic:
 			Alle Headlines sollen eine Schriftgröße und einen Zeilenabstand von 1.8 Rem haben.
 		*/
+            h1, h2, h3, h4, h5, h6 {font-size: 1.8rem; 
+                                    line-height: 1.8rem;
+                                    padding: 5px 0 30px;
+                                    
+            }
 
 		
 		/* Training Basic:
 			Alle Paragraphen (p) sollen einen Abstand nach unten von 2 Rem haben, außer wenn auf einen Paragraphen ein weiterer Paragraph folgt.
 		*/
+            p{ margin-top: 0; margin-bottom: 2rem; }
 
 
 
@@ -99,6 +108,25 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		* Zwei Navigationspunkte sollen durch eine pinke Linie getrennt werden.
 		* Beim Mouseover soll die Schrift pink werden.
 		*/
+            
+        nav ul li a:last-child{
+                padding: 3px 0;
+                display: block;
+                text-decoration: none;
+                color: black;
+                font-weight: bold;
+                border-bottom: dotted 1px blue;
+            }
+        
+        nav ul li a:hover {
+                color:pink;
+            }
+            
+        nav li {
+                display: inline-block;
+                padding: 4px;
+                margin-top: 10px;
+            }
 
 
 
@@ -114,9 +142,23 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		* Zwischen zwei Boxen soll ein Abstand von 1 Rem sein.
 		* Der Name des Autors soll nach rechts ausgerichtet werden.
 		*/
-
-
-
+            
+            blockquote.kohls{
+                background-color: blue;
+                margin-bottom: 1rem;
+                color: white;
+                padding: 1rem;
+            }
+            
+            blockquote.eisemann{
+                background-color: purple;
+                color: white;
+                padding: 1rem;
+            }
+            
+            blockquote footer{
+                text-align: right;
+            }
 
 
 		/*------------------------------------*\
@@ -174,6 +216,9 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		/* Training Basic
 		Zellen mit der Klasse large sollen eine Breite von 50% bekommen, Zellen mit der Klasse small 10%.
 		*/
+            
+            .large{width: 50%;}
+            .small{width: 10%;}
 
 
 
@@ -188,7 +233,46 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 			font-size: 100%;
 			font-weight: 300;
 			background-color: rgba(240, 240, 240, 1);
+            width: 80%;
+            margin: 0 auto 0 auto;
 		}
+            
+            header{
+                position: relative;
+                background: white;
+                padding: 1rem;
+                margin-bottom: 25px;
+            }
+            
+            main{
+                background: white;
+                padding: 1rem;
+                margin-bottom: 25px;
+            }
+            
+            .ende{
+                background: white;
+                padding: 1rem;
+                margin-bottom: 20px;
+            }
+            
+            #about {
+                border-bottom: solid 1px pink;
+                padding-top: 2rem;
+            }
+            
+            #showcase{
+                border-top: solid 1px pink;
+                padding-top: 2rem;
+                border-bottom: solid 1px pink;
+            }
+            
+            #dozenten{
+                border-top: solid 1px pink;
+                padding-top: 2rem;
+            }
+            
+            
 		
 		/* Training Basic:
 		Alle direkten Kinder des body Elements sollen in einer zentrierten Box mit einer maximalen Breite von 80% der Breite des Browserfensters liegen. Die Box soll einen weißen Hingergrund und einen Innenabstand von 20 Pixeln haben.
@@ -249,7 +333,7 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
     <section id="interview">
         <h2>Statements</h2>
 
-        <blockquote>
+        <blockquote class="kohls">
             <p>Das Faszinierende für mich ist, dass durch den Einsatz von Medien Ergebnisse sichtbar werden. Ich programmiere nicht versteckte Systeme, bei denen ich dann fast gar nicht mehr sehe, was da passiert, sondern habe meist einen visuellen Output, den ich erzeuge. Durch diese „Berührung“ mit den Nutzern von Informationssystemen wird es erforderlich, viele verschiedene Kompetenzen, z.B. Usability, Computergrafik oder Kommunikationstechnologien zu beherrschen und verschiedene Perspektiven einzunehmen.</p>
 
             <p>Durch dieses breite Spektrum eröffnen sich dann viele Möglichkeiten im späteren Berufsleben: das Entwickeln von mobilen Anwendungen, Webseiten, Spielen und multimedialen Diensten ebenso wie die Konzeption und Produktion der Inhalte für verschiedenste Medien. Durch diese Vielseitigkeit wird es nie langweilig.</p>
@@ -257,7 +341,7 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
             <footer><cite>Prof. Dr. Christian Kohls</cite></footer>
         </blockquote>
 
-        <blockquote>
+        <blockquote class="eisemann">
             <p>Wie der Name schon sagt, ist das die Arbeit mit Medien. Dass man fast immer eine visuelle Antwort bekommt, bei dem was man macht, finde ich persönlich wahnsinnig motivierend.</p>
 
             <p>Wenn ich jetzt mit...hmm...ich möchte hier jetzt keine anderen Forschungsgebiete beleidigen...also ich persönlich finde es einfach deutlich motivierender, wenn ich ein schönes ästhetisches Bild als Ergebnis kriege, als wenn lediglich die Zahl "5" auf dem Monitor erscheint. Und das ist ein ganz großer Vorteil der Medieninformatik.</p>
@@ -623,7 +707,7 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 	    </section>
 		</main>
 		
-    <footer>
+    <footer class="ende">
         <section>
             <img src="images/christiane_gruenloh.jpg" width="172" height="114" alt="Foto von Christiane Grühnloh">
 
