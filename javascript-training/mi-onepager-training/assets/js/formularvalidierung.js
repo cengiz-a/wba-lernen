@@ -126,7 +126,7 @@ var anfrageformular_element = document.querySelector( '#anfrageformular' ),
 
 
 
-/* Eventlistener hinzufügen, der beim Absenden des Fomrulars ausgelöst wird */
+/* Eventlistener hinzufügen, der beim Absenden des Formulars ausgelöst wird */
 /*
  * ## ADVANCED-TODO:
  *  Dem Formular ein Eventlistener für das 'submit'-Event hinzufügen, damit vor dem Absenden
