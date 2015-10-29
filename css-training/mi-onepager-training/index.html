@@ -74,20 +74,25 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 			Alle Texte sollen einen Zeilenabstand von 140% haben
 			*/
 			font-family: 'Open Sans', sans-serif !important;
+            line-height: 140%;
 		}
+                  
 		
 		/* Training Basic:
-			Alle Headlines sollen eine Schriftgröße und einen Zeilenabstand von 1.8 Rem haben.
+            Alle Headlines sollen eine Schriftgröße und einen Zeilenabstand von 1.8 Rem haben.
 		*/
 
+            
+            h2{font-size: 1.8rem;
+                margin: 1.8rem;
+                line-height: 140%;}
 		
 		/* Training Basic:
 			Alle Paragraphen (p) sollen einen Abstand nach unten von 2 Rem haben, außer wenn auf einen Paragraphen ein weiterer Paragraph folgt.
 		*/
 
-
-
-
+            p{bottom-margin: 2rem;}
+            p + p{bottom-margin: none;}
 
 
 		/*------------------------------------*\
@@ -100,8 +105,14 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		* Beim Mouseover soll die Schrift pink werden.
 		*/
 
-
-
+            #nav > li > a:hover{color:violet;}
+            #nav > li > a{color: #222222;
+                            font-weight:700;
+                            text-decoration: none;}
+            #nav{margin-bottom: 5px;}
+            #nav > li{  padding-top: 5px;
+                        padding-bottom: 5px;
+                        border-bottom: 1px solid }
 
 
 
@@ -115,9 +126,21 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		* Der Name des Autors soll nach rechts ausgerichtet werden.
 		*/
 
+            #interview > blockquote > p:nth-child(odd)
+            {background-color:deepskyblue;
+            margin-bottom: 1rem;}
+            
+            #interview > blockquote > p:nth-child(even)
+            {background-color:violet;
+            margin-bottom: 1rem;}
 
-
-
+            #interview > blockquote >footer{
+            text-align: right;
+            padding-right: 5px;
+            font-weight: 600;
+            font-size: 1,2rem
+            margin-right: 5px;
+            margin-bottom: 5px;}
 
 		/*------------------------------------*\
     #Articles
@@ -153,6 +176,8 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		/* Training Basic
 		Tabellen sollen über die komplette Breite des Elternelements gehen.
 		*/
+            
+            table > thread > tr{}
 
 		
 		/* Training Basic
