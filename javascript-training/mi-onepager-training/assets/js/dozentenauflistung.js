@@ -24,6 +24,9 @@
  * Hilfsvariablen:
  *  Pfadangabe u. Elementreferenzen
  */
+
+
+
 var lecturers_filepath  = "https://raw.githubusercontent.com/th-koeln/" +
                           "wba1-2015/3abda162332f8e6e6412502787d6ff68d7599fc8/" +
                           "mi-onepager/lecturers.json"; /* Pfad bzw. URL zur JSON-Datei */
@@ -33,7 +36,7 @@ var lecturers_filepath  = "https://raw.githubusercontent.com/th-koeln/" +
      *  der ID 'dozenten' geholt werden
      * ##
      */
-var dozenten_section    = /* HIER */ ;
+var dozenten_section    = document.getElementById('dozenten');
 var loading_element     = dozenten_section.querySelector( '.dozenten_ladehinweis' );
 
 
@@ -120,7 +123,7 @@ function construct_dl( info ) {
      *  Ein 'dl'-Element erzeugen
      * ##
      */
-    var dl_element = /* HIER */ ;
+    var dl_element = document.createElement('dl');
 
     /* Durch alle Informationseinträge traversieren */
     for( var key in info ) {
@@ -160,7 +163,7 @@ getJSON( lecturers_filepath, function( err, data ) {
      *  dann soll der Vorgang abgebrochen werden
      * ##
      */
-    if( /* Hier */ ) {
+    if( err ) {
         error_output( err );
         return;
     }
@@ -193,7 +196,7 @@ getJSON( lecturers_filepath, function( err, data ) {
          *  Ein 'figure'-Element erzeugen
          * ##
          */
-        var figure_element = /* HIER */;
+        var figure_element = document.createElement('figure');
 
         /* Basisinformationen vorbereiten */
         var basic_infos = value.basic_infos || {};
@@ -216,7 +219,7 @@ getJSON( lecturers_filepath, function( err, data ) {
          *  Ein 'figcaption'-Element erzeugen
          * ##
          */
-        var figcaption_element = /* HIER */;
+        var figcaption_element = document.createElement('figcaption');
 
         var name_headline_element = document.createElement( 'h1' );
         name_headline_element.innerHTML = lecturer_name;
@@ -230,13 +233,12 @@ getJSON( lecturers_filepath, function( err, data ) {
          *  Nutzen Sie die gegebenen Schlüssel-Wert-Paare
          * ##
          */
-        var basic_infos =
-          /*
-           'Raum:'   : basic_infos.room,
+        var basic_infos = {
+			'Raum:'   : basic_infos.room,
            'Telefon:': basic_infos.phone_number,
            'eMail:'  : lecturer_email,
            'Website:': basic_infos.website
-           */
+		}
 
         var dl_element_basic = construct_dl( basic_infos );
 
@@ -258,7 +260,7 @@ getJSON( lecturers_filepath, function( err, data ) {
          *  Beheben Sie diese.
          * ##
          */
-        FOR( key in custom_infos ) { /* Beginn der for-Schleife */
+        for( var key in custom_infos ) { /* Beginn der for-Schleife */
             var value = custom_infos[ key ];
 
             /* Leere Einträge überspringen */
@@ -268,6 +270,7 @@ getJSON( lecturers_filepath, function( err, data ) {
 
             prepared_custom_infos[ value.title ] = value.content
         /* Ende der for-Schleife */
+		}
 
         var dl_element_custom = construct_dl( prepared_custom_infos );
 
