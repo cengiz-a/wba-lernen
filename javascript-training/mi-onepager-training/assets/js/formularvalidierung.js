@@ -77,7 +77,7 @@ function create_and_append_error_msg( input_element, error_msg ) {
      *  Die Rahmenfarbe des 'input_element' auf die Farbe '#DD1166' setzen
      * ##
      */
-    input_element. /* Hier */ .borderColor = /* Und hier */;
+    input_element.style.borderColor = "#DD1166";
 
     /*
      * ## ADVANCED-TODO:
@@ -87,7 +87,7 @@ function create_and_append_error_msg( input_element, error_msg ) {
      *  2. Vaterlement das 'error_span_element' als Kindelement anfügen
      * ##
      */
-    var input_parent_element = /* 1. HIER */ ;
+    var input_parent_element = input_parent_element ;
     input_parent_element. /* 2. HIER */ ;
 
     /* Als kleine Hilfe wird vermerkt, dass es bei dem Eingabefeld ein Fehler gab */
@@ -133,7 +133,7 @@ var anfrageformular_element = document.querySelector( '#anfrageformular' ),
  *   des Formulars überprüft werden kann, ob Formularfelder evtl. leer gelassen wurden
  * ##
  */
-formular_element. /* Hier */ ( /* und hier */, function( e ) {
+formular_element.addEventListener ("submit", function( e ) {
     /* Wird auf 'false' gesetzt, sofern irgendwo ein Validierungsfehler auftrat */
     var allValid = true;
 
@@ -155,7 +155,7 @@ formular_element. /* Hier */ ( /* und hier */, function( e ) {
      */
 
     /* ## Vorname */
-    if( /* HIER */ === "" ) {
+    if(vorname_input_element.value === "" ) {
         create_and_append_error_msg( vorname_input_element,
                                      "Bitte geben Sie einen Vornamen ein!" );
         allValid = false;
@@ -165,7 +165,7 @@ formular_element. /* Hier */ ( /* und hier */, function( e ) {
     }
 
     /* ## Zuname */
-    if( /* HIER */ === "" ) {
+    if(zuname_input_element.value === "" ) {
         create_and_append_error_msg( zuname_input_element,
                                      "Bitte geben Sie einen Zunamen ein!" );
         allValid = false;
@@ -175,7 +175,7 @@ formular_element. /* Hier */ ( /* und hier */, function( e ) {
     }
 
     /* ## Email */
-    if(     /* HIER */ === ""
+    if(email_input_element.value === ""
         || !email_input_element.value.match(/.+@.+\..+/) ) {
 
         create_and_append_error_msg( email_input_element,
@@ -187,7 +187,7 @@ formular_element. /* Hier */ ( /* und hier */, function( e ) {
     }
 
     /* ## Nachricht */
-    if( /* HIER */ === "" ) {
+    if(nachricht_input_element.value === "" ) {
         create_and_append_error_msg( nachricht_input_element,
                                      "Bitte geben Sie eine Nachricht ein!" );
         allValid = false;
