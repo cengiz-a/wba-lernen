@@ -44,7 +44,11 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		/*------------------------------------*\
 		#Header
 		\*------------------------------------*/
-		
+		body
+            {
+                max-width:1024px;
+             margin:0 auto;
+            }
 		.th-logo{
 			margin-bottom: 4rem;
 		}
@@ -61,8 +65,24 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 			text-align: center;
 			margin-bottom: 20px;
 		}
-
-
+        header.total
+            {
+                background:white;
+                margin-bottom:25px;
+                position:relative;
+                padding:25px;
+            }
+        main
+            {
+                background:white;
+                padding:25px;
+                margin-bottom:25px;
+            }
+        footer.last
+            {
+                background:white;
+                padding:25px;
+            }
 
 
 		/*------------------------------------*\
@@ -73,20 +93,30 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 			/* Training Basic:
 			Alle Texte sollen einen Zeilenabstand von 140% haben
 			*/
+            line-height:140%;
 			font-family: 'Open Sans', sans-serif !important;
 		}
 		
 		/* Training Basic:
 			Alle Headlines sollen eine Schriftgröße und einen Zeilenabstand von 1.8 Rem haben.
 		*/
+            h2
+            {
+                font-size:1.8rem;
+                margin-bottom:15px;
+            }
+            h1
+            {
+              
+            }
 
 		
 		/* Training Basic:
 			Alle Paragraphen (p) sollen einen Abstand nach unten von 2 Rem haben, außer wenn auf einen Paragraphen ein weiterer Paragraph folgt.
 		*/
-
-
-
+            p {margin-bottom : 2.0rem;}
+            p:last-child { margin:0;}
+           
 
 
 
@@ -99,8 +129,46 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		* Zwei Navigationspunkte sollen durch eine pinke Linie getrennt werden.
 		* Beim Mouseover soll die Schrift pink werden.
 		*/
-
-
+            nav li a
+            {
+               
+                text-decoration:none;
+                font-weight:bold;
+                color:#000000;
+                border-bottom:1px dotted blue;
+            }
+            nav li
+            {
+                display:inline-block;
+            }
+            nav  li a:visited
+            {
+                color:#000000;
+            }
+            nav li a:hover
+            {
+                color:#dd1166;
+            }
+            nav li + li
+            {
+                margin-left:1rem;
+            }
+            #dozenten figure
+            {
+                border-top:1px solid #e6e6e6;
+                padding: 20px 0;
+            }
+            #dozenten figure img
+            {
+                float:left;
+                width:20%;
+            }
+            #dozenten figcaption
+            {
+                margin-left:20%;
+                padding-left:2.0rem;
+            }
+         
 
 
 
@@ -114,8 +182,82 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		* Zwischen zwei Boxen soll ein Abstand von 1 Rem sein.
 		* Der Name des Autors soll nach rechts ausgerichtet werden.
 		*/
+            main section , footer section
+            {
+                padding-bottom:15px;
+                border-bottom:1px solid #dd1166;
+                
+            }
+            main section:last-child , footer section:last-child
+            {
+                border:none;
+            }
 
-
+            
+            blockquote.kohls
+            {
+                background:blue;
+                margin-bottom:1rem;
+                padding:10px;
+                color:white;
+               
+                
+            }
+            blockquote cite
+            {
+                display:block;
+                
+                float:right;
+            }
+            blockquote.eisemann
+            {
+                padding:10px;
+                background:purple;
+                color:white;
+                 
+            }
+            blockquote::after
+            {
+                content:".";
+                opacity:0;
+              
+           
+              
+            }
+            #dozenten dt
+            {
+                font-weight:bold;
+                display:inline-block;
+            }
+           #dozenten figcaption h1
+            {
+                font-weight:bold;
+                margin-bottom:1.0rem;
+            }
+            #dozenten dt, #dozenten dd
+            {
+                display:inline;
+            }
+            #dozenten dd::after
+            {
+                content:"...";
+                opacity:0;
+                display:block;
+                height:0.2rem;
+            }
+            th
+            {
+                font-weight: bold;
+                text-align:left;
+            }
+            th.large
+            {
+                width:50%;
+            }
+            th.small
+            {
+                width:10%;
+            }
 
 
 
@@ -153,7 +295,7 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		/* Training Basic
 		Tabellen sollen über die komplette Breite des Elternelements gehen.
 		*/
-
+            table { width:100%;}
 		
 		/* Training Basic
 		Texte in Tabellenköpfen sollen fett, linksbündig und mit einem Abstand von 0.5 Rem nach unten dargestellt werden.
@@ -208,7 +350,7 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 </head>
 
 <body>
-    <header>
+    <header class="total">
         <div class="th-logo"><img src="assets/img/fh-logo.png" alt="fh-logo" width="129" height="70"></div>
 
         <div class="mi-logo">
@@ -249,7 +391,7 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
     <section id="interview">
         <h2>Statements</h2>
 
-        <blockquote>
+        <blockquote class="kohls">
             <p>Das Faszinierende für mich ist, dass durch den Einsatz von Medien Ergebnisse sichtbar werden. Ich programmiere nicht versteckte Systeme, bei denen ich dann fast gar nicht mehr sehe, was da passiert, sondern habe meist einen visuellen Output, den ich erzeuge. Durch diese „Berührung“ mit den Nutzern von Informationssystemen wird es erforderlich, viele verschiedene Kompetenzen, z.B. Usability, Computergrafik oder Kommunikationstechnologien zu beherrschen und verschiedene Perspektiven einzunehmen.</p>
 
             <p>Durch dieses breite Spektrum eröffnen sich dann viele Möglichkeiten im späteren Berufsleben: das Entwickeln von mobilen Anwendungen, Webseiten, Spielen und multimedialen Diensten ebenso wie die Konzeption und Produktion der Inhalte für verschiedenste Medien. Durch diese Vielseitigkeit wird es nie langweilig.</p>
@@ -257,7 +399,7 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
             <footer><cite>Prof. Dr. Christian Kohls</cite></footer>
         </blockquote>
 
-        <blockquote>
+        <blockquote class="eisemann">
             <p>Wie der Name schon sagt, ist das die Arbeit mit Medien. Dass man fast immer eine visuelle Antwort bekommt, bei dem was man macht, finde ich persönlich wahnsinnig motivierend.</p>
 
             <p>Wenn ich jetzt mit...hmm...ich möchte hier jetzt keine anderen Forschungsgebiete beleidigen...also ich persönlich finde es einfach deutlich motivierender, wenn ich ein schönes ästhetisches Bild als Ergebnis kriege, als wenn lediglich die Zahl "5" auf dem Monitor erscheint. Und das ist ein ganz großer Vorteil der Medieninformatik.</p>
@@ -478,7 +620,7 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 
                 <dl>
                     <dt>Veranstaltungen im Bachelor</dt>
-                    <dd>Web-basierte Anwendungen 1: WWW Technologien, Grundlagen der visuellen Kommunikation, Einführung in die Medieninformatik</d
+                    <dd>Web-basierte Anwendungen 1: WWW Technologien, Grundlagen der visuellen Kommunikation, Einführung in die Medieninformatik</dd>
                     <dt>Projekte</dt>
                     <dd>virtuelles Museum // Kölner Sport Auf der Suche nach einer angemessenen und innovativen Vermittlungsform des Themas Sportgeschichte, die gleichermaßen anschaulich, ansprechend und wissenschaftlich fundiert ist, bietet das virtuelle Museum eine neue Möglichkeit. Der Begriff des Museums ist dabei bewusst gewählt, um die Wertigkeit bei der Vermittlung von Geschichte hervorzuheben. Mit dieser außergewöhnlichen Sicht auf den Sport einer Stadt wird eine Präsentationsplattform geschaffen, bei der eine Verbindung zwischen historischen Fakten, visueller Kommunikation und emotionalem Erleben hergestellt wird. Diese Art der Informationsvermittlung bietet neue Erlebnisräume, die Jugendliche und Erwachsene gleichermaßen ansprechen kann. Die dargestellten Inhalte sollen mit dem aktuellen Sportgeschehen im Kölner Breiten- und Leistungssport verknüpft werden. Auf diese Weise wird ein Interaktionsraum geschaffen, der einerseits zur aktiven Teilnahme an der Gestaltung des virtuellen Museums auffordert, andererseits durch die Einbindung des realen Sportangebots sowie spielerischer Elemente zur körperlichen Betätigung animiert.<br>
                     <br>
@@ -623,7 +765,7 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 	    </section>
 		</main>
 		
-    <footer>
+    <footer class="last">
         <section>
             <img src="images/christiane_gruenloh.jpg" width="172" height="114" alt="Foto von Christiane Grühnloh">
 
