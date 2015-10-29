@@ -77,7 +77,7 @@ function create_and_append_error_msg( input_element, error_msg ) {
      *  Die Rahmenfarbe des 'input_element' auf die Farbe '#DD1166' setzen
      * ##
      */
-    input_element. /* Hier */ .borderColor = /* Und hier */;
+    input_element.style.borderColor = 'yellow';
 
     /*
      * ## ADVANCED-TODO:
