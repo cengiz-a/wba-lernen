@@ -117,9 +117,9 @@
           <h2>Zugriff auf das DOM (Finding)</h2>
           <ul>
             <li>Verschachtelte Suche - Lösung</li>
-            <li>element = document.querySelector(selectors);</li>
-            <li>elementList = document.querySelectorAll(selectors);</li>
-            <li>element = baseElement.querySelector(selectors);</li>
+            <li><code>element = document.querySelector(selectors);</code> - Erstes Element</li>
+            <li><code>elementList = document.querySelectorAll(selectors);</code> - Alle Elemente</li>
+            <li><code>element = baseElement.querySelector(selectors);</code> - Erstes Element</li>
           </ul>
           <p>
             <pre class="big-font">
@@ -249,11 +249,11 @@
           <h2>Event Handler/Listener</h2>
           <ul>
             <li>Durch ein reguläres HTML-Attribut <a href="" onclick="tuNix();"></a></li>
-            <li>Implizit im Skript (Event Handlers als Eigenschaft des Objekts): <code>element.onclick = tuNix();</code></li>
+            <li>Implizit im Skript: <code>element.onclick = tuNix();</code></li>
             <li>Implizit im Skript mit element.addEventListener(): <code>element.addEventListener ('click',tuNix, false);</code></li>
             <li>
             <li>addEventListener fügt einen Event Handler zu einem Element hinzu</li>
-            <li>Über den EventListener kann das Element mehrere Event Handler haben</li>
+            <li>Über den EventListener kann das Element einen oder mehrere Event Handler haben</li>
           </ul>
           <p>
             <pre class="big-font">
@@ -295,8 +295,8 @@
             <li>Das Javascript definiert das erscheinen und verschwinden der Lightbox</li>
             <li>Im DOM werden entsprechende HTML-Strukturen und CSS-Anweisungen verändert</li>
             <li>Es werden Eventhandler benutzt um auf den "Click" zu reagieren</li>
-            <li><a href="http://fiddle.jshell.net/koos/apzpgek4/1/">http://fiddle.jshell.net/koos/apzpgek4/1/</a></li>
           </ul>
+          <p><small><a href="http://fiddle.jshell.net/koos/apzpgek4/1/">http://fiddle.jshell.net/koos/apzpgek4/1/</a></small></p>
           <p>
             <pre class="big-font">
               <code>
@@ -349,7 +349,7 @@
         <section>
           <h2>Weitere Eigenschaften die Javascript anbietet</h2>
           <ul>
-            <li>Callbacks</li>
+            <li>Callbacks: </li>
             <li>Auf Fenster Orientierung, Position, Höhe, Breite, Auflösung reagieren</li>
             <li>HTML5 Javascript: Local Storage, Session Storage, Drag and Drop, etc.</li>
             <li>AJAX - Asynchronous Javascript And XML</li>
@@ -389,6 +389,7 @@
               <li>Moderne Browser bessern sich aber mittlerweile in der Hinsicht</li>
               <li>Volle Browserunterstützung führt zu mehr Code für Fallback-Lösungen und somit schwerer zu pflegen</li>
               <li>Die Lösung: JavaScript-Frameworks</li>
+              <li>In Zukunft: Ecmascript 6 und 7</li>
             </ul>
         </section>
         <section>
