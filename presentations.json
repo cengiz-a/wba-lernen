@@ -69,6 +69,20 @@
         "Christian Noss"
       ],
       "date": "2015-10-22"
+    },
+    "javascript-basics": {
+      "title": "Javascript Basics",
+      "authors": [
+        "Jan Kus"
+      ],
+      "date": "2015-10-29"
+    },
+    "javascript-advanced": {
+      "title": "Javascript Advanced",
+      "authors": [
+        "Jan Kus"
+      ],
+      "date": "2015-10-29"
     }
   }
 }

@@ -142,7 +142,7 @@
       </section>
       
       <section>
-        <h2 class="u">Spezifizität </h2>
+        <h2 class="u">Spezifität </h2>
         <ul>
           <li>Schwieriges Wort, im englischen <strong>specificity</strong></li>
           <li class='fragment'>Mehrere Regeln treffen auf das selbe HTML-Element zu, welche Regel gewinnt?</li>
@@ -151,15 +151,19 @@
           <li class='fragment'>Klasse <strong>.box</strong>: 10 Punkte </li>
           <li class='fragment'>Pseudoklasse <strong>:visited</strong>: 10 Punkte </li>
           <li class='fragment'>ID <strong>#special-box</strong>: 100 Punkte </li>
-          <li class='fragment'>Attribute-style <strong>&lt;p style=""></strong>: 1000 Punkte </li>
-          <li class='fragment'>Der Erfindung des Teufels <strong>!important</strong>: 100000000000000 Punkte </li>
+          <div class="fragment">
+          	<li>Attribute-style <strong>&lt;p style=""&gt;</strong>: 1000 Punkte </li>
+						<li>Der Erfindung des Teufels <strong>!important</strong>: 100000000000000 Punkte </li>
+          </div>
+          <li class='fragment'><code>a.box</code> oder <code>p a.box:visited</code> ?</li>
         </ul>
       </section>
       
       <section>
-        <blockquote>Meine Empfehlung: Verwendet nur Klassen! Die Welt wäre so viel schöner...</blockquote>
+        <blockquote>Eine Möglichkeit: im Wesentlichen Klassen verwenden.</blockquote>
       </section>
-      <section>
+      
+      <!--section>
         <h2 class="u">Eine kleine Quizrunde: </h2>
         <ul>
           <li><code>a.box</code> ?</li>
@@ -167,10 +171,10 @@
           <li class='fragment'><code>a#main-box.box</code> ?</li>
           <li class='fragment'><code>a#main-box#super-box.box</code> ?</li>
         </ul>
-      </section>
-      <section>
-        <blockquote>Fragen zu Spezifizität?</blockquote>
-      </section>
+      </section-->
+      <!--section>
+        <blockquote>Fragen zu Spezifität?</blockquote>
+      </section-->
       
       <section>
         <blockquote>"Elemente im normal flow stehen in Beziehung zu einander und beeinflussen die Position aller nachfolgenden Elemente"
