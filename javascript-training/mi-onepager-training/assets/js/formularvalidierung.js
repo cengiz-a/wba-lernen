@@ -24,7 +24,7 @@
   *
   *  1. Erzeugen Sie über die Konsole ein 'input'-Element und weisen es einer Variable zu
   *  2. Weisen sie dem Element die folgenden Attribut-Wert-Paare zu:
-  *       type  => 'input'
+  *       type  => 'text'
   *       value => 'Vorname'
   *       id    => 'test_input'
   *  3. Fügen Sie das Element dem 'section'-Element mit der ID 'anfrageformular'
