@@ -1,0 +1,114 @@
+.step_translate b{
+	animation-name: translate;
+    animation-duration: 10s;
+	animation-delay: 1s;
+    animation-iteration-count: infinite;
+	 -webkit-animation-fill-mode: both;
+}
+
+@keyframes translate{
+	from{
+		transform:translateY(0px);
+	}
+	50%{
+		transform:translateY(50px);
+	}
+	to{
+			transform:translateY(0px);
+	}
+}
+
+.step_3d p{
+	animation-name: dim;
+    animation-duration: 10s;
+	animation-delay: 1s;
+    animation-iteration-count: infinite;
+	 -webkit-animation-fill-mode: both;
+}
+
+@keyframes dim{
+	from{
+		transform:rotateX(0deg);
+	}
+	25%{
+		transform: perspective( 600px ) rotateY( 180deg );
+	}
+	50%{
+		transform: perspective( 200px ) rotateX( 180deg );
+	}
+	to{
+		transform:rotateX(0deg);
+	}
+}
+
+.step_rotate strong{
+	animation-name: rotate;
+    animation-duration: 4s;
+	animation-delay: 1s;
+    animation-iteration-count: infinite;
+	 -webkit-animation-fill-mode: both;
+}
+
+@keyframes rotate{
+	from{
+		transform:rotate(0deg);
+	}
+	50%{
+		transform:rotate(30deg);
+	}
+	to{
+		transform:rotate(0deg);
+	}
+}
+
+
+.step_big b{
+	animation-name: big;
+    animation-duration: 4s;
+	animation-delay: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes big{
+	from{transform:scale(1);}
+	50%{transform:scale(1.5)}
+	to{transform:scale(1)}
+}
+
+.step_small b{
+	animation-name: small;
+    animation-duration: 4s;
+	animation-delay: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes small{
+	from{transform:scale(1);}
+	50%{transform:scale(0.5)}
+	to{transform:scale(1)}
+}
+
+
+.center{
+	padding-top:100px;
+	text-align:center;
+
+}
+h1{
+	font-size:50px;
+	margin-bottom:20px;
+}
+
+h2{
+	margin-bottom:20px;
+}
+.start i{
+	line-height:150px;
+	font-size:35px;
+}
+
+ ul{
+	margin-bottom:50px;
+	padding-left:50px;
+	list-style-type:disc;
+}
