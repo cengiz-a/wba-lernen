@@ -16,7 +16,7 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 <html>
 
 <head>
-
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script> 
         /*  
 		Hier gehören die verschiedenen jQuery-Funktionen hin.
@@ -24,18 +24,54 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
         TODO:
      
         Aufgabe 1: Erstellen Sie eine Funktion, die beim Gleiten (hover) mit der Maus über 
-		<h3> den Paragraphen <p> unter <h3> verschwinden und wieder anzeigen lässt.
+		<h3> den Paragraphen <p> unter <h3> verschwinden und wieder anzeigen lässt.*/
          
+          $(document).ready(function(){
+            $("h3").hover(function(){
+                $("p").slideToggle();
+            });
+                
+        /*
         Aufgabe 2: Erstellen Sie eine Funktion, die beim Klicken auf <h1> im <header> die 
-		Navigation und die zwei Container verschwinden lässt(slideToggle).
-         
+		Navigation und die zwei Container verschwinden lässt(slideToggle).*/
+                 
+            $("h1").click(function(){
+                $(".nav, .callout, .banner").slideToggle("slow");
+            });
+         
+        /* 
         Aufgabe 3: Erstellen Sie eine Funktion, die mein Klicken auf den <blockquote> den 
-		Inhalt mit dem vorgegeben Inhalt (siehe unten) ersetzt (.text).
-         
+		Inhalt mit dem vorgegeben Inhalt (siehe unten) ersetzt (.text).*/
+            /*var text = false;*/
+            $("blockquote").click(function(){
+                $("blockquote").toggle(
+                function(){
+                    $("blockquote h6").text("So wird der Inhalt geändert! Einfach in dem man drauf klickt!");
+                },
+                function(){
+                    $("blockquote h6").text("Clean, elegant typography matched with sharp lines and precise spacing leads to a professional look and feel.");
+                }
+                );
+                
+                
+                /*
+                if(text){
+                    $("blockquote h6").text(text);
+                    text = false;
+                }else{
+                    text = $("blockquote h6").text();
+                    $("blockquote h6").text("So wird der Inhalt geändert! Einfach in dem man drauf klickt!");
+                }*/
+            });
+                                 
+        /* 
         Aufgabe 4: Erstellen Sie eine Funktion, die beim Klicken auf den "Get Black!"-
-		Button dem <body>, <h6> und <p> die Klasse <p1> vergibt.
-
-		*/
+		Button dem <body>, <h6> und <p> die Klasse <p1> vergibt.*/
+              
+            $(".button").click(function(){
+                $("body, h6, p").toggleClass("p1");
+            });
+       });
 
     </script> 
 	
