@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Workshop AJAX</title>
+
+    <meta name="description" content="Workshop zu AJAX">
+    <meta name="author" content="Lali Nurtaev und Daniel Heuser">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="../revealjs-framework/css/reveal.min.css">
+    <link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="../revealjs-framework/lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? '../revealjs-framework/css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <!--[if lt IE 9]>
+		<script src="../revealjs-framework/lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Webbasierte Anwendungen Teil 1</h1>
+                <h2 class="u">AJAX Basics</h2>
+                <p>05. November 2015</p>
+                <p>Studiengang Medieninformatik an der Technischen Hochschule Köln
+                    <br> Campus Gummersbach</p>
+                <p style="margin-top:15%">Lali Nurtaev und Daniel Heuser</p>
+            </section>
+
+            <section>
+                <h2>Was ist <span class="_pink">AJAX?</span></h2>
+                <ul>
+                    <li class="fragment"><b><span class="_pink">A</span></b>synchronous</li>
+                    <li class="fragment"><b><span class="_pink">J</span></b>avaScript</li>
+                    <li class="fragment"><b><span class="_pink">A</span></b>nd</li>
+                    <li class="fragment"><b><span class="_pink">X</span></b>ML</li>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>Bedeutung: Asynchronische Datenübertragung</li>
+                        </ul>
+                    </aside>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Beispiel 1</h2>
+                <img src="img/Beispiel%20Googlesuche.png" alt="Abbildung Googlesuche">
+                <h2>Beispiel 2</h2>
+                <img src="img/Beispiel%20Fehleingabe.png" alt="Abbildung Fehleingabe">
+                <aside class="notes">
+                    <ul>
+                        <li>B1: Auto-Complete für Suchanfragen</li>
+                        <li>B2: Direkte Fehlermeldung auf Falscheingaben in Forumalaren</li>
+                    </ul>
+                </aside>
+            </section>
+
+            <section>
+                <img src="img/schaubild-ajax.jpg" alt="Abbildung Vorgang AJAX">
+
+                <aside class="notes">
+                    <ul>
+                        <li>Client sendet Anfrage über JavaScript an den Server</li>
+                        <li>Server bearbeitet die Anfrage über JavaScript und schickt eine Antwort meißt XML codiert an den Client zurück</li>
+                    </ul>
+                </aside>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Warum <span class="_pink">AJAX?</span></h2>
+                <ul>
+                    <li class="fragment">Ganze Seite muss nicht neu geladen werden</li>
+                    <li class="fragment">Nur bestimmte Bereiche der Website werden ausgetauscht
+                        <ul>
+                            <li class="fragment">Reduzierung des Trafficverbrauchs</li>
+                        </ul>
+                    </li>
+                    <li class="fragment">Kein Browser-Plugin notwendig</li>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>P1: Session in einer Administrationsoberfläche</li>
+                            <li>P2: Vortäuschung von erhöhter Performance</li>
+                            <li>P3: AJAX funktioniert in fast jedem Webbrowser, etwa 97% der Webnutzer nutzen JavaScript</li>
+                        </ul>
+                    </aside>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Welche Basics braucht man für <span class="_pink">AJAX?</span></h2>
+                <li class="fragment">HTML</li>
+                <li class="fragment">JavaScript</li>
+                <li class="fragment">XML</li>
+
+                <aside class="notes">
+                    <ul>
+                        <li>P1: Ist eine Auszeichnungssprache zur Strukturierung digitaler Dokumente</li>
+                        <li>P2: Dient zur dynamischen Darstellung der Inhalte - Schnittstelle zwischen einzelnen Komponenten</li>
+                        <li>P3: HTTP-Request-Objekt, wird benötigt um Daten auf asynchroner Basis mit Webserver auszutauschen</li>
+                    </ul>
+                </aside>
+                </ul>
+            </section>
+
+            <section>
+
+            </section>
+        </div>
+    </div>
+
+
+    <script src="../revealjs-framework/lib/js/head.min.js"></script>
+    <script src="../revealjs-framework/js/reveal.min.js"></script>
+
+    <script>
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+            // Optional reveal.js plugins
+            dependencies: [
+                {
+                    src: '../revealjs-framework/lib/js/classList.js',
+                    condition: function () {
+                        return !document.body.classList;
+                    }
+                },
+                {
+                    src: '../revealjs-framework/plugin/markdown/marked.js',
+                    condition: function () {
+                        return !!document.querySelector('[data-markdown]');
+                    }
+                },
+                {
+                    src: '../revealjs-framework/plugin/markdown/markdown.js',
+                    condition: function () {
+                        return !!document.querySelector('[data-markdown]');
+                    }
+                },
+                {
+                    src: '../revealjs-framework/plugin/highlight/highlight.js',
+                    async: true,
+                    callback: function () {
+                        hljs.initHighlightingOnLoad();
+                    }
+                },
+                {
+                    src: '../revealjs-framework/plugin/zoom-js/zoom.js',
+                    async: true,
+                    condition: function () {
+                        return !!document.body.classList;
+                    }
+                },
+                {
+                    src: '../revealjs-framework/plugin/notes/notes.js',
+                    async: true,
+                    condition: function () {
+                        return !!document.body.classList;
+                    }
+                }
+				]
+        });
+    </script>
+
+</body>
+
+</html>
