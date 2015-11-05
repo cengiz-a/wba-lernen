@@ -32,6 +32,14 @@
   *  4. Finden Sie das soeben dem DOM-Baum hinzugefügte Element auf der Seite
   *  5. Löschen Sie das hinzugefügte Element wieder
   * ##
+  
+  var button = document.createElement('input');
+  button.setAttribute("type","text");
+  button.setAttribute("id","test_input");
+  button.setAttribute("value","VORNAME");
+  document.getElementById("anfrageformular").appendChild(button);
+  document.getElementById("test_input")
+  document.getElementById("test_input").remove()
   */
 
 
@@ -77,7 +85,7 @@ function create_and_append_error_msg( input_element, error_msg ) {
      *  Die Rahmenfarbe des 'input_element' auf die Farbe '#DD1166' setzen
      * ##
      */
-    input_element. /* Hier */ .borderColor = /* Und hier */;
+    input_element.style.borderColor = '#DD1166';
 
     /*
      * ## ADVANCED-TODO:
@@ -87,8 +95,8 @@ function create_and_append_error_msg( input_element, error_msg ) {
      *  2. Vaterlement das 'error_span_element' als Kindelement anfügen
      * ##
      */
-    var input_parent_element = /* 1. HIER */ ;
-    input_parent_element. /* 2. HIER */ ;
+    var input_parent_element = input_element.parentNode;
+    input_parent_element.appendChild(error_span_element);
 
     /* Als kleine Hilfe wird vermerkt, dass es bei dem Eingabefeld ein Fehler gab */
     input_element.dataset.error = true;
@@ -133,7 +141,7 @@ var anfrageformular_element = document.querySelector( '#anfrageformular' ),
  *   des Formulars überprüft werden kann, ob Formularfelder evtl. leer gelassen wurden
  * ##
  */
-formular_element. /* Hier */ ( /* und hier */, function( e ) {
+formular_element.addEventListener('submit', function( e ) {
     /* Wird auf 'false' gesetzt, sofern irgendwo ein Validierungsfehler auftrat */
     var allValid = true;
 
@@ -153,9 +161,9 @@ formular_element. /* Hier */ ( /* und hier */, function( e ) {
      *    als 20 bzw. weniger als 21 Zeichen eingegeben wurden (Tipp: 'length'-Eigenschaft)
      * ##
      */
-
+    console.log("validation");
     /* ## Vorname */
-    if( /* HIER */ === "" ) {
+    if(vorname_input_element.value === "" ) {
         create_and_append_error_msg( vorname_input_element,
                                      "Bitte geben Sie einen Vornamen ein!" );
         allValid = false;
@@ -165,7 +173,7 @@ formular_element. /* Hier */ ( /* und hier */, function( e ) {
     }
 
     /* ## Zuname */
-    if( /* HIER */ === "" ) {
+    if( zuname_input_element.value === "" ) {
         create_and_append_error_msg( zuname_input_element,
                                      "Bitte geben Sie einen Zunamen ein!" );
         allValid = false;
@@ -175,7 +183,7 @@ formular_element. /* Hier */ ( /* und hier */, function( e ) {
     }
 
     /* ## Email */
-    if(     /* HIER */ === ""
+    if(     email_input_element.value === ""
         || !email_input_element.value.match(/.+@.+\..+/) ) {
 
         create_and_append_error_msg( email_input_element,
@@ -187,7 +195,7 @@ formular_element. /* Hier */ ( /* und hier */, function( e ) {
     }
 
     /* ## Nachricht */
-    if( /* HIER */ === "" ) {
+    if( nachricht_input_element.value === "" ) {
         create_and_append_error_msg( nachricht_input_element,
                                      "Bitte geben Sie eine Nachricht ein!" );
         allValid = false;
@@ -201,7 +209,8 @@ formular_element. /* Hier */ ( /* und hier */, function( e ) {
      * Gab es mindestens einen Validierungsfehler, wird
      * die Standardaktion (Formular absenden) präventiert
      */
-    if( !allValid )
+    //if( !allValid )
         e.preventDefault();
+    console.log("validation");
 
 } );
