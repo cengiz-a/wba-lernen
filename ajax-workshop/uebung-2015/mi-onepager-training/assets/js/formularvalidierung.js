@@ -22,15 +22,15 @@
   *  Firefox:   Strg + Shift + K
   *     -> Firebug: F12
   *
-  *  1. Erzeugen Sie über die Konsole ein 'input'-Element und weisen es einer Variable zu
+  *  1. Erzeugen Sie über die Konsole ein 'input'-Element und weisen es einer Variable zu         |  var el = document.createElement( 'input' );
   *  2. Weisen sie dem Element die folgenden Attribut-Wert-Paare zu:
-  *       type  => 'text'
-  *       value => 'Vorname'
-  *       id    => 'test_input'
-  *  3. Fügen Sie das Element dem 'section'-Element mit der ID 'anfrageformular'
+  *       type  => 'input'                                                                        |  el.setAttribute( 'type', 'input' );
+  *       value => 'Vorname'                                                                      |  el.setAttribute( 'value', 'Vorname' );   // oder   el.value = "Vorname";
+  *       id    => 'test_input'                                                                   |  el.setAttribute( 'id', 'test_input' );
+  *  3. Fügen Sie das Element dem 'section'-Element mit der ID 'anfrageformular'                  |  document.querySelector( '#anfrageformular' ).appendChild( el );
   *       als Kindelement hinzu
   *  4. Finden Sie das soeben dem DOM-Baum hinzugefügte Element auf der Seite
-  *  5. Löschen Sie das hinzugefügte Element wieder
+  *  5. Löschen Sie das hinzugefügte Element wieder                                               |  doucument.querySelector( '#test_input' ).remove();   // oder    el.remove();
   * ##
   */
 
@@ -77,7 +77,7 @@ function create_and_append_error_msg( input_element, error_msg ) {
      *  Die Rahmenfarbe des 'input_element' auf die Farbe '#DD1166' setzen
      * ##
      */
-    input_element.style.borderColor = '#DD1166';
+    input_element.style.borderColor = '#D16'; // oder   '#DD1166'
 
     /*
      * ## ADVANCED-TODO:
@@ -87,8 +87,8 @@ function create_and_append_error_msg( input_element, error_msg ) {
      *  2. Vaterlement das 'error_span_element' als Kindelement anfügen
      * ##
      */
-    var input_parent_element = input_element.parentNode ;
-    input_parent_element.appendChild(error_span_element) ;
+    var input_parent_element = input_element.parentNode;
+    input_parent_element.appendChild( error_span_element );
 
     /* Als kleine Hilfe wird vermerkt, dass es bei dem Eingabefeld ein Fehler gab */
     input_element.dataset.error = true;
@@ -133,7 +133,7 @@ var anfrageformular_element = document.querySelector( '#anfrageformular' ),
  *   des Formulars überprüft werden kann, ob Formularfelder evtl. leer gelassen wurden
  * ##
  */
-formular_element.addEventListener( "submit", function( e ) {
+formular_element.addEventListener( 'submit', function( e ) {
     /* Wird auf 'false' gesetzt, sofern irgendwo ein Validierungsfehler auftrat */
     var allValid = true;
 
@@ -155,7 +155,7 @@ formular_element.addEventListener( "submit", function( e ) {
      */
 
     /* ## Vorname */
-    if( vorname_input_element.value === "" ) {
+    if( vorname_input_element.value === "" ) {  // optional:     || vorname_input_element.value.length > 20
         create_and_append_error_msg( vorname_input_element,
                                      "Bitte geben Sie einen Vornamen ein!" );
         allValid = false;
@@ -165,7 +165,7 @@ formular_element.addEventListener( "submit", function( e ) {
     }
 
     /* ## Zuname */
-    if( zuname_input_element.value === "" ) {
+    if( zuname_input_element.value === "" ) {  // optional:     || zuname_input_element.value.length > 20
         create_and_append_error_msg( zuname_input_element,
                                      "Bitte geben Sie einen Zunamen ein!" );
         allValid = false;
@@ -175,7 +175,7 @@ formular_element.addEventListener( "submit", function( e ) {
     }
 
     /* ## Email */
-    if(     email_input_element.value === ""
+    if(     email_input_element.value === ""   // optional     || email_input_element.value.length > 20
         || !email_input_element.value.match(/.+@.+\..+/) ) {
 
         create_and_append_error_msg( email_input_element,
@@ -187,7 +187,7 @@ formular_element.addEventListener( "submit", function( e ) {
     }
 
     /* ## Nachricht */
-    if( nachricht_input_element.value === "" ) {
+    if( nachricht_input_element.value === "" ) {  // optional     || nachricht_input_element.value.length > 20
         create_and_append_error_msg( nachricht_input_element,
                                      "Bitte geben Sie eine Nachricht ein!" );
         allValid = false;

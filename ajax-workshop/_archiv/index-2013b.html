@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <!-- Title of presentation -->
+    <title>Ajax Basics</title>
+    <!-- Short description of presentation -->
+    <meta name="description" content="Ajax Basics">
+    <!-- Author of presentation -->
+    <meta name="author" content="Aziz Kilic">
+	<meta name="author" content="Tim Kurtz">
+	<meta name="author" content="Dominik Scharf">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="../revealjs-framework/css/reveal.min.css">
+    <link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../revealjs-framework/lib/css/monokai.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+        document.write('<link rel="stylesheet" href="../revealjs-framework/css/print/' + (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper') + '.css" type="text/css" media="print">');
+    </script>
+
+    <!--[if lt IE 9]>
+		<script src="../revealjs-framework/lib/js/html5shiv.js"></script>
+		<![endif]-->
+    <style>
+    </style>
+</head>
+
+<body>
+
+    <div class="reveal">
+
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+
+            <!------------------------------------------------------------------------------------------------------------------------->
+            <!------------------------------------------Beginn der Präsentation-------------------------------------------------------->
+            <!--Startseite-->
+            <section>
+                <h1>Web-basierte Anwendungen 1</h1>
+                <h2>AJAX Basics</h2>
+
+                <p>31. Oktober 2013</p>
+
+                <p>Studiengang Medieninformatik an der Fachhochschule Köln
+                    <br>Campus Gummersbach</p>
+
+
+                <p style="margin-top:10%">
+                        Aziz Kilic
+                    <br>Tim Kurtz
+                    <br>Dominik Scharf
+                    <br>
+                </p>
+            </section>
+
+			<!----------------------------------------------------------------------------------------------------------------------------->
+            <!-- Section 2.0 Inhalt & Ablauf-->
+            <section>
+                <h1>Übersicht</h1>
+                <p>
+                    <strong>Ablauf</strong>
+                </p>
+
+                <ol>
+                    <li>Was ist Ajax ?</li>
+                    <li>Beispiele</li>
+                    <li>XMLHttpRequest</li>
+                    <li>Javascript Object Notation (JSON)</li>
+                    <li>Same-Origin-Policy (SOP)</li>
+                    <li>Nachteile</li>
+                    <li>Vorteile</li>
+                </ol>
+                <br>
+                <br>
+                <br>
+                <p style="font-size: 1em;">
+                    <strong>Anschließend</strong>
+                </p>
+                <ul>
+                    <li>
+                        Lernen durch Übungen
+                    </li>
+                </ul>
+            </section>
+
+				<!----------------------------------------------------------------------------------------------------------------------------->
+                <!--Section 3.0 Erklärung-->
+			<section>
+                <section>
+                    <h2>1. Was ist Ajax  ? </h2>
+                    <br>
+                    <li><strong>A</strong>synchronous <strong>J</strong>avascript <strong>A</strong>nd <strong>X</strong>ML</li>  
+                    <li>lädt einzelne Elemente einer Seite nach, ohne komplette Seite zu aktualisieren</li>
+                    <li>asynchrone Verbindung zwischen Server und Client</li>
+                    <li>Webanwendung mit hoher Funktionalität</li>
+                </section>
+            </section>
+         
+			<!----------------------------------------------------------------------------------------------------------------------------->
+            <!-- Section 4.0 Bsp. -->
+			<section>
+                <section>
+                    <h2><strong>2.</strong> Beispiele</h2>
+                   
+                    <a href="http://www.google.de"><h4>Google AutoComplete</h4></a>
+                    <img src="bilder/google.jpg">
+                    <a href="http://maps.google.de"><h4>GoogleMaps</h4></a>
+                    <img src="bilder/googlemaps.jpg">
+                </section>
+                <section>
+                  <a href="http://mail.google.com"><h4>GoogleMail</h4></a>   
+                    <img src="bilder/googlemail.jpg">
+                
+                </section>
+             </section>
+                    
+            <!-----------------------------------------------------------------------------------------------------------------------------> 
+			<!--Section 5.0 XMLHttpRequest -->
+       <section>
+                <section>
+                    <h2>3. XMLHttpRequest API </h2>
+					<br>
+                    <li>Objekt als Schnittstelle zur Verbindung von Server und Client</li>  
+                    <li>arbeitet synchron oder asynchron</li>
+                    <li>Übertragung über normale HTTP-Anfragen</li>
+                    <li>Browser-Abwärtskompatibilität zu IE5, IE6 mit ActiveXObject</li>
+                </section>
+                
+				
+				<!--Section 5.1 Objekt-Instanzierung -->
+                <section>
+                    <h2>
+                        <strong>3.1</strong> Objekt-Instanzierung</h2>
+                     <ul>
+                        <li class="fragment">Instanzierung für alle modernen Browser
+                            <pre>
+                                <code>var ajaxObject = new XMLHttpRequest();</code>
+                            </pre>
+                        </li>
+                        <br>
+                        <li class="fragment">Instanzierung unter Internet Explorer 5 und 6
+                            <pre>
+                                <code>var ajaxObject = new ActiveXObject("Microsoft.XMLHTTP");</code>
+                            </pre>
+                        </li>
+                        <br>
+                        <li class="fragment">Überprüfen ob das XMLHttpRequest Objekt existiert
+                            
+<pre>
+<code>var ajaxObject;
+if (window.XMLHttpRequest) {
+    ajaxObject = new XMLHttpRequest();
+} else {
+    ajaxObject = new ActiveXObject("Microsoft.XMLHTTP");
+}
+</code>
+</pre>
+                        </li>
+                    </ul>
+                </section>
+                
+                    
+				<!--Section 5.$ Anfrage-->
+                <section>
+                    <h2>
+                        <strong>3.2</strong> Die Anfrage 
+                        
+                    </h2>
+                    <h3><strong>.open(</strong>method, url, <strong>[async, username, password])</strong></h3>
+                    <ul>
+                        <li class="fragment">Initialisiert die Anfrage</li>
+                        <li class="fragment"> 
+                            <strong>method</strong> - HTTP-Methode, mit der die Anfrage gesendet wird.
+                            <br>Wichtigsten Möglichkeiten sind: <strong>"GET"</strong> oder <strong>"POST"</strong>
+                        </li>
+                        <li class="fragment"> 
+                            <strong>url</strong> - Adresse
+                        </li>
+                        <li class="fragment"> 
+                            <strong>async</strong> - Gibt an, ob die Anfrage asynchron ist oder nicht durchgeführt wird
+                            <br>Standardwert ist <strong>true</strong> 
+                        </li>
+                    </ul>
+                    <br><br>
+                    <h3><strong>.send()</strong></h3>
+                    <ul>
+                        <li class="fragment">Sendet die Anfrage ab</li>
+                    </ul>
+                    
+                    
+
+                    
+                </section>
+                
+                
+				<!--Section 5.5 Anfrage ansenden-->	
+                <section>
+                    <h2>
+                        <strong>3.2</strong> Die Anfrage
+                        
+                    </h2>
+                    <h3><strong>Beispiel</strong></h3>
+                    <ul>    
+                        <li class="fragment"> 
+                            Wenn .open(...) <strong>synchron</strong> initialisiert wird (asnyc==false)
+                            <br>führt Javascript den auf .send() <strong>folgenden Befehl</strong> erst dann aus,
+                            <br>wenn die Anfrage komplett abgearbeitet worden ist.  
+                        </li>
+
+                    </ul>
+                    
+                    <pre class="fragment">
+<code>ajaxObject.open("GET", "zuLadendeDatei.htm", true);
+ajaxObject.send();
+</code>
+                    </pre>
+                </section>
+           
+           
+                <section>
+                    <h2>
+                        <strong>3.3</strong> Antwort
+                        
+                    </h2>
+                    <h3 class=><strong>.responseText</strong> oder <strong>.responseXML</strong></h3>
+                    <ul>    
+                        <li class="fragment"> 
+                            beinhaltet, bei erfolgreicher Durchführung, die Antwort des Servers 
+                        </li>
+                        <br>
+                        <li class="fragment">
+                            wenn, die Antwort des Servers im XML geliefert wird:<strong> .responseXML </strong> verwenden
+                        </li>
+                        <br>
+                        <li class="fragment">
+                           <strong>  .responseText </strong>  liefert die Antwort als String
+                        </li>
+                    </ul>
+                    
+                </section>
+           
+           
+                <!--Section 5.2 Event-->
+                <section>
+                    <h2>
+                        <strong>3.4</strong> Das Event
+                        
+                    </h2>
+                    <h3 ><strong>.readyState</strong></h3>
+                    <ul>
+                        <li class="fragment" > 
+                            Die Variable <strong>.readyState</strong> durchläuft <strong>nacheinander fünf Zustände</strong>,
+                            <br>die den <strong>aktuellen Status</strong> der Anfrage mit folgenden Werten repräsentieren:
+                            <br><strong>0</strong>: Anfrage nicht initalisiert
+                            <br><strong>1</strong>: Serververbindung hergestellt
+                            <br><strong>2</strong>: Anfrage erhalten
+                            <br><strong>3</strong>: Verarbeite Anfrage
+                            <br><strong>4</strong>: Anfrage verarbeitet und Antwort erhalten
+                        </li>          
+                    </ul>
+                    
+                    <h3 ><strong>.status</strong></h3>
+                    <ul>
+                        <li class="fragment" > 
+                            Gibt nach Verarbeitung der Anfrage den <strong>HTTP-Statuscode</strong> an.
+                            <br>Die zwei wichtigstens Statuscodes sind:
+                            <br><strong>200</strong>: Anfrage wurde erfolgreich bearbeitet
+                            <br><strong>404</strong>: Angeforderte Ressource wurde nicht gefunden
+                        </li>          
+                    </ul>
+                </section>
+                
+                <!--Section 5.3 EventHandler-->
+                <section>
+                    <h2>
+                        <strong>3.5</strong> Der EventHandler
+                        
+                    </h2>
+                    <h3><strong>.onReadyStateChange = function(){ ... }</strong></h3>
+                    <ul class="fragment">
+                        <li > 
+                            Die .onReadyStateChange Funktion wird wie der Funktionsname schon sagt bei 
+                            <br><strong>jeder Änderung der Variablen .readyState aufgerufen</strong>
+                        </li>
+                        <li>
+                            Wir definieren selber was bei welchem Status passieren soll
+                        </li>
+                    </ul>
+                    <br><br>
+                    <h3 ><strong>Beispiel</strong></h3>
+                    <pre class="fragment">
+<code>ajaxObject.onReadyStateChange = function() {
+    // Bei erfolgreicher Anfrage an den Server
+    if(ajaxObject.readyState == 4 && ajaxObject.status == 200){
+        alert(ajaxObject.responseText);
+    }
+};
+ajaxObject.open("GET", "http://meineDomain.de/datei.txt", true);
+ajaxObject.send();
+</code>
+                    </pre>
+                </section>
+                
+            
+            </section>
+
+			
+            <!----------------------------------------------------------------------------------------------------------------------------->
+            <!--Section 6 Bourne-->
+            <section>
+                <section>
+                    <h2>4. Javascript Object Notation (JSON)</h2>
+                    <br>
+                    <li>Datenformat zum Informationsaustausch zwischen Server und Client</li>
+                    <li>Speichert Variabeln, Arrays und Objecte</li>
+            
+                </section>
+
+
+                <!--Section 6.1 Aufbau-->
+                <section>
+                    
+                        <h2>
+                            <strong>4.1</strong> Aufbau - Einfache Variabeln</h2>
+                        <ul>
+                            <pre>
+                                <code>{ 
+  "Stadt": "Gummersbach", 
+  "Postleitzahl": 51643,
+}</code>    </pre>
+                            <spawn class="fragment">Zugriff über:&nbsp;&nbsp;<strong>.Stadt;</strong> 
+                            </spawn>
+                        </ul>
+                    
+            
+
+                <!--Section 6.2 Array-->
+               
+                    <br><br>
+                        <h2>
+                            <strong>4.2</strong> Aufbau - Arrays</h2>
+                        <ul>
+                            <pre>
+                                <code>{
+  "Stadt": "Gummersbach", 
+  "Schulen": ["FH", "Berufkolleg"],
+}</code>
+                            </pre>
+                            
+                            <spawn class="fragment">Zugriff über:&nbsp;&nbsp;<strong>.Schulen[0];</strong>
+                            </spawn>
+                        </ul>
+                    
+                </section>
+
+
+                <!--Section 6.3 Object-->
+                <section>
+                    
+                        <h2>
+                            <strong>4.3</strong> Aufbau - Object</h2>
+                        <ul>
+                            <spawn class="fragment">
+                                <pre>
+                                    <code >{ 
+  "Stadt": "Gummersbach", 
+  "Buergermeister": {
+                     "Name":"Helmenstein", 
+                     "Vorname": "Frank", 
+                   }
+}</code>
+                            </pre>
+							 Zugriff über:&nbsp;&nbsp;<strong>.Buergermeister.Name;</strong>
+                            <br><br>
+                             Bei Leerzeichen oder Umlauten:&nbsp;&nbsp;<strong>variable["Bürgermeister"].Name</strong>
+                            </spawn>
+                        </ul>
+                </section>
+                
+                
+                <!--Section 6.4 Arrays in Object-->
+                <section>
+                    
+                        <h2>
+                            <strong>4.4</strong> Arrays in Object</h2>
+                        <ul>
+                            <pre>
+                                <code >{ 
+  "Stadt": "Gummersbach", 
+  "Buergermeister": {
+                     "Name":"Helmenstein", 
+                     "Vorname": "Frank", 
+                     "Autos":["Dienstwagen", "Privatwagen"];
+                   }
+}</code>
+                            </pre>
+                        <spawn class="fragment">
+                           Zugriff über:&nbsp;&nbsp;<strong>.Buergermeister.Autos[0];</strong>
+                            </spawn>
+                        </ul>
+                    
+                </section>
+
+
+                <!--Section 6.5 Parser-->
+                <section>
+                    
+                        <h2>
+                            <strong>4.5</strong> Aufbau - Parser</h2>
+                        <ul>
+                            <pre>
+                                <code>var json = JSON.parse(stringVariable);</code>
+                            </pre>
+                            <spawn class="fragment">Wandelt einen String mit    passende Daten in eine JSON-Variable um</spawn>
+                        </ul>
+                    
+                </section>
+
+            </section>
+			<!----------------------------------------------------------------------------------------------------------------------------->
+            <!--Section 7 Cops-->
+          <section>
+                <section>
+                    <h2>5. Same-Origin-Policy (SOP) </h2>
+                    <br>
+                    <li> Ist ein <strong>Schutzmechanismus</strong> im Browser der <strong>verbietet</strong>, dass clientseitige Skripte auf <strong>Ressourcen von fremden Seiten</strong> zugreifen können.
+                    </li>
+                    <br>
+                    <li>Die Regel wird dann angewendet, wenn sich die URL, von der aktuellen <strong>URL <br> im Port, Hostnamen, oder Protokoll <u>unterscheidet</u></strong>
+                    </li>
+                    <br>
+                    <li>
+                        <strong>Verhindert viele Angriffe</strong> die sonst mit Skripten wie Javascript möglich wären
+                    </li>
+                    <br>
+                    <li>
+                        Erschwert allerdings auch die <strong>Umsetzung</strong> von <strong>AJAX</strong>
+                    </li>
+                </section>
+              
+              
+                <section>
+                    <h2><strong>5.1</strong> Regel umgehen mit <br><strong>C</strong>ross-<strong>O</strong>rigin <strong>R</strong>esource <strong>S</strong>haring <strong>(CORS)</strong> </h2>
+                    <br>
+                    <ul>
+                        <li>
+                            Mit CORS wird der Standard des HTTP-Headers erweitert
+                        </li>
+                        <br>
+                        <li>
+                            Der Serveradmin kann dadurch einstellen, von welcher URL, <br> mit Skripten auf Ressourcen zugegriffen werden kann. 
+                        </li><br>
+                        <li>
+                            <strong>Access-Control-Allow-Origin: *</strong> - Erlaubt allen Seiten Zugriff
+                        </li><br>
+                        <li>
+                            <strong>Access-Control-Allow-Origin: null</strong> - Erlaubt keiner Seite Zugriff
+                        </li><br>
+                        <li>
+                            <strong>Access-Control-Allow-Origin: example.com</strong> - Erlaubt nur einigen Seiten Zugriff
+                        </li>
+                    </ul>
+                </section>
+              
+                   <section>
+                        <h2><strong>5.2</strong> Regel umgehen mit <br><strong>JSON with Padding (JSONP)</strong></h2>
+                        <br>
+                        
+                        <ul>
+                            <li> 
+                                <strong>JSONP</strong> nutzt die Möglichkeit aus, <br> dass der <strong>&lt;script&gt;</strong> Tag  <u>nicht</u> von der Same-Origin-Policy betroffen ist
+                            </li>
+                            <li>
+                                Man kann im Gegensatz zu <strong>CORS</strong> allerdings nur GET-Anfragen senden
+                            </li>
+                            <li>
+                                Der AJAX-Anteil fällt mit dieser Methode komplett weg 
+                            </li>
+                        </ul>
+                    </section>
+              </section>
+			
+			
+			<!----------------------------------------------------------------------------------------------------------------------------->
+            <!--Section 8 Nachteile -->
+          <section>
+                <section>
+                    <h2>6. Nachteile </h2>
+                    <br>
+                    <li>JavaScript notwendig</li>
+					<li>Zurück-Button und Lesezeichen funktionieren nur über Umwege</li>
+					<li>Überbrückung der Latenzzeit übernimmt nicht der Browser (Lade-Indikator fehlt)</li>
+					<li>SEO aufwendig</li>
+					<li>nicht barrierefrei (Hook-Ansatz: zusätzliche Javascriptfreie Seite)</li>
+					<li>Polling-Problem (Ajax-Client muss ständig Anfragen senden, da Server nicht immer asynchron arbeiten)</li>
+                </section>
+              </section>
+			  
+			  
+			<!----------------------------------------------------------------------------------------------------------------------------->
+            <!--Section 9 Vorteile -->
+            <section>
+                <section>
+                    <h2>7. Vorteile</h2>
+                    <br>
+                   <li>Einsparung von Daten, da statische Daten nur einmal geladen werden</li>
+                    <li>Funktionen der Seite bleiben beim Nachladen erhalten und nutzbar</li>
+                    <li>Plattformunabhängig</li>
+                    <li>Ajax-Anwendungen haben gute Usability und können so Desktop-Anwendungen ersetzen (Beispiel: Office-Anwendungen)</li>
+                </section>
+            </section>
+			
+			
+			<!----------------------------------------------------------------------------------------------------------------------------->
+            <!--Section 10 Das Ende-->
+			<section>
+                <section>
+                    <h2>8.Übung</h2>
+					<br>
+                    <a href="https://github.com/fh-koeln/wba1-2013/tree/gh-pages/2013-10-31-ajax-basics/uebung" target="_blank"><h4>Lernen durch Übung!</h4></a>
+				</section>
+			</section>
+                
+
+            <!------------------------------------------------------------------------------------------------------------------------Ende der Präsentation->
+<!------------------------------------------------------------------------------------------------------------------------->
+            <!------------------------------------------------------------------------------------------------------------------------->
+            <!-- End of slides container. -->
+
+        </div>
+
+    </div>
+
+    <script src="../revealjs-framework/lib/js/head.min.js"></script>
+    <script src="../revealjs-framework/js/reveal.min.js"></script>
+
+    <script>
+        // Full list of configuration options available here:
+         // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: false,
+            width: 1000,
+
+            transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+            transitionSpeed: 'fast', // default/fast/slow
+            backgroundTransition: 'none', // default/linear/none
+
+            // Optional libraries used to extend on reveal.js
+            dependencies: [{
+                src: '../revealjs-framework/lib/js/classList.js',
+                condition: function() {
+                    return !document.body.classList;
+                }
+            }, {
+                src: '../revealjs-framework/plugin/markdown/marked.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: '../revealjs-framework/plugin/markdown/markdown.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: '../revealjs-framework/plugin/highlight/highlight.js',
+                async: true,
+                callback: function() {
+                    hljs.initHighlightingOnLoad();
+                }
+            }, {
+                src: '../revealjs-framework/plugin/zoom-js/zoom.js',
+                async: true,
+                condition: function() {
+                    return !!document.body.classList;
+                }
+            }, {
+                src: '../revealjs-framework/plugin/notes/notes.js',
+                async: true,
+                condition: function() {
+                    return !!document.body.classList;
+                }
+            }]
+        });
+    </script>
+
+</body>
+
+</html>
