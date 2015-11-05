@@ -38,11 +38,34 @@ function create_and_append_error_msg( input_element, error_msg ) {
     error_span_element.innerHTML = error_msg;
     error_span_element.classList.add( 'error' ); /* class="" -> class="error" */
 
+<<<<<<< HEAD
     /* Rahmens (border) einfärben  */
     input_element.style.borderColor = '#D16';
 
     input_element.parentNode.appendChild( error_span_element );
 
+=======
+    /* Rahmen (border) einfärben  */
+    /*
+     * ## ADVANCED-TODO:
+     *  Die Rahmenfarbe des 'input_element' auf die Farbe '#DD1166' setzen
+     * ##
+     */
+    input_element.style.borderColor = '#DD1166';/* Und hier */;
+
+    /*
+     * ## ADVANCED-TODO:
+     *  Dem Vaterelement von 'input_element' das Element 'error_span_element'
+     *  als Kind hinzufügen;
+     *  1. Referenz auf das Vaterelement von 'input_element' holen
+     *  2. Vaterlement das 'error_span_element' als Kindelement anfügen
+     * ##
+     */
+    var input_parent_element = input_element.parentNode;/* 1. HIER */ ;
+    input_parent_element.appendChild(error_span_element); /* 2. HIER */ ;
+	
+	
+>>>>>>> f0ae8ea852993a396491acff43e8ec29263c4e2e
     /* Als kleine Hilfe wird vermerkt, dass es bei dem Eingabefeld ein Fehler gab */
     input_element.dataset.error = true;
 }
@@ -58,7 +81,7 @@ function remove_error_msg( input_element ) {
     delete input_element.dataset.error;
 
     /* Farbe des Rahmens (border) zurücksetzen */
-    input_element.style.borderColor = '';
+    input_element.style.borderColor = "";
 
     var error_span_element = input_element.parentNode.querySelector( '.error' );
 
@@ -79,13 +102,28 @@ var anfrageformular_element = document.querySelector( '#anfrageformular' ),
 
 
 
+<<<<<<< HEAD
 /* Eventlistener hinzufügen, der beim ABsenden des Fomrulars ausgeführt wird */
 formular_element.addEventListener('submit', function( e ) {
+=======
+/* Eventlistener hinzufügen, der beim Absenden des Fomrulars ausgelöst wird */
+/*
+ * ## ADVANCED-TODO:
+ *  Dem Formular ein Eventlistener für das 'submit'-Event hinzufügen, damit vor dem Absenden
+ *   des Formulars überprüft werden kann, ob Formularfelder evtl. leer gelassen wurden
+ * ##
+ */
+formular_element.addEventListener("submit",function( e ) {
+>>>>>>> f0ae8ea852993a396491acff43e8ec29263c4e2e
     /* Wird auf 'false' gesetzt, sofern irgendwo ein Validierungsfehler auftrat */
     var allValid = true;
 
     /* ## Vorname */
+<<<<<<< HEAD
     if( vorname_input_element.value.length === 0 ) {
+=======
+    if( vorname_input_element.value === "" ) {
+>>>>>>> f0ae8ea852993a396491acff43e8ec29263c4e2e
         create_and_append_error_msg( vorname_input_element,
                                      'Bitte geben Sie einen Vornamen ein!' );
         allValid = false;
@@ -95,17 +133,24 @@ formular_element.addEventListener('submit', function( e ) {
     }
 
     /* ## Zuname */
+<<<<<<< HEAD
     if( zuname_input_element.value.length === 0 ) {
+=======
+    if( zuname_input_element.value === "" ) {
+>>>>>>> f0ae8ea852993a396491acff43e8ec29263c4e2e
         create_and_append_error_msg( zuname_input_element,
                                      'Bitte geben Sie einen Zunamen ein!' );
         allValid = false;
-    }
-    else {
+    }    else {
         remove_error_msg( zuname_input_element );
     }
 
     /* ## Email */
+<<<<<<< HEAD
     if(     email_input_element.value.length === 0
+=======
+    if(email_input_element.value === ""
+>>>>>>> f0ae8ea852993a396491acff43e8ec29263c4e2e
         || !email_input_element.value.match(/.+@.+\..+/) ) {
 
         create_and_append_error_msg( email_input_element,
@@ -117,7 +162,11 @@ formular_element.addEventListener('submit', function( e ) {
     }
 
     /* ## Nachricht */
+<<<<<<< HEAD
     if( nachricht_input_element.value.length === 0 ) {
+=======
+    if(nachricht_input_element.value === "" ) {
+>>>>>>> f0ae8ea852993a396491acff43e8ec29263c4e2e
         create_and_append_error_msg( nachricht_input_element,
                                      'Bitte geben Sie eine Nachricht ein!' );
         allValid = false;

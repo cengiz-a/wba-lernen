@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>CSS3 Animations & Transactions</title>
+    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+    <meta name="author" content="Bartek Szopka" />
+	
+	<link rel="stylesheet" href="css/high/styles/github.css">
+		
+	
+	<link href="css/impress-demo.css" rel="stylesheet" />  
+	<link href="css/styles.css" rel="stylesheet" />   
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+<body class="impress-not-supported">
+
+
+<div id="impress">
+    <div class="step slide start center" data-x="0" data-y="-1500">
+        <h1>CSS3 Animations & Transactions</h1>
+		<p><i>by Mustafa Simsek & Jan Wegmeth</i>
+		<p><i>05. November 2015 - Webbasierte Anwendungen 1</i></p>
+    </div>
+
+    <div class="step slide step2" data-x="1000" data-y="-1500">
+		<h1>Ablauf des Workshops</h1>
+        <ul>
+			<li>Animationen und Transactions mit CSS3</li>
+			<li>Beispiel Implementierungen</li>
+			<li>JavaScript oder CSS3</li>
+			<li>Aufgabe 1 - Skrecht it</li>
+			<li>Feedback - Alles klar?</li>
+			<li>Aufgabe 2 - JUMP!</li>	
+		</ul>
+    </div>
+    <div id="title1" class="step center" data-x="0" data-y="0" data-scale="4">
+        <h1>Animationen</h1><span>&amp;</span><br>
+		<h1>Transaction</h1>
+    </div>
+    <div id="its" class="step step_rotate " data-x="850" data-y="3000" data-rotate="90" data-scale="5">
+        <p>Lass deinen Inhalt <strong>rotieren</strong></p>
+		<code>transform:rotate(30deg);</code>
+    </div>
+
+    <div id="bidg" class="step step_big" data-x="3500" data-y="2100" data-rotate="180" data-scale="1">
+        <p>Mach Dinge <b>groß</b> <span class="thoughts">...</span></p>
+		<code>transform:scale(1.5);</code>
+    </div>
+    <div id="tiny" class="step step_small" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
+        <p>oder <b>klein</b> ...</p>
+		<code>transform:scale(0.5);</code>
+    </div>
+	<div id="translate" class="step step_translate" data-x="2325" data-y="2625" data-z="-3000" data-scale="1">
+        <p><b>Positioniere</b> Objekte wohin du willst</p>
+		<code>transform:translateY(50px);</code>
+    </div>
+     <div id="ing" class="step step_3d" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
+        <p>Entdecke neue <span id="dim-3d">Dimensionen</span> für dich!</p>
+    </div>
+	
+	
+	
+    <div class="step slide step_props" data-x="1500" data-y="0" data-z="-3000" data-rotate="80">
+        <h1>So wird es gemacht</h1>
+		<h2>Animation Properties</h2>
+		<ul>
+			<li>animation-name</li>
+			<li>animation-duration</li>
+			<li>animation-timing-function <i>(linear | ease)</i></li>
+			<li>animation-delay</li>
+			<li>animation-iteration-count  <i>(n | infinite )</i></li>
+			<li>animation-direction <i>(normal | reverse | alternate)</i></li>
+			<li>animation-fill-mode</li>
+			<li>animation-play-stat <i>(paused | running)</i></li>
+		</ul>
+    </div>
+	<div class="step slide" data-x="3500" data-y="0" data-z="-3000">
+        <h1>So wird es gemacht</h1>
+		<h2>Keyframes</h2>
+		<ul>
+			<li>keyframe-name</li>
+			<li>from - to</li>
+			<li>0% - 100%</li>
+		</ul>
+		
+		<pre><code>
+		@keyframes mymove {
+    0%   {top: 0px; left: 0px; background: red;}
+    25%  {top: 0px; left: 100px; background: blue;}
+    50%  {top: 100px; left: 100px; background: yellow;}
+    75%  {top: 100px; left: 0px; background: green;}
+    100% {top: 0px; left: 0px; background: red;}
+}
+		</code></pre>
+    </div>
+	  
+    <div id="cssessentials5" class="step slide" data-x="3000" data-y="-18500" data-scale="10">
+        <q>
+        	<h1><b>Beispiel</b></h1>
+        	<br/>
+        	<p style="font-size:20px; line-height:1.2; float:left; margin-top:30px;">&lt;div id="keyframecontainer"><br/>
+        	&emsp;&lt;div id="frame">&lt;/div><br/>
+        	&lt;/div></p>
+        	<p style=" font-size: 18px; line-height:1.2; float:left; margin-left:180px; margin-top:-134px;">
+        		@keyframes quadrat {
+				<br/>&emsp;0% { top:0; left:0;}
+				<br/>&emsp;25% { top:0; left: 530px;}
+				<br/>&emsp;50% { top: 330px; left: 530px;}
+				<br/>&emsp;75% { top:330px; left:0;}
+				<br/>&emsp;100% { top:0; left: 0;}
+				<br/>}
+				<br/>#frame {
+				<br/>&emsp;background-color:black;
+				<br/>&emsp;width:50px;
+				<br/>&emsp;height:50px;
+				<br/>&emsp;position:relative;
+				<br/>&emsp;top:0;
+				<br/>&emsp;left:0;
+				<br/>&emsp;animation-name: quadrat;
+				<br/>&emsp;animation-duration: 4s;
+				<br/>&emsp;animation-iteration-count: infinite;
+				<br/>&emsp;animation-timing-function: linear;
+				<br/>}
+				<br/>#keyframecontainer {
+				<br/>&emsp;position:relative;
+				<br/>&emsp;width: 600px;
+				<br/>&emsp;height:400px;
+				<br/>}
+        	</p>
+        </q>
+    </div>
+	
+	<div id="cssessentials4" class="step slide" data-x="3000" data-y="-28500" data-scale="10">
+        <q>
+        	<h1><b>Keyframes Beispiel</b></h1>
+        	<div id="keyframecontainer"><div id="keyframesex"></div></div>
+        </q>
+    </div>
+<div class="step slide" data-x="4500" data-y="-1000" data-z="-3000">
+        <h1>JQuery vs. CSS3</h1>
+        <br>
+            
+        <li>CSS3 Animationen bestehen aus einem Stil, über den die Animation beschrieben wird, und einem Set von Keyframes</li>
+        <br>
+        <li>CSS Animationen Performanter, da vom Browser aus gesteuert wird</li>
+        <br>
+        <li>nicht jeder Browser unterstützt CSS3</li>
+        <br>
+        <li>Einzelne Animationen bei CSS3 nicht möglich - Bsp. rotation und scale unabhängig voneinander zu verschiedenen Zeiten</li>
+        
+
+        
+        
+    </div>
+	
+	<div class="step slide" data-x="5500" data-y="-1000" data-z="-3000">
+             
+        <h1>JQuery vs. CSS3</h1> 
+        <br>
+        
+        <li>JQuery muss eingebunden werden</li>
+        <br>
+        <li>Genauere Animationen sind mit JQuery einfacher umzusetzen</li>
+        <br>
+        <li>Bei CSS3 nur von Keyframe zu Keyframe anhaltbar</li>
+        <br>
+        <li>Bei JQuery kann man bei jeder Animationssequenz stoppen</li>
+        <br>
+        <li>CSS3 für einfache Animationen wie :hover oder mouseover animationen ideal</li>
+        <br>
+            <li>Mit Jquery sind einzelne Animationsschritte aufrufbar</li>
+        
+    </div>
+	
+	<div class="step slide" data-x="6500" data-y="-1000" data-z="-3000">
+       <h1>Also wann CSS3?</h1>
+        <br>
+        <h2>Zitat aus der Google-Developers Seite:</h2>
+        <br>
+        <li>CSS Animationen sollte man für simple "one-shot" transitions benutzen wie zum Beispiel für Menu Dropdowns bei UIs </li>
+        
+    </div>
+	
+    <div class="step slide" data-x="7500" data-y="-1000" data-z="-3000">
+       <h1>Und wann JavaScript?</h1>
+        <br>
+        <h2>Zitat aus der Google-Developers Seite:</h2>
+        <br>
+        <li>JavaScript Animationen sollte man für erweiterte animationen nutzen, wie zum Beispiel "bouncing", "stop", "pause", "rewind" oder "slow-down"</li>
+    </div>
+	
+	
+	
+	<div class="step slide" data-x="5500" data-y="0" data-z="-3000">
+        <h1>Aufgabe 1</h1>
+		<p>Öffne die index.html mit einem Internet Browser (am liebsten mit Chrome).</p>
+		<p>Du siehst eine statische Seite, ohne Bewegung, ohne Action! Deine Aufgabe: Bring die Party zum Rollen!!</p>
+		<ul style="list-style-type:numeric">
+			<li>Lass die Vinyl rotieren!</li>
+			<li>Bring den DJ zum Skrechten</li>
+			<li>Ist das alles kein Problem für dich - Versuch die DJ-Bewegung so natürlich wie möglich wirken zu lassen</li>
+		</ul>
+		<i>Öffne dazu die Aufgabe1.css und vervollständige sie</i>
+    </div>
+	<div class="step slide" data-x="7500" data-y="0" data-z="-3000">
+        <h1>Aufgabe 2</h1>
+		<p>Die Party kommt so langsam ins Rollen. Jetzt fehlt nur noch passend Licht zur Musik.</p>
+		<ul>
+			<li>Bringe die drei Farbigen Punkte in Bewegung - Lass sie in einem Bestimmten Radius kreisen. Denk dir Bewegungen aus!</li>
+			<li>Änder während der Bewegung zusätzlich die Farben der Lichter</li>
+		</ul>
+		<i>Zum Lösen der Aufgabe öffne und ergänze Aufgabe2.css. Nutze die Prozentangabe der Keyframes. Bewege die Lichter mit den Befehlen left:XXpx; top:XXpx;</i>
+    </div>
+	
+	
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+
+<script src="js/impress.js"></script>
+<script src="css/high/highlight.js"></script>
+<script>impress().init();</script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,30 @@
+@keyframes rotate{       
+    0%  {transform:rotate(10deg);}
+    100%{transform:rotate(2880deg);}
+    }
+
+@keyframes hand{
+    0%{transform: translate(0px);}
+    50%{transform: translate(60px);}
+    100%{transform: translate(20px);}   
+    
+}
+
+
+
+.hand{
+    animation-name:hand;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.platte{
+    animation-name:rotate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+
+);
+}
