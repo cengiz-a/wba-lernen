@@ -8,13 +8,14 @@
  	1. Geben Sie in der Funktion getJSON die verschiedenen States des AJAX Requests als Alert aus.
  	2. Geben Sie in der Funktion getJSON die verschiedenen States des AJAX Requests in der Konsole aus.
  	3. Geben Sie in der Funktion getJSON die verschiedenen States des AJAX Requests mit Erläuterung im DIV Container mit der ID "ajax-log" als Logfile aus, sprich: Addieren Sie die Einträge.
- 	4. Erzeugen Sie eine neue Funktion, die statt des JSONs die bereits gerenderten Dozenten einbindet. Dazu stehen folgende URLs bereit:
+ 	4. Geben Sie den Response Text in der Console aus.
+ 	5. Erzeugen Sie eine neue Funktion, die statt des JSONs die bereits gerenderten Dozenten einbindet. Dazu stehen folgende URLs bereit:
  		- https://raw.githubusercontent.com/th-koeln/wba1-2015/gh-pages/mi-onepager/ajax-demo/eisemann.html
  		- https://raw.githubusercontent.com/th-koeln/wba1-2015/gh-pages/mi-onepager/ajax-demo/noss.html
  		
  		Betten Sie die Dateien in ein figure Element ein und addieren Sie diese zur SECTION dozenten.
  		
- 	5. Erzeugen Sie einen Button in der SECTION dozenten, der das Laden der Dozenten JSON antriggert. Geben Sie dem User visuelles Feedback, dass ein Ladevorgang initiiert wurde.
+ 	6. Erzeugen Sie einen Button in der SECTION dozenten, der das Laden der Dozenten JSON antriggert. Geben Sie dem User visuelles Feedback, dass ein Ladevorgang initiiert wurde.
  	
 
 */
