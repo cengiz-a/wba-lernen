@@ -1,4 +1,4 @@
-###Web-basierte Anwendungen 1: WWW-Technologien
+﻿###Web-basierte Anwendungen 1: WWW-Technologien
 ####Wintersemester 2015/2016
 
 **[Im Wiki](https://github.com/fh-koeln/wba1-2015/wiki)** finden Sie alle relevanten Informationen,
