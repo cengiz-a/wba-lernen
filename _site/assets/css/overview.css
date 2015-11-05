@@ -1,0 +1,130 @@
+
+body {
+	font-size: 100%;
+	line-height: 130%;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+}
+
+/**
+ * typo
+ */
+
+h1,h2,h3{
+	color: #000;
+	font-weight: 300;
+}
+
+h1{
+	font-size: 2rem;
+	margin-bottom: 2.5rem;
+	line-height: 2rem;
+}
+
+h2{
+	font-size: 1.5rem;
+}
+
+/**
+ * colors
+ */
+.green{ 	color: #77cc00; }
+.blue{  	color: #4952e1; }
+.magenta{ color: #dd1166; }
+.purple{  color: #9313c3; }
+.black{  color: #231f20; }
+
+/**
+ * Links
+ */
+a {
+	color: #000;
+	text-decoration: none;
+	border-bottom: 1px dotted #d16;
+}
+
+a:visited {
+	color: #666;
+}
+
+a:hover,
+a:focus {
+	color: #75bf0d;
+}
+
+/**
+ * Header
+ */
+ 
+header{
+	background-color: #fff;
+
+}
+
+header div#fh-logo {
+	background: transparent url(../images/fh-logo.png) no-repeat;
+	height: 70px;
+	max-width: 354px;
+}
+
+header div#mi-box {
+	background: transparent url(../images/mi-box-100.png) no-repeat;
+	height: 100px;
+	width: 100px;
+	position: absolute;
+	right: 40px; top: 40px;
+}
+
+
+/**
+ * Content
+ */
+ 
+main, .wrap{
+	max-width: 700px;
+	margin: 0 auto 0;
+	padding: 40px;
+	position: relative;
+}
+
+#presentation-list {
+	padding: 0;
+}
+
+#presentation-list li {
+	padding: 0 0 10px 0;
+	list-style: none;
+}
+
+#presentation-list .presentation:before {
+	content: "\00BB \0020";
+}
+
+#presentation-list .date-section {
+	padding: 25px 0 15px 0;
+	font-size: 1.5rem;
+	border-top: solid 1px #aaa;
+}
+
+#presentation-list .date-section.first {
+	border-top: solid 1px #4952e1;
+}
+
+.error {
+	color: #f00
+}
+
+/**
+ * Footer
+ */
+footer {
+	color: #999;
+	border-top: 1px solid #4952e1;
+	margin-bottom: 30px;
+	padding: 5px 0;
+}
+
+footer a{
+	text-decoration: none;
+	border-bottom: none;
+}

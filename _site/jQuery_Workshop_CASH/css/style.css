@@ -1,0 +1,162 @@
+/* =miscellaneous */
+
+.container_24 {
+	margin-top: 10px;
+}
+
+blockquote {
+	position: relative;
+}
+
+blockquote, blockquote h6 {
+	font-size: 15px;
+	line-height: 20px;
+	font-style: italic;
+	color: #0e0e0e;
+}
+
+h1, h3 {
+	letter-spacing: -1px;
+}
+
+h3 {
+	font-size: 26px;
+	text-transform: lowercase;
+	border-bottom: 1px solid #d1d1d1;
+	padding-bottom: 20px;
+	margin-bottom: 15px;
+	line-height: 1em;
+}
+
+.p1 {
+	background: black;
+	color: white;
+}
+
+p, h6 {
+	font-size: 13px;
+	line-height: 20px;
+	color: #353535;
+}
+
+a {
+	color: #7e7e7e;
+	text-decoration: none;
+}
+
+a:hover, .selected {
+	color: black;
+}
+
+li {
+	margin-left: 24px;
+}
+
+.button {
+	background: #242324;
+	padding: 6px;
+}
+
+.button:hover {
+	color: white;
+}
+
+/* =Header */
+
+header h1 {
+	text-indent: -9999px;
+	margin: 10px 10px 22px;
+	float: left;
+	margin-bottom:  0;
+}
+
+header h1 a {
+	background: url(../img/logo.png) no-repeat;
+	width: 174px;
+	height: 23px;
+	float: left;
+}
+
+header {
+	overflow: hidden;
+}
+
+nav {
+	float: right;
+	padding-top: 20px;
+}
+
+nav a {
+	text-transform: lowercase;
+}
+
+nav li{
+	display: inline;
+}
+
+/* Banner */
+
+.banner {
+	background: url(../img/city-bg.jpg) no-repeat;
+	width: 695px;
+	height: 231px;
+	clear: both;
+	position: relative;
+}
+
+.callout {
+	background: #303030;
+	height: 231px;
+	position: relative;
+}
+
+.banner h2 {
+	color: white;
+	font-size:  28px;
+	width: 400px;
+	font-weight: normal;
+	position: absolute;
+	bottom: -10px;
+	padding: 0 8px;
+	left: 8px;
+	background: rgba(0,0,0, .5);
+}
+
+/* =main */
+
+.main {
+	margin-top: 20px;
+}
+
+.main blockquote h6 {
+	padding-left: 30px;
+	font-weight: normal;
+}
+
+.main blockquote h6:before,
+.main blockquote h6:after {
+	font-size: 40px;
+	color: #bfbfbf;
+}
+
+.main blockquote h6:first-child:before {
+	content: '“';
+	position: absolute;
+	top: 7px;
+	left: 4px;
+}
+
+.main blockquote h6:last-child:after {
+	content: '”';
+	position: absolute;
+	bottom: -7px;
+	right: -9px;
+}
+
+/* =footer */
+
+footer {
+	clear: both;
+	border-top: 1px solid #d1d1d1;
+	padding-top: 18px;
+}

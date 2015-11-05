@@ -1,0 +1,103 @@
+{
+  "presentations": {
+    "intro-cn/index.html": {
+      "title": "WBA1 Intro",
+      "authors": [
+        "Christian Noss"
+      ],
+      "date": "2015-10-08"
+    },
+    "wie-geht-wba1": {
+      "title": "Wie funktioniert WBA1?",
+      "authors": [
+        "Christian Noss"
+      ],
+      "date": "2015-10-08"
+    },
+    "opening-keynote": {
+      "title": "WBA1 Opening",
+      "authors": [
+        "Christian Noss, Jan Kus"
+      ],
+      "date": "2015-10-08"
+    },
+    "git-basics": {
+      "title": "GIT Basics",
+      "authors": [
+        "Jan Kus"
+      ],
+      "date": "2015-10-08"
+    },
+    "git-basics-hands-on": {
+      "title": "GIT Basics Hands On",
+      "authors": [
+        "Jan Kus"
+      ],
+      "date": "2015-10-08"
+    },
+    "web-basics": {
+      "title": "Web Basics // Grundlagen der Web Technologien",
+      "authors": [
+        "Christian Noss"
+      ],
+      "date": "2015-10-15"
+    },
+    "git-advanced": {
+      "title": "Arbeiten mit GIT, Teil 2",
+      "authors": [
+        "Jan Kus"
+      ],
+      "date": "2015-10-15"
+    },
+    "html-basics": {
+      "title": "HTML Basics",
+      "authors": [
+        "Volker Schaefer"
+      ],
+      "date": "2015-10-15"
+    },
+    "css-teil-1": {
+      "title": "CSS Basics",
+      "authors": [
+        "Christian Noss"
+      ],
+      "date": "2015-10-22"
+    },
+    "css-teil-2": {
+      "title": "CSS Advanced",
+      "authors": [
+        "Christian Noss"
+      ],
+      "date": "2015-10-22"
+    },
+    "javascript-basics": {
+      "title": "Javascript Basics",
+      "authors": [
+        "Jan Kus"
+      ],
+      "date": "2015-10-29"
+    },
+    "javascript-advanced": {
+      "title": "Javascript Advanced",
+      "authors": [
+        "Jan Kus"
+      ],
+      "date": "2015-10-29"
+    },
+    "revealjs-basics": {
+      "title": "reveal.js Basics",
+      "authors": [
+        "Marvin Klimm, Güray Kilic"
+      ],
+      "date": "2015-10-29"
+    }
+    ,
+    "ajax-workshop": {
+      "title": "AJAX Workshop",
+      "authors": [
+        "verschiedene Autoren"
+      ],
+      "date": "2015-11-05"
+    }
+  }
+}

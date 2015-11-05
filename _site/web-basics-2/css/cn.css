@@ -1,0 +1,16 @@
+#cn h1 {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 100%;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  color: #BFB7AA;
+}
+#cn .pink {
+  color: #dd1166;
+}
+
+
+body{
+	background: #000000 !important;
+}
