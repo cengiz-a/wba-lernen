@@ -46,6 +46,8 @@ AUFGABE 4: MIXINS & FUNKTIONEN
     #Reset
 \*------------------------------------*/
 
+@import "colours.scss";
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -132,7 +134,7 @@ a{
 }
 
 a:hover{
-    color: #fff;
+    color: $fff-color;
     text-decoration: none;
     border-bottom: dotted 1px #4952e1;
     background-color: #4952e1;
@@ -155,7 +157,7 @@ body > header, body > main, body > footer{
 	margin: 0 auto 20px;
 	padding: 20px;
 	position: relative;
-	background-color: #fff;
+	background-color: $fff-color;
 }
 
 section, table{
@@ -163,7 +165,7 @@ section, table{
 }
 
 section:not(:first-child){
-	border-top: solid 1px #dd1166;
+	border-top: solid 1px $mi-magenta;
 	padding-top: 2rem;
 }
 
@@ -200,7 +202,7 @@ body > header h1{
 }
 
 #nav > li + li{
-	border-top: solid 1px #dd1166;
+	border-top: solid 1px $mi-magenta;
 	padding-top: 0.5rem;
 }
 
@@ -213,7 +215,7 @@ body > header h1{
 }
 
 #nav > li a:hover{
-	color: #dd1166;
+	color: $mi-magenta;
 	background-color: inherit;
 }
 
@@ -224,7 +226,7 @@ body > header h1{
 
 blockquote{
 	background: #4952e1;
-	color: #fff;
+	color: $fff-color;
 	padding: 20px;
 	margin-bottom: 1rem;
 }
@@ -243,26 +245,26 @@ blockquote footer{
     #Articles
 \*------------------------------------*/
 
-article h1{
-	font-size: 1.2rem;
-	font-weight: 600;
-	margin-bottom: 1rem;
+article {
+    h1{
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+    figure{
+        img{
+	           width: 100%;
+	           height: auto;
+            &nth-child(n+2){
+	           display: none;
+            }
+        }
+        
+        figcaption{
+	       margin-bottom: 1rem;
+ s       }   
+    } 
 }
-
-article figure img{
-	width: 100%;
-	height: auto;
-}
-
-article figure img:nth-child(n+2){
-	display: none;
-}
-
-article figure figcaption{
-	margin-bottom: 1rem;
-}
-
-
 /*------------------------------------*\
     #Tables
 \*------------------------------------*/
@@ -325,9 +327,9 @@ fieldset + fieldset{
 }
 
 input[type=submit], input[type=reset]{
-	background-color: #fff;
-	border: 1px solid #dd1166;
-	color: #dd1166;
+	background-color: $fff-color;
+	border: 1px solid $mi-magenta;
+	color: $mi-magenta;
 	cursor: pointer;
 	font-size: 1rem;
 	padding: 0.5rem;
@@ -335,13 +337,13 @@ input[type=submit], input[type=reset]{
 }
 
 input[type=submit]:hover, input[type=reset]:hover{
-	background-color: #dd1166;
-	border: 1px solid #dd1166;
-	color: #fff;
+	background-color: $mi-magenta;
+	border: 1px solid $mi-magenta;
+	color: $fff-color;
 }
 
 input[type=reset]{
-	background-color: #fff;
+	background-color: $fff-color;
 	border: 1px solid #ccc;
 	color: #ccc;
 }
@@ -349,7 +351,7 @@ input[type=reset]{
 input[type=reset]:hover{
 	background-color: #ccc;
 	border: 1px solid #ccc;
-	color: #fff;
+	color: $fff-color;
 }
 
 /*------------------------------------*\
@@ -416,7 +418,7 @@ hr{
 }
 
 .error{
-	color: #dd1166;
+	color: $mi-magenta;
 }
 
 
