@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 
 	<!-- Title of presentation -->
-	<title>Vortrag - CSS Basics</title>
+	<title>Workshop - AJAX</title>
 	<!-- Short description of presentation -->
 	<meta name="description" content="Vortrag - Web-basics">
 	<!-- Author of presentation -->
@@ -591,7 +591,26 @@ So entsteht eine hohe Auslastung des Servers</li>
 </ul>
 </section>
 
-            
+
+<section>
+<h2>Nutzung eines Frameworks, z.B: jQuery</h2>
+
+<pre>
+	<code>
+var jqxhr = $.ajax( "example.php" )
+  .done(function() {
+    alert( "success" );
+  })
+  .fail(function() {
+    alert( "error" );
+  })
+  .always(function() {
+    alert( "complete" );
+  });
+	</code>
+</pre>
+
+</section>            
 			</div>
 
 	</div>
