@@ -16,9 +16,38 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 <html>
 
 <head>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script> 
-        /*  
+       
+        $(document).ready(function(){
+            $("h3").hover(function(){
+                $("p").slideToggle();
+            });
+    
+            $("h1").click(function(){
+                $("nav, .banner, .callout").slideToggle();
+            });
+            
+            $("blockquote").click(function(){
+                &("blockquote").toggle(function(){
+                    $("this").text("So wird der Inhalt geändert! Einfach in dem man                                                drauf klickt!");},
+                       function(){                
+                    $("this").text("Clean, elegant typograph matched with sharp lines and precise                                      spacing leads to a professional look and feel.");
+                    
+                }
+                    
+            });
+            $(".button").click(function(){
+                $("body, h6, p").toggleClass("p1");
+            });  
+            
+            
+        });
+        
+        
+        
+        
+        /*  
 		Hier gehören die verschiedenen jQuery-Funktionen hin.
     
         TODO:
@@ -36,6 +65,10 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		Button dem <body>, <h6> und <p> die Klasse <p1> vergibt.
 
 		*/
+        
+        
+        
+        
 
     </script> 
 	
