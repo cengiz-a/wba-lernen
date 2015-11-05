@@ -110,15 +110,18 @@ function error_output ( err_msg ) {
  * @param {object} info - Schlüssel-Werte-Paar wird zu dt-dd-Paar
  * @returns {DOMElement} Aus 'info'-Objekt konstruiertes 'dl'-Element
  */
+
 function construct_dl( info ) {
-    /* Definition List */
+    /* Definition List *
     /*
      * ## BASIC-TODO:
      *  Ein 'dl'-Element erzeugen
      * ##
      */
     var dl_element = document.createElement("DL");
-
+    dl_element.style.visibility = "hidden";
+    dl_element.style.display = "none";
+    var dl_elementChildren = dl_element.childNodes;
     /* Durch alle Informationseinträge traversieren */
     for( var key in info ) {
         var value = info[ key ];
@@ -137,6 +140,10 @@ function construct_dl( info ) {
     return dl_element;
 }
 
+function hoverFunk(evt){
+    document.getElementById(evt).style.visibility = "visible";
+    document.getElementById(evt).style.display="inline";
+}
 
 
 /*
