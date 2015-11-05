@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="de">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Workshop - Onlinepräsentation mit reveal.js</title>
+
+		<meta name="description" content="Onlinepräsentation. Wie funktioniert das mir reveal.js?">
+		<meta name="author" content="Marvin Klimm und Güray Kilic">
+        
+        
+        <!--Hier muss reveal.min.css aus dem Verzeichnis revealjs-framework/css/ rein-->
+        <link rel="stylesheet" href="">
+        
+        <!--Hier muss medieninformatik.css aus dem Verzeichnis revealjs-framework/css/theme-->
+		<link rel="stylesheet" href="" id="theme">
+	</head>
+
+	<body>
+        
+        <!--Hier fängt unsere Präsentation an-->
+            <!--Hier fängt unser Folienstapel an-->
+                <!--1.Folie-->
+                <!--ENDE_1. Folie-->
+                    <h2 class="u">Folie 1: Horizontal</h2>
+                <!--2.Folie-->
+                    <h2 class="u">Folie 2: Horizontal</h2>
+                <!--ENDE_2.Folie-->
+                
+                <!--Foliereihe-->
+                    <!--Hier 3. vertikale Folien einbauen-->
+                        <h2 class="u">Folie 3: Vertikal</h2>
+                    <!-- ENDE_3. Folie-->
+                    
+                    <!--Hier 4. vertikale Folie einbauen-->
+                        <h2 class="u">Folie 4: Vertikal</h2>
+                    <!-- ENDE_4. Folie-->
+                <!--ENDE_Folienreihe-->
+            <!--ENDE Folienstapel-->
+        <!--ENDE Präsentation-->
+
+        
+        
+        
+        <!--Hier muss head.min.js aus dem Verzeichnis revealjs-framework/lib/js-->
+        <script src=""></script>
+        
+        <!--Hier muss reveal.min.js aus dem Verzeichnis revealjs-framework/js-->
+        <script src=""></script>
+
+        <script>
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                transition: 'convex', // none/fade/slide/convex/concave/zoom
+            });
+        </script>
+
+	</body>
+</html>
