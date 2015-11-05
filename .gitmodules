@@ -1,0 +1,4 @@
+[submodule "dist"]
+	path = dist
+	url = git@github.com:th-koeln/wba1-2015.git
+	branch = gh-pages
