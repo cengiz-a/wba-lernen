@@ -1,13 +1,61 @@
 .light1{
-
+	animation-name: light1Animation;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
 }
 .light2{
-
+	animation-name: light2Animation;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
 }
 
 .light3{
-
+	animation-name: light3Animation;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
 }
 .light4{
+	animation-name: light4Animation;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
 
+@keyframes light1Animation {
+	0% {top: 0px; left: 0px;}
+	20% {top: 100px; left: 50px;}
+	40% {top: 300px; left: 10px; background-color: #dd22f1;}
+	60% {top: 400px; left: 100px;}
+	80% {top: 600px; left: 300px;}
+	100%{top: 0px; left: 0px;}
+}
+
+@keyframes light2Animation {
+	0% {top: 0px; left: 0px;}
+	20% {top: 300px; left: 10px;}
+	40% {top: 100px; left: 50px; background-color: #2dff31;}
+	60% {top: 600px; left: 300px;}
+	80% {top: 400px; left: 100px;}
+	100%{top: 0px; left: 0px;}
+}
+
+@keyframes light3Animation {
+	0% {top: 0px; left: 0px;}
+	20% {top: 100px; left: -200px;}
+	40% {top: 300px; left: -10px; background-color: #fff;}
+	60% {top: 400px; left: -100px;}
+	80% {top: 600px; left: -300px;}
+	100%{top: 0px; left: 0px;}
+}
+
+@keyframes light4Animation {
+	0% {top: 0px; left: 0px;}
+	20% {top: 100px; left: -500px;}
+	40% {top: 600px; left: -100px; background-color: #7362df;}
+	60% {top: 200px; left: -400px;}
+	80% {top: 700px; left: -600px;}
+	100%{top: 0px; left: 0px;}
 }
