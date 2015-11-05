@@ -1,0 +1,39 @@
+@keyframes lights{
+    0%{left:50px; bot:500px;background: #dd1166}
+    25%{left:500px;top:0px;background: #123456}
+    50%{left:200px;top:50px;background: aqua}
+    75%{left:400px;top:0px;background: #77cc22}
+    100%{left:50px; top:30px;background:white}
+}
+.light1{
+    animation-name: lights;
+    animation-duration: 0.05s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-play-state: running;
+}
+.light2{
+    
+    animation-name: lights;
+    animation-duration: 0.05s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-play-state: running;
+}
+
+.light3{
+    
+    animation-name: lights;
+    animation-duration: 0.05s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-play-state: running;
+}
+.light4{
+    
+    animation-name: lights;
+    animation-duration: 0.05s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-play-state: running;
+}
