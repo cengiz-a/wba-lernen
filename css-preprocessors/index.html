@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="de">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Workshop - CSS Präprozessoren</title>
+
+		<meta name="description" content="CSS Präprozessoren: SASS">
+		<meta name="author" content="Elisha Witte und Fabian Fuchs">
+
+
+        <link rel="stylesheet" href="../revealjs-framework/css/reveal.min.css">
+				<link rel="stylesheet" href="../revealjs-framework/lib/css/zenburn.css">
+
+		<link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme">
+	</head>
+
+	<body>
+
+								<div class="reveal">
+									<div class="slides">
+										<section>
+											<h1>Webbasierte Anwendung Teil 1</h1>
+											<h2 class="u">CSS Präprozessoren</h2>
+											<p>05.November 2015 <p>
+											<p>Studiengang Medieninformatik an der Technischen Hochschule Köln<br />
+											Campus Gummersbach</p>
+											<p style="margin-top: 10%"> Elisha Witte und Fabian Fuchs</p>
+										</section>
+
+										<section>
+
+												<h2 class= "u">Was ist ein Präprozessor?</h2>
+												<ul>
+												<p>Eine Skriptsprache mit eigener Syntax</p>
+												<p>Generiert gültigen CSS code</p>
+												</ul>
+
+											</section>
+
+											<section>
+
+											<h2 class= "u">Vorteile</h2>
+											<ul>
+												<li class="fragment" data-fragment-index="0">Bessere Strukturierung des CSS Codes</li>
+												<li class="fragment" data-fragment-index="1">Erweitert CSS</li>
+												<li class="fragment" data-fragment-index="2">Mehrere Dateien zu einer CSS Datei zusammenfügen</li>
+												<li class="fragment" data-fragment-index="3">Spart Zeit/Erhöhte Wartbarkeit </li>
+												<li class="fragment" data-fragment-index="4">Dynamische Berechnungen</li>
+
+											</ul>
+										</section>
+
+										<section>
+											<h2 class= "u">Nachteile</h2>
+											<ul>
+												<li class="fragment" data-fragment-index="0">Kein Allheilmittel</li>
+												<li class="fragment" data-fragment-index="2">Syntax von jedem Präprozessor unterschiedlich</li>
+												<li class="fragment" data-fragment-index="3">Alle im Team müssen den Präprozessor benutzen</li>
+											</ul>
+
+										</section>
+
+										<section>
+											<h2 class= "u">Welche Präprozessoren gibt es?</h2>
+											<ul>
+												<li class="fragment" data-fragment-index="0">Sass (Ruby)</li>
+												<li class="fragment" data-fragment-index="1">Less.js (Javascript)</li>
+													<li class="fragment" data-fragment-index="2">Stylus</li>
+												<li class="fragment" data-fragment-index="3">Serverseitig (Less Plug-in, CSS-Crush(PHP))</li>
+											</ul>
+										</section>
+
+										<section>
+											<h1 class ="u"> Sass</h1>
+											<p>Syntactically Awesome Stylesheets</p>
+												<ul>
+													<li class="fragment" data-fragment-index="0">Gehört zu den meistgenutzen Präprozessoren</li>
+													<li class="fragment" data-fragment-index="1">Erweiterbar durch Frameworks (z.B. Compass)</li>
+												</ul>
+												<img src="Sass.png" />
+										</section>
+
+										<section>
+											<h2 class = "u">SCSS vs SASS</h2>
+											<div style= "display: inline-block" >
+												<figure style= "display: inline-block">
+													<img src="scss_syntax.png" />
+													<figcaption>SCSS Syntax</figcaption>
+												</figure>
+
+												<figure style= "display: inline-block; vertical-align: top">
+													<img src="sass_syntax.png" style= "vertical-align:top"  />
+													<figcaption>SASS Syntax</figcaption>
+											</figure>
+											</div>
+
+										</section>
+
+										<section>
+											<h1>Installation: Windows</h1>
+											<ol>
+												<p>1. Ruby herunterladen unter: <a href ="http://rubyinstaller.org/">rubyinstaller.org</a></p>
+												<img src="Ruby_Install.png"</li>
+											</ol>
+										</section>
+
+										<section>
+											<h1> Installation: Windows</h1>
+											<p>2. CMD Öffnen</p>
+											<pre><code>gem install sass</code></pre>
+											<p>3. Kontrolle </p>
+											<pre><code>sass -v
+
+Sass 3.4.19 (Selective Steve)</code></pre>
+										</section>
+
+										<section>
+											<h1> Installation: Mac</h1>
+											<p>Ruby bei Mac's vorinstalliert</p>
+											<pre><code>sudo gem install sass</code></pre>
+										</section>
+
+										<section>
+											<h1> Installation: Linux</h1>
+										<pre><code>sudo apt-get install ruby</code></pre>
+										<pre><code>sudo gem install sass</code></pre>
+
+									</section>
+										<section>
+											<h2 class ="u">SASS-Befehle</h2>
+<pre class="fragment" data-fragment-index="0"><code>sass input.scss:output.css </code></pre>
+<pre class="fragment" data-fragment-index="1"><code>sass inputDirectory:OutputDirectory</code></pre>
+<pre class="fragment" data-fragment-index="2"><code>sass inputDirectory:output.css</code></pre>
+<pre class="fragment" data-fragment-index="3"><code>sass --watch input:output</code></pre>
+<pre class="fragment" data-fragment-index="4"><code>sass input:output --style compressed</code></pre>
+										</section>
+
+										<section  data-background-color="#dd1166" class="_center invers">
+											<h1>Aufgabe 1</h1>
+											<h2>Installation und Einrichtung von SASS</h2>
+											<ul>
+												<li>Installieren Sie Ruby</li>
+												<li>Installieren Sie SASS mit <em>gem install sass</em></li>
+												<li>Richten Sie einen Projektordner ein, und überwachen Sie diesen mit Sass (--watch)</li>
+												<li>Erstellen Sie eine Beispieldatei aufgabe1.scss mit Inhalt
+												<pre>$color: #000;
+body {background-color: $color;}
+												</pre>
+												um zu überprüfen ob SASS korrekt eingerichtet ist.</li>
+												<p style="font-size: 0.8em;">Mögliche Optionen: --style nested/expanded/compact/compressed</p>
+												<p style="font-size: 0.8em;">Hinweis für Win8/10 64Bit User: eventuell funktioniert <em>--watch</em> nicht mit der aktuellen SASS-Version. Mit <em>gem uninstall sass</em> können Sie SASS deinstallieren, und dann mit <em>gem install sass -v 3.4.0</em> eine ältere Version installieren. Dann sollte es keine Probleme mehr geben.</p>
+											</ul>
+										</section>
+
+										<section  data-background-color="#dd1166" class="_center invers">
+											<h1>SASS Grundlagen</h1>
+										</section>
+
+										<section>
+											<h2 class="u">Variablen</h1>
+											<p>Sass ermöglicht es, globale und lokale Variablen zu definieren. Variablen werden mit einem $-Zeichen deklariert</p>
+											<ul>
+												<li class="fragment" data-fragment-index="0">Erhöhte Wartbarkeit</li>
+												<li class="fragment" data-fragment-index="2">Werte nur an einer Stelle ändern</li>
+											</ul>
+										</section>
+
+										<section>
+											<pre>
+												<code>$primaryColor: #DD1166;
+h1 {
+	color: $primaryColor;
+}</code>
+											</pre>
+											<p>Wird kompiliert zu:</p>
+											<pre class="fragment" data-fragment-index="1">
+												<code>h1 {
+	color: #DD1166;</code>
+											</pre>
+										</section>
+
+										<section>
+											<p>Innerhalb von Selektoren können lokale Variablen definiert werden:</p>
+											<pre>
+												<code>$primaryColor: #DD1166;
+h1 {
+	$primaryColor: #4952E1; // Lokale Variable
+	color: $primaryColor;
+}
+p {
+	color: $primaryColor;
+}</code>
+												</pre>
+												<p>Wird kompiliert zu:</p>
+												<pre class="fragment" data-fragment-index="1">
+													<code>h1 {
+		color: #4952E1;
+	}
+	p {
+		color: #DD1166;
+	}</code>
+												</pre>
+										</section>
+
+										<section>
+											<h2 class="u">Semantische Variablennamen</h2>
+											<p>Es empfiehlt sich, semantische Variablennamen zu wählen.</p>
+											<p style="font-size: 0.8em; font-style:italic;">$color-shadow &nbsp; &nbsp; $color-primary &nbsp; &nbsp; $color-accent &nbsp; &nbsp; $color-background &nbsp; &nbsp; $color-background-shade &nbsp; &nbsp; $color-background-invert &nbsp; &nbsp; $color-text &nbsp; &nbsp; $color-text-weak &nbsp; &nbsp; $color-text-strong		 &nbsp; &nbsp; $color-text-heading</p>
+											<p class="fragment" data-fragment-index="1">Man sollte von der allgemeinsten Eigenschaft auf die spezifischste gehen:</p>
+											<p style="font-size: 0.8em; font-style: italic;" class="fragment" data-fragment-index="1">$color-link<br/>$color-link-dark;<br />$color-link-light;<br /></p>
+										</section>
+
+										<section>
+											<h2 class="u">Projektstrukturierung</h2>
+											<p>Mit Sass können wir unser Projekt in verschiedene .SCSS Dateien aufteilen, die dann später zu einer .CSS Datei zusammengefügt werden. Dies erhöht gerade bei größeren Projekten die Wartbarkeit und ermöglicht einen leichteren Überblick über unser Projekt.</p>
+											<p class="fragment" data-fragment-index="1">Mit klassischem CSS müssten wir separate .CSS Dateien erstellen und hochladen, und für jede dieser Datein müsste der Browser eine Anfrage abschicken, worunter die Effizienz der Seite erheblich leidet.</p>
+										</section>
+
+										<section>
+											<p>Mit Sass können wir beispielsweise folgende Projektstruktur einrichten:</p>
+											<pre>css/
+|
+|-- base/
+|   |-- _reset.scss
+|   |-- _variables.scss
+|   |-- _functions.scss
+|   |-- _mixins.scss
+|-- layout/
+|   |-- _grid.scss
+|-- vendor/
+|   |-- _bootstrap.scss
+|   |-- _jquery-ui.scss|
+`-- main.scss            # primary Sass file
+											</pre>
+										</section>
+
+										<section>
+											<p>Sass Dateien mit dem Unterstrich-Präfix (_), werden nicht in eigene .CSS Dateien kompiliert, sondern weden lediglich in eine andere Datei mit @import eingebunden (dort muss dann nichtmal der Unterstrich angeben werden). Der Anfang unserer main.scss Datei könnte dann so aussehen:</p>
+											<pre>
+												<code>// Modules and Variables
+@import "base/reset";
+@import "base/variables”;
+@import "base/functions";
+@import "base/mixins";
+// Layout
+@import "layout/grid";
+@import "layout/typography";
+// Third-party
+@import "vendor/bootstrap";
+@import "vendor/jquery-ui";</code>
+											</pre>
+										</section>
+
+										<section  data-background-color="#dd1166" class="_center invers">
+											<h1>Aufgabe 2</h1>
+											<h2>Variablen &amp; Projektstruktur</h2>
+											<ul>
+												<li>Kopieren Sie die Inhalte aus dem Ordner 'css-preprocessors-training' (github) in Ihren Projektordner</li>
+												<li>Öffnen Sie mi-basis.scss</li>
+												<li>Dort finden Sie die Aufgabenstellung zu Aufgabe 2</li>
+											</ul>
+										</section>
+
+										<section>
+											<h2 class="u">Nesting</h2>
+											<p>In Sass können wir ähnlich wie in HTML Selektoren verschachteln:</p>
+											<pre>
+												<code>.container {
+	width: 90%;
+	p {
+		color: #DD1166;
+	}
+}
+</code>
+											</pre>
+											<p>Wird kompiliert zu:</p>
+											<pre class="fragment" data-fragment-index="1">
+												<code>.container { width: 90%; }
+.container p { color: #DD1166; }
+</code>
+											</pre>
+										</section>
+
+										<section>
+											<p>Wir können auch direkt mehrere Elemente ansprechen:</p>
+											<pre>
+												<code>.container {
+	background: #fff;
+	p, h2 {
+		color: #fff
+		background: #000;
+	}
+}</code>
+											</pre>
+											<p>Wird kompiliert zu:</p>
+											<pre class="fragment" data-fragment-index="1">
+												<code>.container { background: #fff; }
+.container p, .container h2 {
+ 	color: #fff;
+	background: #000; }
+</code>
+											</pre>
+										</section>
+
+										<section>
+											<p>Mit dem ‘&amp;’-Zeichen können wir außerdem das Parent-Element ansprechen. Beispielsweise:</p>
+											<pre>
+												<code>a {
+	color: blue;
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
+	&:visited {
+		color: purple;
+	}
+ }</code>
+											</pre>
+											<p>Wird kompiliert zu:</p>
+											<pre class="fragment" data-fragment-index="1">
+												<code>a {
+	color: blue;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a:visited {
+	color: purple;
+}
+</code>
+											</pre>
+										</section>
+
+										<section>
+											<h2 class="u">Vererbung &amp; Placeholder</h2>
+											<p>Wir haben bereits einen Typ der Vererbung in Sass kennen gelernt: das Nesting. Mit @extend können wir außerdem Styles von anderen Selektoren erben:</p>
+											<pre>
+												<code>.icon {
+	transition: background-color: ease .2s;
+	background-color: red;
+	&:hover {
+	background-color: blue;
+	}
+}
+
+.error-icon {
+	@extend .icon;
+	/* error specific styles */
+}
+
+.info-icon {
+	@extend .icon;
+	/* info specific styles */
+}
+</code>
+											</pre>
+										</section>
+
+										<section>
+											<p>Wird kompiliert zu:</p>
+											<pre>
+												<code>.icon, .error-icon, .info-icon {
+	transition: background-color ease .2s;
+	background-color: red; }
+.icon:hover, .error-icon:hover, .info-icon:hover {
+	background-color: blue; }
+
+.error-icon {
+	/* error specific styles */ }
+
+.info-icon {
+	/* info specific styles */ }</code>
+											</pre>
+										</section>
+
+										<section>
+											<p>Was ist aber, wenn wir in unserem Code kein Element der Klasse .icon verwenden, sondern dieses nur erweitern möchten?</p>
+											<p><strong>Placeholder</strong> definieren Styles die vererbt werden können, werden selber allerdings nicht zu CSS kompiliert.</p>
+											<pre>
+												<code>%icon {
+	transition: background-color ease .2s;
+	background-color: red;
+	&:hover {
+	background-color: blue;
+	}
+}
+
+.error-icon {
+	@extend %icon;
+	/* error specific styles */
+}
+
+.info-icon {
+	@extend %icon;
+	/* info specific styles */
+}</code>
+											</pre>
+										</section>
+
+										<section>
+											<p>Wird kompiliert zu:</p>
+											<pre>
+												<code>.error-icon, .info-icon {
+  transition: background-color ease .2s;
+  background-color: red; }
+.error-icon:hover, .info-icon:hover {
+    background-color: blue; }
+
+.error-icon {
+  /* error specific styles */ }
+
+.info-icon {
+  /* info specific styles */ }</code>
+											</pre>
+										</section>
+
+										<section  data-background-color="#dd1166" class="_center invers">
+											<h1>Aufgabe 3</h1>
+											<h2>Nesting</h2>
+											<ul>
+												<li>Im Abschnitt #Articles (Z. 242) von mi-basis.scss, schreiben Sie den Code um, indem Sie Nesting benutzen.</li>
+												<li>Tipp: mit dem '&amp;'-Zeichen kann das Parent-Element angesprochen werden.</li>
+											</ul>
+										</section>
+
+										<section>
+											<h2 class="u">Math und Control Directives</h2>
+											<p>Ein sehr nützliches Feature von SASS ist, dass es mathematische Operationen unterstüzt.</p>
+											<p>Unterstütze Operatoren sind: Addition (+), Subtraktion (-), Division (/), Multiplikation (*), Modulo (%), Gleichheit (==), Ungleichheit (!=).</p>
+											<pre>
+												<code>font-size: 24px/2; // 12px
+width: 3*2em; // 6em
+</code>
+											</pre>
+											<p>Achtung: es können nicht Operationen zwischen verschiedenen Einheiten durchgeführt werden!</p>
+											<pre>
+												<code>$container-width: 100% - 20px; // Produziert Fehler!</code>
+											</pre>
+										</section>
+
+										<section>
+											<h2>Nützlicher Tipp</h2>
+											<p>Bei einer Division zwischen zwei Werten der selben Einheit, kürzen sich diese weg:</p>
+											<pre>
+												<code>$zahl: 24px/12px; // Ergebnis ist '2', nicht '2px'
+$font-size: $zahl*1em; // Ergebnis ist '2em'</code>
+											</pre>
+										</section>
+
+										<section>
+											<h2>Control Directives</h2>
+											<p>SASS unterstützt außerdem komplexere Aufrufe mit Schleifen die man aus der klassischen Programmierung kennt: @if, @for, @each, @while</p>
+											<pre>
+												<code>p {
+@if 1 + 1 == 2 { border: 1px solid;  }
+}
+
+@for $i from 1 through 3 {
+  // Do something }</code>
+											</pre>
+											<p>Mehr Informationen: <a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#control_directives__expressions">SASS Dokumentation</a></p>
+										</section>
+
+										<section>
+											<h2 class="u">Mixins</h2>
+											<p>Mixins ermöglichen ähnlich wie Placeholder das Definieren von Vorlagen, die später im Code einfach eingebunden werden können.</p>
+											<p>Der große Unterschied: wir können Mixins Variablen als Parameter übergeben, und abhängig von diesen Variablen unterschiedliche Muster erstellen.</p>
+											<p>Sinnvoll für z.B. neue CSS3 Techniken die noch Vendor-Prefixes benötigen.</p>
+											<p>Compass bietet eine sehr umfangreiche Bibliothek von  vorgefertigten Mixins an.</p>
+										</section>
+
+										<section>
+											<pre>
+												<code>@mixin vgradient ($colors...) {
+background: nth($colors, 1);
+background: -webkit-linear-gradient($colors);
+background: -o-linear-gradient($colors);
+background: -moz-linear-gradient($colors);
+background: linear-gradient($colors);
+}</code>
+											</pre>
+											<p>$colors wird als Parameter dem Mixin übergeben, beispielweise mit @include vgradient(#fff, #000);</p>
+											<p>Wir schreiben $colors... um SASS darauf hinzuweisen dass wir eine Liste mit beliebig vielen Werten übergeben können.</p>
+										</section>
+
+
+
+										<section>
+											<h2 class="u">Funktionen</h2>
+											<p>Zu guter Letzt bietet SASS auch die Möglichkeit ganze Funktionen festzulegen, die zur Compilierzeit ausgeführt werden. Funktionen produzieren nicht wie Placeholder oder Mixins ein Stück Code das an anderer Stelle eingefügt wird, sondern führen bestimmte Berechnungen durch und liefern das Ergebnis mit @return. Dieses kann dann beispielsweise in Mixins oder auch direkt im Code verwendet werden.</p>
+											<pre>
+												<code>@function my-calculation-function($some-number, $another-number){
+  @return $some-number + $another-number
+}</code>
+											</pre>
+										</section>
+
+										<section>
+											<p>SASS bietet eine ganze Reihe an nützlichen <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html">vorgefertigten Funktionen</a> an, so können wir z.B. mit darken($color, $amount) ganz leicht einen abgedunkelten Farbcode berechnen. Also beispielsweise:</p>
+											<pre>
+												<code>$color-font: #DD1166;
+
+a {
+	color: $color-font;
+	&:hover {
+		color: darken($color-font, 30%);
+	}
+}
+												}</code>
+											</pre>
+											<p>Wird kompiliert zu:</p>
+											<pre>
+												<code>a {
+	color: #DD1166;
+}
+a:hover {
+  color: #4f0624; // Berechneter Farbcode
+}</code>
+											</pre>
+										</section>
+
+										<section  data-background-color="#dd1166" class="_center invers">
+											<h1>Aufgabe 4</h1>
+											<h2>Mixins &amp; Funktionen</h2>
+											<ul>
+												<li>Erstellen Sie eine Funktion, mit der Sie einen gegeben Pixelwert $size in rem umrechnen können.</li>
+												<li>Erstellen Sie anschließend ein Mixin <em>@mixin font-size($size)</em> mit dem Sie automatisch z.B. folgenden Code einfügen können:</li>
+											</ul>
+												<pre>
+font-size: 12px; // Fallback für ältere Browser die rem nicht unterstützen
+font-size: 0.75rem;
+												</pre>
+											<p style="font-size: 0.8em; text-align: left;">Tipp: Denken Sie an den Hinweis zur Umrechnung zwischen Einheiten aus den letzten Folien. Wir gehen davon aus, dass 1rem = 16px.</p>
+
+										</section>
+
+										<section>
+											<h2 class="u">Zusatz</h2>
+											<h2>Mixins</h2>
+											<p>Bei Mixins erhalten wir mit @content den Inhalt, der zwischen den geschweiften Klammern eines Mixin-Aufrufs steht. Beispiel:</p>
+												<img src="content.png" />
+										</section>
+
+										<section  data-background-color="#dd1166" class="_center invers">
+											<h1>RECAP</h1>
+											<div style="text-align: left;">
+											<p>Was sind CSS-Präprozessoren?</p>
+											<p>SASS</p>
+											<p>Variablen: $variable;</p>
+											<p>Projektstruktur: @import 'path/file';</p>
+											<p>Nesting</p>
+											<p>Vererbung &amp; Placeholder: %name {} -> @extend %name;</p>
+											<p>Mixins: @mixin name($variablen) {} -> @include name($variablen);</p>
+											<p>Funktionen: @function name($variablen){}</p>
+										</div>
+										</section>
+
+										<section  data-background-color="#dd1166" class="_center invers">
+											<h1>Hilfreiche Ressourcen</h1>
+											<ul>
+												<li><a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html">SASS Dokumentation</a></li>
+												<li><a href="thesassway.com/">The SASS Way - Tutorials</a></li>
+												<li><a href="https://www.udemy.com/sass-workflow">Udemy / SASS Workflow - Video Kurs</a></li>
+												<li><a href="http://sassmeister.com/">Sassmeister - Online Sass schreiben</a></li>
+											</ul>
+										</div>
+										</section>
+
+							</div>
+						</div>
+
+        <script src="../revealjs-framework/lib/js/head.min.js"></script>
+        <script src="../revealjs-framework/js/reveal.min.js"></script>
+
+        <script>
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                transition: 'slide', // none/fade/slide/convex/concave/zoom
+								dependencies: [
+									{ src: '../revealjs-framework/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+								]
+            });
+        </script>
+
+	</body>
+</html>
