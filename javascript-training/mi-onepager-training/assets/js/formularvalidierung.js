@@ -78,7 +78,11 @@ function create_and_append_error_msg( input_element, error_msg ) {
      *  Die Rahmenfarbe des 'input_element' auf die Farbe '#DD1166' setzen
      * ##
      */
+<<<<<<< HEAD
     input_element.style.borderColor = "#DD1166";
+=======
+    input_element.style.borderColor = '#DD1166';/* Und hier */;
+>>>>>>> f0ae8ea852993a396491acff43e8ec29263c4e2e
 
     /*
      * ## ADVANCED-TODO:
@@ -88,9 +92,16 @@ function create_and_append_error_msg( input_element, error_msg ) {
      *  2. Vaterlement das 'error_span_element' als Kindelement anfügen
      * ##
      */
+<<<<<<< HEAD
     var input_parent_element = input_element.parentNode;
     input_parent_element.appendChild(error_span_element) ;
 
+=======
+    var input_parent_element = input_element.parentNode;/* 1. HIER */ ;
+    input_parent_element.appendChild(error_span_element); /* 2. HIER */ ;
+	
+	
+>>>>>>> f0ae8ea852993a396491acff43e8ec29263c4e2e
     /* Als kleine Hilfe wird vermerkt, dass es bei dem Eingabefeld ein Fehler gab */
     input_element.dataset.error = true;
 }
@@ -106,7 +117,7 @@ function remove_error_msg( input_element ) {
     delete input_element.dataset.error;
 
     /* Farbe des Rahmens (border) zurücksetzen */
-    input_element.style.borderColor = '';
+    input_element.style.borderColor = "";
 
     var error_span_element = input_element.parentNode.querySelector( '.error' );
 
@@ -134,7 +145,11 @@ var anfrageformular_element = document.querySelector( '#anfrageformular' ),
  *   des Formulars überprüft werden kann, ob Formularfelder evtl. leer gelassen wurden
  * ##
  */
+<<<<<<< HEAD
 formular_element.addEventListener ( "submit", function( e ) {
+=======
+formular_element.addEventListener("submit",function( e ) {
+>>>>>>> f0ae8ea852993a396491acff43e8ec29263c4e2e
     /* Wird auf 'false' gesetzt, sofern irgendwo ein Validierungsfehler auftrat */
     var allValid = true;
 
@@ -156,7 +171,11 @@ formular_element.addEventListener ( "submit", function( e ) {
      */
 
     /* ## Vorname */
+<<<<<<< HEAD
     if( vorname_input_element.value === "" || vorname_input_element.value.length > 20 ) {
+=======
+    if( vorname_input_element.value === "" ) {
+>>>>>>> f0ae8ea852993a396491acff43e8ec29263c4e2e
         create_and_append_error_msg( vorname_input_element,
                                      "Bitte geben Sie einen Vornamen ein!" );
         allValid = false;
@@ -166,17 +185,24 @@ formular_element.addEventListener ( "submit", function( e ) {
     }
 
     /* ## Zuname */
+<<<<<<< HEAD
     if( zuname_input_element.value === "" || zuname_input_element.value.length > 20 ) {
+=======
+    if( zuname_input_element.value === "" ) {
+>>>>>>> f0ae8ea852993a396491acff43e8ec29263c4e2e
         create_and_append_error_msg( zuname_input_element,
                                      "Bitte geben Sie einen Zunamen ein!" );
         allValid = false;
-    }
-    else {
+    }    else {
         remove_error_msg( zuname_input_element );
     }
 
     /* ## Email */
+<<<<<<< HEAD
     if( email_input_element.value === ""
+=======
+    if(email_input_element.value === ""
+>>>>>>> f0ae8ea852993a396491acff43e8ec29263c4e2e
         || !email_input_element.value.match(/.+@.+\..+/) ) {
 
         create_and_append_error_msg( email_input_element,
@@ -188,7 +214,11 @@ formular_element.addEventListener ( "submit", function( e ) {
     }
 
     /* ## Nachricht */
+<<<<<<< HEAD
     if( nachricht_input_element.value === "" ) {
+=======
+    if(nachricht_input_element.value === "" ) {
+>>>>>>> f0ae8ea852993a396491acff43e8ec29263c4e2e
         create_and_append_error_msg( nachricht_input_element,
                                      "Bitte geben Sie eine Nachricht ein!" );
         allValid = false;
