@@ -1,7 +1,28 @@
-.hand{
+@keyframes handbewegung{ 
+50% {transform: translateY(-80px);}
+100% { transform: translateY(150px);} 
+ 
+} 
 
+
+.hand{
+    animation-name: handbewegung;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
+@keyframes platte{
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+    
+    
+}
 .platte{
-
+    
+    animation-name: platte;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+	
 }
