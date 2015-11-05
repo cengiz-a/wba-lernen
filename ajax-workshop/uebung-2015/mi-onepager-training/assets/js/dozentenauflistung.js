@@ -55,10 +55,14 @@ var loading_element     = dozenten_section.querySelector( '.dozenten_ladehinweis
  */
 function getJSON( path, callback ) {
 
+    var ajax_log = document.getElementById('ajax-log');
     var xhr = new XMLHttpRequest();
 
     xhr.open( 'GET', path, true );
-
+    alert(xhr.readyState);
+    console.log(xhr.readyState);
+    ajax_log.innerHTML = xhr.readyState +"</br>";
+    
     /*
      * Die hinter 'onreadystatechange' hinterlegte Funktion wird immer
      *  aufgerufen, wenn der Zustand sich ändert;
@@ -68,6 +72,9 @@ function getJSON( path, callback ) {
     xhr.onreadystatechange = function() {
 	    
         /* readyState === 4 -> Vorgang abgeschlossen */
+        alert(xhr.readyState);
+        console.log(xhr.readyState);
+        ajax_log.innerHTML = ajax_log.innerHTML + this.readyState + "</br>";
         if( this.readyState === 4 ) {
             /* HTTP-Statuscode 200 -> Datei wurde gefunden und zurückgegeben */
             if( this.status === 200 ) {
