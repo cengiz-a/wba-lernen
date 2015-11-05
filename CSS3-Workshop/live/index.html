@@ -99,8 +99,49 @@
 }
 		</code></pre>
     </div>
+	  
+    <div id="cssessentials5" class="step slide" data-x="3000" data-y="-18500" data-scale="10">
+        <q>
+        	<h1><b>Beispiel</b></h1>
+        	<br/>
+        	<p style="font-size:20px; line-height:1.2; float:left; margin-top:30px;">&lt;div id="keyframecontainer"><br/>
+        	&emsp;&lt;div id="frame">&lt;/div><br/>
+        	&lt;/div></p>
+        	<p style=" font-size: 18px; line-height:1.2; float:left; margin-left:180px; margin-top:-134px;">
+        		@keyframes quadrat {
+				<br/>&emsp;0% { top:0; left:0;}
+				<br/>&emsp;25% { top:0; left: 530px;}
+				<br/>&emsp;50% { top: 330px; left: 530px;}
+				<br/>&emsp;75% { top:330px; left:0;}
+				<br/>&emsp;100% { top:0; left: 0;}
+				<br/>}
+				<br/>#frame {
+				<br/>&emsp;background-color:black;
+				<br/>&emsp;width:50px;
+				<br/>&emsp;height:50px;
+				<br/>&emsp;position:relative;
+				<br/>&emsp;top:0;
+				<br/>&emsp;left:0;
+				<br/>&emsp;animation-name: quadrat;
+				<br/>&emsp;animation-duration: 4s;
+				<br/>&emsp;animation-iteration-count: infinite;
+				<br/>&emsp;animation-timing-function: linear;
+				<br/>}
+				<br/>#keyframecontainer {
+				<br/>&emsp;position:relative;
+				<br/>&emsp;width: 600px;
+				<br/>&emsp;height:400px;
+				<br/>}
+        	</p>
+        </q>
+    </div>
 	
-	
+	<div id="cssessentials4" class="step slide" data-x="3000" data-y="-28500" data-scale="10">
+        <q>
+        	<h1><b>Keyframes Beispiel</b></h1>
+        	<div id="keyframecontainer"><div id="keyframesex"></div></div>
+        </q>
+    </div>
 <div class="step slide" data-x="4500" data-y="-1000" data-z="-3000">
         <h1>JQuery vs. CSS3</h1>
         <br>

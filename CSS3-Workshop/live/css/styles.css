@@ -1,3 +1,43 @@
+
+#transitionsex p {
+	font-size:22px;
+	color:white;
+	background-color:black;
+	padding-left:0px;
+	-webkit-transition: all 2s ease;
+	transition: all 2s ease;
+}
+#transitionsex p:hover {
+	font-size:26px;
+	color:#00ff05;
+	padding-left:170px;
+}
+@keyframes keyframesex {
+	0% { top:0; left:0;}
+	25% { top:0; left: 530px;}
+	50% { top: 330px; left: 530px;}
+	75% { top:330px; left:0;}
+	100% { top:0; left: 0;}
+}
+#keyframesex {
+	background-color:black;
+	width:50px;
+	height:50px;
+	position:relative;
+	top:0;
+	left:0;
+	animation-name: keyframesex;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-direction:alternate;
+}
+#keyframecontainer {
+	position:relative;
+	width: 600px;
+	height:400px;
+}
+
 .step_translate b{
 	animation-name: translate;
     animation-duration: 10s;
