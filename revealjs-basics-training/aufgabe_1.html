@@ -10,43 +10,51 @@
         
         
         <!--Hier muss reveal.min.css aus dem Verzeichnis revealjs-framework/css/ rein-->
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="../revealjs-framework/css/reveal.min.css">
         
         <!--Hier muss medieninformatik.css aus dem Verzeichnis revealjs-framework/css/theme-->
-		<link rel="stylesheet" href="" id="theme">
+		<link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme">
 	</head>
 
 	<body>
         
-        <!--Hier fängt unsere Präsentation an-->
-            <!--Hier fängt unser Folienstapel an-->
-                <!--1.Folie-->
-                <!--ENDE_1. Folie-->
-                    <h2 class="u">Folie 1: Horizontal</h2>
-                <!--2.Folie-->
-                    <h2 class="u">Folie 2: Horizontal</h2>
-                <!--ENDE_2.Folie-->
+        <!--Hier fängt unsere Präsentation an--> <div class="reveal">
+            <!--Hier fängt unser Folienstapel an--><div class="slides">
+        
+                <!--1.Folie--><section>
+                        <h2 class="u">Folie 1: Horizontal</h2>
+                <!--ENDE_1. Folie--></section>
+            
+                <!--2.Folie--><section>
+                        <h2 class="u">Folie 2: Horizontal</h2>
+                <!--ENDE_2.Folie--></section>
+        
                 
-                <!--Foliereihe-->
-                    <!--Hier 3. vertikale Folien einbauen-->
-                        <h2 class="u">Folie 3: Vertikal</h2>
-                    <!-- ENDE_3. Folie-->
+                    <!--Foliereihe--><section>
+        
+                        <!--Hier 3. vertikale Folien einbauen--><section>
+                            <h2 class="u">Folie 3: Vertikal</h2>
+                        <!-- ENDE_3. Folie--></section>
+    
                     
-                    <!--Hier 4. vertikale Folie einbauen-->
-                        <h2 class="u">Folie 4: Vertikal</h2>
-                    <!-- ENDE_4. Folie-->
-                <!--ENDE_Folienreihe-->
-            <!--ENDE Folienstapel-->
-        <!--ENDE Präsentation-->
+                        <!--Hier 4. vertikale Folie einbauen--> <section>
+                            <h2 class="u">Folie 4: Vertikal</h2>
+                        <!-- ENDE_4. Folie--> </section>
+        
+                    <!--ENDE_Folienreihe--> </section>
+        
+        
+        <!--ENDE Folienstapel--></div>
+            <!--ENDE Präsentation--></div>
 
         
         
         
         <!--Hier muss head.min.js aus dem Verzeichnis revealjs-framework/lib/js-->
-        <script src=""></script>
+        <script src="../revealjs-framework/lib/js/head.min.js"></script>
         
         <!--Hier muss reveal.min.js aus dem Verzeichnis revealjs-framework/js-->
-        <script src=""></script>
+        <script src="../revealjs-framework/js/reveal.min.js"></script>
 
         <script>
             Reveal.initialize({
@@ -55,7 +63,7 @@
                 history: true,
                 center: true,
 
-                transition: 'convex', // none/fade/slide/convex/concave/zoom
+                transition: "slide", // none/fade/slide/convex/concave/zoom
             });
         </script>
 
