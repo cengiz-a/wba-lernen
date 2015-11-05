@@ -4,14 +4,20 @@
 
 /*
  * TODOs sind in den folgenden Zeilen zu finden:
- *  - Zeile 31    * Element über eine ID selektieren/holen
- *  - Zeile 119   * 'dl'-Element erzeugen
- *  - Zeile 158   * Fehlerabfrage mittels einer if-Abfrage
- *  - Zeile 192   * 'figure'-Element erzeugen
- *  - Zeile 215   * 'figcaption'-Element erzeugen
- *  - Zeile 227   * Erzeugung eines JavaScript-Objekts mittels der impliziten Kurzschreibweise
- *  - Zeile 256   * Vier Syntaxfehler beheben
- */
+
+ 	1. Geben Sie in der Funktion getJSON die verschiedenen States des AJAX Requests als Alert aus.
+ 	2. Geben Sie in der Funktion getJSON die verschiedenen States des AJAX Requests in der Konsole aus.
+ 	3. Geben Sie in der Funktion getJSON die verschiedenen States des AJAX Requests mit Erläuterung im DIV Container mit der ID "ajax-log" als Logfile aus, sprich: Addieren Sie die Einträge.
+ 	4. Erzeugen Sie eine neue Funktion, die statt des JSONs die bereits gerenderten Dozenten einbindet. Dazu stehen folgende URLs bereit:
+ 		- https://raw.githubusercontent.com/th-koeln/wba1-2015/gh-pages/mi-onepager/ajax-demo/eisemann.html
+ 		- https://raw.githubusercontent.com/th-koeln/wba1-2015/gh-pages/mi-onepager/ajax-demo/noss.html
+ 		
+ 		Betten Sie die Dateien in ein figure Element ein und addieren Sie diese zur SECTION dozenten.
+ 		
+ 	5. Erzeugen Sie einen Button in der SECTION dozenten, der das Laden der Dozenten JSON antriggert. Geben Sie dem User visuelles Feedback, dass ein Ladevorgang initiiert wurde.
+ 	
+
+*/
 
 
 /*
@@ -59,6 +65,7 @@ function getJSON( path, callback ) {
      *  https://developer.mozilla.org/de/docs/Web/API/XMLHttpRequest#Eigenschaften
      */
     xhr.onreadystatechange = function() {
+	    
         /* readyState === 4 -> Vorgang abgeschlossen */
         if( this.readyState === 4 ) {
             /* HTTP-Statuscode 200 -> Datei wurde gefunden und zurückgegeben */
