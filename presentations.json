@@ -69,6 +69,35 @@
         "Christian Noss"
       ],
       "date": "2015-10-22"
+    },
+    "javascript-basics": {
+      "title": "Javascript Basics",
+      "authors": [
+        "Jan Kus"
+      ],
+      "date": "2015-10-29"
+    },
+    "javascript-advanced": {
+      "title": "Javascript Advanced",
+      "authors": [
+        "Jan Kus"
+      ],
+      "date": "2015-10-29"
+    },
+    "revealjs-basics": {
+      "title": "reveal.js Basics",
+      "authors": [
+        "Marvin Klimm, Güray Kilic"
+      ],
+      "date": "2015-10-29"
+    }
+    ,
+    "ajax-workshop": {
+      "title": "AJAX Workshop",
+      "authors": [
+        "verschiedene Autoren"
+      ],
+      "date": "2015-11-05"
     }
   }
 }
