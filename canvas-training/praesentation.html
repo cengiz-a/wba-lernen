@@ -1,55 +1,56 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
 
-<head>
-    <meta charset="utf-8">
+	<head>
+		<meta charset="utf-8">
 
-    <title>reveal.js - The HTML Presentation Framework</title>
+		<title>Workshop - Webpräsentation mit reveal.js</title>
 
-    <meta name="description" content="Einführung in HTML5 Canvas">
-    <meta name="author" content="Sebastian Kings; Corinna Klein">
+		<meta name="description" content="Workshop-Präsentation zu reveal.js">
+		<meta name="author" content="Marvin Klimm und Güray Kilic">
 
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        
+		<link rel="stylesheet" href="../revealjs-framework/css/reveal.min.css">
+        <link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme">
 
-    <link rel="stylesheet" href="css/reveal.css">
-    <link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../revealjs-framework/lib/css/zenburn.css">
 
-    <!-- Code syntax highlighting -->
-    <link rel="stylesheet" href="lib/css/zenburn.css">
-
-    <!-- Printing and PDF exports -->
-    <script>
-        var link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
-        document.getElementsByTagName('head')[0].appendChild(link);
-
-    </script>
-
-    <!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../revealjs-framework/css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+        
+        <!--[if lt IE 9]>
+		<script src="../revealjs-framework/lib/js/html5shiv.js"></script>
 		<![endif]-->
-</head>
-
-<body>
-
-    <div class="reveal">
-
-        <!-- Any section element inside of this container is displayed as a slide -->
-        <div class="slides">
-            <section>
-                <h1>Canvas</h1>
-                <img width="200px" height="200px" src="img/Download.png" style="transform: rotate(30deg); -webkit-transform: rotate(30deg);"/>
-                <p>
-                    <small>Ein Workshop von Corinna Klein und Sebastian Kings</small>
-                </p>
-            </section>
-
-            <section>
+        
+	</head>
+    <body>
+        
+        <div class="reveal">
+             
+            <div class="slides">
+                 <section>
+                    
+                        <h1>Canvas</h1>
+                        <h2 class="u"> Neue Möglichkeinten im WWW</h2>
+                        <p>12.11.2015</p>
+                        <p style="margin-top:2%;"> Webbasierte Anwendungen 1</p>
+                        <p style="margin-top:2%;">Studiengang Medieninformatik an der Technischen Hochschule Köln</p>
+                    <p>Campus Gummersbach</p>
+                        <p style="margin-top:10%;"> Sebastian Kings und Corinna Klein</p>
+                    
+                </section>
+                <section>
                 <h1>Web und Grafik</h1>
             </section>
 
@@ -61,7 +62,7 @@
                             </code></pre>
                 </div>
                 <div class="fragment">
-                    <img width="400px" height="400px" src="img/cat.jpg">
+                    <img width="400px" height="400px" src="praesentation/img/cat.jpg">
                 </div>
             </section>
 
@@ -74,7 +75,7 @@
                             </code></pre>
                 </div>
                 <div class="fragment">
-                    <img width="400px" height="400px" src="img/cat_animated.gif">
+                    <img width="400px" height="400px" src="praesentation/img/cat_animated.gif">
                 </div>
             </section>
 
@@ -90,7 +91,7 @@
                             </code></pre>
                 </div>
                 <div class="fragment">
-                    <img src="img/planets.gif" alt="Planets" usemap="#planetmap">
+                    <img src="praesentation/img/planets.gif" alt="Planets" usemap="#planetmap">
 
                     <map name="planetmap">
                         <area shape="rect" coords="0,0,82,126" alt="Sun" onclick="alert('Sonne')">
@@ -144,12 +145,12 @@ var ctx = canvas.getContext("2d");
                 
                  <section>
                     <h1>Fill/Stroke</h1>
-                    <img src="img/pfad.jpg" alt="Pfad">
+                    <img src="praesentation/img/pfad.jpg" alt="Pfad">
                     <pre><code data-trim contenteditable>
                     ctx.fill();
                     </code></pre>
                      
-                     <img src="img/stroke.jpg" alt="Pfad">
+                     <img src="praesentation/img/stroke.jpg" alt="Pfad">
                     <pre><code data-trim contenteditable>
                     ctx.stroke();
                     </code></pre>
@@ -171,7 +172,7 @@ ctx.strokeStyle = 'red';
                 </section>
                  <section>
                     <h1>Text</h1>
-                    <img src="img/TextFill.jpg" alt="Text">
+                    <img src="praesentation/img/TextFill.jpg" alt="Text">
                     <pre><code data-trim contenteditable>
 ctx.font = "30px Arial";
 ctx.strokeText(" ", x, y);
@@ -180,7 +181,7 @@ ctx.fillText(" ", x, y);</code></pre>
                 
                 <section>
                     <h1>Einfache Linien</h1>
-                    <img src="img/line.png" alt="Linie">
+                    <img src="praesentation/img/line.png" alt="Linie">
                     <pre><code data-trim contenteditable>
 ctx.moveTo(a,b);
 ctx.lineTo(x,y);
@@ -190,7 +191,7 @@ ctx.stroke();
                 
                 <section>
                     <h1>Rechtecke</h1>
-                     <img src="img/rectangle.jpg" alt="Rechteck">
+                     <img src="praesentation/img/rectangle.jpg" alt="Rechteck">
                     <pre><code data-trim contenteditable>
 ctx.fillRect(x, y, w, h);
 ctx.strokeRect(x, y, w, h);
@@ -199,19 +200,19 @@ ctx.strokeRect(x, y, w, h);
                 
                 <section>
                     <h1>Kreise</h1>                   
-                    <img src="img/circle.jpg" alt="Kreis">
+                    <img src="praesentation/img/circle.jpg" alt="Kreis">
                     <pre><code data-trim contenteditable>
                     ctx.arc(x, y, radius, start, ende);
                     </code></pre>
                     Start und Ende in Radiant<br>
-                    <img src="img/kreis_radiant.jpg" alt="Kreis_Erklärung">
+                    <img src="praesentation/img/kreis_radiant.jpg" alt="Kreis_Erklärung">
                 </section>
                 
                
                 
                 <section>
                     <h1>Pfade</h1>
-                    <img src="img/pfad.jpg" alt="Pfad">
+                    <img src="praesentation/img/pfad.jpg" alt="Pfad">
                     <pre><code data-trim contenteditable>
 ctx.beginPath();
 ctx.moveTo(a, b);
@@ -244,7 +245,7 @@ ctx.closePath();</code></pre>
                         <li class="fragment">Trennung von HTML und JS-Code (und CSS) </li>
                         <li class="fragment">Trennung von Berechnungen und Darstellung</li>    
                     </ol>
-                    <h2 class="fragment"> <span class="fragment"> Code wird verständlich wartbar und kann mehrfach verwendet werden</h2>
+                    <h2 class="fragment"> <span class="fragment"> Code wird verständlich, wartbar und kann mehrfach verwendet werden</h2>
                     
                 </section>
                 <section>
@@ -301,60 +302,66 @@ function drawForeground(ctx, parameters) {
                 <canvas id="canvas" width="500" height="500" ></canvas>
             </section>
         </div>
+            </div>
+        </div>
+    
+        <script src="../revealjs-framework/lib/js/head.min.js"></script>
+        <script src="../revealjs-framework/js/reveal.min.js"></script>
+        <script src="praesentation/js/clock.js"></script>
+		<script>
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
 
-    </div>
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
 
-    <script src="lib/js/head.min.js"></script>
-    <script src="js/reveal.js"></script>
-    <script src="js/clock.js"></script>
-
-    <script>
-        // Full list of configuration options available at:
-        // https://github.com/hakimel/reveal.js#configuration
-        Reveal.initialize({
-            controls: true,
-            progress: true,
-            history: true,
-            center: false,
-
-            transition: 'fade', // none/fade/slide/convex/concave/zoom
-
-            // Optional reveal.js plugins
-            dependencies: [{
-                src: 'lib/js/classList.js',
-                condition: function() {
-                    return !document.body.classList;
-                }
-            }, {
-                src: 'plugin/markdown/marked.js',
-                condition: function() {
-                    return !!document.querySelector('[data-markdown]');
-                }
-            }, {
-                src: 'plugin/markdown/markdown.js',
-                condition: function() {
-                    return !!document.querySelector('[data-markdown]');
-                }
-            }, {
-                src: 'plugin/highlight/highlight.js',
-                async: true,
-                condition: function() {
-                    return !!document.querySelector('pre code');
+				// Optional reveal.js plugins
+				dependencies: [
+                {
+                    src: '../revealjs-framework/lib/js/classList.js',
+                    condition: function () {
+                        return !document.body.classList;
+                    }
                 },
-                callback: function() {
-                    hljs.initHighlightingOnLoad();
+                {
+                    src: '../revealjs-framework/plugin/markdown/marked.js',
+                    condition: function () {
+                        return !!document.querySelector('[data-markdown]');
+                    }
+                },
+                {
+                    src: '../revealjs-framework/plugin/markdown/markdown.js',
+                    condition: function () {
+                        return !!document.querySelector('[data-markdown]');
+                    }
+                },
+                {
+                    src: '../revealjs-framework/plugin/highlight/highlight.js',
+                    async: true,
+                    callback: function () {
+                        hljs.initHighlightingOnLoad();
+                    }
+                },
+                {
+                    src: '../revealjs-framework/plugin/zoom-js/zoom.js',
+                    async: true,
+                    condition: function () {
+                        return !!document.body.classList;
+                    }
+                },
+                {
+                    src: '../revealjs-framework/plugin/notes/notes.js',
+                    async: true,
+                    condition: function () {
+                        return !!document.body.classList;
+                    }
                 }
-            }, {
-                src: 'plugin/zoom-js/zoom.js',
-                async: true
-            }, {
-                src: 'plugin/notes/notes.js',
-                async: true
-            }]
-        });
+				]
+			});
 
-    </script>
-
-</body>
-
+		</script>   
+    </body>
 </html>
+    
