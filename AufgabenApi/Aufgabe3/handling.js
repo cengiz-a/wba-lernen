@@ -58,19 +58,19 @@ function addMovie(movieData){
   //dass es sich um ein Attribut handelt und nicht der inner.HTML manipuliert werden muss.
   //Der Link zum Poster sollte in den JSON Daten zu finden sein, diese werden der Funktion,
   //in der sie sich befinden uebergeben! (movieData)
-  poster.??
+  poster.setAttribute(movieData.post);
   
   //Fuellen sie die HTML Elemente mit Daten aus unserer JSON rueckgabe
   //Es steht ihnen die Funktion fill(Element, text); zur verfuegung, die 
   //das innerHTML eines Elementes manipuliert.
  
   //title soll den Titel bekommen
-  fill( title, ?? ); 
+  fill(title,movieData.Title); 
   //info soll den releasedate, die runtime und das imdbRating bekommen.
   //Die Strings in der Mitte  (' - imdb-Rating: ')dienen zur Formatierung, es soll ja schoen aussehen!
-  fill( info, ??? + ' - ' + ??? + ' - imdb-Rating: ' + ???); 
+  fill( info, movieData.Release + ' - ' + ??? + ' - imdb-Rating: ' + movieData. ); 
   //yoy know the drill, der Plot ist gefragt
-  fill( plot, ??? );
+  fill( plot, movieData.Plot);
 
 
 //  <movie class='media'>

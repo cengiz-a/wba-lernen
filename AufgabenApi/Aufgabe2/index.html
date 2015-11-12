@@ -24,6 +24,7 @@
     //Schema der omdbApi Request verstehen//
     //Leichte String modifikation, bzw die richtige Funktion fuer ein bestimmtes Problem finden//
       var btn = document.getElementById('myButton');
+         var textfield = document.getElementById('searchinput');
 
       textfield.addEventListener('keypress', function ( e ){
         if(e.keyCode == 13)
@@ -36,13 +37,13 @@ btn.addEventListener('click', function( e ){
   //      Achten sie darauf, wie Leerzeichen behandelt werden, diese muessen sie genauso behandeln
 
   //Den Text aus dem Textfeld mit der ID 'searchinput' holen (Element holen und value auslesen)
-    var input = ;
+    var input = searchinput.value;
   //Den input von Leerzeichen bereinigen
-    input.????
+    input.replace(" ","+");
   //Die RequestURL zusammenbauen
-    var url = ;
+    var url = "http://www.omdbapi.com/?t=" + input + "&y=&plot=short&r=json";
   //Request senden und die response ausgeben wie in Aufgabe 1
-  var resp = ;
+  var resp = httpGet(url) ;
   document.write(resp);
 
 });

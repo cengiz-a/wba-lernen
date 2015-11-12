@@ -12,12 +12,14 @@
      
       //Lernziel//
       //In der Lage sein, eine HTTPget Funktion zu schreiben//
+        
+       
       
       
       
       //Anlegen der Request URL, schauen sie sich auf omdbAPI.com wie eine Beispielhafte request URL aussieht.
 
-      var url =
+      var url = "http://www.omdbapi.com/?t=lord+of+the+rings&y=&plot=short&r=json";
 
       document.write(httpGet(url));
 
@@ -28,6 +30,13 @@
       // Rueckgabe der response nicht vergessen!
       // ( moegliche Suchbegriffe zur Hilfestellung: javascript http request )
       function httpGet(theUrl){
+     
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.open( "GET", theUrl, false ); 
+            xmlHttp.send(null);
+            return xmlHttp.responseText;
+      
+      
       }    
 
     </script>
