@@ -1,0 +1,235 @@
+/*------------------------------------*\
+    #colors
+		\*------------------------------------*/
+
+.green {
+    #77cc00;
+}
+.blue {
+    #4952e1;
+}
+.magenta {
+    #dd1166;
+}
+.purple {
+    #9313c3;
+}
+.black {
+    #231f20;
+}
+.gray {
+    #fbfbfb;
+}
+
+/*------------------------------------*\
+		#Header
+\*------------------------------------*/
+
+.th-logo {
+    margin-bottom: 4rem;
+}
+.mi-logo {
+    position: absolute;
+    right: 10%;
+    top: 10px;
+    text-align: center;
+}
+body > header h1 {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+body > header {
+    margin-bottom: 2rem;
+}
+
+/*------------------------------------*\
+		#typo
+\*------------------------------------*/
+
+*,
+footer {
+    font-family: 'Open Sans', sans-serif !important;
+    line-height: 1.4rem;
+}
+blockquote {
+    color: white;
+}
+h1,
+h2,
+h3 {
+    line-height: 1.8rem;
+    font-size: 1.8rem;
+    margin-bottom: 1rem
+}
+p {
+    margin-bottom: 2rem;
+}
+p + p {
+    margin-bottom: 1rem;
+}
+
+/*------------------------------------*\
+    #Navigation
+\*------------------------------------*/
+
+#nav a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+#nav a:hover {
+    color: pink;
+}
+#nav li {
+    display: inline;
+    margin-right: 0.5rem;
+    border-bottom: 2px dotted pink;
+}
+#nav li:activ {
+    border-bottom: 1px solid pink;
+}
+
+/*------------------------------------*\
+    #Statements
+\*------------------------------------*/
+
+#interview blockquote:nth-child(2) {
+    background-color: blue;
+}
+#interview blockquote {
+    background-color: purple;
+    padding: 1.5rem;
+}
+#interview blockquote + blockquote {
+    margin-top: 1rem;
+}
+#interview footer {
+    text-align: right;
+}
+
+/*------------------------------------*\
+    #Articles
+\*------------------------------------*/
+
+article h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+article figure img {
+    width: 100%;
+    height: auto;
+}
+article figure img:nth-child(n+2) {
+    display: none;
+}
+article figure figcaption {
+    margin-bottom: 1rem;
+}
+
+/*------------------------------------*\
+    #Showcase
+\*------------------------------------*/
+
+#showcase figcaption {
+    font-size: 0.8rem;
+}
+#showcase footer {
+    display: none;
+}
+
+/*------------------------------------*\
+    #mpduluebersicht
+\*------------------------------------*/
+
+#moduluebersicht h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+#moduluebersicht hr {
+    border-bottom: 2px solid #77cc00;
+}
+
+/*------------------------------------*\
+    #Components
+\*------------------------------------*/
+
+#dozenten figure {
+    width:100%;
+}
+
+#dozenten figcaption:after {
+    content: '';
+    clear: both;
+}
+#dozenten figure img {
+    float: left;
+    width: 25%;
+}
+#dozenten figcaption {
+    float: left;
+    width: 75%;
+}
+
+#dozenten dt {
+    font-weight: bold;
+}
+
+/*------------------------------------*\
+    #Tables
+\*------------------------------------*/
+
+table {
+    width: 100%;
+}
+table th {
+    font-weight: bold;
+    text-align: left;
+    padding-bottom: 0.5rem;
+}
+table tr:not(:last-child) {
+    border-bottom: solid 1px #ddd;
+}
+table td {
+    padding: 0.5rem 0;
+}
+table td + td,
+table th + th {
+    padding-left: 0.5rem;
+}
+table th.large,
+table td.large {
+    width: 50%;
+}
+table th.small,
+table td.small {
+    width: 10%;
+}
+
+/*------------------------------------*\
+		#moreStyle
+		\*------------------------------------*/
+
+body {
+    font-size: 100%;
+    font-weight: 300;
+    background-color: rgba(240, 240, 240, 1);
+}
+body > * {
+    margin: 0 auto;
+    max-width: 80%;
+    background-color: white;
+    padding: 20px;
+}
+section,
+table {
+    margin-bottom: 2rem;
+}
+section {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid pink;
+}
+section + section {
+    margin-top: 2rem;
+}
