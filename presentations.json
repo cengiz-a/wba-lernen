@@ -99,5 +99,13 @@
       ],
       "date": "2015-11-05"
     }
+    ,
+    "usertracking_workshop": {
+      "title": "Usertracking Workshop",
+      "authors": [
+        "Aziz Cetiner, Aaron Asgharzadeh"
+      ],
+      "date": "2015-11-12"
+    }
   }
 }
