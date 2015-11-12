@@ -21,8 +21,9 @@ function draw() {
     //****************************************************************
     
     //Festlegen der Füllfarbe
+
     ctx.fillStyle = '#000000';
-    ctx.fillRect();
+    ctx.fillRect(0,0,500,500);
     
     
     
@@ -41,10 +42,10 @@ function draw() {
     
     //Dreieck zeichnen
     ctx.beginPath();
-    ctx.moveTo( , );
-    ctx.lineTo( , );
-    ctx.lineTo( , );
-    ctx.lineTo( , );
+    ctx.moveTo(150,300);
+    ctx.lineTo(350,500);
+    ctx.lineTo(300,200);
+    ctx.lineTo(400,400);
     ctx.fill();
     ctx.closePath();
     
@@ -56,6 +57,9 @@ function draw() {
     //****************************************************************
     
     ctx.beginPath();
+    ctx.rect(300,300, 200,200);
+    ctx.fill();
+    ctx.stroke();
     
     ctx.closePath();
     

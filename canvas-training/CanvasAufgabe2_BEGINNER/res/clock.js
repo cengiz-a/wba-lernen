@@ -46,7 +46,11 @@ function degToRad(degree) {
 *************************************************************************************/
 
 function drawBackground(ctx, parameters) {
-    //TIPP: Wie in der ersten Übung
+    
+    ctx.fillStyle = parameters.backgroundColor;
+    ctx.fillRect(0,0,parameters.canvasWidht,parameters.canvasHeight);
+    
+
 }
 
 
@@ -56,6 +60,8 @@ function drawBackground(ctx, parameters) {
 
 function drawForeground(ctx, parameters) {
     //Ringfarbe festlegen => parameters.ringColor
+    
+    parameters.ringColor = 'green'
     
     //Weitere Einstellungen für die Darstellung der Ringe
     ctx.shadowColor = parameters.ringColor;
@@ -70,11 +76,15 @@ function drawForeground(ctx, parameters) {
 
     //Minuten-Ring
     ctx.beginPath();
+    ctx.arc(parameters.centerX, parameters.centerY, parameters.minuteRadius, parameters.startAngle, parameters.endAngleMinute);
+    ctx.stroke();
     //TO
     ctx.closePath();
 
     //Sekunden-Ring
     ctx.beginPath();
+     ctx.arc(parameters.centerX, parameters.centerY, parameters.secondRadius, parameters.startAngle, parameters.endAngleSecond);
+    ctx.stroke();
     
     ctx.closePath();
 
@@ -84,8 +94,10 @@ function drawForeground(ctx, parameters) {
 
     //TODO Die Farbe für die Digitalanzeige festlegen 
     ctx.fillStyle = parameters.textColor;
+    
+
     //TODO Die aktuelle Uhrzeit als Text mittig in der Uhr anzeigen
-    ctx.fillText(?,?,?);
+    ctx.fillText(parameters.dateString ,parameters.centerX,parameters.centerY);
 
 
     //Digital Date
@@ -111,14 +123,15 @@ function doLogics(parameters){
     // aber der Winkel in Bogenmaß
     
     //Der Startwinkel für alle Ringe
-    parameters.startAngle = ;
+    parameters.startAngle = 270;
+    
     
     //TIPP: Wieviel Grad muss ich pro Stunde/Minute/Sekunde weitergehen?
     //parameters.endAngleHour = degToRad( startwinkel + (winkel pro Stunde * anzahl der stunden);
     //TODO: Berechnen Sie die Endwinkel aller Bögen
-    parameters.endAngleHour = 
-    parameters.endAngleMinute = 
-    parameters.endAngleSecond = 
+    parameters.endAngleHour = degToRad(parameters.startAngle + (parameters.hourRadius * 12));
+    parameters.endAngleMinute = degToRad(parameters.startAngle + (parameters.minuteRadius * 60));
+    parameters.endAngleSecond = degToRad(parameters.startAngle + (parameters.secondRadius * 60));
     
     
     //Auslesen der Stings für die Digitalanzeige
