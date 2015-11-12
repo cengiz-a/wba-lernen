@@ -1,0 +1,10 @@
+.wrap {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.media-object {
+  max-height: 8em;
+}
+h1{
+  margin-bottom: 1em;
+}

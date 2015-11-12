@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FilmeSammlung</title>
+  </head>
+
+  <body>
+
+    <div class="wrap" id='wrapper'>
+
+      <!-- SEARCH -->
+      <div class="input-group">
+        <input class="form-control input-lg" id="searchinput" placeholder="Movie Title...">
+        <span class="input-group-btn">
+          <button class="btn btn-default btn-lg" id="myButton" type="button"><i class="glyphicon glyphicon-search"></i></button>
+        </span>
+      </div>
+      <!-- SEARCH END -->
+    </div>
+
+    <script language="javascript" type="text/javascript">
+    //Lernziele//
+    //Benoetigte Javascript basics verinnerlichen//
+    //Schema der omdbApi Request verstehen//
+    //Leichte String modifikation, bzw die richtige Funktion fuer ein bestimmtes Problem finden//
+      var btn = document.getElementById('myButton');
+
+      textfield.addEventListener('keypress', function ( e ){
+        if(e.keyCode == 13)
+          btn.click();
+      });
+
+btn.addEventListener('click', function( e ){
+  //TODO: Bei dieser Aufgabe geht es darum, die Daten ueber den ins Textfeld eingegeben Film zu suchen, bzw unsere requests dynamisch zu gestalten.
+  //      Besuchen sie erneut omdbAPI.com und suchen sie nach einem Film. Schauen sie sich die Request genau an und versuchen sie diese nachzubauen.
+  //      Achten sie darauf, wie Leerzeichen behandelt werden, diese muessen sie genauso behandeln
+
+  //Den Text aus dem Textfeld mit der ID 'searchinput' holen (Element holen und value auslesen)
+    var input = ;
+  //Den input von Leerzeichen bereinigen
+    input.????
+  //Die RequestURL zusammenbauen
+    var url = ;
+  //Request senden und die response ausgeben wie in Aufgabe 1
+  var resp = ;
+  document.write(resp);
+
+});
+
+function httpGet(theUrl){
+  var xmlHttp = new XMLHttpRequest();
+  xmlHttp.open( "GET", theUrl, false );
+  xmlHttp.send( null );
+  return xmlHttp.response;
+}    
+    </script>
+
+  </body>
+</html>
