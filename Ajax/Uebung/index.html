@@ -1,0 +1,56 @@
+<html>
+<head>
+</head>
+<body>
+
+<script type="text/javascript">
+
+var xmlHttpObject = false;
+
+if (typeof XMLHttpRequest != 'undefined') 
+{
+    xmlHttpObject = new XMLHttpRequest();
+}
+if (!xmlHttpObject) 
+{
+    try 
+    {
+        xmlHttpObject = new ActiveXObject("Msxml2.XMLHTTP");
+    }
+    catch(e) 
+    {
+        try 
+        {
+            xmlHttpObject = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        catch(e) 
+        {
+            xmlHttpObject = null;
+        }
+    }
+}
+
+function loadContent()
+{
+    xmlHttpObject.open('get','hallo.txt');
+    xmlHttpObject.onreadystatechange = handleContent;
+    xmlHttpObject.send(null);
+    return false;
+}
+
+function handleContent()
+{
+    if (xmlHttpObject.readyState == 4)
+    {
+        document.getElementById('myContent').innerHTML = xmlHttpObject.responseText;
+    }
+}
+</script>
+
+<p>Ich werde nicht neu geladen</p>
+<p id="myContent">
+    <a href="#" onclick="loadContent();">Klick mich</a>.
+    Ich werde neu geladen
+</p>
+</body>
+</html>
