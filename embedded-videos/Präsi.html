@@ -1,0 +1,477 @@
+
+
+<!doctype html>
+<html lang="de">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Workshop - Webpräsentation mit reveal.js</title>
+
+		<meta name="description" content="Workshop zu Embaded Videos">
+		<meta name="author" content="Gerald Grote-Lambers und Laura Skolimowski">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        
+		<link rel="stylesheet" href="../revealjs-framework/css/reveal.min.css">
+        <link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../revealjs-framework/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../revealjs-framework/css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+        
+        <!--[if lt IE 9]>
+		<script src="../revealjs-framework/lib/js/html5shiv.js"></script>
+		<![endif]-->
+        
+	</head>
+
+	<body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <h1>Webbasierte Anwendungen Teil 1</h1>
+                    <h2 class="u">Embedded Videos</h2>
+                    <p>12. November 2015</p>
+                    <p>Studiengang Medieninformatik an der Technischen Hochschule Köln
+                    <br> Campus Gummersbach</p>
+                    <p style="margin-top:15%">Gerald Grote-Lambers und Laura Skolimowski</p>
+                    
+                    <aside class="notes">
+                        <p>                                                                              
+                            Startfolie
+                        </p>
+                        
+                    </aside>
+                </section>
+                                
+                        <!--Folie 2-->
+                 <section>
+                    <h2 class="u">Agenda</h2>
+                    <ul>
+                        <li><p>Embedded Videos in HTML </p>
+                        <li><p>Möglichkeiten zur Einbindung von Videos</p>
+                        <li><p>Browserkompatiblität</p>
+                        <li><p>Iframe</p>                       
+                        <li><p>JavaScript</p>              
+                        </li>   
+                    </ul>
+                     
+                      <aside class="notes">
+                        <p> 
+                            Embedded Videos in HTML
+                            Möglichkeiten zur Einbindung
+                            Browserkompatiblität
+                            JavaScript
+                        </p>
+                        
+                    </aside>
+                </section>
+                
+                        <!--Folie 3-->
+                <section>
+                    <h2 class="u">Embedded Videos in HTML</h2>
+                    <ul>
+                        <li class="fragment"><span class="_pink">Embedded Video</span> bezeichnet das Einbinden von Videos in einen Hypertext.</li>   
+                    </ul>
+                </section>
+                
+                        <!--Folie 4-->
+                <section>
+                        <h2 class="u"> Möglichkeiten zum einbinden von Videos?</h2>
+                            <ul>
+                                <li class="fragment"><span>Videoseiten (Youtube, Vimeo, ...)
+                                    <img src="img/types-of-video-sharing-sites.jpg" width="250px"> </span></li> 
+                                
+                                <li class="fragment"><span>Selber Hosten 
+                                    <img src="img/selberhost.jpg" width="100px"></span></li>                                  
+                          
+                           </ul> <aside class="notes">
+                                    <p>                                                                              
+                            http://zeitgeist.exarc.net/files/styles/main-image_manuals-articles/public/types-of-video-sharing-sites.jpg?itok=K0pewQUT
+                            https://s.w.org/about/images/fanart/logo_500x500.png
+                            http://www.icastcenter.com/images/dedicatedrack.jpg
+                                    </p>
+                        
+                    </aside>
+                </section>
+          
+                        <!--Folie 5-->
+                        <section>
+                                <h2 class="u"> Videoseiten (Youtube, Vimeo)</h2>
+                                    <ul>
+                                        <span class="fragment"><h3>Vorteile:</h3></span>                                        
+                                        <li class="fragment"><span>Automatische Konventierung der Videos</span></li>                                
+                                        <li class="fragment"><span>Höhere Chancen bei google.de in den SERPS direkt als Video gelistet zu werden</span></li>                                
+                                        <li class="fragment"><span>Video kann bequem auch auf anderen Portalen eingebunden werden </span></li>                    
+                                        <li class="fragment"><span>Einbindung von Untertiteln in verschiedenen Sprachen</span></li>
+                                        <li class="fragment"><span>Spare Traffickosten </span></li>
+                                
+                                        <span class="fragment"><h3>Nachteile:</h3></span>                                  
+                                        <li class="fragment"><span>kein garantierte Verfügbarkeit</span></li>                                  
+                                        <li class="fragment"><span>Ggf. werden Links auf YouTube gesetzt und nicht auf die eigene Seite</span></li>                
+                                        <li class="fragment"><span>Keine Kontrolle mehr was die Veröffentlichung anbetrifft </span></li>
+                                        <li class="fragment"><span>Der Anbieter kann eigene Werbung schalten vor das Video schalten</span></li>                                     
+                                   </ul>
+                                <aside class="notes">
+                                    <p> </p>
+                        </section>    
+                
+                        <!--Folie 6-->                                   
+                       <section>
+                            <h2 class="u"> Selber Hosten </h2>
+                              <ul>
+                                  <span class="fragment"><h3>Vorteile:</h3></span>                                        
+                                        <li class="fragment"><span>Vollständige Kontrolle</span></li>                                
+                                        <li class="fragment"><span>Eigene Player können einfacher realisiert werden</span></li>                                
+                                        <li class="fragment"><span>Alle Versionen für alle Endgeräte und Bandbreiten können optimiert und vorgängig kontrolliert werden. </span></li>                    
+                                        <li class="fragment"><span>Selbst gewähltes Vorschaubild, das angezeigt wird, bevor das Video läuft.</span></li>                             
+                                
+                     
+                            </ul>
+                           <aside class="notes">
+                                    <p> </p>
+                        </section>              
+                        
+                         <!--Folie 7-->   
+                     <section>
+                          <h2 class="u"> HTML5</h2>
+                            <p><br>Vor HTML5 gab keine Standartmethode zum Einbinden von Videos</br>
+                                  <br>Es wurden Plug-ins wie Flash wurde zum Abspielen benötigt</br>
+                                  <br></br>
+                                </p>
+                            <p>
+                              <ul>
+                                <li class="fragment"><span>Heute gilt das Video-Element als Standartmethode       
+                                    <img src="img/htmlVideotag.jpg" width="100%" height="100%"> </span></li> 
+                                </ul> 
+                            </p> 
+                        <aside class="notes">
+                            <p> </p>
+                        </section> 
+        
+                         <!--Folie 8-->  
+                     <section>
+                         <h2 class="u">Browser</h2>
+                            <ul>                 
+                               <h3> Was muss man beachten ?</h3>
+                                  <li class="fragment"><span>Browser kompatibilität </span> 
+                                      <img src="./img/videoformate1.jpg" width="100%" height="100%"></li>
+                     <aside class="notes">
+                        <p> In dem Wrokshop benutzen wir .webm
+                         </p>
+                    </section>   
+                         <!--Folie 9-->  
+                     <section>
+                        <h2 class="u"> Browser</h2>
+                            <ul>                 
+                               <h3> Wie stelle ich ein Video für alle Browser zur Verfügung?</h3>
+                                  <li class="fragment"><span>Video in verschiedenen Versionen einbetten: </span>
+                                      <br><p> Mp4 = IE9,Safari</p>
+                                      <p>OGG = Chrome, Firefox, Opera</p>
+                                      
+  <img src="./img/browserkomp.png" width="100%" height="100%">         
+                                        
+                                     </br></li>                                         
+                            </ul>
+                        <aside class="notes">
+                            <p> </p> 
+                     </section>   
+                         
+                         <!--Folie 10--> 
+                    <section>
+                        <h2 class="u"> iframe </h2>
+                              <ul>                 
+                               <h3> Youtube videos in HTML einbetten</h3>                                 
+                                    <img src="img/youtubecode.png" width="150%" height="150%">
+                                  
+                             <li class="fragment"><span>Benutzung eines iframe-tags statt video-tags </span></li>
+                             </ul> 
+                        
+                        <aside class="notes">
+                            <p></p> 
+                     </section>
+                        
+                        <!--Folie 11-->  
+                        <section>
+                        <h2 class="u"> iframe</h2>
+                            <h3> HTML iframe  </h3><p>
+                                  <br> IFRAME wird häufig verwendet, um Werbung oder Inhalte anderer Anbieter in eine Webseite einzubetten</br>
+                                  <br>Webinhalte als selbständige Dokumente in einem definierten Bereich des Browsers anzuzeigen.</br>
+                                 </p>
+                                <p>
+                                 <h2>Vorteile</h2>
+                                 <ul>
+                                     <li> Nur Rücksicht die Maße, nicht Gestaltung und Ladezeit der IFrame-Inhalte</li>
+                                     <li> Webinhalte wir als selbständiges Dokument in einem definierten Bereich des Browsers anzuzeiget.    </li>                  
+                                  </ul>
+                                 </p>                         
+                            
+                            <aside class="notes">
+                            <p></p> 
+                        </section>
+    
+                         <!--Folie 12--> 
+                    <section>
+                        <h2 class="u"> iframe</h2>  
+                            <p></p>
+                                <br>Beispiel: Wikimedia-Startseite im Inlineframe </br>
+                                <br>(einmal normal und einmal mit frameborder="0" und scrolling="no")</br> 
+                                    <img src="img/Inlineframe.png" width="33%" height="33%">                               
+                            </p>
+                        <aside class="notes">
+                            <p></p> 
+                     </section>
+    
+                             <!--Folie 13--> 
+                        <section>
+                        <h2 class="u"> video</h2>  
+                            <p></p>
+                                    <img src="img/video.png">                               
+                            </p>
+                        <aside class="notes">
+                            <p></p> 
+                     </section>
+
+
+                         <!--Folie 14--> 
+                    <section>
+                        <h2 class="u"> Video Attribute</h2>  
+                            <p>Bedeutung der einzelnen Attribute:
+                                <ul>
+                                   <li> width – die angezeigt Breite der Videos</li>
+                                   <li> height – die angezeigt Höhe des Videos</li>
+                                   <li> poster – ein Bild, das angezeigt wird, wenn das Video noch nicht gestartet wurde</li>
+                                   <li> autoplay – das Video wird sofort gestartet</li>
+                                   <li> controls – es werden für die Steuerung Steuerelemente  angezeigt</li>
+                                   <li> autobuffer - Zwischenspeicherung aktivieren</li>
+                           </ul> </p>
+                        <aside class="notes">
+                            <p></p> 
+                     </section>
+
+                            <!--Folie 15   --> 
+                        <section> 
+                            <h2 class="u">JavaScript</h2>
+                                    <ul> 
+                                        <h3> JavaScript  -Steuerung des Video-Objekts </h3>
+                                            <li> Erstellung von Programmgesteuerten benutzerdefinierte Wiedergabesteuerelemente</li>
+        
+                                            <li>Festlegen und Abrufen der aktuellen Wiedergabeposition </li>
+                                  
+                                            <li>aktuelles Video ändern</li>
+                                    </ul>
+                            <aside class="notes">
+                            <p></p>
+                        </section>  
+                    
+                            <!--Folie 16   -->        
+                        <section>
+                            <h2 class="u"> JavaScript</h2>
+                              <ul>
+                                 <h3> JavaScript - Eigene Schaltflächen erstellen </h3></ul>
+                                  
+                                    <li class="fragment"><span><i><font color="blue">addeventlistener</font></i> </span></li>
+                                    <li class="fragment"><span><i><font color="blue">playbackrate</font></i>     </span></li>
+                                    <li class="fragment"><span><i><font color="blue">volume</font>      </i>     </span></li>
+                                    <li class="fragment"><span><i><font color="blue">currentTime</font> </i>     </span></li>        
+                                    <li class="fragment"><span><i><font color="blue">play/ pause</font> </i>     </span></li>                         
+                                    <li class="fragment"><span><i><font color="blue">paused</font>      </i>     </span></li>                      
+                                    <li class="fragment"><span><i><font color="blue">button</font>      </i>     </span></li>                    
+                                </ul>
+                            <aside class="notes">
+                            <p></p>
+                        </section> 
+                        
+                            
+                            
+                       <!--Folie 17   --> 
+    
+                            
+ <section>
+        
+          <h2 class="u"> HTML5</h2>
+                              <ul>
+                 
+                               <h3> JavaScript</h3>
+                                  
+                                <img src="./img/javascriptelemente.png" width="150%" height="150%"> 
+                                        
+        </ul></section>
+
+                           
+                            <!--Folie 18   -->
+                            
+                        <section>
+                             <h2 class="u"> JavaScript</h2>
+                              <ul>
+                 
+                                  <h3> JavaScript - eigene Schaltflächen erstellen</h3>                                
+                                      <script type="text/javascript">
+                                                function vidplay() {
+                                                    var video = document.getElementById("Video1");
+                                                    var button = document.getElementById("play");
+                                                        if (video.paused) {
+                                                                video.play();
+                                                                button.textContent = "||";
+                                                                    } else {
+                                                                        video.pause();
+                                                                            button.textContent = ">";
+                                                                        }
+                                                    }
+
+                                                 function restart() {
+                                                    var video = document.getElementById("Video1");
+                                                     video.currentTime = 0;
+                                                    }
+
+                                                function skip(value) {
+                                                    var video = document.getElementById("Video1");
+                                                    video.currentTime += value;
+                                                    }      
+                                        </script>
+</head>
+<body>        
+
+    
+    
+<video id="Video1" >
+     <source src="vid/big_buck_bunny.mp4" type="video/mp4" />
+</video>
+
+<div id="buttonbar">
+    <button id="restart" onclick="restart();">[]</button> 
+    <button id="rew" onclick="skip(-10)">&lt;&lt;</button>
+    <button id="play" onclick="vidplay()">&gt;</button>
+    <button id="fastFwd" onclick="skip(10)">&gt;&gt;</button>
+</div>
+ </ul></section>
+       
+ <section>
+            
+                            
+                            <!--Folie 19   -->
+                            
+                    <section>
+                         <h2 class="u"> HTML5</h2>
+                              <ul>
+                 
+                               <h3> JavaScript- Egenen Schaltfläche erstellen</h3>
+                                 
+                                      <img src="./img/buttonrealisieren1.png" width="80%" height="80%"> 
+                                     
+                                  </li></ul>
+                       
+                </section>
+
+    
+    
+    
+
+<section>
+                         <h2 class="u"> HTML5</h2>
+                              <ul>
+                 
+                               <h3> JavaScript- Egenen Schaltfläche erstellen</h3>
+                                 
+                                      <img src="./img/buttonrealisieren2.png" width="100%" height="100%"> 
+                                     
+                                  </li></ul>
+                       
+                </section>
+                
+                            <!--Folie 20   -->
+
+<section>
+    <h2 class="u"> Quellen</h2>
+
+    <a href="#" class="navigate-left">https://msdn.microsoft.com/de-de/library/hh924823(v=vs.85).aspx</a>
+     <a href="#" class="navigate-left">http://www.html5rocks.com/de/tutorials/video/basics/</a>
+    <a href="#" class="navigate-left">http://www.mediaevent.de</a>
+     <a href="#" class="navigate-left">http://www.elstel.org/html5video/Html5VideoScripting.html.de</a>
+     <a href="#" class="navigate-left">https://www.abakus-internet-marketing.de/</a>
+     <a href="#" class="navigate-left">http://www.blitzdonner.ch/marketingvideo-hosten-oder-youtube/</a>
+
+                
+</section>
+
+
+
+            </div>
+        </div>
+        
+        
+        <script src="../revealjs-framework/lib/js/head.min.js"></script>
+        <script src="../revealjs-framework/js/reveal.min.js"></script>
+
+		<script>
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+                {
+                    src: '../revealjs-framework/lib/js/classList.js',
+                    condition: function () {
+                        return !document.body.classList;
+                    }
+                },
+                {
+                    src: '../revealjs-framework/plugin/markdown/marked.js',
+                    condition: function () {
+                        return !!document.querySelector('[data-markdown]');
+                    }
+                },
+                {
+                    src: '../revealjs-framework/plugin/markdown/markdown.js',
+                    condition: function () {
+                        return !!document.querySelector('[data-markdown]');
+                    }
+                },
+                {
+                    src: '../revealjs-framework/plugin/highlight/highlight.js',
+                    async: true,
+                    callback: function () {
+                        hljs.initHighlightingOnLoad();
+                    }
+                },
+                {
+                    src: '../revealjs-framework/plugin/zoom-js/zoom.js',
+                    async: true,
+                    condition: function () {
+                        return !!document.body.classList;
+                    }
+                },
+                {
+                    src: '../revealjs-framework/plugin/notes/notes.js',
+                    async: true,
+                    condition: function () {
+                        return !!document.body.classList;
+                    }
+                }
+				]
+			});
+            
+            
+
+		</script>
+
+                             
+	</body>
+</html>

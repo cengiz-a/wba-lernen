@@ -2,6 +2,42 @@
 'use strict';
 
 
+<<<<<<< HEAD
+=======
+/*
+ * TODOs sind in den folgenden Zeilen zu finden:
+ *  - Zeile 16    * Element über die Entwicklerkonsole erzeugen und in das DOM einfügen
+ *  - Zeile 76    * Rahmenfarbe eines Elements per JavaScript setzen
+ *  - Zeile 83    * Einfügen eines 'span'-Elements in den DOM-Baum
+ *  - Zeile 131   * Ein EventListener zu einem Formular hinzufügen
+ *  - Zeile 141   * Formularfelder validieren (Dürfen nicht leer sein usw.)
+ */
+
+
+ /*
+  * ## ADVANCED-TODO:
+  *  Öffnen Sie die 'index.html' in einem Browser und schalten die zum Browser
+  *   gehörenden Entwicklertools ein;
+  *
+  *  Chrome:    Strg + Shift + J   oder  F12
+  *  Safari:    CMD + Option + C   ( Müssen zuerst in den Einstellungen aktiviert werden )
+  *  Firefox:   Strg + Shift + K
+  *     -> Firebug: F12
+  *
+  *  1. Erzeugen Sie über die Konsole ein 'input'-Element und weisen es einer Variable zu
+  *  2. Weisen sie dem Element die folgenden Attribut-Wert-Paare zu:
+  *       type  => 'text'
+  *       value => 'Vorname'
+  *       id    => 'test_input'
+  *  3. Fügen Sie das Element dem 'section'-Element mit der ID 'anfrageformular'
+  *       als Kindelement hinzu
+  *  4. Finden Sie das soeben dem DOM-Baum hinzugefügte Element auf der Seite
+  *  5. Löschen Sie das hinzugefügte Element wieder
+  * ##
+  */
+
+
+>>>>>>> a54fb27b30e2308a73658ebaa141b96635a00825
 /**
  * Folgender Code kümmert sich um die Validierung der Formularfelder
  * und gibt entsprechende Fehlermeldungen aus
