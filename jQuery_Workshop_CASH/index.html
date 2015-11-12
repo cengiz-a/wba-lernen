@@ -16,6 +16,7 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 <html>
 
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 	<script> 
         /*  
@@ -36,6 +37,28 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		Button dem <body>, <h6> und <p> die Klasse <p1> vergibt.
 
 		*/
+        var tmp = false;
+        $(document).ready(function(){
+                $("h3").hover(function(){
+                    $("p").slideToggle();
+                });  
+                $("h1").click(function(){
+                    $("nav, .banner, .callout").slideToggle();
+                });
+                $("blockquote").click(function(){
+                    $("this").toggle(
+                        function(){
+                            $("blockquote h6").html("So wird der Inhalt geändert! Einfach in dem man drauf klickt!");
+                        },
+                        function{
+                            $("blockquote h6").html("Clean, elegant typography matched with sharp lines and precise spacing leads to a professional look and feel.");
+                        };
+                    );
+                });
+                $(".button").click(function(){
+                    $("body, h6, p").toggleClass("p1");
+                })
+        });
 
     </script> 
 	
@@ -124,7 +147,7 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 			<div class="grid_6">
 
 				<blockquote>
-					<h6>
+					<h6 id="zitat">
 						Clean, elegant typography
 						matched with sharp lines
 						and precise spacing leads
