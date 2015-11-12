@@ -16,7 +16,7 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 <html>
 
 <head>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script> 
         /*  
 		Hier gehören die verschiedenen jQuery-Funktionen hin.
@@ -37,6 +37,29 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 
 		*/
 
+        
+        $(document).ready(function(){
+            $('h3').hover(function(){
+            $('p').slideToggle();              
+         });
+            
+            $('h1').click(function(){
+               $('nav').slideToggle();
+               $('.banner').slideToggle();
+               $('.callout').slideToggle();
+            });
+            
+            $('blockquote').click(function(){
+               $('h6').text("So wird der Inhalt geändert! Einfach in dem man drauf klickt!");
+            });
+            
+            $('h5').click(function(){
+                $('body').toggleClass("p1");
+                $('h6').toggleClass("p1");
+                $('p').toggleClass("p1");
+            });
+            
+        });
     </script> 
 	
 
