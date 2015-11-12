@@ -16,13 +16,13 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 <html>
 
 <head>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script> 
         /*  
 		Hier gehören die verschiedenen jQuery-Funktionen hin.
     
         TODO:
-     
+        
         Aufgabe 1: Erstellen Sie eine Funktion, die beim Gleiten (hover) mit der Maus über 
 		<h3> den Paragraphen <p> unter <h3> verschwinden und wieder anzeigen lässt.
          
@@ -36,7 +36,43 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 		Button dem <body>, <h6> und <p> die Klasse <p1> vergibt.
 
 		*/
-
+        $(document).ready(function()
+        {
+         $("h3").hover(function()
+        {
+         $(this).parent().find("p").slideToggle();
+         //$("p").slideToggle();
+        });
+        $("header h1").click(function()
+        {
+            $("ul.nav").slideToggle();
+            $(".banner").slideToggle();
+            $(".callout").slideToggle();
+        });
+        var text = false;
+        $("blockquote").click(function()
+        {
+            
+            if(text)
+            {
+            $("h6").text(text);
+            text=false;
+            }
+            else
+            {
+            text = $("h6").text();
+            $("h6").text("So wird der Inhalt geändert! Einfach in dem man drauf klickt!");
+            }
+        
+        });
+        $("a.button").click(function()
+        {
+           $("body").toggleClass("p1");
+           $("p").toggleClass("p1");
+           $("blockquote h6").toggleClass("p1");
+        });
+        
+                          });
     </script> 
 	
 
@@ -46,6 +82,7 @@ Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
 	<link rel="stylesheet" href="css/text.css">
 	<link rel="stylesheet" href="css/960_24_col.css">
 	<link rel="stylesheet" href="css/style.css">
+    
 
 </head>
 
