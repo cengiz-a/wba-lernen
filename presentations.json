@@ -114,5 +114,13 @@
       ],
       "date": "2015-11-12"
     }
+    ,
+    "big_data_workshop": {
+      "title": "Big Data Workshop",
+      "authors": [
+        "Sarah Klees und Michelle Simon"
+      ],
+      "date": "2015-11-12"
+    }
   }
 }
