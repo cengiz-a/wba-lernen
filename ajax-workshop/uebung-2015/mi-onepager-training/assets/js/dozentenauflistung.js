@@ -53,6 +53,13 @@ var loading_element     = dozenten_section.querySelector( '.dozenten_ladehinweis
  * @param {function} callback - Wird sowohl im Falle eines Erfolgs
  * als auch eines Fehlers aufgerufen
  */
+
+function logAjax(text){
+    var element = document.createElement('p');
+    element.textContent = text;
+    document.getElementById('ajax-log').appendChild(element);
+}
+
 function getJSON( path, callback ) {
 
     var xhr = new XMLHttpRequest();
@@ -66,13 +73,25 @@ function getJSON( path, callback ) {
      *  https://developer.mozilla.org/de/docs/Web/API/XMLHttpRequest#Eigenschaften
      */
     xhr.onreadystatechange = function() {
-	    
+        if( this.readyState === 0 ) {
+            logAjax("Readystate 0");
+        }
+	    if( this.readyState === 1 ){
+            logAjax("Readystate 1");
+        }
+        if( this.readyState === 2 ) {
+             logAjax("Readystate 2");
+        }
+        if( this.readyState === 3 ) {
+             logAjax("Readystate 3");
+        }
         /* readyState === 4 -> Vorgang abgeschlossen */
         if( this.readyState === 4 ) {
+            logAjax("Readystate 4");
             /* HTTP-Statuscode 200 -> Datei wurde gefunden und zurückgegeben */
             if( this.status === 200 ) {
                 var parsed_json = null;
-
+                console.log(this.response);
                 /*
                  *  Da beim Parsen Fehler auftreten können,
                  *    werden diese sicherheitshalber per try-catch abgefangen

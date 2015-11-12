@@ -5,8 +5,8 @@
 
 /*
  * TODOs sind in den folgenden Zeilen zu finden:
- *  - Zeile 31    * Element über eine ID selektieren/holen
- *  - Zeile 119   * 'dl'-Element erzeugen
+ *  - Zeile 31    * Element über eine ID selektieren/holen DONE
+ *  - Zeile 119   * 'dl'-Element erzeugen DONE
  *  - Zeile 158   * Fehlerabfrage mittels einer if-Abfrage
  *  - Zeile 192   * 'figure'-Element erzeugen
  *  - Zeile 215   * 'figcaption'-Element erzeugen
@@ -33,8 +33,13 @@ var lecturers_filepath  = "https://raw.githubusercontent.com/th-koeln/" +
      *  der ID 'dozenten' geholt werden
      * ##
      */
+<<<<<<< HEAD
 var dozenten_section = document.getElementById("dozenten");
 var loading_element = dozenten_section.querySelector('.dozenten_ladehinweis');
+=======
+var dozenten_section    = document.getElementById('dozenten');
+var loading_element     = dozenten_section.querySelector( '.dozenten_ladehinweis' );
+>>>>>>> 731a0199bbf436407f181632615b5ef719ec852d
 
 
 /**
@@ -120,7 +125,11 @@ function construct_dl( info ) {
      *  Ein 'dl'-Element erzeugen
      * ##
      */
+<<<<<<< HEAD
     var dl_element = document.createElement("dl"); 
+=======
+    var dl_element = document.createElement("DL") ;
+>>>>>>> 731a0199bbf436407f181632615b5ef719ec852d
 
     /* Durch alle Informationseinträge traversieren */
     for( var key in info ) {
@@ -160,7 +169,11 @@ getJSON( lecturers_filepath, function( err, data ) {
      *  dann soll der Vorgang abgebrochen werden
      * ##
      */
+<<<<<<< HEAD
     if( err != null) {
+=======
+    if( err !== null) {
+>>>>>>> 731a0199bbf436407f181632615b5ef719ec852d
         error_output( err );
         return;
     }
@@ -193,7 +206,11 @@ getJSON( lecturers_filepath, function( err, data ) {
          *  Ein 'figure'-Element erzeugen
          * ##
          */
+<<<<<<< HEAD
         var figure_element = document.createElement("figure");
+=======
+        var figure_element = document.createElement('FIGURE');
+>>>>>>> 731a0199bbf436407f181632615b5ef719ec852d
 
         /* Basisinformationen vorbereiten */
         var basic_infos = value.basic_infos || {};
@@ -216,8 +233,12 @@ getJSON( lecturers_filepath, function( err, data ) {
          *  Ein 'figcaption'-Element erzeugen
          * ##
          */
+<<<<<<< HEAD
         var figcaption_element = document.createElement("figcatption");
 
+=======
+        var figcaption_element = document.createElement('FIGCAPTION');
+>>>>>>> 731a0199bbf436407f181632615b5ef719ec852d
         var name_headline_element = document.createElement( 'h1' );
         name_headline_element.innerHTML = lecturer_name;
 
@@ -231,6 +252,7 @@ getJSON( lecturers_filepath, function( err, data ) {
          * ##
          */
         var basic_infos = {
+<<<<<<< HEAD
                         'Raum:'   : basic_infos.room,
                         'Telefon:': basic_infos.phone_number,
                         'eMail:'  : lecturer_email,
@@ -244,6 +266,14 @@ getJSON( lecturers_filepath, function( err, data ) {
            'Website:': basic_infos.website
            */
 
+=======
+            'Raum:'   : basic_infos.room,
+            'Telefon:': basic_infos.phone_number,
+            'eMail:'  : lecturer_email,
+            'Website:': basic_infos.website
+            
+        };
+>>>>>>> 731a0199bbf436407f181632615b5ef719ec852d
         var dl_element_basic = construct_dl( basic_infos );
 
 
@@ -264,9 +294,15 @@ getJSON( lecturers_filepath, function( err, data ) {
          *  Beheben Sie diese.
          * ##
          */
+<<<<<<< HEAD
         for (var key in custom_infos ) { /* Beginn der for-Schleife */
             var value = custom_infos[ key ];
 
+=======
+        for( var key in custom_infos ) { /* Beginn der for-Schleife */
+            
+            var value = custom_infos[key];
+>>>>>>> 731a0199bbf436407f181632615b5ef719ec852d
             /* Leere Einträge überspringen */
             if( value.title === '' || value.content === '' ) {
               return;
