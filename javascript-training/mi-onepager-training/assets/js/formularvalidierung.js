@@ -87,6 +87,7 @@ function create_and_append_error_msg( input_element, error_msg ) {
      */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     input_element.style.borderColor = "#DD1166";
 =======
     input_element.style.borderColor = '#DD1166';/* Und hier */;
@@ -94,6 +95,9 @@ function create_and_append_error_msg( input_element, error_msg ) {
 =======
     input_element.style.borderColor = '#DD1166';
 >>>>>>> 731a0199bbf436407f181632615b5ef719ec852d
+=======
+    input_element.style.borderColor = '#DD1166';
+>>>>>>> 9f05644b9360162a16030a5caf016cf4b3b5084d
 
     /*
      * ## ADVANCED-TODO:
@@ -103,6 +107,7 @@ function create_and_append_error_msg( input_element, error_msg ) {
      *  2. Vaterlement das 'error_span_element' als Kindelement anfügen
      * ##
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     var input_parent_element = input_element.parentNode;
@@ -119,6 +124,11 @@ function create_and_append_error_msg( input_element, error_msg ) {
     input_parent_element.appendChild(error_span_element);
 
 >>>>>>> 731a0199bbf436407f181632615b5ef719ec852d
+=======
+    var input_parent_element = input_element.parentNode;
+    input_parent_element.appendChild(error_span_element);
+
+>>>>>>> 9f05644b9360162a16030a5caf016cf4b3b5084d
     /* Als kleine Hilfe wird vermerkt, dass es bei dem Eingabefeld ein Fehler gab */
     input_element.dataset.error = true;
 }
@@ -164,6 +174,7 @@ var anfrageformular_element = document.querySelector( '#anfrageformular' ),
  */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -178,6 +189,9 @@ formular_element.addEventListener("submit",function( e ) {
 =======
 formular_element.addEventListener('submit', function( e ) {
 >>>>>>> 731a0199bbf436407f181632615b5ef719ec852d
+=======
+formular_element.addEventListener('submit', function( e ) {
+>>>>>>> 9f05644b9360162a16030a5caf016cf4b3b5084d
     /* Wird auf 'false' gesetzt, sofern irgendwo ein Validierungsfehler auftrat */
     var allValid = true;
 
@@ -201,6 +215,7 @@ formular_element.addEventListener('submit', function( e ) {
     /* ## Vorname */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     if( vorname_input_element.value === ""  || vorname_input_element.value.length > 20) {
 =======
     if( vorname_input_element.value === "" ) {
@@ -208,6 +223,9 @@ formular_element.addEventListener('submit', function( e ) {
 =======
     if(vorname_input_element.value === "" ) {
 >>>>>>> 731a0199bbf436407f181632615b5ef719ec852d
+=======
+    if(vorname_input_element.value === "" ) {
+>>>>>>> 9f05644b9360162a16030a5caf016cf4b3b5084d
         create_and_append_error_msg( vorname_input_element,
                                      "Bitte geben Sie einen Vornamen ein!" );
         allValid = false;
@@ -230,6 +248,7 @@ formular_element.addEventListener('submit', function( e ) {
     /* ## Email */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     if(     email_input_element.value === ""
 =======
     if(email_input_element.value === ""
@@ -238,6 +257,9 @@ formular_element.addEventListener('submit', function( e ) {
     if(     email_input_element.value === ""
 >>>>>>> 731a0199bbf436407f181632615b5ef719ec852d
         || !email_input_element.value.match(/.+@.+\..+/) ) {
+=======
+    if(     email_input_element.value === "" || !email_input_element.value.match(/.+@.+\..+/) ) {
+>>>>>>> 9f05644b9360162a16030a5caf016cf4b3b5084d
 
         create_and_append_error_msg( email_input_element,
                                      "Bitte geben Sie eine eMail-Adresse ein!" );
@@ -250,6 +272,7 @@ formular_element.addEventListener('submit', function( e ) {
     /* ## Nachricht */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     if( nachricht_input_element.value === "" ) {
 =======
     if(nachricht_input_element.value === "" ) {
@@ -257,6 +280,9 @@ formular_element.addEventListener('submit', function( e ) {
 =======
     if( nachricht_input_element.value === "" ) {
 >>>>>>> 731a0199bbf436407f181632615b5ef719ec852d
+=======
+    if( nachricht_input_element.value === "" ) {
+>>>>>>> 9f05644b9360162a16030a5caf016cf4b3b5084d
         create_and_append_error_msg( nachricht_input_element,
                                      "Bitte geben Sie eine Nachricht ein!" );
         allValid = false;
