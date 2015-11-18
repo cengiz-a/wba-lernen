@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WBA1 RD Projekt</title>
+        <link rel="stylesheet" href="style/style_uebung1.css" type="text/css"/>
+        <!--Ohne Die nachfolgende Zeile ist Responsive Design nicht möglich, denn wir müssen erst einmal festlegen,
+          dass das Design Geräteabhängig ist. Danach geben wir die Skalierung an (Liegt durch das unten angegebene
+          immer bei 1.0 und der Benutzer hat keine Möglichkeit "nach zu skalieren" (Browser abhängig) -->
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript">
+	       jQuery(function($){
+    	     $( '.menu_ham' ).click(function(){
+    	       $('nav').slideToggle('slow');
+    	     });
+           });
+        </script>
+    </head>
+    <body>
+        <section id="menubar">
+            <ul>
+                <li><a class="menu_ham"><img src="img/hamburger.png"></a></li>
+            </ul>
+        </section>
+        <header>
+            <h1>Kontaktdaten</h1>
+        </header>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html"> Home</a></li>
+                <li><a href="speisekarte.html"> Menükarte</a></li>
+                <li><a href="informationen.html"> Informationen</a></li>
+                <li><a href="bewertungen.html"> Bewertungen</a></li>
+                <li><a href="kontakte.html" class="active"> Kontaktdaten</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section>
+                <h2>Kontaktdaten: </h2>
+                <p>Diese Website und die auf der Website vorgehaltenen Services werden Ihnen geboten von:
+                <br>Mend
+                <br>Steinmüllergelände
+                <br>51643 Gummersbach
+                <br>Deutschland
+                <br>Tel: 0000/000000
+                <br>Fax: 0000/000001
+                <br>E-Mail: support-mend@mend.de
+                </p>
+                <p>Bitte verwenden Sie zur elektronischen Kontaktaufnahme mit Mend die verfügbaren elektronischen Formulare. Aufgrund der                        großen Anzahl von Anfragen können nur Mitteilungen, die über dafür bereitstehende Kontaktformulare gesendet werden,                            zielgerichtet und schnell zum zuständigen Mitarbeiter gelangen.</p>
+                <p>Vorstand: Clara Meschkat (Vorstandsvorsitzende), Nico Ferdinand</p>
+                <p>Mend ist eine nach dem Recht des Bundesstaates NRW gegründete und registrierte Gesellschaft. Registernummer: XXXXXX</p>
+            </section>
+        </main>
+        <footer>
+            <ul>
+                <li><a href="index.html">&copy; Mend</a></li>
+                <li><a href="impressum.html">Impressum</a></li>
+                <li><a href="kontakte.html">Kontakt</a></li>
+                <li><a href="datenschutz.html">Datenschutz</a></li>
+            </ul>
+        </footer>
+    </body>
+</html>
