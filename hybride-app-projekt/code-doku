@@ -21,46 +21,64 @@ Codedokumentation
 
 1.1 - www/index.html
 
-Die index.html Datei ist das HTML Grundgerüst der App. Dort werden alle CSS und Javascript Dateien eingebunden. Im body Parameter "ng-controller" wird festgelegt, welche Seite bzw. welcher Controller am Anfang gestartet wird.
+Die index.html Datei ist das HTML Grundgerüst der App. Dort werden alle CSS und Javascript Dateien eingebunden. 
+Im body Parameter "ng-controller" wird festgelegt, welche Seite bzw. welcher Controller am Anfang gestartet wird.
 
 2.1 - www/templates/login.html
 
-Die login.html ist die erste Seite die aufgerufen wird. Dort befindet sich ein Formular mit zwei Textfeldern, in denen der Benutzername und das Passwort eingegeben werden müssen. Beim Absenden des Formulars wird die Funktion doLogin() aufgerufen, welche sich im Controller der Seite befindet. Der Parameter der Textfelder "ng-model" sorgt dafür, dass beim Absenden des Formulars der Inhalt der beiden Felder einer festen Variable zugeordnetet werden kann.
+Die login.html ist die erste Seite die aufgerufen wird. Dort befindet sich ein Formular mit zwei Textfeldern, 
+in denen der Benutzername und das Passwort eingegeben werden müssen. Beim Absenden des Formulars wird die Funktion 
+doLogin() aufgerufen, welche sich im Controller der Seite befindet. Der Parameter der Textfelder "ng-model" sorgt dafür, 
+dass beim Absenden des Formulars der Inhalt der beiden Felder einer festen Variable zugeordnetet werden kann.
 
 2.2 - www/templates/menu.html
 
-In der menu.html wird die Struktur der App definiert. Dort wird zuerst im Tag "ion-side-menu-content" der normale Content der App strukturiert, was erst mal nur den Header der Seite betrifft. Im Tag "ion-side-menu" wird dann das Menü definiert, mit einer Überschrift und den einzelnen Links zu den Seiten.
+In der menu.html wird die Struktur der App definiert. Dort wird zuerst im Tag "ion-side-menu-content" der normale Content 
+der App strukturiert, was erst mal nur den Header der Seite betrifft. Im Tag "ion-side-menu" wird dann das Menü definiert, 
+mit einer Überschrift und den einzelnen Links zu den Seiten.
 
 2.3 - www/templates/rangliste.html
 
-In der rangliste.html werden in einer Liste die Benutzer mit ihrem Punktestand ausgegeben. Am Anfang gibt es einen "ion-refresher" Tag der dafür sorgt, dass wenn man die Seite nach unten zieht sie neu geladen wird.
+In der rangliste.html werden in einer Liste die Benutzer mit ihrem Punktestand ausgegeben. Am Anfang gibt es einen 
+"ion-refresher" Tag der dafür sorgt, dass wenn man die Seite nach unten zieht sie neu geladen wird.
 
 2.4 - www/templates/spieltag.html
 
-In der spieltag.html werden alle Spiele jeweils mit zwei Textfeldern ausgegeben, in denen die Tipps eingetragen werden können. Mit dem Parameter "ng-repeat" kann man eine Art foreach Schleife im HTML Code ausführen. SpieltagData ist in diesem Fall ein Array, welches im Controller definiert wird. Wenn man also ein div erstellt und den Parameter "ng-repeat" mit dem Inhalt "spiel in spieltagData" einsetzt, wird für jedes Spiel dieses div erstellt und in der Variable "spiel" hat man dann die Daten für das jeweilige Spiel. Beim Klick auf "Speichern" wird die Funktion save() aufgerufen.
+In der spieltag.html werden alle Spiele jeweils mit zwei Textfeldern ausgegeben, in denen die Tipps eingetragen werden 
+können. Mit dem Parameter "ng-repeat" kann man eine Art foreach Schleife im HTML Code ausführen. SpieltagData ist in 
+diesem Fall ein Array, welches im Controller definiert wird. Wenn man also ein div erstellt und den Parameter "ng-repeat" 
+mit dem Inhalt "spiel in spieltagData" einsetzt, wird für jedes Spiel dieses div erstellt und in der Variable "spiel" hat 
+man dann die Daten für das jeweilige Spiel. Beim Klick auf "Speichern" wird die Funktion save() aufgerufen.
 
 2.5 - www/templates/spieltage.html
 
-In der spieltage.html werden ebenfalls mit einer ng-repeat Schleife alle Spieltage als Link zu einer Detail View Seite ausgegeben.
+In der spieltage.html werden ebenfalls mit einer ng-repeat Schleife alle Spieltage als Link zu einer Detail View Seite 
+ausgegeben.
 
 
 2.6 - www/templates/startseite.html
 
-Die startseite.html wird nach dem erfolgreichen Login aufgerufen. Dort werden die Variablen die Controller definiert werden u.a. mit einer ng-repeat Schleife ausgegeben.
+Die startseite.html wird nach dem erfolgreichen Login aufgerufen. Dort werden die Variablen die Controller definiert 
+werden u.a. mit einer ng-repeat Schleife ausgegeben.
 
 3.1 - www/js/app.js
 
-In der app.js wird zuerst das Angular Modul gestartet. Dann gibt es eine factory die dafür zuständig ist, nach einem Klick auf einen Spieltag die entsprechende Spieltag Nummer an den Controller zu übergeben, damit dieser die entsprechenden Daten ermitteln kann. Danach wird jede Seite u.a. mit der Url und dem Controller konfiguriert.
+In der app.js wird zuerst das Angular Modul gestartet. Dann gibt es eine factory die dafür zuständig ist, nach einem 
+Klick auf einen Spieltag die entsprechende Spieltag Nummer an den Controller zu übergeben, damit dieser die entsprechenden 
+Daten ermitteln kann. Danach wird jede Seite u.a. mit der Url und dem Controller konfiguriert.
 
 3.2 - www/js/controller.js
 
-In der controller.js werden die Controller der einzelnen Seiten definiert. Dort werden die Variablen und Funktionen der Seiten aufgelistet, wie zum Beispiel die Funktion die die Benutzerdaten an ein PHP Skript sendet und die Antwort entsprechend auswertet.
+In der controller.js werden die Controller der einzelnen Seiten definiert. Dort werden die Variablen und Funktionen der 
+Seiten aufgelistet, wie zum Beispiel die Funktion die die Benutzerdaten an ein PHP Skript sendet und die Antwort 
+entsprechend auswertet.
 
 
 
 3.3 - www/js/services.js
 
-Hier befindet sich der Service, der für die Cookies zuständig ist, welche für den Login benötigt werden. Hierfür wurde extra ein neues Modul Namens "angular-cookies" installiert.
+Hier befindet sich der Service, der für die Cookies zuständig ist, welche für den Login benötigt werden. Hierfür wurde 
+extra ein neues Modul Namens "angular-cookies" installiert.
 
 
 
