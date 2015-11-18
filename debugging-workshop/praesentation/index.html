@@ -38,14 +38,15 @@
   <body>
     <div class="reveal">
       <div class="slides">
-          <section>
-            <h2>Debugging</h2>
+          <section class="title" data-transition="convex">
+            <h1>Debugging</h1>
+            <h2>im Web</h2>
             <img id="firebug" class="clearfix" src="images/firebug.png">
           </section>
-              <section>
+              <section data-transition="convex">
                 <section>
                   <h1>Entwicklerwerkzeuge</h1>
-                  <p>... und was mit ihnen möglich ist</p>
+                  <h5 class="pink">... und was mit ihnen möglich ist</h5>
                 </section>
                 <section>
                   <h1>Browser</h1>
@@ -72,7 +73,7 @@
                             <img class="browser-logo" src="images/sa.png">
                         </td>
                         <td>
-                          Einstellungen → Erweitert → ✓ Entwickler Menu anzeigen
+                          Einstellungen → Erweitert → ✓ Entwickler Menü anzeigen
                         </td>
                       </tr>
                       <tr>
@@ -80,7 +81,7 @@
                             <img class="browser-logo" src="images/op.png">
                         </td>
                         <td>
-                          http://dev.opera.com → den Anweisungen folgen
+                          Darstellung → Entwickler-Menü zeigen
                         </td>
                       </tr>
                       <tr>
@@ -95,7 +96,7 @@
                   </table>
                 </section>
               </section>
-              <section>
+              <section data-transition="convex">
                 <section>
                   <h2>HTML anpassen</h2>
                 </section>
@@ -103,9 +104,23 @@
                   <h1>Inspizierung des DOM's</h1>
                   <img src="images/DOM.jpg">
                 </section>
+                <section>
+                  <h1>HTML Validierung</h1>
+                  <ul>
+                    <li>Überprüfung, ob Webseiten aktuellen Standards entsprechen</li>
+                    <li>Suchmaschinenoptimierung</li>
+                    <li>Barrierefreiheit</li>
+                    <li>garantierte Darstellung</li>
+                  </ul>
+                </section>
+                <section>
+                  <h1>Aufgabe 1</h1>
+                  <p>Validieren Sie den MI Onepager mittels W3C Validierungsservice und korrigieren Sie vorhandene Fehler (Warnings können ignoriert werden).</P>
+                  <p><a href="http://www.validator.w3.org">validator.w3.org</a></p>
+                  <p>Zeit: 15-20 Minuten</p>
+                </section>
               </section>
-          </section>
-          <section>
+          <section data-transition="convex">
               <section><h2>CSS anpassen</h2></section>
               <section>
                 <h1>Die Styles</h1>
@@ -115,17 +130,109 @@
                 <h1>Das Layout</h1>
                 <img src="images/CSS-Layout.png">
               </section>
-          </section>
-          <section>
-              <section><h2>Javascript Debugging<h2></section>
-              <section>Vertical Slide 2</section>
-          </section>
-          <section>
-            <section><h2>Aufgaben</h2></section>
               <section>
-                <h1>Aufgabe 1</h1>
-
+                <h1>Aufgabe 2</h1>
               </section>
+          </section>
+          <section data-transition="convex">
+              <section><h2>Javascript Debugging<h2></section>
+              <section>
+                <h1>Debugging früher</h1>
+                <pre><code class="javascript split">
+var x=4, y=3;
+y = x*y+y;
+
+alert(y);
+
+y = y*Math.random();
+
+alert(y);
+                </code></pre>
+                <img class="float-right clearfix" src="images/alert.png" alt="" />
+              </section>
+              <section>
+                <h1>Console API</h1>
+                <h3>console.log()</h3>
+                <pre>
+                  <code class="javascript">
+a = 2;
+console.log(a);
+b = 3;
+console.log(b);
+c = a*a + b*b;
+console.log(c);
+                  </code>
+                </pre>
+                <div class="">
+                  <h4>Parameter</h4>
+                  <ul>
+                    <li>eine Variable oder Zeichenkette </li>
+                    <li>eine kommagetrennte Liste aus Variablen oder Zeichenketten </li>
+                  </ul>
+              </div>
+              </section>
+              <section>
+                <h3>String Substitution</h3>
+                <pre>
+                  <code class="javascript">
+var name = prompt('Bitte geben Sie Ihren Namen ein!', '');
+for (var i=0; i<9; i++) {
+  console.log("Hallo, %s. Das ist der %d. Schleifendurchlauf.", name, i+1);
+}
+                  </code>
+                </pre>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>
+                        %o
+                      </td>
+                      <td>
+                        fügt einem JavaScript Objekt einen Link hinzu. Anklicken öffnet einen Inspektor.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        %d oder %i
+                      </td>
+                      <td>
+                        gibt eine Ganzzahl heraus (keine Formatierung möglich)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        %s
+                      </td>
+                      <td>
+                        gibt eine Zeichenkette heraus
+                      </td>
+                    </tr>
+                    <td>
+                      %f
+                    </td>
+                    <td>
+                      gibt einen Fließkommawert (Dezimalzahl) heraus
+                    </td>
+                  </tbody>
+                </table>
+              </section>
+              <section>
+                <h1>Breakpoints</h1>
+                <h3>der debugger Befehl</h3>
+                <pre>
+                  <code class="javascript">
+var x = 12 * 6;
+debugger;
+document.getElementbyId("demo").value = x;
+                  </code>
+                </pre>
+              </section>
+              <section>
+                <h1>Aufgabe 3</h1>
+              </section>
+          </section>
+          <section data-background="https://media.giphy.com/media/Cf6KmzYYJAg8w/giphy.gif" data-transition="slide-in fade-out">
+            <div class="blackbox"><h3>Vielen Dank für die Aufmerksamkeit!</h3></div>
           </section>
       </div>
     </div>
