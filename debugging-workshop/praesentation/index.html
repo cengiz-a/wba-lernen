@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Debugging Workshop</title>
+
+    <meta name="description" content="Die Workshop Präsentation zum Thema Debugging">
+    <meta name="author" content="Daniel Holbach und Tobias Kastner">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="libs/css/custom.css">
+
+    <link rel="stylesheet" href="libs/css/reveal.css">
+    <link rel="stylesheet" href="libs/css/theme/medieninformatik-fancy.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="libs/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'libs/css/print/pdf.css' : 'libs/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="libs/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+          <section>
+            <h2>Debugging</h2>
+            <img id="firebug" class="clearfix" src="images/firebug.png">
+          </section>
+              <section>
+                <section>
+                  <h1>Entwicklerwerkzeuge</h1>
+                  <p>... und was mit ihnen möglich ist</p>
+                </section>
+                <section>
+                  <h1>Browser</h1>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <img class="browser-logo" src="images/ff.png">
+                        </td>
+                        <td>
+                          http://www.getfirebug.org → den Anweisungen folgen
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <img class="browser-logo" src="images/gc.png">
+                        </td>
+                        <td>
+                          Anzeigen → Entwickler → Entwicklertools
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                            <img class="browser-logo" src="images/sa.png">
+                        </td>
+                        <td>
+                          Einstellungen → Erweitert → ✓ Entwickler Menu anzeigen
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                            <img class="browser-logo" src="images/op.png">
+                        </td>
+                        <td>
+                          http://dev.opera.com → den Anweisungen folgen
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                            <img class="browser-logo" src="images/me.png">
+                        </td>
+                        <td>
+                          Strg + 1-7
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </section>
+              </section>
+              <section>
+                <section>
+                  <h2>HTML anpassen</h2>
+                </section>
+                <section>
+                  <h1>Inspizierung des DOM's</h1>
+                  <img src="images/DOM.jpg">
+                </section>
+              </section>
+          </section>
+          <section>
+              <section><h2>CSS anpassen</h2></section>
+              <section>
+                <h1>Die Styles</h1>
+                <img src="images/CSS.png">
+              </section>
+              <section>
+                <h1>Das Layout</h1>
+                <img src="images/CSS-Layout.png">
+              </section>
+          </section>
+          <section>
+              <section><h2>Javascript Debugging<h2></section>
+              <section>Vertical Slide 2</section>
+          </section>
+          <section>
+            <section><h2>Aufgaben</h2></section>
+              <section>
+                <h1>Aufgabe 1</h1>
+
+              </section>
+          </section>
+      </div>
+    </div>
+
+
+    <script src="libs/js/reveal.js"></script>
+    <script src="libs/js/head.min.js"></script>
+
+    <script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'libs/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'libs/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'libs/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'libs/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'libs/plugin/zoom-js/zoom.js', async: true },
+					{ src: 'libs/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+  </body>
+
+</html>
