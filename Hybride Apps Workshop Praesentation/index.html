@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Workshop - Webpräsentation mit reveal.js</title>
+
+    <meta name="description" content="Workshop zu Ajax">
+    <meta name="author" content="Lali Nurtaev und Daniel Heuser">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="../revealjs-framework/css/reveal.min.css">
+    <link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="../revealjs-framework/lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? '../revealjs-framework/css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <!--[if lt IE 9]>
+		<script src="../revealjs-framework/lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Webbasierte Anwendungen 1</h1>
+                <h2 class="u">Hybride Apps</h2>
+                <p>19. November 2015</p>
+                <p>Studiengang Medieninformatik an der Technischen Hochschule Köln
+                    <br> Campus Gummersbach</p>
+                <p style="margin-top:15%">Fabian Daugs, Niklas Reinhardt</p>
+                
+            </section>
+
+            <section>
+                <h2 class="u">Was sind Hybride Apps?</h2>
+                <ul>
+                    <li class="fragment">mit <span class="_pink">HTML5, CSS3 und Javascript</span> programmierte <span class="_pink">Webapps</span> die in einer Art Browser auf einem Smartphone laufen</li>
+                    <li class="fragment">können für <span class="_pink">verschiedene Plattformen</span> gepublished werden </li>
+                </ul>
+            </section>
+
+
+
+
+
+            <section data-background-color="#dd1166" class="_center invers">
+                <section>
+                    <h1>Was sind die Vorteile?</h1>
+                </section>
+
+            </section>
+
+
+
+
+            <section>
+                <h2 class="u">Hybride Apps - Vorteile</h2>
+                <ul>
+                    <li class="fragment">es muss <span class="_pink">kein nativer Code</span> geschrieben werden</li>
+                    <li class="fragment">können komplett <span class="_pink">offline</span> verfügbar gemacht werden</li>
+                    <li class="fragment">der Zugriff auf <span class="_pink">Hardwarekomponenten</span> ist möglich</li>
+                </ul>
+            </section>
+
+            <section data-background-color="#dd1166" class="_center invers">
+                <section>
+                    <h1>Was sind die Nachteile?</h1>
+                </section>
+
+            </section>
+
+            <section>
+                <h2 class="u">Hybride Apps - Nachteile</h2>
+                <ul>
+                    <li class="fragment">es kann zu Problemen mit den <span class="_pink">Zugriffsrechten</span> kommen</li>
+                    <li class="fragment">einschränkungen bei <span class="_pink">plattformspezifische Interaktionen</span> </li>
+                    <li class="fragment"> <span class="_pink">Performanceschwächen</span> bei rechenintensiven Anwendungen</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2 class="u">Übersicht Frameworks</h2>
+                <ul>
+                    <li class="fragment"><span class="_pink">Ionic</span> ist einfach zu schreiben und ermöglicht dank Cordova umfangreiche Hardwareintegration </li>
+                    <li class="fragment"><span class="_pink">Intel XDK </span> es werden Bootstrap 3, jQuery mobile, Ionic und das Topcoat-UI-Framework unterstüzt.</li>
+                    <li class="fragment"><span class="_pink">Onsen UI  </span> ist dank jQuery und vieler fertiger Komponenten besonders Einsteigerfreundlich</li>
+                    <li class="fragment"><span class="_pink"> Famous  </span> legt den Focus auf 2D- und 3D-Rederings und ist somit ideal für Spielentwicklung</li>
+                </ul>
+                <aside class="notes">
+                    <p>Cordova: Engine Phonegap eine Cordova distribution-- Crossplatform tool</p>
+                </aside>
+            </section>
+
+            <section>
+                <h2 class="u">Komponenten der Appentwicklung</h2>
+
+                <img style="height: 100%; margin:0 16%;" src="images/ionic-app-entwicklung1-596x611.jpg" alt="theme_sky.png" style="background:none; border:none; box-shadow:none;" />
+
+            </section>
+
+            <section>
+                <h2 class="u">Möglichkeiten zum Speicherplatz sparen</h2>
+                <ul>
+                    <li class="fragment">Hardwareintegration durch <span class="_pink">Cordova Plugins</span> </li>
+                    <li class="fragment">ng-Cordova <a href="http://ngcordova.com/build/">Custom Bulid</a> </li>
+                </ul>
+            </section>
+
+            <section>
+
+                <h2 class="u" style="color:#231f20;">Ionic - Grundlagen des Frameworks</h2>
+                <img class="fragment fade-in" style="float: right; width: 20%;" src="images/header_forms.PNG" alt="theme_sky.png" style="background:none; border:none; box-shadow:none;" />
+
+                <ol style="75%">
+                    <li class="fragment">
+                        Der Header</br>
+                        <pre><code >
+&lt;ion-header-bar align-title="left" class="bar-positive"&gt;
+    &lt;button class="button" ng-click="doSomething()"&gt;Left Button&lt;/button&gt;
+    &lt;h1 class="title"&gt;Title!&lt;/h1&gt;
+    &lt;button class="button">Right Button&lt;/button&gt;
+&lt;/ion-header-bar&gt;
+                            </code></pre>
+                    </li>
+                    <li class="fragment" style="padding-top: 1.4rem;">
+                        Inputfelder</br>
+                        <pre><code>
+&lt;div class="list list-inset"&gt;
+    &lt;label class="item item-input"&gt;
+        &lt;input type="text" placeholder="Benutzername"&gt;
+    &lt;/label&gt;
+    &lt;label class="item item-input"&gt;
+        &lt;input type="password" placeholder="Passwort"&gt;
+    &lt;/label&gt;
+&lt;/div&gt;</code></pre>
+                    </li>
+
+            </section>
+
+            <section>
+
+                <h2 class="u" style="color:#231f20;">Ionic - Grundlagen des Frameworks</h2>
+                <img class="fragment fade-in" style="float: right; width: 20%;" src="images/button_col.PNG" alt="theme_sky.png" style="background:none; border:none; box-shadow:none;" />
+
+                <ol style="75%">
+                    <li class="fragment">
+                        Colum System</br>
+                        <pre><code >
+&lt;div class="row"&gt;
+    &lt;div class="col text-center"&gt;
+        &lt;button class="button button-positive"&gt;
+            Anmelden
+        &lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                            </code></pre>
+                    </li>
+                    <li class="fragment" style="padding-top: 1.4rem;">
+                        Interaktion - Funktionsaufruf</br>
+                        <pre><code>
+&lt;button class="button button-full button-positive ng-click="function()""&gt;
+    Anmelden
+&lt;/button&gt;</code></pre>
+                    </li>
+
+                    <li class="fragment" style="padding-top: 1.4rem;"><a href="http://ionicframework.com/docs/">Ionic Dokumentation</a></li>
+                </ol>
+            </section>
+
+
+            <section>
+                <h2 class="u">Hardwareintegration ng-Cordova Setup</h2>
+                <ol style="width:95%">
+                    </li>
+                    <li class="fragment" style="padding-top: 1.4rem;">Einbinden
+                        <pre style="height: 100%; float:left "><code>  
+angular.module('starter', ['ionic', 'ngCordova'])
+    </code></pre>
+                    </li>
+                    <li class="fragment" style="padding-top: 1.4rem;">Controller <pre style="height: 100%; float:left "><code>.controller('AppCtrl', function ($scope, $cordovaCamera, $cordovaFile) {
+//Funktionen
+}); </code></pre> </li>
+                </ol>
+            </section>
+
+
+
+            <section>
+                <h2 class="u">Hardwareintegration ng-Cordova Kamera</h2>
+                <ol style="width:95%">
+
+                    <li class="fragment">HTML
+                        <pre style="height: 100%; float:left "><code>  
+&lt;img ng-show="imgURI !== undefined" ng-click="takePicture()"
+    ng-src="{{imgURI}}"   class="circular"&gt;
+&lt;img ng-show="imgURI === undefined" ng-click="takePicture()"
+    ng-src="img/placeholder.png" class="circular"&gt;          
+    </code></pre>
+                    </li>
+                    <li class="fragment">Javascript<pre style=" overflow: hidden "><code>$scope.takePicture = function () {
+        var options = {
+            quality: 75,
+            destinationType: Camera.DestinationType.DATA_URL,
+            sourceType: Camera.PictureSourceType.CAMERA,
+            allowEdit: true,
+            encodingType: Camera.EncodingType.JPEG,
+            targetWidth: 300,
+            targetHeight: 300,
+            popoverOptions: CameraPopoverOptions,
+            saveToPhotoAlbum: false,
+            correctOrientation:true
+        };
+        $cordovaCamera.getPicture(options).then(function (imageData) {
+            $scope.imgURI = "data:image/jpeg;base64," + imageData;
+        }, function (err) {
+            // An error occured. Show a message to the user
+        });
+};</code></pre></li>
+                </ol>
+            </section>
+
+
+
+
+        </div>
+    </div>
+
+
+
+    <script src="../revealjs-framework/lib/js/head.min.js"></script>
+    <script src="../revealjs-framework/js/reveal.min.js"></script>
+
+    <script>
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+            keyboard: true,
+
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+            // Optional reveal.js plugins
+            dependencies: [
+                {
+                    src: '../revealjs-framework/lib/js/classList.js',
+                    condition: function () {
+                        return !document.body.classList;
+                    }
+                },
+                {
+                    src: '../revealjs-framework/plugin/markdown/marked.js',
+                    condition: function () {
+                        return !!document.querySelector('[data-markdown]');
+                    }
+                },
+                {
+                    src: '../revealjs-framework/plugin/markdown/markdown.js',
+                    condition: function () {
+                        return !!document.querySelector('[data-markdown]');
+                    }
+                },
+                {
+                    src: '../revealjs-framework/plugin/highlight/highlight.js',
+                    async: true,
+                    callback: function () {
+                        hljs.initHighlightingOnLoad();
+                    }
+                },
+                {
+                    src: '../revealjs-framework/plugin/zoom-js/zoom.js',
+                    async: true,
+                    condition: function () {
+                        return !!document.body.classList;
+                    }
+                },
+                {
+                    src: '../revealjs-framework/plugin/notes/notes.js',
+                    async: true,
+                    condition: function () {
+                        return !!document.body.classList;
+                    }
+                }
+				]
+        });
+    </script>
+
+</body>
+
+</html>
