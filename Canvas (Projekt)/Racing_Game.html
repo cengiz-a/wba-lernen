@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="Racing_Game.css">
+    <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+    <div id="menu">
+        <nav>
+            <ul>
+                <li>
+                    <a href="">Levelauswahl</a>
+                    <ul>
+                        <li><a id="buttonOne" onclick="calcLevelOne(), actLevel = 0;">Level 1</a></li>
+                        <li><a id="buttonTwo" onclick="calcLevelTwo(), actLevel = 0">Level 2</a></li>
+                        <li><a id="buttonRandom" onclick="calcLevelRandom(), actLevel = 0">Level Random</a></li>
+                        <li><a id="buttonHardcore" onclick="calcLevelHardcore(), actLevel = 0">Hardcore</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">Autoauswahl</a>
+                    <ul>
+                        <li><a onclick="batmanCar()">Batman</a></li>
+                        <li><a onclick="redCar()">Red Car</a></li>
+                        <li><a onclick="blueCar()">Blue Car</a></li>
+                    </ul>
+                </li>
+                <li><a id="buttonStart" onclick="startLevel()">Start Level</a></li>
+
+                <li><a id="buttonStop" onclick="stopLevel()">Stop Level</a></li>
+
+                <li><a id="buttonCredits" onclick="analyzeLevel('Credits')">Credits</a></li>
+
+                <li>
+                    <h2 id="highscore">Highscore: 0</h2></li>
+            </ul>
+        </nav>
+    </div>
+    <canvas id="myCanvas" tabindex="0"></canvas>
+
+    <script language="javascript" type="text/javascript" src="Racing_Game.js"></script>
+</body>
+
+</html>
