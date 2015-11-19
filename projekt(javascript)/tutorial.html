@@ -19,7 +19,10 @@
           <div class="container navigation">
             <p class="text-center">
               <button type="button" class="btn btn-default"><a href="index.html">Startseite</a></button>
-              <button type="button" class="btn btn-default"><a href="#">Los geht's</a></button>
+              <button type="button" class="btn btn-default"><a href="#1">Kapitel 1</a></button>
+              <button type="button" class="btn btn-default"><a href="#2">Kapitel 2</a></button>
+              <button type="button" class="btn btn-default"><a href="#3">Kapitel 3</a></button>
+              <button type="button" class="btn btn-default"><a href="#4">Kapitel 4</a></button>
             </p>
           </div>
         </nav>
@@ -27,13 +30,14 @@
     </div>
 
     <!-- Erstes Kapitel -->
-
     <h2 id="1">Kapitel 1 - AngularJS einbinden in unsere HTML Datei</h2>
     <div class="container-fluid body">
       <div class="col-md-7 tutorialfield">
         Schön, dass du dich für unser Tutorial entschieden hast. Um mit AngularJS zu beginnen, benötigt ihr zuerst das Framework. Ihr könnt euch aussuchen, ob ihr es downloaden oder über einen Link einbinden wollt. Im folgenden Tutorial binden wir das Framework über einen Link ein und haben es nicht lokal auf unserem Rechner.<br />
         <br />
         <span class="bold">Code:</span>
+
+        <!-- Maskierter Beispielcode -->
         <pre class="pre-scrollable">&lt;!DOCTYPE html&gt;
 &lt;html lang="de"&gt;
   &lt;head&gt;
@@ -46,6 +50,8 @@
       </div>
       <div class="col-md-1"></div>
       <div class="col-md-4 examplefield">
+
+        <!-- Ausgabe des Beispielcodes -->
         An dieser Stelle passiert noch nichts mit deiner Internetseite. Wir haben erstmal das Framework AngularJS mit deiner Internetseite verknüpft. JavaScript-Dateien fügt man standardmäßig am Besten immer am Ende des body-Bereiches ein, da so die Seite schneller laden kann. Zusätzlich müsst ihr euren body-Tag mit einem "ng-app" versehen, damit das Framework AngularJS erkennt, dass es sich hierbei um eine AngularJS App handelt.
       </div>
     </div>
@@ -53,20 +59,21 @@
     <hr />
 
     <!-- Zweites Kapitel -->
-
     <h2 id="2">Kapitel 2 - Zwei-Wege-Datenbindung</h2>
     <div class="container-fluid body">
       <div class="col-md-7 tutorialfield">
         Wir beginnen mit einem simplen, jedoch sehr faszinierenden Beispiel. Mit AngularJS ist es möglich eine Zwei-Wege-Datenbindung zu erstellen, womit sich der Text automatisch aktualisiert.<br />
         <br />
         <span class="bold">Code:</span>
+
+        <!-- Maskierter Beispielcode -->
         <pre class="pre-scrollable">&lt;!DOCTYPE html&gt;
 &lt;html lang="de"&gt;
   &lt;head&gt;
     &lt;title&gt;Unsere erste Webapp&lt;/title&gt;
   &lt;/head&gt;
   &lt;body ng-app&gt;
-    Guten Tag {{deinName}}&lt;br /&gt;
+    Guten Tag {{<span class="white">.</span>deinName }}&lt;br /&gt;
     &lt;input type="text" ng-model="deinName" placeholder="Name hier eingeben" /&gt;
     &lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.11/angular.min.js"&gt;&lt;/script&gt;
   &lt;/body&gt;
@@ -75,6 +82,8 @@
       Mit AngularJS ist es auch möglich mathematische Rechnungen durchzuführen, die auch dank der Zwei-Wege-Datenbindung automatisch live aktualisiert werden. Wer braucht bei solchen tollen Features noch einen Taschenrechner, wenn man es auch selber machen kann?<br />
         <br />
         <span class="bold">Code:</span>
+
+        <!-- Maskierter Beispielcode -->
         <pre class="pre-scrollable">&lt;!DOCTYPE html&gt;
 &lt;html lang="de"&gt;
   &lt;head&gt;
@@ -83,22 +92,26 @@
   &lt;body ng-app&gt;
     &lt;input type="number" ng-model="zahl1" placeholder="Zahl 1 hier eingeben" /&gt;
     &lt;input type="number" ng-model="zahl2" placeholder="Zahl 2 hier eingeben" /&gt;&lt;br /&gt;
-    Produkt: {{zahl1}} * {{zahl2}} = {{zahl1 * zahl2}}&lt;br /&gt;
-    Summe: {{zahl1}} + {{zahl2}} = {{zahl1 + zahl2}}&lt;br /&gt;
-    Division: {{zahl1}} / {{zahl2}} = {{zahl1 / zahl2}}&lt;br /&gt;
-    Subtraktion: {{zahl1}} - {{zahl2}} = {{zahl1 - zahl2}}&lt;br /&gt;
+    Produkt: {{<span class="white">.</span>zahl1 }} * {{<span class="white">.</span>zahl2 }} = {{<span class="white">.</span>zahl1 * zahl2 }}&lt;br /&gt;
+    Summe: {{<span class="white">.</span>zahl1 }} + {{<span class="white">.</span>zahl2 }} = {{<span class="white">.</span>zahl1 + zahl2 }}&lt;br /&gt;
+    Division: {{<span class="white">.</span>zahl1 }} / {{<span class="white">.</span>zahl2 }} = {{<span class="white">.</span>zahl1 / zahl2 }}&lt;br /&gt;
+    Subtraktion: {{<span class="white">.</span>zahl1 }} - {{<span class="white">.</span>zahl2 }} = {{<span class="white">.</span>zahl1 - zahl2 }}&lt;br /&gt;
     &lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.11/angular.min.js"&gt;&lt;/script&gt;
   &lt;/body&gt;
 &lt;/html&gt;</pre>
       </div>
       <div class="col-md-1"></div>
       <div class="col-md-4 examplefield">
+
+        <!-- Ausgabe des Beispielcodes -->
         <span class="bold">Beispiel:</span><br />
         Guten Tag {{deinNameTut}}<br />
         <input type="text" ng-model="deinNameTut" placeholder="Name hier eingeben" />
         <br /><br />
         <p>Wir ergänzen <code>&lt;input&gt;</code> mit der Direktiven <code>ng-model</code>, somit verweist der Inhalt des Inputs auf die Bezeichnung <i>deinName</i>. AngularJS erkennt dies und aktualisiert das DOM somit automatisch.</p>
         <hr />
+
+        <!-- Ausgabe des Beispielcodes -->
         <span class="bold">Beispiel 2:</span><br />
         <input type="number" ng-model="zahl1" placeholder="Zahl 1 hier eingeben" />
         <input type="number" ng-model="zahl2" placeholder="Zahl 2 hier eingeben" /><br />
@@ -121,6 +134,8 @@
         Nun kommen wir zum Controller. Wir ergänzen unsere HTML Tags mit der Direktive <code>ng-controller</code> und können somit Funktionen programmieren und ausführen, die wir in einer seperaten JavaScript-Datei abspeichern. Nicht vergessen am Ende des Body-Tags die app.js einzubinden.<br />
         <br />
         <span class="bold">Code:</span> <code>index.html</code>
+
+        <!-- Maskierter Beispielcode -->
         <pre class="pre-scrollable">&lt;!DOCTYPE html&gt;
 &lt;html lang="de"&gt;
   &lt;head&gt;
@@ -128,7 +143,7 @@
   &lt;/head&gt;
   &lt;body ng-app&gt;
     &lt;div ng-controller="hauptController"&gt;
-      {{hello_world}}
+      {{<span class="white">.</span>hello_world }}
     &lt;div&gt;
     &lt;script src="js/app.js"&gt;&lt;/script&gt;
     &lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.11/angular.min.js"&gt;&lt;/script&gt;
@@ -143,6 +158,8 @@
       Ein weiteres Beispiel ist die <code>ng-repeat</code> Direktive, in der wir ein Array auslesen können und so jedes Element anzeigen lassen können. Es verhält sich ähnlich einer for-each-Schleife, die man aus anderen Programmiersprachen kennen könnte.<br />
       <br />
       <span class="bold">Code:</span> <code>index.html</code>
+
+      <!-- Maskierter Beispielcode -->
       <pre class="pre-scrollable">&lt;!DOCTYPE html&gt;
 &lt;html lang="de"&gt;
   &lt;head&gt;
@@ -152,7 +169,7 @@
     &lt;div ng-controller="hauptController"&gt;
       &lt;h3&gt;Studentenliste:&lt;/h3&gt;
         &lt;ul&gt;
-          &lt;li ng-repeat="student in studenten"&gt;{{student.name}}&lt;/li&gt;
+          &lt;li ng-repeat="student in studenten"&gt;{{<span class="white">.</span>student.name }}&lt;/li&gt;
         &lt;/ul&gt;
     &lt;div&gt;
     &lt;script src="js/app.js"&gt;&lt;/script&gt;
@@ -160,6 +177,8 @@
   &lt;/body&gt;
 &lt;/html&gt;</pre>
       <br />
+
+      <!-- Maskierter Beispielcode -->
       <span class="bold">Code:</span> <code>app.js</code>
       <pre class="pre-scrollable">function hauptController($scope) {
   $scope.studenten = [
@@ -169,9 +188,11 @@
   ];
 }</pre>
       <hr />
-      Eine weitere Funktion des Controllers ist, dass wir eigene Eingaben in unser vorhandes Array hinzufügen können. Wir erzeugen einfach ein neues <code>input</code>-Element und ein neuen <code>button</code>. In das <code>input</code>-Element kommt die Direktive <code>ng-model</code> hinein, welches den Inhalt in die jeweilige Variable hinzufügt. <code>ng-click</code> wird dem <code>button</code> hinzugefügt, welches dafür sorgt, dass durch das Klicken auf den Button die Funktion <code>neuerStudent()</code> ausgeführt wird.<br />
+      Eine weitere Funktion des Controllers ist, dass wir eigene Eingaben in unser vorhandes Array hinzufügen können. Wir erzeugen einfach ein neues <code>input</code>-Element und ein neuen <code>button</code>. In das <code>input</code>-Element kommt die Direktive <code>ng-model</code> hinein, welches den Inhalt in die jeweilige Variable hinzufügt. <code>ng-click</code> wird dem <code>button</code> hinzugefügt, welches dafür sorgt, dass durch das Klicken auf den Button die Funktion <code>neuerStudent()</code> ausgeführt wird. Zusätzlich bauen wir noch eine Suchfunktion ein, in der wir dank der Filterfunktion von AngularJS mit Hilfe von <code>filter : SUCHVARIABLE</code> nach bestimmten Buchstaben/Wörtern suchen kann.<br />
       <br />
       <span class="bold">Code:</span> <code>index.html</code>
+
+      <!-- Maskierter Beispielcode -->
       <pre class="pre-scrollable">&lt;!DOCTYPE html&gt;
 &lt;html lang="de"&gt;
   &lt;head&gt;
@@ -180,8 +201,9 @@
   &lt;body ng-app&gt;
     &lt;div ng-controller="hauptController"&gt;
       &lt;h3&gt;Studentenliste:&lt;/h3&gt;
+        &lt;input type="text" ng-model="inpStudentSuche" placeholder="Suche..." /&gt;
         &lt;ul&gt;
-          &lt;li ng-repeat="student in studenten"&gt;{{student.name}}&lt;/li&gt;
+          &lt;li ng-repeat="student in studenten | filter : inpStudentSuche"&gt;{{<span class="white">.</span>student.name }}&lt;/li&gt;
         &lt;/ul&gt;
         &lt;input type="text" ng-model="inpStudent" placeholder="Student hunzufügen" /&gt;
         &lt;button type="submit" ng-click="neuerStudent()"&gt;Hinzufügen&lt;/button&gt;
@@ -192,29 +214,38 @@
 &lt;/html&gt;</pre>
       <br />
       <span class="bold">Code:</span> <code>app.js</code>
+
+      <!-- Maskierter Beispielcode -->
       <pre class="pre-scrollable">function hauptController($scope) {
   $scope.hello_world = "Hallo Welt!";
 
   $scope.studenten = [
-    {name: "Nikolas Beckel"},
     {name: "Jacquelyn Rappenhöner"},
-    {name: "Peter Parker"}
+    {name: "Nikolas Beckel"},
+    {name: "Peter Parker"},
+    {name: "Johannes Reiter"},
+    {name: "Marie Marien"}
   ];
-}
 
-$scope.neuerStudent() = function() {
-  $scope.studenten.push({
+  $scope.neuerStudent = function() {
+    $scope.studenten2.push({
       name: $scope.inpStudent
     });
-    $scope.inpStudent = "";
-  };</pre>
+    // Textfeld leeren
+    $scope.inpStudent = '';
+  };
+}</pre>
       </div>
       <div class="col-md-1"></div>
       <div class="col-md-4 examplefield">
+
+        <!-- Ausgabe des Beispielcodes -->
         <span class="bold">Beispiel:</span><br />
         <div ng-controller="hauptController">
           {{hello_world}}<br />
           <hr />
+
+          <!-- Ausgabe des Beispielcodes -->
           <span class="bold">Beispiel 2:</span>
           <h3>Studentenliste:</h3>
           <ul>
@@ -222,14 +253,48 @@ $scope.neuerStudent() = function() {
           </ul>
           Hier kann man erkennen, dass für jedes Element in <code>studenten</code> ein neues <code>li</code>-Element erzeugt wird und bekommen somit eine Liste aller Studenten ausgegeben.
           <hr />
-          <span class="bold">Beispiel 3</span>
+
+          <!-- Ausgabe des Beispielcodes -->
+          <span class="bold">Beispiel 3</span><br />
+          <input type="text" ng-model="inpStudentSuche" placeholder="Suche..." />
           <h3>Studentenliste:</h3>
           <ul>
-            <li ng-repeat="student in studenten">{{student.name}}</li>
+            <li ng-repeat="student in studenten2 | filter: inpStudentSuche">{{student.name}}</li>
           </ul>
           <input type="text" ng-model="inpStudent" placeholder="Student hier eingeben" />
-          <button type="submit" ng-click="neuerStudent()">Student hinzufügen</button>
+          <button type="submit" ng-click="neuerStudent()">Student hinzufügen</button><br /><br />
+          Die Filterfunktion ist ganz einfach hinzuzufügen. Man fügt einfach zu der Direktive <code>ng-repeat</code> <code>| filter: inpStudentSuche</code> hinzu und schon hat man eine simple Suchfunktion entwickelt.<br />
+          In unserer <code>app.js</code> fügen wir eine neue Funktion <code>neuerStudent()</code> hinzu, in den wir unsere Eingabe rein pushen, was man auch aus anderen Programmierensprachen kennen könnte. Das pushen fügt den eingegebenen Inhalt auf das Array hinzu.
         </div>
+      </div>
+    </div>
+
+    <hr />
+
+    <!-- viertes Kapitel -->
+
+    <h2 id="4">Kapitel 4 - Die Module</h2>
+    <div class="container-fluid body">
+      <div class="col-md-7 tutorialfield">
+        Eine weitere tolle Funktion von AngularJS sind die Module. Sobald eine Internetseite immer mehr an Inhalt und Funktionen bekommt, wird sie schnell unübersichtlich. Dafür sind die Module gedacht, die den Code strukturieren und leserlicher gestalten.<br />
+        Der Codebeginn unseres Controllers<br />
+        <br />
+      <span class="bold">Code:</span> <code>app.js</code>
+      <pre class="pre-scrollable">function hauptController($scope) {
+  // Code
+}</pre>
+      verändert sich wie folgt:<br /><br />
+      <span class="bold">Code:</span> <code>app.js</code>
+      <pre class="pre-scrollable">var hauptApp = angular.module('myApp', []);
+
+hauptApp.controller('hauptController', function($scope) {
+ // Code
+});</pre>
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-4 examplefield">
+        <span class="bold">Nun liegt es an dir!</span><br />
+        Finde nun selbstständig heraus, wofür die Module gut sein könnten und inwiefern sie dir die Arbeit erleichtern. AngularJS bietet und liefert noch (un)endlich viele Möglichkeiten deine Internetseite zu gestalten. 
       </div>
     </div>
     
