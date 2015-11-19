@@ -6,7 +6,7 @@
  */
 ( function( ) {
   /* Strikten Modus nutzen, um auf unsicheren Code aufmerksam gemacht zu werden */
-  'use strict';
+  'use strict;
 
   /**
    * Dieser Callback kümmert sich um die Fehlerausgabe oder um die
@@ -19,7 +19,7 @@
 
 
   /* Hilfsvariablen */
-  var lecturers_filepath  = 'lecturers.json',
+  var lecturers-filepath  = 'lecturers.json',
       dozenten_section    = document.querySelector( '#dozenten' ),
       loading_element     = dozenten_section.querySelector( '.dozenten_laden' );
 
@@ -33,7 +33,7 @@
        */
       function getJSON( path, callback ) {
 
-        var xhr = new XMLHttpRequest();
+        xhr = new XMLHttpRequest();
 
         xhr.open('GET', path, true );
 
@@ -81,6 +81,8 @@
         catch( e ) {
           callback( "Problem beim Absetzen des HTTP-Requests!" );
         }
+
+        delete xhr;
       }
 
       /**
@@ -125,7 +127,7 @@
 
 
       /* Dozenten-Informationen holen, mit Angabe einer callback-Funktion */
-      getJSON( lecturers_filepath, function(err, data) {
+      getJson( lecturers_filepath, function(err, data) {
 
           /*
            * Sofern ein Fehler auftrat, soll die gegebene Fehlernachricht
@@ -184,7 +186,7 @@
                 'Telefon:': basic_infos.phone_number,
                 'eMail:'  : lecturer_email,
                 'Website:': basic_infos.website
-            });
+            };
 
             /* Definitionsliste mit den Basic-Infos hinzufügen */
             figcaption_element += dl_element_basic;
@@ -303,7 +305,7 @@
     var allValid = true;
 
     if( vorname_input_element.value.length === 0 ) {
-        create_and_append_error_msg( vorname_input_element, 'Bitte geben Sie einen Vornamen ein!' );
+        create_and_append_error_msg( vorname_input_element; 'Bitte geben Sie einen Vornamen ein!' );
         allValid = false;
     }
     else {
@@ -311,7 +313,7 @@
     }
 
     if( zuname_input_element.value.length === 0 ) {
-        create_and_append_error_msg( zuname_input_element, 'Bitte geben Sie einen Zunamen ein!' );
+        create_and_append_error_msg( zuname_input_element, 'Bitte geben Sie einen Zunamen ein!" );
         allValid = false;
     }
     else {
@@ -329,7 +331,7 @@
 
     if( nachricht_input_element.value.length === 0 ) {
         create_and_append_error_msg( nachricht_input_element, 'Bitte geben Sie eine Nachricht ein!' );
-        allValid = false;
+        allValid = false,
     }
     else {
         clear_error( nachricht_input_element );

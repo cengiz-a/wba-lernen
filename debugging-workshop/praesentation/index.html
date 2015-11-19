@@ -132,14 +132,14 @@
               </section>
               <section>
                 <h1>Aufgabe 2</h1>
-                <p>Besuchen Sie eine beliebige Internetseite und verändern Sie diese, mittels beliebigem Entwicklertool.</p>
-                <p>Zeit: 10 Minuten</p>
+                <p>Besuchen Sie eine beliebige Internetseite und verändern Sie diese mittels Entwicklertool.</p>
+                <p>Zeit: 15 Minuten</p>
               </section>
           </section>
           <section data-transition="convex">
               <section><h2>Javascript Debugging<h2></section>
               <section>
-                <h1>Debugging früher</h1>
+                <h3>Debugging früher</h3>
                 <pre><code class="javascript">
 var x=4, y=3;
 y = x*y+y;
@@ -155,7 +155,7 @@ alert(y);
               <section>
                 <h1>Console API</h1>
                 <h3>console.log()</h3>
-                <pre>
+                <pre class="new-margin">
                   <code class="javascript">
 a = 2;
 console.log(a);
@@ -165,18 +165,16 @@ c = a*a + b*b;
 console.log(c);
                   </code>
                 </pre>
-                <div class="">
+                <button class="btn-big" type="button" onclick="nowDebugging();">Test me!</button>
                   <h4>Parameter</h4>
                   <ul>
                     <li>eine Variable oder Zeichenkette </li>
                     <li>eine kommagetrennte Liste aus Variablen oder Zeichenketten </li>
                   </ul>
-                  <button class="btn-big" type="button" onclick="nowDebugging();">Test me!</button>
-              </div>
               </section>
               <section>
                 <h3>String Substitution</h3>
-                <pre>
+                <pre class="new-margin">
                   <code class="javascript">
 var name = prompt('Bitte geben Sie Ihren Namen ein!', '');
 for (var i=0; i<9; i++) {
@@ -184,6 +182,7 @@ for (var i=0; i<9; i++) {
 }
                   </code>
                 </pre>
+                <button class="btn-big" type="button" onclick="substitution();">Test me!</button>
                 <table>
                   <tbody>
                     <tr>
@@ -220,6 +219,21 @@ for (var i=0; i<9; i++) {
                 </table>
               </section>
               <section>
+                <h3>console.error()</h3>
+                <pre class="new-margin">
+                  <code class="javascript">
+a = 2;
+console.log(a);
+b = 3;
+console.log(b);
+c = a*a + b*b;
+console.log(c);
+window.alert(ergebnis);
+                  </code>
+                </pre>
+                <button class="btn-big" type="button" onclick="errorDebugging();">Test me!</button>
+              </section>
+              <section>
                 <h1>Breakpoints</h1>
                 <h3>der debugger Befehl</h3>
                 <pre>
@@ -233,7 +247,7 @@ document.getElementbyId("demo").value = x;
               <section>
                 <h1>Aufgabe 3</h1>
                 <p>
-                  Suchen und beheben Sie alle Javascript-Fehler im Mi-Onepager. Benutzen Sie hierfür die Konsole des Entwicklertools.
+                  Suchen und beheben Sie alle Javascript-Fehler im Mi-Onepager. Benutzen zum Finden der Fehler die Konsole des Entwicklertools.
                 </p>
                 <p>Zeit: 30 Minuten</p>
               </section>
@@ -250,24 +264,39 @@ document.getElementbyId("demo").value = x;
 
     <script>
 
-    function earlyDebugging() {
-      var x=4, y=3;
-      y = x*y+y;
+      function earlyDebugging() {
+        var x=4, y=3;
+        y = x*y+y;
 
-      alert(y);
+        alert(y);
 
-      y = y*Math.random();
+        y = y*Math.random();
 
-      alert(y);
-    }
-    function nowDebugging() {
-      a = 2;
-      console.log(a);
-      b = 3;
-      console.log(b);
-      c = a*a + b*b;
-      console.log(c);
-    }
+        alert(y);
+      }
+      function nowDebugging() {
+        a = 2;
+        console.log(a);
+        b = 3;
+        console.log(b);
+        c = a*a + b*b;
+        console.log(c);
+      }
+      function substitution() {
+        var name = prompt('Bitte geben Sie Ihren Namen ein!', '');
+        for (var i=0; i<9; i++) {
+          console.log("Hallo, %s. Das ist der %d. Schleifendurchlauf.", name, i+1);
+        }
+      }
+      function errorDebugging() {
+        a = 2;
+        console.log(a);
+        b = 3;
+        console.log(b);
+        c = a*a + b*b;
+        console.log(c);
+        window.alert(ergebnis);
+      }
 
 			// Full list of configuration options available at:
 			// https://github.com/hakimel/reveal.js#configuration

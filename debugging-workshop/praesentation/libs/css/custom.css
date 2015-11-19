@@ -43,10 +43,14 @@
     box-shadow: none;
     color: #000;
     font-size: 0.6em;
-    padding: 8px 30px;
+    padding: 4px 30px 6px;
     transition: background-color 0.2s, color 0.2s;
+    margin-bottom: 40px;
 }
 .btn-big:hover{
     background-color: #333;
     color: #fff;
+}
+.new-margin{
+    margin: 0 auto !important;
 }
