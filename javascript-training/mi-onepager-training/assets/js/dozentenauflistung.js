@@ -33,15 +33,12 @@ var lecturers_filepath  = "https://raw.githubusercontent.com/th-koeln/" +
      *  der ID 'dozenten' geholt werden
      * ##
      */
-<<<<<<< HEAD
+
 
 
 var dozenten_section = document.getElementById("dozenten");
 var loading_element = dozenten_section.querySelector('.dozenten_ladehinweis');
-=======
-var dozenten_section    = document.getElementById('dozenten');
-var loading_element     = dozenten_section.querySelector( '.dozenten_ladehinweis' );
->>>>>>> f7a192c937d3b0b388e492f760fba29d96f6a974
+
 
 
 /**
@@ -124,11 +121,9 @@ function construct_dl(info) {
      *  Ein 'dl'-Element erzeugen
      * ##
      */
-<<<<<<< HEAD
+
     var dl_element = document.createElement("dl");
-=======
-    var dl_element = document.createElement("DL") ;
->>>>>>> f7a192c937d3b0b388e492f760fba29d96f6a974
+
 
     /* Durch alle Informationseinträge traversieren */
     for (var key in info) {
@@ -168,11 +163,8 @@ getJSON( lecturers_filepath, function( err, data ) {
      *  dann soll der Vorgang abgebrochen werden
      * ##
      */
-<<<<<<< HEAD
     if( err != null ) {
-=======
-    if( err !== null) {
->>>>>>> f7a192c937d3b0b388e492f760fba29d96f6a974
+
         error_output( err );
         return;
     }
@@ -205,11 +197,9 @@ getJSON( lecturers_filepath, function( err, data ) {
          *  Ein 'figure'-Element erzeugen
          * ##
          */
-<<<<<<< HEAD
+
         var figure_element = document.createElement("figure");
-=======
-        var figure_element = document.createElement('FIGURE');
->>>>>>> f7a192c937d3b0b388e492f760fba29d96f6a974
+
 
         /* Basisinformationen vorbereiten */
         var basic_infos = value.basic_infos || {};
@@ -232,12 +222,9 @@ getJSON( lecturers_filepath, function( err, data ) {
          *  Ein 'figcaption'-Element erzeugen
          * ##
          */
-<<<<<<< HEAD
+
         var figcaption_element = document.createElement("figcaption");
 
-=======
-        var figcaption_element = document.createElement('FIGCAPTION');
->>>>>>> f7a192c937d3b0b388e492f760fba29d96f6a974
         var name_headline_element = document.createElement( 'h1' );
         name_headline_element.innerHTML = lecturer_name;
 
@@ -251,22 +238,13 @@ getJSON( lecturers_filepath, function( err, data ) {
          * ##
          */
         var basic_infos = {
-<<<<<<< HEAD
-          
-           'Raum:'   : basic_infos.room,
-           'Telefon:': basic_infos.phone_number,
-           'eMail:'  : lecturer_email,
-           'Website:': basic_infos.website
-    }
 
-=======
             'Raum:'   : basic_infos.room,
             'Telefon:': basic_infos.phone_number,
             'eMail:'  : lecturer_email,
             'Website:': basic_infos.website
             
         };
->>>>>>> f7a192c937d3b0b388e492f760fba29d96f6a974
         var dl_element_basic = construct_dl( basic_infos );
 
 
@@ -287,25 +265,18 @@ getJSON( lecturers_filepath, function( err, data ) {
          *  Beheben Sie diese.
          * ##
          */
-<<<<<<< HEAD
+
         for (var key in custom_infos) { /* Beginn der for-Schleife */
             var value = custom_infos[ key ];
 
-=======
-        for( var key in custom_infos ) { /* Beginn der for-Schleife */
-            
-            var value = custom_infos[key];
->>>>>>> f7a192c937d3b0b388e492f760fba29d96f6a974
             /* Leere Einträge überspringen */
             if( value.title === '' || value.content === '' ) {
               return;
             }
 
-<<<<<<< HEAD
-            prepared_custom_infos[value.title] = value.content;
-=======
+
             prepared_custom_infos[ value.title ] = value.content;
->>>>>>> f7a192c937d3b0b388e492f760fba29d96f6a974
+
         }
         /* Ende der for-Schleife */
 

@@ -22,6 +22,7 @@ h1{
     /*TODO: 
     Setzen Sie die Schriftgröße auf das "2,5"-Fache des "Elternelements"
     */
+    font-size: 2.5em;
     line-height: 2.8em;
     font-family: arial;
     font-weight: 100;
@@ -51,6 +52,7 @@ p {
     /*TODO: 
     Die Schriftgröße soll hier auf den Wert des "Elternelements" gesetzt werden. (Tipp: das "1,0"-Fache)
     */
+    font-size: 1em;
     line-height: 1.25em;
     font-family: arial;
     font-weight: 100;
@@ -71,7 +73,7 @@ li{
 
 img{
     width:90%;
-    heigth:auto;
+    height: auto;
     max-width: 100%;
 }
 
@@ -153,6 +155,12 @@ des "Elternelements"
 
 Zusätzlich sollen alle Paragraphen Linksbündig sein und eine Schriftgröße von dem 1,25 Fachen des "Elternelements" haben
 */
+main{
+  max-width: 200%;
+  border-top: 1.25em;
+  border-bottom: 1.25em;
+  
+}
 
 
 /* Footer */
