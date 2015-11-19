@@ -1,0 +1,96 @@
+
+/*kacheln für die listenelemente erstellen*/
+.menu li {
+  cursor: pointer;
+  height: 150px; width: 300px;
+  margin: 10px 10px 10px 10px;
+  }
+
+
+/*breite für die listenanodnung*/
+.menu {
+  width: 90%;
+  list-style: none;
+  text-decoration: none;
+  }
+
+.menu li :visited{
+  color: black;
+}
+.menu li {
+  position: relative;
+  float: left;
+  border: 1px solid #FFF;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  box-shadow: 1px 2px 4px rgba(0,0,0,.4);
+
+
+}
+
+/*hier wird die hintergundfarbe für die kacheln erstellt*/
+.menu #one{
+  background-color: #2c618f;
+  }
+
+.menu #two{
+  background-color: #91ab31;
+}
+
+.menu #three{
+  background-color: #714a28;
+}
+
+.menu #four{
+  background-color: #e58600;
+}
+
+.menu #five{
+  background-color: #c33a00;
+}
+
+.menu #six{
+  background-color: #7f5dac;
+}
+
+.menu #seven{
+  background-color: #5672b7;
+}
+
+.menu #eight{
+  background-color: #ce7c9d;
+}
+
+.menu #nine{
+  background-color: #DAA520;
+}
+.menu #ten{
+  background-color: #2e855e;
+}
+.menu #eleven{
+  background-color: #393043;
+}
+.menu #twelve{
+  background-color: #CD5C5C;
+}
+.menu #thirten{
+  background-color: #A0522D;
+}
+
+/*Inhalte der kacheln gestalten*/
+
+.menu .content{
+  position: absolute;
+  height: 100%; width: 100%;
+  text-align: center;
+  font: italic bold 1.8em  Arial, helvetica;
+  color: black;
+  padding-top:20px;
+
+}
+/* zur verschönerung noch ein hover über die kacheln*/
+
+.menu li:hover {
+  opacity: .7;
+}

@@ -1,0 +1,77 @@
+/* body foratieren*/
+
+body {
+  font: 0.8em sans-serif;
+  color: white;
+  background-color: #fff;
+  background-image: url('background_tafel.jpg');
+}
+
+/*formatierung der einzelen nutzer einträge*/
+#post{
+
+  margin: 30px;
+  color: black;
+  padding: 50px;
+  width: 60%;
+
+  background: #eee;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.1) inset;
+     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.1) inset;
+      -ms-box-shadow: 0 1px 2px rgba(0,0,0,.1) inset;
+       -o-box-shadow: 0 1px 2px rgba(0,0,0,.1) inset;
+          box-shadow: 0 1px 2px rgba(0,0,0,.1) inset;
+   -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+           border-radius: 10px;
+}
+
+
+ul li a:visited {color: white;}
+
+
+/*Hier wird die oberer navigation bearbeitet*/
+#navigation_oben {
+  background-color: #ebeae3;
+  font-size: 1em;
+  border-top: 5px solid #dad6b1;
+  width: 100%;
+}
+
+#navigation_oben ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 10px;
+
+}
+
+#navigation_oben li {
+  display: inline;
+  padding-right: 15px;
+}
+
+#navigation_oben a {
+  text-decoration: none;
+  color: #565919;
+}
+/*hover effekt, wenn man mit der maus über die navigation geht*/
+#navigation_oben a:hover, #navigation a:focus, #navigation a:active {
+  background-color: #e3e0cf;
+  color: #010101;
+}
+
+/*bearbeitung des kopfes*/
+
+#kopf {
+  background: url("logo.jpg");
+  background-repeat:center;
+
+  color: #000;
+  border-bottom: #6f7400 2px solid;
+  padding: 40px 0px;
+}
+
+#fuss img{
+	float:right;
+	margin-top: 10px;
+}

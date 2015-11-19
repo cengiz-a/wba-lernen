@@ -1,0 +1,159 @@
+@charset "utf-8";
+
+body {
+  font: 1.1em sans-serif;
+  color: black;
+  background-color: transparent;
+  background-image: url('background_tafel.jpg');
+}
+
+
+#hilfscontainer{width: 100%;}
+
+
+/*hier wird die schriftgröße und die weite der navigaton oben festgellegt*/
+#navigation_oben {
+        width: 100%;
+    }
+
+/*hier wird der liste ein magin gegeben, damit der text unter der navigation ist*/
+#navigation_oben ul {
+  list-style-type: none;
+margin: 0 0 350px 0;
+padding: 0 0 30px 0;
+}
+
+/*schriftgröße und ausrichtung definieren*/
+#navigation_oben li {
+text-align:center;
+font-size: 1.2em;
+}
+
+/*hover haben wir hier weg gemacht, da es bei einem Touchscreen keinen sinn macht*/
+#navigation_oben a {
+    text-decoration: none;
+      }
+#navigation_oben a:visited {color: black;}
+#navigation_oben a:link {color: black;}
+
+/* Hier werden die einzelnen punkte der navigation oben bearbeitet. Wir haben hier alle punkte seperat behandelt,
+da es so einfacher für uns ist die punkte seperat zu gestallten, zum Beispiel wenn wir später nur die farbe oder größe eines einzelnen
+punktes verändern wollen*/
+
+#einstellungen{
+	background-color: #F3F9DF;
+  	padding-top: 20px;
+  	padding-bottom:20px;
+  	width: 100%;
+  	float: left;
+    border-radius: 10px;
+    border-color: white;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    box-shadow: 10px 10px 20px rgba(0,0,0,.6);
+}
+
+#start{
+	background-color: #DBE0C7;
+  	padding-top: 20px;
+  	padding-bottom:20px;
+  	width: 100%;
+  	float: left;
+    border-radius: 10px;
+    border-color: white;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    box-shadow: 10px 10px 20px rgba(0,0,0,.6);
+}
+
+#angebot{
+	background-color: #E2E7CE;
+  	padding-top: 20px;
+  	padding-bottom:20px;
+  	width: 100%;
+  	float: left;
+    border-radius: 10px;
+    border-color: white;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    box-shadow: 10px 10px 20px rgba(0,0,0,.6);
+}
+
+#angeboterstellen{
+	background-color: #E9EED5;
+  	padding-top: 20px;
+  	padding-bottom:20px;
+  	width: 100%;
+  	float: left;
+    border-radius: 10px;
+    border-color: white;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    box-shadow: 10px 10px 20px rgba(0,0,0,.6);
+}
+
+#einloggen{
+	background-color:  #D6DBC3;
+  	padding-top: 20px;
+  	padding-bottom:20px;
+  	width: 100%;
+  	float: left;
+    border-radius: 10px;
+    border-color: white;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    box-shadow: 10px 10px 20px rgba(0,0,0,.6);
+}
+
+aside {text-align:center;
+	width:100%;}
+
+#navigation {
+	text-align:center;}
+
+main {background-color:transparent;
+	color: white;
+	width:100%;}
+
+  ul {margin:10px;
+      padding:10px;
+      width:100%;
+      list-style-type:none;
+  	   font-size:large;
+  }
+
+/*Hier werden die beiträger der nutzer formatiert*/
+#post{
+
+  padding-top: 30px;
+  color: black;
+  padding: 10px;
+  width: 90%;
+
+  background: #eee;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.1) inset;
+     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.1) inset;
+      -ms-box-shadow: 0 1px 2px rgba(0,0,0,.1) inset;
+       -o-box-shadow: 0 1px 2px rgba(0,0,0,.1) inset;
+          box-shadow: 0 1px 2px rgba(0,0,0,.1) inset;
+   -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+           border-radius: 10px;
+}
+
+#formular {
+color: white;
+font: 1.5em sans-serif;
+}
+
+.textfeld input{
+width: 100%;
+}
+
+.textfeld textarea {
+  width: 100%;
+}
+#textunten{
+
+color: white;
+}
