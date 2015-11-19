@@ -85,6 +85,9 @@ img{
     Bitte stellen Sie an dieser Stelle das Bild flexibel ein. So das sich dieses beim Verändern der Breite mit verändert.
     Die Höhe soll sich dabei automatisch verändern. 
     */
+  max-width: 100%;
+  height: auto;
+  width: 90%;
 }
 
 a{
@@ -168,6 +171,8 @@ main section{
     vertical-align: top;
     padding: 0em;
     text-align: center;
+    max-height: 300px;
+    overflow-y: hidden;
     /*TODO: 
     Das Bild soll abgeschnitten werden, damit es nicht die ganze Seite einnimmt.
     Tipp: Schauen Sie sich Overflow und Absolute Werte an!
@@ -180,6 +185,11 @@ main article{
     Am Besten jeweils 3 Kacheln nebeneinander. Bedenken Sie, dass 33.3% nicht möglich sind, da wir vorher mit "Padding"
     und "Margin" gearbeitet haben. Außerdem soll der Hintergrund der Kacheln weiß sein.
     */
+  display: inline-block;
+  max-width: 33%;
+  background: #fff;
+  
+  
 }
 
 /* Footer */

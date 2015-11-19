@@ -157,9 +157,8 @@ Zusätzlich sollen alle Paragraphen Linksbündig sein und eine Schriftgröße vo
 */
 main{
   max-width: 200%;
-  border-top: 1.25em;
-  border-bottom: 1.25em;
-  
+  margin: 1.25en auto;
+  padding: 0;
 }
 
 
