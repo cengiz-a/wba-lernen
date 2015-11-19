@@ -132,13 +132,15 @@
               </section>
               <section>
                 <h1>Aufgabe 2</h1>
+                <p>Besuchen Sie eine beliebige Internetseite und verändern Sie diese, mittels beliebigem Entwicklertool.</p>
+                <p>Zeit: 10 Minuten</p>
               </section>
           </section>
           <section data-transition="convex">
               <section><h2>Javascript Debugging<h2></section>
               <section>
                 <h1>Debugging früher</h1>
-                <pre><code class="javascript split">
+                <pre><code class="javascript">
 var x=4, y=3;
 y = x*y+y;
 
@@ -148,7 +150,7 @@ y = y*Math.random();
 
 alert(y);
                 </code></pre>
-                <img class="float-right clearfix" src="images/alert.png" alt="" />
+                <button class="btn-big" type="button" onclick="earlyDebugging();">Test me!</button>
               </section>
               <section>
                 <h1>Console API</h1>
@@ -169,6 +171,7 @@ console.log(c);
                     <li>eine Variable oder Zeichenkette </li>
                     <li>eine kommagetrennte Liste aus Variablen oder Zeichenketten </li>
                   </ul>
+                  <button class="btn-big" type="button" onclick="nowDebugging();">Test me!</button>
               </div>
               </section>
               <section>
@@ -229,6 +232,10 @@ document.getElementbyId("demo").value = x;
               </section>
               <section>
                 <h1>Aufgabe 3</h1>
+                <p>
+                  Suchen und beheben Sie alle Javascript-Fehler im Mi-Onepager. Benutzen Sie hierfür die Konsole des Entwicklertools.
+                </p>
+                <p>Zeit: 30 Minuten</p>
               </section>
           </section>
           <section data-background="https://media.giphy.com/media/Cf6KmzYYJAg8w/giphy.gif" data-transition="slide-in fade-out">
@@ -242,6 +249,25 @@ document.getElementbyId("demo").value = x;
     <script src="libs/js/head.min.js"></script>
 
     <script>
+
+    function earlyDebugging() {
+      var x=4, y=3;
+      y = x*y+y;
+
+      alert(y);
+
+      y = y*Math.random();
+
+      alert(y);
+    }
+    function nowDebugging() {
+      a = 2;
+      console.log(a);
+      b = 3;
+      console.log(b);
+      c = a*a + b*b;
+      console.log(c);
+    }
 
 			// Full list of configuration options available at:
 			// https://github.com/hakimel/reveal.js#configuration

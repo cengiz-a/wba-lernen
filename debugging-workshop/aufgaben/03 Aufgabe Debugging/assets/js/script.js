@@ -19,8 +19,8 @@
 
 
   /* Hilfsvariablen */
-  var lecturers_filepath  = 'lecturers.json';
-      dozenten_section    = document.querySelector( '#dozenten' );
+  var lecturers_filepath  = 'lecturers.json',
+      dozenten_section    = document.querySelector( '#dozenten' ),
       loading_element     = dozenten_section.querySelector( '.dozenten_laden' );
 
 
@@ -134,7 +134,7 @@
           if(err) {
             error_output( err );
             return;
-
+          }
 
           /*
            * Überprüfen, ob das Unterfeld 'lectures' existiert, ansonsten abbrechen;
@@ -185,7 +185,6 @@
                 'eMail:'  : lecturer_email,
                 'Website:': basic_infos.website
             });
-
 
             /* Definitionsliste mit den Basic-Infos hinzufügen */
             figcaption_element += dl_element_basic;
