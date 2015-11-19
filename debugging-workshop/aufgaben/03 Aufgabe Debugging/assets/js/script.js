@@ -155,7 +155,7 @@
           /*
            * Durch alle Dozenten-Einträge traversieren;
            *  'key' entspricht der eMailAdresse (wegen Eindeutigkeit)
-           */
+           *
           for(var key in data.lecturers) {
             var value = data.lecturers[key];
 
@@ -185,7 +185,7 @@
                 'Raum:'   : basic_infos.room,
                 'Telefon:': basic_infos.phone_number,
                 'eMail:'  : lecturer_email,
-                'Website:': basic_infos.website
+                'Website:': basic_infos.website;
             };
 
             /* Definitionsliste mit den Basic-Infos hinzufügen */
