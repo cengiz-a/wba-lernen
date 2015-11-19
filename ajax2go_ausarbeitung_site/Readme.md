@@ -1,8 +1,8 @@
 ******************************************
-*** Ausarbeitung zum Thema Ajax        ***
-***                                    ***
-*** Made by Lilly Kavsek & Tim Prott   ***
-*** 2015 All rights reserved           ***
+Ausarbeitung zum Thema Ajax
+Made by Lilly Kavsek & Tim Prott
+------------------------------------------
+2015 All rights reserved
 ******************************************
 
 
