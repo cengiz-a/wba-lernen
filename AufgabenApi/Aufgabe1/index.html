@@ -17,7 +17,7 @@
       
       //Anlegen der Request URL, schauen sie sich auf omdbAPI.com wie eine Beispielhafte request URL aussieht.
 
-      var url =
+      var url = "http://www.omdbapi.com/?t=back+to+the+future&y=&plot=short&r=json";
 
       document.write(httpGet(url));
 
@@ -28,6 +28,10 @@
       // Rueckgabe der response nicht vergessen!
       // ( moegliche Suchbegriffe zur Hilfestellung: javascript http request )
       function httpGet(theUrl){
+        xmlHttp = XMLHttpRequest();
+
+        xmlHttp.open("GET", theUrl, false);
+        xmlHttp.send(null);
       }    
 
     </script>
