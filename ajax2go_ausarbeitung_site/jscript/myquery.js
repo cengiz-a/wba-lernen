@@ -10,7 +10,6 @@ $(document).ready(function () {
         $(window).scroll(function () {
             var bgScroll = -(($win.scrollTop() - $this.offset().top) / scroll_speed);
             var bgPosition = 'center ' + bgScroll + 'px';
-            //console.log("bgScroll: ", bgScroll);
             $this.css({
                 backgroundPosition: bgPosition
             });
@@ -38,7 +37,7 @@ $(document).ready(function () {
 
     function fillQuestions() {
         $.ajax({
-            url: "Readme.txt",
+            url: "aufgaben.txt",
             success: function (result) {
                 $("#readmetext").html(result)
             }
