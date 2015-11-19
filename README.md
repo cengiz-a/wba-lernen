@@ -1,46 +1,45 @@
-# wba1-2015
-Web-basierte Anwendungen 1 WiSe 2015/2016  http://th-koeln.github.io/wba1-2015/  
-
 > **Home Embedded_Videos**
+
+<a href="http://rehne.github.io/embedded_videos" target="_blank">Zur Projektwebsite</a>
 
 ## Thema & Ziel
 
-### Thema : Embedded_Videos
+### Thema: Embedded_Videos
 
-### von Christian Krenn und RenÃ© Honnen
+### von Christian Krenn und René Honnen
 
 Das Thema unseres Projekts ist die Einbindung/Einbettung von Inhalten, in unserem Fall Videos, auf Webseiten.
 
 ### Ziel
 
-Unser Ziel ist es, eine **HTML-Seite** zu erstellen, auf der wir auf verschiedene Art und Weise, Videos einbetten und die Methodiken erklÃ¤ren.
-ZusÃ¤tzlich sollen **grundlegende Fragen** wie 
+Unser Ziel ist es, eine **HTML-Seite** zu erstellen, auf der wir auf verschiedene Art und Weise, Videos einbetten und die Methodiken erklären.
+Zusätzlich sollen **grundlegende Fragen** wie 
 > "Was passiert beim Embedding?"
 
  oder
-> "Vorteile und Nachteile der verschiedenen Embedding-LÃ¶sungen" 
+> "Vorteile und Nachteile der verschiedenen Embedding-Lösungen" 
 
-geklÃ¤rt werden.
+geklärt werden.
 
 Die Seite selbst wird in unserem Entwurfmuster von Github mithilfe des **gh-pages** branch erstellt und mit Github bearbeitet.
 
 ## Derzeitiger Projektstand
 
-* Github-FÃ¼hrerschein âœ“
+* Github-Führerschein ?
 * Dokumentation ~
 * Recherche ~
-* Repository und Github eingerichtet âœ“
-* EntwÃ¼rfe auf Papier erstellt âœ“ 
+* Repository und Github eingerichtet ?
+* Entwürfe auf Papier erstellt ? 
 
-## Die nÃ¤chsten Schritte
+## Die nächsten Schritte
 
-Die nÃ¤chsten Schritte werden sein unsere Ideen und EntwÃ¼rfe umzusetzen, die Dokumentation weiterzufÃ¼hren und die Recherche weitestgehend abzuschlieÃŸen.
+Die nächsten Schritte werden sein unsere Ideen und Entwürfe umzusetzen, die Dokumentation weiterzuführen und die Recherche weitestgehend abzuschließen.
 Auf dem von Github bereitgestellten Web-Space wird unser Projekt auf folgender URL zu finden sein 
 
 * <a href="http://rehne.github.io/embedded_videos/" target="_blank">Link zu der Seite Embedded_Videos</a>
 
 
-##NÃ¼tzliches & Links
+##Nützliches & Links
 
 * <a href="https://www.youtube.com/?gl=DE&hl=de" target="_blank">Youtube</a>
 * <a href="https://vimeo.com" target="_blank">Vimeo</a>
