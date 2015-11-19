@@ -4,8 +4,8 @@
 
 /*
  * TODOs sind in den folgenden Zeilen zu finden:
- *  - Zeile 31    * Element über eine ID selektieren/holen
- *  - Zeile 119   * 'dl'-Element erzeugen
+ *  - Zeile 31    * Element über eine ID selektieren/holen DONE
+ *  - Zeile 119   * 'dl'-Element erzeugen DONE
  *  - Zeile 158   * Fehlerabfrage mittels einer if-Abfrage
  *  - Zeile 192   * 'figure'-Element erzeugen
  *  - Zeile 215   * 'figcaption'-Element erzeugen
@@ -23,6 +23,7 @@
  * Hilfsvariablen:
  *  Pfadangabe u. Elementreferenzen
  */
+<<<<<<< HEAD
 var lecturers_filepath = "https://raw.githubusercontent.com/th-koeln/" +
     "wba1-2015/3abda162332f8e6e6412502787d6ff68d7599fc8/" +
     "mi-onepager/lecturers.json"; /* Pfad bzw. URL zur JSON-Datei */
@@ -35,6 +36,19 @@ var lecturers_filepath = "https://raw.githubusercontent.com/th-koeln/" +
 
 var dozenten_section = document.getElementById("dozenten");
 var loading_element = dozenten_section.querySelector('.dozenten_ladehinweis');
+=======
+var lecturers_filepath  = "https://raw.githubusercontent.com/th-koeln/" +
+                          "wba1-2015/3abda162332f8e6e6412502787d6ff68d7599fc8/" +
+                          "mi-onepager/lecturers.json"; /* Pfad bzw. URL zur JSON-Datei */
+    /*
+     * ## BASIC-TODO:
+     *  Hier soll die Referenz auf das Section-Element mit
+     *  der ID 'dozenten' geholt werden
+     * ##
+     */
+var dozenten_section    = document.getElementById('dozenten');
+var loading_element     = dozenten_section.querySelector( '.dozenten_ladehinweis' );
+>>>>>>> 7d7e3e1eb770764f496a3e20dfaa3736a7f60b9e
 
 
 /**
@@ -117,7 +131,11 @@ function construct_dl(info) {
      *  Ein 'dl'-Element erzeugen
      * ##
      */
+<<<<<<< HEAD
     var dl_element = document.createElement('dl');
+=======
+    var dl_element = document.createElement("DL") ;
+>>>>>>> 7d7e3e1eb770764f496a3e20dfaa3736a7f60b9e
 
     /* Durch alle Informationseinträge traversieren */
     for (var key in info) {
@@ -162,6 +180,7 @@ getJSON(lecturers_filepath, function (err, data) {
                 return;
             }
 
+<<<<<<< HEAD
             /*
              * Überprüfen, ob das Unterfeld 'lectures' existiert, ansonsten abbrechen;
              * Nicht existierendes Unterfeld ist 'undefined' und wird bei
@@ -172,6 +191,23 @@ getJSON(lecturers_filepath, function (err, data) {
                     "Dozenten-JSON-Datei: " + lecturers_filepath);
                 return;
             }
+=======
+    /*
+     * Sofern ein Fehler auftrat, soll die gegebene Fehlernachricht
+     * ausgegeben und an dieser Stelle abgebrochen werden;
+     * Wenn 'err' den Wert 'null' enthält, dann gab es keinen Fehler
+     */
+    /*
+     * ## BASIC-TODO:
+     *  Überpüfen Sie, ob es ein Fehler gab; Sollte dies der Fall sein,
+     *  dann soll der Vorgang abgebrochen werden
+     * ##
+     */
+    if( err !== null) {
+        error_output( err );
+        return;
+    }
+>>>>>>> 7d7e3e1eb770764f496a3e20dfaa3736a7f60b9e
 
             /* Ladeindikator-Element löschen */
             loading_element.remove();
@@ -182,6 +218,7 @@ getJSON(lecturers_filepath, function (err, data) {
              */
             for (var key in data.lecturers) {
 
+<<<<<<< HEAD
                 var value = data.lecturers[key];
 
                 /* 'figure'-Element für Dozent erzeugen */
@@ -194,6 +231,96 @@ getJSON(lecturers_filepath, function (err, data) {
 
                 /* Basisinformationen vorbereiten */
                 var basic_infos = value.basic_infos || {};
+=======
+    /*
+     * Durch alle Dozenten-Einträge traversieren;
+     *  'key' entspricht der eMailAdresse (wegen Eindeutigkeit)
+     */
+    for( var key in data.lecturers ) {
+
+        var value = data.lecturers[ key ];
+
+        /* 'figure'-Element für Dozent erzeugen */
+        /*
+         * ## BASIC-TODO:
+         *  Ein 'figure'-Element erzeugen
+         * ##
+         */
+        var figure_element = document.createElement('FIGURE');
+
+        /* Basisinformationen vorbereiten */
+        var basic_infos = value.basic_infos || {};
+
+        var lecturer_name   = basic_infos.name,
+            /* Email-Adresse fungiert wegen Eindeutigkeit als Schlüssel */
+            lecturer_email  = key;
+
+        var profile_img_url     = basic_infos.profile_img,
+            profile_img_element = document.createElement( 'img' );
+
+        profile_img_element.setAttribute( 'src', profile_img_url );
+        profile_img_element.setAttribute( 'alt', "Foto von " + lecturer_name );
+
+        figure_element.appendChild( profile_img_element );
+
+        /* Caption-Element für das 'figure'-Element */
+        /*
+         * ## BASIC-TODO:
+         *  Ein 'figcaption'-Element erzeugen
+         * ##
+         */
+        var figcaption_element = document.createElement('FIGCAPTION');
+        var name_headline_element = document.createElement( 'h1' );
+        name_headline_element.innerHTML = lecturer_name;
+
+        figcaption_element.appendChild( name_headline_element );
+
+        /*
+         * ## BASIC-TODO:
+         *  Erzeugen sie ein Objekt mittels der impliziten Kurzschreibweise,
+         *    welches der Funktion 'construct_dl' als Parameter mitgegeben wird;
+         *  Nutzen Sie die gegebenen Schlüssel-Wert-Paare
+         * ##
+         */
+        var basic_infos = {
+            'Raum:'   : basic_infos.room,
+            'Telefon:': basic_infos.phone_number,
+            'eMail:'  : lecturer_email,
+            'Website:': basic_infos.website
+            
+        };
+        var dl_element_basic = construct_dl( basic_infos );
+
+
+        /* Definitionsliste mit den Basic-Infos als Kindelement hinzufügen */
+        figcaption_element.appendChild( dl_element_basic );
+
+
+        /* Custom-Informationen vorbereiten */
+        /* Sofern 'value.custom_infos' undefiniert bzw. nicht gesetzt ist,
+         *   wird anstatt dessen ein leeres Objekt zugewiesen;
+         */
+        var custom_infos          = value.custom_infos || {};
+        var prepared_custom_infos = {};
+
+        /*
+         * ## BASIC-TODO:
+         *  In der folgenden for-Schleife, sind vier Syntaxfehler versteckt.
+         *  Beheben Sie diese.
+         * ##
+         */
+        for( var key in custom_infos ) { /* Beginn der for-Schleife */
+            
+            var value = custom_infos[key];
+            /* Leere Einträge überspringen */
+            if( value.title === '' || value.content === '' ) {
+              return;
+            }
+
+            prepared_custom_infos[ value.title ] = value.content;
+        }
+        /* Ende der for-Schleife */
+>>>>>>> 7d7e3e1eb770764f496a3e20dfaa3736a7f60b9e
 
                 var lecturer_name = basic_infos.name,
                     /* Email-Adresse fungiert wegen Eindeutigkeit als Schlüssel */

@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="de">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Workshop - BIG DATA</title>
+
+		<meta name="description" content="Workshop-Präsentation zu reveal.js">
+		<meta name="author" content="Marvin Klimm und Güray Kilic">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        
+		<link rel="stylesheet" href="../revealjs-framework/css/reveal.min.css">
+        <link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../revealjs-framework/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../revealjs-framework/css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+        
+        <!--[if lt IE 9]>
+		<script src="../revealjs-framework/lib/js/html5shiv.js"></script>
+		<![endif]-->
+        
+	</head>
+    <body>
+        
+        <div class="reveal">
+            <div class="slides">
+                <!--Hier die Folien aufbauen. Die erste Folie soll ein Deckblatt sein. Nach vorgestelltem Schema-->
+                <section>
+                    
+                        <h1> Webbasierte Anwendungen 1</h1>
+                        <h2 class="u"> BIG DATA</h2>
+                        <p>12.11.2015</p>
+                        <p style="margin-top:2%;">Studiengang Medieninformatik an der Technischen Hochschule Köln</p>
+                    <p>Campus Gummersbach</p>
+                        <p style="margin-top:10%;"> Sarah Klees und Michelle Simon</p>
+                    
+                </section>
+                <!-- Beginn präsentation-->
+                
+                <section> 
+                    <section>
+                    <h1>Was ist BIG DATA ?</h1>
+                    <h2 class="u"></h2>
+                        <p>Das erste mal wurde der Begriff 2012 vom IT- Branchenverband Bitkom definiert.</p>
+                    <ul>
+                        <li class="fragment"><span class="_pink">riesige</span> und <span class="_pink">komplexe</span>                                  Datenmengen </li>
+                        <li class="fragment"><span class="_pink">Vernetzungen</span> von Daten</li>
+                        <li class="fragment"><span class="_pink">Analyse</span> von Massendaten</li>
+                        
+                        <p class="fragment"> <span class="_pink">Virtuelle Datenbanken die mit herkömmlichen Mitteln nicht mehr zu bewältigen sind.</span></p>
+                        </section>
+                        <section> 
+                            <h1>Wie entstehen solche Datenbanken?</h1>
+                            <h2 class="u"></h2>
+                            <p> Durch:</p>
+                            <ul> 
+                                <li class="fragment"><span>jedem neuen <span class="_pink">Freund</span> im sozialen Netzwerk</span></li>
+                                <li class="fragment"><span> jeden<span class="_pink"> Online Einkauf</span></span></li>
+                                <li class="fragment"><span>jede<span class="_pink"> Eingabe</span> ins Navigationsgerät</span></li>
+                                <li class="fragment"><span>jede<span class="_pink"> Online Transaktion</span></span></li>
+                                <li class="fragment"><span>jedes<span class="_pink"> Telefonat</span></span></li>
+                                <li class="fragment"><span>jedem<span class="_pink"> Fitnessstudio Besuch</span></span></li>
+                                <li class="fragment"><span>jedem<span class="_pink"> Klick</span></span></li>
+                               
+                            
+                            </ul>
+                        </section>
+                        <section data-bachground="concave"> 
+                           
+                            <figure>
+                                <img class="fragment"  src="img/Kaffeetasse.jpg"/>
+                                <figcaption  style="font-size:5rem; text-align:right;"><span> Die Datenmengen <span class="_pink">wachsen</span>!</figcaption>
+                            </figure>
+                        </section>
+                        <section>
+                            <h2 class="u"></h2>
+                            <p>Es wird davon ausgegangen, dass sich Datenmengen alle 2 Jahre verdoppeln.</p>
+                            <section> <img class="fragment" src="img/Statistik3.jpg"/></section>
+                            
+                            </section>
+                            <section>
+                                    <img src="img/Statistik1.jpg"/>
+                                    <figcaption class="fragment" style="font-size: 2rem;">Statistik von 2012 zum Internetzugang Weltweit</figcaption>
+                           
+                                
+                            </section>
+                            <section> <img src="img/Statistik2.jpg" />
+                            </section>
+                            
+                            
+                </section>
+                        
+                <section> 
+                     <section> 
+                                    <h3>Wir formen unser Werkzeug und danach formt unser Werkzeug uns.</h3>
+                                    <p>Marshall McLuhan</p>
+                            </section>
+                    <section>
+                                <h2 class="u"></h2>
+                                 <p>Big Data bezeichnet aber nicht nur die Daten an sich, sondern auch deren Analyse und Nutzung.</p>
+                            
+                            
+                            <a href="https://www.youtube.com/watch?v=kPRA0W1kECg">Visuelles Beispiel für Sortieralgorythmen</a>
+                                <ul>
+                                <li>Daten werden in Echtzeit ausgewertet und auf Zusammenhänge analysiert.</li>
+                                <li>Die Algorithmen sind interlligent und anpassungsfähig</li>
+                                <li>Der wohl bekannteste ist PageRank von Google</l>
+                                
+                                </ul>
+                    </section>
+                    <section>
+
+                        
+                            <section>
+                                <h1>Der Algorithmus muss:</h1>
+                                <h2 class="u"></h2>
+                                    <ul>
+                                        
+                                        <li class="fragment">große Daten bearbeiten können</li>
+                                        <li class="fragment">komplexe Daten bearbeiten können</li>
+                                        <li class="fragment">Anpassungsfähig sein</li>
+                                        <li class="fragment">Fehler erkennen und aus ihnen lernen können</li>
+                                        <li class="fragment">Analysen erstellen können</li>
+                                        <li class="fragment">Ergebnisse berechnen können</li>
+                                                                            
+                                    </ul>
+                                    <p class="fragment"> Auf Basis dieser Ergebnisse können z.B. Unternehmen Angebote stellen.</p>
+                        </section>
+                                <section> 
+                                    <span class="_pink"> Beispiele</span>
+                        </section>
+                            
+                                
+                    </section>
+                    </section>
+                    <!--Beispiele für Big Data-->
+                <section>
+                    
+                    <section> 
+                        <figure><img src="img/Paarshipwerbung.jpeg" alt="Paarshipwerbung"
+                        </figure>
+                    </section>
+                        <section>
+                            <figure>
+                                <img src="img/Paarship.jpg" alt="Parrship.jpg"
+                            </figure>
+                        </section>
+                            <section> 
+                                <figure>
+                                    <img src="img/Navigation.jpg" alt="Navigation.jpg"/>
+                       
+                                </figure>
+                            </section>
+                            <section>
+                                <h1>Aufgaben:</h1>
+                                <h2 class="u"></h2>
+                                <p> Gegeben ist eine Kundendatenbank. Sie sind Programmierer in einer Einkaufskette und haben den Auftrag bekommen aus den Daten, einen Algorithmus zu formen der ihnen sagt ob Kundin XY schwanger ist. Versuchen sie heraus zu finden wie der Algorithmus dies tun würde.Erarbeiten sie die Vorgehensweise. (Es muss nichts programmiert werden)</p>
+                                <p>Welche Zielgruppe müssen sie untersuchen?</p>
+                                <p>Gibt es Zusammenhänge? Kann man eine Prognose darauf aufbauen?</p>
+                                <p>Können sie noch andere mögliche Schwangerschaften anhand ihrer Prognose feststellen?</p>
+                                <p>Können sie eventuell sogar Aussagen über werdende Väter treffen?</p>
+                                
+                            </section>
+                            <section>
+                            <h1>Was für Folgen hat Big Data?</h1>
+                                <h2 class="u"></h2>
+                                <ul>
+                                    <li class="fragment">Was passiert mit unseren persönlichen Daten?</li>
+                                    <li class="fragment">Wer hat die Kontrolle über diese Daten?</li>
+                                    <li class="fragment">Ist es noch eine bewusste Entscheidung diese Daten abzugeben?</li>
+                                    <li class="fragment">Wie stark werden wir bereits beeinflusst?</li>
+                                </ul>
+                                <section>
+                                        <ul>
+                                            <li class="fragment"> Datenschutz?</li>
+                                            <li class="fragment">von Leben <span class="_pink"> mit </span> Internet zu Leben<span class="_pink">im</span>Internet</li>
+                                            <li class="fragment">Menschenrankings? Wie gut sind deine Daten?</li>
+                                            <li class="fragment">Verbrechensvorhersagen?</li>
+                                            <li class="fragment">Krankheitsbekämpfung</li>
+                                            <li class="fragment">Lebensqualität</li>
+                                    </ul>
+                                </section>
+                            </section>
+                            <section>
+                                <h1>Für Interessierte</h1>
+                                <h2 class="u"></h2>
+                                <p> Nora S.Stampfl-  Die berechnete Welt</p>
+                                <a href=" https://www.youtube.com/watch?v=uH813u7_b0s"> Big Data kurz erklärt</a>
+                                <p> Rudi Klausnitzer- Das Ende des Zufalls</p>
+                                <a href=" https://www.youtube.com/watch?v=z6q_xgjo-3E"> Quarks und Co- Die Macht der Daten</a>
+                                <p>Marcus Burkhardt- Digitale Datenbanken</p>
+                            </section>
+                            <section>
+                                
+                                <section> <h1><span class="_pink">GELD </span> regiert die Welt!?</h1> </section>
+                </section>
+                
+                
+                
+            </div>
+        </div>
+    
+        <script src="../revealjs-framework/lib/js/head.min.js"></script>
+        <script src="../revealjs-framework/js/reveal.min.js"></script>
+
+		<script>
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+                {
+                    src: '../revealjs-framework/lib/js/classList.js',
+                    condition: function () {
+                        return !document.body.classList;
+                    }
+                },
+                {
+                    src: '../revealjs-framework/plugin/markdown/marked.js',
+                    condition: function () {
+                        return !!document.querySelector('[data-markdown]');
+                    }
+                },
+                {
+                    src: '../revealjs-framework/plugin/markdown/markdown.js',
+                    condition: function () {
+                        return !!document.querySelector('[data-markdown]');
+                    }
+                },
+                {
+                    src: '../revealjs-framework/plugin/highlight/highlight.js',
+                    async: true,
+                    callback: function () {
+                        hljs.initHighlightingOnLoad();
+                    }
+                },
+                {
+                    src: '../revealjs-framework/plugin/zoom-js/zoom.js',
+                    async: true,
+                    condition: function () {
+                        return !!document.body.classList;
+                    }
+                },
+                {
+                    src: '../revealjs-framework/plugin/notes/notes.js',
+                    async: true,
+                    condition: function () {
+                        return !!document.body.classList;
+                    }
+                }
+				]
+			});
+
+		</script>   
+    </body>
+</html>
+    
