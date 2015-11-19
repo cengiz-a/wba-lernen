@@ -85,6 +85,9 @@ img{
     Bitte stellen Sie an dieser Stelle das Bild flexibel ein. So das sich dieses beim Verändern der Breite mit verändert.
     Die Höhe soll sich dabei automatisch verändern. 
     */
+    
+    width: 100%;
+    height: auto;
 }
 
 a{
@@ -173,6 +176,11 @@ main section{
     Tipp: Schauen Sie sich Overflow und Absolute Werte an!
     */
     
+   
+    height: 250px;
+    overflow: hidden;
+    
+
 }
 main article{
     /*TODO: 
@@ -180,7 +188,40 @@ main article{
     Am Besten jeweils 3 Kacheln nebeneinander. Bedenken Sie, dass 33.3% nicht möglich sind, da wir vorher mit "Padding"
     und "Margin" gearbeitet haben. Außerdem soll der Hintergrund der Kacheln weiß sein.
     */
+    
+-webkit-column-count: 1;
+  -webkit-column-gap: 0;
+  -moz-column-count: 1;
+  -moz-column-gap: 0;
+  column-count: 1;
+  column-gap: 0;
 }
+
+@media screen and (min-width:650px) {
+  main article  {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+  }
+}
+
+@media screen and (min-width:960px) {
+  main article {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+  }
+}
+
+@media screen and (min-width:1200px) {
+  main article {
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+    column-count: 4;
+    max-width:1460px;
+  }
+}
+
 
 /* Footer */
 footer{

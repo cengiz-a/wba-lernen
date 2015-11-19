@@ -22,6 +22,8 @@ h1{
     /*TODO: 
     Setzen Sie die Schriftgröße auf das "2,5"-Fache des "Elternelements"
     */
+    
+    font-size: 2.5em;
     line-height: 2.8em;
     font-family: arial;
     font-weight: 100;
@@ -51,6 +53,7 @@ p {
     /*TODO: 
     Die Schriftgröße soll hier auf den Wert des "Elternelements" gesetzt werden. (Tipp: das "1,0"-Fache)
     */
+    font-size: 1.0em;
     line-height: 1.25em;
     font-family: arial;
     font-weight: 100;
@@ -154,6 +157,34 @@ des "Elternelements"
 Zusätzlich sollen alle Paragraphen Linksbündig sein und eine Schriftgröße von dem 1,25 Fachen des "Elternelements" haben
 */
 
+main {
+    
+    
+    width: 95%;
+    margin: 0.00em;
+    padding-top: 1.25em;
+    padding-bottom: 1.25em;
+    padding-left: auto;
+    padding-right: auto;    
+    
+   
+    
+    
+}
+
+section {
+    
+    background-color: white;
+    margin: 0.22em;
+    
+}
+
+article {
+    
+    text-align: left;
+    font-size: 1.25em;
+}
+
 
 /* Footer */
 footer{
@@ -191,6 +222,15 @@ footer ul li a{
 Erstellen Sie einen eigenen Media Querie, welcher mit einer maximalen Display-Größe von 900px
 die Schriftgröße des "Bodys" auf "90%" setzt"
 */
+
+@media screen and (max-width:900px){
+   
+    body {
+        
+        font-size: 90%;       
+        
+    }
+}
 @media screen and (max-width:700px){
     /* TODO:
     Sobald die Anzeige kleiner oder gleich 700px erreicht, soll die Schriftgröße der Paragraphen auf 80% gesetzt werden.
@@ -198,6 +238,30 @@ die Schriftgröße des "Bodys" auf "90%" setzt"
     Die Breite der "main" soll auf "100%" gesetzt werden und der Außenabstand bei "oben und unten" auf das "0,625"
     Fache des "Elternelements" und bei "links und rechts" auf das "0,00" Fache "Elternelements"
     */
+    
+    article {
+        
+        font-size: 80%;
+    }
+    
+    h1 {
+        
+        font-size: 1.75em;
+    }
+    
+    h2 {
+        
+        font-size: 1.5em;
+    }
+    
+    main {
+        
+        width: 100%;
+        padding-top: 0.625em;
+        padding-bottom: 0.625em;
+        padding-left: 0.00em;
+        padding-right: 0.00em;
+    }
 }
 
 @media screen and (min-width:670px){
