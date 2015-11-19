@@ -1,0 +1,262 @@
+/* Generelle Änderungen */
+body {
+    font-size: 100%;
+    margin: 0em;
+    padding: 0em;
+    background: #DCDCDC;
+}
+
+h1{
+    font-size: 2.5em;
+    line-height: 2.8em;
+    font-family: arial;
+    font-weight: 100;
+    color: #E2DBDB;
+    margin: 0em;
+}
+
+h2 {
+    font-size: 1.563em;
+    line-height: 1.8em;
+    font-family: arial;
+    font-weight: 100;
+    color:#2F2D2C;
+    margin: 0em;
+    padding-left:1.5em;
+    text-align: left;
+    padding: 0.563em 0.938em 0.375em 0.938em;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.25em;
+    font-family: arial;
+    font-weight: 100;
+    color:#2F2D2C;
+    margin: 0em;
+    padding:1.5em;
+    text-align: left;
+}
+
+table{
+    font-size: 1em;
+    line-height: 1.25em;
+    font-family: arial;
+    font-weight: 100;
+    color:#2F2D2C;
+    margin: 0em;
+    padding:1.5em;
+    text-align: justify;
+}
+
+ul{
+    margin: 0em;
+    padding: 0em;
+}
+
+li{
+    list-style: square;
+    font-family: arial;
+    font-weight: 100%;
+    line-height: 1.25em;
+    color:#2F2D2C;
+    margin: 0.313em 0em 0.313em 0em;
+    padding:0em;
+}
+
+img{
+    width:90%;
+    heigth:auto;
+    max-width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Menübar */
+#menubar{
+    display:none;
+    background:#FFFFFF;
+}
+
+#menubar ul{
+    display:block;
+    width:2em;
+    padding:0.9em;
+}
+#menubar ul li{
+    display: inline;
+}
+
+#menubar ul li a.menu_ham{
+    display:none;
+}
+
+/* Header */
+header{
+    display:block;
+    background:#2F2C2C;
+    text-align: center;
+    
+}
+
+/* Navigation */
+nav{
+    display:block;
+    height: 2.5em;
+    color: white;
+    text-align: center;
+}
+
+nav ul{
+    display:block;
+}
+
+nav ul li{
+    display: inline;
+    margin: 0em 0.188em 0em 0.188em;
+}
+
+nav ul li a{
+    color: #454040;
+    font-size: 1.125em;
+    line-height: 2.5em;
+    padding: 0.563em 0.938em 0.375em 0.938em;
+    transition:background 0.2s;
+}
+
+nav ul li a:hover{
+    background: #DBD9D8;
+    border-bottom: 0.188em solid #E7590B;
+}
+
+nav ul li a.active{
+     border-bottom: 0.188em solid #E7590B;   
+}
+
+/* Main */
+
+main{
+    display: block;
+    width:96%;
+    max-width: 980px;
+    margin: 1.25em auto;
+    padding: 0em;
+}
+
+main section{
+    display:inline-block;
+    width:64.3%;
+    background: #FFFFFF;
+    vertical-align: top;
+    margin: 0.22em;
+    padding: 0em;
+    text-align: center;
+}
+
+main section article{
+    display: inline-table;
+    width: 45%;
+    
+}
+
+main section img{
+    margin-top: 2em;
+    max-width: 560px;
+    box-shadow: 0px 0px 10px -5px #4C4948;
+    border-radius: 5px;
+}
+
+table tr td{
+    text-align: left;
+    padding-left: 0em;
+    padding-bottom: 0.35em;
+}
+
+main aside{
+    display:inline-block;
+    width: 30.5%;
+    margin-left: 3%;
+    padding: 0em;
+    margin: 0em;
+    vertical-align: top;
+    background: #FFFFFF;
+    margin-top: 0.22em;
+}
+
+/* Footer */
+footer{
+    display:block;
+    background: #2F2C2C;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom:0;
+}
+
+footer ul{
+    display:block;
+    width:100%;
+    text-align: left;
+    margin: 0px auto;
+}
+
+footer ul li{
+    display:inline;
+    font-size: 0.8em;
+    line-height: 2.8em;
+    color: #E2DBDB;
+    padding: 0em 0.625em;
+}
+
+footer ul li a{
+    color: #E2DBDB;
+}
+
+/* Smaller Devices */
+/* media screen = Für Bildschirme von 0-900px definieren wir folgendes um: */
+@media screen and (max-width:900px){
+    body{
+        font-size: 90%;
+    }
+}
+
+@media screen and (max-width:700px){
+    main aside, main section{
+        width:100%;
+        display: block;
+        margin: 0.625em 0em;
+        
+    }
+}
+
+@media screen and (min-width:670px){
+    nav{
+        display:inline !important;
+    }
+}
+
+@media screen and (max-width:670px){
+    body{
+        font-size: 85%;
+    }
+    
+    #menubar{
+        display:block;
+    }
+    
+    #menubar ul li a.menu_ham{
+    display:block;
+    }
+    
+    nav{
+        display: none;
+        height: auto;
+    }
+    
+    nav ul li{
+        display: block;
+        margin 0.3em 0em;
+    }
+}

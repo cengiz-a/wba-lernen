@@ -1,0 +1,19 @@
+CGA Projekt - Hybride App
+
+Entwicklungsumgebung einrichten
+
+•	Visual Studio installieren mit folgenden Einstellungen: https://msdn.microsoft.com/de-de/library/dn757054.aspx
+
+Ionic Konsolen Befehle:
+
+•	Installieren:				npm install -g cordova ionic
+•	Projekt erstellen: 			ionic start *appName* *form*
+•	appName: belieber Projektname
+•	form: Aufbau der App, z.B.: blank, tabs, sidemenu, slide...
+•	Plattform hinzufügen:		ionic platform add android
+
+Visual Studio Projekt hinzufügen:
+
+•	Datei -> Neu -> Projekt aus vorhandenem Code 
+•	Apache Cordova auswählen -> Weiter
+•	Zuvor erstellten Ordner auswählen

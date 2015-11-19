@@ -1,0 +1,72 @@
+.lights{
+	position:absolute;
+	right:250px;
+}
+.light1{
+	margin-left:100px;
+	background-color:yellow;
+    position: relative;
+}
+
+.light2{
+	margin-left:100px;
+	background-color:red;
+    position: relative;
+}
+
+.light3{
+	margin-left:100px;
+    background-color: green;
+    position: relative;
+}
+
+.light4{
+	margin-left:100px;
+    background-color: blue;
+    position: relative;
+}
+
+.light{
+	margin-right:50px;
+	float:left;
+	height:100px;
+	width:100px;
+	border-radius:50px;
+}
+
+body{
+	background-color:#00000f;
+}
+
+.background{
+	position:absolute;
+	background-image:url(img/background.png) ;
+	background-size: 100%;
+	width:630px;
+	height:500px;
+	left:100px;
+	top:150px;
+}
+
+.platte{
+	position:absolute;
+	background-image:url(img/platte.png) ;
+	background-size: 100%;
+	width:499px;
+	height:497px;
+	position:absolute;
+	left:122px;
+	top:160px;
+}
+
+.hand{
+	position:absolute;
+	background-image:url(img/hand.png) ;
+	background-size: 100%;
+	width:630px;
+	height:500px;
+	top:210px;
+	left:250px;
+}
+
+

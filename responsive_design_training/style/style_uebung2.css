@@ -1,0 +1,272 @@
+/*TODO: Aufgaben sind in folgenden Zeilen verteilt:
+    In dieser Datei (style_uebung2.css):
+    Zeile 82
+    Zeile 170
+    Zeile 177
+    Zeile 221 
+    Zeile 222
+    Zeile 267
+        
+    In der Datei speisekarte.html:
+    Zeile 28
+    Sollten Sie Unterstützung bzw. Hilfe benötigen, dann wenden Sie sich bitte an uns. Zur Erinnerung: Clara Meschkat und Nico Ferdinand
+*/
+
+/* Generelle Änderungen */
+body {
+    font-size: 100%;
+    margin: 0em;
+    padding: 0em;
+    background: #DCDCDC;
+}
+
+h1{
+    font-size: 2.5em;
+    line-height: 2.8em;
+    font-family: arial;
+    font-weight: 100;
+    color: #E2DBDB;
+    margin: 0em;
+}
+
+h2 {
+    font-size: 1.563em;
+    line-height: 1.8em;
+    font-family: arial;
+    font-weight: 100;
+    color:#2F2D2C;
+    margin: 0em;
+    padding-left:1.5em;
+    text-align: left;
+    padding: 0.563em 0.938em 0.375em 0.938em;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.25em;
+    font-weight: 100;
+    color:#2F2D2C;
+    margin: 0em;
+    padding:1em 1em 1em 1.5em;
+    text-align: left;
+}
+
+table{
+    font-size: 1em;
+    line-height: 1.25em;
+    font-weight: 100;
+    color:#2F2D2C;
+    margin: 0em;
+    padding:0.5em 0.5em 0.5em 1.5em;
+    text-align: justify;
+}
+
+td{
+    padding-right: 2em;   
+}
+
+ul{
+    margin: 0em;
+    padding: 0em;
+}
+
+li{
+    list-style: none;
+    font-family: arial;
+    font-weight: 100%;
+    line-height: 1.25em;
+    color:#2F2D2C;
+    margin: 0.313em 0em 0.313em 0em;
+    padding:0em;
+}
+
+img{
+    /*TODO: 
+    Bitte stellen Sie an dieser Stelle das Bild flexibel ein. So das sich dieses beim Verändern der Breite mit verändert.
+    Die Höhe soll sich dabei automatisch verändern. 
+    */
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Menübar */
+#menubar{
+    display:none;
+    background:#FFFFFF;
+}
+
+#menubar ul{
+    display:block;
+    width:2em;
+    padding:0.9em;
+}
+#menubar ul li{
+    display: inline;
+}
+
+#menubar ul li a.menu_ham{
+    display:none;
+}
+
+/* Header */
+header{
+    display:block;
+    background:#2F2C2C;
+    text-align: center;
+    
+}
+
+/* Navigation */
+nav{
+    display:block;
+    height: 2.5em;
+    color: white;
+    text-align: center;
+}
+
+nav ul{
+    display:block;
+}
+
+nav ul li{
+    display: inline;
+    margin: 0em 0.188em 0em 0.188em;
+}
+
+nav ul li a{
+    color: #454040;
+    font-size: 1.125em;
+    line-height: 2.5em;
+    padding: 0.563em 0.938em 0.375em 0.938em;
+    transition:background 0.2s;
+}
+
+nav ul li a:hover{
+    background: #DBD9D8;
+    border-bottom: 0.188em solid #E7590B;
+}
+
+nav ul li a.active{
+     border-bottom: 0.188em solid #E7590B;   
+}
+
+/* Main */
+
+main{
+    display:block;
+    width:100%;
+    max-width: 1280px;
+    margin: 1.25em auto;
+    padding: 0em;
+}
+
+main section{
+    display:block;
+    background: #FFFFFF;
+    vertical-align: top;
+    padding: 0em;
+    text-align: center;
+    /*TODO: 
+    Das Bild soll abgeschnitten werden, damit es nicht die ganze Seite einnimmt.
+    Tipp: Schauen Sie sich Overflow und Absolute Werte an!
+    */
+    
+}
+main article{
+    /*TODO: 
+    Bitte ändern Sie die einzelnen Artikel so ab, dass die einzelnen Artikel <Kachelartig> nebeneinander stehen.
+    Am Besten jeweils 3 Kacheln nebeneinander. Bedenken Sie, dass 33.3% nicht möglich sind, da wir vorher mit "Padding"
+    und "Margin" gearbeitet haben. Außerdem soll der Hintergrund der Kacheln weiß sein.
+    */
+}
+
+/* Footer */
+footer{
+    display:block;
+    background: #2F2C2C;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom:0;
+}
+
+footer ul{
+    display:block;
+    width:100%;
+    text-align: left;
+    margin: 0px auto;
+}
+
+footer ul li{
+    display:inline;
+    font-size: 0.8em;
+    line-height: 2.8em;
+    color: #E2DBDB;
+    padding: 0em 0.625em;
+}
+
+footer ul li a{
+    color: #E2DBDB;
+}
+
+/* Smaller Devices */
+/* media screen = Für Bildschirme von 0-900px definieren wir folgendes um: */
+@media screen and (max-width:900px){
+    body{
+        font-size: 90%;
+    }
+}
+
+@media screen and (max-width:/*TODO: Wähle eine sinnvolle Breite des Fensters (im Notfall einfach ausprobieren!)*/){
+    /*TODO: 
+    Ups! Hier fehlt aber was. Bei der "Verkleinerung" des Fensters, haben wir mit den "Artikeln" nur ca. 66% eingedeckt.
+    Ca. 33% sind grau. Das sieht aber nicht sehr schön aus. Bitte passen Sie die Breite des Fensters bei Verkleinerung an,
+    so dass die Breite bei ca 50% liegt. Außerdem sind weitere stylistische Änderungen zu machen, damit es wie auf den Screenshots
+    aussieht.
+    */
+}
+
+@media screen and (max-width:780px){
+    main article, main section{
+        width:100%;
+        display: block;
+        margin: 0.625em 0em;  
+    }
+}
+
+@media screen and (min-width:670px){
+    nav.nav{
+        display:block !important;
+    }
+}
+
+@media screen and (max-width:670px){
+    body{
+        font-size: 85%;
+    }
+    
+    #menubar{
+        display:block;
+    }
+    
+    #menubar ul li a.menu_ham{
+    display:block;
+    }
+    
+    nav{
+        display: none;
+        height: auto;
+    }
+    
+    nav ul li{
+        display: block;
+        margin 0.3em 0em;
+    }
+    
+    /*TODO:
+    Der Bildschirm ist leider sehr klein und das Bild auf kleinen Bildschirmen unnötig. Können Sie dieses bitte ausblenden,
+    sobald Endgeräte bis max. 670px benutzt werden. 
+    */
+}

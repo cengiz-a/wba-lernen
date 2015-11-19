@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WBA1 RD Projekt</title>
+        <link rel="stylesheet" href="style/style.css" type="text/css"/>
+        <!--Ohne Die nachfolgende Zeile ist Responsive Design nicht möglich, denn wir müssen erst einmal festlegen,
+          dass das Design Geräteabhängig ist. Danach geben wir die Skalierung an (Liegt durch das unten angegebene
+          immer bei 1.0 und der Benutzer hat keine Möglichkeit "nach zu skalieren" (Browser abhängig) -->
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript">
+	       jQuery(function($){
+    	     $( '.menu_ham' ).click(function(){
+    	       $('nav').slideToggle('slow');
+    	     });
+           });
+        </script>
+    </head>
+    <body>
+        <section id="menubar">
+            <ul>
+                <li><a class="menu_ham"><img src="img/hamburger.png"></a></li>
+            </ul>
+        </section>
+        <header>
+            <h1>Essen bestellen bei Mend</h1>
+        </header>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html" class="active"> Home</a></li>
+                <li><a href="speisekarte.html"> Menükarte</a></li>
+                <li><a href="informationen.html"> Informationen</a></li>
+                <li><a href="bewertungen.html"> Bewertungen</a></li>
+                <li><a href="kontakte.html"> Kontaktdaten</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section>
+                <img src="img/salat.jpg">
+                <article>
+                    <h2>Beliebte Gerichte: </h2>
+                    <table>
+                        <tr>
+                            <td>Pizza Salami</td>
+                            <td>7.9€</td>
+                        </tr>
+                        <tr>
+                            <td>Pizza Margherita</td>
+                            <td>5.6€</td>
+                        </tr>
+                        <tr>
+                            <td>Insalata Mista</td>
+                            <td>6.8€</td>
+                        </tr>
+                    </table>
+                </article>
+                <article>
+                    <h2>Das bieten wir: </h2>
+                    <p>Pizza Italienisch Mediterran Grillgerichte Deutsch Asiatisch Sushi Snacks Mittagessen/Frühstück Vegetarisch Mittagsangebote</p>
+                </article>
+            </section>
+            <aside>
+                <section>
+                    <h2>Kommentare: </h2>
+                    <table>
+                        <tr>
+                            <td>Udo Fischer</td>
+                            <td>Bestellnummer: 3010</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Das Essen hat sehr gut geschmeckt!</td>
+                        </tr>
+                        <tr>
+                            <td>Bernd Werner</td>
+                            <td>Bestellnummer: 2098</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">So muss das Essen sein :)</td>
+                        </tr>
+                    </table>
+                </section>
+            </aside>
+        </main>
+        <footer>
+            <ul>
+                <li><a href="index.html">&copy; Mend</a></li>
+                <li><a href="impressum.html">Impressum</a></li>
+                <li><a href="kontakte.html">Kontakt</a></li>
+                <li><a href="datenschutz.html">Datenschutz</a></li>
+            </ul>
+        </footer>
+    </body>
+</html>

@@ -121,7 +121,7 @@ function remove_error_msg( input_element ) {
     delete input_element.dataset.error;
 
     /* Farbe des Rahmens (border) zurücksetzen */
-    input_element.style.borderColor = '';
+    input_element.style.borderColor = "";
 
     var error_span_element = input_element.parentNode.querySelector( '.error' );
 
@@ -193,14 +193,12 @@ formular_element.addEventListener('submit', function( e ) {
         create_and_append_error_msg( zuname_input_element,
                                      "Bitte geben Sie einen Zunamen ein!" );
         allValid = false;
-    }
-    else {
+    }    else {
         remove_error_msg( zuname_input_element );
     }
 
     /* ## Email */
-    if(     email_input_element.value === ""
-        || !email_input_element.value.match(/.+@.+\..+/) ) {
+    if(     email_input_element.value === "" || !email_input_element.value.match(/.+@.+\..+/) ) {
 
         create_and_append_error_msg( email_input_element,
                                      "Bitte geben Sie eine eMail-Adresse ein!" );
