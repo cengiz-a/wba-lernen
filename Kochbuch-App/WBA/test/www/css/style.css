@@ -1,0 +1,38 @@
+.Startseite{
+    background: url(http://i.imgur.com/Iguvm5a.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width:auto;
+    height: auto;
+    margin: auto;
+}
+.Vorspeise {
+    background: url(http://i.imgur.com/JFW2ZsM.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.Hauptspeise {
+    background: url(http://i.imgur.com/MM4n176.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.Nachspeise {
+    background: url(http://i.imgur.com/Qp0euWR.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.vimg {
+    max-width: 100%;
+    height: auto;
+}
+.schrift {
+    font-family: 'Fira Sans', 'Open Sans', sans-serif;
+    text-align: center;
+}

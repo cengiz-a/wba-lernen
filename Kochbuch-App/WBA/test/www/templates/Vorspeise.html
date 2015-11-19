@@ -1,0 +1,13 @@
+﻿<ion-view view-title="Vorspeise" class="Vorspeise">
+    <ion-content>
+        <label class="item item-input">
+            <i class="icon ion-search placeholder-icon "></i>
+            <input type="search" placeholder="search" ng-model="searchQuery" />
+        </label>
+        <ion-list>
+            <ion-item ng-repeat="vorspeise in vorspeiseList | filter:searchQuery" href="#/app/Vorspeise/{{vorspeise.name}}">
+                {{vorspeise.name}}
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
