@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WBA1 RD Projekt</title>
+        <link rel="stylesheet" href="style/style_uebung2.css" type="text/css" />
+        <!--Ohne Die nachfolgende Zeile ist Responsive Design nicht möglich, denn wir müssen erst einmal festlegen,
+          dass das Design Geräteabhängig ist. Danach geben wir die Skalierung an (Liegt durch das unten angegebene
+          immer bei 1.0 und der Benutzer hat keine Möglichkeit "nach zu skalieren") (Browser abhängig)-->
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript">
+	       jQuery(function($){
+    	     $( '.menu_ham' ).click(function(){
+    	       $('nav').slideToggle('slow');
+    	     });
+           });
+        </script>
+    </head>
+    <body>
+        <section id="menubar">
+            <ul>
+                <li><a class="menu_ham"><img src="img/hamburger.png"></a></li>
+            </ul>
+        </section>
+        <header>
+            <h1>Speisekarte</h1>
+        </header>
+        <!--TODO: Leider ist kein Menüpunkt unterstrichen. Bitte anpassen! -->
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html"> Home</a></li>
+                <li><a href="speisekarte.html"> Menükarte</a></li>
+                <li><a href="informationen.html"> Informationen</a></li>
+                <li><a href="bewertungen.html"> Bewertungen</a></li>
+                <li><a href="kontakte.html"> Kontaktdaten</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section>
+                <img src="img/salat.jpg">
+            </section>
+            <article>
+                <h2>Vorspeisen: </h2>
+                <table>
+                    <tr>
+                        <td>Oliven</td>
+                        <td>1.5€</td>
+                    </tr>
+                    <tr>
+                        <td>Pizzabrötchen mit Kräuterbutter</td>
+                        <td>2.5€</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td>Pizzabrötchen</td>
+                        <td>2€</td>
+                    </tr>
+                    <tr>
+                        <td>Weichkäse</td>
+                        <td>1.5€</td>
+                    </tr>
+                </table>
+            </article>
+            <article>
+                <h2>Pizzen: </h2>
+                <table>
+                    <tr>
+                        <td>Salami</td>
+                        <td>4.5€</td>
+                    </tr>
+                    <tr>
+                        <td>Prosciutto</td>
+                        <td>5€</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td>Thunfisch</td>
+                        <td>5.5€</td>
+                    </tr>
+                    <tr>
+                        <td>Spezial</td>
+                        <td>5€</td>
+                    </tr>
+                </table>
+            </article>
+            <article>
+                <h2>Salate: </h2>
+                <table>
+                    <tr>
+                        <td>Insalata Mista</td>
+                        <td>5.5€</td>
+                    </tr>
+                    <tr>
+                        <td>Insalata Mend</td>
+                        <td>7€</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td>Insalata Spezial</td>
+                        <td>5€</td>
+                    </tr>
+                    <tr>
+                        <td>Insalata Capricciosa </td>
+                        <td>6.5€</td>
+                    </tr>
+                </table>
+            </article>
+            <article>
+                <h2>Nudelgerichte: </h2>
+                <table>
+                    <tr>
+                        <td>Napoli</td>
+                        <td>4.5€</td>
+                    </tr>
+                    <tr>
+                        <td>Bolognese</td>
+                        <td>4€</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td>Tortellini alla Panna</td>
+                        <td>5.5€</td>
+                    </tr>
+                    <tr>
+                        <td>Bolognese Auflauf</td>
+                        <td>6.5€</td>
+                    </tr>
+                </table>
+            </article>
+            <article>
+                <h2>Fleischgerichte: </h2>
+                <table>
+                    <tr>
+                        <td>Wiener Schnitzel</td>
+                        <td>7.5€</td>
+                    </tr>
+                    <tr>
+                        <td>Jäger Schnitzel</td>
+                        <td>9€</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td>Pfeffer Rahm Schnitzel</td>
+                        <td>8€</td>
+                    </tr>
+                    <tr>
+                        <td>Putenschnitzel</td>
+                        <td>6.5€</td>
+                    </tr>
+                </table>
+            </article>
+            <article>
+                <h2>Nachtisch: </h2>
+                <table>
+                    <tr>
+                        <td>First Pückler Eis</td>
+                        <td>2€</td>
+                    </tr>
+                    <tr>
+                        <td>Schokoeisbecher</td>
+                        <td>3€</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td>Vanille Pudding</td>
+                        <td>2.5€</td>
+                    </tr>
+                    <tr>
+                        <td>Schoko Pudding</td>
+                        <td>2.5€</td>
+                    </tr>
+                </table>
+            </article>
+        </main>
+        <footer>
+            <ul>
+                <li><a href="index.html">&copy; Mend</a></li>
+                <li><a href="impressum.html">Impressum</a></li>
+                <li><a href="kontakte.html">Kontakt</a></li>
+                <li><a href="datenschutz.html">Datenschutz</a></li>
+            </ul>
+        </footer>
+    </body>
+</html>
