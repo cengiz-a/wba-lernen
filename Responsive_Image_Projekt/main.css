@@ -1,0 +1,101 @@
+/* Navigation */
+#nav > li{
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+#nav > li + li{
+  border-top: solid 1px #77cc00;
+  padding-top: 0.5rem;
+}
+
+#nav > li a{
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  display: block;
+}
+
+#nav > li a:hover{
+  color: #77cc00;
+  background-color: inherit;
+}
+
+/* Header */
+body > header h1{
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Res */
+#nav > li{
+  display: inline-block;
+  margin-right: 1rem;
+  margin-bottom: 0;
+}
+
+#nav > li + li{
+  border: none;
+}
+
+/* Typ */
+h1,h2,h3,h4{
+  font-weight: 100;
+  font-size: 1.8rem;
+  line-height: 120%;
+  margin-bottom: 1.8rem;
+}
+
+p{
+  margin-bottom: 2rem;
+}
+
+p + p{
+  margin-top: -1rem;
+}
+
+/* Layout */
+*, footer{
+  line-height: 100%;
+  font-family: 'Dax-Regular', sans-serif !important;
+}
+
+body{
+  font-size: 100%;
+  font-weight: 300;
+}
+
+body > header, body > main, body > footer{
+  max-width: 85%;
+  margin: 0 auto 20px;
+  padding: 20px;
+  position: relative;
+  background-color: #fff;
+}
+
+section{
+  margin-bottom: 2rem;
+}
+
+/* Article */
+article h1{
+  font-size: 1.2rem;
+  height: auto;
+}
+
+article figure figcaption{
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+
+/*article img{
+  max-width: 100%;
+  height: auto;
+}*/
+
+#Responsive img{
+  max-width: 100%;
+  height: auto;
+}
