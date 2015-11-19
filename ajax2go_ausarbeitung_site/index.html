@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Ajax lernen? Schneller als hier geht es nicht!">
+    <meta name="keywords" content="ajax, web2, web, learn ajax, ajax2go, javascript, script">
+    <title>Ajax2Go</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <script type="text/javascript" src="jscript/javascript.js"></script>
+    <script src="jscript/jquery-2.1.4.js"></script>
+    <script src="jscript/Chart.js-master/Chart.js"></script>
+    <script src="jscript/jquery.konami.js"></script>
+    <script src="jscript/jquery.playSound.js"></script>
+    <script type="text/javascript" src="jscript/myquery.js">
+    </script>
+
+    <noscript>
+        <p class="normaltext">Please allow Scripts to make this site work!</p>
+    </noscript>
+
+</head>
+
+<body>
+
+    <div class="mainwrapper">
+
+        <section class="page page0bg parapara" id="page0">
+
+            <p class="p_header">
+                Früher war alles besser...?!
+            </p>
+            <p class="normaltext">
+                Immer, wenn eine Seite sich verändert, muss die Seite neu geladen werden. Aber viele Leitungen sind Kartoffel! Außerdem, werden im Zuge der Netzneutralität viele Seiten gedrosselt werden. Wir wollen den Traffic gering halten. Wie also sorgen wir dafür, dass nicht immer alles neu heruntergeladen werden muss?
+            </p>
+            <p class="normaltext">
+                Einfach nach unten scrollen, um zu sehen, wie das geht! (Das "C" am Rand bedeutet, dass man Code ausklappen kann, wenn man den Container anklickt!)
+            </p>
+            <p class="normaltext" id="button_container">
+                <button type="button" id="get_started_button">Los geht's!</button>
+            </p>
+        </section>
+
+        <section class="page light" id="page1">
+            <a name="pageone"></a>
+            <p class="p_header">
+                Was ist das Problem?
+            </p>
+            <p class="normaltext">
+                Um neuen Content in das Dokument einzubetten musste bislang das Dokument neu geladen werden. Bei einer Website wären das z.B. 10mb, bei jedem Reload.
+                <br>
+                <br>Die Alternative: Daten in Echtzeit anfordern und einbetten, ohne dass die Seite neu geladen wird! Dann braucht man nur noch wenige KB Traffic bei gleichem Ergebnis. Daraus resultieren einige nützliche Features, die ohne Ajax nicht zu realisieren wären.
+                <br>
+                <ul id="social_list">
+                    <li>
+                        <img src="css/svg/Twitter.svg" alt="twittericon" class="social_icon">
+                        <p class="image_header_text">Twitter</p>
+                        <p class="social_desc_text">Neue Tweets werden via Ajax synchronisiert.</p>
+                    </li>
+                    <li>
+                        <img src="css/svg/Google+.svg" alt="googleicon" class="social_icon">
+                        <p class="image_header_text">Google</p>
+                        <p class="social_desc_text">Neben Suchergebnissen werden auch Vorschläge in Echtzeit via Ajax geladen.</p>
+                    </li>
+                    <li>
+                        <img src="css/svg/Facebook.svg" alt="facebookicon" class="social_icon">
+                        <p class="image_header_text">Facebook</p>
+                        <p class="social_desc_text">Neue Posts und der Chat laufen über Ajax</p>
+                    </li>
+                </ul>
+            </p>
+        </section>
+
+        <section class="page" id="page2">
+            <p class="p_header">
+                Ajax? Aber wieso?
+            </p>
+            <p class="normaltext">
+                <br>Einmal im Vergleich: Angenommen, man lädt pro Stunde Facebook 10 mal neu. Würde man die Seite jedes Mal vollständig neu laden, wären das 10mb/Ladevorgang. Holt man mit Ajax nur neue Statusupdates, so bekommt man (Bilder und Videos herausgerechnet) nur um die 5mb insgesamt.
+                <canvas id="facebook_chart" width="500px" height="400px"></canvas>
+        </section>
+
+        <section class="page light" id="page25">
+            <p class="p_header"> Ajax (Asynchronous JavaScript and XML)</p>
+            <br>
+            </p>
+            <p class="normaltext"> Neben Microsoft mit ihrer "Microsoft Remote-Scripting-Component", die im Jahr 1998 kreiert wurde, zählt man Jesse James Garrett zu den Begründern der Idee der Ajax-Technologie und der Begriffsbildung.
+
+                <br>
+                <br> XMLHttpRequest ist eine Schnittstelle für JavaScript um Daten über das HTTP-Protokoll zu laden. Kurz gesagt:
+                <br> Es ermöglicht einem Script, ohne die Seite neu zu laden, Daten von einem Server abzurufen und einzubetten.
+                <br>
+            </p>
+            <div id="ajaxdia">
+                <p class="p_circle">1. XMLHttpRequest erstellen & absenden</p>
+                <p class="p_circle">2. HttpRequest annehmen und Antwort zurückschicken</p>
+                <p class="p_circle">3. Daten mit Javascript auswerten und updaten!</p>
+            </div>
+            <p class="normaltext" id="ajax_first_target">
+                <button class="download_button" type="button" onclick="getMore()">Aktualisieren</button>
+            </p>
+        </section>
+
+        <section class="page light" id="page3">
+            <p class="p_header">
+                Was brauche ich denn dafür?
+            </p>
+            <p class="normaltext">
+                Eigentlich gar nicht viel. Du solltest HTML(5) kennen und auch Javascript. CSS ist praktisch, aber nicht notwendig! Ein Editor wird gebraucht, (am besten mit Syntax-Highlighting). Dann legt folgende Datenstruktur in eurem Arbeitsordner an:
+                <br>
+                <br>
+            </p>
+            <p class="files">
+                /index.html
+                <br> /css/stylesheet.css //optional
+                <br> /script/javascript.js
+                <br> /testfile.txt
+            </p>
+            <p class="normaltext">
+                Alternativ kann die Struktur hier einfach heruntergeladen werden!
+                <form method="post" action="files.zip">
+                    <button type="submit" class="download_button">Grundgerüst herunterladen!</button>
+                </form>
+            </p>
+            <p class="normaltext challenge">Aufgabe: Laden sie die Daten herunter und machen sie ihr HTML lauffähig.</p>
+        </section>
+
+
+        <section class="page hascode" id="page4">
+            <p class="p_header">
+                Dann mal los! (Der Grundbau)
+            </p>
+            <p class="normaltext">
+                Zuerst brauchen wir ein HTML-Dokument, in das wir unsere index.html laden:
+            </p>
+            <p class="code">
+                &lthtml&gt
+                <br> &nbsp&lthead&gt
+                <br> &nbsp&nbsp&ltscript type="text/javascript" src="script/javascript.js"&gt&lt/script&gt
+                <br> &nbsp&lt/head&gt
+                <br>
+                <br> &nbsp&ltbody&gt
+                <br> &nbsp&nbsp&lth1&gt Dies ist eine Überschrift &lt/h1&gt
+                <br> &nbsp&nbsp&ltp&gt Dies ist ein Statischer Text, er wird nicht verändert!&lt/p&gt
+                <br> &nbsp&nbsp&ltbutton type="button" id="mybutton" onclick="getMore()"&gtLade Daten&lt/button&gt
+                <br> &nbsp&nbsp&ltdiv id="demo"&gtWas sagt das Orakel?&lt/div&gt
+                <br> &nbsp&lt/body&gt
+                <br> &lt/html&gt
+            </p>
+            <p class="normaltext">
+                In die testfile.txt kann irgendein Satz geschrieben werden.
+            </p>
+            <p class="code">
+                Dies ist ein Satz. Wenn du ihn in deinem HTML siehst, dann hat es funktioniert!
+            </p>
+        </section>
+
+
+        <section class="page hascode light" id="page5">
+            <p class="p_header">
+                getMore() function!
+            </p>
+            <p class="normaltext">
+                Nun wird die /script/javascript.js geöffnet:
+                <br> In diese Datei muss nun eine Funktion getMore(), welche uns die neuen Daten holt.
+            </p>
+            <p class="normaltext">
+                Wir brauchen ein Objekt, dass die Anfrage für benötigten neuen Content sendet, die Daten vom Server abruft und eine Funktion, die diese im Dokument implementiert.
+            </p>
+            <p class="code">
+                function getMore() {
+                <br> &nbsp 'use strict';
+                <br> &nbsp var xhttp = new XMLHttpRequest();
+                <br> &nbsp xhttp.onreadystatechange = function () {
+                <br> &nbsp &nbsp if (xhttp.readyState == 4 && xhttp.status == 200) {
+                <br> &nbsp &nbsp &nbsp document.getElementById("contents").innerHTML = xhttp.responseText;
+                <br> &nbsp &nbsp }
+                <br> &nbsp }
+                <br>
+                <br> &nbsp xhttp.open("GET", "/ajax-test-package/script/text.txt", true);
+                <br> &nbsp xhttp.send();
+                <br> }
+                <br>
+            </p>
+        </section>
+
+        <section class="page hascode" id="page6">
+            <p class="p_header">
+                Was ist denn ein XMLHttpRequest?
+            </p>
+            <p class="code">
+                xhttp = new XMLHttpRequest();
+            </p>
+            <p class="normaltext">
+                Ein neues Objekt vom Typ XMLHttpRequest() wurde erstellt und 'xhttp' genannt. ('use strict' sorgt dafür, das JS mehr auf die syntaktischen Regeln achtet!)
+            </p>
+            <p class="code">
+                http.onreadystatechange = function ()
+            </p>
+            <p class="normaltext">
+                Dann wird getestet, ob sich der readyState (siehe weiter unten) geändert hat und, falls ja, die Funktion ausgeführt, die in den geschweiften Klammern {} definiert wird.
+            </p>
+            <p class="code">
+                if (xhttp.readyState == 4 && xhttp.status == 200)
+                <br>{
+                <br> &nbsp document.getElementById("contents").innerHTML = xhttp.responseText;
+                <br>}
+            </p>
+            <p class="normaltext">
+                Zwei Bedingungen müssen nun erfüllt sein:
+                <ul>
+                    <li>readyState muss 4 sein. Wobei Gilt:
+                        <ol>
+                            <li>request not initialized</li>
+                            <li>server connection established</li>
+                            <li>request received</li>
+                            <li>processing request</li>
+                            <li>request finished and response is ready</li>
+                        </ol>
+                    </li>
+                    <li>State muss 200 sein, 404 wäre zum Beispiel ein "NOT-FOUND" fehler.</li>
+                </ul>
+            </p>
+            <p class="code">
+                document.getElementById("contents").innerHTML = xhttp.responseText;
+            </p>
+            <p class="normaltext">
+                Das Element mit der ID "#contents" wird anschließend genommen und die Antwort an 'xhttp' wird dort in das HTML eingebettet.
+            </p>
+            <p class="code">
+                xhttp.open("GET", "/ajax-test-package/script/text.txt", true); xhttp.send();
+            </p>
+            <p class="normaltext">
+                Die Anfrage, die das Request an den Server stellt, in diesem Falle eine Anfrage mit der GET-Methode nach einer .txt-Datei wird nun formuliert. Das true am ende ist für die Asymmetrie zuständig. Setzt man es auf False, dann findet die Übertragung nicht mehr asynchron statt. Setzt man sie auf true, so läuft das Script weiter, egal, ob die Anfrage bereits vollständig bearbeitet wurde oder nicht. ".send" sendet die Anfrage ab!
+            </p>
+
+            <p class="normaltext challenge">Aufgabe: Verändern sie den Text in der .txt. Auch HTML-Tags können hier gesetzt werden.</p>
+        </section>
+
+        <section class="page light" id="page7">
+            <p class="p_header">
+                Puh, das war jetzt viel auf einmal, oder?
+            </p>
+            <p class="normaltext" align="center">
+                Hier, noch eine Ajax-Abfrage mit einem Bild!
+            </p>
+            <p class="normaltext" id="sabi_cont">
+                <button id="getCat" class="download_button" type="button" onclick="getImageSabi()">Such Ajax-Request!</button>
+            </p>
+        </section>
+
+        <section class="page hascode" id="page8">
+            <p class="p_header">
+                Zurück zum Ernst des Lebens: Der Ablauf beim Klicken auf den Button
+            </p>
+            <div class="mywebm">
+                <video class="webmvideo" src="css/ajaxdia.webm" controls></video>
+            </div>
+            <p class="normaltext" align="center">
+                Der Clou ist: Was bei einem Abruf passieren soll wird zuerst festgelegt, dann erst wird die Anfrage gesendet!
+            </p>
+            <p class="code">
+                xhttp.open("POST", "pfad/zur/datei.dat", true);
+            </p>
+        </section>
+
+        <section class="page light hascode" id="page9">
+            <p class="p_header">SOP, Bro? Die Same-Origin-Policy</p>
+            <p class="normaltext">Eine kleine Empfehlung zur Sicherheit besagt, dass man - bettet man Content aus externer Quelle ein - nicht mehr als exakt EINE Quelle nutzen soll. Ansonsten kann der eigene Service sehr schnell sehr unübersichtlich und unsicher werden, anfällig für Manipulation von außen.</p>
+            <p class="p_header">JSON ist auch ein Killer (JavaScript Object Notation)</p>
+            <p class="normaltext">JSON ist eine Möglichkeit, Daten in Objektform zu speichern, erfüllt damit denselben Zweck wie XML, ist aber wesentlich schlanker.</p>
+            <p class="code">Ein Objekt mit JSON erstellt kann z.B. so aussehen:
+                <br>{"students":[
+                <br>{"firstName":"Petra", "lastName":"Mustermann"},
+                <br>{"firstName":"Günter", "lastName":"Olaf"},
+                <br>{"firstName":"Justus", "lastName":"Jonas"} ]}
+            </p>
+            <p class="normaltext">Ein identisches Objekt in XML wäre deutlich länger in der Definition. JSON orientiert sich am JavaScript-Syntax, beschränkt sich hier auf die Minimaldarstellung:
+                <br>"typ:wert" ist alles, was man braucht, um innerhalb eines Objektes einen Wert zu definieren. Adressiert werden sie dann wie in einem Array.
+            </p>
+        </section>
+
+        <section class="page parapara" id="page10">
+            <p class="p_header">Last, but Not Least: Die Antwort</p>
+            <p class="normaltext">
+                Man unterscheidet im groben zwischen zwei verschiedenen Antworttypen:
+                <ul>
+                    <li>responseText</li>
+                    <li>responseXML</li>
+                </ul>
+                <p class="normaltext">Ein ResponseText liefert immer einen Textstring zurück, der sich eben auch als solcher weiterverarbeiten lässt.
+                    <br> eine ResponseXML liefert ein XML-Objekt, was das Strukturieren von Daten erleichtert. Statt XML kann man auch JSON implementieren.
+                </p>
+                <p class="normaltext challenge">Aufgabe: Experimentieren sie mit den Antworttypen (Falls sie XML beherrschen)</p>
+            </p>
+        </section>
+
+        <section class="page light" id="page11">
+            <p class="p_header">
+                POST UND GET
+            </p>
+            <p class="normaltext">
+                POST und GET sind Methoden, die Anfragen über HTTP an einen Server senden. Ohne sie gäbe es im World Wide Web keinerlei Austausch von Daten. Sie enthalten informationen über den verwendeten Client und die Information, welche Daten benötigt werden. Aber wie unterscheiden sich diese beiden Anfragetypen?
+            </p>
+
+            <div id="postgetwrapper">
+                <article id="leftart">
+                    <p class="p_header">POST</p>
+                    <p class="normaltext">Diese Anfragen werden niemals gecached. Sie bleiben nicht in der History, können nicht gespeichert werden. Sie stehen nicht in der Domain und gelten daher auch als sicherer. Die Anfrage wird hier einfach über den Head der Anfrage geschickt. Wie bei einer normalen HTTP-Anfrage werden hier Metadaten übertragen.</p>
+                </article>
+                <article id="rightart">
+                    <p class="p_header">GET</p>
+                    <p class="normaltext">Da sie in der Domain verankert werden können sie auch gespeichert werden. Diese Daten können gecached werden, müssen also dann nicht noch einmal heruntergeladen werden. WARNUNG: GET ist sehr unsicher und sollte niemals für sensible Daten genutzt werden.</p>
+                    <p class="code">/etwas/formular.asp?name=einname</p>
+                </article>
+            </div>
+
+            <br>
+            <br>
+            <p class="normaltext challenge">
+                Aufgabe: Bei dem oben vorgestellten Tutorial die Methode im JS von POST zu GET ändern und schauen, was passiert, wenn man die Anfrage erneut (eventuell mit verändertem Text im .txt) sendet.
+            </p>
+
+        </section>
+
+        <section class="page light hascode" id="page11a">
+            <p class="p_header">
+                Testfragen und Mehr
+            </p>
+            <p class="code" id="readmetext"></p>
+            <p class="normaltext">Übrigens ist dieser Textblock beim laden der Seite mit Ajax importiert worden!</p>
+        </section>
+
+        <footer class="page light" id="page12">
+            <p class="p_header">Quellen</p>
+            <p class="normaltext">
+                <ul>
+                    <li><a href="http://www.w3schools.com/ajax/default.asp">http://www.w3schools.com/ajax/default.asp</a></li>
+                    <li><a href="https://de.wikipedia.org/wiki/Ajax_(Programmierung)">https://de.wikipedia.org/wiki/Ajax_(Programmierung) (stand 20. Okt. 2015)</a></li>
+                    <li><a href="http://www.w3schools.com/tags/ref_httpmethods.asp">http://www.w3schools.com/tags/ref_httpmethods.asp</a></li>
+                    <li><a href="http://code.divshot.com/geo-bootstrap/#tables">http://code.divshot.com/geo-bootstrap/#tables</a></li>
+                </ul>
+            </p>
+            <p class="p_header">About</p>
+            <p class="normaltext">
+                Copyright Lilly Kavsek & Tim Prott @ Th-Köln, Oktober 2015. All rights reserved. We love you all!
+            </p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

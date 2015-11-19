@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="823px" height="143px" version="1.1" content="%3Cmxfile%20userAgent%3D%22Mozilla%2F5.0%20(Macintosh%3B%20Intel%20Mac%20OS%20X%2010_11_0)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F46.0.2490.71%20Safari%2F537.36%22%20type%3D%22device%22%3E%3Cdiagram%3E5VhdT%2Bs4EP01ldiXqzahLTxuS4GVLvdKgLTwaJJpYuHGwXHasr%2BeGXvyRem%2B0NuikofUPp7Yno9znKYXThfrKyPy9EbHoHpBP173woteEJwHId4JePXAcHzugcTI2EODBriT%2FwGDfUZLGUPRMbRaKyvzLhjpLIPIdrC5Vt0lcpFU0zfAXSTUJvqvjG3q0bNg1ODXIJO0WmYwYmeeRPScGF1mvF4vCOfu8sMLUc3lvApnGDCjNU5DrcV6CoqCVgXEu365ZbTepIGMN%2FL%2FD5z6Bwr7WvkJMbrNXW1sqhOdCTVr0InzBWiCPvZSu1DYHGAT1tI%2BtNqPZPJjSL3Mmlcaoidcpxmb68xOtdLGrR%2F23YW43xltZ6tvDBW6NBFbYd%2FVgTAJsJWrMnb%2FCvQCcHk0MaCElcvu7IIrJ6ntmuBhg%2BP3cSx56aVQJU%2FaC0YKN%2BFcdHVYeTl6KSnD6GPlbwsaJfQ7Ka3VGT41VTJ6xnDzXLgLP50328jfKpUW7nLhArJC3nVz1E1ekYpYr7iTKFGQ%2B27AGv0MH6VlLpVq4VzKG2m8dFe9wSUYC8z7bYncTFH1APOdZaLqrhoaDrjM%2B2mLgiPGPpNTZvdu%2BcGcYIa4kZofDV0cQ3bOD5bcNj%2BGe%2BLH2bFpzQexHO8plrx0S2sebn5eW5vfwksJBamNLEhyDAhL4vEu8kj8nJq50REQ6ydfRDfepeRzujE8nHA4UnUS9A8e%2BP1fv%2B%2Fxfjv7%2B%2BKxF%2BAkfZsCiXxhde57rlo4h19T2mt7JZ5ATerXm8ok0xlR9w8k8HyPCRzwcX48cuW0qStX7hV1D3LFS7fYcO8NQMEC90xStUoFyZbV9I%2BAbitPDeSEIVY4PROElHmMovbl6bEDAtQVfwAFG%2FAZczwE4D9kbQL4gO6BAbx2iwHbTmqscboX5Mm3PLZPwwMWPZ%2Fbx1P0VfQ6Vb8lATuv%2BmrxTtkXuc6KWtELsXRVLzOn%2FJGI6B3oO9b9cHzAuufdthJ1KRWcoJ94Ggsr%2FnL5OkFnqAWLJ4gpvnXe%2FJtrrKOSzvPvcDaP9%2FdZArvNJ0E31vqgGs7eAA%3D%3D%3C%2Fdiagram%3E%3C%2Fmxfile%3E" 
+     style="background-color: rgb(255, 255, 255);"><defs/>
+    <g transform="translate(0.5,0.5)">
+        <path d="M 121 31 L 134.63 31" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 139.88 31 L 132.88 34.5 L 134.63 31 L 132.88 27.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <rect x="1" y="1" width="120" height="60" fill="#ffffff" stroke="#000000" pointer-events="none"/>
+        <g transform="translate(16,25)"><switch><foreignObject pointer-events="all" width="89" height="16" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+            <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(255, 255, 255); line-height: 1.2; vertical-align: top; width: 89px; white-space: normal; text-align: center;">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">
+                    <font color="#000000">Button Clicked</font></div></div></foreignObject>
+            <text x="45" y="14" fill="#FFFFFF" text-anchor="middle" font-size="12px" font-family="Helvetica">[Not supported by viewer]</text>
+            </switch>
+        </g>
+        <path d="M 201 61 L 201 74.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 201 79.88 L 197.5 72.88 L 201 74.63 L 204.5 72.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 261 31 L 274.63 31" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 279.88 31 L 272.88 34.5 L 274.63 31 L 272.88 27.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <rect x="141" y="1" width="120" height="60" fill="#ffffff" stroke="#000000" pointer-events="none"/>
+        <path d="M 153 1 L 153 61 M 249 1 L 249 61" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <g transform="translate(153,18)"><switch><foreignObject pointer-events="all" width="95" height="30" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+            <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 93px; white-space: normal; text-align: center;">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">XMLHttpRequest is created</div>
+            </div></foreignObject><text x="48" y="21" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica">[Not supported by viewer]</text>
+            </switch></g><rect x="141" y="81" width="120" height="60" fill="#ffffff" stroke="#000000" pointer-events="none"/>
+        <g transform="translate(141,98)">
+            <switch>
+                <foreignObject pointer-events="all" width="119" height="30" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 117px; white-space: normal; text-align: center;">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">If NOT READY, then stop the request</div>
+                    </div>
+                </foreignObject>
+                <text x="60" y="21" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica">[Not supported by viewer]</text>
+            </switch>
+        </g>
+        <path d="M 401 31 L 414.63 31" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 419.88 31 L 412.88 34.5 L 414.63 31 L 412.88 27.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <rect x="281" y="1" width="120" height="60" fill="#ffffff" stroke="#000000" pointer-events="none"/>
+        <g transform="translate(281,11)">
+            <switch>
+                <foreignObject pointer-events="all" width="119" height="44" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 117px; white-space: normal; text-align: center;">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">Tell elements what to do when there is an update</div>
+                    </div>
+                </foreignObject>
+                <text x="60" y="28" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica">[Not supported by viewer]</text>
+            </switch>
+        </g>
+        <path d="M 541 31 L 554.63 31" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 559.88 31 L 552.88 34.5 L 554.63 31 L 552.88 27.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <rect x="421" y="1" width="120" height="60" fill="#ffffff" stroke="#000000" pointer-events="none"/>
+        <path d="M 433 1 L 433 61 M 529 1 L 529 61" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <g transform="translate(433,18)">
+            <switch>
+                <foreignObject pointer-events="all" width="95" height="30" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 93px; white-space: normal; text-align: center;">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">Request is created and sent</div>
+                    </div>
+                </foreignObject>
+                <text x="48" y="21" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica">[Not supported by viewer]</text>
+            </switch>
+        </g>
+        <path d="M 681 31 L 694.63 31" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 699.88 31 L 692.88 34.5 L 694.63 31 L 692.88 27.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <rect x="561" y="1" width="120" height="60" fill="#ffffff" stroke="#000000" pointer-events="none"/>
+        <path d="M 573 1 L 573 61 M 669 1 L 669 61" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <g transform="translate(573,18)"><switch>
+            <foreignObject pointer-events="all" width="95" height="30" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 93px; white-space: normal; text-align: center;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">Response is saved into cache</div>
+                </div>
+            </foreignObject>
+            <text x="48" y="21" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica">[Not supported by viewer]</text>
+            </switch>
+        </g>
+        <rect x="701" y="1" width="120" height="60" fill="#ffffff" stroke="#000000" pointer-events="none"/>
+        <g transform="translate(701,11)"><switch>
+            <foreignObject pointer-events="all" width="119" height="44" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 117px; white-space: normal; text-align: center;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">File(or data) is(are) embedded into the document</div>
+                </div>
+            </foreignObject>
+            <text x="60" y="28" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica">[Not supported by viewer]</text>
+            </switch>
+        </g>
+    </g>
+</svg>

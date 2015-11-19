@@ -1,0 +1,37 @@
+******************************************</br>
+*** Ausarbeitung zum Thema Ajax        ***</br>
+***                                    ***</br>
+*** Made by Lilly Kavsek & Tim Prott   ***</br>
+*** 2015 All rights reserved           ***</br>
+******************************************</br>
+</br>
+</br>
+*** Inhalt ***</br>
+--------------------</br>
+Diese Ausarbeitung handelt vom "Asynchronous Javascript And XML" und ist in Form eines interaktiven Tutorials verfasst,</br>
+welche den Leser dazu ermutigen soll, anhand des vorgegebenen Beispieles eine eigene Ajaxabfrage zu generieren.</br>
+</br>
+</br>
+*** 6 Fragen, die dir dein Leben leichter machen (oder auch nicht): ***</br>
+--------------------</br>
+1. Warum kommt nach der gesendeten Ajax-Abfrage keine Information, wie die Daten ausgewertet werden sollen?</br>
+2. Wo liegt der Unterschied zwischen synchroner und asynchroner Anfrage?</br>
+3. Welche beiden Antworttypen gibt es?</br>
+4. Warum mag der IE6 Ajax nicht?</br>
+5. Welche beiden Bedingungen müssen vor einer Anfrage geklärt werden?</br>
+6. Welche Abfrage nutze ich am besten für Bankdaten?</br>
+</br>
+</br>
+*** 6 Lösungen, die dich aufatmen lassen ***</br>
+--------------------</br>
+1. Weil diese Information schon vorher festgelegt wird.</br>
+2. Bei der synchronen Anfrage wartet der Client auf die Antwort, bevor das Skript weiterläuft. Ist die Anfrage Asynchron, läuft das Skript so weiter.</br>
+3. responseXML und responseText</br>
+4. Weil MS eine eigene Variante nutzte: "Microsoft Remote-Scripting-Component"</br>
+5. readyState == 4 und State == 200</br>
+6. POST, da diese intern geregelt wird.</br>
+</br>
+</br>
+Disclaimer</br>
+--------------------</br>
+Copyright by Lilly Kavsek Nov 2015. All rights reserved.</br>

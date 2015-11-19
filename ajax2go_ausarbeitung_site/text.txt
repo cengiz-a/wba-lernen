@@ -1,0 +1,2 @@
+<p class="p_header"> Website erfolgreich aktualisiert!</p>
+<p class=„normaltext“>Der Inhalt dieses Feldes befand sich in einer .txt-Datei. Wie du siehst, funktionieren sogar HTML-Tags.</p>
