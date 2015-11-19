@@ -1,0 +1,20 @@
+<ion-header-bar class="bar-balanced">
+    <h1 class="title">Login</h1>
+</ion-header-bar>
+<ion-content>
+    <!-- Login Formular -->
+    <form ng-submit="doLogin()">
+        <div class="list list-inset">
+            <label class="item item-input">
+                <input type="text" ng-model="loginData.username" placeholder="Benutzername">
+            </label>
+            <label class="item item-input">
+                <input type="password" ng-model="loginData.password"  placeholder="Passwort">
+            </label>
+            <label class="item">
+                <button class="button button-block button-balanced" type="submit">Log in</button>
+            </label>
+        </div>
+    </form>
+</ion-content>
+
