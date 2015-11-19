@@ -1,0 +1,231 @@
+/*TODO:
+Übung 1:
+Bitte erledigen Sie alle TODOs in diesem Dokument. Zu finden ab:
+    Zeile: 22
+    Zeile: 51
+    Zeile: 144
+    Zeile: 190
+    Zeile: 195
+    
+    
+
+/* Generelle Änderungen */
+body {
+    font-size: 100%;
+    margin: 0em;
+    padding: 0em;
+    background: #DCDCDC;
+    font-family: arial;
+}
+
+h1{
+    /*TODO: 
+    Setzen Sie die Schriftgröße auf das "2,5"-Fache des "Elternelements"
+    */
+    line-height: 2.8em;
+    font-family: arial;
+    font-weight: 100;
+    color: #E2DBDB;
+    margin: 0em;
+}
+
+
+h2{
+    font-size: 2em;
+    line-height: 2em;
+    font-family: arial;
+    font-weight: 100;
+    color:#2F2D2C;
+    margin: 0em;
+    padding:1.5em 1.5em 1.5em 0.8em;
+    text-align: left;
+}
+
+ul{
+    margin: 0em;
+    padding: 0em;
+}
+
+
+p {
+    /*TODO: 
+    Die Schriftgröße soll hier auf den Wert des "Elternelements" gesetzt werden. (Tipp: das "1,0"-Fache)
+    */
+    line-height: 1.25em;
+    font-family: arial;
+    font-weight: 100;
+    color:#2F2D2C;
+    margin: 0em;
+    padding:1.5em;
+    text-align: left;
+}
+li{
+    list-style: square;
+    font-family: arial;
+    font-weight: 100%;
+    line-height: 1.25em;
+    color:#2F2D2C;
+    margin: 0.313em 0em 0.313em 0em;
+    padding:0em;
+}
+
+img{
+    width:90%;
+    heigth:auto;
+    max-width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Menübar */
+#menubar{
+    display:none;
+    background:#FFFFFF;
+}
+
+#menubar ul{
+    display:block;
+    width:2em;
+    padding:0.9em;
+}
+#menubar ul li{
+    display: inline;
+}
+
+#menubar ul li a.menu_ham{
+    display:none;
+}
+
+/* Header */
+header{
+    display:block;
+    background:#2F2C2C;
+    text-align: center;
+    
+}
+
+/* Navigation */
+nav{
+    display:block;
+    height: 2.5em;
+    color: white;
+    text-align: center;
+}
+
+nav ul{
+    display:block;
+}
+
+nav ul li{
+    display: inline;
+    margin: 0em 0.188em 0em 0.188em;
+}
+
+nav ul li a{
+    color: #454040;
+    font-size: 1.125em;
+    line-height: 2.5em;
+    padding: 0.563em 0.938em 0.375em 0.938em;
+    transition:background 0.2s;
+}
+
+nav ul li a:hover{
+    background: #DBD9D8;
+    border-bottom: 0.188em solid #E7590B;
+}
+
+nav ul li a.active{
+     border-bottom: 0.188em solid #E7590B;   
+}
+
+/* Main */
+/*TODO: 
+Setzen Sie die Breite der "Main" auf "95%" (damit wir einen Rand erzeugen). Außerdem soll sowohl der "Außen-" 
+als auch "Innenabstand" der "Main" geändert werden.
+Außenabstand: "oben und unten" auf das "1,25" Fache des "Elternelements"
+              "links und rechts" auf automatisch
+Innenabstand: Auf das "0,00" Fache des "Elternelements"
+
+Außerdem sollen alle Sektionen einen weißen Hintergrund haben und einen allgemeinen Außenabstand von 0,22 Fachen
+des "Elternelements"
+
+Zusätzlich sollen alle Paragraphen Linksbündig sein und eine Schriftgröße von dem 1,25 Fachen des "Elternelements" haben
+*/
+
+
+/* Footer */
+footer{
+    display:block;
+    background: #2F2C2C;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom:0;
+}
+
+footer ul{
+    display:block;
+    width:100%;
+    text-align: left;
+    margin: 0px auto;
+}
+
+footer ul li{
+    display:inline;
+    font-size: 0.8em;
+    line-height: 2.8em;
+    color: #E2DBDB;
+    padding: 0em 0.625em;
+}
+
+footer ul li a{
+    color: #E2DBDB;
+}
+
+/* Smaller Devices */
+/* media screen = Für Bildschirme von 0-900px definieren wir folgendes um: */
+
+/*TODO: 
+Erstellen Sie einen eigenen Media Querie, welcher mit einer maximalen Display-Größe von 900px
+die Schriftgröße des "Bodys" auf "90%" setzt"
+*/
+@media screen and (max-width:700px){
+    /* TODO:
+    Sobald die Anzeige kleiner oder gleich 700px erreicht, soll die Schriftgröße der Paragraphen auf 80% gesetzt werden.
+    Die Überschrift h1 soll auf das "1,75"-Fache des "Elternelements" gesetzt werden und die Überschrift h2 auf das "1,5" Fache.
+    Die Breite der "main" soll auf "100%" gesetzt werden und der Außenabstand bei "oben und unten" auf das "0,625"
+    Fache des "Elternelements" und bei "links und rechts" auf das "0,00" Fache "Elternelements"
+    */
+}
+
+@media screen and (min-width:670px){
+    nav.nav{
+        display:block !important;
+    }
+}
+
+@media screen and (max-width:670px){
+    body{
+        font-size: 85%;
+    }
+    
+    #menubar ul li a.menu_ham{
+    display:block;
+    }
+    
+    #menubar{
+        display:block;
+    }
+    
+    nav{
+        display: none;
+        height: auto;
+    }
+    
+    nav ul li{
+        display: block;
+        margin 0.3em 0em;
+    }
+}

@@ -99,5 +99,35 @@
       ],
       "date": "2015-11-05"
     }
+    ,
+    "usertracking_workshop": {
+      "title": "Usertracking Workshop",
+      "authors": [
+        "Aziz Cetiner, Aaron Asgharzadeh"
+      ],
+      "date": "2015-11-12"
+    },
+    "canvas-training": {
+      "title": "Canvas Workshop",
+      "authors": [
+        "Sebastian Kings und Corinna Klein"
+      ],
+      "date": "2015-11-12"
+    }
+    ,
+    "big_data_workshop": {
+      "title": "Big Data Workshop",
+      "authors": [
+        "Sarah Klees und Michelle Simon"
+      ],
+      "date": "2015-11-12"
+    },
+    "responsive_design_workshop": {
+      "title": "Responsive Design Workshop",
+      "authors": [
+        "Nico Ferdinand und Clara Meschkat"
+      ],
+      "date": "2015-11-19"
+    }
   }
 }

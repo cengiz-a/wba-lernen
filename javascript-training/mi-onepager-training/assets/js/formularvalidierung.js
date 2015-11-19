@@ -32,6 +32,14 @@
   *  4. Finden Sie das soeben dem DOM-Baum hinzugefügte Element auf der Seite
   *  5. Löschen Sie das hinzugefügte Element wieder
   * ##
+  
+  var button = document.createElement('input');
+  button.setAttribute("type","text");
+  button.setAttribute("id","test_input");
+  button.setAttribute("value","VORNAME");
+  document.getElementById("anfrageformular").appendChild(button);
+  document.getElementById("test_input")
+  document.getElementById("test_input").remove()
   */
 
 
@@ -79,10 +87,14 @@ function create_and_append_error_msg( input_element, error_msg ) {
      * ##
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     input_element.style.borderColor = "#DD1166";
 =======
     input_element.style.borderColor = '#DD1166';/* Und hier */;
 >>>>>>> f0ae8ea852993a396491acff43e8ec29263c4e2e
+=======
+    input_element.style.borderColor = '#DD1166';
+>>>>>>> f7a192c937d3b0b388e492f760fba29d96f6a974
 
     /*
      * ## ADVANCED-TODO:
@@ -93,6 +105,7 @@ function create_and_append_error_msg( input_element, error_msg ) {
      * ##
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     var input_parent_element = input_element.parentNode;
     input_parent_element.appendChild(error_span_element) ;
 
@@ -102,6 +115,11 @@ function create_and_append_error_msg( input_element, error_msg ) {
 	
 	
 >>>>>>> f0ae8ea852993a396491acff43e8ec29263c4e2e
+=======
+    var input_parent_element = input_element.parentNode;
+    input_parent_element.appendChild(error_span_element);
+
+>>>>>>> f7a192c937d3b0b388e492f760fba29d96f6a974
     /* Als kleine Hilfe wird vermerkt, dass es bei dem Eingabefeld ein Fehler gab */
     input_element.dataset.error = true;
 }
@@ -146,10 +164,14 @@ var anfrageformular_element = document.querySelector( '#anfrageformular' ),
  * ##
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 formular_element.addEventListener ( "submit", function( e ) {
 =======
 formular_element.addEventListener("submit",function( e ) {
 >>>>>>> f0ae8ea852993a396491acff43e8ec29263c4e2e
+=======
+formular_element.addEventListener('submit', function( e ) {
+>>>>>>> f7a192c937d3b0b388e492f760fba29d96f6a974
     /* Wird auf 'false' gesetzt, sofern irgendwo ein Validierungsfehler auftrat */
     var allValid = true;
 
@@ -169,13 +191,17 @@ formular_element.addEventListener("submit",function( e ) {
      *    als 20 bzw. weniger als 21 Zeichen eingegeben wurden (Tipp: 'length'-Eigenschaft)
      * ##
      */
-
+    console.log("validation");
     /* ## Vorname */
+<<<<<<< HEAD
 <<<<<<< HEAD
     if( vorname_input_element.value === "" || vorname_input_element.value.length > 20 ) {
 =======
     if( vorname_input_element.value === "" ) {
 >>>>>>> f0ae8ea852993a396491acff43e8ec29263c4e2e
+=======
+    if(vorname_input_element.value === "" ) {
+>>>>>>> f7a192c937d3b0b388e492f760fba29d96f6a974
         create_and_append_error_msg( vorname_input_element,
                                      "Bitte geben Sie einen Vornamen ein!" );
         allValid = false;
@@ -199,11 +225,15 @@ formular_element.addEventListener("submit",function( e ) {
 
     /* ## Email */
 <<<<<<< HEAD
+<<<<<<< HEAD
     if( email_input_element.value === ""
 =======
     if(email_input_element.value === ""
 >>>>>>> f0ae8ea852993a396491acff43e8ec29263c4e2e
         || !email_input_element.value.match(/.+@.+\..+/) ) {
+=======
+    if(     email_input_element.value === "" || !email_input_element.value.match(/.+@.+\..+/) ) {
+>>>>>>> f7a192c937d3b0b388e492f760fba29d96f6a974
 
         create_and_append_error_msg( email_input_element,
                                      "Bitte geben Sie eine eMail-Adresse ein!" );
@@ -215,10 +245,14 @@ formular_element.addEventListener("submit",function( e ) {
 
     /* ## Nachricht */
 <<<<<<< HEAD
+<<<<<<< HEAD
     if( nachricht_input_element.value === "" ) {
 =======
     if(nachricht_input_element.value === "" ) {
 >>>>>>> f0ae8ea852993a396491acff43e8ec29263c4e2e
+=======
+    if( nachricht_input_element.value === "" ) {
+>>>>>>> f7a192c937d3b0b388e492f760fba29d96f6a974
         create_and_append_error_msg( nachricht_input_element,
                                      "Bitte geben Sie eine Nachricht ein!" );
         allValid = false;
@@ -232,7 +266,8 @@ formular_element.addEventListener("submit",function( e ) {
      * Gab es mindestens einen Validierungsfehler, wird
      * die Standardaktion (Formular absenden) präventiert
      */
-    if( !allValid )
+    //if( !allValid )
         e.preventDefault();
+    console.log("validation");
 
 } );

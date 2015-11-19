@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>WBA1 Projekt - Daniel Buchholz & Daniel Gofman</title>
+    
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    
+    <script src="js/jquery-1.11.3.min.js"></script>
+</head>
+
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+
+<div id="impress">
+
+    <div id="titel" class="step slide" data-x="0" data-y="-1000" data-scale="1">
+        <q>
+			<div class="headline">CSS3 Projekt - Th Köln - WBA1</div>
+			<img id="csslogo" src="img/css3.png" />
+			<img class="thlogo" src="img/thlogo.png" />
+		</q>
+    </div>
+
+    <div id="transdemo" class="step" data-x="0" data-y="0">
+		<q>
+			<div class="TransDemo2D">
+				<p>2D Transformation</p>
+				<img class="thlogo"  src="img/thlogo.png" />
+			</div>
+			<div>
+				<p>3D Transformation</p>
+				<img class="thlogo" id="XRotate" src="img/thlogo.png" />
+                <img class="thlogo" id="YRotate" src="img/thlogo.png" />
+			</div>
+		</q>
+    </div>
+
+    <div id="transinfo" class="step" data-x="-1450" data-y="3000" data-z="-5000" data-rotate="90" data-scale="5">
+        <q>
+            <div class="headline">2D-Transformation</div>
+            <textarea readonly class="codeblock">
+transform: rotate(30deg);
+            </textarea>
+            <img id="transinfoimg1" class="thlogo"  src="img/thlogo.png" />
+            
+            <textarea readonly class="codeblock">
+transform: rotate(-30deg) translateX(100px);
+            </textarea>
+            <img id="transinfoimg2" class="thlogo"  src="img/thlogo.png" />
+
+            <textarea readonly class="codeblock">
+transform: rotate(-30deg) translateX(100px) skew(50deg,160deg);
+            </textarea>
+            <img id="transinfoimg3" class="thlogo"  src="img/thlogo.png" />
+        </q>
+    </div>
+    
+    <div id="hovereffects" class="step" data-x="1825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
+        <p>Hover effects: blur & scale</p>
+        <img src="img/thlogo.png" align="left" class="blur">
+    </div>
+    
+    <div id="transinfo3d" class="step" data-x="500" data-y="10100" data-rotate="180" data-scale="5">
+        <q>
+            <div class="headline">3D-Transformation</div>
+            <textarea readonly class="codeblock">
+#rotateXimg{
+    animation: rotateX3D 5s infinite;
+}
+@keyframes rotateX3D{
+    0%{transform:rotateX(0deg);}
+    100%{transform:rotateX(-360deg);}
+}
+            </textarea>
+            <img id="transinfo3dimg1" src="img/thlogo.png" />
+            
+            <textarea readonly class="codeblock">
+#rotateYimg{
+    animation: rotateY3D 5s infinite;
+    animation-timing-function: linear;
+}
+@keyframes rotateY3D{
+    0%{transform:rotateY(0deg);}
+    100%{transform:rotateY(360deg);}
+}
+
+            </textarea>
+            <img id="transinfo3dimg2" src="img/thlogo.png" />
+            <p>Mit der X und Y Rotation können Objekte im Raum rotiert werden. Wenn man bei einer Transformation die Objekte zuerst rotiert und dann translatiert (verschiebt) können dadurch 3D Objekte wie zum Beispiel Würfel oder Quader entstehen (Siehe Beispiele am Ende)</p>
+           
+        </q>
+    </div>
+
+    <div id="transinfo3d2" class="step"  data-x="-6500" data-y="6100"  data-rotate="90" data-scale="5" data-rotate-y="90">
+        <q>
+            <div class="headline">3D-Transformation Z-Translation</div>
+            <textarea readonly class="codeblock">
+#img1{
+    animation: translateZ3D 5s infinite;
+    animation-delay: 2s;
+    background-color: rgba(50,250,50,0.5);
+}
+#img2{
+    animation: translateZ3D 5s infinite;
+    background-color: rgba(50,50,250,0.5);
+}
+@keyframes translateZ3D{
+    0%{transform:translateZ(0);}
+    50%{transform:translateZ(2000px);}
+}
+            </textarea>
+            <img id="transinfo3dimg3" src="img/thlogo.png" />
+            <img id="transinfo3dimg4" src="img/thlogo.png" />
+            <p>Mit der Z-Translation können Objekte hintereinander platziert werden. Wenn man diese Translation anmiert können dadurch verschiedene 3D Effekte zu Stande gebracht werden (wie im Beispiel oben)</p>
+        </q>
+    </div>
+
+    <div id="transitions" class="step" data-x="3300" data-y="4000" data-rotate="20" data-scale="2">
+        <q>
+            <div class="headline">Transitions</div>
+            <textarea readonly class="codeblock">
+#transColor:hover{background-color: blue;}
+                
+#transRotate:hover{transform: rotate(360deg);}
+                
+#transHeight:hover{height:300px;}
+                
+#transWidth:hover{width: 300px;}
+            </textarea>
+            <p>Bewegen Sie den Mauszeiger über die verschiedenen Boxen um die Eigenschaften zu ändern</p>
+            <div id="boxwrap">
+                <div class="transidemobox" id="transColor">Farbe</div>
+                <div class="transidemobox" id="transRotate">Rotation</div>
+                <div class="transidemobox" id="transHeight">Höhe</div>
+                <div class="transidemobox" id="transWidth">Breite</div>
+            </div>
+        </q>
+    </div>
+
+    <div id="iphone" class="step" data-x="3700" data-y="-300" data-z="-8000" data-scale="3">
+        <div class="headline">3D Transformationen Beispiel</div>
+        <section class="container">
+            <div id="box" class="show-front">
+                <figure class="front">V</figure>
+                <figure class="back">H</figure>
+                <figure class="right">R</figure>
+                <figure class="left">L</figure>
+                <figure class="top">O</figure>
+                <figure class="bottom">U</figure>
+            </div>
+        </section>
+        <script>
+            $(document).ready(function(){
+                $('button').click(function(){
+                     $('#box').attr('class', $(this).attr("class"));
+                });
+            });
+        </script>
+        <section id="options">
+            <p id="show-buttons">
+                <button class="show-front">Vorne</button>
+                <button class="show-back">Hinten</button>
+                <button class="show-right">Rechts</button>
+                <button class="show-left">Links</button>
+                <button class="show-top">Oben</button>
+                <button class="show-bottom">Unten</button>
+            </p>
+         </section>
+        <section id="iphonedescript">
+            Bei diesem Beispiel werden 6 verschiedene HTML Elemente (figure) mit Grafiken gefüllt und mit 3D Transformation verschoben. <br> Zuerst wird die Grafik in CSS mit dem Attribut "background" gesetzt und danach mit den Operationen rotateX/rotateY und translateZ transformiert.<br>
+            Um nun die verschiedenen Seiten anzuschauen, kann man über die Knöpfe mit jQuery eine Klasse setzen. Wenn die Rückseite angezeigt werden soll, kann im Element mit der ID "box" also die Klasse auf "show-back" gesetzt werden. Damit sich das Element nun auch dreht, muss in CSS eine Transition (= Übergang) gesetzt werden. Diese Transition sollte im Hauptelement mit der ID "box" gesetzt werden.
+        </section>
+        
+    </div>
+
+    <div id="WBADropDownTest" class="step" data-x="6500" data-y="2550" data-rotate="180" data-z="-4000" data-scale="6">
+        <div class="headline">Transition Demo: Menü</div>
+        <p>Anwendungsbeipiel Menünavigation:<br><br>
+            Bewegen Sie die Maus über eines der <br>
+            Menüelemente, um die Untermenüpunkte <br>
+            sichtbar zu machen. Mit einfachen <br>
+            Hovereffekten und Translationen <br>
+            wird dieses Menü zum Leben erweckt.</p>
+        <div id="DropDownTest">
+            <ul>
+                <h1>Menu 1</h1>
+                <li>Submenu 1</li>
+                <li>Submenu 2</li>
+                <li>Submenu 3</li>
+                <li>Submenu 4</li>
+            </ul>
+            <ul>
+                <h1>Menu 2</h1>
+                <li>Submenu 1</li>
+                <li>Submenu 2</li>
+                <li>Submenu 3</li>
+                <li>Submenu 4</li>
+            </ul>
+            <ul>
+                <h1>Menu 3</h1>
+                <li>Submenu 1</li>
+                <li>Submenu 2</li>
+                <li>Submenu 3</li>
+                <li>Submenu 4</li>
+            </ul>
+        </div>
+    </div>
+
+    
+    <div id="overview" class="step" data-x="2000" data-y="1500" data-scale="10">
+    </div>
+
+</div>
+
+<div class="hint">
+    <p>Daniel Buchholz & Daniel Gofman</p>
+</div>
+
+
+
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+
+</body>
+</html>
+
