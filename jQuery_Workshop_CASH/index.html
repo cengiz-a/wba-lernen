@@ -1,173 +1,185 @@
 <!doctype html>
+<html lang="en">
 
-<!--
-jQuery Workshop
-05. November 2015
+	<head>
+		<meta charset="utf-8">
 
-Studiengang Medieninformatik an der Fachhochschule Köln
-Campus Gummersbach
-
-
-Ergänzen Sie folgenden Text um möglichst reichhaltiges und sinnvolles Markup.
-Achten Sie darauf, dass das HTML wohlgeformt und valide ist.
-
--->
-
-<html>
-
-<head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script> 
-        /*  
-		Hier gehören die verschiedenen jQuery-Funktionen hin.
-    
-        TODO:
-     
-        Aufgabe 1: Erstellen Sie eine Funktion, die beim Gleiten (hover) mit der Maus über 
-		<h3> den Paragraphen <p> unter <h3> verschwinden und wieder anzeigen lässt.
-         
-        Aufgabe 2: Erstellen Sie eine Funktion, die beim Klicken auf <h1> im <header> die 
-		Navigation und die zwei Container verschwinden lässt(slideToggle).
-         
-        Aufgabe 3: Erstellen Sie eine Funktion, die mein Klicken auf den <blockquote> den 
-		Inhalt mit dem vorgegeben Inhalt (siehe unten) ersetzt (.text).
-         
-        Aufgabe 4: Erstellen Sie eine Funktion, die beim Klicken auf den "Get Black!"-
-		Button dem <body>, <h6> und <p> die Klasse <p1> vergibt.
-
-		*/
-
+		<title>Usertracking Workshop</title>
         
-        $(document).ready(function(){
-            $('h3').hover(function(){
-            $('p').slideToggle();              
-         });
-            
-            $('h1').click(function(){
-               $('nav').slideToggle();
-               $('.banner').slideToggle();
-               $('.callout').slideToggle();
-            });
-            
-            $('blockquote').click(function(){
-               $('h6').text("So wird der Inhalt geändert! Einfach in dem man drauf klickt!");
-            });
-            
-            $('h5').click(function(){
-                $('body').toggleClass("p1");
-                $('h6').toggleClass("p1");
-                $('p').toggleClass("p1");
-            });
-            
-        });
-    </script> 
+        <meta name="description" content="Usertracking Workshop WBA">
+        
+        <meta name="author" content="Aziz Cetiner & Aaron ">
+
 	
+            <link rel="stylesheet" href="../revealjs-framework/css/reveal.min.css">
+	       <link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme">
+        
+        <link rel="stylesheet" href="../revealjs-framework/lib/css/zenburn.css">
+        
+	</head>
 
-	<meta charset="UTF-8">
-	<title>Black + White</title>
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/text.css">
-	<link rel="stylesheet" href="css/960_24_col.css">
-	<link rel="stylesheet" href="css/style.css">
+	<body>
 
-</head>
+		<div class="reveal">
 
-<body>
+			<div class="slides">
+                    
+                
+                <section>
+                    <h1>Web-basierte Anwendungen 1 2015 </h1>
+                    <h2 class="u"> JQuery</h2>
+                    <p> 12.11.2015</p>
+                    <p>Studiengang Medieninformatik an der Technischen Hochschule Köln<br>
+          Campus Gummersbach</p>
+                    <p style="margin-top:10%">Cengizhan Ayyilidz<br>
+                Sami Hassini</p> 
+                
+                
+                </section>
 
-	<div class="container_24">
+            
+				<section>
+					<h2 class="u">Inhalte des Workshops</h2>
+                        <ul>
+                        <li class="fragment"> Ziel des Workshops</li>
+                        <li class="fragment">  Praktischer Umgang mit Usertracking  </li>
+                        <li class="fragment">  Syntax  </li>
+                        <li class="fragment">  Beispiel  </li>
+                        <li class="fragment">  Aufgabenstellung  </li>
 
-		<header>
+                    
+                    
+                    
+                    </ul>
+                        
+              
+                                
+                   
+				</section>
 
-			<h1 class="clearfix">
-				<a href="#">Black + White</a>
-			</h1>
+				<section>
+					<h2 class="u">Ziele des Workshop</h2>
+					<ul>
+                    <li>Wissen was jQuery ist</li>
+                     <li>Syntax und grundlegende Elemente verstehen</li>
+                         <li>Wie man jQuery in HTML verwendet</li>
+                         <li>Vor- und Nachteile</li>
+                    </ul>
+				</section>
+                
+            
+            
+            
+            
+                
+                <section>   
+                    <h2 class="u">jQuery</h2>
+                        <ul>
+                        <li>JavaScript-Code bzw. Bibliothek</li>
+                        <li>reduziert den Codeaufwand von JavaScript-Anwendungen erheblich</li>
+                        <li>einfache Funktionen ermöglichen Erstellung von Animation</li>
+                        <li>es existieren mehrere tausend Funktionen</li>
+                        <li>Einbettung in HTML:</li>
+                        <li>    Code direkt im script Tag innerhalb des head oder head Tags</li>
+                         <li>   Code verlinkt im script Tag innerhalb des body Tags</i> 
 
-			<nav>
+                        </ul>
+            
+                </section>
+            
+                    
+                    
+            
+            
+            
+            
+                <section>
+                <h2> Syntax</h2>
+                        
+                        <p>jQuery Syntax ist darauf zugeschnitten HTML-Elemente 
+                        zu finden und Aktionen an ihnen auszuführen
+                        </p>
+                        <p class="fragment highlight-red"> $(selector).action()</p> 
+                        <ul>   
+                        <li class="fragment">$ signalisiert Aufruf von jQuery</li>
+                        <li class="fragment">(selector) wählt HTML-Elemente aus</li>
+                        <li class="fragment">action() ist der auszuführende Befehl</li>
+                       
+                        </ul>
+                </section>   
 
-				<ul class= "nav">
+                   <section>
+                    <img src="images/syntax.png"> 
+                    <p>Das Dokument muss vollständig geladen sein, bevor die jQuery-Funktionen ausgeführt werden.
+                       Andernfalls können Fehler auftreten.</p>
+                
+                    </section>  
+                    
+                <section>
+                    <h2> jQuery Events</h2>
+                        <ul>
+                        <li class="fragment"> jQuery click() - Der einfach Klick mit der Maus</li>
+                        <li class="fragment"> jQuery hover() - Gleiten der Maus</li>
+                        <li class="fragment"> jQuery mouseup() - loslassen der Maustaste</li>
+                        <li class="fragment">jQuery mousedown() - drücken der Maustaste</li>
+                
+                        </ul>
+                
+                    </section>  
+                    
+                <section>
+                    <h2> jQuery Selectors</h2>
+                        <ul>
+                    
+                        <li class="fragment">$(“p’’).hide() - Auswahl eines HTML-Elements</li>
+                        <li class="fragment">$(“#test“).hide() - Auswahl einer ID </li>    
+                        <li class="fragment">$(“.test“).hide() - Auswahl einer Klasse</li>
+                        <li class="fragment">$(“this“).hide() - Auswahl eines aktuellen HTML-Elements</li>
+                           
+                        </ul>
+                    </section>    
+                    
+                <section>
+                    <h2>jQuery animate()</h2>
+                        <img src="images/syntax-beispiel.png" >
+                        <img src="images/beispiel.png" >
+                       
+          
+                    </section>    
+                
+                    
+                <section>
+                    <h2>Aufgabenstellung und Materialien:</h2>
+                        <ul>
+                        <li>https://github.com/th-koeln/wba1-2015</li>
+                        <li>file: jQuery_Workshop_CASH</li>
+                        <li>hilfreiche Quelle:  http://www.w3schools.com/jquery/jquery_examples.asp</li>
 
-					<li><a href="#" class="selected">Home</a></li>
-					<li><a href="#">Our Services</a></li>
-					<li><a href="#">How We Work</a></li>
-					<li><a href="#">Testimonials</a></li>
-					<li><a href="#">Work Examples</a></li>
+                        </ul>
+                    
+                    </section>    
 
-				</ul>
-
-			</nav>
-
-			<div class="banner grid_18">
-				<h2>
-					some slick phrase would go in here to sum up what the business actually does and stands for
-				</h2>
+                </section>    
+                
+        
+         
+     
+          
+            
+            
 			</div>
 
-			<div class="callout grid_6"></div>
+		</div>
 
-		</header>
+		
+        <script src="../revealjs-framework/lib/js/head.min.js"></script>
+        <script src="../revealjs-framework/js/reveal.min.js"></script>
 
-		<div class="main">
+		<script>
 
-			<div class="grid_9">
+			Reveal.initialize();
 
-				<h3>Services We Offer</h3>
-				<div>
-				<p>
-					Donec odio arcu, faucibus vel, accumsan eu, cursus in, ipsum. Pellentesque blandit condimentum purus. Suspendisse commodo dui.
-				</p>
-				<p> 
-					Quisque a tellus. Vestibulum tincidunt lorem ac est. Vivamus augue quam, hendrerit at, porta ut, tristique ac, lacus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur fringilla eros ultrices justo. Nunc condimentum. Ut id dui in erat vulputate ultricies.
-				</p>
-				</div>
+		</script>
 
-				<h5><a href="#" class="button">Get Black!</a></h5>
-
-			</div>
-
-			<div class="grid_9">
-
-				<h3>How We Work</h3>
-
-					<p>
-						Donec odio arcu, faucibus vel, accumsan eu, cursus in, ipsum. Pellentesque blandit condimentum purus. Suspendisse commodo dui. 
-					</p>
-
-					<p>
-						Quisque a tellus. Vestibulum tincidunt lorem ac est. Vivamus augue quam, hendrerit at, porta ut, tristique ac, lacus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur fringilla eros ultrices justo. Nunc condimentum. Ut id dui in erat vulputate ultricies.
-					</p>
-
-					<p>
-						Cras orci odio, consequat vel, venenatis id, mollis a, lorem. Ut commodo accumsan sapien.
-					</p>
-
-					<h5><a href="#" class="button">Get Black!</a></h5>
-
-			</div>
-
-			<div class="grid_6">
-
-				<blockquote>
-					<h6>
-						Clean, elegant typography
-						matched with sharp lines
-						and precise spacing leads
-						to a professional look
-						and feel.
-
-						<!-- Aufgabe 3: ersetzen durch: "So wird der Inhalt geändert! Einfach in dem man drauf klickt!"-->
-
-					</h6> 
-				</blockquote>
-
-			</div>
-	</div>
-
-		<footer>
-				<p>
-					<strong>black + white</strong> themes via <a href="http://themeforest.net/">themeforest</a>
-				</p>
-		</footer>
-
-	</div> <!-- end of container -->
-</body>
+	</body>
 </html>
