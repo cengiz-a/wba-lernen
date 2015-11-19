@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="de">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Workshop - Webpräsentation mit reveal.js</title>
+
+		<meta name="description" content="Workshop-Präsentation zu reveal.js">
+		<meta name="author" content="Marvin Klimm und Güray Kilic">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        
+		<link rel="stylesheet" href="../revealjs-framework/css/reveal.min.css">
+        <link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../revealjs-framework/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../revealjs-framework/css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+        
+        <!--[if lt IE 9]>
+		<script src="../revealjs-framework/lib/js/html5shiv.js"></script>
+		<![endif]-->
+        
+	</head>
+    <body>
+        
+        <div class="reveal">
+            <div class="slides">
+        <!--Hier fängt unsere Präsentation an-->
+                <section><!--1.Folie-->                       
+                    <h1>Webbasierte Anwendungen I</h1>
+                    <h2 class="u">Datenschutz</h2>
+                    <p>19. November 2015</p>
+                    <h3></h3>
+                    <p>Studiengang Medieninformatik an der Technischen Hochschule Köln</p>
+                    <h3></h3>
+                    <p>Campus Gummersbach</p>
+                    </br></br></br>
+                    <p>Robin Mathesdorf und Krystian Schindler</p>
+                    
+                </section><!--ENDE_1. Folie-->
+                <section>
+                    <h1> Datenschutzgesetze I</h1>
+                    <h2 class="u">Europäisches Datenschutzrecht</h2>
+                    <p class ="fragment"><span>• Das aktuell geltende Datenschutzrecht stamm aus dem Jahr 1995</span></p>
+                    <p class ="fragment"><span>• Januar 2012: Erster Entwurf der Europäischen Datenschutz-Grundverordnung</span></p>
+                    <p class ="fragment"><span>• 2018: Die neue, fertige Datenschutzverordnung soll in Kraft treten</span></p>
+                    </br></br></br></br>
+                </section>
+                <section>
+                    <h1> Datenschutzgesetze II</h1>
+                    <h2 class="u">Deutsches Datenschutzrecht</h2>
+                    <p class ="fragment"><span>• Februar 1977: Verabschiedung der ersten Datenschutzgesetze</span></p>
+                    <p class ="fragment"><span>• Das Gesetzesblatt umfasste nahezu 50 Paragraphen</span></p>
+                    <p class ="fragment"><span>• 2003: Erscheinung eines überarbeiteten Gesetzesblattes</span></p>
+                    </br></br></br></br>
+                </section>
+                <section>
+                    <h1> Cookies I</h1>
+                    <h2 class="u">Was sind "Cookies"?</h2>
+                    <p class ="fragment"><span>• Ein Cookie ist eine Textdatei</span></p>
+                    <p class ="fragment"><span>• Speichert Benutzerdaten bei jedem Webseitenaufruf</span></p>
+                    <p class ="fragment"><span>• Vorteil: Login-Daten müssen nicht immer wieder eingegeben werden</span></p>
+                    <p class ="fragment"><span>• Ursprünglicher Nutzen: Zählen von Besuchern einer Webseite</span></p>
+                    <p class ="fragment"><span>• Heutiger Nutzen: Analyse der Surfer</span></p>
+                    <p class ="fragment"><span>• Lightbeam: AddOn von Firefox zur Ermittlung welche Webseiten Cookies benutzen</span></p>
+                    <p class ="fragment"><span>• Ebenfalls: Möglichkeit herauszufinden, welche Webseiten bei der Beschattung zusammenarbeiten</span></p>
+                </section>
+                <section>
+                    <h1> Lightbeam I</h1>
+                    <img src="Google_Graph.PNG" width="75%" height="75%">
+                    <p>Der runde Kreis symbolisiert die Webseite, die wir besucht haben. Das dreieckige Symbol hingegen, welche Webseite oder Server "irgendwie" mit unserer Webseite verbunden ist. Ist eine Verbindung (die mit einer Linie gekennzeichnet ist) lila, werden zwischen den Webseiten/Servern Cookies ausgetauscht. Ist diese hingegen weiß, sind die Webseiten/Server miteinander verbunden, haben aber zum aktuellen Zeitpunkt (noch) keine Daten ausgetauscht.</p>
+                </section>
+                <section>
+                    <h1> Lightbeam II</h1>
+                    <img src="Google_Liste.PNG" width="75%" height="75%">
+                    <p>Eine andere Möglichkeit die Zusammenhänge der Webseiten/Server anzeigen zu lassen. Statt einem Graphen finden wir hier eine Liste vor. "Visited" zeigt die besuchte/n Seite/n, "Third Party" die Drittanbieter bzw. die verbunden Webseiten. Zudem werden hier weitere Informationen wie z.B. an welchem Tag wir die Webseite besucht haben.</p>
+                </section>
+                <section>
+                    <h1> Lightbeam III</h1>
+                    <img src="Google_Infos.PNG" width="75%" height="75%">
+                </section>
+                <section>
+                    <h1> Lightbeam IV</h1>
+                    <p>Erklärung der vorherigen Folie:</p>
+                    <p>Es gibt die Möglichkeit, sich weitere Infos anzeigen zu lassen. Wenn das Lightbeam-AddOn aufgerufen wird, gibt es oben rechts ein "Weltkugelsymbol". Damit werden weitere Infos aufgerufen. Darin sind zusätzliche Informationen zu finden. Wir können eine Webseite oder einen Server blockieren, womit uns der Zugang verwehrt wird. Im Gegenzug dazu ist es diesem Server nicht möglich auf unseren Computer zuzugreifen. Ebenso wird der Standort der besuchten Webseite angezeigt, sowie aufgelistete Verbindungen. </p>
+                </section>
+                <section>
+                    <h1> Lightbeam V</h1>
+                    <img src="Youtube_Graph.PNG" width="75%" height="75%">
+                    <p>Dieser Graph hingegen zeigt uns die Verbindungen der Seite "Youtube.com" an. Hier sehen wir, dass diese Webseite mit "Google.com" automatisch verbunden ist und Daten austauscht. Zudem werden noch zwei weitere Server angezeigt, die aber auf dieser Folie keine wichtige Rolle einnehmen. </p>
+                </section>
+                <section>
+                    <h1> Lightbeam VI</h1>
+                    <img src="Blockiertes_ytimg_graph.JPG" width="75%" height="75%">
+                    <p>Dieser Graph enstand ein bisschen komplizierter. Man öffnete zuerst die Seite "Google.de" und gab bei den Suchanfragen "Youtube.com" ein. Daraufhin wurde die Seite "Yotube.com" aufgerufen. Somit wurden über "Google.de" Daten zu "Youtube.com" übertragen. Da, wie man aus den vorherigen Folien entnehmen kann, die Webseite "Youtube.com" automatisch Daten an "Google.com" sendet, entsteht somit das dreieckige Symbol mit dem "G" darin, was für die Webseite "Google.com" steht. Ist ein Server oder eine Webseite blockiert, so wird das Symbol pink ausgefüllt. Bei dem oberen Beispiel ist es der Server "ytimg" den wir blockiert haben.</p>
+                </section>
+                <section>
+                    <h1> Lightbeam VII</h1>
+                    <img src="Blockiertes_ytimg.PNG" width="75%" height="75%">
+                    <p>Zur besseren Veranschaulichung wird hier die aufgelistete Variante gezeigt. </p>
+                </section>
+                <section>
+                    <h1> Cookies II</h1>
+                    <h2 class="u">Google Analytics I</h2>
+                    <p class ="fragment"><span>• Im deutschsprachigem Raum meistgenutztes Web-Analysewerkzeug</span></p>
+                    <p class ="fragment"><span>• Wird von Google kostenlos angeboten</span></p>
+                    <p class ="fragment"><span>• Dient zur Analyse von Benutzerprofilen</span></p>
+                    </br>
+<p class ="fragment"><span>ACHTUNG: Bei herkömmlichen Analysetools bleiben die Daten auf dem eigenen Server, bei Google Analytics hingegen werden sämtliche Daten von Google gespeichert und für eigene Zwecke benutzt</span></p>
+                    </br>
+                </section>
+                <section>
+                    <h1> Cookies III</h1>
+                    <h2 class="u">Google Analytics II</h2>
+                    <p>Aufgabe 1:</p>
+                    <h3>Was glauben Sie welche Daten Google-Analytics speichert?</h3>
+                    </br></br></br></br></br></br>
+                </section> 
+                <section>
+                    <h1> Cookies IV</h1>
+                    <h2 class="u">Aufgabe 1 Lösung </h2>
+                    <p class ="fragment"><span>• Herkunft (Land und Stadt)</span></p>
+                    <p class ="fragment"><span>• Sprache</span></p>
+                    <p class ="fragment"><span>• Betriebssystem</span></p>
+                    <p class ="fragment"><span>• Gerät (PC, Tablet-PC, oder Smartphone)</span></p>
+                    <p class ="fragment"><span>• Browser und alle verwendeten Add-Ons</span></p>
+                    <p class ="fragment"><span>• Auflösung des Computers</span></p>
+                    </br></br></br>
+                </section>
+                <section>
+                    <h1> Cookies V</h1>
+                    <h2 class="u">Aufgabe 1 Lösung </h2>
+                    <p class ="fragment"><span>• Besucherquellen (Facebook, Suchmaschine oder verweisende Webseite</span></p>
+                    <p class ="fragment"><span>• Welche Daten wurden heruntergeladen?</span></p>
+                    <p class ="fragment"><span>• Welche Videos wurden angeschaut?</span></p>
+                    <p class ="fragment"><span>• Welche Werbebanner wurden angeklickt?</span></p>
+                    <p class ="fragment"><span>• Ging der Besucher danach auf eine interne oder externe Webseite?</span></p>
+                    <p class ="fragment"><span>• Wie lange blieb der Besucher?</span></p>
+                    </br></br></br>
+                </section>
+                <section>
+                    <h1> Cookies VI</h1>
+                    <h2 class="u">Supercookies </h2>
+                    <p class ="fragment"><span>• Supercookies sind viel größer als einfache Cookies</span></p>
+                    <p class ="fragment"><span>• Sie lassen sich auf bis zu zehn verschiedenen Orten gleichzeitig abspeichern</span></p>
+                    <p class ="fragment"><span>• Löschung oder Blockieren der Supercookies nur möglich, wenn wirklich alle gelöscht/blockiert wurden</span></p>
+                    <p class ="fragment"><span>• Ein Cookie kann gelöschte Cookies reaktivieren</span></p>
+                    <p class ="fragment"><span>• In Amerika wurden bereits "ewige Supercookies" entwickelt, die sich unmöglich abschalten lassen</span></p>
+                    </br></br>
+                </section>
+                <section>
+                    <h1> Cookies VII</h1>
+                    <h2 class="u">Cookie-Hinweise I</h2>
+                    <p class ="fragment"><span>• Firmen, die Google für professionelle Werbekampagnen nutzen werden gezwungen Informationen über eingesetzte Cookies preiszugeben</span></p>
+                    <p class ="fragment"><span>• Ausgeschlossen sind Kunden, die Google Analytics nutzen</span></p>
+                    <p class ="fragment"><span>• Da Cookies nicht zur vollen Funktionalität der Webseite benötigt werden, müssen Nutzer mit dem Einsatzvon Cookies einverstanden sein</span></p>
+                    <p class ="fragment"><span>• In Deutschland dürfen Cookies nur verwendet werden, solange der Nutzer dem nicht widerspricht</span></p>
+                    <p class ="fragment"><span>• Deshalb bezieht sich Google auf die EU-Richtlinien, statt auf Nationale</span></p>
+                    </br>
+                </section>
+                <section>
+                    <h1> Cookies VIII</h1>
+                    <h2 class="u">Cookie Hinweise II</h2>
+                    <p class ="fragment"><span>• In Deutschland gibt es zwei gängige Methoden, Cookie-Hinweise anzeigen zu lassen</span></p>
+                    <p class ="fragment"><span>• Einzel-Opt-Out: Cookies können einzeln in den Einstellungen deaktiviert werden</span></p>
+                    <p class ="fragment"><span>• Gesamt-Opt-Out: Es können mit einem "Schalter" in den Einstellungen alle Cookies gleichzeitig deaktiviert werden</span></p>
+                    </br></br></br></br>
+                </section>
+                <section>
+                    <h1> Datenschutz und Datenverkauf I</h1>
+                    <h2 class="u">Datenschutz in bestimmten Arbeitsbereichen</h2>
+                    <p>Aufgabe 2:</p>
+                    <h3>Recherchieren Sie in Gruppen die Datenschutzrichtlinien in bestimmten Arbeitsbereichen. Jeder Gruppe wird ein Bereich zugeteilt</h3>
+                    <h3>• Polizei</h3>
+                    <h3>• Sozialamt</h3>
+                    <h3>• Gesundheitswesen</h3>
+                    <h3>• Arbeitgeber</h3>
+                    </br>
+                </section>
+                <section>
+                    <h1> Datenschutz und Datenverkauf II</h1>
+                    <h2 class="u">Datenverkauf (Einwohnermeldeamt)</h2>
+                    <p class ="fragment"><span>• Bei berechtigtem Interesse darf das Einwohnermeldeamt Daten weitergeben (z. B. Eintreibung von Schulden)</span></p>
+                    <p class ="fragment"><span>• Es dürfen nur bestimmte Daten weitergegeben werden (Vor- und Nachname, Anschrift, Doktortitel)</span></p>
+                    <p class ="fragment"><span>• Das Einwohnermeldeamt bekommt pro "weitergegebenem" Datensatz fünf bis 15 Euro</span></p>
+                    <p class ="fragment"><span>• Bei besonders vielen Datensätzen wird Rabatt gewährt</span></p>
+                    <p class ="fragment"><span>• Ich als Person darf dem Einwohnermeldeamt ein Verbot zur Weitergabe erteilen</span></p>
+                    <p class ="fragment"><span>• Falls eine Firma nachfragt, ob Ihre Daten aktuell sind, darf das Einwohnermeldeamt diese Information trotz Verbots erteilen</span></p>
+                </section>
+                <section>
+                    <h1> Datenschutz und Datenverkauf III</h1>
+                    <h2 class="u">Datenhandel</h2>
+                    <p class ="fragment"><span>• Als "Direktmarketing" wird die Möglichkeit bezeichnet, eine Zielgruppe direkt anzusprechen</span></p>
+                    <p class="fragment"><span>• Je mehr Daten die Firmen über ihre Kunden haben, desto gezielter können Kunden angesprochen werden</span></p>
+                    <p class ="fragment"><span>• Laut einer Studie der Deutschen Post gaben Firmen im vergangenem Jahr 9,5 Milliarden Euro für volladressierte Werbung aus</span></p>
+                    <p class ="fragment"><span>• Unseriöse Firmen erschleichen sich meist Daten durch eine Unterschrift</span></p>
+                    <p class ="fragment"><span>• Daher sollten bei jeder Art von Vertrag die Datenschutzbestimmungen auf "Weitergabe an Dritte" überprüft werden</span></p>
+                </section>
+                <section>
+                    <h1> Rechtsfälle Datenschutz</h1>
+                    <h2 class="u">Aufgaben zu Rechtsfällen</h2>
+                    <p>Aufgabe 3:</p>
+                    <h3>Bearbeiten Sie in Ihren zugeteilten Gruppen einen Rechtsfall und stellen Sie Ihre Lösung nach der Bearbeitungszeit im Plenum vor.</h3>
+                    </br></br></br></br></br>
+                </section>
+            </div>  <!--ENDE Folienstapel-->
+        </div><!--ENDE Präsentation-->
+            </div>
+        <script src="../revealjs-framework/lib/js/head.min.js"></script>
+        <script src="../revealjs-framework/js/reveal.min.js"></script>
+
+		<script>
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+                {
+                    src: '../revealjs-framework/lib/js/classList.js',
+                    condition: function () {
+                        return !document.body.classList;
+                    }
+                },
+                {
+                    src: '../revealjs-framework/plugin/markdown/marked.js',
+                    condition: function () {
+                        return !!document.querySelector('[data-markdown]');
+                    }
+                },
+                {
+                    src: '../revealjs-framework/plugin/markdown/markdown.js',
+                    condition: function () {
+                        return !!document.querySelector('[data-markdown]');
+                    }
+                },
+                {
+                    src: '../revealjs-framework/plugin/highlight/highlight.js',
+                    async: true,
+                    callback: function () {
+                        hljs.initHighlightingOnLoad();
+                    }
+                },
+                {
+                    src: '../revealjs-framework/plugin/zoom-js/zoom.js',
+                    async: true,
+                    condition: function () {
+                        return !!document.body.classList;
+                    }
+                },
+                {
+                    src: '../revealjs-framework/plugin/notes/notes.js',
+                    async: true,
+                    condition: function () {
+                        return !!document.body.classList;
+                    }
+                }
+				]
+			});
+
+		</script>   
+    </body>
+</html>
+    
