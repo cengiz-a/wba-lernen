@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<!--[if IE9]>
+<html class="lt-ie10" lang="en">
+<![endif]-->
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial scale=1.0">
+    <title>Medieninformatik</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/foundation.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/vendor/modernizr.js"></script>
+    <script src="https://hammerjs.github.io/dist/hammer.js"></script>
+</head>
+<body>
+    <div id="long"> Nur Mobile Webansicht verfügbar!</div><!-- Nur ab 760px screen width -->
+    <div id ="short"><!-- unter 760px screen width-->
+<header>
+    <img src="https://www.medieninformatik.th-koeln.de/wiki/skins/micologne/images/wiki_milogo.png?2015-03-02T18:08:20Z">
+</header>
+        <!-- Side Nav vorgegeben von Foundation -->
+        <div class="off-canvas-wrap" data-offcanvas>
+        <div class="inner-wrap">
+<nav class="tab-bar">
+      <section class="left-small">
+            <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a><!-- Auslöser der Side Nav-->
+      </section>
+</nav>
+
+<aside class="left-off-canvas-menu"><!-- Menü deklaration-->
+    <ul class="off-canvas-list">
+          <li>
+            <span class="inter">
+                <p>Hallo, <span class="user">Mi1615.</span></p>
+                  <div class="searchicon"></div>
+                  <input type="text">
+                  <input type="submit" value="Suchen">
+                  <form action="../index.html">
+                  <input type="submit" class="logout" value="Abmelden">
+                  </form>
+            </span>
+          </li>
+        
+          <li>
+              <a href="javascript:void(0);" class="off-canvas-submenu-call">Navigation <span class="right"> + </span></a>
+          </li>
+        <ul class="off-canvas-submenu">
+            <li><a href="hauptseite.html">Hauptseite</a></li>
+            <li><a href="bachelor.html">Bachelor</a></li>
+            <li><a href="#">Master</a></li>
+            <li><a href="#">Projekte</a></li>
+            <li><a href="#">Abschlussarbeiten</a></li>
+            <li><a href="#">Forschung</a></li>
+            <li><a href="#">MI Labor</a></li>
+            <li><a href="#">Jobbörse</a></li>
+            <li><a href="#">MI-Verleih</a></li>
+	    </ul>
+        
+        <li>
+            <a href="javascript:void(0);">Wissenspool</a>
+        </li>
+        <li>
+            <a href="javascript:void(0);" class="off-canvas-submenu-call">Hilfe<span class="right"> + </span></a>
+        </li>
+        
+        <ul class="off-canvas-submenu">
+            <li><a href="#">Erste Schritte</a></li>
+            <li><a href="#">Bearbeitungshilfe</a></li>
+            <li><a href="#">MediaWiki Manual</a></li>
+        </ul>
+      </ul>
+</aside>
+
+<section class="main-section" id="main">
+    <section class="bachelor">
+        <h1>Bachelor</h1>
+            <p>Seit 2004 ein von der ASIIN akkreditierter Studiengang.</p>
+        <div class="inhaltv">
+            <h4>Inhaltsverzeichnis</h4>
+            <ul>
+                <li><a href="#akt">1. Aktuelles</a></li>
+                <li><a href="#ver">2. Veranstaltungen</a></li>
+                <ol>
+                    <li><a href="#vorse">2.1 Vorlesungen und Seminare</a></li>
+                    <li><a href="#wahlp">2.2 Wahlpflichtfächer</a></li>
+                    <li><a href="#ass">2.3 ASS-Workshops</a></li>
+                </ol>
+            </ul>
+        </div>
+<article class="aktuelles">
+        <h2 id="akt">Aktuelles</h2>
+    <!-- Tabelle Aktuelles -->
+        <table id="ResponsiveTable">
+            <tr id="HeadRow">
+                <td>Datum</td>
+                <td>Autor</td>
+                <td>Nachricht</td>
+                <td>Seite</td>
+                <td>Bezug</td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td tableHeadData='Datum'>10 November 2015</td>
+                <td tableHeadData='Autor'><a href="crgruen.html">Christiane Grünloh</a></td>
+                <td tableHeadData='Nachricht'>Die Tocario GmbH sucht einen PHP-Webentwickler.</td>
+                <td tableHeadData='Seite'><a>Neue Stellenausschreibung: PHP-Webentwickler</a></td>
+                <td tableHeadData='Bezug'><a>Jobbörse PHP Webentwickler gesucht</a></td>
+            </tr>
+            
+            <tr>
+                <td tableHeadData='Datum'>8 November 2015</td>
+                <td tableHeadData='Autor'><a>Laura-Maria Hermann</a></td>
+                <td tableHeadData='Nachricht'>Die Tocario GmbH sucht einen PHP-Webentwickler.</td>
+                <td tableHeadData='Seite'><a>Neue Stellenausschreibung: PHP-Webentwickler</a></td>
+                <td tableHeadData='Bezug'><a>Jobbörse PHP Webentwickler gesucht</a></td>
+            </tr>
+    
+            <tr>
+                <td tableHeadData='Datum'>6 November 2015</td>
+                <td tableHeadData='Autor'><a>Laura-Maria Hermann</a></td>
+                <td tableHeadData='Nachricht'>Die Tocario GmbH sucht einen PHP-Webentwickler.</td>
+                <td tableHeadData='Seite'><a>Neue Stellenausschreibung: PHP-Webentwickler</a></td>
+                <td tableHeadData='Bezug'><a>Jobbörse PHP Webentwickler gesucht</a></td>
+            </tr>
+        </table>
+        
+        <div id="old"><p><a>ältere Nachrichten</a></p></div>
+</article>
+        
+        <h2 id="ver">Veranstaltungen</h2>
+<article class="vorlesse">
+        <h3 id="vorse">Vorlesung und Seminare</h3>
+        
+        
+    <!--Tabelle Veranstaltungen Vorlesungen und Seminare --> 
+        <table id="ResponsiveTable">
+            <tr id="HeadRow">
+                <td>Fach</td>
+                <td>Dozent</td>
+                <td>ECTS</td>
+            </tr>
+            <tr></tr>
+            
+            <tr>
+                <td tableHeadData='Fach'>Algorithmen und Programmierung</td>
+                <td tableHeadData='Dozent'><a>Frank Victor</a>,<a>Erich Ehses</a></td>
+                <td tableHeadData='ECTS'>15</td>
+            </tr>
+        
+            <tr>
+                <td tableHeadData='Fach'>Audiovisuelles Medienprojekt</td>
+                <td tableHeadData='Dozent'><a>Hans Kornacher</a></td>
+                <td tableHeadData='ECTS'>5</td>
+            </tr>
+        
+            <tr>
+                <td tableHeadData='Fach'>Betriebssysteme und verteilte Systeme</td>
+                <td tableHeadData='Dozent'><a>Horst Stenzel</a></td>
+                <td tableHeadData='ECTS'>5</td>
+            </tr>
+        
+            <tr>
+                <td tableHeadData='Fach'>Computergrafik und Animation</td>
+                <td tableHeadData='Dozent'><a>Martin Eisemann</a></td>
+                <td tableHeadData='ECTS'>5</td>
+            </tr>
+            <tr>
+                <td tableHeadData='Fach'>Datenbanken</td>
+                <td tableHeadData='Dozent'><a>Heide Faeskorn-Woyke</a>,<a>Birgit Bertelsmeier</a></td>
+                <td tableHeadData='ECTS'>10</td>
+            </tr>
+
+            <tr>
+                <td tableHeadData='Fach'>Einführung in Betriebssysteme und Rechnerarchitektur</td>
+                <td tableHeadData='Dozent'><a>Stefan Karsch</a></td>
+                <td tableHeadData='ECTS'>5</td>
+            </tr>
+
+            <tr>
+                <td tableHeadData='Fach'>Einführung in die Medieninformatik</td>
+                <td tableHeadData='Dozent'><a>Gerhard Hartmann</a>,<a>Christian Noss</a>,<a>Hans Kornacher</a>,<a>Kristian Fischer</a>,
+                <a>Christian Kohls</a>,<a>Martin Eisemann</a></td>
+                <td tableHeadData='ECTS'>5</td>
+            </tr>
+
+            <tr>
+                <td tableHeadData='Fach'>Entwicklungsprojekt interaktive Systeme</td>
+                <td tableHeadData='Dozent'><a>Gerhard Hartmann</a>,<a>Kristian Fischer</a></td>
+                <td tableHeadData='ECTS'>10</td>
+            </tr>
+
+            <tr>
+                <td tableHeadData='Fach'>Grundlagen Wirtschaft</td>
+                <td tableHeadData='Dozent'><a>Martina Behr</a></td>
+                <td tableHeadData='ECTS'>10</td>
+            </tr>
+        
+            <tr>
+                <td tableHeadData='Fach'>Grundlagen der visuellen Kommunikation</td>
+                <td tableHeadData='Dozent'><a>Christian Noss</a>,<a>Holger Gathmann</a>,<a>Volker Schaefer</a>,<a>Christian Poplawski</a></td>
+                <td tableHeadData='ECTS'>5</td>
+            </tr>
+        
+            <tr>
+                <td tableHeadData='Fach'>Kommunikationstechnik</td>
+                <td tableHeadData='Dozent'><a>Hans Ludwig Stahl</a></td>
+                <td tableHeadData='ECTS'>5</td>
+            </tr>
+        
+            <tr>
+                <td tableHeadData='Fach'>Mathematik</td>
+                <td tableHeadData='Dozent'><a>Wolfgang Konen</a></td>
+                <td tableHeadData='ECTS'>15</td>
+            </tr>
+
+            <tr>
+                <td tableHeadData='Fach'>Medieninformatik und Gesellschaft</td>
+                <td tableHeadData='Dozent'><a>Mario Winter</a>,<a>Edwin Ferger</a></td>
+                <td tableHeadData='ECTS'>5</td>
+            </tr>
+    
+            <tr>
+                <td tableHeadData='Fach'>Medientechnik und Produktion</td>
+                <td tableHeadData='Dozent'><a>Hans Kornacher</a></td>
+                <td tableHeadData='ECTS'>5</td>
+            </tr>
+        
+            <tr>
+                <td tableHeadData='Fach'>Mensch Computer Interaktion</td>
+                <td tableHeadData='Dozent'><a>Gerhard Hartmann</a>,<a>Christiane Gruenloh</a></td>
+                <td tableHeadData='ECTS'>5</td>
+            </tr>
+        
+            <tr>
+                <td tableHeadData='Fach'>Praxisprojekt</td>
+                <td tableHeadData='Dozent'><a>Kristian Fischer</a>,<a>Christiane Gruenloh</a></td>
+                <td tableHeadData='ECTS'>15</td>
+            </tr>
+        
+            <tr>
+                <td tableHeadData='Fach'>Projektmanagement</td>
+                <td tableHeadData='Dozent'><a>Holger Günther</a></td>
+                <td tableHeadData='ECTS'>5</td>
+            </tr>
+        
+            <tr>
+                <td tableHeadData='Fach'>Softwaretechnik</td>
+                <td tableHeadData='Dozent'><a>Mario Winter</a></td>
+                <td tableHeadData='ECTS'>5</td>
+            </tr>
+        
+            <tr>
+                <td tableHeadData='Fach'>Theoretische Informatik</td>
+                <td tableHeadData='Dozent'><a>Martin Eisemann</a></td>
+                <td tableHeadData='ECTS'>10</td>
+            </tr>
+        
+            <tr>
+                <td tableHeadData='Fach'>Web-basierte Anwendungen 1: WWW-Technologien</td>
+                <td tableHeadData='Dozent'><a>Christian Noss</a>,<a>Volker Schaefer</a>,<a>Jan Kus</a>,<a>Stephan Pavlovic</a>,
+                <a>Christian Poplawski</a>,</td>
+                <td tableHeadData='ECTS'>5</td>
+            </tr>
+        
+            <tr>
+                <td tableHeadData='Fach'>Web-basierte Anwendungen 2: Verteilte Systeme</td>
+                <td tableHeadData='Dozent'><a>Kristian Fischer</a>,<a>David Bellingroth</a>,<a>Robert Gabriel</a>,<a>Sheree Sassmannshausen</a>,
+                <a>Franz-L. Jaspers</a>,</td>
+                <td tableHeadData='ECTS'>5</td>
+            </tr>
+        
+    </table>
+</article>
+
+<article class="wahlpflicht">
+        <h3 id="wahlp">Wahlpflichtfächer</h3>
+        <p id="wahlpflist">Folgende Liste der Wahlpflichtfächer ist nicht vollständig. Für weitere Angebote bitte auf die <a>MI Website</a> schauen.</p>
+        
+        
+    <table id="ResponsiveTable">
+        <tr id="HeadRow">
+            <td>Fach</td>
+            <td>Dozent</td>
+            <td>ECTS</td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <td tableHeadData='Fach'>3D-Modellierung und virtuelle Realität</td>
+            <td tableHeadData='Dozent'><a>Horst Stenzel</a></td>
+            <td tableHeadData='ECTS'>5</td>
+        </tr>
+        <tr>
+            <td tableHeadData='Fach'>Berufspraxis Informatik</td>	
+            <td tableHeadData='Dozent'><a>Hans Ludwig Stahl</a></td>
+            <td tableHeadData='ECTS'>5</td>
+        </tr>
+        <tr>
+            <td tableHeadData='Fach'>Business Transactions in mobile Environments</td>	
+            <td tableHeadData='Dozent'><a>Kristian Fischer</a>,<a>Stefan Karsch</a>,<a>Christian Noss</a>,<a>Hans Ludwig Stahl</a></td>
+            <td tableHeadData='ECTS'>5</td>
+        </tr>
+        <tr>
+            <td tableHeadData='Fach'>Case Study - Softwarestrategien</td>	
+            <td tableHeadData='Dozent'><a>Peter Wolff</a></td>
+            <td tableHeadData='ECTS'>5</td>
+        </tr>
+        <tr>
+            <td tableHeadData='Fach'>Compiler und Interpreter</td>
+            <td tableHeadData='Dozent'><a>Erich Ehses</a></td>
+            <td tableHeadData='ECTS'>5</td>
+        </tr>
+        <tr>
+            <td tableHeadData='Fach'>Entwicklung mobiler Anwendungen</td>
+            <td tableHeadData='Dozent'><a>Daniel Klein</a></td>
+            <td tableHeadData='ECTS'>5</td>
+        </tr>
+        <tr>
+            <td tableHeadData='Fach'>Entwicklung sozio-technischer Systeme</td>
+            <td tableHeadData='Dozent'><a>Mario Winter</a></td>
+            <td tableHeadData='ECTS'>5</td>
+        </tr>
+        <tr>
+            <td tableHeadData='Fach'>Entwicklung von Apps für Smartphones und Tablets</td>
+            <td tableHeadData='Dozent'><a>Frank Victor</a>,<a>Peter Wolff</a></td>
+            <td tableHeadData='ECTS'>5</td>
+        </tr>
+        <tr>
+            <td tableHeadData='Fach'>Entwicklung von Serious Games (Projekt)</td>
+            <td tableHeadData='Dozent'><a>Friedbert Jochum</a></td>
+            <td tableHeadData='ECTS'>5</td>
+        </tr>
+        <tr>
+            <td tableHeadData='Fach'>Film im anthropologischen Kontext</td>
+            <td tableHeadData='Dozent'><a>Hans Kornacher</a></td>
+            <td tableHeadData='ECTS'>5</td>
+        </tr>
+        <tr>
+            <td tableHeadData='Fach'>IPv6 und IPsec</td>
+            <td tableHeadData='Dozent'><a>Hans Ludwig Stahl</a></td>
+            <td tableHeadData='ECTS'>5</td>
+        </tr>
+        <tr>
+            <td tableHeadData='Fach'>Identity Management</td>
+            <td tableHeadData='Dozent'><a>Horst Stenzel</a>,<a>Thomas Kriener</a></td>
+            <td tableHeadData='ECTS'>5</td>
+        </tr>
+        <tr>
+            <td tableHeadData='Fach'>Kommunikation und Medien</td>
+            <td tableHeadData='Dozent'><a>Adrian Neagu</a></td>
+            <td tableHeadData='ECTS'>5</td>
+        </tr>
+        <tr>
+            <td tableHeadData='Fach'>Methoden und Technologien für E-Learning Systeme</td>
+            <td tableHeadData='Dozent'><a>Kristian Fischer</a></td>
+            <td tableHeadData='ECTS'>5</td>
+        </tr>
+        <tr>
+            <td tableHeadData='Fach'>Mobile IT</td>
+            <td tableHeadData='Dozent'><a>Hans Ludwig Stahl</a></td>
+            <td tableHeadData='ECTS'>5</td>
+        </tr>
+        <tr>
+            <td tableHeadData='Fach'>Music and Massmedia</td>
+            <td tableHeadData='Dozent'><a>Adrian Neagu</a></td>
+            <td tableHeadData='ECTS'>5</td>
+        </tr>
+        <tr>
+            <td tableHeadData='Fach'>Praktische IT-Sicherheit</td>
+            <td tableHeadData='Dozent'><a>Stefan Karsch	</a></td>
+            <td tableHeadData='ECTS'>5</td>
+        </tr>
+        <tr>
+            <td tableHeadData='Fach'>Semantic Web</td>
+            <td tableHeadData='Dozent'><a>Stephan Pavlovic</a></td>
+            <td tableHeadData='ECTS'>5</td>
+        </tr>
+        <tr>
+            <td tableHeadData='Fach'>System- und Netzmanagement</td>
+            <td tableHeadData='Dozent'><a>Stefan Karsch</a>,<a>Hans Ludwig Stahl</a></td>	
+            <td tableHeadData='ECTS'>5</td>
+        </tr>
+        <tr>
+            <td tableHeadData='Fach'>Unternehmensgründung und Entrepreneurship</td>
+            <td tableHeadData='Dozent'><a>Stefan Eckstein</a></td>
+            <td tableHeadData='ECTS'>5</td>
+        </tr>
+        <tr>
+            <td tableHeadData='Fach'>Verteilte Systeme</td>
+            <td tableHeadData='Dozent'><a>Lutz Köhler</a></td>
+            <td tableHeadData='ECTS'>5</td>
+        </tr>
+        <tr>
+            <td tableHeadData='Fach'>WPF Design for User Experience</td>
+            <td tableHeadData='Dozent'><a>Gerhard Hartmann</a>,<a>Christiane Gruenloh</a></td>
+            <td tableHeadData='ECTS'>5</td>
+        </tr>
+        <tr>
+            <td tableHeadData='Fach'>WPF Digitale Animation und Visual Effects</td>
+            <td tableHeadData='Dozent'><a>Hans Kornacher</a></td>
+            <td tableHeadData='ECTS'>5</td>
+        </tr>
+        <tr>
+            <td tableHeadData='Fach'>WPF Human Centered System Design</td>
+            <td tableHeadData='Dozent'><a>Gerhard Hartmann</a>,<a>Christiane Gruenloh</a></td>
+            <td tableHeadData='ECTS'>5</td>
+        </tr>
+        <tr>
+            <td tableHeadData='Fach'>WPF Industrie- und Imagefilm</td>
+            <td tableHeadData='Dozent'><a>Hans Kornacher</a></td>
+            <td tableHeadData='ECTS'>5</td>
+        </tr>
+        <tr>
+            <td tableHeadData='Fach'>WPF Measuring User Experience</td>
+            <td tableHeadData='Dozent'><a>Gerhard Hartmann</a>,<a>Christiane Gruenloh</a></td>
+            <td tableHeadData='ECTS'>5</td>
+        </tr>
+        <tr>
+            <td tableHeadData='Fach'>WPF Prozedurale Mediengestaltung</td>
+            <td tableHeadData='Dozent'><a>Aksel Karcher</a></td>
+            <td tableHeadData='ECTS'>5</td>
+        </tr>
+        <tr>
+            <td tableHeadData='Fach'>WPF User Centered Design and Design Thinking</td>
+            <td tableHeadData='Dozent'><a>Gerhard Hartmann</a>,<a>Christiane Gruenloh</a></td>
+            <td tableHeadData='ECTS'>5</td>
+        </tr>
+        <tr>
+            <td tableHeadData='Fach'>Web 2.0 im Unternehmen</td>
+            <td tableHeadData='Dozent'><a>Daniel Dahl</a></td>
+            <td tableHeadData='ECTS'>5</td>
+        </tr>
+        <tr>
+            <td tableHeadData='Fach'>Web Data Mining	Heide</td>
+            <td tableHeadData='Dozent'><a>Faeskorn-Woyke</a>,<a>Edda Leopold</a></td>
+            <td tableHeadData='ECTS'>5</td>
+        </tr>
+        <tr>
+            <td tableHeadData='Fach'>Wirtschaftspolitik</td>
+            <td tableHeadData='Dozent'><a>Friedrich Wilke</a></td>
+            <td tableHeadData='ECTS'>5</td>
+        </tr>
+    </table>
+</article>
+<article class="assworkshop">
+        <h3 id="ass">ASS-Workshops</h3>
+        
+    <table id="ResponsiveTable">
+        <tr id="HeadRow">
+            <td>Fach</td>
+            <td>Dozent</td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <td tableHeadData='Fach'>ASS Cocoa Touch</td>
+            <td tableHeadData='Dozent'><a>Daniel Bertram</a>,<a>Tim Haussmann</a></td>
+        </tr>
+        
+        <tr>
+            <td tableHeadData='Fach'>ASS Flex</td>
+            <td tableHeadData='Dozent'><a>Daniel Bertram</a>,<a>Kerstin Götze</a></td>
+        </tr>
+        
+        <tr>
+            <td tableHeadData='Fach'>ASS Maven Spring</td>
+            <td tableHeadData='Dozent'><a>Matthias Richter</a>,<a>Lars Haferkamp</a></td>
+        </tr>
+        
+        <tr>
+            <td tableHeadData='Fach'>ASS Ruby on Rails</td>
+            <td tableHeadData='Dozent'><a>Andreas Bade</a>,<a>Dirk Breuer</a></td>
+        </tr>
+        
+    </table>
+</article>
+        
+</section>
+     
+    
+</section>
+
+  <a class="exit-off-canvas"></a> <!-- zum Schliessen der Side Nav -->
+
+
+  </div>
+</div>
+    
+    
+    
+    
+    
+    
+    
+<script src="../js/vendor/jquery.js"></script>
+<script src="../js/foundation.min.js"></script>
+<script src="../js/hammer.min.js"></script>
+<script>
+$(document).foundation();
+</script>
+<!-- vorgegebenes Script welches die Submenus realisiert -->   
+<script>
+    $(document).foundation();
+$(".off-canvas-submenu").hide();
+$(".off-canvas-submenu-call").click(function() {
+	var icon = $(this).parent().next(".off-canvas-submenu").is(':visible') ? '+' : '-';
+	$(this).parent().next(".off-canvas-submenu").slideToggle('fast');
+	$(this).find("span").text(icon);
+});
+</script>
+
+<script>
+// speichert Element in myElement
+var myElement = document.getElementById('main');
+
+// erstellt einen Hammer sagt mit der funktion swipe right soll er auf den toggle klicken
+var mc = new Hammer(myElement);
+    mc.on("swiperight",function(ev) {
+        //alert(ev.type+"gesture detected");
+        $(".left-off-canvas-toggle").click();
+    });
+</script>
+</div> <!-- Short View Ende -->
+</body>
+    
+</html>

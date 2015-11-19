@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!--[if IE9]>
+<html class="lt-ie10" lang="en">
+<![endif]-->
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial scale=1.0">
+    <title>Medieninformatik</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/foundation.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/vendor/modernizr.js"></script>
+    <script src="https://hammerjs.github.io/dist/hammer.js"></script>
+</head>
+<body>
+<div id="long"> Nur Mobile Websicht verfügbar!</div> <!-- Nur ab 760px screen width -->
+<div id="short"> <!-- unter 760px screen width-->
+<header><img src="https://www.medieninformatik.th-koeln.de/wiki/skins/micologne/images/wiki_milogo.png?2015-03-02T18:08:20Z"></header>
+    <!-- Side Nav vorgegeben von Foundation -->
+    <div class="off-canvas-wrap" data-offcanvas>
+  <div class="inner-wrap">
+    <nav class="tab-bar">
+      <section class="left-small">
+        <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a> <!-- Auslöser der Side Nav-->
+      </section> 
+    </nav>
+
+    <aside class="left-off-canvas-menu"> <!-- Menü deklaration-->
+      <ul class="off-canvas-list">
+          <li>
+            <span class="inter">
+                <p>Hallo, <span class="user">Mi1615.</span></p>
+                  <div class="searchicon"></div>
+                  <input type="text">
+                  <input type="submit" value="Suchen">
+                  <form action="../index.html">
+                  <input type="submit" class="logout" value="Abmelden">
+                  </form>
+          </form>
+            </span>
+          </li>
+        <li><a href="javascript:void(0);" class="off-canvas-submenu-call">Navigation <span class="right"> + </span></a></li>
+        				<ul class="off-canvas-submenu">
+								<li><a href="hauptseite.html">Hauptseite</a></li>
+								<li><a href="bachelor.html">Bachelor</a></li>
+								<li><a href="#">Master</a></li>
+                                <li><a href="#">Projekte</a></li>
+                                <li><a href="#">Abschlussarbeiten</a></li>
+                                <li><a href="#">Forschung</a></li>
+                                <li><a href="#">MI Labor</a></li>
+                                <li><a href="#">Jobbörse</a></li>
+                                <li><a href="#">MI-Verleih</a></li>
+							</ul>
+        <li><a href="javascript:void(0);">Wissenspool</a></li>
+        <li><a href="javascript:void(0);" class="off-canvas-submenu-call">Hilfe<span class="right"> + </span></a></li>
+        				<ul class="off-canvas-submenu">
+								<li><a href="#">Erste Schritte</a></li>
+								<li><a href="#">Bearbeitungshilfe</a></li>
+								<li><a href="#">MediaWiki Manual</a></li>
+							</ul>
+      </ul>
+    </aside>
+
+    <section class="main-section" id="main"> <!-- Ab hier beginnt der Content der Page -->
+    <section class="hauptseite">
+    <article class="hscontent">
+    <h1>Hauptseite</h1>
+        <p>Willkommen im Semantic MediaWiki der TH Köln Campus Gummersbach!<br><br>
+    Wenn Sie das erste Mal im Wiki sind, haben Sie sich soeben bereits erfolgreich mit Ihrem ADV-Account registriert. Für die weitere Arbeit im Wiki ist es notwendig, zuerst eine eigene Seite mit Ihrem Namen über das folgende Formular anzulegen:</p>
+        <ul><li><a href="#">Neue Person</a></li></ul>
+    </article>
+    <article class="videotutorials">
+    <h2>Videotutorials</h2>
+        <p>Um den Anmeldeprozess und die Einrichtung der persönlichen Seite zu erleichtern, finden Sie hier ein Videotutorial, das diese Schritte erläutert:</p>
+        <ul><li><a href="#">Tutorial 1: Erste Anmeldung</a></li>
+        <li><a href="#">Tutorial 2: Hochladen von Dateien</a></li></ul>
+        <p>Zusätzliche Tutorials finden Sie auf der Seite <a href="#">Hilfe:Erste Schritte</a></p>
+    </article>
+    <article class="aktuelles">
+    <h2>Aktuelles</h2>
+    
+    <table id="ResponsiveTable">
+    <tr id="HeadRow">
+        <td>Datum</td>
+        <td>Autor</td>
+        <td>Nachricht</td>
+        <td>Seite</td>
+        <td>Bezug</td>
+    </tr>
+    <tr></tr>
+    <tr>
+        <td tableHeadData='Datum'>10 November 2015</td>
+        <td tableHeadData='Autor'><a>Laura-Maria Hermann</a></td>
+        <td tableHeadData='Nachricht'>Die Tocario GmbH sucht einen PHP-Webentwickler.</td>
+        <td tableHeadData='Seite'><a>Neue Stellenausschreibung: PHP-Webentwickler</a></td>
+        <td tableHeadData='Bezug'><a>Jobbörse PHP Webentwickler gesucht</a></td>
+    </tr>
+    <tr>
+        <td tableHeadData='Datum'>8 November 2015</td>
+        <td tableHeadData='Autor'><a>Laura-Maria Hermann</a></td>
+        <td tableHeadData='Nachricht'>Die Tocario GmbH sucht einen PHP-Webentwickler.</td>
+        <td tableHeadData='Seite'><a>Neue Stellenausschreibung: PHP-Webentwickler</a></td>
+        <td tableHeadData='Bezug'><a>Jobbörse PHP Webentwickler gesucht</a></td>
+    </tr>
+    <tr>
+        <td tableHeadData='Datum'>6 November 2015</td>
+        <td tableHeadData='Autor'><a>Laura-Maria Hermann</a></td>
+        <td tableHeadData='Nachricht'>Die Tocario GmbH sucht einen PHP-Webentwickler.</td>
+        <td tableHeadData='Seite'><a>Neue Stellenausschreibung: PHP-Webentwickler</a></td>
+        <td tableHeadData='Bezug'><a>Jobbörse PHP Webentwickler gesucht</a></td>
+    </tr>
+    </table>
+    <div id="old"><p><a>ältere Nachrichten</a></p></div>
+    </article>
+    
+    </section>
+     
+    
+    </section>
+
+  <a class="exit-off-canvas"></a> <!-- zum Schliessen der Side Nav -->
+
+  </div>
+</div>
+    
+    
+    
+    
+    
+    
+    
+<script src="../js/vendor/jquery.js"></script>
+<script src="../js/foundation.min.js"></script>
+<script src="../js/hammer.min.js"></script>
+<script>
+$(document).foundation();
+</script>
+
+<!-- vorgegebenes Script welches die Submenus realisiert -->
+<script>
+    $(document).foundation();
+$(".off-canvas-submenu").hide();
+$(".off-canvas-submenu-call").click(function() {
+	var icon = $(this).parent().next(".off-canvas-submenu").is(':visible') ? '+' : '-';
+	$(this).parent().next(".off-canvas-submenu").slideToggle('fast');
+	$(this).find("span").text(icon);
+});
+</script>
+
+<script>
+// speichert Element in myElement
+var myElement = document.getElementById('main');
+
+// erstellt einen Hammer sagt mit der Geste swiperight, dass er auf den toggle klicken soll.
+var mc = new Hammer(myElement);
+    mc.on("swiperight",function(ev) {
+        //alert(ev.type+"gesture detected");
+        $(".left-off-canvas-toggle").click();
+    });
+</script>
+</div> <!-- Ende short view-->
+</body>
+    
+</html>

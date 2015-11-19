@@ -1,0 +1,319 @@
+body
+{
+    background:#FAFAFA;
+    font-family:sans-serif;
+}
+header
+{
+    height:100px;
+    background:#555555;
+}
+nav.tab-bar
+{
+    border-top:5px solid #77cc00;
+    background:#777777;
+}
+.left-off-canvas-menu
+{
+    background:#777777;
+}
+.left-small
+{
+    border:none;
+}
+.main-section
+{
+    background:#FAFAFA;
+    /*min-height:1000px;*/
+    min-height:100vh;
+    max-width:90%;
+}
+left-off-canvas-menu, ul.off-canvas-list
+{
+    overflow:hidden;
+    min-height:100vh;
+    /*min-height:100%;*/
+}
+ul.off-canvas-list
+{
+    height:100%;
+}
+.left-off-canvas-menu ul.off-canvas-list .inter
+{
+    display:inline-block;
+    border-top:5px solid #77cc00;
+    background:#555555;
+    width:100%;
+    
+}
+.inter .user
+{
+    color:#E45F45;
+}
+.inter p
+{
+    color:white;
+    margin:5px;
+}
+.inter input[type=text]
+{
+    margin:10px 5px;
+    width:94%;
+    height:35px;
+    /*float:left;*/
+    background:#aaaaaa url(https://www.medieninformatik.th-koeln.de/wiki/skins/micologne/images/searchicon.png?2015-03-02T18:08:20Z) no-repeat;
+    background-position: 6px center;
+    padding:3px 30px;
+    border-radius:3px;
+    border-color:#aaaaaa;
+    
+}
+.inter input[type=text]:focus
+{
+    background:white url(https://www.medieninformatik.th-koeln.de/wiki/skins/micologne/images/searchicon.png?2015-03-02T18:08:20Z) no-repeat;
+    background-position: 6px center;
+    border-color:#77aabb;
+}
+.inter input[type=submit]
+{   
+    margin:5px;
+    height:35px;
+    width:94%;
+    background:#dd1166;
+    color:white;
+    border-radius:2px;
+    border:none;
+    text-align:center;
+    
+}
+.inter input.logout, .inter input.login
+{
+    margin-top:0px;
+    background:#77cc00;
+    border-color:#77cc00;
+    margin-bottom:1rem;
+}
+
+
+ul.off-canvas-list li a
+{
+    border-bottom-color:#444444;
+}
+ul.off-canvas-list li a:hover,ul.off-canvas-list li a:focus,ul.off-canvas-list li a:active
+{
+    background:rgba(0,0,0,0.5);
+    color:#dd1166;
+}
+ul.off-canvas-list li
+{
+    list-style-type:none;
+}
+.anmeldung h1 , .hauptseite h1,.hauptseite h2 ,.bachelor h1 ,.bachelor h2,.bachelor h3 , .crgruen h1 , .crgruen h2 , .crgruen h3
+{
+    font-size:24px;
+    margin:1rem;
+    border-bottom:1px solid #aaa;
+    width:100%;
+}
+.hauptseite h2,.bachelor h3, .crgruen h3
+{
+    font-size:16px;
+}
+.bachelor h2, .crgruen h2
+{
+    font-size:20px;
+}
+
+.hauptseite p , .bachelor p, .crgruen p
+{
+    margin:1rem;
+    font-size:1em;
+    line-height:1.2em;
+}
+.crgruen p.username
+{
+    display:block;
+    padding:0.4rem;
+    text-align:center;
+    background:#777777;
+    color:white;
+    width:100%;
+    height:30px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-bottom: 0;
+    
+}
+.crgruen table.userinfo
+{
+    margin-top:0.4rem;
+    width:100%;
+    border-left:none;
+    border-right:none;
+    border-color:rgba(119,119,119,0.3);
+}
+.crgruen table.userinfo tr
+{
+    background:white;
+    border-bottom:1px solid rgba(119,119,119,0.2);
+}
+.crgruen table.userinfo tr td img
+{
+    height:45px;
+    width:45px;
+}
+.crgruen table.userinfo td:first-child
+{
+    color:#777777;
+}
+
+.crgruen img
+{
+    margin:0.3rem 25%;
+    width:50%;
+    height:auto;
+}
+.businesscard
+{
+    margin:0 1rem;
+    width:100%;
+    background:#fff;
+}
+.hauptseite ul li , .bachelor ul li
+{
+    margin-left:1rem;
+    font-size:1em;
+    list-style-type: square;
+    color:#77aabb;
+}
+.hauptseite ul li a,.hauptseite a ,.bachelor a , .crgruen a
+{
+    color:#77cc00;
+}
+.anmeldung form
+{
+    margin:1rem;
+    max-width:305px;
+}
+.anmeldung form input[type=submit]
+{
+    height:45px;
+    width:100%;
+    background:#77cc00;
+    border:none;
+    color:white;
+    font-weight:bold;
+    font-size:1.3em;
+    border-radius:2px;
+}
+.anmeldung form input[type=checkbox]
+{
+    width:26px;
+    height:26px;
+}
+
+
+
+.inhaltv
+{
+   
+    margin:1rem;
+    padding:0.5rem;
+    background:#EEE;
+    width:100%;
+}
+.inhaltv h4
+{
+    font-size:1.1rem;
+}
+.inhaltv ul li
+{
+    font-size:1rem;
+    list-style-type:none;
+}
+#short
+{
+    display:none;
+}
+td#old
+{
+    width:150px;
+}
+#ResponsiveTable
+{
+    width:100%;
+    border-collapse: collapse;
+    margin:1rem;
+}
+ tr#old
+    {
+        text-align: right;
+    }
+
+
+@media only screen and (max-width:760px)
+{
+    #ResponsiveTable,
+    #ResponsiveTable tbody,
+    #ResponsiveTable tr,
+    #ResponsiveTable td
+    {
+        display:block;
+    }
+    
+    tr#HeadRow
+    {
+        display:none;
+    }
+    
+        #ResponsiveTable td
+    {
+        border:none;
+        position:relative;
+        padding-left:40%;
+        white-space: normal;
+        text-align: left;
+    }
+#ResponsiveTable td:before
+    {
+        position:absolute;
+        top:5px;
+        left:5px;
+        width:40%;
+        padding-right:10px;
+        white-space: nowrap;
+        text-align:left;
+        font-weight:bold;
+    }
+ #ResponsiveTable td:before
+    {
+        content: attr(tableHeadData);
+    }
+    
+    #ResponsiveTable tr:nth-of-type(odd) td
+    {
+    background:#555555;
+    color:white;
+    }
+    #ResponsiveTable tr:nth-of-type(even)
+    {
+    background:#FAFAFA;
+    }
+   
+    
+ 
+    #long {display:none}
+    #short { display:block;}
+    
+
+    
+}
+
+.inhaltv ol
+{
+    margin-bottom:0;
+}
+.betrmod p
+{
+    line-height: 1.5rem;
+}

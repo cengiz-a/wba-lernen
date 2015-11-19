@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!--[if IE9]>
+<html class="lt-ie10" lang="en">
+<![endif]-->
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial scale=1.0">
+    <title>Medieninformatik</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/vendor/modernizr.js"></script>
+    <script src="https://hammerjs.github.io/dist/hammer.js"></script>
+</head>
+<body>
+
+<div id="long"> Nur Mobile Websicht verfügbar!</div> <!-- Nur ab 760px screen width -->
+<div id="short"> <!-- unter 760px screen width-->
+<header><img src="https://www.medieninformatik.th-koeln.de/wiki/skins/micologne/images/wiki_milogo.png?2015-03-02T18:08:20Z"></header>
+
+<!-- Side Nav vorgegeben von Foundation -->
+<div class="off-canvas-wrap" data-offcanvas>
+  <div class="inner-wrap">
+    <nav class="tab-bar">
+      <section class="left-small">
+        <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a> <!-- Auslöser der Side Nav-->
+      </section>
+    </nav>
+
+    <aside class="left-off-canvas-menu"> <!-- Menü deklaration-->
+      <ul class="off-canvas-list">
+          <li>
+            <span class="inter">
+                <p>Hallo, <span class="user">sie sind nicht eingeloggt.</span></p>
+              <form>
+                  <div class="searchicon"></div>
+                  <input type="text">
+                  <input type="submit" value="Suchen">
+                  <form action="#"><input type="submit" class="login" value="Anmelden"></form>
+                  
+          </form>
+            </span>
+          </li>
+        <li><a href="javascript:void(0);" class="off-canvas-submenu-call">Navigation <span class="right"> + </span></a></li>
+        				<ul class="off-canvas-submenu">
+								<li><a href="#">Hauptseite</a></li>
+								<li><a href="#">Bachelor</a></li>
+								<li><a href="#">Master</a></li>
+                                <li><a href="#">Projekte</a></li>
+                                <li><a href="#">Abschlussarbeiten</a></li>
+                                <li><a href="#">Forschung</a></li>
+                                <li><a href="#">MI Labor</a></li>
+                                <li><a href="#">Jobbörse</a></li>
+                                <li><a href="#">MI-Verleih</a></li>
+							</ul>
+        <li><a href="javascript:void(0);">Wissenspool</a></li>
+        <li><a href="javascript:void(0);" class="off-canvas-submenu-call">Hilfe<span class="right"> + </span></a></li>
+        				<ul class="off-canvas-submenu">
+								<li><a href="#">Erste Schritte</a></li>
+								<li><a href="#">Bearbeitungshilfe</a></li>
+								<li><a href="#">MediaWiki Manual</a></li>
+							</ul>
+      </ul>
+    </aside>
+
+<section class="main-section" id="main"> <!-- Ab hier beginnt der Content der Page -->
+    <article class="anmeldung">
+        <h1>Anmelden</h1>
+            <form name="userlogin" action="html/hauptseite.html">
+                <label>Benutzername</label>
+                <input type="text" placeholder="Gib deinen Benutzernamen ein">
+                <label>Passwort</label>
+                <input type="password" placeholder="Gib dein Passwort ein">
+                <label>Deine Domain:</label>
+                <select name="domain" size="1">
+                <option>gmid</option>
+                </select>
+                <input type="checkbox"><label>Angemeldet bleiben</label><br>
+                <input type="submit" value="Anmelden">
+    
+            </form>
+    </article>
+     
+    
+</section>
+
+<a class="exit-off-canvas"></a> <!-- zum Schliessen der Side Nav -->
+
+  </div>
+</div>
+    
+
+    
+    
+    
+    
+    
+<script src="js/vendor/jquery.js"></script>
+<script src="js/foundation.min.js"></script>
+<script src="js/hammer.min.js"></script>
+<script>
+$(document).foundation();
+</script>
+
+<!-- vorgegebenes Script welches die Submenus realisiert -->
+<script>
+    $(document).foundation();
+$(".off-canvas-submenu").hide();
+$(".off-canvas-submenu-call").click(function() {
+	var icon = $(this).parent().next(".off-canvas-submenu").is(':visible') ? '+' : '-';
+	$(this).parent().next(".off-canvas-submenu").slideToggle('fast');
+	$(this).find("span").text(icon);
+});
+</script>
+
+<script>
+// speichert Element in myElement
+var myElement = document.getElementById('main');
+
+// erstellt einen Hammer sagt mit der funktion swipe right soll er auf den toggle klicken
+var mc = new Hammer(myElement);
+    mc.on("swiperight",function(ev) {
+        //alert(ev.type+"gesture detected");
+        $(".left-off-canvas-toggle").click();
+    });
+</script>
+    
+</div> <!-- Ende short view -->
+</body>
+    
+</html>
