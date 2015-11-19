@@ -99,6 +99,14 @@
       ],
       "date": "2015-11-05"
     }
+	,
+    	"jQuery_Workshop_CASH": {
+      "title": "Canvas Workshop",
+      "authors": [
+        "Cengizhan Ayyildiz und Sami Hassini"
+      ],
+      "date": "2015-11-05"
+    }
     ,
     "usertracking_workshop": {
       "title": "Usertracking Workshop",
@@ -114,6 +122,8 @@
       ],
       "date": "2015-11-12"
     }
+    
+    
     ,
     "big_data_workshop": {
       "title": "Big Data Workshop",
