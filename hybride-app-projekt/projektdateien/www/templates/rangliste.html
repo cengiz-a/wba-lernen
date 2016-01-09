@@ -1,0 +1,19 @@
+﻿<ion-view view-title="Rangliste">
+    <ion-content>
+        <!-- Wenn die Seite nach unten gezogen wird, wird sie aktualisiert -->
+        <ion-refresher pulling-text="Ziehen um zu aktualisieren..." on-refresh="doRefresh()"></ion-refresher>
+        <ion-list>
+            <ion-item>
+                <span style="float:left;">&nbsp;&nbsp;&nbsp;<b><u>Name</u></b></span>
+                <span style="float:right;"><b><u>Punkte</u></b></span>
+                <div style="clear:both"></div>
+            </ion-item>
+            <!-- Ausgabe der Benutzer mit ihren jeweiligen Punkten -->
+            <ion-item ng-repeat="benutzer in data">
+                <span style="float:left;">{{benutzer.platzierung}}. {{benutzer.name}}</span>
+                <span style="float:right;">{{benutzer.punkte}}</span>
+                <div style="clear:both"></div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

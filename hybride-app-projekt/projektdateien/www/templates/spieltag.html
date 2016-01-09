@@ -1,0 +1,39 @@
+﻿<ion-view view-title="Tippabgabe">
+    <ion-content>
+
+        <div class="matchList">
+            <!-- Ausgabe aller Spiele mit jeweils zwei Textboxen, um die Tipps eintragen zu können -->
+            <div class="matchListItem" ng-repeat="spiel in spieltagData">
+                
+                <div class="home-team-name">
+                    {{spiel.Team1.TeamName}}
+                </div>
+
+                <div class="tipp-input">
+                    <input type="text" style="border:1px solid #CCC; width:100%; height:23px; padding-left:4px;" ng-model="spiel.heimtore" value="spiel.heimtore" />
+                </div>
+
+                <div class="tipp-center">
+                    <center>:</center>
+                </div>
+
+                <div class="tipp-input">
+                    <input type="text" style="border:1px solid #CCC; width:100%; height:23px; padding-left:4px;" ng-model="spiel.gasttore" value="spiel.heimtore" />
+                </div>
+
+                <div class="guest-team-name">
+                    {{spiel.Team2.TeamName}}
+                </div>
+
+                <div style="clear:both"></div>
+            </div>
+
+        </div>
+
+        <div class="save-button">
+            <button class="button button-block button-balanced" ng-click="save()">
+                Speichern
+            </button>
+        </div>
+    </ion-content>
+</ion-view>

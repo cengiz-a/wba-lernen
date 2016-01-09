@@ -1,0 +1,12 @@
+<ion-view view-title="Tippabgabe">
+  <ion-content>
+      <!-- Ausgabe aller Spieltage, die noch nicht vergangen sind -->
+      <ion-list>
+          <ion-item ng-show="{{spieltag.finished}}==false" ng-repeat="spieltag in spieltagData" href="#/app/spieltage/{{spieltag.nr}}">
+              <span style="float:left;">Spieltag {{spieltag.nr}}</span>
+              <div style="clear:both"></div>
+          </ion-item>
+      </ion-list>
+
+  </ion-content>
+</ion-view>
